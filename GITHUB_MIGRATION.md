@@ -76,7 +76,8 @@ auditor and proof bytes remain unchanged. No trading credentials are configured.
 
 The initial migration enables manual workflow dispatch while release assets are
 uploaded. Normal push and pull-request checks are enabled after restoration and
-validation are verified. The first clean Windows GitHub run passed at
+validation are verified. GitHub CI results are separate from the local 0.3.48
+suite; inspect the Actions run before treating a commit as passed. The first clean Windows GitHub run passed at
 `34ed883748e31d56d936096bc543f8ffc1d053fd`: 3,192 full-suite tests, zero failures,
 errors or skips, plus successful dependency installation, static analysis, generated
 document consistency, secret-pattern check, configuration validation, and the
