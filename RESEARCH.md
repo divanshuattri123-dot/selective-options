@@ -1,6 +1,6 @@
 # Offline research foundations
 
-Version 0.3.49 continues deterministic closed-bar features and options research alongside ingestion. It adds an opt-in official FOMC date-only snapshot source with point-in-time health reporting. The 0.3.48 read-only saved-option quote bridge remains available for offline research. Milestone acceptance still follows the specification: M2 is partial, the full feature and backtester milestones are incomplete, and the package cannot submit orders.
+Version 0.3.50 adds a read-only discrete delta risk-reversal research view while ingestion work continues. It computes call minus put mark implied volatility in native percentage points from signed nearest-delta contracts for each expiry; it rejects tied selections, stale or invalid members, mismatched references, incomplete discovery, and lookahead. It does not interpolate or authorize signals. The finite saved-testnet replay contains an unvalidated 119.63-point observation, preserved without clipping; see the evidence and limitations below. Milestone acceptance still follows the specification: M2 is partial, the full feature and backtester milestones are incomplete, and the package cannot submit orders.
 
 These tools operate on saved local inputs. No provider key is needed. Install the package as described in README.md and run the commands from the project directory. Configuration still validates before CLI commands; every profile keeps trading disabled.
 
@@ -103,3 +103,23 @@ The Python API `load_saved_option_quotes` reads one discovered option from a clo
 `research_saved_option_roundtrip` is an API-only, explicitly registered, closed-before-expiry single-instrument long-premium simulation. Buy and sell submissions must be strictly later than the discovery observation, so a millisecond tie cannot pass. Source-ahead quote rows within the explicit absolute clock-skew bound are retained for audit, but the shared simulator assigns `QUOTE_CLOCK_ORDER` and cannot fill them; the report preserves that non-fill reason. Tick-price checks use the base tick at an exact `above_price` boundary and switch only strictly above it, following Deribit's [tick-size schedule definition](https://support.deribit.com/hc/en-us/articles/25944779257373-6-July-2023-TS). Native `min_trade_amount` is applied as a minimum order-size floor; it is not assumed to be a quantity increment, consistent with Deribit's [API guidance](https://support.deribit.com/hc/en-us/articles/38507223482781-API-guidance). A separate increment is not modeled unless future validated metadata defines one.
 
 The passive-order model is deliberately narrow: later displayed executable touches can produce taker-assumption fills, and repeated partial fills consume the same quote's displayed liquidity only once. Fee rates and latency are explicit caller assumptions, not venue defaults. Output and trial records state `gate2_complete=false` and `trading_enabled=false`. There is no options surface, mark-to-market/expiry payoff, multi-leg portfolio, funding/settlement/tax accounting, strategy signal, validation of profitable expectancy, production data, or execution route. Synthetic fixtures test accounting and refusal boundaries; the saved native archive is used only to validate quote conversion and source/receipt handling, not to simulate an order. See `evidence/option-backtest-bridge-0349/` and `tests/test_saved_option_backtest.py`.
+
+## Native discrete delta risk reversal (0.3.50)
+
+`research-option-skew` reports call mark IV minus put mark IV for each discovered expiry. It selects the nearest native signed Greek deltas to `+target_absolute_delta` for calls and `-target_absolute_delta` for puts; the caller sets an explicit maximum delta error. For example, ±0.25 with a 0.05 tolerance accepts a selected call delta in [0.20, 0.30] and a put in [−0.30, −0.20]. Equal nearest-distance candidates refuse the feature rather than breaking ties by symbol. Mark IV is retained in native percentage points, so the difference is also percentage points; it is not converted to a fraction.
+
+```powershell
+selective-options research-option-skew `
+  --database CLOSED_TESTNET_CAPTURE/events.duckdb --output NEW_SKEW_RESULT `
+  --asset BTC --as-of-ms EXPLICIT_CUTOFF_MS `
+  --target-absolute-delta 0.25 --maximum-delta-error 0.05 `
+  --max-quote-age-ms 10000 --max-discovery-age-ms 100000 `
+  --max-clock-skew-ms 10000 --max-underlying-mismatch-fraction 0.1 `
+  --max-rows 100000 --max-expiries 128
+```
+
+The input is read-only and must be a closed DuckDB file. Both source and receipt clocks must be available by the same explicit cutoff. The report binds the selected rows and policy to a history digest. A full same-cutoff discovery manifest is required, and every discovered instrument in an expiry must have one fresh, unambiguous latest quote; otherwise that expiry is withheld so an unseen closer-delta strike cannot be ignored. The chosen call and put must share an underlying index, compatible quote/settlement/type units, and sufficiently close underlying prices. Source/receipt skew has its own bound. `PARTIAL` means some expiry pairs are auditable while one or more are withheld; consumers must inspect every expiry and blocker.
+
+This is mark-IV analytics only. It does not require an executable bid/ask, estimate fills, verify the live full chain/current feed health, interpolate deltas, fit a surface, or produce a signal. A value's sign is descriptive: positive means the selected call's mark IV exceeds the selected put's; it does not establish direction or an edge. `full_chain_verified`, `executable_quotes_verified`, `ready_for_signals` and `trading_enabled` remain false. It is not a counted strategy trial.
+
+`evidence/options-skew-saved-native-01/` replays one saved BTC testnet snapshot with 52,820 bounded history/control rows and 1,010 full-discovery members. Twelve of 13 expiry rows yield nearest-delta pairs; one expiry is withheld because its put has `PUT_DELTA_SIGN_INVALID`. The retained December call mark is 157.26 percentage points and produces a +119.63-point difference. It is preserved as an observed outlier rather than clipped or treated as a validated quote. This is a single historical snapshot, not a time series, current feed-health check or strategy result; zero new network requests and no trial/order are involved.

@@ -56,7 +56,9 @@ def quote(symbol="A", source_time=1000, receipt=1000, kind="book"):
 
 @pytest.mark.parametrize("mode", ["idle", "busy"])
 async def test_refresh_deadline_wins_for_idle_and_busy_stream(monkeypatch, mode):
-    collector = DeribitCollector(config(), AsyncMock())
+    # Leave a broad scheduling window so a host pause cannot masquerade as a
+    # single receive. The deadline still must win before the two-second guard.
+    collector = DeribitCollector(config(interval=0.5), AsyncMock())
     calls = []
 
     async def receive(*args):
@@ -67,7 +69,7 @@ async def test_refresh_deadline_wins_for_idle_and_busy_stream(monkeypatch, mode)
             await asyncio.sleep(0.001)
 
     monkeypatch.setattr(collector, "_receive", receive)
-    await asyncio.wait_for(collector.receive_until_refresh(None, ChannelRegistry()), 1)
+    await asyncio.wait_for(collector.receive_until_refresh(None, ChannelRegistry()), 2)
     assert calls
     if mode == "busy":
         assert len(calls) > 1

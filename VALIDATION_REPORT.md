@@ -2,6 +2,14 @@
 
 **Trading eligibility: NOT VALIDATED. Live arming always fails.** This is an implementation/readiness report, not evidence of a profitable strategy. No return, win-rate, Sharpe, PBO or DSR result has been fabricated.
 
+## Discrete option risk reversal and BLS access status — version 0.3.50 (8 October 2026)
+
+The frozen .50 regression passes all 3,287 tests with zero failures, errors or skips in 570.62 seconds; combined statement/branch coverage is 95.03%, above the 85% requirement. Ruff lint and format checks pass all 245 CI-scoped Python files; strict mypy passes 124 source/script files. The separate private-evidence restore/migration suite passes all 24 tests. Exact JUnit, machine-readable results, source/test freeze verification and installed-wheel audit are retained under `evidence/full-suite-0351/`. A ten-run retest of the one initial 20ms Windows busy-stream timing flake passes 20/20 after the fixture was given a 500ms deadline window; the initial failed and interrupted runs remain separately labelled, not counted. Private GitHub Actions verification is still pending.
+
+The native replay supplies 52,820 saved history/control rows and 1,010 members from a full discovery generation. Twelve of 13 expiry rows yield discrete signed nearest-delta call/put pairs; one is withheld because its put's reported delta is positive. One selected call has a mark IV of 157.26 points and the resulting +119.63-point risk reversal is left intact and explicitly unvalidated. The analytics are mark-IV arithmetic only, with no interpolation, full-chain approval, executable quote proof, signal or strategy claim. The source database hash is unchanged; the replay makes zero network requests and places zero orders.
+
+An additional bounded probe to the official BLS employment schedule page and a separate October 2026 monthly schedule page returned HTTP 403 from both paths. Together with the earlier official calendar ICS 403, all three distinct BLS paths are recorded inaccessible from this host. No alternate-host retries, redirects or access circumvention were attempted. BLS calendar coverage remains unavailable.
+
 ## Official Federal Reserve schedule ingestion — version 0.3.49 (8 October 2026)
 
 All 3,265 tests passed with zero failures, errors or skips in 587.99 seconds; combined statement/branch coverage is 95.23% against the 85% requirement. Ruff lint and formatting passed 241 Python files in CI's source/script/test/tool scope, and strict mypy passed 121 source/script files. The independent private-evidence restore/migration suite separately passes all 24 tests. The complete JUnit and machine-readable summary are retained under `evidence/full-suite-0350/`. M2 remains PARTIAL; strategy/backtester acceptance and production trading remain disabled.

@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "version": "0.3.50",
+  "date": "2026-10-08",
+  "commands": {
+    "pytest": {
+      "command": "python -m pytest --cov=selective_options --cov-branch --cov-report=term --junitxml=evidence/full-suite-0351/junit-final.xml",
+      "tests": 3287,
+      "passed": 3287,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "duration_seconds": 570.62,
+      "combined_coverage_percent": 95.03,
+      "required_coverage_percent": 85.0,
+      "junit_sha256": "6c28b4b40e66e9292dcb40ff519dd921d091367d38f003c777158b07050eb58e"
+    },
+    "ruff_check": "passed: src scripts tests tools",
+    "ruff_format_check": "passed: 245 Python files",
+    "mypy": "passed: 124 source and script files",
+    "generated_config_and_secret_check": "passed: README generated section byte-idempotent; config/default.yaml and PARAMETERS.md unchanged; no credential-pattern findings across tracked and untracked deliverables",
+    "evidence_restore_migration_tests": {
+      "tests": 24,
+      "passed": 24,
+      "failed": 0
+    },
+    "timing_regression_recheck": {
+      "test": "test_refresh_deadline_wins_for_idle_and_busy_stream",
+      "iterations": 10,
+      "cases_per_iteration": 2,
+      "passed": 20,
+      "failed": 0,
+      "refresh_interval_ms": 500,
+      "timeout_ms": 2000
+    },
+    "installed_wheel": {
+      "file": "selective_options-0.3.50-py3-none-any.whl",
+      "sha256": "7e671578939193232c296181547b198833f99eb015941d9c933b14b17eaeaf02",
+      "python_modules": 80,
+      "source_byte_match": true,
+      "check_config": "VALID testnet M2 PARTIAL trading_disabled",
+      "research_option_skew_cli": "help smoke passed",
+      "version": "0.3.50"
+    },
+    "source_test_freeze": {
+      "status": "SOURCE_TEST_FREEZE_UNCHANGED",
+      "files": 245,
+      "freeze_sha256": "55b2669f9647d826333b76b404929edb037dd398c09c5cad98ee718276816c98",
+      "changed_files": []
+    },
+    "saved_native_option_skew": {
+      "evidence": "evidence/options-skew-saved-native-01/verification.json",
+      "network_requests": 0,
+      "orders": 0,
+      "source_database_sha256": "97c10f3c2f59a67edff83104fceca3b0b195b1498432597abde62e509f4cabdc",
+      "source_unchanged": true,
+      "supplied_rows": 52820,
+      "discovered_members": 1010,
+      "available_expiries": 12,
+      "total_expiries": 13,
+      "extreme_risk_reversal_points": 119.63,
+      "treated_as_validated": false
+    },
+    "bls_schedule_access": {
+      "evidence": [
+        "evidence/bls-calendar-access-01.json",
+        "evidence/bls-calendar-access-02/probe.json"
+      ],
+      "distinct_official_paths": 3,
+      "http_statuses": [
+        403,
+        403,
+        403
+      ],
+      "available": false,
+      "alternate_hosts_or_circumvention_attempted": false
+    },
+    "orders_submitted": 0,
+    "paper_trading_started": false,
+    "milestone_2_complete": false,
+    "gate2_complete": false,
+    "trading_enabled": false
+  }
+}

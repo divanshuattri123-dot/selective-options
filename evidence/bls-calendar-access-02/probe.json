@@ -1,0 +1,23 @@
+{
+  "observed_at_ms": 1791469325147,
+  "requests": [
+    {
+      "name": "employment_schedule",
+      "url": "https://www.bls.gov/schedule/news_release/empSit.htm",
+      "started_at_ms": 1791469325147,
+      "status": 403,
+      "content_type": "text/html",
+      "bytes_read": 1325,
+      "finished_at_ms": 1791469325329
+    },
+    {
+      "name": "monthly_october_2026",
+      "url": "https://www.bls.gov/schedule/2026/10_sched_list.htm",
+      "started_at_ms": 1791469325329,
+      "status": 403,
+      "content_type": "text/html",
+      "bytes_read": 1325,
+      "finished_at_ms": 1791469325384
+    }
+  ]
+}

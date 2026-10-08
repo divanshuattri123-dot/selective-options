@@ -1,0 +1,5 @@
+{
+  "status": "INTERRUPTED_NOT_VALIDATION",
+  "reason": "Stopped at 42% after aligning package __version__ with the 0.3.50 release metadata.",
+  "final_suite_started": false
+}

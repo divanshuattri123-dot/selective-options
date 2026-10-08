@@ -13,6 +13,7 @@ from .config import load_config
 from .ingestion import capture
 from .interlock import LiveEngine
 from .logging import configure_logging
+from .option_skew_research import research_option_skew
 from .options_research import research_options
 from .recovery import replay_store
 from .research import research_backtest, research_features
@@ -169,6 +170,22 @@ def parser() -> argparse.ArgumentParser:
     options_parser.add_argument("--flat-threshold-iv-points", type=float, required=True)
     options_parser.add_argument("--max-rows", type=int, default=100000)
     options_parser.add_argument("--max-expiries", type=int, default=128)
+    skew_parser = commands.add_parser(
+        "research-option-skew",
+        help="Offline same-expiry native delta risk reversals; cannot trade",
+    )
+    skew_parser.add_argument("--database", type=Path, required=True)
+    skew_parser.add_argument("--output", type=Path, required=True)
+    skew_parser.add_argument("--asset", choices=("BTC", "ETH", "SOL", "PAXG"), required=True)
+    skew_parser.add_argument("--as-of-ms", type=int, required=True)
+    skew_parser.add_argument("--target-absolute-delta", type=float, required=True)
+    skew_parser.add_argument("--maximum-delta-error", type=float, required=True)
+    skew_parser.add_argument("--max-quote-age-ms", type=int, required=True)
+    skew_parser.add_argument("--max-discovery-age-ms", type=int, required=True)
+    skew_parser.add_argument("--max-clock-skew-ms", type=int, required=True)
+    skew_parser.add_argument("--max-underlying-mismatch-fraction", type=float, required=True)
+    skew_parser.add_argument("--max-rows", type=int, default=100000)
+    skew_parser.add_argument("--max-expiries", type=int, default=128)
     backtest_parser = commands.add_parser(
         "research-backtest", help="Register an offline conservative quote simulation; cannot trade"
     )
@@ -305,6 +322,26 @@ def main() -> int:
                         max_atm_log_moneyness=args.max_atm_log_moneyness,
                         max_underlying_mismatch_fraction=args.max_underlying_mismatch_fraction,
                         flat_threshold_iv_points=args.flat_threshold_iv_points,
+                        max_rows=args.max_rows,
+                        max_expiries=args.max_expiries,
+                    ),
+                    indent=2,
+                )
+            )
+        elif args.command == "research-option-skew":
+            print(
+                json.dumps(
+                    research_option_skew(
+                        args.database,
+                        args.output,
+                        asset=args.asset,
+                        as_of_ms=args.as_of_ms,
+                        target_absolute_delta=args.target_absolute_delta,
+                        maximum_delta_error=args.maximum_delta_error,
+                        max_quote_age_ms=args.max_quote_age_ms,
+                        max_discovery_age_ms=args.max_discovery_age_ms,
+                        max_clock_skew_ms=args.max_clock_skew_ms,
+                        max_underlying_mismatch_fraction=args.max_underlying_mismatch_fraction,
                         max_rows=args.max_rows,
                         max_expiries=args.max_expiries,
                     ),

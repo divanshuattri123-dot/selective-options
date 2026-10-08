@@ -1,0 +1,155 @@
+{
+  "status": "SAVED_NATIVE_OPTIONS_SKEW_VERIFIED_PARTIAL",
+  "data_kind": "saved_deribit_testnet_cohort_offline_replay",
+  "network_requests": 0,
+  "orders": 0,
+  "source_database_sha256": "97c10f3c2f59a67edff83104fceca3b0b195b1498432597abde62e509f4cabdc",
+  "source_unchanged": true,
+  "source_database_rows_supplied": 52820,
+  "discovered_full_members": 1010,
+  "as_of_ms": 1791050702961,
+  "available_expiries": 12,
+  "unavailable_expiries": [
+    {
+      "expiration_timestamp": 1791100800000,
+      "reason": "PUT_DELTA_SIGN_INVALID"
+    }
+  ],
+  "checked_native_pairs": [
+    {
+      "expiration_timestamp": 1791187200000,
+      "call_symbol": "BTC-5OCT26-86000-C",
+      "call_delta": 0.20276,
+      "call_iv_points": 21.64,
+      "put_symbol": "BTC-5OCT26-84000-P",
+      "put_delta": -0.223,
+      "put_iv_points": 23.62,
+      "risk_reversal_points": -1.98
+    },
+    {
+      "expiration_timestamp": 1791273600000,
+      "call_symbol": "BTC-6OCT26-86500-C",
+      "call_delta": 0.21079,
+      "call_iv_points": 25.75,
+      "put_symbol": "BTC-6OCT26-84000-P",
+      "put_delta": -0.28551,
+      "put_iv_points": 25.01,
+      "risk_reversal_points": 0.74
+    },
+    {
+      "expiration_timestamp": 1791360000000,
+      "call_symbol": "BTC-7OCT26-86500-C",
+      "call_delta": 0.26143,
+      "call_iv_points": 27.12,
+      "put_symbol": "BTC-7OCT26-83500-P",
+      "put_delta": -0.24443,
+      "put_iv_points": 26.43,
+      "risk_reversal_points": 0.69
+    },
+    {
+      "expiration_timestamp": 1791532800000,
+      "call_symbol": "BTC-9OCT26-87000-C",
+      "call_delta": 0.27263,
+      "call_iv_points": 29.74,
+      "put_symbol": "BTC-9OCT26-83000-P",
+      "put_delta": -0.2431,
+      "put_iv_points": 28.78,
+      "risk_reversal_points": 0.96
+    },
+    {
+      "expiration_timestamp": 1792137600000,
+      "call_symbol": "BTC-16OCT26-89000-C",
+      "call_delta": 0.23224,
+      "call_iv_points": 31.77,
+      "put_symbol": "BTC-16OCT26-82000-P",
+      "put_delta": -0.24954,
+      "put_iv_points": 30.93,
+      "risk_reversal_points": 0.84
+    },
+    {
+      "expiration_timestamp": 1792742400000,
+      "call_symbol": "BTC-23OCT26-90000-C",
+      "call_delta": 0.24147,
+      "call_iv_points": 32.22,
+      "put_symbol": "BTC-23OCT26-81000-P",
+      "put_delta": -0.23975,
+      "put_iv_points": 32.39,
+      "risk_reversal_points": -0.17
+    },
+    {
+      "expiration_timestamp": 1793347200000,
+      "call_symbol": "BTC-30OCT26-91000-C",
+      "call_delta": 0.24708,
+      "call_iv_points": 33.05,
+      "put_symbol": "BTC-30OCT26-80000-P",
+      "put_delta": -0.23033,
+      "put_iv_points": 34.22,
+      "risk_reversal_points": -1.17
+    },
+    {
+      "expiration_timestamp": 1795766400000,
+      "call_symbol": "BTC-27NOV26-95000-C",
+      "call_delta": 0.24859,
+      "call_iv_points": 36.0,
+      "put_symbol": "BTC-27NOV26-79000-P",
+      "put_delta": -0.26125,
+      "put_iv_points": 36.46,
+      "risk_reversal_points": -0.46
+    },
+    {
+      "expiration_timestamp": 1798185600000,
+      "call_symbol": "BTC-25DEC26-190000-C",
+      "call_delta": 0.24624,
+      "call_iv_points": 157.26,
+      "put_symbol": "BTC-25DEC26-78000-P",
+      "put_delta": -0.26379,
+      "put_iv_points": 37.63,
+      "risk_reversal_points": 119.63
+    },
+    {
+      "expiration_timestamp": 1806048000000,
+      "call_symbol": "BTC-26MAR27-108000-C",
+      "call_delta": 0.24526,
+      "call_iv_points": 38.13,
+      "put_symbol": "BTC-26MAR27-75000-P",
+      "put_delta": -0.24458,
+      "put_iv_points": 38.67,
+      "risk_reversal_points": -0.54
+    },
+    {
+      "expiration_timestamp": 1813910400000,
+      "call_symbol": "BTC-25JUN27-116000-C",
+      "call_delta": 0.25673,
+      "call_iv_points": 39.22,
+      "put_symbol": "BTC-25JUN27-74000-P",
+      "put_delta": -0.24556,
+      "put_iv_points": 39.7,
+      "risk_reversal_points": -0.48
+    },
+    {
+      "expiration_timestamp": 1821772800000,
+      "call_symbol": "BTC-24SEP27-125000-C",
+      "call_delta": 0.25433,
+      "call_iv_points": 39.69,
+      "put_symbol": "BTC-24SEP27-74000-P",
+      "put_delta": -0.24961,
+      "put_iv_points": 39.97,
+      "risk_reversal_points": -0.28
+    }
+  ],
+  "implementation_sha256": {
+    "scripts/verify_options_skew.py": "a77c09a068fd2bc0f3cfa87ede01d5f0988662c022e00b2db25d4326e7595aaf",
+    "src/selective_options/option_skew_research.py": "136e682bf3c3be1d7aa779a40c680d62bb53744ecb9a8d31e6717349a5d7b935",
+    "src/selective_options/options_features.py": "07d3739032dbee4b61b9463b9bf2583057199ce1e7435532433d1911b3273b6b",
+    "src/selective_options/options_research.py": "6e47eb58704190f18107caf9940e6e14d155735ea21a94c8b21c6f7ceb95e6ef",
+    "src/selective_options/options_skew.py": "22c27cd46b3f157018dbf765860030cd478d97a6e0a27fa87bf55f9d670b95e4"
+  },
+  "limitations": [
+    "One historical snapshot cohort; not current feed health or a time series.",
+    "Discrete marks at the closest available signed delta within the declared tolerance; no interpolation.",
+    "One expiry is withheld because its discovered put member reports an invalid positive delta.",
+    "Mark-IV arithmetic only; spread, execution, Greeks validity, fit, signal, strategy and Gate 2 are not established.",
+    "Risk reversal is call mark IV minus put mark IV in native percentage points; positive/negative signs are descriptive only."
+  ],
+  "trading_enabled": false
+}
