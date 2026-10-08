@@ -1,0 +1,20 @@
+{
+  "status": "VERIFIED_MIGRATION_RESTORE_HELPER",
+  "test_cases": 22,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "fixture_network_requests": 0,
+  "download_auth_forwarding_blocked": true,
+  "download_redirect_host_restricted": true,
+  "response_and_download_byte_limits_enforced": true,
+  "archive_traversal_rejected": true,
+  "conflicting_existing_bytes_preserved": true,
+  "staged_bytes_reverified": true,
+  "symlink_and_reparse_escape_refused": true,
+  "restore_conflict_safe_and_idempotent": true,
+  "full_evidence_inventory_sha256": "d4c836be7bd1eeaf77f7040de25513bf9262830b18cf6b9327fffb4fe5dead87",
+  "full_evidence_missing_entries_restored_locally": 0,
+  "source_milestone": "2 PARTIAL",
+  "trading_enabled": false
+}

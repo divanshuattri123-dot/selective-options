@@ -12,5 +12,11 @@
   "original_local_tests_passed": 3192,
   "github_ci_verified": false,
   "milestone_status": "PARTIAL",
-  "trading_enabled": false
+  "trading_enabled": false,
+  "migration_restore_tests": 22,
+  "migration_restore_failures": 0,
+  "migration_restore_evidence": "evidence/github-migration/restore-helper-verification.json",
+  "source_release_sha256": "59322565071d7a85446895c6571ac39fca6080afbe8f4ce11449383fc92e6991",
+  "initial_git_commit": "8545b3005d9faad0d02297a455f620da3e90f226",
+  "migration_tooling_commit": "6e019aea3afa7e599b58b821d5d8805cf354c0aa"
 }
