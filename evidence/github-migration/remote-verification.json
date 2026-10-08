@@ -1,0 +1,37 @@
+{
+  "status": "REMOTE_MIGRATION_VERIFIED",
+  "repository": "divanshuattri123-dot/selective-options",
+  "private": true,
+  "github_login": "divanshuattri123-dot",
+  "main_head": "d3fcebe7a91194ac0829eed807f09acd5e3bf161",
+  "remote_main_head": "d3fcebe7a91194ac0829eed807f09acd5e3bf161",
+  "git_main_matches": true,
+  "releases": {
+    "historical-checkpoints-2026-10-08": {
+      "release_id": 406771404,
+      "url": "https://github.com/divanshuattri123-dot/selective-options/releases/tag/historical-checkpoints-2026-10-08",
+      "expected_assets": 100,
+      "remote_assets": 100,
+      "remote_uploaded_assets": 100,
+      "bytes": 6288654397,
+      "all_sha256_and_sizes_match": true
+    },
+    "v0.3.47": {
+      "release_id": 406771359,
+      "url": "https://github.com/divanshuattri123-dot/selective-options/releases/tag/v0.3.47",
+      "expected_assets": 5,
+      "remote_assets": 5,
+      "remote_uploaded_assets": 5,
+      "bytes": 430189308,
+      "all_sha256_and_sizes_match": true
+    }
+  },
+  "expected_assets": 105,
+  "expected_asset_bytes": 6718843705,
+  "github_verified_asset_count": 105,
+  "github_verified_asset_bytes": 6718843705,
+  "all_github_asset_sha256_and_sizes_match": true,
+  "errors": [],
+  "milestone_status": "PARTIAL",
+  "trading_enabled": false
+}
