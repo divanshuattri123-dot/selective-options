@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "repository": "divanshuattri123-dot/selective-options",
+  "private": true,
+  "run_id": 37789840916,
+  "run_url": "https://github.com/divanshuattri123-dot/selective-options/actions/runs/37789840916",
+  "workflow": "verified-checkpoint",
+  "event": "workflow_dispatch",
+  "status": "completed",
+  "conclusion": "success",
+  "commit": "f24f8015c2ea448b6366b5fc18d9052d9d7c5cbf",
+  "started_at_utc": "2026-10-08T14:07:06Z",
+  "completed_at_utc": "2026-10-08T14:16:45Z",
+  "steps": {
+    "physical_windows_history_layout": "success",
+    "private_native_evidence_restore": "success",
+    "dependency_install": "success",
+    "ruff_mypy_generated_documents_and_secret_checks": "success",
+    "configuration_check": "success",
+    "offline_pytest": {
+      "tests": 3265,
+      "passed": 3265,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "combined_coverage_percent": 95.23
+    },
+    "migration_helper_pytest": {
+      "tests": 24,
+      "passed": 24,
+      "failed": 0
+    }
+  },
+  "artifact": {
+    "id": 11556088346,
+    "name": "checkpoint-validation",
+    "size_bytes": 50379,
+    "expired": false,
+    "download_url": "https://api.github.com/repos/divanshuattri123-dot/selective-options/actions/artifacts/11556088346/zip"
+  },
+  "evidence_release": {
+    "tag": "v0.3.49",
+    "release_url": "https://github.com/divanshuattri123-dot/selective-options/releases/tag/v0.3.49",
+    "asset": "selective-options-0.3.49-fomc-evidence.zip",
+    "bytes": 9342,
+    "sha256": "655d883497abbccc9ceee66466dc640b4128a4cc51ac0a89cb37bac0304bd8af"
+  },
+  "trading_enabled": false
+}
