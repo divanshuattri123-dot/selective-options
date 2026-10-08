@@ -6,6 +6,34 @@ The phone controls the work; hosted runners perform the builds. A copy of the
 repository and original large evidence/checkpoints are already in private GitHub
 storage. Trading is disabled and milestone 2 remains PARTIAL.
 
+## Verified hosted development setup
+
+The corrected Linux/container run
+[37805078059](https://github.com/divanshuattri123-dot/selective-options/actions/runs/37805078059)
+binds commit `dcbc52a4e0d25538aec6c5127b10dac0d607bbfd`. It exercises the actual Bash
+setup and cloud virtual environment, passes 3,345 selected cases with zero failures,
+errors or skips, and records seven exact Windows-bound historical exclusions. All
+191 required evidence/archive hashes pass. The installed 0.3.50 wheel matches all
+80 source modules; non-root container configuration, named-volume persistence and
+mandatory arming refusal pass. No blocked external network attempts occur in the
+pytest worker. Full historical Windows verification remains a separate workflow.
+
+The complete hosted Windows run
+[37805077882](https://github.com/divanshuattri123-dot/selective-options/actions/runs/37805077882)
+passes on the same commit: 3,287 application tests, 65 migration-helper tests,
+95.03% coverage and zero failures/errors/skips. No historical cases are excluded
+from that Windows suite. All three original artifact archives and their checksums
+are also preserved in the private
+[cloud validation release](https://github.com/divanshuattri123-dot/selective-options/releases/tag/cloud-validation-2026-10-08),
+so the verified result remains downloadable after temporary Actions artifacts expire.
+The following documentation/evidence-only commit records these results; the tested
+executable source and workflow bytes bind the exact commit above.
+
+The first Linux attempt is preserved as a failure: its stricter offline guard caught
+two Coin Metrics capture tests missing an unrelated spot-transport mock. The repair
+adds that mock without changing their assertions, production behavior or exclusions.
+The corrected 32-case file also passes locally under the network guard.
+
 ## Start or inspect a build from your phone
 
 1. Sign in to GitHub in your phone browser and open

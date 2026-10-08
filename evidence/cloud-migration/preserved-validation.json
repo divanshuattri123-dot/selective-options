@@ -1,0 +1,54 @@
+{
+  "repository": "divanshuattri123-dot/selective-options",
+  "private": true,
+  "verified_commit": "dcbc52a4e0d25538aec6c5127b10dac0d607bbfd",
+  "release": {
+    "id": 407032482,
+    "tag": "cloud-validation-2026-10-08",
+    "url": "https://github.com/divanshuattri123-dot/selective-options/releases/tag/cloud-validation-2026-10-08"
+  },
+  "assets": [
+    {
+      "id": 622337702,
+      "name": "cloud-build-dcbc52a.zip",
+      "sha256": "b3c4dbaa437eea7b6f01af01e94081264846b2e1a75216c870b21069ea6c56e7",
+      "bytes": 398501,
+      "url": "https://github.com/divanshuattri123-dot/selective-options/releases/download/cloud-validation-2026-10-08/cloud-build-dcbc52a.zip",
+      "original_artifact_id": 11563321342
+    },
+    {
+      "id": 622337786,
+      "name": "cloud-container-dcbc52a.zip",
+      "sha256": "f25976dda6cd00d6e538046407f0b3738b9b277def7a8b3a272630e0cd185f4d",
+      "bytes": 4619,
+      "url": "https://github.com/divanshuattri123-dot/selective-options/releases/download/cloud-validation-2026-10-08/cloud-container-dcbc52a.zip",
+      "original_artifact_id": 11563160757
+    },
+    {
+      "id": 622337843,
+      "name": "windows-checkpoint-dcbc52a.zip",
+      "sha256": "5234526ae1f635348c6ff4a618fd0ef9a4cc9170b937c5f0964d03f8b4ec1ec1",
+      "bytes": 52912,
+      "url": "https://github.com/divanshuattri123-dot/selective-options/releases/download/cloud-validation-2026-10-08/windows-checkpoint-dcbc52a.zip",
+      "original_artifact_id": 11562519166
+    }
+  ],
+  "runs": [
+    {
+      "run_id": 37805078059,
+      "commit": "dcbc52a4e0d25538aec6c5127b10dac0d607bbfd",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/divanshuattri123-dot/selective-options/actions/runs/37805078059"
+    },
+    {
+      "run_id": 37805077882,
+      "commit": "dcbc52a4e0d25538aec6c5127b10dac0d607bbfd",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/divanshuattri123-dot/selective-options/actions/runs/37805077882"
+    }
+  ],
+  "trading_enabled": false,
+  "milestone": "M2_PARTIAL"
+}

@@ -1,0 +1,29 @@
+{
+  "run_id": 37805077882,
+  "commit": "dcbc52a4e0d25538aec6c5127b10dac0d607bbfd",
+  "status": "completed",
+  "conclusion": "success",
+  "url": "https://github.com/divanshuattri123-dot/selective-options/actions/runs/37805077882",
+  "artifacts": [
+    {
+      "id": 11562519166,
+      "name": "checkpoint-validation",
+      "sha256": "5234526ae1f635348c6ff4a618fd0ef9a4cc9170b937c5f0964d03f8b4ec1ec1",
+      "bytes": 52912,
+      "expires_at": "2027-01-06T15:58:18Z",
+      "head_sha": "dcbc52a4e0d25538aec6c5127b10dac0d607bbfd",
+      "files": [
+        {
+          "name": "github-ci.xml",
+          "bytes": 442171,
+          "sha256": "d1ea39ec607fc13af4bcc3ab3f9761e00997badaf431f0ee0d0d4799b503d1e9"
+        },
+        {
+          "name": "github-migration-ci.xml",
+          "bytes": 15773,
+          "sha256": "e3b0b7db8d479e84983e732ec14f2ac520e8c49ff3fb98f5d16e8be17a47108f"
+        }
+      ]
+    }
+  ]
+}

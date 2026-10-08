@@ -10,6 +10,19 @@ new source regression. Stale current-status summaries were corrected; original
 native evidence, source and proof tests remain unchanged. The run metadata and
 audit details are in `evidence/cloud-migration/`.
 
+The corrected cloud development commit `dcbc52a4e0d25538aec6c5127b10dac0d607bbfd`
+passes Linux/container run 37805078059 and complete Windows run 37805077882. Linux
+executes 3,345 cases with seven explicit historical Windows exclusions; Windows
+executes all 3,287 application cases plus 65 migration cases, with 95.03% coverage.
+Both have zero failures/errors/skips. Static/generated-document checks, all 191
+required evidence hashes, the isolated installed wheel's 80 source modules and
+non-root container persistence/arming-refusal checks pass. The first Linux failure
+caught two incomplete offline transport mocks; one added idle mock fixes those
+tests while preserving all assertions and runtime/native source bytes. Failed-run
+JUnit/logs remain preserved. Completed reports, exact scope and artifact checksums
+are under evidence/cloud-migration, and all three original artifact archives are
+retained in private release `cloud-validation-2026-10-08`.
+
 Cloud build tooling is validated separately from historical Windows proof and
 milestone acceptance. See `CLOUD_MIGRATION.md` for exact scope, phone controls and
 remaining Codex sign-in/continuous-hosting prerequisites. No sustained runtime,
@@ -19,7 +32,7 @@ strategy edge or production execution is certified by this migration.
 
 ## Discrete option risk reversal and BLS access status — version 0.3.50 (8 October 2026)
 
-The frozen .50 regression passes all 3,287 tests with zero failures, errors or skips in 570.62 seconds; combined statement/branch coverage is 95.03%, above the 85% requirement. Ruff lint and format checks pass all 245 CI-scoped Python files; strict mypy passes 124 source/script files. The separate private-evidence restore/migration suite passes all 24 tests. Exact JUnit, machine-readable results, source/test freeze verification and installed-wheel audit are retained under `evidence/full-suite-0351/`. A ten-run retest of the one initial 20ms Windows busy-stream timing flake passes 20/20 after the fixture was given a 500ms deadline window; the initial failed and interrupted runs remain separately labelled, not counted. Private GitHub Actions verification is still pending.
+The frozen .50 regression passes all 3,287 tests with zero failures, errors or skips in 570.62 seconds; combined statement/branch coverage is 95.03%, above the 85% requirement. Ruff lint and format checks pass all 245 CI-scoped Python files; strict mypy passes 124 source/script files. The separate private-evidence restore/migration suite passes all 24 tests. Exact JUnit, machine-readable results, source/test freeze verification and installed-wheel audit are retained under `evidence/full-suite-0351/`. A ten-run retest of the one initial 20ms Windows busy-stream timing flake passes 20/20 after the fixture was given a 500ms deadline window; the initial failed and interrupted runs remain separately labelled, not counted. The exact original source commit subsequently passes private GitHub Actions run 37799465762; its metadata is preserved in evidence/cloud-migration/previous-ci-run.json.
 
 The native replay supplies 52,820 saved history/control rows and 1,010 members from a full discovery generation. Twelve of 13 expiry rows yield discrete signed nearest-delta call/put pairs; one is withheld because its put's reported delta is positive. One selected call has a mark IV of 157.26 points and the resulting +119.63-point risk reversal is left intact and explicitly unvalidated. The analytics are mark-IV arithmetic only, with no interpolation, full-chain approval, executable quote proof, signal or strategy claim. The source database hash is unchanged; the replay makes zero network requests and places zero orders.
 

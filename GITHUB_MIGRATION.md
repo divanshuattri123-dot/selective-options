@@ -87,7 +87,7 @@ https://github.com/divanshuattri123-dot/selective-options/actions/runs/377735157
 That run validates only the 0.3.47 import commit. Later commits require their own
 validation run before they can be described as CI-passed.
 
-The main branch now contains version 0.3.48. Its first workflow attempt passed
+At the 0.3.48 checkpoint, the main branch contained that version. Its first workflow attempt passed
 restore, installation, static checks and all 3,231 offline tests, but the separate
 migration-helper suite caught a documentation-phrase regression. After restoring
 the expected wording, the full Windows workflow passed on
@@ -106,6 +106,14 @@ The 0.3.50 run passed on `9903928afa11e791a6896934b84b487848246412`:
 3,287 offline tests, 95.03% coverage and 24 private-evidence restore tests, with
 all workflow steps successful. Exact metadata is in
 `evidence/cloud-migration/previous-ci-run.json`.
+
+The completed cloud development checks on `dcbc52a4e0d25538aec6c5127b10dac0d607bbfd`
+pass 3,345 Linux cases with seven explicit historical exclusions, all 3,287 Windows
+application cases and 65 migration cases, and the non-root container/state checks.
+Windows coverage is 95.03%; both suites have zero failures/errors/skips. Original
+reports and artifact archives are preserved in private release
+[cloud-validation-2026-10-08](https://github.com/divanshuattri123-dot/selective-options/releases/tag/cloud-validation-2026-10-08).
+No new application version is claimed by this infrastructure migration.
 
 See [CLOUD_MIGRATION.md](CLOUD_MIGRATION.md) for the phone workflow links, portable
 Linux development setup, explicit historical test scope and Codex Cloud setup.
