@@ -1,0 +1,11 @@
+{
+  "recorded_at_ms": 1791093630536,
+  "basis": "Final tested source after public capture. Verifier subsequently gained strict bounded reference parameters, malformed numeric ratio guards, and explicit typed/full raw equality checks plus additional failure/request metadata. The original sampled gas event and receipts are unchanged. These hashes do not identify exact earlier capture source bytes.",
+  "files": {
+    "src/selective_options/eth_gas.py": "60d7c577a81540e3f7d73d4c70a6e743ab7b6ccc1b94d8afdb90e183b48dcb4a",
+    "scripts/verify_eth_gas.py": "d33e1978eed24b66872124523212260469fb1b6038e35542381def6ef49a0bb3",
+    "tests/test_eth_gas.py": "69ccb213c71ed6fa243fc1f81f210244fdfcb966ca35bf7eda0f7aa88a2fa7a6",
+    "tests/test_eth_gas_verifier.py": "3ac7633f959974fd3cf9618f70c0444f2733c23bc3fed77c95d21e6dbd397867",
+    "work/eth-public-validation/verify_saved.py": "8d3497e0959019b41d900f7d58e0d7b37e6f4b4a6358734f128c2a64ebeb740c"
+  }
+}

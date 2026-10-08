@@ -1,0 +1,19 @@
+{
+  "recorded_at": "2026-09-27T16:56:44.033527+00:00",
+  "status": "UNAVAILABLE_FROM_THIS_HOST",
+  "attempted_paths": [
+    "https://www.okx.com/api/v5/public/instruments?instType=SWAP&instFamily=BTC-USDT",
+    "https://www.okx.com/api/v5/public/funding-rate?instId=BTC-USDT-SWAP",
+    "https://www.okx.com/api/v5/public/open-interest?instType=SWAP&instId=BTC-USDT-SWAP"
+  ],
+  "results": [
+    "URLError: urlopen error timed out",
+    "URLError: urlopen error timed out",
+    "URLError: urlopen error timed out"
+  ],
+  "configured_socket_timeout_s": 15,
+  "cause": "NOT_ESTABLISHED; not proof of regional denial",
+  "fallback_hosts_used": false,
+  "credentials_used": false,
+  "orders_submitted": 0
+}

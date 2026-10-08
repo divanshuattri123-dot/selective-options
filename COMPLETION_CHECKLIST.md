@@ -1,0 +1,40 @@
+# Evidence required for completion
+
+Milestone 2 is incomplete. This checklist follows specification §3 and §16; a tested component or finite sample does not certify that every required feed is flowing. Later strategy validation cannot be completed before its preceding milestones. Current release 0.3.47 passed 3,192 tests and independently verifies one native daily valuation poll and discrete saved-testnet options features. The previous .46 release independently verifies committed explicit stopped-bar capture resume, conservative retained coverage and ADX/directional/prior-only rank features. Native 55-trade recovery proof and labelled research fixtures remain distinct. Complete feeds/history, periodic crash recovery, sustained collection and seven-day validation remain pending. Parallel implementation is authorized; later acceptance remains gated.
+
+| Required coverage | Saved status | Remaining evidence or access |
+| --- | --- | --- |
+| Dynamic option instruments, full summaries | Partial, testnet snapshots | Optional scheduled rediscovery tested; full per-expiry ticker/Greek/IV/bid-ask coverage, actual listing/expiry changes and retained history pending |
+| Full option book/ticker/trade universe | Capped rotation verified; exact discovery/coverage checks tested; compiled validation optimized and exact replay verified; finite BTC acknowledged all 3,031 channels; separate ETH/SOL sample acknowledged 2,840 channels, with PAXG absent | Control-history integrity budgets and SQL/deployment cost, joint four-asset and longer operation, clock agreement and stale-leg semantics; complete all-symbol acknowledgements and fresh legs, historical gap reconciliation and sustained capacity |
+| Independent spot references | Tested finite Coinbase/Kraken samples | Sustained deployment, common price basis, XAU/USD reference for gold |
+| Locally closed multi-timeframe bars | Tested fixtures and finite raw-trade reconstruction | Complete 1h/4h/1D history, periodic crash recovery and actual sustained interruption evidence; explicit stopped-state handoff is separately verified |
+| DVOL and volatility history | Partial short testnet windows | Full BTC/ETH series and licensed or public historical inputs for 252-day feature windows |
+| Derivatives funding/OI/metadata | Partial public Binance/Bybit and testnet Deribit | Other assets' history, unit/side semantics, quarterly futures basis, unavailable OKX |
+| Taker/global account ratios | Finite four-asset samples and revision/quality checks | Long history, native-volume semantics, sustained collection |
+| Liquidations/options flow | Lossy public forceOrder adapter and finite subscription ACK verified; all assets UNOBSERVED in saved sample | Native snapshot observation, sustained coverage/gap/health, complete ledger/history and options-flow inputs |
+| BTC/ETH/SOL exchange flows | Missing | Trustworthy address attribution/source, no inferred exchange labels |
+| Stablecoin supply/exchange balances | One actual Ethereum USDC/USDT pair at one provider-finalized block; canonical bound quality and explicit healthy-pair capture resume verified | Multi-chain/history and sustained recovery; attributed exchange balances remain missing |
+| Whale/large-holder data | Missing | Defined thresholds, chain coverage and verifiable address/source attribution |
+| ETH gas/staking/L2 | Finite actual dRPC two-poll closed anchor restart verified; canonical bound quality tested; prior PublicNode TLS failure preserved | Sustained gas/successor history and whole-source restart, staking/L2 adapters and history |
+| SOL performance/stake/DEX/fee payers | Finite public performance/vote-stake samples and quality verified | Historical continuity, whole-source recovery and soak; DEX volume, stake flows and fee payers still missing |
+| Realized cap/MVRV/SOPR inputs | Native Community market cap/MVRV 14 daily BTC/ETH observations and 2 bound health rows verified; realized cap/SOPR unavailable | Complete reliable historical source/revision/publication timing; realized cap/SOPR and attributed exchange data remain unavailable |
+| Policy/crypto/financial news | Exact policy RSS and one actual bound Fed poll; one actual 25-item CoinDesk metadata poll with canonical URL provenance; saved production failure/recovery and first receipts verified | Continuous collection/failure/recovery, broad crypto/financial coverage, sentiment/classification and independent first-publication verification |
+| Macro calendars/releases/consensus | BEA finite dates; other sources unavailable/missing | FOMC/minutes/CPI/NFP/ECB/BoJ/events, actual releases, consensus and revisions |
+| Gold macro/reference inputs | Strict official DFII10 adapter tested; one finite public request timed out before native entity/status, so yields remain unavailable | Native TIPS availability/history, DXY, central-bank purchases, ETF flows and XAU/USD basis |
+| Point-in-time storage/outbox/archive | Tested locally; immutable offline both-clock rotation/restore and opt-in bounded periodic open-store checkpoints verified; exact current metadata/latest tied quote projection and scalar JSON identity sets preserve history | Sustained checkpoint throughput/latency and retention purge, control-history budgets, SQL/deployment cost, full-source restart and deployed Redis consumers |
+| All-feed staleness/quality | Partial diagnostics | Every required symbol/metric with failure-aware health and coverage assessment |
+| Seven-day unattended run | Not performed | Complete configured feeds first; actual elapsed run with zero unhandled failures/reconciliation mismatches |
+
+Known source access failures are recorded in `INGESTION_STATUS.md`; unchanged failures are not repeatedly probed. No Docker/Redis/Valkey executable was found on this host during the completion audit. Services and specialist feeds are not fabricated or silently replaced with fixtures. Account creation and paid-service purchases remain outside current authorization.
+
+Acceptance after ingestion must follow the remaining milestone order: deterministic features/leakage checks, realistic backtester, independently validated signals, conviction/expectancy/calibration, structure selection, risk breach tests, testnet execution failure/reconciliation tests, positions/exits, and the statistical validation gates. The specification then requires at least 60 actual paper days and 25 paper trades. Unit tests, simulated dates and short public probes cannot satisfy those elapsed-time gates. No live-capital completion date is claimed.
+
+Continue independent engineering against public feeds while provider/deployment requirements remain unresolved. Update this checklist with concrete evidence as requirements are fulfilled; continue independent feature/backtester implementation as explicitly authorized, while refusing acceptance of milestone 3 until milestone 2 is complete.
+
+## Independently implemented later components (acceptance still pending)
+
+| Component | Verified through 0.3.47 | Required for full acceptance |
+| --- | --- | --- |
+| Deterministic features | Closed-bar EMA/slopes, RSI, ATR, MACD, Bollinger width, bar-count ROC/RV, ADX/directional and prior-only width/RV ranks, discrete 13-expiry native ATM-IV per side, strict both-clock/leakage and explicit quality/warmup checks | Full multi-timeframe/asset feature set, options/flow/on-chain/macro inputs, regime classification and M2 acceptance |
+| Offline backtester | Causal far-touch quote fills, shared depth, partial fills/cancellation, explicit fees/slippage and Decimal accounting; failed/interrupted trials counted | Properly timed historical bid/ask/depth, venue economics, funding/settlement, multi-leg structures, adverse modes and all statistical gates |
+| Open-bar state | Strict codec, exact consumed-input commit binding and explicit stopped-capture handoff before producers; retained buckets partial | Periodic crash recovery, full-source/history continuity and actual sustained interruption evidence |

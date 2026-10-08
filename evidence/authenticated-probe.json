@@ -1,0 +1,204 @@
+{
+  "created_at": "2026-09-20T18:38:40.815202+00:00",
+  "endpoint": "wss://test.deribit.com/ws/api/v2",
+  "server_time_ms": 1789929518114,
+  "clock_offset_ms": 1753.087646484375,
+  "round_trip_ms": 241.17565155029297,
+  "authenticated_checks": "PASSED_ON_THIS_CONNECTION",
+  "assets": [
+    {
+      "asset": "BTC",
+      "instrument_count": 1050,
+      "quoted_count": 1050,
+      "two_sided_count": 886,
+      "missing_summary_count": 0,
+      "stale_summary_count": 0,
+      "ticker_samples": [
+        {
+          "instrument_name": "BTC-21SEP26-68000-C",
+          "timestamp": 1789929518742,
+          "best_bid_price": 0.161,
+          "best_ask_price": 0.1645,
+          "best_bid_amount": 10.0,
+          "best_ask_amount": 10.0,
+          "mark_iv": 62.24,
+          "bid_iv": 0.0,
+          "ask_iv": 271.44,
+          "underlying_price": 81205.39,
+          "open_interest": 0.0,
+          "greeks": {
+            "delta": 1.0,
+            "gamma": 0.0,
+            "vega": 0.0,
+            "theta": 0.0,
+            "rho": 1.0363
+          }
+        },
+        {
+          "instrument_name": "BTC-21SEP26-68000-P",
+          "timestamp": 1789929519238,
+          "best_bid_price": 0.0,
+          "best_ask_price": 0.0001,
+          "best_bid_amount": 0.0,
+          "best_ask_amount": 60.0,
+          "mark_iv": 62.24,
+          "bid_iv": 0.0,
+          "ask_iv": 176.58,
+          "underlying_price": 81206.08,
+          "open_interest": 0.1,
+          "greeks": {
+            "delta": 0.0,
+            "gamma": 0.0,
+            "vega": 0.0,
+            "theta": 0.0,
+            "rho": 0.0
+          }
+        }
+      ],
+      "quote_currencies": [
+        "BTC"
+      ],
+      "settlement_currencies": [
+        "BTC"
+      ],
+      "capability": "OPTIONS_DISCOVERED",
+      "tradable": false,
+      "reason": "Discovery only; liquidity, feeds, risk and validation are not established."
+    },
+    {
+      "asset": "ETH",
+      "instrument_count": 858,
+      "quoted_count": 858,
+      "two_sided_count": 614,
+      "missing_summary_count": 0,
+      "stale_summary_count": 0,
+      "ticker_samples": [
+        {
+          "instrument_name": "ETH-21SEP26-2100-C",
+          "timestamp": 1789929519596,
+          "best_bid_price": 0.2015,
+          "best_ask_price": 0.2045,
+          "best_bid_amount": 100.0,
+          "best_ask_amount": 100.0,
+          "mark_iv": 206.72,
+          "bid_iv": 0.0,
+          "ask_iv": 333.57,
+          "underlying_price": 2633.45,
+          "open_interest": 241.0,
+          "greeks": {
+            "delta": 0.99778,
+            "gamma": 0.00003,
+            "vega": 0.00716,
+            "theta": -0.7402,
+            "rho": 0.03191
+          }
+        },
+        {
+          "instrument_name": "ETH-21SEP26-2100-P",
+          "timestamp": 1789929519754,
+          "best_bid_price": 0.0,
+          "best_ask_price": 0.0001,
+          "best_bid_amount": 0.0,
+          "best_ask_amount": 100.0,
+          "mark_iv": 206.72,
+          "bid_iv": 0.0,
+          "ask_iv": 219.97,
+          "underlying_price": 2633.42,
+          "open_interest": 4.0,
+          "greeks": {
+            "delta": -0.00222,
+            "gamma": 0.00003,
+            "vega": 0.00716,
+            "theta": -0.14197,
+            "rho": -0.00009
+          }
+        }
+      ],
+      "quote_currencies": [
+        "ETH"
+      ],
+      "settlement_currencies": [
+        "ETH"
+      ],
+      "capability": "OPTIONS_DISCOVERED",
+      "tradable": false,
+      "reason": "Discovery only; liquidity, feeds, risk and validation are not established."
+    },
+    {
+      "asset": "SOL",
+      "instrument_count": 294,
+      "quoted_count": 294,
+      "two_sided_count": 0,
+      "missing_summary_count": 0,
+      "stale_summary_count": 0,
+      "ticker_samples": [
+        {
+          "instrument_name": "SOL-21SEP26-80-C",
+          "timestamp": 1789929520982,
+          "best_bid_price": 0.0,
+          "best_ask_price": 0.0,
+          "best_bid_amount": 0.0,
+          "best_ask_amount": 0.0,
+          "mark_iv": 100.0,
+          "bid_iv": 0.0,
+          "ask_iv": 0.0,
+          "underlying_price": 109.8005,
+          "open_interest": 0.0,
+          "greeks": {
+            "delta": 1.0,
+            "gamma": 0.0,
+            "vega": 0.0,
+            "theta": 0.0,
+            "rho": 0.00122
+          }
+        },
+        {
+          "instrument_name": "SOL-21SEP26-80-P",
+          "timestamp": 1789929520982,
+          "best_bid_price": 0.0,
+          "best_ask_price": 0.0,
+          "best_bid_amount": 0.0,
+          "best_ask_amount": 0.0,
+          "mark_iv": 100.0,
+          "bid_iv": 0.0,
+          "ask_iv": 0.0,
+          "underlying_price": 109.8005,
+          "open_interest": 0.0,
+          "greeks": {
+            "delta": 0.0,
+            "gamma": 0.0,
+            "vega": 0.0,
+            "theta": 0.0,
+            "rho": 0.0
+          }
+        }
+      ],
+      "quote_currencies": [
+        "SOL"
+      ],
+      "settlement_currencies": [
+        "SOL"
+      ],
+      "capability": "OPTIONS_DISCOVERED",
+      "tradable": false,
+      "reason": "Discovery only; liquidity, feeds, risk and validation are not established."
+    },
+    {
+      "asset": "PAXG",
+      "instrument_count": 0,
+      "quoted_count": 0,
+      "two_sided_count": 0,
+      "missing_summary_count": 0,
+      "stale_summary_count": 0,
+      "ticker_samples": [],
+      "quote_currencies": [],
+      "settlement_currencies": [],
+      "capability": "GOLD_UNTRADEABLE",
+      "tradable": false,
+      "reason": "No verified liquid option chain or configured, validated alternative route."
+    }
+  ],
+  "milestone": 1,
+  "trading_enabled": false,
+  "validation_status": "NOT_VALIDATED"
+}

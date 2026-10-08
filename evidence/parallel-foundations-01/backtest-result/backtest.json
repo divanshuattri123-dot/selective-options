@@ -1,0 +1,142 @@
+{
+  "trial_id": "943cbc0ae97a47929a6f962e3a288da8",
+  "input_sha256": "c4f3591736a9a571e2f0ff89edf6378a3ee9387a66771fb3fd392774d502fe89",
+  "data_kind": "synthetic_fixture",
+  "provenance": {
+    "input_sha256": "c4f3591736a9a571e2f0ff89edf6378a3ee9387a66771fb3fd392774d502fe89",
+    "data_kind": "synthetic_fixture",
+    "declared": {
+      "description": "manual spread and fee loss; no historical prices"
+    },
+    "historical_data_independently_verified": false,
+    "research_runner_version": 1
+  },
+  "registry_counts": {
+    "started": 1,
+    "completed": 1,
+    "failed": 0,
+    "unresolved": 0,
+    "trial_count_N": 1
+  },
+  "simulation": {
+    "simulation_id": "bc5fd80a9e3c864403fff2bc5d608e7afdc5fd69d78546265be3dafcd37c520a",
+    "instrument": {
+      "instrument_id": "FIXTURE-LINEAR-PREMIUM",
+      "currency": "USD",
+      "quantity_unit": "contracts",
+      "quote_price_unit": "currency_per_underlying_unit",
+      "contract_multiplier": "10",
+      "accounting": "single_instrument_long_only_linear_premium",
+      "funding_required": false,
+      "settlement_required": false,
+      "transfer_tax_required": false
+    },
+    "fee_policy": {
+      "policy_id": "synthetic-taker-fee-0.001",
+      "maker_rate": "0",
+      "taker_rate": "0.001",
+      "basis": "executed_premium_notional"
+    },
+    "policy": {
+      "latency_ms": 50,
+      "max_quote_age_ms": 500,
+      "min_displayed_contracts": "1",
+      "adverse_slippage_rate": "0",
+      "pessimistic": true,
+      "passive_model": "strict_later_executable_crossing_taker_assumption"
+    },
+    "decimal_precision": 160,
+    "schema_version": 1,
+    "as_of_ms": 5000,
+    "fills": [
+      {
+        "fill_id": "42a3c9d5d7997c5720f052f6a8b8ebce593957fc48aa3e11071db38064c3dcfd",
+        "order_id": "buy",
+        "quote_id": "entry",
+        "liquidity_id": "entry-native-allocation",
+        "instrument_id": "FIXTURE-LINEAR-PREMIUM",
+        "side": "buy",
+        "filled_at_ms": 2001,
+        "quote_source_time_ms": 2000,
+        "quote_observed_at_ms": 2001,
+        "contracts": "2",
+        "executable_touch": "101",
+        "execution_price": "101",
+        "premium_notional": "2020",
+        "fee": "2.020",
+        "slippage_cost": "0",
+        "cash_delta": "-2022.020",
+        "liquidity_assumption": "displayed_executable_quote_not_confirmed_execution",
+        "fee_role": "taker",
+        "fee_policy_id": "synthetic-taker-fee-0.001"
+      },
+      {
+        "fill_id": "dc2b987bed3ec9f6b0a1bef857ab18e8574c2ebf9d9142603a60cfed9478b868",
+        "order_id": "sell",
+        "quote_id": "exit",
+        "liquidity_id": "exit-native-allocation",
+        "instrument_id": "FIXTURE-LINEAR-PREMIUM",
+        "side": "sell",
+        "filled_at_ms": 4001,
+        "quote_source_time_ms": 4000,
+        "quote_observed_at_ms": 4001,
+        "contracts": "2",
+        "executable_touch": "99",
+        "execution_price": "99",
+        "premium_notional": "1980",
+        "fee": "1.980",
+        "slippage_cost": "0",
+        "cash_delta": "1978.020",
+        "liquidity_assumption": "displayed_executable_quote_not_confirmed_execution",
+        "fee_role": "taker",
+        "fee_policy_id": "synthetic-taker-fee-0.001"
+      }
+    ],
+    "no_fills": [],
+    "orders": [
+      {
+        "order_id": "buy",
+        "filled_contracts": "2",
+        "remaining_contracts": "0",
+        "status": "filled"
+      },
+      {
+        "order_id": "sell",
+        "filled_contracts": "2",
+        "remaining_contracts": "0",
+        "status": "filled"
+      }
+    ],
+    "inventory_contracts": "0",
+    "premium_cost_basis": "0",
+    "entry_fee_cost_basis": "0.000",
+    "net_cash_flow": "-44.000",
+    "total_fees": "4.000",
+    "total_slippage": "0",
+    "gross_realized_pnl": "-40.000",
+    "net_realized_pnl": "-44.000",
+    "closed_roundtrip_net_pnl": "-44.000",
+    "funding_cashflow": null,
+    "assumptions": [
+      "OFFLINE_RESEARCH_REQUIRES_EXTERNAL_TRIAL_REGISTRATION",
+      "single instrument, long-only, linear premium; no settlement/funding/transfer tax support",
+      "both quote clocks after latency; cancellation before equal-time quote",
+      "orders persist until filled, cancelled or as-of; no IOC/FOK/short execution model",
+      "native liquidity_id shared across receipts and orders; depth consumption never resets",
+      "displayed touch is assumed executable, not a confirmed fill",
+      "passive equality is unfilled; strictly later crossing is a taker assumption",
+      "both modes deliberately use the same conservative far touch; flag does not create an optimistic baseline",
+      "equal availability timestamps sorted by quote_id are a deterministic assumption, not native chronology",
+      "caller supplied fees and adverse slippage; no venue fee or currency rounding claim",
+      "160-digit ROUND_HALF_EVEN Decimal arithmetic independent of caller context; no mark/mid valuation, capital/margin model or completeness claim"
+    ],
+    "funding_supported": false,
+    "maker_execution_supported": false,
+    "history_complete": false,
+    "gate2_complete": false,
+    "ready_for_signals": false,
+    "trading_enabled": false
+  },
+  "ready_for_signals": false,
+  "trading_enabled": false
+}

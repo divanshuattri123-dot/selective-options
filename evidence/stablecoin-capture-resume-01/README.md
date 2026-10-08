@@ -1,0 +1,5 @@
+# Saved-native explicit capture resume
+
+Actual finite capture imports the exact snapshot and bound healthy record from saved .39 evidence. Seven saved native HTTP bodies are replayed at clearly synthetic later receipts; another restarted capture receives one synthetic RPC failure. Four-row repeat and three-row failed captures pass two exact sealed archives, closed reload, pending outbox identities and 14 PIT boundaries. Next resume refuses the failed history before output or producer startup. All 11 original public files remain unchanged and original record clocks/identities are preserved.
+
+Zero new public requests or actual provider outage/recovery claims. Only the minimal healthy pair is copied; complete historical events and delivery acknowledgements are not imported. report.json records eight mocked HTTP attempts and historical clock fixtures. ../verify_capture_resume_0341.py preserves the exact harness; ../news-resume-final-validation-0341.json independently checks saved records, archives, boundaries and refusal. Trading remains disabled.

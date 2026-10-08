@@ -1,0 +1,118 @@
+{
+  "status": "EXACT_SAVED_SOURCE_AND_RECEIPT_AGES_VERIFIED",
+  "as_of_ms": 1791051961025,
+  "freshness_age_bound_ms": 30000,
+  "legs": [
+    {
+      "asset": "ETH",
+      "kind": "ticker",
+      "selected_legs": 804,
+      "age_failures": {},
+      "native_type_field_counts": {
+        "ABSENT": 804
+      },
+      "source_age_min_max_ms": [
+        772,
+        2851
+      ],
+      "receipt_age_min_max_ms": [
+        2297,
+        4308
+      ],
+      "receipt_minus_source_min_max_ms": [
+        -1531,
+        -318
+      ],
+      "source_timestamp_before_capture": 0,
+      "receipt_before_capture": 0
+    },
+    {
+      "asset": "ETH",
+      "kind": "book",
+      "selected_legs": 804,
+      "age_failures": {
+        "BOTH_AGES": 158
+      },
+      "native_type_field_counts": {
+        "ABSENT": 804
+      },
+      "source_age_min_max_ms": [
+        766,
+        68308
+      ],
+      "receipt_age_min_max_ms": [
+        2288,
+        67719
+      ],
+      "receipt_minus_source_min_max_ms": [
+        -1528,
+        3643
+      ],
+      "source_timestamp_before_capture": 0,
+      "receipt_before_capture": 0
+    },
+    {
+      "asset": "SOL",
+      "kind": "ticker",
+      "selected_legs": 142,
+      "age_failures": {},
+      "native_type_field_counts": {
+        "ABSENT": 142
+      },
+      "source_age_min_max_ms": [
+        5344,
+        5344
+      ],
+      "receipt_age_min_max_ms": [
+        6012,
+        6383
+      ],
+      "receipt_minus_source_min_max_ms": [
+        -1039,
+        -668
+      ],
+      "source_timestamp_before_capture": 0,
+      "receipt_before_capture": 0
+    },
+    {
+      "asset": "SOL",
+      "kind": "book",
+      "selected_legs": 142,
+      "age_failures": {
+        "BOTH_AGES": 142
+      },
+      "native_type_field_counts": {
+        "ABSENT": 142
+      },
+      "source_age_min_max_ms": [
+        54584,
+        58611
+      ],
+      "receipt_age_min_max_ms": [
+        55319,
+        56181
+      ],
+      "receipt_minus_source_min_max_ms": [
+        -737,
+        3096
+      ],
+      "source_timestamp_before_capture": 0,
+      "receipt_before_capture": 0
+    },
+    {
+      "asset": "PAXG",
+      "blocker": "OPTION_SELECTED_UNIVERSE_EMPTY",
+      "selected_legs": 0
+    }
+  ],
+  "original_sha256": {
+    "events.duckdb": "a68f6272d6565eb222fa59323443e75d39ef7094abbdfcde5173c6f8533b2b00",
+    "report.json": "9e162c74dd60fc9bfef3d3660bacabe50a17ac16f2a800938a484c4078b7de70",
+    "verification.json": "e8cf97483eff8c280e2b601a6f60588125db4b75043943d74840fd55218e9d65"
+  },
+  "new_network_requests": 0,
+  "original_bytes_unchanged": true,
+  "timestamps_or_bounds_relaxed": false,
+  "underlying_age_failure_cause_established": false,
+  "trading_approval": false
+}

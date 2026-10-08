@@ -1,0 +1,21 @@
+{
+  "version": "0.3.11",
+  "asset": "BTC",
+  "start_ms": 1790355405478,
+  "end_ms": 1790528205478,
+  "page_size": 2,
+  "max_pages": 10,
+  "orders_submitted": 0,
+  "trading_enabled": false,
+  "paper_trading_started": false,
+  "historical_schedule_completeness": "NOT_PROVEN",
+  "pit_checks": 6,
+  "status": "ARCHIVE_VERIFIED",
+  "pages": 4,
+  "termination": "EMPTY_PAGE",
+  "rows": 6,
+  "archive_exact_match": true,
+  "parquet_sha256": "4a11fef2a05d06c6e2610ba1097ae8805a60187a6a45ac5426f5cc78d3311104",
+  "public_responses": 5,
+  "ended_at_ms": 1790528207660
+}

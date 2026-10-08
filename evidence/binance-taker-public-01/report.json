@@ -1,0 +1,40 @@
+{
+  "version": "0.3.20",
+  "started_at_ms": 1790864762703,
+  "ended_at_ms": 1790864764181,
+  "status": "PARTIAL_OR_UNAVAILABLE",
+  "failure_type": null,
+  "rows": 1,
+  "counts": [
+    {
+      "source": "binance_taker",
+      "environment": "public_reference",
+      "asset": "BTC",
+      "kind": "feed_health",
+      "count": 1
+    }
+  ],
+  "source_health": [
+    {
+      "asset": "BTC",
+      "code": 0,
+      "ok": false,
+      "reason": "INVALID_DATA"
+    }
+  ],
+  "pit_checks": 0,
+  "archive_exact_match": true,
+  "parquet_sha256": "30adbd447c16d23f30af522100ca216a95b0f1d000955542bb4a3cc1a9954d9c",
+  "public_requests_attempted": 2,
+  "public_responses_accepted": 2,
+  "repeat_deduplication_verified": false,
+  "period_end_not_after_receipt": null,
+  "flow_rows": 0,
+  "volume_normalization_verified": false,
+  "continuous_history_verified": false,
+  "publication_time_available": false,
+  "timestamp_basis": "source and receipt; both required",
+  "orders_submitted": 0,
+  "trading_enabled": false,
+  "paper_trading_started": false
+}

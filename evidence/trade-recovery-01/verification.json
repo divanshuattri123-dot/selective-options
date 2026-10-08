@@ -1,0 +1,37 @@
+{
+  "started_at_ms": 1790090060874,
+  "trading_enabled": false,
+  "status": "PASSED",
+  "checkpoint_rows": 200,
+  "recovered_trades": 20,
+  "resumed_at_ms": 1790090066624,
+  "observation_times_preserved": true,
+  "recovered_trades_hidden_before_receipt": true,
+  "recovery_status": [
+    {
+      "last_trade_id": 66605425,
+      "reason": "TRADE_SEQUENCE_RECOVERED",
+      "recovered_trades": 1,
+      "symbol": "ETH/USD"
+    },
+    {
+      "last_trade_id": 108674391,
+      "reason": "TRADE_SEQUENCE_RECOVERED",
+      "recovered_trades": 17,
+      "symbol": "BTC/USD"
+    },
+    {
+      "last_trade_id": 2527904,
+      "reason": "TRADE_SEQUENCE_RECOVERED",
+      "recovered_trades": 0,
+      "symbol": "PAXG/USD"
+    },
+    {
+      "last_trade_id": 33597275,
+      "reason": "TRADE_SEQUENCE_RECOVERED",
+      "recovered_trades": 2,
+      "symbol": "SOL/USD"
+    }
+  ],
+  "ended_at_ms": 1790090071931
+}

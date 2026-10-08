@@ -1,0 +1,20 @@
+{
+  "status": "DISCOVERY_BYTES_PRESERVED",
+  "discovery_public_requests": 5,
+  "new_requests_for_preservation": 0,
+  "sha256": {
+    "catalog.body.json": "0c8b2bfe506e33a7942702b4abd2d8e13e6af6e7e0904dafc18ab94f67658fb1",
+    "catalog.receipt.json": "727c4c982d06d445ffb1cb819950b6c74291ad420f9a6f00663a954c35fda60a",
+    "DISCOVERY.md": "93d6b5e7d26acfdc59db6ee29299f6fdf8fe40b22c796d2ea2ada38116391f9e",
+    "probe.py": "ba2fc55d00ff6763266646faabf93440f5f5bf5a81105a058c77d4a2ec8b4034",
+    "reference.body.json": "f9802e660f60bb1680216e6ab9e2f558a9058d512c6410ee7f6846bba9bf7749",
+    "reference.receipt.json": "55914911eabe282176f77476076aa1d56b07251e0f5949585167250e8008facf",
+    "series.body.json": "79bcb4a2c52a377337662b4e657df79b767d5cb9987e4e9ac8cb9855fb560489",
+    "series.receipt.json": "34587660ddee98d6e939b42c8aa806af198db939f4fa5b3e10741e6900de70e6",
+    "sopr-series.body.json": "3f6d29de14e928baf617fc47c89210d9b7df4d4fe9582cc68e999dff4e1089cf",
+    "sopr-series.receipt.json": "cda457b28e9569fa92328a2def3eff69de63e9820f3253ebcb5edef93318f803",
+    "supported-series.body.json": "a84f23e9eea88bbb5fe884c893afdb85bdc5b48e2c28fefcc4fa3dd5bc852734",
+    "supported-series.receipt.json": "d4ce830cdc962b09f54710e8af51059b6315f1125c09924079e685ea16a8d6ff"
+  },
+  "trading_enabled": false
+}

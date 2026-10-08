@@ -1,0 +1,22 @@
+{
+  "url": "https://community-api.coinmetrics.io/v4/reference-data/asset-metrics",
+  "parameters": {
+    "metrics": "CapMrktCurUSD,CapRealUSD,CapMVRVCur,SOPR",
+    "page_size": "100"
+  },
+  "started_at_ms": 1791387460986,
+  "authentication": "none",
+  "max_bytes": 2000000,
+  "status": 200,
+  "headers": {
+    "Date": "Wed, 07 Oct 2026 15:37:48 GMT",
+    "Content-Type": "application/json",
+    "x-ratelimit-plan": "download",
+    "x-ratelimit-limit": "6000, 6000;w=20;comment=\"sliding window\"",
+    "x-ratelimit-remaining": "5999",
+    "x-ratelimit-reset": "20"
+  },
+  "received_at_ms": 1791387462277,
+  "bytes": 2309,
+  "sha256": "f9802e660f60bb1680216e6ab9e2f558a9058d512c6410ee7f6846bba9bf7749"
+}

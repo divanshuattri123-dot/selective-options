@@ -1,0 +1,5 @@
+# Exact news poll provenance after endpoint migration
+
+Endpoint discovery and the real production poll used the source snapshot preserved in crypto-news-public-02. Root subsequently added one two-line quality guard: a health record cannot approve metadata from the other supported fixed URL. Four canonical old/new combinations prove matching provenance passes and cross-provenance refuses. Collector transport and parsing are unchanged; no additional public request occurred. Both historical canonical URL values and their original identities remain supported.
+
+The historical probe/discovery reports and snapshots remain unchanged, so their source hashes identify capture code rather than this final release code. report.json and final-source.py record the exact semantic delta and final hash; news-resume-final-validation-0341.json rechecks saved native metadata, original failure quality, archives, outbox and capture resume under the final source. This is metadata validation, not independently verified first publication, complete news coverage, classification or trading readiness.

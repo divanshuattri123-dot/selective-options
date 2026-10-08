@@ -1,0 +1,87 @@
+{
+  "status": "SAVED_PUBLIC_RESPONSES_INDEPENDENTLY_VERIFIED",
+  "network_requests": 0,
+  "flow_rows": 12,
+  "database_rows": 16,
+  "exact_reported_decimal_values": true,
+  "period_and_receipt_checks": true,
+  "point_in_time_checks": 24,
+  "database_parquet_exact_match": true,
+  "observations": [
+    {
+      "event_id": "0a23e8e68648d646418735665cdd8fe42883378aec25e257f8730ef9c3475e38",
+      "asset": "ETH",
+      "period_end_ms": 1790865600000,
+      "observed_at_ms": 1790866192227
+    },
+    {
+      "event_id": "0b0b5a2ab78dd5001f8e8c9024838b3188a9af06ba790644c8990a632ae2e065",
+      "asset": "PAXG",
+      "period_end_ms": 1790865300000,
+      "observed_at_ms": 1790866193181
+    },
+    {
+      "event_id": "0bcc1648d05ab99aa43fdf24d0dc793b3abdcfaa6a0099d9c19ba98f4407d21e",
+      "asset": "PAXG",
+      "period_end_ms": 1790865900000,
+      "observed_at_ms": 1790866193181
+    },
+    {
+      "event_id": "2863196aae4f2383ec3057b15524486febcc91aac2d54f244916a4995a912feb",
+      "asset": "SOL",
+      "period_end_ms": 1790865900000,
+      "observed_at_ms": 1790866192721
+    },
+    {
+      "event_id": "2ef37d98b1162780fed873ceed2346957df5ad17a97c59be03f1f491781f48e0",
+      "asset": "BTC",
+      "period_end_ms": 1790865600000,
+      "observed_at_ms": 1790866191766
+    },
+    {
+      "event_id": "34aaa99d677ed0eca185d4ff2ce22ebd2022a080e3181aaf988d6cdfe1b133f6",
+      "asset": "BTC",
+      "period_end_ms": 1790865900000,
+      "observed_at_ms": 1790866191766
+    },
+    {
+      "event_id": "72fc0bb93067df57693fb81a38b5c5ce84c49c6b8dfacb30c6cbf5956a2edbde",
+      "asset": "ETH",
+      "period_end_ms": 1790865900000,
+      "observed_at_ms": 1790866192227
+    },
+    {
+      "event_id": "90558abeac4716ad9f6608e001bd88f9a0e583a1fa09d646308e62b4b4a9ac1c",
+      "asset": "SOL",
+      "period_end_ms": 1790865600000,
+      "observed_at_ms": 1790866192721
+    },
+    {
+      "event_id": "99a22cfa6dea779a4d1a52a6418b6b49129f8554e06a5a1b66ae80b73437934c",
+      "asset": "SOL",
+      "period_end_ms": 1790865300000,
+      "observed_at_ms": 1790866192721
+    },
+    {
+      "event_id": "a7c6ae44bdb107e96942647fee374c85cf32f80ff976c061e566a5c380851353",
+      "asset": "PAXG",
+      "period_end_ms": 1790865600000,
+      "observed_at_ms": 1790866193181
+    },
+    {
+      "event_id": "cf4e95a7e0feebe532eb73a67a388819e403d6630232289c8aecb95109dc2c0b",
+      "asset": "ETH",
+      "period_end_ms": 1790865300000,
+      "observed_at_ms": 1790866192227
+    },
+    {
+      "event_id": "dd18f0ea628e039bfe0f38098262cea2f629c5d766540ca7c90d7fa41e612b81",
+      "asset": "BTC",
+      "period_end_ms": 1790865300000,
+      "observed_at_ms": 1790866191766
+    }
+  ],
+  "continuous_history_verified": false,
+  "account_field_semantics_independently_verified": false,
+  "trading_enabled": false
+}

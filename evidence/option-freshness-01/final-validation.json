@@ -1,0 +1,17 @@
+{
+  "final_code_rerun_exact_to_independently_verified_reports": true,
+  "source_code_sha256": {
+    "scripts/audit_option_freshness.py": "8357eec29605323358d0a82c0ca2b43b3dfdeb42ee17f3043473c00bcac67197",
+    "tests/test_option_freshness_audit.py": "93d9db7287e7c46976be24219f0235f1cd630f6626c03f63c3b227ca23bad189"
+  },
+  "independent_proof_sha256": "8bdc10e61ef4350c70966961489b8eb6f080a6619124dd1461b3400cb0ce7c0b",
+  "targeted_junit_sha256": "4e2320d46bb2de3bb0e52869deb952829b11851129ffc73c11126a26e64a7336",
+  "targeted_tests_passed": 174,
+  "new_audit_cases_passed": 54,
+  "ruff_check_and_format_passed": true,
+  "strict_mypy_src_and_audit_script_passed": true,
+  "new_network_requests": 0,
+  "orders_submitted": 0,
+  "milestone_2_complete": false,
+  "trading_enabled": false
+}

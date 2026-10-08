@@ -1,0 +1,41 @@
+{
+  "version": "0.3.33",
+  "status": "EXACT_BASELINE_AND_CURRENT_SAVED_NATIVE_ENVELOPES_MATCH",
+  "source": "receive-timing-public-01/events.duckdb",
+  "source_sha256": "b16af521ec4c8a2a6c067b5faa6837f13a0e66bef3b3ba9bd97800b40be1b550",
+  "baseline_wheel_sha256": "891ea03b06a9fad04f3557c75bd40e536364b6d66e1d99230053851d4ae1dd32",
+  "scope": "RECONSTRUCTED_NATIVE_PAYLOAD_ENVELOPES_WITH_ORIGINAL_RECEIPTS_NOT_ORIGINAL_WIRE_FRAMES",
+  "native_stream_rows": 23519,
+  "instrument_rows": 1010,
+  "every_event_field_payload_identity_and_clock_matches": true,
+  "full_replay_elapsed_ns": {
+    "baseline0332": 59093272600,
+    "compiled_reuse": 4306612700
+  },
+  "sample_rows": 250,
+  "alternating_cycles": 3,
+  "sample_elapsed_ns": {
+    "baseline0332": [
+      590144900,
+      609418700,
+      607619800
+    ],
+    "compiled_reuse": [
+      42511200,
+      39114300,
+      44590000
+    ]
+  },
+  "sample_median_ns": {
+    "baseline0332": 607619800,
+    "compiled_reuse": 42511200
+  },
+  "wall_measurements_are_machine_specific": true,
+  "speed_threshold_used_as_test": false,
+  "source_bytes_unchanged": true,
+  "network_requests": 0,
+  "wire_order_or_dropped_duplicates_restored": false,
+  "sustained_capacity_verified": false,
+  "milestone_2_complete": false,
+  "trading_enabled": false
+}

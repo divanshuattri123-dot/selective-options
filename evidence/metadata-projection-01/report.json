@@ -1,0 +1,107 @@
+{
+  "status": "EXACT_CURRENT_METADATA_PROJECTION_NATIVE_PIT_AND_SYNTHETIC_HISTORY_VERIFIED",
+  "native_asset_views": [
+    {
+      "asset": "BTC",
+      "source_artifact": "reused-validation-public-01",
+      "native_rows": 62089,
+      "materialized_query_rows": [
+        3,
+        1010,
+        2020
+      ],
+      "materialized_total": 3033,
+      "exact_original_final_view": true,
+      "pit_boundaries": 5,
+      "coverage_state": "INCOMPLETE_LEG_OBSERVATIONS",
+      "blocker": null
+    },
+    {
+      "asset": "ETH",
+      "source_artifact": "multiasset-options-public-01",
+      "native_rows": 47756,
+      "materialized_query_rows": [
+        3,
+        804,
+        1608
+      ],
+      "materialized_total": 2415,
+      "exact_original_final_view": true,
+      "pit_boundaries": 5,
+      "coverage_state": "INCOMPLETE_LEG_OBSERVATIONS",
+      "blocker": null
+    },
+    {
+      "asset": "SOL",
+      "source_artifact": "multiasset-options-public-01",
+      "native_rows": 47756,
+      "materialized_query_rows": [
+        3,
+        142,
+        284
+      ],
+      "materialized_total": 429,
+      "exact_original_final_view": true,
+      "pit_boundaries": 5,
+      "coverage_state": "INCOMPLETE_LEG_OBSERVATIONS",
+      "blocker": null
+    },
+    {
+      "asset": "PAXG",
+      "source_artifact": "multiasset-options-public-01",
+      "native_rows": 47756,
+      "materialized_query_rows": [
+        3
+      ],
+      "materialized_total": 3,
+      "exact_original_final_view": true,
+      "pit_boundaries": 5,
+      "coverage_state": "BLOCKED",
+      "blocker": "OPTION_SELECTED_UNIVERSE_EMPTY"
+    }
+  ],
+  "native_source_rows": 109845,
+  "pit_boundaries": 20,
+  "synthetic_metadata_history": {
+    "scope": "SYNTHETIC_OBSOLETE_METADATA_GENERATIONS_NOT_PUBLIC_HISTORY",
+    "synthetic_metadata_rows": 110000,
+    "unchanged_native_rows": 62089,
+    "retained_rows_and_pending_outbox": 172089,
+    "old_0335_projection_blocker": "OPTION_COVERAGE_OVER_BUDGET",
+    "current_materialized_query_rows": [
+      3,
+      1010,
+      2020
+    ],
+    "current_materialized_total": 3033,
+    "original_final_view_exactly_matches": true,
+    "native_payloads_cloned_only_for_labelled_fixture": true
+  },
+  "baseline_0335_wheel_sha256": "1baa6dafea29a060a1c976645f9f2cb7db8ea478daee5e7c2a8bea95e7dc0af7",
+  "original_sha256": {
+    "reused-validation-public-01\\events.duckdb": "97c10f3c2f59a67edff83104fceca3b0b195b1498432597abde62e509f4cabdc",
+    "reused-validation-public-01\\events.parquet": "29dd9cde658c18f82cbd69531ac39fad10574dbee482bdce83db2d7ddbf0fcaf",
+    "reused-validation-public-01\\events.parquet.manifest.json": "9ebde3976f4362c9a102384024a435df108a102d671e331bb4284aa31fd29d3c",
+    "reused-validation-public-01\\report.json": "002b21ea7bd5e84a53b0a6771a450d0c59a530effcf5f5ae7de8b4f62094628c",
+    "reused-validation-public-01\\verification.json": "bb35d348dd766846fdc7997bb25b19610e9c6d6840e285c1e476bf3619a1b58e",
+    "reused-validation-public-01\\config.sanitized.json": "a0acf2941319bf8295fa98e7e5366b5b0967bfeb567a36fc1020b3861651b6cb",
+    "multiasset-options-public-01\\events.duckdb": "a68f6272d6565eb222fa59323443e75d39ef7094abbdfcde5173c6f8533b2b00",
+    "multiasset-options-public-01\\events.parquet": "2e22e41cf30deba5d4a3b5503747ec0ef694f755c57b69b547ef8b5aabbe9738",
+    "multiasset-options-public-01\\events.parquet.manifest.json": "107b53620452fe1b891e8a074ac415f1c75eca71681754d5c8b2c0877b7fe87e",
+    "multiasset-options-public-01\\report.json": "9e162c74dd60fc9bfef3d3660bacabe50a17ac16f2a800938a484c4078b7de70",
+    "multiasset-options-public-01\\verification.json": "e8cf97483eff8c280e2b601a6f60588125db4b75043943d74840fd55218e9d65",
+    "multiasset-options-public-01\\config.sanitized.json": "c35c27ec8d97dfe52ed96de2df9e5be584b33911d9912d098bb537cb43f33089"
+  },
+  "original_bytes_unchanged": true,
+  "closed_reload_exact_native_subset_and_archives": true,
+  "new_network_requests": 0,
+  "history_or_outbox_rows_deleted": 0,
+  "stale_bounds_or_timestamps_relaxed": false,
+  "all_eligible_control_integrity_checks_retained": true,
+  "control_history_remains_budgeted": true,
+  "database_scan_time_size_or_engine_memory_bounded": false,
+  "sustained_capacity_verified": false,
+  "milestone_2_complete": false,
+  "trading_enabled": false,
+  "orders_submitted": 0
+}

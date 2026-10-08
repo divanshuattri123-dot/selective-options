@@ -1,0 +1,203 @@
+{
+  "version": "0.3.34",
+  "tests_passed": 1181,
+  "added_tests": 11,
+  "coverage_percent": 97.96,
+  "wheel_source_modules": 52,
+  "wheel_source_exact_match": true,
+  "config_valid": true,
+  "ruff_checked": true,
+  "ruff_formatted_source_script_test_files": 125,
+  "mypy_source_script_files": 73,
+  "finite_public_duration_s": 75,
+  "public_stream_cap_per_asset": null,
+  "requested_public_assets": [
+    "ETH",
+    "SOL",
+    "PAXG"
+  ],
+  "public_saved_rows": 47756,
+  "public_pending_outbox_rows": 47756,
+  "native_per_asset_evidence": [
+    {
+      "asset": "ETH",
+      "available_and_selected_options": 804,
+      "empty_chain_is_blocked": false,
+      "coverage_state": "INCOMPLETE_LEG_OBSERVATIONS",
+      "blocker": null,
+      "leg_counts": {
+        "book_OBSERVED": 646,
+        "book_STALE": 158,
+        "ticker_OBSERVED": 804
+      }
+    },
+    {
+      "asset": "SOL",
+      "available_and_selected_options": 142,
+      "empty_chain_is_blocked": false,
+      "coverage_state": "INCOMPLETE_LEG_OBSERVATIONS",
+      "blocker": null,
+      "leg_counts": {
+        "book_STALE": 142,
+        "ticker_OBSERVED": 142
+      }
+    },
+    {
+      "asset": "PAXG",
+      "available_and_selected_options": 0,
+      "empty_chain_is_blocked": true,
+      "coverage_state": "BLOCKED",
+      "blocker": "OPTION_SELECTED_UNIVERSE_EMPTY",
+      "leg_counts": {}
+    }
+  ],
+  "required_and_acknowledged_channels": 2840,
+  "batch_progress_records": 29,
+  "disconnects": 0,
+  "full_ack_after_capture_start_ms": 21767,
+  "full_ack_after_resync_ms": 14812,
+  "completed_subscription_receive_timing_ns": {
+    "NORMALIZE": 1656549000,
+    "SINK_PUBLISH": 196763800,
+    "SOCKET_RECEIVE": 12714801500
+  },
+  "sql_control_pit_boundaries": 68,
+  "ack_visibility_checks": 6,
+  "independent_sql_latest_leg_checks": 1892,
+  "metadata_bindings_checked": 946,
+  "native_age_and_signed_clock_evidence": [
+    {
+      "asset": "ETH",
+      "kind": "ticker",
+      "selected_legs": 804,
+      "age_failures": {},
+      "native_type_field_counts": {
+        "ABSENT": 804
+      },
+      "source_age_min_max_ms": [
+        772,
+        2851
+      ],
+      "receipt_age_min_max_ms": [
+        2297,
+        4308
+      ],
+      "receipt_minus_source_min_max_ms": [
+        -1531,
+        -318
+      ],
+      "source_timestamp_before_capture": 0,
+      "receipt_before_capture": 0
+    },
+    {
+      "asset": "ETH",
+      "kind": "book",
+      "selected_legs": 804,
+      "age_failures": {
+        "BOTH_AGES": 158
+      },
+      "native_type_field_counts": {
+        "ABSENT": 804
+      },
+      "source_age_min_max_ms": [
+        766,
+        68308
+      ],
+      "receipt_age_min_max_ms": [
+        2288,
+        67719
+      ],
+      "receipt_minus_source_min_max_ms": [
+        -1528,
+        3643
+      ],
+      "source_timestamp_before_capture": 0,
+      "receipt_before_capture": 0
+    },
+    {
+      "asset": "SOL",
+      "kind": "ticker",
+      "selected_legs": 142,
+      "age_failures": {},
+      "native_type_field_counts": {
+        "ABSENT": 142
+      },
+      "source_age_min_max_ms": [
+        5344,
+        5344
+      ],
+      "receipt_age_min_max_ms": [
+        6012,
+        6383
+      ],
+      "receipt_minus_source_min_max_ms": [
+        -1039,
+        -668
+      ],
+      "source_timestamp_before_capture": 0,
+      "receipt_before_capture": 0
+    },
+    {
+      "asset": "SOL",
+      "kind": "book",
+      "selected_legs": 142,
+      "age_failures": {
+        "BOTH_AGES": 142
+      },
+      "native_type_field_counts": {
+        "ABSENT": 142
+      },
+      "source_age_min_max_ms": [
+        54584,
+        58611
+      ],
+      "receipt_age_min_max_ms": [
+        55319,
+        56181
+      ],
+      "receipt_minus_source_min_max_ms": [
+        -737,
+        3096
+      ],
+      "source_timestamp_before_capture": 0,
+      "receipt_before_capture": 0
+    },
+    {
+      "asset": "PAXG",
+      "blocker": "OPTION_SELECTED_UNIVERSE_EMPTY",
+      "selected_legs": 0
+    }
+  ],
+  "age_failures_and_native_clocks_not_relaxed": true,
+  "source_receipt_clock_agreement_verified": false,
+  "exact_shared_native_metadata_membership_channel_and_timing_bindings_verified": true,
+  "closed_reload_replay_and_sealed_archive_verified": true,
+  "source_bytes_unchanged": true,
+  "saved_proof_additional_network_requests": 0,
+  "finite_uncapped_eth_sol_subscriptions_verified": true,
+  "separate_finite_uncapped_btc_subscriptions_verified": true,
+  "paxg_discovery_result": "NO_OPTIONS_SELECTED_UNIVERSE_EMPTY",
+  "synthetic_gold_route_enabled": false,
+  "joint_uncapped_four_asset_run_verified": false,
+  "every_requested_asset_has_nonempty_acknowledged_universe": false,
+  "requested_scope_preflight_and_per_asset_ordered_reload_verified": true,
+  "single_asset_btc_evidence_fields_preserved": true,
+  "exact_probe_time_script_preserved": "multiasset-options-public-01/verifier_used.py",
+  "capture_report_rewritten_for_flag_label_clarification": false,
+  "all_required_assets_or_feeds_verified": false,
+  "all_native_option_fields_verified": false,
+  "full_fresh_option_stream_verified": false,
+  "uncapped_sustained_public_capacity_verified": false,
+  "option_trade_history_continuity_verified": false,
+  "seven_day_unattended_operation_verified": false,
+  "milestone": 2,
+  "milestone_advance_allowed": false,
+  "trading_enabled": false,
+  "generated_docs_idempotent": true,
+  "generated_doc_sha256": {
+    "README.md": "a660bb40b84623065f69b8cf982fb707774b47e30da3e9b6ab3bca0c9a100e57",
+    "PARAMETERS.md": "e50f08a20714b7e107fe4bded26a22b8236e1cbab1a1af7d89dea6a30c49554c",
+    "config\\default.yaml": "d30c26ce62ba546fed706ad85ab33beb3f64cadee56e0dc94261ac81a12e9503"
+  },
+  "wheel_sha256": "4d6a52aa0ee6427559091d4adf87126b4cc632f6722be53b78b14a1f0b9a0935"
+}

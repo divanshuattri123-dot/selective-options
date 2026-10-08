@@ -1,0 +1,11 @@
+{
+  "evidence_type": "OFFLINE_CHECK_OF_SAVED_PUBLIC_DATA",
+  "rows": 12,
+  "observed_spacing_ms": 300000,
+  "all_observed_adjacent_spacing_matches": true,
+  "first_sample_ms": 1790525400000,
+  "last_sample_ms": 1790528700000,
+  "units": "BTC",
+  "sides": "both",
+  "coverage_claim": "This one-hour returned sample only; not full historical coverage"
+}

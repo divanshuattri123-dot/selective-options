@@ -1,0 +1,15 @@
+{
+  "status": "RESTORE_FINISHED",
+  "rows": 10707,
+  "archive_sha256": "cd2f483ae362eac75de3e5af3ffd787326a51648a5ba12608ed014a6ca64e2af",
+  "observation_timestamps_preserved": true,
+  "redis_delivery_pending": 10707,
+  "ready_for_signals": false,
+  "trading_enabled": false,
+  "limitation": "Event archive only; Redis acknowledgements are not archived. Replay is at-least-once and consumers deduplicate event_id.",
+  "checked_at": "2026-09-22T14:55:54.108243+00:00",
+  "capture": "ingestion-pilot-05",
+  "all_rows_equal_to_archive": true,
+  "point_in_time_selection_equal": true,
+  "pit_rows_checked": 2084
+}

@@ -1,0 +1,49 @@
+{
+  "status": "SAVED_EVIDENCE_VERIFIED_UNCAPPED_ACKNOWLEDGEMENT_NOT_OBSERVED",
+  "saved_rows": 21351,
+  "pending_outbox_rows": 21351,
+  "rows_by_kind": {
+    "instrument": 1010,
+    "book": 2836,
+    "ticker": 16439,
+    "chain_summary": 1010,
+    "status": 22,
+    "index": 34
+  },
+  "discovered_and_selected_options": 1010,
+  "distinct_symbols_with_any_saved_observation": {
+    "ticker": 633,
+    "book": 633
+  },
+  "sql_control_pit_boundaries": 44,
+  "inactive_view_checks": 4,
+  "acknowledged_sessions": 0,
+  "stream_failure": "TimeoutError",
+  "pending_operation": "SOCKET_RECEIVE_WITHIN_SUBSCRIPTION_RESPONSE_DEADLINE",
+  "failure_root_cause": "NOT_ESTABLISHED",
+  "batch_progress_records": 19,
+  "acknowledged_channels": 1900,
+  "required_channels": 3031,
+  "pending_request_id": 1901,
+  "attempted_batch_number": 20,
+  "normalized_notification_frames": 19396,
+  "accepted_stream_publications_including_replays": 19396,
+  "exact_metadata_bindings_verified": true,
+  "closed_reload_replay_and_sealed_archive_verified": true,
+  "source_bytes_unchanged": true,
+  "original_sha256": {
+    "events.duckdb": "6d802f17146b2d7c9b4da953f612057bc8cf4de4e260743c093b2ce8ed9b9f81",
+    "events.parquet": "a43ba11688026ad3e35645a12199be0e56ac75d70e903ba02203f117bf4d58a8",
+    "events.parquet.manifest.json": "ead677924633c902b5dc7865fdcbda7bd8911cbfbe4b5594a47e72531c882aca",
+    "report.json": "4453edabc9e378b4d0ee335db1f1a880877c9653b7adfafb165975cc529cf4e6",
+    "verification.json": "6e777130bdad534e7468158186960276c7e236ade74c6f85758c71290a495ab6",
+    "config.sanitized.json": "a0acf2941319bf8295fa98e7e5366b5b0967bfeb567a36fc1020b3861651b6cb"
+  },
+  "new_network_requests": 0,
+  "full_fresh_option_stream_verified": false,
+  "trade_history_continuity_verified": false,
+  "sustained_capacity_verified": false,
+  "milestone_2_complete": false,
+  "trading_enabled": false,
+  "orders_submitted": 0
+}

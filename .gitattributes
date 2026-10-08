@@ -1,0 +1,3 @@
+# Immutable source and native proof hashes bind the original file bytes.
+# Preserve both existing CRLF documents and LF Python files on every checkout.
+* -text

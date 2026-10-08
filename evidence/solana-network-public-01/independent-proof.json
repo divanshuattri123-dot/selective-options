@@ -1,0 +1,22 @@
+{
+  "status": "SAVED_RESPONSE_AND_LABELLED_OUTAGE_REPLAY_VERIFIED",
+  "new_public_requests": 0,
+  "original_rows": 3,
+  "original_pending_outbox_rows": 3,
+  "sql_pit_boundaries": 6,
+  "raw_values_and_actual_receipts_match": true,
+  "sealed_archive_exact_match": true,
+  "saved_public_runtime_replay_exact": true,
+  "synthetic_outage_fixture_rows": 4,
+  "synthetic_outage_visible": true,
+  "earlier_view_unchanged": true,
+  "fixture_closed_reload_match": true,
+  "fixture_parquet_sha256": "54dca0639fbd01bf2546c330df362a4cae7230b1d1f8e86e422fe9972bca77ee",
+  "source_database_sha256": "b3c2b76352daffbdc18a26b17b6b8540fe37c1dbc88acf87d093e12a0e8a3221",
+  "source_database_unchanged": true,
+  "current_vote_accounts": 672,
+  "delinquent_vote_accounts": 6118,
+  "total_visible_activated_stake_lamports": "442013190171137211",
+  "trading_enabled": false,
+  "orders_submitted": 0
+}

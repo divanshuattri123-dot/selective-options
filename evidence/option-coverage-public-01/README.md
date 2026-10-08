@@ -1,0 +1,7 @@
+# Uncapped BTC attempt with exact discovery bindings
+
+This preserved finite attempt uses Deribit public testnet only. It requested 75 seconds of collection, selected all 1,010 discovered BTC options, and used 100-channel batches. Discovery/startup and shutdown drain add elapsed wall time. All sockets stopped. No authentication, orders or production execution occurred.
+
+The stream timed out before a complete subscription acknowledgement. 21,445 rows were retained; 633 distinct symbols have any saved ticker observations and 633 have any saved book observations. These counts do not imply fresh or complete legs. Exact timeout cause/batch is unknown. `verification.json` correctly reports `UNCAPPED_COVERAGE_NOT_VERIFIED` and `OPTION_STREAM_INACTIVE`; `CAPTURE_FINISHED` in the capture report means finite shutdown completed.
+
+`independent-proof.json` verifies all native metadata bindings, six control/PIT boundaries, four inactive views, original-byte preservation, exact sealed archive and offline duplicate replay/closed reload. `verify_saved.py` makes zero HTTP/WebSocket calls; its replay requires the currently preserved fresh sibling path, so do not rerun against an existing replay directory. `../option-coverage-replay-01` contains the derived database/archive. No continuity, full fresh universe, other-asset capacity, every-field availability or sustained deployment claim is made.

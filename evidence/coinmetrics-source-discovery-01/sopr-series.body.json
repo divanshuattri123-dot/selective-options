@@ -1,0 +1,1 @@
+{"error":{"type":"forbidden","message":"Requested metric 'SOPR' with frequency '1d' for asset 'btc' is not available with supplied credentials."}}

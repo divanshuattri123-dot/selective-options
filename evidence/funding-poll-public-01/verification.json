@@ -1,0 +1,28 @@
+{
+  "source_sha256": "8e48be19fefdf404d1c01fb2548f9979f93867b43c759b63381825e5ff40e03c",
+  "source_rows": 7,
+  "public_funding_observations": 6,
+  "independent_pit_boundaries": 12,
+  "source_archive_exact": true,
+  "source_bytes_unchanged": true,
+  "exact_updated_runtime_saved_replay": true,
+  "synthetic_later_poll_and_outage_rows": 8,
+  "fixture_rows": 15,
+  "fixture_selected_charges": 6,
+  "fixture_outage_visible": true,
+  "fixture_prior_view_unchanged": true,
+  "fixture_archive_exact": true,
+  "synthetic_event_ids": [
+    "c4a0b33d61f0eeec45b67e40a733852bffec90238de2a414639072af73679034",
+    "f4c8cdbbb84d3ad791c4d7e03516aa0220b28958b51d71a0c034e7070639898f",
+    "94ef5af228ab70aabaf5cb13b07e71cb3bda4a9b2ec079cc0e4035efbe3f712b",
+    "d556fd54fcc166e268c7364053d1e77dea5c2ce1c18880126898bd04dc4e011f",
+    "115d2fe29ac7f54a81fd90f0485fe3d4d59da359b707472938e4f89fd4cef3b7",
+    "f7cd7c37513e9a0dcb6f0c812916d40fc698175074bf3a5ac934e333be6ef401",
+    "fd398461ab8fe840f1aeeedf6ba1704cd9a5ca2327238e8397ba7b265abfdf3a",
+    "33badec2daff2bb9c086f6b3b3091757024518397602787595bcab63c93d39de"
+  ],
+  "new_network_requests": 0,
+  "real_scheduler_or_soak_verified": false,
+  "trading_enabled": false
+}

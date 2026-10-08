@@ -1,0 +1,47 @@
+{
+  "status": "SAVED_PUBLIC_SETTLEMENT_RESPONSES_INDEPENDENTLY_VERIFIED",
+  "network_requests": 0,
+  "public_settlement_rows": 6,
+  "public_pages": 4,
+  "sql_pit_checks": 12,
+  "canonical_identity_checks": 6,
+  "all_reported_fields_exact": true,
+  "database_sha256_unchanged": "e8a87b3606193059f999f61cb503c6aa06aa81ceddccd9b557f37402417327d0",
+  "parquet_exact_match": true,
+  "checked": [
+    {
+      "event_id": "03f09f31f5bd96c6a3e9d13c26c8f526fec9a1d16b1ec10efbcd11848a2f7bb5",
+      "funding_time_ms": 1790899200002,
+      "observed_at_ms": 1790926800272
+    },
+    {
+      "event_id": "07316ca6a17cd903baa4ed28e739df81b87fbd5a67ab0c540dfbc3e5e02ecae7",
+      "funding_time_ms": 1790755200000,
+      "observed_at_ms": 1790926798940
+    },
+    {
+      "event_id": "3b7d39d4e290bde9c8a950fbd0a8cdbc1ed0f45c97f644e25ece76194e41e9e1",
+      "funding_time_ms": 1790841600005,
+      "observed_at_ms": 1790926799554
+    },
+    {
+      "event_id": "7046f165a1647cb5783fca4480663ec07e7d191d0ef8372eb4ce6e6f39aa4170",
+      "funding_time_ms": 1790870400003,
+      "observed_at_ms": 1790926800272
+    },
+    {
+      "event_id": "be53e8baa441ef768a4969222c0bbb303e4a7db59c420f76268a219a9020cf4d",
+      "funding_time_ms": 1790812800001,
+      "observed_at_ms": 1790926799554
+    },
+    {
+      "event_id": "c60372f453afaa9ae71aec6741d050b119ec6b6da047b9c1a69f8856a4c62a67",
+      "funding_time_ms": 1790784000002,
+      "observed_at_ms": 1790926798940
+    }
+  ],
+  "historical_interval_available": false,
+  "historical_schedule_completeness": "NOT_PROVEN",
+  "finality_verified": false,
+  "trading_enabled": false
+}

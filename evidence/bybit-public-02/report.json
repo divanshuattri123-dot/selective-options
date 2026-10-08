@@ -1,0 +1,129 @@
+{
+  "version": "0.3.10",
+  "started_at_ms": 1790526969485,
+  "ended_at_ms": 1790526973332,
+  "status": "PUBLIC_SNAPSHOTS_VERIFIED",
+  "failure_type": null,
+  "rows": 12,
+  "counts": [
+    {
+      "source": "bybit",
+      "environment": "public_reference",
+      "asset": "BTC",
+      "kind": "feed_health",
+      "count": 1
+    },
+    {
+      "source": "bybit",
+      "environment": "public_reference",
+      "asset": "BTC",
+      "kind": "funding",
+      "count": 1
+    },
+    {
+      "source": "bybit",
+      "environment": "public_reference",
+      "asset": "BTC",
+      "kind": "perpetual",
+      "count": 1
+    },
+    {
+      "source": "bybit",
+      "environment": "public_reference",
+      "asset": "ETH",
+      "kind": "feed_health",
+      "count": 1
+    },
+    {
+      "source": "bybit",
+      "environment": "public_reference",
+      "asset": "ETH",
+      "kind": "funding",
+      "count": 1
+    },
+    {
+      "source": "bybit",
+      "environment": "public_reference",
+      "asset": "ETH",
+      "kind": "perpetual",
+      "count": 1
+    },
+    {
+      "source": "bybit",
+      "environment": "public_reference",
+      "asset": "PAXG",
+      "kind": "feed_health",
+      "count": 1
+    },
+    {
+      "source": "bybit",
+      "environment": "public_reference",
+      "asset": "PAXG",
+      "kind": "funding",
+      "count": 1
+    },
+    {
+      "source": "bybit",
+      "environment": "public_reference",
+      "asset": "PAXG",
+      "kind": "perpetual",
+      "count": 1
+    },
+    {
+      "source": "bybit",
+      "environment": "public_reference",
+      "asset": "SOL",
+      "kind": "feed_health",
+      "count": 1
+    },
+    {
+      "source": "bybit",
+      "environment": "public_reference",
+      "asset": "SOL",
+      "kind": "funding",
+      "count": 1
+    },
+    {
+      "source": "bybit",
+      "environment": "public_reference",
+      "asset": "SOL",
+      "kind": "perpetual",
+      "count": 1
+    }
+  ],
+  "source_health": [
+    {
+      "asset": "BTC",
+      "code": 0,
+      "ok": true,
+      "reason": "SNAPSHOT_ACCEPTED"
+    },
+    {
+      "asset": "ETH",
+      "code": 0,
+      "ok": true,
+      "reason": "SNAPSHOT_ACCEPTED"
+    },
+    {
+      "asset": "SOL",
+      "code": 0,
+      "ok": true,
+      "reason": "SNAPSHOT_ACCEPTED"
+    },
+    {
+      "asset": "PAXG",
+      "code": 0,
+      "ok": true,
+      "reason": "SNAPSHOT_ACCEPTED"
+    }
+  ],
+  "pit_checks": 8,
+  "archive_exact_match": true,
+  "parquet_sha256": "69b4c8694b420c9ac3811d296fc458ca62050132407682404d37020e70c4b051",
+  "public_responses": 8,
+  "publication_time_available": false,
+  "timestamp_basis": "receipt",
+  "orders_submitted": 0,
+  "trading_enabled": false,
+  "paper_trading_started": false
+}

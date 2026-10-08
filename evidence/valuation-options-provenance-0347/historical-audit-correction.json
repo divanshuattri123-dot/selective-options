@@ -1,0 +1,27 @@
+{
+  "status": "HISTORICAL_AUDIT_POLICY_REPAIRED",
+  "changed_files": [
+    "scripts/audit_bar_checkpoint.py",
+    "tests/test_bar_checkpoint_audit.py"
+  ],
+  "sha256_before": {
+    "scripts/audit_bar_checkpoint.py": "f852859b614a55f5a1fe987993cdbb3a7fc4019070adde7297b485d1fcc9450e",
+    "tests/test_bar_checkpoint_audit.py": "27ad8cd1bb03bffd54877e494aa45481eb4990ddfae7c858c85de074881cc641"
+  },
+  "sha256_after": {
+    "scripts/audit_bar_checkpoint.py": "51be3fe19d0514c09d20b42032298dd026ca28e3dd8b9370fbba1c18d9581e6f",
+    "tests/test_bar_checkpoint_audit.py": "0ac0e82a424b73b969083f0037bcd3236f0656fb5c7571e427faf23dbd49ae0a"
+  },
+  "production_source_unchanged": true,
+  "current_native_producers_and_auditor_unchanged": true,
+  "initial_regression_result": {
+    "failed": 7,
+    "passed": 3175,
+    "elapsed_s": 552.54
+  },
+  "initial_suite_sha256": "43c2dc55132ade53fc953e416b4b369e80a559b74eee2c965581d82cc0d47c56",
+  "strict_default_current_code_binding_preserved": true,
+  "historical_mode_explicit_and_non_promoting": true,
+  "new_public_requests_for_repair": 0,
+  "trading_enabled": false
+}

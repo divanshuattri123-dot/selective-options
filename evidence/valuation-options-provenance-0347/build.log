@@ -1,0 +1,202 @@
+* Creating isolated environment: venv+pip...
+* Installing packages in isolated environment:
+  - setuptools>=75
+* Getting build dependencies for wheel...
+running egg_info
+writing src\selective_options.egg-info\PKG-INFO
+writing dependency_links to src\selective_options.egg-info\dependency_links.txt
+writing entry points to src\selective_options.egg-info\entry_points.txt
+writing requirements to src\selective_options.egg-info\requires.txt
+writing top-level names to src\selective_options.egg-info\top_level.txt
+reading manifest file 'src\selective_options.egg-info\SOURCES.txt'
+writing manifest file 'src\selective_options.egg-info\SOURCES.txt'
+* Installed build dependency versions:
+  - setuptools==84.0.0
+* Building wheel...
+running bdist_wheel
+running build
+running build_py
+copying src\selective_options\cli.py -> build\lib\selective_options
+copying src\selective_options\coinmetrics.py -> build\lib\selective_options
+copying src\selective_options\coinmetrics_quality.py -> build\lib\selective_options
+copying src\selective_options\config.py -> build\lib\selective_options
+copying src\selective_options\ingestion.py -> build\lib\selective_options
+copying src\selective_options\options_features.py -> build\lib\selective_options
+copying src\selective_options\options_research.py -> build\lib\selective_options
+copying src\selective_options\store.py -> build\lib\selective_options
+copying src\selective_options\__init__.py -> build\lib\selective_options
+running egg_info
+writing src\selective_options.egg-info\PKG-INFO
+writing dependency_links to src\selective_options.egg-info\dependency_links.txt
+writing entry points to src\selective_options.egg-info\entry_points.txt
+writing requirements to src\selective_options.egg-info\requires.txt
+writing top-level names to src\selective_options.egg-info\top_level.txt
+reading manifest file 'src\selective_options.egg-info\SOURCES.txt'
+writing manifest file 'src\selective_options.egg-info\SOURCES.txt'
+installing to build\bdist.win-amd64\wheel
+running install
+running install_lib
+creating build\bdist.win-amd64\wheel
+creating build\bdist.win-amd64\wheel\selective_options
+copying build\lib\selective_options\active_rotation.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\archive.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\archive_rotation.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\auth.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\backtest.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\bars.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\bar_checkpoint.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\bar_runtime.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\bar_state.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\bea_calendar.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\binance.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\binance_accounts.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\binance_funding_history.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\binance_funding_view.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\binance_taker.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\bus.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\bybit.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\calendar_quality.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\checkpoints.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\cli.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\coinmetrics.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\coinmetrics_quality.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\collectors.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\config.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\crypto_news.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\derivatives.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\errors.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\eth_checkpoint.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\eth_gas.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\eth_gas_quality.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\events.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\features.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\flow_quality.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\flow_view.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\funding_checkpoint.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\funding_history.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\funding_poll.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\gap_recovery.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\ingestion.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\interlock.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\liquidations.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\logging.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\models.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\news.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\news_quality.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\oi_history.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\options_features.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\options_research.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\option_coverage.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\quality.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\rate_limit.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\recovery.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\recovery_handoff.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\recovery_journal.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\recovery_runtime.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\research.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\rotation_restore.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\rotation_runtime.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\rpc.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\security.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\socket_recovery.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\solana_network.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\solana_quality.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\spot_trades.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\stablecoin_checkpoint.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\stablecoin_supply.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\startup.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\store.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\tips_yield.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\trade_backfill.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\trade_reconciliation.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\trend_features.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\trials.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\venue.py -> build\bdist.win-amd64\wheel\.\selective_options
+copying build\lib\selective_options\__init__.py -> build\bdist.win-amd64\wheel\.\selective_options
+running install_egg_info
+Copying src\selective_options.egg-info to build\bdist.win-amd64\wheel\.\selective_options-0.3.47-py3.12.egg-info
+running install_scripts
+creating build\bdist.win-amd64\wheel\selective_options-0.3.47.dist-info\WHEEL
+creating 'C:\\Users\\Divan\\Documents\\Codex\\2026-09-20\\files-pasted-by-the-user-build\\work\\dist\\.tmp-aaf7spb9\\selective_options-0.3.47-py3-none-any.whl' and adding 'build\\bdist.win-amd64\\wheel' to it
+adding 'selective_options/__init__.py'
+adding 'selective_options/active_rotation.py'
+adding 'selective_options/archive.py'
+adding 'selective_options/archive_rotation.py'
+adding 'selective_options/auth.py'
+adding 'selective_options/backtest.py'
+adding 'selective_options/bar_checkpoint.py'
+adding 'selective_options/bar_runtime.py'
+adding 'selective_options/bar_state.py'
+adding 'selective_options/bars.py'
+adding 'selective_options/bea_calendar.py'
+adding 'selective_options/binance.py'
+adding 'selective_options/binance_accounts.py'
+adding 'selective_options/binance_funding_history.py'
+adding 'selective_options/binance_funding_view.py'
+adding 'selective_options/binance_taker.py'
+adding 'selective_options/bus.py'
+adding 'selective_options/bybit.py'
+adding 'selective_options/calendar_quality.py'
+adding 'selective_options/checkpoints.py'
+adding 'selective_options/cli.py'
+adding 'selective_options/coinmetrics.py'
+adding 'selective_options/coinmetrics_quality.py'
+adding 'selective_options/collectors.py'
+adding 'selective_options/config.py'
+adding 'selective_options/crypto_news.py'
+adding 'selective_options/derivatives.py'
+adding 'selective_options/errors.py'
+adding 'selective_options/eth_checkpoint.py'
+adding 'selective_options/eth_gas.py'
+adding 'selective_options/eth_gas_quality.py'
+adding 'selective_options/events.py'
+adding 'selective_options/features.py'
+adding 'selective_options/flow_quality.py'
+adding 'selective_options/flow_view.py'
+adding 'selective_options/funding_checkpoint.py'
+adding 'selective_options/funding_history.py'
+adding 'selective_options/funding_poll.py'
+adding 'selective_options/gap_recovery.py'
+adding 'selective_options/ingestion.py'
+adding 'selective_options/interlock.py'
+adding 'selective_options/liquidations.py'
+adding 'selective_options/logging.py'
+adding 'selective_options/models.py'
+adding 'selective_options/news.py'
+adding 'selective_options/news_quality.py'
+adding 'selective_options/oi_history.py'
+adding 'selective_options/option_coverage.py'
+adding 'selective_options/options_features.py'
+adding 'selective_options/options_research.py'
+adding 'selective_options/quality.py'
+adding 'selective_options/rate_limit.py'
+adding 'selective_options/recovery.py'
+adding 'selective_options/recovery_handoff.py'
+adding 'selective_options/recovery_journal.py'
+adding 'selective_options/recovery_runtime.py'
+adding 'selective_options/research.py'
+adding 'selective_options/rotation_restore.py'
+adding 'selective_options/rotation_runtime.py'
+adding 'selective_options/rpc.py'
+adding 'selective_options/security.py'
+adding 'selective_options/socket_recovery.py'
+adding 'selective_options/solana_network.py'
+adding 'selective_options/solana_quality.py'
+adding 'selective_options/spot_trades.py'
+adding 'selective_options/stablecoin_checkpoint.py'
+adding 'selective_options/stablecoin_supply.py'
+adding 'selective_options/startup.py'
+adding 'selective_options/store.py'
+adding 'selective_options/tips_yield.py'
+adding 'selective_options/trade_backfill.py'
+adding 'selective_options/trade_reconciliation.py'
+adding 'selective_options/trend_features.py'
+adding 'selective_options/trials.py'
+adding 'selective_options/venue.py'
+adding 'selective_options-0.3.47.dist-info/METADATA'
+adding 'selective_options-0.3.47.dist-info/WHEEL'
+adding 'selective_options-0.3.47.dist-info/entry_points.txt'
+adding 'selective_options-0.3.47.dist-info/top_level.txt'
+adding 'selective_options-0.3.47.dist-info/RECORD'
+removing build\bdist.win-amd64\wheel
+Successfully built selective_options-0.3.47-py3-none-any.whl

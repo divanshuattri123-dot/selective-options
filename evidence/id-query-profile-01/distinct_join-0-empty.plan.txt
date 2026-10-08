@@ -1,0 +1,71 @@
+┌───────────────────────────┐
+│         PROJECTION        │
+│    ────────────────────   │
+│          event_id         │
+│           source          │
+│        environment        │
+│           asset           │
+│           symbol          │
+│            kind           │
+│       event_time_ms       │
+│       observed_at_ms      │
+│       timestamp_kind      │
+│       schema_version      │
+│        payload_json       │
+│                           │
+│           ~1 row          │
+└─────────────┬─────────────┘
+┌─────────────┴─────────────┐
+│         HASH_JOIN         │
+│    ────────────────────   │
+│      Join Type: INNER     │
+│                           │
+│        Conditions:        ├──────────────┐
+│ CAST(event_id AS INTEGER) │              │
+│= CAST(event_id AS INTEGER)│              │
+│                           │              │
+│           ~1 row          │              │
+└─────────────┬─────────────┘              │
+┌─────────────┴─────────────┐┌─────────────┴─────────────┐
+│          SEQ_SCAN         ││       HASH_GROUP_BY       │
+│    ────────────────────   ││    ────────────────────   │
+│           Table:          ││         Groups: #0        │
+│     events.main.events    ││                           │
+│                           ││                           │
+│   Type: Sequential Scan   ││                           │
+│                           ││                           │
+│        Projections:       ││                           │
+│          event_id         ││                           │
+│           source          ││                           │
+│        environment        ││                           │
+│           asset           ││                           │
+│           symbol          ││                           │
+│            kind           ││                           │
+│       event_time_ms       ││                           │
+│       observed_at_ms      ││                           │
+│       timestamp_kind      ││                           │
+│       schema_version      ││                           │
+│        payload_json       ││                           │
+│                           ││                           │
+│        ~62,089 rows       ││           ~1 row          │
+└───────────────────────────┘└─────────────┬─────────────┘
+                             ┌─────────────┴─────────────┐
+                             │         PROJECTION        │
+                             │    ────────────────────   │
+                             │          event_id         │
+                             │                           │
+                             │           ~1 row          │
+                             └─────────────┬─────────────┘
+                             ┌─────────────┴─────────────┐
+                             │         PROJECTION        │
+                             │    ────────────────────   │
+                             │          event_id         │
+                             │                           │
+                             │           ~1 row          │
+                             └─────────────┬─────────────┘
+                             ┌─────────────┴─────────────┐
+                             │           UNNEST          │
+                             └─────────────┬─────────────┘
+                             ┌─────────────┴─────────────┐
+                             │         DUMMY_SCAN        │
+                             └───────────────────────────┘

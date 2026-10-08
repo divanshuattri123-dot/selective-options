@@ -1,0 +1,38 @@
+{
+  "format_version": 1,
+  "status": "ROTATION_VERIFIED",
+  "as_of_ms": 1791113911327,
+  "partition_ms": 86400000,
+  "total_rows": 35,
+  "source_sha256": "d9832bca435096289ed386ea6334ce7a93908aae3fb307c346f15e95fee09cce",
+  "source_scope": "all sources and environments in events; both clocks at or before cutoff",
+  "delivery_acknowledgements_copied": false,
+  "source_history_modified": false,
+  "history_complete": false,
+  "ready_for_signals": false,
+  "trading_enabled": false,
+  "parts": [
+    {
+      "index": 0,
+      "file": "part-000000.parquet",
+      "manifest": "part-000000.parquet.manifest.json",
+      "start_ms": 1790985600000,
+      "end_ms": 1791072000000,
+      "rows": 1,
+      "bytes": 2695,
+      "sha256": "a4ad9b613ed903b378b4abccf9bce4cdf140c5b21642345646968a1e6a94b7c8",
+      "manifest_sha256": "b7bf3c92c5d99a2752902043a26feadae357bfe00f6e0f97b39136b80ed74897"
+    },
+    {
+      "index": 1,
+      "file": "part-000001.parquet",
+      "manifest": "part-000001.parquet.manifest.json",
+      "start_ms": 1791072000000,
+      "end_ms": 1791158400000,
+      "rows": 34,
+      "bytes": 10870,
+      "sha256": "43fc07f98ee3e2e6432c71666b917a94fc31fd8b859756bb9797f6f06499eae6",
+      "manifest_sha256": "190a42183ad85a4e6e8cb6cf5062b7488d7c087af307e5d9b6b1c1c7b0ad5de0"
+    }
+  ]
+}

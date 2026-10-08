@@ -1,0 +1,112 @@
+{
+  "version": "0.3.22",
+  "status": "OFFLINE_FLOW_REVISION_AND_ARCHIVE_VERIFIED",
+  "network_requests": 0,
+  "saved_public_rows": 24,
+  "saved_public_projection_checks": [
+    {
+      "kind": "taker_flow",
+      "asset": "BTC",
+      "periods": 3,
+      "actual_receipt_ms": 1790864882340
+    },
+    {
+      "kind": "taker_flow",
+      "asset": "ETH",
+      "periods": 3,
+      "actual_receipt_ms": 1790864882810
+    },
+    {
+      "kind": "taker_flow",
+      "asset": "SOL",
+      "periods": 3,
+      "actual_receipt_ms": 1790864883353
+    },
+    {
+      "kind": "taker_flow",
+      "asset": "PAXG",
+      "periods": 3,
+      "actual_receipt_ms": 1790864884094
+    },
+    {
+      "kind": "account_ratio",
+      "asset": "BTC",
+      "periods": 3,
+      "actual_receipt_ms": 1790866191766
+    },
+    {
+      "kind": "account_ratio",
+      "asset": "ETH",
+      "periods": 3,
+      "actual_receipt_ms": 1790866192227
+    },
+    {
+      "kind": "account_ratio",
+      "asset": "SOL",
+      "periods": 3,
+      "actual_receipt_ms": 1790866192721
+    },
+    {
+      "kind": "account_ratio",
+      "asset": "PAXG",
+      "periods": 3,
+      "actual_receipt_ms": 1790866193181
+    }
+  ],
+  "saved_public_database_sha256_unchanged": {
+    "binance-taker-public-02\\events.duckdb": "695e1c0a4d1bef6827c2436d97afba5e2f8109131435ef2dc5eaf9180d855686",
+    "binance-accounts-public-01\\events.duckdb": "227529d43ca980a4496e45200e2abd1f07463442f25bc9081c2794a5e00a4e75"
+  },
+  "synthetic_scope": "A -> B -> A values and repeated exact poll; all changed receipts/revisions are synthetic, not public observations",
+  "synthetic_rows": 6,
+  "synthetic_revision_checks": [
+    {
+      "kind": "taker_flow",
+      "synthetic_as_of_ms": 1790864882340,
+      "selected_id": "2827d4589c0d878ff4f7ee507c47d7eb691d924e48519265533b883f49666870"
+    },
+    {
+      "kind": "taker_flow",
+      "synthetic_as_of_ms": 1790864883340,
+      "selected_id": "e3218ddeb0e9b4daf20f6b97e58a60f8403ae91ff182dc3746a20ba718430234"
+    },
+    {
+      "kind": "taker_flow",
+      "synthetic_as_of_ms": 1790864884340,
+      "selected_id": "bc21450f3cda28d28c88111faeb2e12bac173bb7cb2ce73458fe37abf714a1a9"
+    },
+    {
+      "kind": "account_ratio",
+      "synthetic_as_of_ms": 1790866191766,
+      "selected_id": "f294e530f3bf4e4d521852ce1efa6b77706a74dbbd30ed4d382802e9129c8173"
+    },
+    {
+      "kind": "account_ratio",
+      "synthetic_as_of_ms": 1790866192766,
+      "selected_id": "b75824f68b3af3b7b1198303cccf0bbd5687928d5187a5ac670133c1a3815b39"
+    },
+    {
+      "kind": "account_ratio",
+      "synthetic_as_of_ms": 1790866193766,
+      "selected_id": "489b987e1259ad7a598592ed7da3a18eca74dcdf34e6d131c6c2671c0045d183"
+    }
+  ],
+  "synthetic_pre_receipt_checks": 2,
+  "exact_poll_replay_deduplicated": true,
+  "archive_exact_match": true,
+  "synthetic_parquet_sha256": "04a673c41276c6ef020e28ba6807939717791ee72741c4e4ba3a028cde544c30",
+  "restore": {
+    "status": "RESTORE_FINISHED",
+    "rows": 6,
+    "archive_sha256": "04a673c41276c6ef020e28ba6807939717791ee72741c4e4ba3a028cde544c30",
+    "observation_timestamps_preserved": true,
+    "redis_delivery_pending": 6,
+    "ready_for_signals": false,
+    "trading_enabled": false,
+    "limitation": "Event archive only; Redis acknowledgements are not archived. Replay is at-least-once and consumers deduplicate event_id."
+  },
+  "legacy_limitation": "Pre-0.3.22 rows omit repeated poll receipts; historical reversions cannot be reconstructed",
+  "continuous_history_verified": false,
+  "trading_enabled": false,
+  "orders_submitted": 0
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "capture": "ingestion-pilot-01",
+    "rows": 10000,
+    "parquet_equals_database": true,
+    "unique_event_ids": true,
+    "report_row_count_matches": true
+  },
+  {
+    "capture": "ingestion-pilot-02",
+    "rows": 9893,
+    "parquet_equals_database": true,
+    "unique_event_ids": true,
+    "report_row_count_matches": true
+  },
+  {
+    "capture": "ingestion-pilot-03",
+    "rows": 8943,
+    "parquet_equals_database": true,
+    "unique_event_ids": true,
+    "report_row_count_matches": true
+  },
+  {
+    "capture": "ingestion-pilot-04",
+    "rows": 61061,
+    "parquet_equals_database": true,
+    "unique_event_ids": true,
+    "report_row_count_matches": true
+  },
+  {
+    "capture": "ingestion-pilot-05",
+    "rows": 10707,
+    "parquet_equals_database": true,
+    "unique_event_ids": true,
+    "report_row_count_matches": true
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "checked_at": "2026-09-20T18:34:25.519388+00:00",
+  "endpoint": "wss://test.deribit.com/ws/api/v2",
+  "credential_revision": 1,
+  "orders_submitted": 0,
+  "settings_changed_by_agent": false,
+  "authentication": "PASSED",
+  "token_scopes": [
+    "block_rfq:read_write",
+    "block_trade:read_write",
+    "connection",
+    "trade:read_write",
+    "custody:read_write",
+    "account:read",
+    "mainaccount"
+  ],
+  "matching_key_count": 1,
+  "key_enabled": true,
+  "key_max_scopes": [
+    "block_rfq:read_write",
+    "block_trade:read_write",
+    "trade:read_write",
+    "custody:read_write",
+    "account:read_write",
+    "wallet:read_write",
+    "sbe_order_entry:none",
+    "fix_drop_copy:none",
+    "sbe_market_data:none",
+    "rest_order_entry:none"
+  ],
+  "key_scope_verification": "wallet:read_write enables withdrawal access and is prohibited",
+  "token_scope_verification": "wallet:read_write enables withdrawal access and is prohibited",
+  "connection_cancel_on_disconnect_enabled": true,
+  "account_cancel_on_disconnect_enabled": true,
+  "readiness_passed": false
+}

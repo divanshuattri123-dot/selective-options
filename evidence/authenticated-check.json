@@ -1,0 +1,9 @@
+{
+  "checked_at": "2026-09-20T18:02:51.144341+00:00",
+  "endpoint": "wss://test.deribit.com/ws/api/v2",
+  "trading_enabled": false,
+  "orders_submitted": 0,
+  "status": "AUTHENTICATED_READINESS_BLOCKED",
+  "error_type": "SecurityError",
+  "reason": "unrecognised or privileged key scope"
+}

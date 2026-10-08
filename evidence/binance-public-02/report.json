@@ -1,0 +1,183 @@
+{
+  "version": "0.3.14",
+  "started_at_ms": 1790605813158,
+  "ended_at_ms": 1790605830987,
+  "status": "PUBLIC_SNAPSHOTS_VERIFIED",
+  "failure_type": null,
+  "rows": 16,
+  "counts": [
+    {
+      "source": "binance",
+      "environment": "public_reference",
+      "asset": "BTC",
+      "kind": "feed_health",
+      "count": 1
+    },
+    {
+      "source": "binance",
+      "environment": "public_reference",
+      "asset": "BTC",
+      "kind": "funding",
+      "count": 1
+    },
+    {
+      "source": "binance",
+      "environment": "public_reference",
+      "asset": "BTC",
+      "kind": "open_interest",
+      "count": 1
+    },
+    {
+      "source": "binance",
+      "environment": "public_reference",
+      "asset": "BTC",
+      "kind": "perpetual",
+      "count": 1
+    },
+    {
+      "source": "binance",
+      "environment": "public_reference",
+      "asset": "ETH",
+      "kind": "feed_health",
+      "count": 1
+    },
+    {
+      "source": "binance",
+      "environment": "public_reference",
+      "asset": "ETH",
+      "kind": "funding",
+      "count": 1
+    },
+    {
+      "source": "binance",
+      "environment": "public_reference",
+      "asset": "ETH",
+      "kind": "open_interest",
+      "count": 1
+    },
+    {
+      "source": "binance",
+      "environment": "public_reference",
+      "asset": "ETH",
+      "kind": "perpetual",
+      "count": 1
+    },
+    {
+      "source": "binance",
+      "environment": "public_reference",
+      "asset": "PAXG",
+      "kind": "feed_health",
+      "count": 1
+    },
+    {
+      "source": "binance",
+      "environment": "public_reference",
+      "asset": "PAXG",
+      "kind": "funding",
+      "count": 1
+    },
+    {
+      "source": "binance",
+      "environment": "public_reference",
+      "asset": "PAXG",
+      "kind": "open_interest",
+      "count": 1
+    },
+    {
+      "source": "binance",
+      "environment": "public_reference",
+      "asset": "PAXG",
+      "kind": "perpetual",
+      "count": 1
+    },
+    {
+      "source": "binance",
+      "environment": "public_reference",
+      "asset": "SOL",
+      "kind": "feed_health",
+      "count": 1
+    },
+    {
+      "source": "binance",
+      "environment": "public_reference",
+      "asset": "SOL",
+      "kind": "funding",
+      "count": 1
+    },
+    {
+      "source": "binance",
+      "environment": "public_reference",
+      "asset": "SOL",
+      "kind": "open_interest",
+      "count": 1
+    },
+    {
+      "source": "binance",
+      "environment": "public_reference",
+      "asset": "SOL",
+      "kind": "perpetual",
+      "count": 1
+    }
+  ],
+  "source_health": [
+    {
+      "asset": "BTC",
+      "code": 0,
+      "ok": true,
+      "reason": "SNAPSHOT_ACCEPTED"
+    },
+    {
+      "asset": "ETH",
+      "code": 0,
+      "ok": true,
+      "reason": "SNAPSHOT_ACCEPTED"
+    },
+    {
+      "asset": "SOL",
+      "code": 0,
+      "ok": true,
+      "reason": "SNAPSHOT_ACCEPTED"
+    },
+    {
+      "asset": "PAXG",
+      "code": 0,
+      "ok": true,
+      "reason": "SNAPSHOT_ACCEPTED"
+    }
+  ],
+  "funding_metadata": [
+    {
+      "asset": "BTC",
+      "funding_interval_minutes": 480,
+      "basis": "explicit_fundingInfo",
+      "observed_at_ms": 1790605825803
+    },
+    {
+      "asset": "ETH",
+      "funding_interval_minutes": 480,
+      "basis": "explicit_fundingInfo",
+      "observed_at_ms": 1790605825803
+    },
+    {
+      "asset": "SOL",
+      "funding_interval_minutes": 480,
+      "basis": "explicit_fundingInfo",
+      "observed_at_ms": 1790605825803
+    },
+    {
+      "asset": "PAXG",
+      "funding_interval_minutes": 240,
+      "basis": "explicit_fundingInfo",
+      "observed_at_ms": 1790605825803
+    }
+  ],
+  "pit_checks": 12,
+  "archive_exact_match": true,
+  "parquet_sha256": "239e55f627babbdbe5e61bf2530e022700c2532e94289c395b5dcb3a0184b75c",
+  "public_responses": 10,
+  "publication_time_available": false,
+  "timestamp_basis": "source and receipt; both required",
+  "orders_submitted": 0,
+  "trading_enabled": false,
+  "paper_trading_started": false
+}

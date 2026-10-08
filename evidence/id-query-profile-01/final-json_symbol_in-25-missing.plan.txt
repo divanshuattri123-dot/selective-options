@@ -1,0 +1,58 @@
+┌───────────────────────────┐
+│         PROJECTION        │
+│    ────────────────────   │
+│          event_id         │
+│           source          │
+│        environment        │
+│           asset           │
+│           symbol          │
+│            kind           │
+│       event_time_ms       │
+│       observed_at_ms      │
+│       timestamp_kind      │
+│       schema_version      │
+│        payload_json       │
+│                           │
+│        ~12,417 rows       │
+└─────────────┬─────────────┘
+┌─────────────┴─────────────┐
+│         HASH_JOIN         │
+│    ────────────────────   │
+│      Join Type: SEMI      │
+│                           │
+│        Conditions:        ├──────────────┐
+│        symbol = #0        │              │
+│                           │              │
+│        ~12,417 rows       │              │
+└─────────────┬─────────────┘              │
+┌─────────────┴─────────────┐┌─────────────┴─────────────┐
+│          SEQ_SCAN         ││         PROJECTION        │
+│    ────────────────────   ││    ────────────────────   │
+│           Table:          ││      (value ->> '$')      │
+│     events.main.events    ││                           │
+│                           ││                           │
+│   Type: Sequential Scan   ││                           │
+│                           ││                           │
+│        Projections:       ││                           │
+│           symbol          ││                           │
+│          event_id         ││                           │
+│           source          ││                           │
+│        environment        ││                           │
+│           asset           ││                           │
+│            kind           ││                           │
+│       event_time_ms       ││                           │
+│       observed_at_ms      ││                           │
+│       timestamp_kind      ││                           │
+│       schema_version      ││                           │
+│        payload_json       ││                           │
+│                           ││                           │
+│        ~62,089 rows       ││           ~1 row          │
+└───────────────────────────┘└─────────────┬─────────────┘
+                             ┌─────────────┴─────────────┐
+                             │         JSON_EACH         │
+                             │    ────────────────────   │
+                             │    Function: JSON_EACH    │
+                             │     Projections: value    │
+                             │                           │
+                             │           ~1 row          │
+                             └───────────────────────────┘

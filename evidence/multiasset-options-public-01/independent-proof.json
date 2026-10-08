@@ -1,0 +1,72 @@
+{
+  "status": "FINITE_MULTI_ASSET_NATIVE_SUBSCRIPTION_AND_COVERAGE_VERIFIED",
+  "assets": [
+    {
+      "asset": "ETH",
+      "available_and_selected_options": 804,
+      "empty_chain_is_blocked": false,
+      "coverage_state": "INCOMPLETE_LEG_OBSERVATIONS",
+      "blocker": null,
+      "leg_counts": {
+        "book_OBSERVED": 646,
+        "book_STALE": 158,
+        "ticker_OBSERVED": 804
+      }
+    },
+    {
+      "asset": "SOL",
+      "available_and_selected_options": 142,
+      "empty_chain_is_blocked": false,
+      "coverage_state": "INCOMPLETE_LEG_OBSERVATIONS",
+      "blocker": null,
+      "leg_counts": {
+        "book_STALE": 142,
+        "ticker_OBSERVED": 142
+      }
+    },
+    {
+      "asset": "PAXG",
+      "available_and_selected_options": 0,
+      "empty_chain_is_blocked": true,
+      "coverage_state": "BLOCKED",
+      "blocker": "OPTION_SELECTED_UNIVERSE_EMPTY",
+      "leg_counts": {}
+    }
+  ],
+  "saved_rows": 47756,
+  "pending_outbox_rows": 47756,
+  "required_and_acknowledged_channels": 2840,
+  "batch_progress_records": 29,
+  "fully_acknowledged_sessions": 1,
+  "disconnects": 0,
+  "full_ack_after_capture_start_ms": 21767,
+  "full_ack_after_resync_ms": 14812,
+  "sql_control_pit_boundaries": 68,
+  "ack_visibility_checks": 6,
+  "independent_sql_latest_leg_checks": 1892,
+  "metadata_bindings_checked": 946,
+  "freshness_age_bound_ms": 30000,
+  "completed_subscription_receive_timing_ns": {
+    "NORMALIZE": 1656549000,
+    "SINK_PUBLISH": 196763800,
+    "SOCKET_RECEIVE": 12714801500
+  },
+  "original_sha256": {
+    "events.duckdb": "a68f6272d6565eb222fa59323443e75d39ef7094abbdfcde5173c6f8533b2b00",
+    "events.parquet": "2e22e41cf30deba5d4a3b5503747ec0ef694f755c57b69b547ef8b5aabbe9738",
+    "events.parquet.manifest.json": "107b53620452fe1b891e8a074ac415f1c75eca71681754d5c8b2c0877b7fe87e",
+    "report.json": "9e162c74dd60fc9bfef3d3660bacabe50a17ac16f2a800938a484c4078b7de70",
+    "verification.json": "e8cf97483eff8c280e2b601a6f60588125db4b75043943d74840fd55218e9d65",
+    "config.sanitized.json": "c35c27ec8d97dfe52ed96de2df9e5be584b33911d9912d098bb537cb43f33089"
+  },
+  "source_bytes_unchanged": true,
+  "closed_reload_replay_and_sealed_archive_verified": true,
+  "new_network_requests": 0,
+  "stale_bounds_not_relaxed": true,
+  "all_required_assets_or_feeds_verified": false,
+  "trade_history_continuity_verified": false,
+  "sustained_capacity_verified": false,
+  "milestone_2_complete": false,
+  "trading_enabled": false,
+  "orders_submitted": 0
+}

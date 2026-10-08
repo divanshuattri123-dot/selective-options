@@ -1,0 +1,10 @@
+{
+  "file": "src/selective_options/__init__.py",
+  "change": "Normalize the final line ending from mixed CRLF/LF to consistent CRLF; no source tokens or parsed syntax changed.",
+  "before_sha256": "9ea7b406f5844d8ea36452ee0ac981b5d2214b9707216ccade1826165c0c6909",
+  "after_sha256": "841de3f78a6a20821b3ed20a69b5eb030d8473834ad723bd041adae03751d933",
+  "parsed_syntax_identical": true,
+  "version": "0.3.44",
+  "functional_modules_changed": false,
+  "full_suite_continued_with_identical_version_definition": true
+}

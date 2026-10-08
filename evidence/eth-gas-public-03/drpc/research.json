@@ -1,0 +1,39 @@
+{
+  "researched_at_ms": 1791093545729,
+  "chosen_public_endpoint": "https://eth.drpc.org/",
+  "provider_source": "ethereum_drpc",
+  "selection": "dRPC official Ethereum quickstart explicitly lists public HTTPS endpoint; no key, account or authenticated path. Different provider/hostname from failed PublicNode. Exactly four successful read-only calls; no fallback or extra public captures.",
+  "primary_references": [
+    {
+      "url": "https://drpc.org/docs/ethereum-api",
+      "supports": "Public Ethereum HTTPS endpoint eth.drpc.org"
+    },
+    {
+      "url": "https://drpc.org/docs/ethereum-api/blocksinfo/eth_getBlockByNumber",
+      "supports": "Block reference RPC"
+    },
+    {
+      "url": "https://drpc.org/docs/ethereum-api/gasestimation/eth_feeHistory",
+      "supports": "Fee history RPC"
+    },
+    {
+      "url": "https://ethereum.github.io/execution-apis/next/api/methods/eth_feeHistory/",
+      "supports": "oldestBlock, block base fee plus next predicted fee, gasUsedRatio gasUsed/gasLimit"
+    },
+    {
+      "url": "https://ethereum.org/en/developers/docs/apis/json-rpc/",
+      "supports": "JSON-RPC block tags and quantities"
+    },
+    {
+      "url": "https://developers.cloudflare.com/web3/ethereum-gateway/reference/supported-networks/",
+      "supports": "Cloudflare documented public mainnet endpoint option; not called"
+    },
+    {
+      "url": "https://developers.cloudflare.com/web3/ethereum-gateway/reference/supported-api-methods/",
+      "supports": "Cloudflare documented method support; not called"
+    }
+  ],
+  "tls": "aiohttp default verification retained; four HTTPS calls succeeded without ssl/context/certificate overrides",
+  "source_time": "Original header timestamp times 1000; original HTTP response receipt retained independently",
+  "scope_limits": "Same-provider RPC consistency; not independently verified consensus/finality. One sampled finalized block, not history or continuous coverage. Staking/netflows/L2 and M2 still partial. Trading/paper trading disabled, zero orders."
+}

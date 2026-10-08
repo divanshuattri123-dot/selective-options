@@ -1,0 +1,18 @@
+{
+  "host": "ethereum-rpc.publicnode.com",
+  "checked_at_ms": 1790693736853,
+  "openssl": "OpenSSL 3.0.16 11 Feb 2025",
+  "trust_store_stats": {
+    "x509": 39,
+    "crl": 0,
+    "x509_ca": 37
+  },
+  "verify_mode": "CERT_REQUIRED",
+  "check_hostname": true,
+  "status": "CERTIFICATE_REJECTED",
+  "verify_code": 62,
+  "verify_message": "Hostname mismatch, certificate is not valid for 'ethereum-rpc.publicnode.com'.",
+  "windows_schannel_result": "SEC_E_WRONG_PRINCIPAL (0x80090322)",
+  "windows_check_hostname": "enabled",
+  "conclusion": "Hostname mismatch, not evidence of missing CA trust; no TLS settings or certificates changed"
+}

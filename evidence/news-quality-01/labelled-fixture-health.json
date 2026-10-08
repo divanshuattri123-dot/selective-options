@@ -1,0 +1,57 @@
+{
+  "provenance": "Synthetic offline health; no new public poll",
+  "rows": [
+    {
+      "event_id": "4ca31d41432aa7cafb414e4b4136a239f7ae54c642b2d74a0088e02ba27d8d10",
+      "source": "federal_reserve",
+      "environment": "public_reference",
+      "asset": "GLOBAL",
+      "symbol": "POLICY_NEWS",
+      "kind": "feed_health",
+      "event_time_ms": 1790002603095,
+      "observed_at_ms": 1790002603095,
+      "timestamp_kind": "receipt",
+      "schema_version": 1,
+      "payload_json": "{\"accepted_event_ids\":[\"02e0e23695a8baaff7757e2d1b175713c20a20aae8d68cdd53c8814715490541\",\"210509f10ae853303c21fbfd9b79f42869e25013a82cab6dff999a0a8afb5112\",\"34211e66aa6307891ac63b1df7ec01ee75dfa26d823ed9816f064531cf8cbfe6\",\"44796634f6ccd155cb0ad8e040a99ff7e74999026b1a8600013cd9165314ac79\",\"4fbfa1d31f7d777f23296b1949caa7dc6ac2c09fdc49eb80bb442e3c43911cec\",\"5f13741f39ec704714cad572e4f4b48f8cac3e240547ea773d3818f1d8ce1573\",\"9712aa63f62b73f6c7996bf92a4eeeb2460496b0e497f4ab0bbc985626885592\",\"9a7bb52b10a3bf5339d5f9415beee14a2b20d1606aa6c5d64c58deae9f267cf2\",\"ab397b1bb0155198870c3a34be9fdb753c9c5536d5e231bfdb4fc9abaa4ae0a4\",\"af6fc82533d9dc4278dc42f9e49ad0bd5112b52b9e1e382d33e76c84ec48ad36\",\"c037a7e9ae5edfd510e789fe2ef93ab4f7be4a1d47afa142c2580fd996044549\",\"ece9eb62b5f57539c4a3f1a57d36d38173d9280ef0b9923e01afbd0c8946c2d8\",\"f1404a49afe474421fedd4cbf62aa5fddb0339d851a7764ba58f27798542b3a0\",\"f484ed6691bf92c20af5e783f3ed5291b9d2239be1f4bf668a87ff3fb1c46815\",\"fbe4906466b67db8047579288fc898a6523649424308181ed654c272e0f23cb3\"],\"accepted_items\":15,\"error_type\":null,\"feed_url\":\"https://www.federalreserve.gov/feeds/press_monetary.xml\",\"ok\":true,\"rejected_items\":0,\"response_received_at_ms\":1790002603094,\"scope\":\"policy RSS metadata; sink accepted, no atomic commit claim\"}"
+    },
+    {
+      "event_id": "b02a522420c8c918fbf679bdfa5e54912bec1e457d1f26021ab4bf2e9b0a08a7",
+      "source": "federal_reserve",
+      "environment": "public_reference",
+      "asset": "GLOBAL",
+      "symbol": "POLICY_NEWS",
+      "kind": "feed_health",
+      "event_time_ms": 1790002604095,
+      "observed_at_ms": 1790002604095,
+      "timestamp_kind": "receipt",
+      "schema_version": 1,
+      "payload_json": "{\"accepted_event_ids\":[],\"accepted_items\":0,\"error_type\":\"LabelledFixtureOutage\",\"feed_url\":\"https://www.federalreserve.gov/feeds/press_monetary.xml\",\"ok\":false,\"rejected_items\":0,\"response_received_at_ms\":null,\"scope\":\"policy RSS metadata; sink accepted, no atomic commit claim\"}"
+    },
+    {
+      "event_id": "764f2b4165580209eff0492563efde1d15de4e36e3daf3bdec44af129e2d6a58",
+      "source": "federal_reserve",
+      "environment": "public_reference",
+      "asset": "GLOBAL",
+      "symbol": "POLICY_NEWS",
+      "kind": "feed_health",
+      "event_time_ms": 1790002605095,
+      "observed_at_ms": 1790002605095,
+      "timestamp_kind": "receipt",
+      "schema_version": 1,
+      "payload_json": "{\"accepted_event_ids\":[\"02e0e23695a8baaff7757e2d1b175713c20a20aae8d68cdd53c8814715490541\",\"210509f10ae853303c21fbfd9b79f42869e25013a82cab6dff999a0a8afb5112\",\"34211e66aa6307891ac63b1df7ec01ee75dfa26d823ed9816f064531cf8cbfe6\",\"44796634f6ccd155cb0ad8e040a99ff7e74999026b1a8600013cd9165314ac79\",\"4fbfa1d31f7d777f23296b1949caa7dc6ac2c09fdc49eb80bb442e3c43911cec\",\"5f13741f39ec704714cad572e4f4b48f8cac3e240547ea773d3818f1d8ce1573\",\"9712aa63f62b73f6c7996bf92a4eeeb2460496b0e497f4ab0bbc985626885592\",\"9a7bb52b10a3bf5339d5f9415beee14a2b20d1606aa6c5d64c58deae9f267cf2\",\"ab397b1bb0155198870c3a34be9fdb753c9c5536d5e231bfdb4fc9abaa4ae0a4\",\"af6fc82533d9dc4278dc42f9e49ad0bd5112b52b9e1e382d33e76c84ec48ad36\",\"c037a7e9ae5edfd510e789fe2ef93ab4f7be4a1d47afa142c2580fd996044549\",\"ece9eb62b5f57539c4a3f1a57d36d38173d9280ef0b9923e01afbd0c8946c2d8\",\"f1404a49afe474421fedd4cbf62aa5fddb0339d851a7764ba58f27798542b3a0\",\"f484ed6691bf92c20af5e783f3ed5291b9d2239be1f4bf668a87ff3fb1c46815\",\"fbe4906466b67db8047579288fc898a6523649424308181ed654c272e0f23cb3\"],\"accepted_items\":15,\"error_type\":null,\"feed_url\":\"https://www.federalreserve.gov/feeds/press_monetary.xml\",\"ok\":true,\"rejected_items\":0,\"response_received_at_ms\":1790002605094,\"scope\":\"policy RSS metadata; sink accepted, no atomic commit claim\"}"
+    },
+    {
+      "event_id": "d81da3f532ba65ae03019d205f357cdb6b9f81e9967653b323e354669d258baf",
+      "source": "federal_reserve",
+      "environment": "public_reference",
+      "asset": "GLOBAL",
+      "symbol": "POLICY_NEWS",
+      "kind": "feed_health",
+      "event_time_ms": 1790002606095,
+      "observed_at_ms": 1790002606095,
+      "timestamp_kind": "receipt",
+      "schema_version": 1,
+      "payload_json": "{\"accepted_event_ids\":[],\"accepted_items\":0,\"error_type\":null,\"feed_url\":\"https://www.federalreserve.gov/feeds/press_monetary.xml\",\"ok\":true,\"rejected_items\":0,\"response_received_at_ms\":1790002606094,\"scope\":\"policy RSS metadata; sink accepted, no atomic commit claim\"}"
+    }
+  ]
+}

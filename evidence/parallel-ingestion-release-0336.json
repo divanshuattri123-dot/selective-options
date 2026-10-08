@@ -1,0 +1,509 @@
+{
+  "version": "0.3.36",
+  "tests_passed": 1302,
+  "net_added_tests": 73,
+  "coverage_percent": 97.97,
+  "integration_target_tests": 121,
+  "store_coverage": {
+    "covered_lines": 167,
+    "num_statements": 168,
+    "percent_covered": 99.50980392156863,
+    "percent_covered_display": "99",
+    "missing_lines": 1,
+    "excluded_lines": 0,
+    "percent_statements_covered": 99.4047619047619,
+    "percent_statements_covered_display": "99",
+    "num_branches": 36,
+    "num_partial_branches": 0,
+    "covered_branches": 36,
+    "missing_branches": 0,
+    "percent_branches_covered": 100.0,
+    "percent_branches_covered_display": "100"
+  },
+  "wheel_source_modules": 52,
+  "wheel_source_exact_match": true,
+  "config_valid": true,
+  "ruff_checked": true,
+  "ruff_formatted_source_script_test_files": 130,
+  "mypy_source_script_files": 74,
+  "parallel_agent_work_authorized": true,
+  "parallel_results_integrated_and_independently_tested": true,
+  "current_acknowledged_manifest_exact_metadata_binding": true,
+  "all_eligible_scoped_controls_audited_before_metadata": true,
+  "required_discovered_unselected_metadata_not_dropped": true,
+  "both_clocks_latest_ties_and_shared_budget_retained": true,
+  "original_native_asset_views": [
+    {
+      "asset": "BTC",
+      "source_artifact": "reused-validation-public-01",
+      "native_rows": 62089,
+      "materialized_query_rows": [
+        3,
+        1010,
+        2020
+      ],
+      "materialized_total": 3033,
+      "exact_original_final_view": true,
+      "pit_boundaries": 5,
+      "coverage_state": "INCOMPLETE_LEG_OBSERVATIONS",
+      "blocker": null
+    },
+    {
+      "asset": "ETH",
+      "source_artifact": "multiasset-options-public-01",
+      "native_rows": 47756,
+      "materialized_query_rows": [
+        3,
+        804,
+        1608
+      ],
+      "materialized_total": 2415,
+      "exact_original_final_view": true,
+      "pit_boundaries": 5,
+      "coverage_state": "INCOMPLETE_LEG_OBSERVATIONS",
+      "blocker": null
+    },
+    {
+      "asset": "SOL",
+      "source_artifact": "multiasset-options-public-01",
+      "native_rows": 47756,
+      "materialized_query_rows": [
+        3,
+        142,
+        284
+      ],
+      "materialized_total": 429,
+      "exact_original_final_view": true,
+      "pit_boundaries": 5,
+      "coverage_state": "INCOMPLETE_LEG_OBSERVATIONS",
+      "blocker": null
+    },
+    {
+      "asset": "PAXG",
+      "source_artifact": "multiasset-options-public-01",
+      "native_rows": 47756,
+      "materialized_query_rows": [
+        3
+      ],
+      "materialized_total": 3,
+      "exact_original_final_view": true,
+      "pit_boundaries": 5,
+      "coverage_state": "BLOCKED",
+      "blocker": "OPTION_SELECTED_UNIVERSE_EMPTY"
+    }
+  ],
+  "original_native_rows": 109845,
+  "pit_boundaries": 20,
+  "synthetic_old_metadata_generation_proof": {
+    "scope": "SYNTHETIC_OBSOLETE_METADATA_GENERATIONS_NOT_PUBLIC_HISTORY",
+    "synthetic_metadata_rows": 110000,
+    "unchanged_native_rows": 62089,
+    "retained_rows_and_pending_outbox": 172089,
+    "old_0335_projection_blocker": "OPTION_COVERAGE_OVER_BUDGET",
+    "current_materialized_query_rows": [
+      3,
+      1010,
+      2020
+    ],
+    "current_materialized_total": 3033,
+    "original_final_view_exactly_matches": true,
+    "native_payloads_cloned_only_for_labelled_fixture": true
+  },
+  "previous_0335_implementation_loaded_from_verified_wheel": "1baa6dafea29a060a1c976645f9f2cb7db8ea478daee5e7c2a8bea95e7dc0af7",
+  "exact_insert_duplicate_replay_native_subsets_archives_outbox_closed_reload_verified": true,
+  "scalar_json_conflict_and_recovery_id_queries": true,
+  "scalar_json_metadata_id_and_symbol_predicates": true,
+  "delivery_acknowledgement_query_changed": false,
+  "read_events_input_limit": 20001,
+  "rollback_outbox_exact_duplicates_literals_cancellation_verified": true,
+  "profile_results": [
+    {
+      "method": "json_semi",
+      "size": 1000,
+      "case": "mixed",
+      "requested_count": 1040,
+      "expected_count": 1000,
+      "duplicate_input_count": 20,
+      "exact_native_rows_equal": true,
+      "elapsed_ns": [
+        21821300,
+        21215400,
+        19719200
+      ],
+      "median_ns": 21215400,
+      "duckdb_version": "1.5.5",
+      "threads": 8,
+      "memory_limit": "12.5 GiB",
+      "query_plan_file": "final-json_semi-1000-mixed.plan.txt",
+      "process_wall_seconds": null,
+      "resumed_existing_completed_worker": true
+    },
+    {
+      "method": "json_semi",
+      "size": 20001,
+      "case": "mixed",
+      "requested_count": 20041,
+      "expected_count": 20001,
+      "duplicate_input_count": 20,
+      "exact_native_rows_equal": true,
+      "elapsed_ns": [
+        141163900,
+        155487700,
+        157252700
+      ],
+      "median_ns": 155487700,
+      "duckdb_version": "1.5.5",
+      "threads": 8,
+      "memory_limit": "12.5 GiB",
+      "query_plan_file": "final-json_semi-20001-mixed.plan.txt",
+      "process_wall_seconds": null,
+      "resumed_existing_completed_worker": true
+    },
+    {
+      "method": "json_semi",
+      "size": 62089,
+      "case": "mixed",
+      "requested_count": 62129,
+      "expected_count": 62089,
+      "duplicate_input_count": 20,
+      "exact_native_rows_equal": true,
+      "elapsed_ns": [
+        451283500,
+        464126000,
+        399056300
+      ],
+      "median_ns": 451283500,
+      "duckdb_version": "1.5.5",
+      "threads": 8,
+      "memory_limit": "12.5 GiB",
+      "query_plan_file": "final-json_semi-62089-mixed.plan.txt",
+      "process_wall_seconds": null,
+      "resumed_existing_completed_worker": true
+    },
+    {
+      "method": "json_semi",
+      "size": 0,
+      "case": "empty",
+      "requested_count": 0,
+      "expected_count": 0,
+      "duplicate_input_count": 0,
+      "exact_native_rows_equal": true,
+      "elapsed_ns": [
+        5809400,
+        4425600,
+        4810600
+      ],
+      "median_ns": 4810600,
+      "duckdb_version": "1.5.5",
+      "threads": 8,
+      "memory_limit": "12.5 GiB",
+      "query_plan_file": "final-json_semi-0-empty.plan.txt",
+      "process_wall_seconds": null,
+      "resumed_existing_completed_worker": true
+    },
+    {
+      "method": "json_semi",
+      "size": 25,
+      "case": "missing",
+      "requested_count": 25,
+      "expected_count": 0,
+      "duplicate_input_count": 0,
+      "exact_native_rows_equal": true,
+      "elapsed_ns": [
+        5480300,
+        4747700,
+        4748500
+      ],
+      "median_ns": 4748500,
+      "duckdb_version": "1.5.5",
+      "threads": 8,
+      "memory_limit": "12.5 GiB",
+      "query_plan_file": "final-json_semi-25-missing.plan.txt",
+      "process_wall_seconds": null,
+      "resumed_existing_completed_worker": true
+    },
+    {
+      "method": "json_in",
+      "size": 1000,
+      "case": "mixed",
+      "requested_count": 1040,
+      "expected_count": 1000,
+      "duplicate_input_count": 20,
+      "exact_native_rows_equal": true,
+      "elapsed_ns": [
+        28605600,
+        21170700,
+        20197400
+      ],
+      "median_ns": 21170700,
+      "duckdb_version": "1.5.5",
+      "threads": 8,
+      "memory_limit": "12.5 GiB",
+      "query_plan_file": "final-json_in-1000-mixed.plan.txt",
+      "process_wall_seconds": null,
+      "resumed_existing_completed_worker": true
+    },
+    {
+      "method": "json_in",
+      "size": 20001,
+      "case": "mixed",
+      "requested_count": 20041,
+      "expected_count": 20001,
+      "duplicate_input_count": 20,
+      "exact_native_rows_equal": true,
+      "elapsed_ns": [
+        243182800,
+        269376800,
+        240583800
+      ],
+      "median_ns": 243182800,
+      "duckdb_version": "1.5.5",
+      "threads": 8,
+      "memory_limit": "12.5 GiB",
+      "query_plan_file": "final-json_in-20001-mixed.plan.txt",
+      "process_wall_seconds": null,
+      "resumed_existing_completed_worker": true
+    },
+    {
+      "method": "json_in",
+      "size": 62089,
+      "case": "mixed",
+      "requested_count": 62129,
+      "expected_count": 62089,
+      "duplicate_input_count": 20,
+      "exact_native_rows_equal": true,
+      "elapsed_ns": [
+        689174100,
+        1487172800,
+        6101487500
+      ],
+      "median_ns": 1487172800,
+      "duckdb_version": "1.5.5",
+      "threads": 8,
+      "memory_limit": "12.5 GiB",
+      "query_plan_file": "final-json_in-62089-mixed.plan.txt",
+      "process_wall_seconds": null,
+      "resumed_existing_completed_worker": true
+    },
+    {
+      "method": "json_in",
+      "size": 0,
+      "case": "empty",
+      "requested_count": 0,
+      "expected_count": 0,
+      "duplicate_input_count": 0,
+      "exact_native_rows_equal": true,
+      "elapsed_ns": [
+        7440700,
+        4695100,
+        5179600
+      ],
+      "median_ns": 5179600,
+      "duckdb_version": "1.5.5",
+      "threads": 8,
+      "memory_limit": "12.5 GiB",
+      "query_plan_file": "final-json_in-0-empty.plan.txt",
+      "process_wall_seconds": 1.6465518999902997
+    },
+    {
+      "method": "json_in",
+      "size": 25,
+      "case": "missing",
+      "requested_count": 25,
+      "expected_count": 0,
+      "duplicate_input_count": 0,
+      "exact_native_rows_equal": true,
+      "elapsed_ns": [
+        10599600,
+        4755200,
+        5403700
+      ],
+      "median_ns": 5403700,
+      "duckdb_version": "1.5.5",
+      "threads": 8,
+      "memory_limit": "12.5 GiB",
+      "query_plan_file": "final-json_in-25-missing.plan.txt",
+      "process_wall_seconds": 1.0767953000031412
+    },
+    {
+      "method": "json_symbol_in",
+      "size": 62089,
+      "case": "mixed",
+      "requested_count": 1052,
+      "expected_count": 62089,
+      "duplicate_input_count": 20,
+      "exact_native_rows_equal": true,
+      "elapsed_ns": [
+        379099500,
+        369610000,
+        341923000
+      ],
+      "median_ns": 369610000,
+      "duckdb_version": "1.5.5",
+      "threads": 8,
+      "memory_limit": "12.5 GiB",
+      "query_plan_file": "final-json_symbol_in-62089-mixed.plan.txt",
+      "process_wall_seconds": 2.566466699994635
+    },
+    {
+      "method": "json_symbol_in",
+      "size": 0,
+      "case": "empty",
+      "requested_count": 0,
+      "expected_count": 0,
+      "duplicate_input_count": 0,
+      "exact_native_rows_equal": true,
+      "elapsed_ns": [
+        5851400,
+        4486700,
+        4764400
+      ],
+      "median_ns": 4764400,
+      "duckdb_version": "1.5.5",
+      "threads": 8,
+      "memory_limit": "12.5 GiB",
+      "query_plan_file": "final-json_symbol_in-0-empty.plan.txt",
+      "process_wall_seconds": 1.0568720000155736
+    },
+    {
+      "method": "json_symbol_in",
+      "size": 25,
+      "case": "missing",
+      "requested_count": 25,
+      "expected_count": 0,
+      "duplicate_input_count": 0,
+      "exact_native_rows_equal": true,
+      "elapsed_ns": [
+        8849900,
+        6860600,
+        7530400
+      ],
+      "median_ns": 7530400,
+      "duckdb_version": "1.5.5",
+      "threads": 8,
+      "memory_limit": "12.5 GiB",
+      "query_plan_file": "final-json_symbol_in-25-missing.plan.txt",
+      "process_wall_seconds": 1.1202565999992657
+    },
+    {
+      "method": "json_symbol_semi",
+      "size": 62089,
+      "case": "mixed",
+      "requested_count": 1052,
+      "expected_count": 62089,
+      "duplicate_input_count": 20,
+      "exact_native_rows_equal": true,
+      "elapsed_ns": [
+        356248600,
+        387762600,
+        442940100
+      ],
+      "median_ns": 387762600,
+      "duckdb_version": "1.5.5",
+      "threads": 8,
+      "memory_limit": "12.5 GiB",
+      "query_plan_file": "final-json_symbol_semi-62089-mixed.plan.txt",
+      "process_wall_seconds": 2.7470125000108965
+    },
+    {
+      "method": "json_symbol_semi",
+      "size": 0,
+      "case": "empty",
+      "requested_count": 0,
+      "expected_count": 0,
+      "duplicate_input_count": 0,
+      "exact_native_rows_equal": true,
+      "elapsed_ns": [
+        9718300,
+        6799800,
+        6869400
+      ],
+      "median_ns": 6869400,
+      "duckdb_version": "1.5.5",
+      "threads": 8,
+      "memory_limit": "12.5 GiB",
+      "query_plan_file": "final-json_symbol_semi-0-empty.plan.txt",
+      "process_wall_seconds": 1.2997625999851152
+    },
+    {
+      "method": "json_symbol_semi",
+      "size": 25,
+      "case": "missing",
+      "requested_count": 25,
+      "expected_count": 0,
+      "duplicate_input_count": 0,
+      "exact_native_rows_equal": true,
+      "elapsed_ns": [
+        7205100,
+        5924500,
+        5143500
+      ],
+      "median_ns": 5924500,
+      "duckdb_version": "1.5.5",
+      "threads": 8,
+      "memory_limit": "12.5 GiB",
+      "query_plan_file": "final-json_symbol_semi-25-missing.plan.txt",
+      "process_wall_seconds": 1.4192527999985032
+    }
+  ],
+  "profile_original_bytes_unchanged": true,
+  "array_helper_deadline_is_query_only_duration": false,
+  "optimizer_root_cause_established": false,
+  "independent_native_id_symbol_checks": 12,
+  "native_field_inventory_selected_tickers": 1956,
+  "exact_final_script_native_audit_checks": [
+    {
+      "asset": "BTC",
+      "exact_saved_audit_equal": true,
+      "members": 1010,
+      "full_native_chain_fresh": false
+    },
+    {
+      "asset": "ETH",
+      "exact_saved_audit_equal": true,
+      "members": 804,
+      "full_native_chain_fresh": false
+    },
+    {
+      "asset": "SOL",
+      "exact_saved_audit_equal": true,
+      "members": 142,
+      "full_native_chain_fresh": false
+    },
+    {
+      "asset": "PAXG",
+      "exact_saved_audit_equal": true,
+      "members": 0,
+      "full_native_chain_fresh": false
+    }
+  ],
+  "stale_books": {
+    "BTC": 74,
+    "ETH": 158,
+    "SOL": 142
+  },
+  "gold_selected_universe_empty": true,
+  "all_required_assets_or_feeds_verified": false,
+  "all_native_option_fields_continuously_verified": false,
+  "fresh_complete_option_chains_verified": false,
+  "control_history_remains_audited_and_budgeted": true,
+  "database_scan_time_size_or_engine_memory_bounded": false,
+  "sustained_public_capacity_verified": false,
+  "seven_day_unattended_operation_verified": false,
+  "option_trade_history_continuity_verified": false,
+  "historical_event_or_outbox_rows_deleted": 0,
+  "native_timestamps_or_age_bounds_relaxed": false,
+  "original_source_bytes_unchanged": true,
+  "new_network_requests": 0,
+  "orders_submitted": 0,
+  "milestone": 2,
+  "milestone_advance_allowed": false,
+  "trading_enabled": false,
+  "generated_docs_idempotent": true,
+  "generated_doc_sha256": {
+    "README.md": "499a6faefe337e87a814a49bebf600ff39a41d505a04dc69e189f5fe3c520381",
+    "PARAMETERS.md": "e50f08a20714b7e107fe4bded26a22b8236e1cbab1a1af7d89dea6a30c49554c",
+    "config\\default.yaml": "d30c26ce62ba546fed706ad85ab33beb3f64cadee56e0dc94261ac81a12e9503"
+  },
+  "wheel_sha256": "ff90bbbc560ea6ad113c8607975beb3734a02c32ee13081aebe649a22a4e3dc1"
+}

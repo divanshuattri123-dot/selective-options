@@ -1,0 +1,57 @@
+{
+  "status": "IMPLEMENTED_TESTED_FROZEN",
+  "recorded_at_ms": 1791095509552,
+  "source_sha256": {
+    "src/selective_options/eth_gas.py": "32579b383df0ead15cf0a26e2efc88c8766e3ca53a9fca7864450056e7c354ba",
+    "src/selective_options/eth_gas_quality.py": "119756aa00cee9913470e8093d2f13891851fe8a61e7543e8f86d74709447b00",
+    "tests/test_eth_gas.py": "ba3bd4776a067631734fc3892a6b69259106c581b4b1395a184e7540566e0cd2",
+    "tests/test_eth_gas_quality.py": "79b59b8b9b1da922b69b8d0c73055594b6e7996c76f90d7595c911308f8f4f64"
+  },
+  "owned_files_only": [
+    "src/selective_options/eth_gas.py",
+    "src/selective_options/eth_gas_quality.py",
+    "tests/test_eth_gas.py",
+    "tests/test_eth_gas_quality.py"
+  ],
+  "quality_api": "eth_gas_quality(events, *, provider, as_of_ms, max_poll_age_ms, max_block_age_ms, max_rows=10000) -> dict[str, object]",
+  "health_api": "eth_gas_poll_health(provider, observed_at_ms, *, ok, reason, code=0, error_type=None, accepted_event_id=None, accepted_observed_at_ms=None, response_received_at_ms=None) -> MarketEvent",
+  "states": [
+    "BLOCKED",
+    "POLL_OBSERVED_VERIFIED"
+  ],
+  "blocker_prefix": "ETH_",
+  "bound_health_fields": [
+    "ok",
+    "reason",
+    "code",
+    "error_type",
+    "accepted_event_id",
+    "accepted_observed_at_ms",
+    "response_received_at_ms"
+  ],
+  "age_fields": [
+    "poll_age_ms",
+    "response_age_ms",
+    "observation_age_ms",
+    "block_age_ms"
+  ],
+  "implementation": [
+    "Strict policy preflight precedes iteration; eligible provider/public ETH/gas rows must pass both PIT clocks.",
+    "Eligible duplicate rows count toward budget; exact duplicates coalesce after counting, conflicting identities block.",
+    "Lazy checkpoint canonical gas validation avoids store import cycle; retained history progression validated.",
+    "Canonical latest health must be unique and bound to exact event identity and retained receipt; malformed/tied/missing/late evidence blocks.",
+    "Later recorded failure blocks older accepted gas until exact canonical recovery health becomes available.",
+    "Legacy unbound success remains ETH_HEALTH_UNBOUND; legacy failure remains blocking; evidence not rewritten.",
+    "Receipt age of newest actual response controls poll freshness; original observation age displayed separately. Block header age controls sampled finalized block freshness.",
+    "Successful production collection submits exact retained gas to sink before bound health; same native block retains original immutable receipt and identity, latest actual response receipt is separate.",
+    "Decreasing candidate receipt fails check_progress before publishing, including repeats; canonical failure health does not advance cursor."
+  ],
+  "validation": {
+    "targeted_suite": "165 tests passed: tests/test_eth_gas_quality.py tests/test_eth_gas.py tests/test_eth_gas_verifier.py tests/test_eth_checkpoint.py tests/test_eth_provider_integration.py",
+    "root_store_integration_suite": "12 tests passed: tests/test_eth_store_quality.py (read/test only; not edited)",
+    "ruff": "Lint and format checks passed on all four owned files",
+    "mypy": "Strict checks passed: src/selective_options/eth_gas.py src/selective_options/eth_gas_quality.py",
+    "public_requests_by_this_agent": 0
+  },
+  "limitations": "Poll binding proves claimed sink acceptance, not atomic commit. Provider asserts finality. No independent consensus, continuous history, other on-chain feed completion, or trading approval. M2 partial; no execution or paper trading."
+}

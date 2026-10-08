@@ -1,0 +1,89 @@
+{
+  "version": "0.3.29",
+  "status": "PUBLIC_CAPPED_REFRESH_VERIFIED",
+  "stream_cap_per_asset": 2,
+  "asset": "BTC",
+  "duration_s": 110,
+  "actual_listing_or_expiry_change_proven": false,
+  "milestone_2_complete": false,
+  "orders_submitted": 0,
+  "trading_enabled": false,
+  "saved_rows": 4286,
+  "pending_outbox_rows": 4286,
+  "stream_controls": [
+    {
+      "reason": "STREAM_RESYNC",
+      "observed_at_ms": 1791030193955,
+      "event_id": "da290f7a7f2488a706d5f1edda82e0fc8d812e482d9687b395289cf92bc31b6f",
+      "payload": {
+        "connection": 1,
+        "reason": "STREAM_RESYNC"
+      }
+    },
+    {
+      "reason": "STREAM_SUBSCRIBED",
+      "observed_at_ms": 1791030195594,
+      "event_id": "a8debf2541ad15df89ca6bc0a8b276198e84557764135d325179de8dfe7b0d67",
+      "payload": {
+        "channels": 7,
+        "connection": 1,
+        "instruments": [
+          {
+            "asset": "BTC",
+            "symbol": "BTC-25DEC26-140000-C"
+          },
+          {
+            "asset": "BTC",
+            "symbol": "BTC-25DEC26-135000-C"
+          }
+        ],
+        "reason": "STREAM_SUBSCRIBED"
+      }
+    },
+    {
+      "reason": "STREAM_REFRESH_DUE",
+      "observed_at_ms": 1791030255607,
+      "event_id": "ca57ad0857483d317ba1ff2048884926db39c2c5afbf84dd0288890fa0c905f8",
+      "payload": {
+        "connection": 1,
+        "continuity": "UNVERIFIED_GAP_REQUIRES_HISTORY_RECONCILIATION",
+        "reason": "STREAM_REFRESH_DUE",
+        "refresh": 1
+      }
+    },
+    {
+      "reason": "STREAM_RESYNC",
+      "observed_at_ms": 1791030263730,
+      "event_id": "f023ee4a592f33995ca883419ea1cfd9b3b405c01f64bc120e98a1db2a963a9b",
+      "payload": {
+        "connection": 2,
+        "reason": "STREAM_RESYNC"
+      }
+    },
+    {
+      "reason": "STREAM_SUBSCRIBED",
+      "observed_at_ms": 1791030265078,
+      "event_id": "6a616ae08e67619bf616955b6698be568b070b53a83ac39b18c77d3691309d6e",
+      "payload": {
+        "channels": 7,
+        "connection": 2,
+        "instruments": [
+          {
+            "asset": "BTC",
+            "symbol": "BTC-25DEC26-140000-C"
+          },
+          {
+            "asset": "BTC",
+            "symbol": "BTC-25DEC26-135000-C"
+          }
+        ],
+        "reason": "STREAM_SUBSCRIBED"
+      }
+    }
+  ],
+  "subscribed_sessions": 2,
+  "scheduled_refreshes": 1,
+  "inactive_quote_checks": 4,
+  "trade_history_continuity_verified": false,
+  "full_universe_stream_verified": false
+}

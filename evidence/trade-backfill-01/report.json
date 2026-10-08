@@ -1,0 +1,19 @@
+{
+  "status": "RANGE_VERIFIED",
+  "symbol": "BTC/USD",
+  "after_trade_id": 108674374,
+  "through_trade_id": 108674494,
+  "checkpoint_event_id": "f38dc54ea201abfde88f5a45f775c31d26a8cd7eb1ea7e42137af3eedf6bf647",
+  "started_at_ms": 1790092763502,
+  "trading_enabled": false,
+  "stream_repaired": false,
+  "bars_rebuilt": false,
+  "source": "kraken_rest",
+  "observation_policy": "actual complete HTTP response receipt",
+  "max_pages": 5,
+  "page_size": 50,
+  "rows": 120,
+  "pages": 3,
+  "parquet_sha256": "3aa19ac5f682b51e7d37f9924e989b70ca5236ff8dcda7fff76b1659dedcf113",
+  "ended_at_ms": 1790092767324
+}

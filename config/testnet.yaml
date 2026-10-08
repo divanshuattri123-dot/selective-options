@@ -1,0 +1,6 @@
+# Testnet and paper modes use only this endpoint and DERIBIT_TESTNET_* secrets.
+system:
+  mode: testnet
+venue:
+  key_profile: testnet
+  ws_url: wss://test.deribit.com/ws/api/v2

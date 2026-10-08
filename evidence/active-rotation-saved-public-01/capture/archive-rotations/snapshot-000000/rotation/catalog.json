@@ -1,0 +1,27 @@
+{
+  "format_version": 1,
+  "status": "ROTATION_VERIFIED",
+  "as_of_ms": 1791113909327,
+  "partition_ms": 86400000,
+  "total_rows": 28,
+  "source_sha256": "8efc47870e27c24571a95803bc45c35396a65a05304a86cb084715329dd9035c",
+  "source_scope": "all sources and environments in events; both clocks at or before cutoff",
+  "delivery_acknowledgements_copied": false,
+  "source_history_modified": false,
+  "history_complete": false,
+  "ready_for_signals": false,
+  "trading_enabled": false,
+  "parts": [
+    {
+      "index": 0,
+      "file": "part-000000.parquet",
+      "manifest": "part-000000.parquet.manifest.json",
+      "start_ms": 1791072000000,
+      "end_ms": 1791158400000,
+      "rows": 28,
+      "bytes": 10682,
+      "sha256": "6e96ef1e538e4035eab90ad4ebc7d250d6c7250e97b1ff48aaae9ca6ca7ed43c",
+      "manifest_sha256": "af8cbf1792253ede1e9ba24eceeaccbcee6f8ccbebdb744f44e778670391d497"
+    }
+  ]
+}

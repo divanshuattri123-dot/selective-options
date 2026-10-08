@@ -1,0 +1,16 @@
+{
+  "source_sha256": "e8a87b3606193059f999f61cb503c6aa06aa81ceddccd9b557f37402417327d0",
+  "original_source_rows": 6,
+  "seed_rows_preserved_exactly": 5,
+  "outside_window_rows_preserved_in_original": 1,
+  "fresh_public_observations": 6,
+  "combined_rows": 11,
+  "selected_charges": 6,
+  "independent_pit_boundaries": 12,
+  "original_release_bytes_unchanged": true,
+  "archive_exact_match": true,
+  "outbox_count_matches": true,
+  "new_network_requests_by_this_verifier": 0,
+  "schedule_completeness_proven": false,
+  "trading_enabled": false
+}

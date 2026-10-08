@@ -1,0 +1,40 @@
+{
+  "version": "0.3.15",
+  "source_url": "https://apps.bea.gov/API/signup/release_dates.json",
+  "started_at_ms": 1790606855376,
+  "orders_submitted": 0,
+  "trading_enabled": false,
+  "paper_trading_started": false,
+  "observed_at_ms": 1790606856970,
+  "status": "PUBLIC_CALENDAR_VERIFIED",
+  "rows": 1,
+  "group_count": 30,
+  "release_count": 136,
+  "upcoming_count": 21,
+  "upcoming_personal_income_and_outlays": [
+    {
+      "scheduled_at_ms": 1790771400000,
+      "title": "Personal Income and Outlays"
+    },
+    {
+      "scheduled_at_ms": 1793277000000,
+      "title": "Personal Income and Outlays"
+    },
+    {
+      "scheduled_at_ms": 1795613400000,
+      "title": "Personal Income and Outlays"
+    },
+    {
+      "scheduled_at_ms": 1798032600000,
+      "title": "Personal Income and Outlays"
+    }
+  ],
+  "duplicates_removed": 6,
+  "receipt_visibility_verified": true,
+  "repeat_deduplication_verified": true,
+  "archive_exact_match": true,
+  "parquet_sha256": "bd5b699240b9de41ffdb52d6e2f118feef643f7698dcb09e2121bba1cb52c124",
+  "publication_time_available": false,
+  "coverage": "dated entries returned by BEA; unscheduled/TBA entries may be absent",
+  "ended_at_ms": 1790606857196
+}

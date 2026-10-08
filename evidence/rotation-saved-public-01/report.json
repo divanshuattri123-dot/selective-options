@@ -1,0 +1,1704 @@
+{
+  "status": "OFFLINE_SAVED_PUBLIC_ROTATION_RESTORE_VERIFIED",
+  "real_public_requests_attempted": 0,
+  "saved_native_records": 28,
+  "synthetic_records": 11,
+  "source_records": 39,
+  "eligible_records": 35,
+  "excluded_future_clock_fixtures": 4,
+  "as_of_ms": 1791113911327,
+  "partition_ms": 86400000,
+  "partitions": [
+    {
+      "file": "part-000000.parquet",
+      "start_ms": 1790985600000,
+      "end_ms": 1791072000000,
+      "rows": 1,
+      "sha256": "a4ad9b613ed903b378b4abccf9bce4cdf140c5b21642345646968a1e6a94b7c8",
+      "manifest_sha256": "b7bf3c92c5d99a2752902043a26feadae357bfe00f6e0f97b39136b80ed74897"
+    },
+    {
+      "file": "part-000001.parquet",
+      "start_ms": 1791072000000,
+      "end_ms": 1791158400000,
+      "rows": 34,
+      "sha256": "43fc07f98ee3e2e6432c71666b917a94fc31fd8b859756bb9797f6f06499eae6",
+      "manifest_sha256": "190a42183ad85a4e6e8cb6cf5062b7488d7c087af307e5d9b6b1c1c7b0ad5de0"
+    }
+  ],
+  "rotation": {
+    "format_version": 1,
+    "status": "ROTATION_VERIFIED",
+    "as_of_ms": 1791113911327,
+    "partition_ms": 86400000,
+    "total_rows": 35,
+    "source_sha256": "d9832bca435096289ed386ea6334ce7a93908aae3fb307c346f15e95fee09cce",
+    "source_scope": "all sources and environments in events; both clocks at or before cutoff",
+    "delivery_acknowledgements_copied": false,
+    "source_history_modified": false,
+    "history_complete": false,
+    "ready_for_signals": false,
+    "trading_enabled": false,
+    "parts": [
+      {
+        "index": 0,
+        "file": "part-000000.parquet",
+        "manifest": "part-000000.parquet.manifest.json",
+        "start_ms": 1790985600000,
+        "end_ms": 1791072000000,
+        "rows": 1,
+        "bytes": 2695,
+        "sha256": "a4ad9b613ed903b378b4abccf9bce4cdf140c5b21642345646968a1e6a94b7c8",
+        "manifest_sha256": "b7bf3c92c5d99a2752902043a26feadae357bfe00f6e0f97b39136b80ed74897"
+      },
+      {
+        "index": 1,
+        "file": "part-000001.parquet",
+        "manifest": "part-000001.parquet.manifest.json",
+        "start_ms": 1791072000000,
+        "end_ms": 1791158400000,
+        "rows": 34,
+        "bytes": 10870,
+        "sha256": "43fc07f98ee3e2e6432c71666b917a94fc31fd8b859756bb9797f6f06499eae6",
+        "manifest_sha256": "190a42183ad85a4e6e8cb6cf5062b7488d7c087af307e5d9b6b1c1c7b0ad5de0"
+      }
+    ]
+  },
+  "restore": {
+    "status": "ROTATION_RESTORE_FINISHED",
+    "rows": 35,
+    "parts": 2,
+    "catalog_sha256": "13ee3d3be3c6f3690500f83a27b934caeb5aac5d2e4e8b3784928fce562b0155",
+    "source_sha256": "d9832bca435096289ed386ea6334ce7a93908aae3fb307c346f15e95fee09cce",
+    "as_of_ms": 1791113911327,
+    "partition_ms": 86400000,
+    "observation_timestamps_preserved": true,
+    "source_timestamps_preserved": true,
+    "redis_delivery_pending": 35,
+    "delivery": "AT_LEAST_ONCE",
+    "consumer_deduplication_key": "event_id",
+    "history_complete": false,
+    "ready_for_signals": false,
+    "trading_enabled": false,
+    "limitation": "Delivery acknowledgements are not archived; all events are pending replay."
+  },
+  "pit_checks": [
+    {
+      "as_of_ms": 1790852399999,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790852400000,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790854237999,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790854238000,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790855879999,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790855880000,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790855956999,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790855957000,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790864293999,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790864294000,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790866799999,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790866800000,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790880328999,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790880329000,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790886003999,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790886004000,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790928713999,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790928714000,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790929698999,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790929699000,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790932460999,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790932461000,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790937075999,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790937076000,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790940159999,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790940160000,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790940599999,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790940600000,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790944312999,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790944313000,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790947338999,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790947339000,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790961167999,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790961168000,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790961334999,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790961335000,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790962479999,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790962480000,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790976199999,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1790976200000,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1791032399999,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1791032400000,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1791039599999,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1791039600000,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1791043199999,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1791043200000,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1791071999998,
+      "available_rows": 0,
+      "event_ids": []
+    },
+    {
+      "as_of_ms": 1791071999999,
+      "available_rows": 1,
+      "event_ids": [
+        "4210e7eb85c5e8db97c3821dd30ad4cabe686b005126068a7e2df428cec3400c"
+      ]
+    },
+    {
+      "as_of_ms": 1791072000000,
+      "available_rows": 2,
+      "event_ids": [
+        "4210e7eb85c5e8db97c3821dd30ad4cabe686b005126068a7e2df428cec3400c",
+        "c21f8ee70096b8781411330fc0af8e94859ecc274f3a7afc1639484dbaec3ab8"
+      ]
+    },
+    {
+      "as_of_ms": 1791072000001,
+      "available_rows": 3,
+      "event_ids": [
+        "2f8e72a43056959485765bc3a5da18c91494e0560aa686d3fd1107f794ef68b0",
+        "4210e7eb85c5e8db97c3821dd30ad4cabe686b005126068a7e2df428cec3400c",
+        "c21f8ee70096b8781411330fc0af8e94859ecc274f3a7afc1639484dbaec3ab8"
+      ]
+    },
+    {
+      "as_of_ms": 1791072000002,
+      "available_rows": 5,
+      "event_ids": [
+        "294439f2448103f1fc605f4afed28da2d0854a047e04cea7d2d26b7e73c92d76",
+        "2f8e72a43056959485765bc3a5da18c91494e0560aa686d3fd1107f794ef68b0",
+        "38dd9fb643a7ec8f74b532b0e5c7e65ce113816dba9c9c11149a3c2e5054a41f",
+        "4210e7eb85c5e8db97c3821dd30ad4cabe686b005126068a7e2df428cec3400c",
+        "c21f8ee70096b8781411330fc0af8e94859ecc274f3a7afc1639484dbaec3ab8"
+      ]
+    },
+    {
+      "as_of_ms": 1791109846999,
+      "available_rows": 5,
+      "event_ids": [
+        "294439f2448103f1fc605f4afed28da2d0854a047e04cea7d2d26b7e73c92d76",
+        "2f8e72a43056959485765bc3a5da18c91494e0560aa686d3fd1107f794ef68b0",
+        "38dd9fb643a7ec8f74b532b0e5c7e65ce113816dba9c9c11149a3c2e5054a41f",
+        "4210e7eb85c5e8db97c3821dd30ad4cabe686b005126068a7e2df428cec3400c",
+        "c21f8ee70096b8781411330fc0af8e94859ecc274f3a7afc1639484dbaec3ab8"
+      ]
+    },
+    {
+      "as_of_ms": 1791109847000,
+      "available_rows": 5,
+      "event_ids": [
+        "294439f2448103f1fc605f4afed28da2d0854a047e04cea7d2d26b7e73c92d76",
+        "2f8e72a43056959485765bc3a5da18c91494e0560aa686d3fd1107f794ef68b0",
+        "38dd9fb643a7ec8f74b532b0e5c7e65ce113816dba9c9c11149a3c2e5054a41f",
+        "4210e7eb85c5e8db97c3821dd30ad4cabe686b005126068a7e2df428cec3400c",
+        "c21f8ee70096b8781411330fc0af8e94859ecc274f3a7afc1639484dbaec3ab8"
+      ]
+    },
+    {
+      "as_of_ms": 1791110791392,
+      "available_rows": 5,
+      "event_ids": [
+        "294439f2448103f1fc605f4afed28da2d0854a047e04cea7d2d26b7e73c92d76",
+        "2f8e72a43056959485765bc3a5da18c91494e0560aa686d3fd1107f794ef68b0",
+        "38dd9fb643a7ec8f74b532b0e5c7e65ce113816dba9c9c11149a3c2e5054a41f",
+        "4210e7eb85c5e8db97c3821dd30ad4cabe686b005126068a7e2df428cec3400c",
+        "c21f8ee70096b8781411330fc0af8e94859ecc274f3a7afc1639484dbaec3ab8"
+      ]
+    },
+    {
+      "as_of_ms": 1791110791393,
+      "available_rows": 6,
+      "event_ids": [
+        "294439f2448103f1fc605f4afed28da2d0854a047e04cea7d2d26b7e73c92d76",
+        "2f8e72a43056959485765bc3a5da18c91494e0560aa686d3fd1107f794ef68b0",
+        "38dd9fb643a7ec8f74b532b0e5c7e65ce113816dba9c9c11149a3c2e5054a41f",
+        "4210e7eb85c5e8db97c3821dd30ad4cabe686b005126068a7e2df428cec3400c",
+        "c21f8ee70096b8781411330fc0af8e94859ecc274f3a7afc1639484dbaec3ab8",
+        "d63385c29a2efb75c3efc08591d3acbf9126778cad3453d4cac758d9e52f0299"
+      ]
+    },
+    {
+      "as_of_ms": 1791110791432,
+      "available_rows": 6,
+      "event_ids": [
+        "294439f2448103f1fc605f4afed28da2d0854a047e04cea7d2d26b7e73c92d76",
+        "2f8e72a43056959485765bc3a5da18c91494e0560aa686d3fd1107f794ef68b0",
+        "38dd9fb643a7ec8f74b532b0e5c7e65ce113816dba9c9c11149a3c2e5054a41f",
+        "4210e7eb85c5e8db97c3821dd30ad4cabe686b005126068a7e2df428cec3400c",
+        "c21f8ee70096b8781411330fc0af8e94859ecc274f3a7afc1639484dbaec3ab8",
+        "d63385c29a2efb75c3efc08591d3acbf9126778cad3453d4cac758d9e52f0299"
+      ]
+    },
+    {
+      "as_of_ms": 1791110791433,
+      "available_rows": 7,
+      "event_ids": [
+        "294439f2448103f1fc605f4afed28da2d0854a047e04cea7d2d26b7e73c92d76",
+        "2f8e72a43056959485765bc3a5da18c91494e0560aa686d3fd1107f794ef68b0",
+        "38dd9fb643a7ec8f74b532b0e5c7e65ce113816dba9c9c11149a3c2e5054a41f",
+        "4210e7eb85c5e8db97c3821dd30ad4cabe686b005126068a7e2df428cec3400c",
+        "c21f8ee70096b8781411330fc0af8e94859ecc274f3a7afc1639484dbaec3ab8",
+        "d0087d23dcf400852d58afe9c8398288cecef6d9aedb9a06b0d29dfaeb448519",
+        "d63385c29a2efb75c3efc08591d3acbf9126778cad3453d4cac758d9e52f0299"
+      ]
+    },
+    {
+      "as_of_ms": 1791113907589,
+      "available_rows": 7,
+      "event_ids": [
+        "294439f2448103f1fc605f4afed28da2d0854a047e04cea7d2d26b7e73c92d76",
+        "2f8e72a43056959485765bc3a5da18c91494e0560aa686d3fd1107f794ef68b0",
+        "38dd9fb643a7ec8f74b532b0e5c7e65ce113816dba9c9c11149a3c2e5054a41f",
+        "4210e7eb85c5e8db97c3821dd30ad4cabe686b005126068a7e2df428cec3400c",
+        "c21f8ee70096b8781411330fc0af8e94859ecc274f3a7afc1639484dbaec3ab8",
+        "d0087d23dcf400852d58afe9c8398288cecef6d9aedb9a06b0d29dfaeb448519",
+        "d63385c29a2efb75c3efc08591d3acbf9126778cad3453d4cac758d9e52f0299"
+      ]
+    },
+    {
+      "as_of_ms": 1791113907590,
+      "available_rows": 32,
+      "event_ids": [
+        "01ff834a5b3feca30460f80bfcffd217d18e6b76d352885a6a2c3045b26e8306",
+        "0c63cdcf19bfe1c2edc0e9a3d543a627571b41054c8bbc3e9ce0045b965350a8",
+        "13625cb1d720f1c4218cbcb0ee6b5f810673d98117db9e6369b152fba45dbae9",
+        "2248a5116fb0fe40bd501c935f5ebe279ab7128d13ac19fc8dfb494155353f7e",
+        "294439f2448103f1fc605f4afed28da2d0854a047e04cea7d2d26b7e73c92d76",
+        "2f8e72a43056959485765bc3a5da18c91494e0560aa686d3fd1107f794ef68b0",
+        "352ff8a3a033a8f7b803a7d32a16785609968e6a996c4cee167fa165ff2dc38c",
+        "38dd9fb643a7ec8f74b532b0e5c7e65ce113816dba9c9c11149a3c2e5054a41f",
+        "402c952b2574e34acd97e514a4911fd294d95492d9ab80c2517f313999d937b8",
+        "4210e7eb85c5e8db97c3821dd30ad4cabe686b005126068a7e2df428cec3400c",
+        "48869e01f8ef42850b383d63c35ee54ff6366cdb93048c78f06e2505e810189f",
+        "5b407d838a74f46b91793270ec62f66a1fc0e58d988197114984b7b1af2b4667",
+        "5f5c27e883a9f814eca20ac227969ecf2d068a84d063ad086b22daf19f3454a2",
+        "6713fc0cea96396362b027f3deee502e909395a1e6c43cd1058f77485a02e788",
+        "6ded38f77b074c64cc34b0ed76c7b394c4fedc04bcdb821a11b91dab24d78e8b",
+        "6f674bf1b04d4374856fd2907919e0159e4d2835f05f6d61c9f27e8749132308",
+        "8f1aaee45c4ba8f31ba1018d44a58886b515529ac700a611f4d7eb40411169a3",
+        "95138f4ce187bfae06cf643c4f961fea8a2d3d9937b5b510701879d2aa502fee",
+        "a8a42d94f4969835685a814d939dcf7a85da5bc5fb0426238f27c92b9596bf8c",
+        "aa637cbee164c6a1cd63894c512d6a32f20986a44c2f02b4616573cc7e937c97",
+        "bd3e65b0601527b204b57e35cbd7b800d7be3e194573a5461f5a98179bea93d3",
+        "bfcd4af0634d05ee56b22d2958e8a1b5f5578dcf60c4be9fc307742c0d2d4e04",
+        "c21f8ee70096b8781411330fc0af8e94859ecc274f3a7afc1639484dbaec3ab8",
+        "c2fd277ba988ad3071933ac4df8e2351278756b013f1ff5bc078e3f24bfbfa21",
+        "d0087d23dcf400852d58afe9c8398288cecef6d9aedb9a06b0d29dfaeb448519",
+        "d63385c29a2efb75c3efc08591d3acbf9126778cad3453d4cac758d9e52f0299",
+        "deff7f5d3269c3efc7ff4ac4a371f76ef7e4ed9d60d21e3c018d8cebbf456f20",
+        "ead8dbe96f0f9cb609b61f1d0806ce30896c6f796207a97e3a2a24a53a49f3b3",
+        "ed2e9001c5ad1f9bd93c220944357e255d3ca09472323a53e1942b57c8e89417",
+        "f44553c45d34e07a2d430a7cd34da5674ada9028b97791a45ed55bfd36d20c07",
+        "f977ff0ca5e0596aa45fbcc7455ace9d6de5308079feb2e38c460346b289edc4",
+        "f9c5e3fc33f3a43337e2743707156e87d2bf1aacb0cc9ac1ef7c53e8db475140"
+      ]
+    },
+    {
+      "as_of_ms": 1791113908326,
+      "available_rows": 32,
+      "event_ids": [
+        "01ff834a5b3feca30460f80bfcffd217d18e6b76d352885a6a2c3045b26e8306",
+        "0c63cdcf19bfe1c2edc0e9a3d543a627571b41054c8bbc3e9ce0045b965350a8",
+        "13625cb1d720f1c4218cbcb0ee6b5f810673d98117db9e6369b152fba45dbae9",
+        "2248a5116fb0fe40bd501c935f5ebe279ab7128d13ac19fc8dfb494155353f7e",
+        "294439f2448103f1fc605f4afed28da2d0854a047e04cea7d2d26b7e73c92d76",
+        "2f8e72a43056959485765bc3a5da18c91494e0560aa686d3fd1107f794ef68b0",
+        "352ff8a3a033a8f7b803a7d32a16785609968e6a996c4cee167fa165ff2dc38c",
+        "38dd9fb643a7ec8f74b532b0e5c7e65ce113816dba9c9c11149a3c2e5054a41f",
+        "402c952b2574e34acd97e514a4911fd294d95492d9ab80c2517f313999d937b8",
+        "4210e7eb85c5e8db97c3821dd30ad4cabe686b005126068a7e2df428cec3400c",
+        "48869e01f8ef42850b383d63c35ee54ff6366cdb93048c78f06e2505e810189f",
+        "5b407d838a74f46b91793270ec62f66a1fc0e58d988197114984b7b1af2b4667",
+        "5f5c27e883a9f814eca20ac227969ecf2d068a84d063ad086b22daf19f3454a2",
+        "6713fc0cea96396362b027f3deee502e909395a1e6c43cd1058f77485a02e788",
+        "6ded38f77b074c64cc34b0ed76c7b394c4fedc04bcdb821a11b91dab24d78e8b",
+        "6f674bf1b04d4374856fd2907919e0159e4d2835f05f6d61c9f27e8749132308",
+        "8f1aaee45c4ba8f31ba1018d44a58886b515529ac700a611f4d7eb40411169a3",
+        "95138f4ce187bfae06cf643c4f961fea8a2d3d9937b5b510701879d2aa502fee",
+        "a8a42d94f4969835685a814d939dcf7a85da5bc5fb0426238f27c92b9596bf8c",
+        "aa637cbee164c6a1cd63894c512d6a32f20986a44c2f02b4616573cc7e937c97",
+        "bd3e65b0601527b204b57e35cbd7b800d7be3e194573a5461f5a98179bea93d3",
+        "bfcd4af0634d05ee56b22d2958e8a1b5f5578dcf60c4be9fc307742c0d2d4e04",
+        "c21f8ee70096b8781411330fc0af8e94859ecc274f3a7afc1639484dbaec3ab8",
+        "c2fd277ba988ad3071933ac4df8e2351278756b013f1ff5bc078e3f24bfbfa21",
+        "d0087d23dcf400852d58afe9c8398288cecef6d9aedb9a06b0d29dfaeb448519",
+        "d63385c29a2efb75c3efc08591d3acbf9126778cad3453d4cac758d9e52f0299",
+        "deff7f5d3269c3efc7ff4ac4a371f76ef7e4ed9d60d21e3c018d8cebbf456f20",
+        "ead8dbe96f0f9cb609b61f1d0806ce30896c6f796207a97e3a2a24a53a49f3b3",
+        "ed2e9001c5ad1f9bd93c220944357e255d3ca09472323a53e1942b57c8e89417",
+        "f44553c45d34e07a2d430a7cd34da5674ada9028b97791a45ed55bfd36d20c07",
+        "f977ff0ca5e0596aa45fbcc7455ace9d6de5308079feb2e38c460346b289edc4",
+        "f9c5e3fc33f3a43337e2743707156e87d2bf1aacb0cc9ac1ef7c53e8db475140"
+      ]
+    },
+    {
+      "as_of_ms": 1791113908327,
+      "available_rows": 33,
+      "event_ids": [
+        "01ff834a5b3feca30460f80bfcffd217d18e6b76d352885a6a2c3045b26e8306",
+        "0c63cdcf19bfe1c2edc0e9a3d543a627571b41054c8bbc3e9ce0045b965350a8",
+        "13625cb1d720f1c4218cbcb0ee6b5f810673d98117db9e6369b152fba45dbae9",
+        "2248a5116fb0fe40bd501c935f5ebe279ab7128d13ac19fc8dfb494155353f7e",
+        "294439f2448103f1fc605f4afed28da2d0854a047e04cea7d2d26b7e73c92d76",
+        "2f8e72a43056959485765bc3a5da18c91494e0560aa686d3fd1107f794ef68b0",
+        "352ff8a3a033a8f7b803a7d32a16785609968e6a996c4cee167fa165ff2dc38c",
+        "38dd9fb643a7ec8f74b532b0e5c7e65ce113816dba9c9c11149a3c2e5054a41f",
+        "402c952b2574e34acd97e514a4911fd294d95492d9ab80c2517f313999d937b8",
+        "4210e7eb85c5e8db97c3821dd30ad4cabe686b005126068a7e2df428cec3400c",
+        "48869e01f8ef42850b383d63c35ee54ff6366cdb93048c78f06e2505e810189f",
+        "4e30de6221d4e92bce7eff216d0698565ccbf4f593fe83fc2c4b8ed909000421",
+        "5b407d838a74f46b91793270ec62f66a1fc0e58d988197114984b7b1af2b4667",
+        "5f5c27e883a9f814eca20ac227969ecf2d068a84d063ad086b22daf19f3454a2",
+        "6713fc0cea96396362b027f3deee502e909395a1e6c43cd1058f77485a02e788",
+        "6ded38f77b074c64cc34b0ed76c7b394c4fedc04bcdb821a11b91dab24d78e8b",
+        "6f674bf1b04d4374856fd2907919e0159e4d2835f05f6d61c9f27e8749132308",
+        "8f1aaee45c4ba8f31ba1018d44a58886b515529ac700a611f4d7eb40411169a3",
+        "95138f4ce187bfae06cf643c4f961fea8a2d3d9937b5b510701879d2aa502fee",
+        "a8a42d94f4969835685a814d939dcf7a85da5bc5fb0426238f27c92b9596bf8c",
+        "aa637cbee164c6a1cd63894c512d6a32f20986a44c2f02b4616573cc7e937c97",
+        "bd3e65b0601527b204b57e35cbd7b800d7be3e194573a5461f5a98179bea93d3",
+        "bfcd4af0634d05ee56b22d2958e8a1b5f5578dcf60c4be9fc307742c0d2d4e04",
+        "c21f8ee70096b8781411330fc0af8e94859ecc274f3a7afc1639484dbaec3ab8",
+        "c2fd277ba988ad3071933ac4df8e2351278756b013f1ff5bc078e3f24bfbfa21",
+        "d0087d23dcf400852d58afe9c8398288cecef6d9aedb9a06b0d29dfaeb448519",
+        "d63385c29a2efb75c3efc08591d3acbf9126778cad3453d4cac758d9e52f0299",
+        "deff7f5d3269c3efc7ff4ac4a371f76ef7e4ed9d60d21e3c018d8cebbf456f20",
+        "ead8dbe96f0f9cb609b61f1d0806ce30896c6f796207a97e3a2a24a53a49f3b3",
+        "ed2e9001c5ad1f9bd93c220944357e255d3ca09472323a53e1942b57c8e89417",
+        "f44553c45d34e07a2d430a7cd34da5674ada9028b97791a45ed55bfd36d20c07",
+        "f977ff0ca5e0596aa45fbcc7455ace9d6de5308079feb2e38c460346b289edc4",
+        "f9c5e3fc33f3a43337e2743707156e87d2bf1aacb0cc9ac1ef7c53e8db475140"
+      ]
+    },
+    {
+      "as_of_ms": 1791113909326,
+      "available_rows": 33,
+      "event_ids": [
+        "01ff834a5b3feca30460f80bfcffd217d18e6b76d352885a6a2c3045b26e8306",
+        "0c63cdcf19bfe1c2edc0e9a3d543a627571b41054c8bbc3e9ce0045b965350a8",
+        "13625cb1d720f1c4218cbcb0ee6b5f810673d98117db9e6369b152fba45dbae9",
+        "2248a5116fb0fe40bd501c935f5ebe279ab7128d13ac19fc8dfb494155353f7e",
+        "294439f2448103f1fc605f4afed28da2d0854a047e04cea7d2d26b7e73c92d76",
+        "2f8e72a43056959485765bc3a5da18c91494e0560aa686d3fd1107f794ef68b0",
+        "352ff8a3a033a8f7b803a7d32a16785609968e6a996c4cee167fa165ff2dc38c",
+        "38dd9fb643a7ec8f74b532b0e5c7e65ce113816dba9c9c11149a3c2e5054a41f",
+        "402c952b2574e34acd97e514a4911fd294d95492d9ab80c2517f313999d937b8",
+        "4210e7eb85c5e8db97c3821dd30ad4cabe686b005126068a7e2df428cec3400c",
+        "48869e01f8ef42850b383d63c35ee54ff6366cdb93048c78f06e2505e810189f",
+        "4e30de6221d4e92bce7eff216d0698565ccbf4f593fe83fc2c4b8ed909000421",
+        "5b407d838a74f46b91793270ec62f66a1fc0e58d988197114984b7b1af2b4667",
+        "5f5c27e883a9f814eca20ac227969ecf2d068a84d063ad086b22daf19f3454a2",
+        "6713fc0cea96396362b027f3deee502e909395a1e6c43cd1058f77485a02e788",
+        "6ded38f77b074c64cc34b0ed76c7b394c4fedc04bcdb821a11b91dab24d78e8b",
+        "6f674bf1b04d4374856fd2907919e0159e4d2835f05f6d61c9f27e8749132308",
+        "8f1aaee45c4ba8f31ba1018d44a58886b515529ac700a611f4d7eb40411169a3",
+        "95138f4ce187bfae06cf643c4f961fea8a2d3d9937b5b510701879d2aa502fee",
+        "a8a42d94f4969835685a814d939dcf7a85da5bc5fb0426238f27c92b9596bf8c",
+        "aa637cbee164c6a1cd63894c512d6a32f20986a44c2f02b4616573cc7e937c97",
+        "bd3e65b0601527b204b57e35cbd7b800d7be3e194573a5461f5a98179bea93d3",
+        "bfcd4af0634d05ee56b22d2958e8a1b5f5578dcf60c4be9fc307742c0d2d4e04",
+        "c21f8ee70096b8781411330fc0af8e94859ecc274f3a7afc1639484dbaec3ab8",
+        "c2fd277ba988ad3071933ac4df8e2351278756b013f1ff5bc078e3f24bfbfa21",
+        "d0087d23dcf400852d58afe9c8398288cecef6d9aedb9a06b0d29dfaeb448519",
+        "d63385c29a2efb75c3efc08591d3acbf9126778cad3453d4cac758d9e52f0299",
+        "deff7f5d3269c3efc7ff4ac4a371f76ef7e4ed9d60d21e3c018d8cebbf456f20",
+        "ead8dbe96f0f9cb609b61f1d0806ce30896c6f796207a97e3a2a24a53a49f3b3",
+        "ed2e9001c5ad1f9bd93c220944357e255d3ca09472323a53e1942b57c8e89417",
+        "f44553c45d34e07a2d430a7cd34da5674ada9028b97791a45ed55bfd36d20c07",
+        "f977ff0ca5e0596aa45fbcc7455ace9d6de5308079feb2e38c460346b289edc4",
+        "f9c5e3fc33f3a43337e2743707156e87d2bf1aacb0cc9ac1ef7c53e8db475140"
+      ]
+    },
+    {
+      "as_of_ms": 1791113909327,
+      "available_rows": 34,
+      "event_ids": [
+        "01ff834a5b3feca30460f80bfcffd217d18e6b76d352885a6a2c3045b26e8306",
+        "0c63cdcf19bfe1c2edc0e9a3d543a627571b41054c8bbc3e9ce0045b965350a8",
+        "13625cb1d720f1c4218cbcb0ee6b5f810673d98117db9e6369b152fba45dbae9",
+        "2248a5116fb0fe40bd501c935f5ebe279ab7128d13ac19fc8dfb494155353f7e",
+        "294439f2448103f1fc605f4afed28da2d0854a047e04cea7d2d26b7e73c92d76",
+        "2f8e72a43056959485765bc3a5da18c91494e0560aa686d3fd1107f794ef68b0",
+        "352ff8a3a033a8f7b803a7d32a16785609968e6a996c4cee167fa165ff2dc38c",
+        "38dd9fb643a7ec8f74b532b0e5c7e65ce113816dba9c9c11149a3c2e5054a41f",
+        "402c952b2574e34acd97e514a4911fd294d95492d9ab80c2517f313999d937b8",
+        "4210e7eb85c5e8db97c3821dd30ad4cabe686b005126068a7e2df428cec3400c",
+        "48869e01f8ef42850b383d63c35ee54ff6366cdb93048c78f06e2505e810189f",
+        "4e30de6221d4e92bce7eff216d0698565ccbf4f593fe83fc2c4b8ed909000421",
+        "5b407d838a74f46b91793270ec62f66a1fc0e58d988197114984b7b1af2b4667",
+        "5f5c27e883a9f814eca20ac227969ecf2d068a84d063ad086b22daf19f3454a2",
+        "629e4b76001ef30c6d05ace5236fcc5593501666462dc828e625884f46f7a7d9",
+        "6713fc0cea96396362b027f3deee502e909395a1e6c43cd1058f77485a02e788",
+        "6ded38f77b074c64cc34b0ed76c7b394c4fedc04bcdb821a11b91dab24d78e8b",
+        "6f674bf1b04d4374856fd2907919e0159e4d2835f05f6d61c9f27e8749132308",
+        "8f1aaee45c4ba8f31ba1018d44a58886b515529ac700a611f4d7eb40411169a3",
+        "95138f4ce187bfae06cf643c4f961fea8a2d3d9937b5b510701879d2aa502fee",
+        "a8a42d94f4969835685a814d939dcf7a85da5bc5fb0426238f27c92b9596bf8c",
+        "aa637cbee164c6a1cd63894c512d6a32f20986a44c2f02b4616573cc7e937c97",
+        "bd3e65b0601527b204b57e35cbd7b800d7be3e194573a5461f5a98179bea93d3",
+        "bfcd4af0634d05ee56b22d2958e8a1b5f5578dcf60c4be9fc307742c0d2d4e04",
+        "c21f8ee70096b8781411330fc0af8e94859ecc274f3a7afc1639484dbaec3ab8",
+        "c2fd277ba988ad3071933ac4df8e2351278756b013f1ff5bc078e3f24bfbfa21",
+        "d0087d23dcf400852d58afe9c8398288cecef6d9aedb9a06b0d29dfaeb448519",
+        "d63385c29a2efb75c3efc08591d3acbf9126778cad3453d4cac758d9e52f0299",
+        "deff7f5d3269c3efc7ff4ac4a371f76ef7e4ed9d60d21e3c018d8cebbf456f20",
+        "ead8dbe96f0f9cb609b61f1d0806ce30896c6f796207a97e3a2a24a53a49f3b3",
+        "ed2e9001c5ad1f9bd93c220944357e255d3ca09472323a53e1942b57c8e89417",
+        "f44553c45d34e07a2d430a7cd34da5674ada9028b97791a45ed55bfd36d20c07",
+        "f977ff0ca5e0596aa45fbcc7455ace9d6de5308079feb2e38c460346b289edc4",
+        "f9c5e3fc33f3a43337e2743707156e87d2bf1aacb0cc9ac1ef7c53e8db475140"
+      ]
+    },
+    {
+      "as_of_ms": 1791113911326,
+      "available_rows": 34,
+      "event_ids": [
+        "01ff834a5b3feca30460f80bfcffd217d18e6b76d352885a6a2c3045b26e8306",
+        "0c63cdcf19bfe1c2edc0e9a3d543a627571b41054c8bbc3e9ce0045b965350a8",
+        "13625cb1d720f1c4218cbcb0ee6b5f810673d98117db9e6369b152fba45dbae9",
+        "2248a5116fb0fe40bd501c935f5ebe279ab7128d13ac19fc8dfb494155353f7e",
+        "294439f2448103f1fc605f4afed28da2d0854a047e04cea7d2d26b7e73c92d76",
+        "2f8e72a43056959485765bc3a5da18c91494e0560aa686d3fd1107f794ef68b0",
+        "352ff8a3a033a8f7b803a7d32a16785609968e6a996c4cee167fa165ff2dc38c",
+        "38dd9fb643a7ec8f74b532b0e5c7e65ce113816dba9c9c11149a3c2e5054a41f",
+        "402c952b2574e34acd97e514a4911fd294d95492d9ab80c2517f313999d937b8",
+        "4210e7eb85c5e8db97c3821dd30ad4cabe686b005126068a7e2df428cec3400c",
+        "48869e01f8ef42850b383d63c35ee54ff6366cdb93048c78f06e2505e810189f",
+        "4e30de6221d4e92bce7eff216d0698565ccbf4f593fe83fc2c4b8ed909000421",
+        "5b407d838a74f46b91793270ec62f66a1fc0e58d988197114984b7b1af2b4667",
+        "5f5c27e883a9f814eca20ac227969ecf2d068a84d063ad086b22daf19f3454a2",
+        "629e4b76001ef30c6d05ace5236fcc5593501666462dc828e625884f46f7a7d9",
+        "6713fc0cea96396362b027f3deee502e909395a1e6c43cd1058f77485a02e788",
+        "6ded38f77b074c64cc34b0ed76c7b394c4fedc04bcdb821a11b91dab24d78e8b",
+        "6f674bf1b04d4374856fd2907919e0159e4d2835f05f6d61c9f27e8749132308",
+        "8f1aaee45c4ba8f31ba1018d44a58886b515529ac700a611f4d7eb40411169a3",
+        "95138f4ce187bfae06cf643c4f961fea8a2d3d9937b5b510701879d2aa502fee",
+        "a8a42d94f4969835685a814d939dcf7a85da5bc5fb0426238f27c92b9596bf8c",
+        "aa637cbee164c6a1cd63894c512d6a32f20986a44c2f02b4616573cc7e937c97",
+        "bd3e65b0601527b204b57e35cbd7b800d7be3e194573a5461f5a98179bea93d3",
+        "bfcd4af0634d05ee56b22d2958e8a1b5f5578dcf60c4be9fc307742c0d2d4e04",
+        "c21f8ee70096b8781411330fc0af8e94859ecc274f3a7afc1639484dbaec3ab8",
+        "c2fd277ba988ad3071933ac4df8e2351278756b013f1ff5bc078e3f24bfbfa21",
+        "d0087d23dcf400852d58afe9c8398288cecef6d9aedb9a06b0d29dfaeb448519",
+        "d63385c29a2efb75c3efc08591d3acbf9126778cad3453d4cac758d9e52f0299",
+        "deff7f5d3269c3efc7ff4ac4a371f76ef7e4ed9d60d21e3c018d8cebbf456f20",
+        "ead8dbe96f0f9cb609b61f1d0806ce30896c6f796207a97e3a2a24a53a49f3b3",
+        "ed2e9001c5ad1f9bd93c220944357e255d3ca09472323a53e1942b57c8e89417",
+        "f44553c45d34e07a2d430a7cd34da5674ada9028b97791a45ed55bfd36d20c07",
+        "f977ff0ca5e0596aa45fbcc7455ace9d6de5308079feb2e38c460346b289edc4",
+        "f9c5e3fc33f3a43337e2743707156e87d2bf1aacb0cc9ac1ef7c53e8db475140"
+      ]
+    },
+    {
+      "as_of_ms": 1791113911327,
+      "available_rows": 35,
+      "event_ids": [
+        "01ff834a5b3feca30460f80bfcffd217d18e6b76d352885a6a2c3045b26e8306",
+        "04cbae643fb543fde04257d47212c821b83d4f91b4136cf627dcc91fba16ce6a",
+        "0c63cdcf19bfe1c2edc0e9a3d543a627571b41054c8bbc3e9ce0045b965350a8",
+        "13625cb1d720f1c4218cbcb0ee6b5f810673d98117db9e6369b152fba45dbae9",
+        "2248a5116fb0fe40bd501c935f5ebe279ab7128d13ac19fc8dfb494155353f7e",
+        "294439f2448103f1fc605f4afed28da2d0854a047e04cea7d2d26b7e73c92d76",
+        "2f8e72a43056959485765bc3a5da18c91494e0560aa686d3fd1107f794ef68b0",
+        "352ff8a3a033a8f7b803a7d32a16785609968e6a996c4cee167fa165ff2dc38c",
+        "38dd9fb643a7ec8f74b532b0e5c7e65ce113816dba9c9c11149a3c2e5054a41f",
+        "402c952b2574e34acd97e514a4911fd294d95492d9ab80c2517f313999d937b8",
+        "4210e7eb85c5e8db97c3821dd30ad4cabe686b005126068a7e2df428cec3400c",
+        "48869e01f8ef42850b383d63c35ee54ff6366cdb93048c78f06e2505e810189f",
+        "4e30de6221d4e92bce7eff216d0698565ccbf4f593fe83fc2c4b8ed909000421",
+        "5b407d838a74f46b91793270ec62f66a1fc0e58d988197114984b7b1af2b4667",
+        "5f5c27e883a9f814eca20ac227969ecf2d068a84d063ad086b22daf19f3454a2",
+        "629e4b76001ef30c6d05ace5236fcc5593501666462dc828e625884f46f7a7d9",
+        "6713fc0cea96396362b027f3deee502e909395a1e6c43cd1058f77485a02e788",
+        "6ded38f77b074c64cc34b0ed76c7b394c4fedc04bcdb821a11b91dab24d78e8b",
+        "6f674bf1b04d4374856fd2907919e0159e4d2835f05f6d61c9f27e8749132308",
+        "8f1aaee45c4ba8f31ba1018d44a58886b515529ac700a611f4d7eb40411169a3",
+        "95138f4ce187bfae06cf643c4f961fea8a2d3d9937b5b510701879d2aa502fee",
+        "a8a42d94f4969835685a814d939dcf7a85da5bc5fb0426238f27c92b9596bf8c",
+        "aa637cbee164c6a1cd63894c512d6a32f20986a44c2f02b4616573cc7e937c97",
+        "bd3e65b0601527b204b57e35cbd7b800d7be3e194573a5461f5a98179bea93d3",
+        "bfcd4af0634d05ee56b22d2958e8a1b5f5578dcf60c4be9fc307742c0d2d4e04",
+        "c21f8ee70096b8781411330fc0af8e94859ecc274f3a7afc1639484dbaec3ab8",
+        "c2fd277ba988ad3071933ac4df8e2351278756b013f1ff5bc078e3f24bfbfa21",
+        "d0087d23dcf400852d58afe9c8398288cecef6d9aedb9a06b0d29dfaeb448519",
+        "d63385c29a2efb75c3efc08591d3acbf9126778cad3453d4cac758d9e52f0299",
+        "deff7f5d3269c3efc7ff4ac4a371f76ef7e4ed9d60d21e3c018d8cebbf456f20",
+        "ead8dbe96f0f9cb609b61f1d0806ce30896c6f796207a97e3a2a24a53a49f3b3",
+        "ed2e9001c5ad1f9bd93c220944357e255d3ca09472323a53e1942b57c8e89417",
+        "f44553c45d34e07a2d430a7cd34da5674ada9028b97791a45ed55bfd36d20c07",
+        "f977ff0ca5e0596aa45fbcc7455ace9d6de5308079feb2e38c460346b289edc4",
+        "f9c5e3fc33f3a43337e2743707156e87d2bf1aacb0cc9ac1ef7c53e8db475140"
+      ]
+    }
+  ],
+  "shared_quality_checks": [
+    {
+      "as_of_ms": 1791110791433,
+      "crypto_news": {
+        "source": "coindesk_rss",
+        "asset": "GLOBAL",
+        "symbol": "CRYPTO_NEWS",
+        "as_of_ms": 1791110791433,
+        "state": "BLOCKED",
+        "blocker": "CRYPTO_NEWS_HEALTH_MISSING",
+        "health_event_id": null,
+        "health_received_at_ms": null,
+        "response_received_at_ms": null,
+        "poll_ok": null,
+        "error_type": null,
+        "http_status": null,
+        "accepted_event_ids": [],
+        "accepted_items": null,
+        "rejected_items": null,
+        "historical_metadata_items": 0,
+        "headline_state": "UNVERIFIED",
+        "latest_publication_time_ms": null,
+        "recent_publication_items": 0,
+        "first_observed_at_ms": [],
+        "max_poll_age_ms": 600000,
+        "max_publication_age_ms": 2592000000,
+        "scope": "One CoinDesk RSS metadata poll; publisher publication claim and local receipt only. No sentiment, coin direction or full coverage. Sink acceptance is not atomic commit proof.",
+        "complete_feed_available": false,
+        "all_news_complete": false,
+        "first_publication_independently_verified": false,
+        "trading_approval": false
+      },
+      "stablecoin_supply": {
+        "source": "ethereum_drpc",
+        "asset": "GLOBAL",
+        "symbol": "ETH_MAINNET_STABLECOIN_SUPPLY",
+        "as_of_ms": 1791110791433,
+        "state": "POLL_OBSERVED_VERIFIED",
+        "blocker": null,
+        "health_event_id": "d0087d23dcf400852d58afe9c8398288cecef6d9aedb9a06b0d29dfaeb448519",
+        "health_received_at_ms": 1791110791433,
+        "response_received_at_ms": 1791110791393,
+        "accepted_event_id": "d63385c29a2efb75c3efc08591d3acbf9126778cad3453d4cac758d9e52f0299",
+        "accepted_observed_at_ms": 1791110791393,
+        "poll_ok": true,
+        "reason": "SUPPLY_SNAPSHOT_OBSERVED",
+        "error_type": null,
+        "code": 0,
+        "block_number": 26118403,
+        "block_hash": "0x4c9a692c6108a2d04914caa371761fc7ef2fd287b733df4edfec20650ef93cc4",
+        "block_time_ms": 1791109847000,
+        "poll_age_ms": 0,
+        "response_age_ms": 40,
+        "block_age_ms": 944433,
+        "historical_poll_revisions": 1,
+        "legacy_health_rows": 0,
+        "max_poll_age_ms": 1200000,
+        "max_block_age_ms": 1800000,
+        "scope": "Ethereum mainnet USDC and USDT contract totalSupply only; no all-chain supply, exchange balances or flow attribution",
+        "poll_revision_basis": "one complete same-block poll; every response receipt retained; not first publication",
+        "binding_basis": "sink accepted; not atomic commit proof",
+        "first_publication_independently_verified": false,
+        "finality_independently_verified": false,
+        "all_chain_supply_complete": false,
+        "continuous_history_complete": false,
+        "exchange_balance_coverage": false,
+        "trading_approval": false
+      }
+    },
+    {
+      "as_of_ms": 1791113908327,
+      "crypto_news": {
+        "source": "coindesk_rss",
+        "asset": "GLOBAL",
+        "symbol": "CRYPTO_NEWS",
+        "as_of_ms": 1791113908327,
+        "state": "POLL_OBSERVED_VERIFIED",
+        "blocker": null,
+        "health_event_id": "4e30de6221d4e92bce7eff216d0698565ccbf4f593fe83fc2c4b8ed909000421",
+        "health_received_at_ms": 1791113908327,
+        "response_received_at_ms": 1791113907590,
+        "poll_ok": true,
+        "error_type": null,
+        "http_status": 200,
+        "accepted_event_ids": [
+          "8f1aaee45c4ba8f31ba1018d44a58886b515529ac700a611f4d7eb40411169a3",
+          "01ff834a5b3feca30460f80bfcffd217d18e6b76d352885a6a2c3045b26e8306",
+          "2248a5116fb0fe40bd501c935f5ebe279ab7128d13ac19fc8dfb494155353f7e",
+          "402c952b2574e34acd97e514a4911fd294d95492d9ab80c2517f313999d937b8",
+          "aa637cbee164c6a1cd63894c512d6a32f20986a44c2f02b4616573cc7e937c97",
+          "ead8dbe96f0f9cb609b61f1d0806ce30896c6f796207a97e3a2a24a53a49f3b3",
+          "deff7f5d3269c3efc7ff4ac4a371f76ef7e4ed9d60d21e3c018d8cebbf456f20",
+          "13625cb1d720f1c4218cbcb0ee6b5f810673d98117db9e6369b152fba45dbae9",
+          "6713fc0cea96396362b027f3deee502e909395a1e6c43cd1058f77485a02e788",
+          "f44553c45d34e07a2d430a7cd34da5674ada9028b97791a45ed55bfd36d20c07",
+          "c2fd277ba988ad3071933ac4df8e2351278756b013f1ff5bc078e3f24bfbfa21",
+          "6ded38f77b074c64cc34b0ed76c7b394c4fedc04bcdb821a11b91dab24d78e8b",
+          "0c63cdcf19bfe1c2edc0e9a3d543a627571b41054c8bbc3e9ce0045b965350a8",
+          "a8a42d94f4969835685a814d939dcf7a85da5bc5fb0426238f27c92b9596bf8c",
+          "bd3e65b0601527b204b57e35cbd7b800d7be3e194573a5461f5a98179bea93d3",
+          "f977ff0ca5e0596aa45fbcc7455ace9d6de5308079feb2e38c460346b289edc4",
+          "6f674bf1b04d4374856fd2907919e0159e4d2835f05f6d61c9f27e8749132308",
+          "95138f4ce187bfae06cf643c4f961fea8a2d3d9937b5b510701879d2aa502fee",
+          "5b407d838a74f46b91793270ec62f66a1fc0e58d988197114984b7b1af2b4667",
+          "48869e01f8ef42850b383d63c35ee54ff6366cdb93048c78f06e2505e810189f",
+          "ed2e9001c5ad1f9bd93c220944357e255d3ca09472323a53e1942b57c8e89417",
+          "f9c5e3fc33f3a43337e2743707156e87d2bf1aacb0cc9ac1ef7c53e8db475140",
+          "352ff8a3a033a8f7b803a7d32a16785609968e6a996c4cee167fa165ff2dc38c",
+          "5f5c27e883a9f814eca20ac227969ecf2d068a84d063ad086b22daf19f3454a2",
+          "bfcd4af0634d05ee56b22d2958e8a1b5f5578dcf60c4be9fc307742c0d2d4e04"
+        ],
+        "accepted_items": 25,
+        "rejected_items": 0,
+        "historical_metadata_items": 25,
+        "headline_state": "PUBLICATION_RECENT",
+        "latest_publication_time_ms": 1791043200000,
+        "recent_publication_items": 25,
+        "first_observed_at_ms": [
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590
+        ],
+        "max_poll_age_ms": 600000,
+        "max_publication_age_ms": 2592000000,
+        "scope": "One CoinDesk RSS metadata poll; publisher publication claim and local receipt only. No sentiment, coin direction or full coverage. Sink acceptance is not atomic commit proof.",
+        "complete_feed_available": false,
+        "all_news_complete": false,
+        "first_publication_independently_verified": false,
+        "trading_approval": false
+      },
+      "stablecoin_supply": {
+        "source": "ethereum_drpc",
+        "asset": "GLOBAL",
+        "symbol": "ETH_MAINNET_STABLECOIN_SUPPLY",
+        "as_of_ms": 1791113908327,
+        "state": "BLOCKED",
+        "blocker": "STABLECOIN_POLL_STALE",
+        "health_event_id": "d0087d23dcf400852d58afe9c8398288cecef6d9aedb9a06b0d29dfaeb448519",
+        "health_received_at_ms": 1791110791433,
+        "response_received_at_ms": 1791110791393,
+        "accepted_event_id": "d63385c29a2efb75c3efc08591d3acbf9126778cad3453d4cac758d9e52f0299",
+        "accepted_observed_at_ms": 1791110791393,
+        "poll_ok": true,
+        "reason": "SUPPLY_SNAPSHOT_OBSERVED",
+        "error_type": null,
+        "code": 0,
+        "block_number": null,
+        "block_hash": null,
+        "block_time_ms": null,
+        "poll_age_ms": 3116894,
+        "response_age_ms": 3116934,
+        "block_age_ms": null,
+        "historical_poll_revisions": 1,
+        "legacy_health_rows": 0,
+        "max_poll_age_ms": 1200000,
+        "max_block_age_ms": 1800000,
+        "scope": "Ethereum mainnet USDC and USDT contract totalSupply only; no all-chain supply, exchange balances or flow attribution",
+        "poll_revision_basis": "one complete same-block poll; every response receipt retained; not first publication",
+        "binding_basis": "sink accepted; not atomic commit proof",
+        "first_publication_independently_verified": false,
+        "finality_independently_verified": false,
+        "all_chain_supply_complete": false,
+        "continuous_history_complete": false,
+        "exchange_balance_coverage": false,
+        "trading_approval": false
+      }
+    },
+    {
+      "as_of_ms": 1791113909327,
+      "crypto_news": {
+        "source": "coindesk_rss",
+        "asset": "GLOBAL",
+        "symbol": "CRYPTO_NEWS",
+        "as_of_ms": 1791113909327,
+        "state": "BLOCKED",
+        "blocker": "CRYPTO_NEWS_FEED_UNAVAILABLE",
+        "health_event_id": "629e4b76001ef30c6d05ace5236fcc5593501666462dc828e625884f46f7a7d9",
+        "health_received_at_ms": 1791113909327,
+        "response_received_at_ms": null,
+        "poll_ok": false,
+        "error_type": "SYNTHETIC_OFFLINE_FAILURE",
+        "http_status": null,
+        "accepted_event_ids": [],
+        "accepted_items": 0,
+        "rejected_items": 0,
+        "historical_metadata_items": 25,
+        "headline_state": "UNVERIFIED",
+        "latest_publication_time_ms": null,
+        "recent_publication_items": 0,
+        "first_observed_at_ms": [],
+        "max_poll_age_ms": 600000,
+        "max_publication_age_ms": 2592000000,
+        "scope": "One CoinDesk RSS metadata poll; publisher publication claim and local receipt only. No sentiment, coin direction or full coverage. Sink acceptance is not atomic commit proof.",
+        "complete_feed_available": false,
+        "all_news_complete": false,
+        "first_publication_independently_verified": false,
+        "trading_approval": false
+      },
+      "stablecoin_supply": {
+        "source": "ethereum_drpc",
+        "asset": "GLOBAL",
+        "symbol": "ETH_MAINNET_STABLECOIN_SUPPLY",
+        "as_of_ms": 1791113909327,
+        "state": "BLOCKED",
+        "blocker": "STABLECOIN_POLL_STALE",
+        "health_event_id": "d0087d23dcf400852d58afe9c8398288cecef6d9aedb9a06b0d29dfaeb448519",
+        "health_received_at_ms": 1791110791433,
+        "response_received_at_ms": 1791110791393,
+        "accepted_event_id": "d63385c29a2efb75c3efc08591d3acbf9126778cad3453d4cac758d9e52f0299",
+        "accepted_observed_at_ms": 1791110791393,
+        "poll_ok": true,
+        "reason": "SUPPLY_SNAPSHOT_OBSERVED",
+        "error_type": null,
+        "code": 0,
+        "block_number": null,
+        "block_hash": null,
+        "block_time_ms": null,
+        "poll_age_ms": 3117894,
+        "response_age_ms": 3117934,
+        "block_age_ms": null,
+        "historical_poll_revisions": 1,
+        "legacy_health_rows": 0,
+        "max_poll_age_ms": 1200000,
+        "max_block_age_ms": 1800000,
+        "scope": "Ethereum mainnet USDC and USDT contract totalSupply only; no all-chain supply, exchange balances or flow attribution",
+        "poll_revision_basis": "one complete same-block poll; every response receipt retained; not first publication",
+        "binding_basis": "sink accepted; not atomic commit proof",
+        "first_publication_independently_verified": false,
+        "finality_independently_verified": false,
+        "all_chain_supply_complete": false,
+        "continuous_history_complete": false,
+        "exchange_balance_coverage": false,
+        "trading_approval": false
+      }
+    },
+    {
+      "as_of_ms": 1791113911327,
+      "crypto_news": {
+        "source": "coindesk_rss",
+        "asset": "GLOBAL",
+        "symbol": "CRYPTO_NEWS",
+        "as_of_ms": 1791113911327,
+        "state": "BLOCKED",
+        "blocker": "CRYPTO_NEWS_FEED_UNAVAILABLE",
+        "health_event_id": "629e4b76001ef30c6d05ace5236fcc5593501666462dc828e625884f46f7a7d9",
+        "health_received_at_ms": 1791113909327,
+        "response_received_at_ms": null,
+        "poll_ok": false,
+        "error_type": "SYNTHETIC_OFFLINE_FAILURE",
+        "http_status": null,
+        "accepted_event_ids": [],
+        "accepted_items": 0,
+        "rejected_items": 0,
+        "historical_metadata_items": 25,
+        "headline_state": "UNVERIFIED",
+        "latest_publication_time_ms": null,
+        "recent_publication_items": 0,
+        "first_observed_at_ms": [],
+        "max_poll_age_ms": 600000,
+        "max_publication_age_ms": 2592000000,
+        "scope": "One CoinDesk RSS metadata poll; publisher publication claim and local receipt only. No sentiment, coin direction or full coverage. Sink acceptance is not atomic commit proof.",
+        "complete_feed_available": false,
+        "all_news_complete": false,
+        "first_publication_independently_verified": false,
+        "trading_approval": false
+      },
+      "stablecoin_supply": {
+        "source": "ethereum_drpc",
+        "asset": "GLOBAL",
+        "symbol": "ETH_MAINNET_STABLECOIN_SUPPLY",
+        "as_of_ms": 1791113911327,
+        "state": "BLOCKED",
+        "blocker": "STABLECOIN_POLL_STALE",
+        "health_event_id": "d0087d23dcf400852d58afe9c8398288cecef6d9aedb9a06b0d29dfaeb448519",
+        "health_received_at_ms": 1791110791433,
+        "response_received_at_ms": 1791110791393,
+        "accepted_event_id": "d63385c29a2efb75c3efc08591d3acbf9126778cad3453d4cac758d9e52f0299",
+        "accepted_observed_at_ms": 1791110791393,
+        "poll_ok": true,
+        "reason": "SUPPLY_SNAPSHOT_OBSERVED",
+        "error_type": null,
+        "code": 0,
+        "block_number": null,
+        "block_hash": null,
+        "block_time_ms": null,
+        "poll_age_ms": 3119894,
+        "response_age_ms": 3119934,
+        "block_age_ms": null,
+        "historical_poll_revisions": 1,
+        "legacy_health_rows": 0,
+        "max_poll_age_ms": 1200000,
+        "max_block_age_ms": 1800000,
+        "scope": "Ethereum mainnet USDC and USDT contract totalSupply only; no all-chain supply, exchange balances or flow attribution",
+        "poll_revision_basis": "one complete same-block poll; every response receipt retained; not first publication",
+        "binding_basis": "sink accepted; not atomic commit proof",
+        "first_publication_independently_verified": false,
+        "finality_independently_verified": false,
+        "all_chain_supply_complete": false,
+        "continuous_history_complete": false,
+        "exchange_balance_coverage": false,
+        "trading_approval": false
+      }
+    }
+  ],
+  "native_facts": {
+    "news": {
+      "records": 26,
+      "metadata_items": 25,
+      "entity_sha256": "cddc74945dcbe5aec3218cd2b5e339c2cb3e8c9ce888e51b4208e4f5194cfc86",
+      "quality": {
+        "source": "coindesk_rss",
+        "asset": "GLOBAL",
+        "symbol": "CRYPTO_NEWS",
+        "as_of_ms": 1791113908327,
+        "state": "POLL_OBSERVED_VERIFIED",
+        "blocker": null,
+        "health_event_id": "4e30de6221d4e92bce7eff216d0698565ccbf4f593fe83fc2c4b8ed909000421",
+        "health_received_at_ms": 1791113908327,
+        "response_received_at_ms": 1791113907590,
+        "poll_ok": true,
+        "error_type": null,
+        "http_status": 200,
+        "accepted_event_ids": [
+          "8f1aaee45c4ba8f31ba1018d44a58886b515529ac700a611f4d7eb40411169a3",
+          "01ff834a5b3feca30460f80bfcffd217d18e6b76d352885a6a2c3045b26e8306",
+          "2248a5116fb0fe40bd501c935f5ebe279ab7128d13ac19fc8dfb494155353f7e",
+          "402c952b2574e34acd97e514a4911fd294d95492d9ab80c2517f313999d937b8",
+          "aa637cbee164c6a1cd63894c512d6a32f20986a44c2f02b4616573cc7e937c97",
+          "ead8dbe96f0f9cb609b61f1d0806ce30896c6f796207a97e3a2a24a53a49f3b3",
+          "deff7f5d3269c3efc7ff4ac4a371f76ef7e4ed9d60d21e3c018d8cebbf456f20",
+          "13625cb1d720f1c4218cbcb0ee6b5f810673d98117db9e6369b152fba45dbae9",
+          "6713fc0cea96396362b027f3deee502e909395a1e6c43cd1058f77485a02e788",
+          "f44553c45d34e07a2d430a7cd34da5674ada9028b97791a45ed55bfd36d20c07",
+          "c2fd277ba988ad3071933ac4df8e2351278756b013f1ff5bc078e3f24bfbfa21",
+          "6ded38f77b074c64cc34b0ed76c7b394c4fedc04bcdb821a11b91dab24d78e8b",
+          "0c63cdcf19bfe1c2edc0e9a3d543a627571b41054c8bbc3e9ce0045b965350a8",
+          "a8a42d94f4969835685a814d939dcf7a85da5bc5fb0426238f27c92b9596bf8c",
+          "bd3e65b0601527b204b57e35cbd7b800d7be3e194573a5461f5a98179bea93d3",
+          "f977ff0ca5e0596aa45fbcc7455ace9d6de5308079feb2e38c460346b289edc4",
+          "6f674bf1b04d4374856fd2907919e0159e4d2835f05f6d61c9f27e8749132308",
+          "95138f4ce187bfae06cf643c4f961fea8a2d3d9937b5b510701879d2aa502fee",
+          "5b407d838a74f46b91793270ec62f66a1fc0e58d988197114984b7b1af2b4667",
+          "48869e01f8ef42850b383d63c35ee54ff6366cdb93048c78f06e2505e810189f",
+          "ed2e9001c5ad1f9bd93c220944357e255d3ca09472323a53e1942b57c8e89417",
+          "f9c5e3fc33f3a43337e2743707156e87d2bf1aacb0cc9ac1ef7c53e8db475140",
+          "352ff8a3a033a8f7b803a7d32a16785609968e6a996c4cee167fa165ff2dc38c",
+          "5f5c27e883a9f814eca20ac227969ecf2d068a84d063ad086b22daf19f3454a2",
+          "bfcd4af0634d05ee56b22d2958e8a1b5f5578dcf60c4be9fc307742c0d2d4e04"
+        ],
+        "accepted_items": 25,
+        "rejected_items": 0,
+        "historical_metadata_items": 25,
+        "headline_state": "PUBLICATION_RECENT",
+        "latest_publication_time_ms": 1791043200000,
+        "recent_publication_items": 25,
+        "first_observed_at_ms": [
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590,
+          1791113907590
+        ],
+        "max_poll_age_ms": 600000,
+        "max_publication_age_ms": 2592000000,
+        "scope": "One CoinDesk RSS metadata poll; publisher publication claim and local receipt only. No sentiment, coin direction or full coverage. Sink acceptance is not atomic commit proof.",
+        "complete_feed_available": false,
+        "all_news_complete": false,
+        "first_publication_independently_verified": false,
+        "trading_approval": false
+      },
+      "classification": "NOT_CLASSIFIED",
+      "first_publication_verified": false
+    },
+    "supply": {
+      "records": 2,
+      "native_response_entities": 7,
+      "quality": {
+        "source": "ethereum_drpc",
+        "asset": "GLOBAL",
+        "symbol": "ETH_MAINNET_STABLECOIN_SUPPLY",
+        "as_of_ms": 1791110791433,
+        "state": "POLL_OBSERVED_VERIFIED",
+        "blocker": null,
+        "health_event_id": "d0087d23dcf400852d58afe9c8398288cecef6d9aedb9a06b0d29dfaeb448519",
+        "health_received_at_ms": 1791110791433,
+        "response_received_at_ms": 1791110791393,
+        "accepted_event_id": "d63385c29a2efb75c3efc08591d3acbf9126778cad3453d4cac758d9e52f0299",
+        "accepted_observed_at_ms": 1791110791393,
+        "poll_ok": true,
+        "reason": "SUPPLY_SNAPSHOT_OBSERVED",
+        "error_type": null,
+        "code": 0,
+        "block_number": 26118403,
+        "block_hash": "0x4c9a692c6108a2d04914caa371761fc7ef2fd287b733df4edfec20650ef93cc4",
+        "block_time_ms": 1791109847000,
+        "poll_age_ms": 0,
+        "response_age_ms": 40,
+        "block_age_ms": 944433,
+        "historical_poll_revisions": 1,
+        "legacy_health_rows": 0,
+        "max_poll_age_ms": 1200000,
+        "max_block_age_ms": 1800000,
+        "scope": "Ethereum mainnet USDC and USDT contract totalSupply only; no all-chain supply, exchange balances or flow attribution",
+        "poll_revision_basis": "one complete same-block poll; every response receipt retained; not first publication",
+        "binding_basis": "sink accepted; not atomic commit proof",
+        "first_publication_independently_verified": false,
+        "finality_independently_verified": false,
+        "all_chain_supply_complete": false,
+        "continuous_history_complete": false,
+        "exchange_balance_coverage": false,
+        "trading_approval": false
+      },
+      "finality_basis": "RPC provider assertion; not independently verified"
+    }
+  },
+  "source_hashes_before": {
+    "news": {
+      "events.duckdb": "76bf7ecb50cf560bff24338ee5b4c41345fcc11fcf3d05eea14a4031b187915f",
+      "events.parquet": "df73462160a9bce48b0c6fe5c20fa11adaa170a46564cad6185536e71bea5a62",
+      "events.parquet.manifest.json": "4a18f6569ccb84278233e869214fa1188d69b5b86a2d61f3a61f413c04ad4e9e",
+      "provenance.json": "41259c90f828f21c40eee5f6270f631c69c01e49cbf5ba6063c679ab6d314822",
+      "README.md": "e8d6d87b26d296430d03d3bff12c3af81822cc6d89f7bd971346db78d2fe813d",
+      "report.json": "e55c580b5395ab92a43fb1ddadbebcc9606ff66ee724a680f79070a1165b4b21",
+      "response.xml": "cddc74945dcbe5aec3218cd2b5e339c2cb3e8c9ce888e51b4208e4f5194cfc86",
+      "source-snapshot.py": "97944a8d9a9518685249ac0e3f68a521489b3f5ec2c893f10702fb7ff174565b",
+      "verification-script.py": "119ad56588ea14908a00b65a85457ec050f14c1df53a148aba5da1a2fbf67a8a"
+    },
+    "supply": {
+      "events.duckdb": "ad4d5c96b9cd9c72cc86f0376c45c5f2dda7712e38990f202f3f31f139bbe5b7",
+      "events.parquet": "d3510a1d361baeb4a96204cec3dab7c0d717c056c962c7cdb05daa0a83ecbedd",
+      "events.parquet.manifest.json": "088fb3f6b766fec128b1618a18be2932e10e335d7c6c7bc18482a5ddf85bfc9c",
+      "README.md": "2ba4a5c73b165a340f3456ec1f39b5e0f39fa434ee04bc3a4cb036338801681f",
+      "report.json": "3a441627f204c5f0f4b95d25ed981d52f72162d6fcfd193c5a75a6eca60e9ad1",
+      "response-01.json": "79226432df73e05966f20e4d291fb5048bfef1138d7078f8feab534126df1aa5",
+      "response-02.json": "e10c735a67ce654a63bdd37552c45756ced0e32a0b04a4afd359d23f824f8883",
+      "response-03.json": "1665b68e64bf2e9c5cde7d0f78448454b9c1078f23f01c8078ec2f3e013bdc47",
+      "response-04.json": "ed10f251ab9aa0ee01bde099eee5427539cb12d37d2561d2bea94866d63c82d6",
+      "response-05.json": "bdcaa8bdddf448e679f74bd064eb0e933f6a3ee208c3d1b5b901e216eb7f7df5",
+      "response-06.json": "9e5cd9535de9fe55c71fa9a4388741adcfc82a176b0d50a7cc22f90184642f9b",
+      "response-07.json": "a0a37b2ef578f83421f0a0642ceb3dbe20733056c829fa5cf4d4214929fd6065",
+      "verifier_snapshot.py": "6ab032210789960832e7745bdfc77b01ee0f01653d63539d3a28d672698c2094"
+    }
+  },
+  "source_hashes_after": {
+    "news": {
+      "events.duckdb": "76bf7ecb50cf560bff24338ee5b4c41345fcc11fcf3d05eea14a4031b187915f",
+      "events.parquet": "df73462160a9bce48b0c6fe5c20fa11adaa170a46564cad6185536e71bea5a62",
+      "events.parquet.manifest.json": "4a18f6569ccb84278233e869214fa1188d69b5b86a2d61f3a61f413c04ad4e9e",
+      "provenance.json": "41259c90f828f21c40eee5f6270f631c69c01e49cbf5ba6063c679ab6d314822",
+      "README.md": "e8d6d87b26d296430d03d3bff12c3af81822cc6d89f7bd971346db78d2fe813d",
+      "report.json": "e55c580b5395ab92a43fb1ddadbebcc9606ff66ee724a680f79070a1165b4b21",
+      "response.xml": "cddc74945dcbe5aec3218cd2b5e339c2cb3e8c9ce888e51b4208e4f5194cfc86",
+      "source-snapshot.py": "97944a8d9a9518685249ac0e3f68a521489b3f5ec2c893f10702fb7ff174565b",
+      "verification-script.py": "119ad56588ea14908a00b65a85457ec050f14c1df53a148aba5da1a2fbf67a8a"
+    },
+    "supply": {
+      "events.duckdb": "ad4d5c96b9cd9c72cc86f0376c45c5f2dda7712e38990f202f3f31f139bbe5b7",
+      "events.parquet": "d3510a1d361baeb4a96204cec3dab7c0d717c056c962c7cdb05daa0a83ecbedd",
+      "events.parquet.manifest.json": "088fb3f6b766fec128b1618a18be2932e10e335d7c6c7bc18482a5ddf85bfc9c",
+      "README.md": "2ba4a5c73b165a340f3456ec1f39b5e0f39fa434ee04bc3a4cb036338801681f",
+      "report.json": "3a441627f204c5f0f4b95d25ed981d52f72162d6fcfd193c5a75a6eca60e9ad1",
+      "response-01.json": "79226432df73e05966f20e4d291fb5048bfef1138d7078f8feab534126df1aa5",
+      "response-02.json": "e10c735a67ce654a63bdd37552c45756ced0e32a0b04a4afd359d23f824f8883",
+      "response-03.json": "1665b68e64bf2e9c5cde7d0f78448454b9c1078f23f01c8078ec2f3e013bdc47",
+      "response-04.json": "ed10f251ab9aa0ee01bde099eee5427539cb12d37d2561d2bea94866d63c82d6",
+      "response-05.json": "bdcaa8bdddf448e679f74bd064eb0e933f6a3ee208c3d1b5b901e216eb7f7df5",
+      "response-06.json": "9e5cd9535de9fe55c71fa9a4388741adcfc82a176b0d50a7cc22f90184642f9b",
+      "response-07.json": "a0a37b2ef578f83421f0a0642ceb3dbe20733056c829fa5cf4d4214929fd6065",
+      "verifier_snapshot.py": "6ab032210789960832e7745bdfc77b01ee0f01653d63539d3a28d672698c2094"
+    }
+  },
+  "working_source_sha256_before": "d9832bca435096289ed386ea6334ce7a93908aae3fb307c346f15e95fee09cce",
+  "working_source_sha256_after": "d9832bca435096289ed386ea6334ce7a93908aae3fb307c346f15e95fee09cce",
+  "source_outbox_before": [
+    [
+      "01ff834a5b3feca30460f80bfcffd217d18e6b76d352885a6a2c3045b26e8306",
+      true
+    ],
+    [
+      "04cbae643fb543fde04257d47212c821b83d4f91b4136cf627dcc91fba16ce6a",
+      false
+    ],
+    [
+      "0c63cdcf19bfe1c2edc0e9a3d543a627571b41054c8bbc3e9ce0045b965350a8",
+      false
+    ],
+    [
+      "13625cb1d720f1c4218cbcb0ee6b5f810673d98117db9e6369b152fba45dbae9",
+      false
+    ],
+    [
+      "2248a5116fb0fe40bd501c935f5ebe279ab7128d13ac19fc8dfb494155353f7e",
+      false
+    ],
+    [
+      "294439f2448103f1fc605f4afed28da2d0854a047e04cea7d2d26b7e73c92d76",
+      false
+    ],
+    [
+      "2f8e72a43056959485765bc3a5da18c91494e0560aa686d3fd1107f794ef68b0",
+      false
+    ],
+    [
+      "352ff8a3a033a8f7b803a7d32a16785609968e6a996c4cee167fa165ff2dc38c",
+      false
+    ],
+    [
+      "38dd9fb643a7ec8f74b532b0e5c7e65ce113816dba9c9c11149a3c2e5054a41f",
+      false
+    ],
+    [
+      "402c952b2574e34acd97e514a4911fd294d95492d9ab80c2517f313999d937b8",
+      false
+    ],
+    [
+      "4210e7eb85c5e8db97c3821dd30ad4cabe686b005126068a7e2df428cec3400c",
+      false
+    ],
+    [
+      "48869e01f8ef42850b383d63c35ee54ff6366cdb93048c78f06e2505e810189f",
+      false
+    ],
+    [
+      "4e30de6221d4e92bce7eff216d0698565ccbf4f593fe83fc2c4b8ed909000421",
+      false
+    ],
+    [
+      "589fd6396184d675268d78eca4dc05f584cb63d20b73d710f957ed9c1e85d237",
+      false
+    ],
+    [
+      "5b407d838a74f46b91793270ec62f66a1fc0e58d988197114984b7b1af2b4667",
+      false
+    ],
+    [
+      "5f5c27e883a9f814eca20ac227969ecf2d068a84d063ad086b22daf19f3454a2",
+      false
+    ],
+    [
+      "629e4b76001ef30c6d05ace5236fcc5593501666462dc828e625884f46f7a7d9",
+      false
+    ],
+    [
+      "6713fc0cea96396362b027f3deee502e909395a1e6c43cd1058f77485a02e788",
+      false
+    ],
+    [
+      "6b9610416f3182ccac9fb133e3078d741981cbfb7255c7c4ac9c84b515d4d6ab",
+      false
+    ],
+    [
+      "6ded38f77b074c64cc34b0ed76c7b394c4fedc04bcdb821a11b91dab24d78e8b",
+      false
+    ],
+    [
+      "6f674bf1b04d4374856fd2907919e0159e4d2835f05f6d61c9f27e8749132308",
+      false
+    ],
+    [
+      "72ab80c52df6cfdf5b017588fed0bf818cfcf7bac52a348719ad0b2fcd345076",
+      false
+    ],
+    [
+      "8f1aaee45c4ba8f31ba1018d44a58886b515529ac700a611f4d7eb40411169a3",
+      false
+    ],
+    [
+      "95138f4ce187bfae06cf643c4f961fea8a2d3d9937b5b510701879d2aa502fee",
+      false
+    ],
+    [
+      "98ae99e854f4d07a6aa7b5cc67d1e498f567edb93e6a7c75ee11a42311f68141",
+      false
+    ],
+    [
+      "a8a42d94f4969835685a814d939dcf7a85da5bc5fb0426238f27c92b9596bf8c",
+      false
+    ],
+    [
+      "aa637cbee164c6a1cd63894c512d6a32f20986a44c2f02b4616573cc7e937c97",
+      false
+    ],
+    [
+      "bd3e65b0601527b204b57e35cbd7b800d7be3e194573a5461f5a98179bea93d3",
+      false
+    ],
+    [
+      "bfcd4af0634d05ee56b22d2958e8a1b5f5578dcf60c4be9fc307742c0d2d4e04",
+      false
+    ],
+    [
+      "c21f8ee70096b8781411330fc0af8e94859ecc274f3a7afc1639484dbaec3ab8",
+      false
+    ],
+    [
+      "c2fd277ba988ad3071933ac4df8e2351278756b013f1ff5bc078e3f24bfbfa21",
+      false
+    ],
+    [
+      "d0087d23dcf400852d58afe9c8398288cecef6d9aedb9a06b0d29dfaeb448519",
+      false
+    ],
+    [
+      "d63385c29a2efb75c3efc08591d3acbf9126778cad3453d4cac758d9e52f0299",
+      false
+    ],
+    [
+      "deff7f5d3269c3efc7ff4ac4a371f76ef7e4ed9d60d21e3c018d8cebbf456f20",
+      false
+    ],
+    [
+      "ead8dbe96f0f9cb609b61f1d0806ce30896c6f796207a97e3a2a24a53a49f3b3",
+      false
+    ],
+    [
+      "ed2e9001c5ad1f9bd93c220944357e255d3ca09472323a53e1942b57c8e89417",
+      false
+    ],
+    [
+      "f44553c45d34e07a2d430a7cd34da5674ada9028b97791a45ed55bfd36d20c07",
+      false
+    ],
+    [
+      "f977ff0ca5e0596aa45fbcc7455ace9d6de5308079feb2e38c460346b289edc4",
+      false
+    ],
+    [
+      "f9c5e3fc33f3a43337e2743707156e87d2bf1aacb0cc9ac1ef7c53e8db475140",
+      false
+    ]
+  ],
+  "source_outbox_after": [
+    [
+      "01ff834a5b3feca30460f80bfcffd217d18e6b76d352885a6a2c3045b26e8306",
+      true
+    ],
+    [
+      "04cbae643fb543fde04257d47212c821b83d4f91b4136cf627dcc91fba16ce6a",
+      false
+    ],
+    [
+      "0c63cdcf19bfe1c2edc0e9a3d543a627571b41054c8bbc3e9ce0045b965350a8",
+      false
+    ],
+    [
+      "13625cb1d720f1c4218cbcb0ee6b5f810673d98117db9e6369b152fba45dbae9",
+      false
+    ],
+    [
+      "2248a5116fb0fe40bd501c935f5ebe279ab7128d13ac19fc8dfb494155353f7e",
+      false
+    ],
+    [
+      "294439f2448103f1fc605f4afed28da2d0854a047e04cea7d2d26b7e73c92d76",
+      false
+    ],
+    [
+      "2f8e72a43056959485765bc3a5da18c91494e0560aa686d3fd1107f794ef68b0",
+      false
+    ],
+    [
+      "352ff8a3a033a8f7b803a7d32a16785609968e6a996c4cee167fa165ff2dc38c",
+      false
+    ],
+    [
+      "38dd9fb643a7ec8f74b532b0e5c7e65ce113816dba9c9c11149a3c2e5054a41f",
+      false
+    ],
+    [
+      "402c952b2574e34acd97e514a4911fd294d95492d9ab80c2517f313999d937b8",
+      false
+    ],
+    [
+      "4210e7eb85c5e8db97c3821dd30ad4cabe686b005126068a7e2df428cec3400c",
+      false
+    ],
+    [
+      "48869e01f8ef42850b383d63c35ee54ff6366cdb93048c78f06e2505e810189f",
+      false
+    ],
+    [
+      "4e30de6221d4e92bce7eff216d0698565ccbf4f593fe83fc2c4b8ed909000421",
+      false
+    ],
+    [
+      "589fd6396184d675268d78eca4dc05f584cb63d20b73d710f957ed9c1e85d237",
+      false
+    ],
+    [
+      "5b407d838a74f46b91793270ec62f66a1fc0e58d988197114984b7b1af2b4667",
+      false
+    ],
+    [
+      "5f5c27e883a9f814eca20ac227969ecf2d068a84d063ad086b22daf19f3454a2",
+      false
+    ],
+    [
+      "629e4b76001ef30c6d05ace5236fcc5593501666462dc828e625884f46f7a7d9",
+      false
+    ],
+    [
+      "6713fc0cea96396362b027f3deee502e909395a1e6c43cd1058f77485a02e788",
+      false
+    ],
+    [
+      "6b9610416f3182ccac9fb133e3078d741981cbfb7255c7c4ac9c84b515d4d6ab",
+      false
+    ],
+    [
+      "6ded38f77b074c64cc34b0ed76c7b394c4fedc04bcdb821a11b91dab24d78e8b",
+      false
+    ],
+    [
+      "6f674bf1b04d4374856fd2907919e0159e4d2835f05f6d61c9f27e8749132308",
+      false
+    ],
+    [
+      "72ab80c52df6cfdf5b017588fed0bf818cfcf7bac52a348719ad0b2fcd345076",
+      false
+    ],
+    [
+      "8f1aaee45c4ba8f31ba1018d44a58886b515529ac700a611f4d7eb40411169a3",
+      false
+    ],
+    [
+      "95138f4ce187bfae06cf643c4f961fea8a2d3d9937b5b510701879d2aa502fee",
+      false
+    ],
+    [
+      "98ae99e854f4d07a6aa7b5cc67d1e498f567edb93e6a7c75ee11a42311f68141",
+      false
+    ],
+    [
+      "a8a42d94f4969835685a814d939dcf7a85da5bc5fb0426238f27c92b9596bf8c",
+      false
+    ],
+    [
+      "aa637cbee164c6a1cd63894c512d6a32f20986a44c2f02b4616573cc7e937c97",
+      false
+    ],
+    [
+      "bd3e65b0601527b204b57e35cbd7b800d7be3e194573a5461f5a98179bea93d3",
+      false
+    ],
+    [
+      "bfcd4af0634d05ee56b22d2958e8a1b5f5578dcf60c4be9fc307742c0d2d4e04",
+      false
+    ],
+    [
+      "c21f8ee70096b8781411330fc0af8e94859ecc274f3a7afc1639484dbaec3ab8",
+      false
+    ],
+    [
+      "c2fd277ba988ad3071933ac4df8e2351278756b013f1ff5bc078e3f24bfbfa21",
+      false
+    ],
+    [
+      "d0087d23dcf400852d58afe9c8398288cecef6d9aedb9a06b0d29dfaeb448519",
+      false
+    ],
+    [
+      "d63385c29a2efb75c3efc08591d3acbf9126778cad3453d4cac758d9e52f0299",
+      false
+    ],
+    [
+      "deff7f5d3269c3efc7ff4ac4a371f76ef7e4ed9d60d21e3c018d8cebbf456f20",
+      false
+    ],
+    [
+      "ead8dbe96f0f9cb609b61f1d0806ce30896c6f796207a97e3a2a24a53a49f3b3",
+      false
+    ],
+    [
+      "ed2e9001c5ad1f9bd93c220944357e255d3ca09472323a53e1942b57c8e89417",
+      false
+    ],
+    [
+      "f44553c45d34e07a2d430a7cd34da5674ada9028b97791a45ed55bfd36d20c07",
+      false
+    ],
+    [
+      "f977ff0ca5e0596aa45fbcc7455ace9d6de5308079feb2e38c460346b289edc4",
+      false
+    ],
+    [
+      "f9c5e3fc33f3a43337e2743707156e87d2bf1aacb0cc9ac1ef7c53e8db475140",
+      false
+    ]
+  ],
+  "synthetic_events": [
+    {
+      "event_id": "4210e7eb85c5e8db97c3821dd30ad4cabe686b005126068a7e2df428cec3400c",
+      "source": "rotation_verification_fixture",
+      "environment": "testnet",
+      "asset": "FIXTURE",
+      "symbol": "BOUNDARY_0",
+      "kind": "status",
+      "event_time_ms": 1791071999999,
+      "observed_at_ms": 1791071999999,
+      "timestamp_kind": "source",
+      "schema_version": 1,
+      "payload_json": "{\"fixture_index\":0,\"provenance\":\"synthetic_offline_verification_fixture\",\"purpose\":\"both clocks before partition budget and availability boundary\"}"
+    },
+    {
+      "event_id": "c21f8ee70096b8781411330fc0af8e94859ecc274f3a7afc1639484dbaec3ab8",
+      "source": "rotation_verification_fixture",
+      "environment": "testnet",
+      "asset": "FIXTURE",
+      "symbol": "BOUNDARY_1",
+      "kind": "status",
+      "event_time_ms": 1791072000000,
+      "observed_at_ms": 1791072000000,
+      "timestamp_kind": "source",
+      "schema_version": 1,
+      "payload_json": "{\"fixture_index\":1,\"provenance\":\"synthetic_offline_verification_fixture\",\"purpose\":\"both clocks before partition budget and availability boundary\"}"
+    },
+    {
+      "event_id": "2f8e72a43056959485765bc3a5da18c91494e0560aa686d3fd1107f794ef68b0",
+      "source": "rotation_verification_fixture",
+      "environment": "testnet",
+      "asset": "FIXTURE",
+      "symbol": "BOUNDARY_2",
+      "kind": "status",
+      "event_time_ms": 1791072000001,
+      "observed_at_ms": 1791072000001,
+      "timestamp_kind": "source",
+      "schema_version": 1,
+      "payload_json": "{\"fixture_index\":2,\"provenance\":\"synthetic_offline_verification_fixture\",\"purpose\":\"both clocks before partition budget and availability boundary\"}"
+    },
+    {
+      "event_id": "38dd9fb643a7ec8f74b532b0e5c7e65ce113816dba9c9c11149a3c2e5054a41f",
+      "source": "rotation_verification_fixture",
+      "environment": "testnet",
+      "asset": "FIXTURE",
+      "symbol": "BOUNDARY_3",
+      "kind": "status",
+      "event_time_ms": 1791071999999,
+      "observed_at_ms": 1791072000002,
+      "timestamp_kind": "source",
+      "schema_version": 1,
+      "payload_json": "{\"fixture_index\":3,\"provenance\":\"synthetic_offline_verification_fixture\",\"purpose\":\"both clocks before partition budget and availability boundary\"}"
+    },
+    {
+      "event_id": "294439f2448103f1fc605f4afed28da2d0854a047e04cea7d2d26b7e73c92d76",
+      "source": "rotation_verification_fixture",
+      "environment": "testnet",
+      "asset": "FIXTURE",
+      "symbol": "BOUNDARY_4",
+      "kind": "status",
+      "event_time_ms": 1791072000002,
+      "observed_at_ms": 1791071999999,
+      "timestamp_kind": "source",
+      "schema_version": 1,
+      "payload_json": "{\"fixture_index\":4,\"provenance\":\"synthetic_offline_verification_fixture\",\"purpose\":\"both clocks before partition budget and availability boundary\"}"
+    },
+    {
+      "event_id": "04cbae643fb543fde04257d47212c821b83d4f91b4136cf627dcc91fba16ce6a",
+      "source": "rotation_verification_fixture",
+      "environment": "testnet",
+      "asset": "FIXTURE",
+      "symbol": "BOUNDARY_5",
+      "kind": "status",
+      "event_time_ms": 1791113911327,
+      "observed_at_ms": 1791113911327,
+      "timestamp_kind": "source",
+      "schema_version": 1,
+      "payload_json": "{\"fixture_index\":5,\"provenance\":\"synthetic_offline_verification_fixture\",\"purpose\":\"both clocks before partition budget and availability boundary\"}"
+    },
+    {
+      "event_id": "589fd6396184d675268d78eca4dc05f584cb63d20b73d710f957ed9c1e85d237",
+      "source": "rotation_verification_fixture",
+      "environment": "testnet",
+      "asset": "FIXTURE",
+      "symbol": "BOUNDARY_6",
+      "kind": "status",
+      "event_time_ms": 1791200311327,
+      "observed_at_ms": 1791072000000,
+      "timestamp_kind": "source",
+      "schema_version": 1,
+      "payload_json": "{\"fixture_index\":6,\"provenance\":\"synthetic_offline_verification_fixture\",\"purpose\":\"both clocks before partition budget and availability boundary\"}"
+    },
+    {
+      "event_id": "72ab80c52df6cfdf5b017588fed0bf818cfcf7bac52a348719ad0b2fcd345076",
+      "source": "rotation_verification_fixture",
+      "environment": "testnet",
+      "asset": "FIXTURE",
+      "symbol": "BOUNDARY_7",
+      "kind": "status",
+      "event_time_ms": 1791072000000,
+      "observed_at_ms": 1791200311327,
+      "timestamp_kind": "source",
+      "schema_version": 1,
+      "payload_json": "{\"fixture_index\":7,\"provenance\":\"synthetic_offline_verification_fixture\",\"purpose\":\"both clocks before partition budget and availability boundary\"}"
+    },
+    {
+      "event_id": "98ae99e854f4d07a6aa7b5cc67d1e498f567edb93e6a7c75ee11a42311f68141",
+      "source": "rotation_verification_fixture",
+      "environment": "testnet",
+      "asset": "FIXTURE",
+      "symbol": "BOUNDARY_8",
+      "kind": "status",
+      "event_time_ms": 1791286711327,
+      "observed_at_ms": 1791072000000,
+      "timestamp_kind": "source",
+      "schema_version": 1,
+      "payload_json": "{\"fixture_index\":8,\"provenance\":\"synthetic_offline_verification_fixture\",\"purpose\":\"both clocks before partition budget and availability boundary\"}"
+    },
+    {
+      "event_id": "6b9610416f3182ccac9fb133e3078d741981cbfb7255c7c4ac9c84b515d4d6ab",
+      "source": "rotation_verification_fixture",
+      "environment": "testnet",
+      "asset": "FIXTURE",
+      "symbol": "BOUNDARY_9",
+      "kind": "status",
+      "event_time_ms": 1791072000000,
+      "observed_at_ms": 1791286711327,
+      "timestamp_kind": "source",
+      "schema_version": 1,
+      "payload_json": "{\"fixture_index\":9,\"provenance\":\"synthetic_offline_verification_fixture\",\"purpose\":\"both clocks before partition budget and availability boundary\"}"
+    },
+    {
+      "event_id": "629e4b76001ef30c6d05ace5236fcc5593501666462dc828e625884f46f7a7d9",
+      "source": "coindesk_rss",
+      "environment": "public_reference",
+      "asset": "GLOBAL",
+      "symbol": "CRYPTO_NEWS",
+      "kind": "feed_health",
+      "event_time_ms": 1791113909327,
+      "observed_at_ms": 1791113909327,
+      "timestamp_kind": "receipt",
+      "schema_version": 1,
+      "payload_json": "{\"accepted_event_ids\":[],\"accepted_items\":0,\"error_type\":\"SYNTHETIC_OFFLINE_FAILURE\",\"feed_url\":\"https://www.coindesk.com/arc/outboundfeeds/rss?outputType=xml\",\"http_status\":null,\"ok\":false,\"rejected_items\":0,\"response_received_at_ms\":null,\"scope\":\"CoinDesk RSS metadata; sink accepted, no atomic commit claim\"}"
+    }
+  ],
+  "corrupt_restore": {
+    "error": "ARCHIVE_ROTATION_CHECKSUM_MISMATCH",
+    "final_database_published": false
+  },
+  "partition_budget_refused_before_output_creation": true,
+  "code_sha256": {
+    "archive_rotation.py": "ff902497e4b360bb9897a40a93a8345eec5d089bec097dbeba9745dae78eb009",
+    "rotation_restore.py": "359a2dd9bcc18af93e0c524ddf2536793da89b2ff734272b03fef6d5cd4a401e"
+  },
+  "verifier_sha256": "876ba1a17f8dbdf4f64b67c8a92f9f962ab575ffcd4ed08ed049111214549761",
+  "ready_for_signals": false,
+  "trading_enabled": false,
+  "limitation": "Offline event rotation/restore only. Synthetic failed health is not an actual provider outage. No purge, Redis reconciliation, running capture, complete history or seven-day validation is proved."
+}

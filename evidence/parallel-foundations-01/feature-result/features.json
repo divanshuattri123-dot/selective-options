@@ -1,0 +1,184 @@
+{
+  "source_database_sha256": "c7b04e726df8caf815f7c653497950799146d3605a968f52d08d9903c0e4e10e",
+  "source_mutated": false,
+  "source_scope_and_cutoff": {
+    "asset": "BTC",
+    "environment": "public_reference",
+    "source": "synthetic_fixture",
+    "symbol": "FIXTURE-BTC/USD",
+    "as_of_ms": 72300010,
+    "explicit_history_start_ms": null
+  },
+  "feature_report": {
+    "formula_version": "closed-bars-v1",
+    "state": "FEATURES_COMPUTED",
+    "asset": "BTC",
+    "environment": "public_reference",
+    "source": "synthetic_fixture",
+    "symbol": "FIXTURE-BTC/USD",
+    "timeframe_s": 300,
+    "as_of_ms": 72300010,
+    "history_budget": 2000,
+    "bars_available": 240,
+    "bars_used": 240,
+    "first_close_ms": 600000,
+    "latest_close_ms": 72300000,
+    "latest_bar_age_ms": 10,
+    "max_latest_age_ms": 600000,
+    "history_sha256": "f9f5d9729203c6f90853e560f101fb4b0ed4413eebfee5375580e9e8bdfe3810",
+    "annualization_periods_per_year": 105120.0,
+    "blockers": [],
+    "features": [
+      {
+        "name": "ema_8",
+        "state": "AVAILABLE",
+        "value": 336.5,
+        "unit": "price",
+        "bars_required": 8,
+        "reason": null
+      },
+      {
+        "name": "ema_8_slope",
+        "state": "AVAILABLE",
+        "value": 1.0,
+        "unit": "price_per_bar",
+        "bars_required": 9,
+        "reason": null
+      },
+      {
+        "name": "ema_21",
+        "state": "AVAILABLE",
+        "value": 330.0,
+        "unit": "price",
+        "bars_required": 21,
+        "reason": null
+      },
+      {
+        "name": "ema_21_slope",
+        "state": "AVAILABLE",
+        "value": 1.0,
+        "unit": "price_per_bar",
+        "bars_required": 22,
+        "reason": null
+      },
+      {
+        "name": "ema_50",
+        "state": "AVAILABLE",
+        "value": 315.5,
+        "unit": "price",
+        "bars_required": 50,
+        "reason": null
+      },
+      {
+        "name": "ema_50_slope",
+        "state": "AVAILABLE",
+        "value": 1.0,
+        "unit": "price_per_bar",
+        "bars_required": 51,
+        "reason": null
+      },
+      {
+        "name": "ema_200",
+        "state": "AVAILABLE",
+        "value": 240.5,
+        "unit": "price",
+        "bars_required": 200,
+        "reason": null
+      },
+      {
+        "name": "ema_200_slope",
+        "state": "AVAILABLE",
+        "value": 1.0,
+        "unit": "price_per_bar",
+        "bars_required": 201,
+        "reason": null
+      },
+      {
+        "name": "rsi_14",
+        "state": "AVAILABLE",
+        "value": 100.0,
+        "unit": "index_0_to_100",
+        "bars_required": 15,
+        "reason": null
+      },
+      {
+        "name": "atr_14",
+        "state": "AVAILABLE",
+        "value": 3.0,
+        "unit": "price",
+        "bars_required": 15,
+        "reason": null
+      },
+      {
+        "name": "macd_12_26",
+        "state": "AVAILABLE",
+        "value": 7.0,
+        "unit": "price",
+        "bars_required": 26,
+        "reason": null
+      },
+      {
+        "name": "macd_signal_9",
+        "state": "AVAILABLE",
+        "value": 7.0,
+        "unit": "price",
+        "bars_required": 34,
+        "reason": null
+      },
+      {
+        "name": "macd_histogram",
+        "state": "AVAILABLE",
+        "value": 0.0,
+        "unit": "price",
+        "bars_required": 34,
+        "reason": null
+      },
+      {
+        "name": "bollinger_width_20",
+        "state": "AVAILABLE",
+        "value": 0.06978857848514854,
+        "unit": "fraction",
+        "bars_required": 20,
+        "reason": null
+      },
+      {
+        "name": "roc_5",
+        "state": "AVAILABLE",
+        "value": 0.014925373134328401,
+        "unit": "fraction",
+        "bars_required": 6,
+        "reason": null
+      },
+      {
+        "name": "roc_20",
+        "state": "AVAILABLE",
+        "value": 0.0625,
+        "unit": "fraction",
+        "bars_required": 21,
+        "reason": null
+      },
+      {
+        "name": "realized_vol_20",
+        "state": "AVAILABLE",
+        "value": 0.017625460121891274,
+        "unit": "annualized_log_return_std",
+        "bars_required": 21,
+        "reason": null
+      },
+      {
+        "name": "realized_vol_60",
+        "state": "AVAILABLE",
+        "value": 0.05932853068610425,
+        "unit": "annualized_log_return_std",
+        "bars_required": 61,
+        "reason": null
+      }
+    ],
+    "history_truncated": false,
+    "source_frontier_complete": false,
+    "ready_for_signals": false,
+    "trading_enabled": false
+  },
+  "ready_for_signals": false,
+  "trading_enabled": false
+}

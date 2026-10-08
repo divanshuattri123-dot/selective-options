@@ -1,0 +1,21 @@
+{
+  "build_version": "0.3.6",
+  "status": "SAVED_PUBLIC_HANDOFF_VERIFIED",
+  "evidence_type": "saved public data replay; no network connection or new trades",
+  "source_database_sha256": "a6ecd7e0d59224d5237a2a4f0255ff941d6dcdddd78a1d624fea3e95cfd4bc92",
+  "marker_id": "07842cd05875ceca91db9ca8ac1e2d90fefc75840d3774fcb70861622baace28",
+  "database_rows": 139,
+  "selected_rows": 120,
+  "through_id": 108674494,
+  "saved_websocket_duplicates_verified": 17,
+  "original_records_and_receipt_times_preserved": true,
+  "destination_commit_and_reload_verified": true,
+  "runtime_awaiting_snapshot": [
+    "BTC/USD"
+  ],
+  "bar_state_empty": true,
+  "live_continuity_verified": false,
+  "automatic_gap_fetch_enabled": false,
+  "trading_enabled": false,
+  "parquet_sha256": "62376343c42509377e6a92ca4631b97f974e77c38399315b210d88cf97109e00"
+}

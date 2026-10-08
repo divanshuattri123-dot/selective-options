@@ -1,0 +1,12 @@
+{
+  "status": "POST_PROBE_EXACT_POLL_PROVENANCE_GUARD_VERIFIED",
+  "version": "0.3.41",
+  "historical_probe_source_sha256": "97944a8d9a9518685249ac0e3f68a521489b3f5ec2c893f10702fb7ff174565b",
+  "final_current_source_sha256": "71da3cc160859c1aabdb197f6fe9832fd00be8e7d57d5eb2daddd497e431d5af",
+  "sole_semantic_change": "Healthy poll references must carry the exact same fixed feed URL provenance as their bound metadata. Both historical and current canonical URL values remain supported.",
+  "exact_two_line_guard_only": true,
+  "historical_discovery_and_probe_files_unchanged": true,
+  "new_public_requests": 0,
+  "regression_cases": 4,
+  "scope": "Software hardening after native probe; saved native bodies/records/receipts and immutable historical failure are revalidated under final code separately. No repeat public poll or trading approval."
+}

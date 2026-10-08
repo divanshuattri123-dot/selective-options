@@ -1,0 +1,157 @@
+{
+  "version": "0.3.13",
+  "started_at_ms": 1790605097149,
+  "ended_at_ms": 1790605103799,
+  "status": "PUBLIC_SNAPSHOTS_VERIFIED",
+  "failure_type": null,
+  "rows": 16,
+  "counts": [
+    {
+      "source": "binance",
+      "environment": "public_reference",
+      "asset": "BTC",
+      "kind": "feed_health",
+      "count": 1
+    },
+    {
+      "source": "binance",
+      "environment": "public_reference",
+      "asset": "BTC",
+      "kind": "funding",
+      "count": 1
+    },
+    {
+      "source": "binance",
+      "environment": "public_reference",
+      "asset": "BTC",
+      "kind": "open_interest",
+      "count": 1
+    },
+    {
+      "source": "binance",
+      "environment": "public_reference",
+      "asset": "BTC",
+      "kind": "perpetual",
+      "count": 1
+    },
+    {
+      "source": "binance",
+      "environment": "public_reference",
+      "asset": "ETH",
+      "kind": "feed_health",
+      "count": 1
+    },
+    {
+      "source": "binance",
+      "environment": "public_reference",
+      "asset": "ETH",
+      "kind": "funding",
+      "count": 1
+    },
+    {
+      "source": "binance",
+      "environment": "public_reference",
+      "asset": "ETH",
+      "kind": "open_interest",
+      "count": 1
+    },
+    {
+      "source": "binance",
+      "environment": "public_reference",
+      "asset": "ETH",
+      "kind": "perpetual",
+      "count": 1
+    },
+    {
+      "source": "binance",
+      "environment": "public_reference",
+      "asset": "PAXG",
+      "kind": "feed_health",
+      "count": 1
+    },
+    {
+      "source": "binance",
+      "environment": "public_reference",
+      "asset": "PAXG",
+      "kind": "funding",
+      "count": 1
+    },
+    {
+      "source": "binance",
+      "environment": "public_reference",
+      "asset": "PAXG",
+      "kind": "open_interest",
+      "count": 1
+    },
+    {
+      "source": "binance",
+      "environment": "public_reference",
+      "asset": "PAXG",
+      "kind": "perpetual",
+      "count": 1
+    },
+    {
+      "source": "binance",
+      "environment": "public_reference",
+      "asset": "SOL",
+      "kind": "feed_health",
+      "count": 1
+    },
+    {
+      "source": "binance",
+      "environment": "public_reference",
+      "asset": "SOL",
+      "kind": "funding",
+      "count": 1
+    },
+    {
+      "source": "binance",
+      "environment": "public_reference",
+      "asset": "SOL",
+      "kind": "open_interest",
+      "count": 1
+    },
+    {
+      "source": "binance",
+      "environment": "public_reference",
+      "asset": "SOL",
+      "kind": "perpetual",
+      "count": 1
+    }
+  ],
+  "source_health": [
+    {
+      "asset": "BTC",
+      "code": 0,
+      "ok": true,
+      "reason": "SNAPSHOT_ACCEPTED"
+    },
+    {
+      "asset": "ETH",
+      "code": 0,
+      "ok": true,
+      "reason": "SNAPSHOT_ACCEPTED"
+    },
+    {
+      "asset": "SOL",
+      "code": 0,
+      "ok": true,
+      "reason": "SNAPSHOT_ACCEPTED"
+    },
+    {
+      "asset": "PAXG",
+      "code": 0,
+      "ok": true,
+      "reason": "SNAPSHOT_ACCEPTED"
+    }
+  ],
+  "pit_checks": 12,
+  "archive_exact_match": true,
+  "parquet_sha256": "219b60167bca77bcd8da34a68bb806465eea70b6e7620562dd93db9ba70a98a6",
+  "public_responses": 9,
+  "publication_time_available": false,
+  "timestamp_basis": "source and receipt; both required",
+  "orders_submitted": 0,
+  "trading_enabled": false,
+  "paper_trading_started": false
+}

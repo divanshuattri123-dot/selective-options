@@ -1,0 +1,56 @@
+{
+  "request_budget": 3,
+  "real_public_requests_attempted": 3,
+  "retries": 0,
+  "automatic_redirect_follows": 0,
+  "source_0340_sha256": "0ad84c80cf916e6677b214fe6883e2003b5a97287ab93795d062fa47ce5286d1",
+  "responses": [
+    {
+      "url": "https://www.coindesk.com/arc/outboundfeeds/rss/?outputType=xml",
+      "label": "legacy",
+      "started_at_ms": 1791113580317,
+      "redirects_allowed": false,
+      "tls_verification": "default",
+      "timeout_s": 15,
+      "http_status": 308,
+      "location_header": "/arc/outboundfeeds/rss?outputType=xml",
+      "content_type_header": "text/plain",
+      "received_at_ms": 1791113580497,
+      "body_file": "legacy.entity",
+      "body_bytes": 15,
+      "body_sha256": "7c040f8633b8823d72ed63da9b3b2dfe9846e912c66a64c9433ec9c4815d76c2"
+    },
+    {
+      "url": "https://www.coindesk.com/coindesk-news/2021/09/17/coindesk-rss",
+      "label": "publisher-doc",
+      "started_at_ms": 1791113580499,
+      "redirects_allowed": false,
+      "tls_verification": "default",
+      "timeout_s": 15,
+      "http_status": 200,
+      "location_header": null,
+      "content_type_header": "text/html; charset=utf-8",
+      "received_at_ms": 1791113581355,
+      "body_file": "publisher-doc.entity",
+      "body_bytes": 1701651,
+      "body_sha256": "105621ba520b5e07dba432dc91f8bc0ebc5faedda17c391a84729e6e21a98d64"
+    },
+    {
+      "url": "https://www.coindesk.com/arc/outboundfeeds/rss?outputType=xml",
+      "label": "publisher-location-target",
+      "started_at_ms": 1791113622711,
+      "redirects_allowed": false,
+      "tls_verification": "default",
+      "timeout_s": 15,
+      "target_basis": "explicit same-origin resolution of saved native legacy Location header; independent direct request",
+      "http_status": 200,
+      "location_header": null,
+      "content_type_header": "application/xml",
+      "received_at_ms": 1791113622891,
+      "body_file": "publisher-location-target.entity",
+      "body_bytes": 30250,
+      "body_sha256": "cddc74945dcbe5aec3218cd2b5e339c2cb3e8c9ce888e51b4208e4f5194cfc86"
+    }
+  ],
+  "relative_location_resolution": "standard URL resolution on fixed HTTPS www.coindesk.com origin; validated exact RSS path/query before one independent direct request"
+}

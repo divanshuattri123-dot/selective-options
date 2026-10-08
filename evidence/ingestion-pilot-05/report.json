@@ -1,0 +1,1011 @@
+{
+  "build_version": "0.3.0",
+  "configuration_sha256": "09b8ccd0dbef302c0f21b2cbaafb7d436349203183b5508e430355cc6d6061e4",
+  "status": "CAPTURE_FINISHED",
+  "started_at_ms": 1790002597339,
+  "ended_at_ms": 1790002675386,
+  "collection_ended_at_ms": 1790002672393,
+  "shutdown_drain_ms": 2993,
+  "requested_duration_s": 75.0,
+  "rows": 10707,
+  "counts": [
+    {
+      "source": "coinbase",
+      "environment": "public_reference",
+      "asset": "BTC",
+      "kind": "spot",
+      "count": 4
+    },
+    {
+      "source": "coinbase",
+      "environment": "public_reference",
+      "asset": "ETH",
+      "kind": "spot",
+      "count": 4
+    },
+    {
+      "source": "coinbase",
+      "environment": "public_reference",
+      "asset": "PAXG",
+      "kind": "spot",
+      "count": 4
+    },
+    {
+      "source": "coinbase",
+      "environment": "public_reference",
+      "asset": "SOL",
+      "kind": "spot",
+      "count": 4
+    },
+    {
+      "source": "coinbase",
+      "environment": "public_reference",
+      "asset": "SYSTEM",
+      "kind": "status",
+      "count": 1
+    },
+    {
+      "source": "deribit",
+      "environment": "testnet",
+      "asset": "BTC",
+      "kind": "book",
+      "count": 68
+    },
+    {
+      "source": "deribit",
+      "environment": "testnet",
+      "asset": "BTC",
+      "kind": "chain_summary",
+      "count": 2080
+    },
+    {
+      "source": "deribit",
+      "environment": "testnet",
+      "asset": "BTC",
+      "kind": "funding",
+      "count": 4
+    },
+    {
+      "source": "deribit",
+      "environment": "testnet",
+      "asset": "BTC",
+      "kind": "index",
+      "count": 49
+    },
+    {
+      "source": "deribit",
+      "environment": "testnet",
+      "asset": "BTC",
+      "kind": "instrument",
+      "count": 2080
+    },
+    {
+      "source": "deribit",
+      "environment": "testnet",
+      "asset": "BTC",
+      "kind": "perpetual",
+      "count": 4
+    },
+    {
+      "source": "deribit",
+      "environment": "testnet",
+      "asset": "BTC",
+      "kind": "ticker",
+      "count": 315
+    },
+    {
+      "source": "deribit",
+      "environment": "testnet",
+      "asset": "BTC",
+      "kind": "volatility_index",
+      "count": 5
+    },
+    {
+      "source": "deribit",
+      "environment": "testnet",
+      "asset": "ETH",
+      "kind": "book",
+      "count": 140
+    },
+    {
+      "source": "deribit",
+      "environment": "testnet",
+      "asset": "ETH",
+      "kind": "chain_summary",
+      "count": 1668
+    },
+    {
+      "source": "deribit",
+      "environment": "testnet",
+      "asset": "ETH",
+      "kind": "funding",
+      "count": 4
+    },
+    {
+      "source": "deribit",
+      "environment": "testnet",
+      "asset": "ETH",
+      "kind": "index",
+      "count": 47
+    },
+    {
+      "source": "deribit",
+      "environment": "testnet",
+      "asset": "ETH",
+      "kind": "instrument",
+      "count": 1668
+    },
+    {
+      "source": "deribit",
+      "environment": "testnet",
+      "asset": "ETH",
+      "kind": "perpetual",
+      "count": 4
+    },
+    {
+      "source": "deribit",
+      "environment": "testnet",
+      "asset": "ETH",
+      "kind": "ticker",
+      "count": 337
+    },
+    {
+      "source": "deribit",
+      "environment": "testnet",
+      "asset": "ETH",
+      "kind": "volatility_index",
+      "count": 5
+    },
+    {
+      "source": "deribit",
+      "environment": "testnet",
+      "asset": "PAXG",
+      "kind": "funding",
+      "count": 2
+    },
+    {
+      "source": "deribit",
+      "environment": "testnet",
+      "asset": "PAXG",
+      "kind": "perpetual",
+      "count": 2
+    },
+    {
+      "source": "deribit",
+      "environment": "testnet",
+      "asset": "SOL",
+      "kind": "book",
+      "count": 6
+    },
+    {
+      "source": "deribit",
+      "environment": "testnet",
+      "asset": "SOL",
+      "kind": "chain_summary",
+      "count": 612
+    },
+    {
+      "source": "deribit",
+      "environment": "testnet",
+      "asset": "SOL",
+      "kind": "funding",
+      "count": 4
+    },
+    {
+      "source": "deribit",
+      "environment": "testnet",
+      "asset": "SOL",
+      "kind": "index",
+      "count": 47
+    },
+    {
+      "source": "deribit",
+      "environment": "testnet",
+      "asset": "SOL",
+      "kind": "instrument",
+      "count": 612
+    },
+    {
+      "source": "deribit",
+      "environment": "testnet",
+      "asset": "SOL",
+      "kind": "perpetual",
+      "count": 4
+    },
+    {
+      "source": "deribit",
+      "environment": "testnet",
+      "asset": "SOL",
+      "kind": "ticker",
+      "count": 256
+    },
+    {
+      "source": "deribit",
+      "environment": "testnet",
+      "asset": "SYSTEM",
+      "kind": "status",
+      "count": 12
+    },
+    {
+      "source": "ecb",
+      "environment": "public_reference",
+      "asset": "GLOBAL",
+      "kind": "feed_health",
+      "count": 1
+    },
+    {
+      "source": "federal_reserve",
+      "environment": "public_reference",
+      "asset": "GLOBAL",
+      "kind": "feed_health",
+      "count": 1
+    },
+    {
+      "source": "federal_reserve",
+      "environment": "public_reference",
+      "asset": "GLOBAL",
+      "kind": "news",
+      "count": 15
+    },
+    {
+      "source": "kraken",
+      "environment": "public_reference",
+      "asset": "BTC",
+      "kind": "spot",
+      "count": 4
+    },
+    {
+      "source": "kraken",
+      "environment": "public_reference",
+      "asset": "BTC",
+      "kind": "trade",
+      "count": 205
+    },
+    {
+      "source": "kraken",
+      "environment": "public_reference",
+      "asset": "ETH",
+      "kind": "spot",
+      "count": 4
+    },
+    {
+      "source": "kraken",
+      "environment": "public_reference",
+      "asset": "ETH",
+      "kind": "trade",
+      "count": 220
+    },
+    {
+      "source": "kraken",
+      "environment": "public_reference",
+      "asset": "PAXG",
+      "kind": "bar",
+      "count": 2
+    },
+    {
+      "source": "kraken",
+      "environment": "public_reference",
+      "asset": "PAXG",
+      "kind": "spot",
+      "count": 4
+    },
+    {
+      "source": "kraken",
+      "environment": "public_reference",
+      "asset": "PAXG",
+      "kind": "trade",
+      "count": 52
+    },
+    {
+      "source": "kraken",
+      "environment": "public_reference",
+      "asset": "SOL",
+      "kind": "spot",
+      "count": 4
+    },
+    {
+      "source": "kraken",
+      "environment": "public_reference",
+      "asset": "SOL",
+      "kind": "trade",
+      "count": 140
+    },
+    {
+      "source": "kraken",
+      "environment": "public_reference",
+      "asset": "SYSTEM",
+      "kind": "status",
+      "count": 3
+    }
+  ],
+  "redis_delivery_pending": 10707,
+  "freshness": [
+    {
+      "source": "deribit",
+      "asset": "BTC",
+      "kind": "chain_summary",
+      "state": "STALE",
+      "age_ms": 35792,
+      "timestamp_kind": "source"
+    },
+    {
+      "source": "deribit",
+      "asset": "BTC",
+      "kind": "ticker",
+      "state": "FRESH",
+      "age_ms": 887,
+      "timestamp_kind": "source"
+    },
+    {
+      "source": "deribit",
+      "asset": "BTC",
+      "kind": "book",
+      "state": "FRESH",
+      "age_ms": 887,
+      "timestamp_kind": "source"
+    },
+    {
+      "source": "deribit",
+      "asset": "BTC",
+      "kind": "index",
+      "state": "FRESH",
+      "age_ms": 661,
+      "timestamp_kind": "source"
+    },
+    {
+      "source": "deribit",
+      "asset": "ETH",
+      "kind": "chain_summary",
+      "state": "FRESH",
+      "age_ms": 27831,
+      "timestamp_kind": "source"
+    },
+    {
+      "source": "deribit",
+      "asset": "ETH",
+      "kind": "ticker",
+      "state": "FRESH",
+      "age_ms": 2489,
+      "timestamp_kind": "source"
+    },
+    {
+      "source": "deribit",
+      "asset": "ETH",
+      "kind": "book",
+      "state": "FRESH",
+      "age_ms": 3040,
+      "timestamp_kind": "source"
+    },
+    {
+      "source": "deribit",
+      "asset": "ETH",
+      "kind": "index",
+      "state": "FRESH",
+      "age_ms": 1482,
+      "timestamp_kind": "source"
+    },
+    {
+      "source": "deribit",
+      "asset": "SOL",
+      "kind": "chain_summary",
+      "state": "FRESH",
+      "age_ms": 18365,
+      "timestamp_kind": "source"
+    },
+    {
+      "source": "deribit",
+      "asset": "SOL",
+      "kind": "ticker",
+      "state": "FRESH",
+      "age_ms": 1580,
+      "timestamp_kind": "source"
+    },
+    {
+      "source": "deribit",
+      "asset": "SOL",
+      "kind": "book",
+      "state": "STALE",
+      "age_ms": 47728,
+      "timestamp_kind": "source"
+    },
+    {
+      "source": "deribit",
+      "asset": "SOL",
+      "kind": "index",
+      "state": "FRESH",
+      "age_ms": 1403,
+      "timestamp_kind": "source"
+    },
+    {
+      "source": "deribit",
+      "asset": "PAXG",
+      "kind": "chain_summary",
+      "state": "MISSING",
+      "age_ms": null,
+      "timestamp_kind": null
+    },
+    {
+      "source": "deribit",
+      "asset": "PAXG",
+      "kind": "ticker",
+      "state": "MISSING",
+      "age_ms": null,
+      "timestamp_kind": null
+    },
+    {
+      "source": "deribit",
+      "asset": "PAXG",
+      "kind": "book",
+      "state": "MISSING",
+      "age_ms": null,
+      "timestamp_kind": null
+    },
+    {
+      "source": "deribit",
+      "asset": "PAXG",
+      "kind": "index",
+      "state": "MISSING",
+      "age_ms": null,
+      "timestamp_kind": null
+    },
+    {
+      "source": "coinbase",
+      "asset": "BTC",
+      "kind": "spot",
+      "state": "FRESH",
+      "age_ms": 7373,
+      "timestamp_kind": "source"
+    },
+    {
+      "source": "coinbase",
+      "asset": "ETH",
+      "kind": "spot",
+      "state": "FRESH",
+      "age_ms": 4572,
+      "timestamp_kind": "source"
+    },
+    {
+      "source": "coinbase",
+      "asset": "SOL",
+      "kind": "spot",
+      "state": "FRESH",
+      "age_ms": 9364,
+      "timestamp_kind": "source"
+    },
+    {
+      "source": "coinbase",
+      "asset": "PAXG",
+      "kind": "spot",
+      "state": "STALE",
+      "age_ms": 58444,
+      "timestamp_kind": "source"
+    },
+    {
+      "source": "kraken",
+      "asset": "BTC",
+      "kind": "spot",
+      "state": "FRESH",
+      "age_ms": 4911,
+      "timestamp_kind": "receipt"
+    },
+    {
+      "source": "kraken",
+      "asset": "ETH",
+      "kind": "spot",
+      "state": "FRESH",
+      "age_ms": 6431,
+      "timestamp_kind": "receipt"
+    },
+    {
+      "source": "kraken",
+      "asset": "SOL",
+      "kind": "spot",
+      "state": "FRESH",
+      "age_ms": 9140,
+      "timestamp_kind": "receipt"
+    },
+    {
+      "source": "kraken",
+      "asset": "PAXG",
+      "kind": "spot",
+      "state": "FRESH",
+      "age_ms": 10778,
+      "timestamp_kind": "receipt"
+    },
+    {
+      "source": "deribit",
+      "asset": "BTC",
+      "kind": "perpetual",
+      "state": "FRESH",
+      "age_ms": 10690,
+      "timestamp_kind": "source"
+    },
+    {
+      "source": "deribit",
+      "asset": "BTC",
+      "kind": "funding",
+      "state": "FRESH",
+      "age_ms": 10690,
+      "timestamp_kind": "source"
+    },
+    {
+      "source": "deribit",
+      "asset": "ETH",
+      "kind": "perpetual",
+      "state": "FRESH",
+      "age_ms": 6907,
+      "timestamp_kind": "source"
+    },
+    {
+      "source": "deribit",
+      "asset": "ETH",
+      "kind": "funding",
+      "state": "FRESH",
+      "age_ms": 6907,
+      "timestamp_kind": "source"
+    },
+    {
+      "source": "deribit",
+      "asset": "SOL",
+      "kind": "perpetual",
+      "state": "FRESH",
+      "age_ms": 1403,
+      "timestamp_kind": "source"
+    },
+    {
+      "source": "deribit",
+      "asset": "SOL",
+      "kind": "funding",
+      "state": "FRESH",
+      "age_ms": 1403,
+      "timestamp_kind": "source"
+    },
+    {
+      "source": "deribit",
+      "asset": "PAXG",
+      "kind": "perpetual",
+      "state": "FRESH",
+      "age_ms": 4747,
+      "timestamp_kind": "source"
+    },
+    {
+      "source": "deribit",
+      "asset": "PAXG",
+      "kind": "funding",
+      "state": "FRESH",
+      "age_ms": 4747,
+      "timestamp_kind": "source"
+    },
+    {
+      "source": "kraken",
+      "asset": "BTC",
+      "kind": "trade",
+      "state": "FRESH",
+      "age_ms": 866,
+      "timestamp_kind": "source"
+    },
+    {
+      "source": "kraken",
+      "asset": "ETH",
+      "kind": "trade",
+      "state": "FRESH",
+      "age_ms": 993,
+      "timestamp_kind": "source"
+    },
+    {
+      "source": "kraken",
+      "asset": "SOL",
+      "kind": "trade",
+      "state": "FRESH",
+      "age_ms": 3346,
+      "timestamp_kind": "source"
+    },
+    {
+      "source": "kraken",
+      "asset": "PAXG",
+      "kind": "trade",
+      "state": "STALE",
+      "age_ms": 34480,
+      "timestamp_kind": "source"
+    },
+    {
+      "source": "deribit",
+      "asset": "BTC",
+      "kind": "volatility_index",
+      "state": "FRESH",
+      "age_ms": 115386,
+      "timestamp_kind": "source"
+    },
+    {
+      "source": "deribit",
+      "asset": "ETH",
+      "kind": "volatility_index",
+      "state": "FRESH",
+      "age_ms": 55386,
+      "timestamp_kind": "source"
+    },
+    {
+      "source": "deribit",
+      "asset": "SOL",
+      "kind": "volatility_index",
+      "state": "MISSING",
+      "age_ms": null,
+      "timestamp_kind": null
+    },
+    {
+      "source": "deribit",
+      "asset": "PAXG",
+      "kind": "volatility_index",
+      "state": "MISSING",
+      "age_ms": null,
+      "timestamp_kind": null
+    },
+    {
+      "source": "federal_reserve",
+      "asset": "GLOBAL",
+      "kind": "feed_health",
+      "state": "FRESH",
+      "age_ms": 73291,
+      "timestamp_kind": "receipt"
+    },
+    {
+      "source": "ecb",
+      "asset": "GLOBAL",
+      "kind": "feed_health",
+      "state": "UNAVAILABLE_OR_DEGRADED",
+      "age_ms": 73813,
+      "timestamp_kind": "receipt"
+    }
+  ],
+  "option_instrument_freshness": [
+    {
+      "asset": "BTC",
+      "symbol": "BTC-25DEC26-100000-C",
+      "kind": "ticker",
+      "state": "FRESH",
+      "age_ms": 887,
+      "quote_state": "UNKNOWN"
+    },
+    {
+      "asset": "BTC",
+      "symbol": "BTC-25DEC26-100000-C",
+      "kind": "book",
+      "state": "FRESH",
+      "age_ms": 887,
+      "quote_state": "TWO_SIDED"
+    },
+    {
+      "asset": "BTC",
+      "symbol": "BTC-25DEC26-130000-C",
+      "kind": "ticker",
+      "state": "FRESH",
+      "age_ms": 1667,
+      "quote_state": "UNKNOWN"
+    },
+    {
+      "asset": "BTC",
+      "symbol": "BTC-25DEC26-130000-C",
+      "kind": "book",
+      "state": "FRESH",
+      "age_ms": 3127,
+      "quote_state": "TWO_SIDED"
+    },
+    {
+      "asset": "BTC",
+      "symbol": "BTC-25DEC26-135000-C",
+      "kind": "ticker",
+      "state": "FRESH",
+      "age_ms": 959,
+      "quote_state": "UNKNOWN"
+    },
+    {
+      "asset": "BTC",
+      "symbol": "BTC-25DEC26-135000-C",
+      "kind": "book",
+      "state": "FRESH",
+      "age_ms": 959,
+      "quote_state": "TWO_SIDED"
+    },
+    {
+      "asset": "BTC",
+      "symbol": "BTC-25DEC26-140000-C",
+      "kind": "ticker",
+      "state": "FRESH",
+      "age_ms": 1667,
+      "quote_state": "UNKNOWN"
+    },
+    {
+      "asset": "BTC",
+      "symbol": "BTC-25DEC26-140000-C",
+      "kind": "book",
+      "state": "FRESH",
+      "age_ms": 1048,
+      "quote_state": "TWO_SIDED"
+    },
+    {
+      "asset": "BTC",
+      "symbol": "BTC-25SEP26-120000-C",
+      "kind": "ticker",
+      "state": "FRESH",
+      "age_ms": 1667,
+      "quote_state": "UNKNOWN"
+    },
+    {
+      "asset": "BTC",
+      "symbol": "BTC-25SEP26-120000-C",
+      "kind": "book",
+      "state": "FRESH",
+      "age_ms": 2870,
+      "quote_state": "ONE_SIDED_OR_EMPTY"
+    },
+    {
+      "asset": "BTC",
+      "symbol": "BTC-25SEP26-130000-C",
+      "kind": "ticker",
+      "state": "FRESH",
+      "age_ms": 1667,
+      "quote_state": "UNKNOWN"
+    },
+    {
+      "asset": "BTC",
+      "symbol": "BTC-25SEP26-130000-C",
+      "kind": "book",
+      "state": "FRESH",
+      "age_ms": 3007,
+      "quote_state": "ONE_SIDED_OR_EMPTY"
+    },
+    {
+      "asset": "ETH",
+      "symbol": "ETH-25DEC26-2800-C",
+      "kind": "ticker",
+      "state": "FRESH",
+      "age_ms": 2489,
+      "quote_state": "UNKNOWN"
+    },
+    {
+      "asset": "ETH",
+      "symbol": "ETH-25DEC26-2800-C",
+      "kind": "book",
+      "state": "FRESH",
+      "age_ms": 5844,
+      "quote_state": "TWO_SIDED"
+    },
+    {
+      "asset": "ETH",
+      "symbol": "ETH-25DEC26-3200-C",
+      "kind": "ticker",
+      "state": "FRESH",
+      "age_ms": 2489,
+      "quote_state": "UNKNOWN"
+    },
+    {
+      "asset": "ETH",
+      "symbol": "ETH-25DEC26-3200-C",
+      "kind": "book",
+      "state": "FRESH",
+      "age_ms": 3040,
+      "quote_state": "TWO_SIDED"
+    },
+    {
+      "asset": "ETH",
+      "symbol": "ETH-25DEC26-3300-C",
+      "kind": "ticker",
+      "state": "FRESH",
+      "age_ms": 2489,
+      "quote_state": "UNKNOWN"
+    },
+    {
+      "asset": "ETH",
+      "symbol": "ETH-25DEC26-3300-C",
+      "kind": "book",
+      "state": "FRESH",
+      "age_ms": 5884,
+      "quote_state": "TWO_SIDED"
+    },
+    {
+      "asset": "ETH",
+      "symbol": "ETH-25DEC26-3800-C",
+      "kind": "ticker",
+      "state": "FRESH",
+      "age_ms": 2489,
+      "quote_state": "UNKNOWN"
+    },
+    {
+      "asset": "ETH",
+      "symbol": "ETH-25DEC26-3800-C",
+      "kind": "book",
+      "state": "FRESH",
+      "age_ms": 3108,
+      "quote_state": "TWO_SIDED"
+    },
+    {
+      "asset": "ETH",
+      "symbol": "ETH-25DEC26-4000-C",
+      "kind": "ticker",
+      "state": "FRESH",
+      "age_ms": 2489,
+      "quote_state": "UNKNOWN"
+    },
+    {
+      "asset": "ETH",
+      "symbol": "ETH-25DEC26-4000-C",
+      "kind": "book",
+      "state": "FRESH",
+      "age_ms": 3118,
+      "quote_state": "TWO_SIDED"
+    },
+    {
+      "asset": "ETH",
+      "symbol": "ETH-25DEC26-4400-C",
+      "kind": "ticker",
+      "state": "FRESH",
+      "age_ms": 2489,
+      "quote_state": "UNKNOWN"
+    },
+    {
+      "asset": "ETH",
+      "symbol": "ETH-25DEC26-4400-C",
+      "kind": "book",
+      "state": "FRESH",
+      "age_ms": 3139,
+      "quote_state": "TWO_SIDED"
+    },
+    {
+      "asset": "SOL",
+      "symbol": "SOL-25SEP26-105-C",
+      "kind": "ticker",
+      "state": "FRESH",
+      "age_ms": 1677,
+      "quote_state": "UNKNOWN"
+    },
+    {
+      "asset": "SOL",
+      "symbol": "SOL-25SEP26-105-C",
+      "kind": "book",
+      "state": "STALE",
+      "age_ms": 47728,
+      "quote_state": "ONE_SIDED_OR_EMPTY"
+    },
+    {
+      "asset": "SOL",
+      "symbol": "SOL-25SEP26-110-P",
+      "kind": "ticker",
+      "state": "FRESH",
+      "age_ms": 1677,
+      "quote_state": "UNKNOWN"
+    },
+    {
+      "asset": "SOL",
+      "symbol": "SOL-25SEP26-110-P",
+      "kind": "book",
+      "state": "STALE",
+      "age_ms": 48734,
+      "quote_state": "ONE_SIDED_OR_EMPTY"
+    },
+    {
+      "asset": "SOL",
+      "symbol": "SOL-25SEP26-130-C",
+      "kind": "ticker",
+      "state": "FRESH",
+      "age_ms": 1677,
+      "quote_state": "UNKNOWN"
+    },
+    {
+      "asset": "SOL",
+      "symbol": "SOL-25SEP26-130-C",
+      "kind": "book",
+      "state": "STALE",
+      "age_ms": 48734,
+      "quote_state": "ONE_SIDED_OR_EMPTY"
+    },
+    {
+      "asset": "SOL",
+      "symbol": "SOL-25SEP26-220-C",
+      "kind": "ticker",
+      "state": "FRESH",
+      "age_ms": 1677,
+      "quote_state": "UNKNOWN"
+    },
+    {
+      "asset": "SOL",
+      "symbol": "SOL-25SEP26-220-C",
+      "kind": "book",
+      "state": "STALE",
+      "age_ms": 48734,
+      "quote_state": "ONE_SIDED_OR_EMPTY"
+    },
+    {
+      "asset": "SOL",
+      "symbol": "SOL-30OCT26-380-C",
+      "kind": "ticker",
+      "state": "FRESH",
+      "age_ms": 1580,
+      "quote_state": "UNKNOWN"
+    },
+    {
+      "asset": "SOL",
+      "symbol": "SOL-30OCT26-380-C",
+      "kind": "book",
+      "state": "STALE",
+      "age_ms": 47728,
+      "quote_state": "ONE_SIDED_OR_EMPTY"
+    },
+    {
+      "asset": "SOL",
+      "symbol": "SOL-30OCT26-560-C",
+      "kind": "ticker",
+      "state": "FRESH",
+      "age_ms": 1580,
+      "quote_state": "UNKNOWN"
+    },
+    {
+      "asset": "SOL",
+      "symbol": "SOL-30OCT26-560-C",
+      "kind": "book",
+      "state": "STALE",
+      "age_ms": 48734,
+      "quote_state": "ONE_SIDED_OR_EMPTY"
+    }
+  ],
+  "bar_policy": "Only locally closed bars; complete=false for partial first intervals or connection gaps. Empty intervals are not synthesized.",
+  "reference_comparison": [
+    {
+      "asset": "BTC",
+      "state": "AGREE",
+      "divergence_bps": 1.3042083426245084,
+      "sources": [
+        "coinbase",
+        "kraken"
+      ]
+    },
+    {
+      "asset": "ETH",
+      "state": "AGREE",
+      "divergence_bps": 0.01827560526393864,
+      "sources": [
+        "kraken",
+        "coinbase"
+      ]
+    },
+    {
+      "asset": "SOL",
+      "state": "AGREE",
+      "divergence_bps": 0.4236659817396109,
+      "sources": [
+        "coinbase",
+        "kraken"
+      ]
+    },
+    {
+      "asset": "PAXG",
+      "state": "INSUFFICIENT_SOURCES",
+      "sources": [
+        "kraken"
+      ]
+    }
+  ],
+  "deribit_connections": 1,
+  "stream_cap_per_asset": 6,
+  "missing_capabilities": [
+    "on-chain",
+    "crypto news, sentiment and comprehensive financial news",
+    "macro calendar and releases",
+    "XAU/USD gold reference",
+    "historical underlying OHLCV",
+    "historical underlying trade/bar coverage",
+    "historical perpetual/funding archive and full volatility-index coverage",
+    "liquidations",
+    "cross-venue options flow",
+    "full-universe stream coverage",
+    "gap backfill and restart recovery",
+    "deployed Redis consumer bus"
+  ],
+  "milestone_2_complete": false,
+  "ready_for_signals": false,
+  "trading_enabled": false,
+  "orders_submitted": 0,
+  "redis_mirror": "NOT_CONFIGURED",
+  "failure_type": null,
+  "freshness_scope": "asset/feed aggregates and selected option instruments; not trading approval",
+  "reference_caveat": "Coinbase last-trade vs Kraken midpoint; Kraken has receipt time only. Public references are separate from testnet prices."
+}

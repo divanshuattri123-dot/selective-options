@@ -1,0 +1,1667 @@
+{
+  "created_at_utc": "2026-10-08T10:26:19.512073+00:00",
+  "scope": "metadata-only snapshot during 0.3.47 publication; archive list may gain final assets afterward",
+  "project": "C:\\Users\\Divan\\Documents\\Codex\\2026-09-20\\files-pasted-by-the-user-build\\outputs\\selective-options",
+  "files": 1377,
+  "bytes": 1479736939,
+  "mib": 1411.187,
+  "non_ephemeral_files": 1032,
+  "non_ephemeral_bytes": 1437673415,
+  "by_top_level": {
+    ".github": {
+      "files": 1,
+      "bytes": 772
+    },
+    ".mypy_cache": {
+      "files": 3,
+      "bytes": 12919013
+    },
+    ".pytest_cache": {
+      "files": 5,
+      "bytes": 21722024
+    },
+    ".ruff_cache": {
+      "files": 35,
+      "bytes": 25842
+    },
+    "[root files]": {
+      "files": 23,
+      "bytes": 1539814
+    },
+    "build": {
+      "files": 75,
+      "bytes": 770564
+    },
+    "config": {
+      "files": 3,
+      "bytes": 22406
+    },
+    "evidence": {
+      "files": 774,
+      "bytes": 1434434923
+    },
+    "examples": {
+      "files": 1,
+      "bytes": 2086
+    },
+    "scripts": {
+      "files": 68,
+      "bytes": 1107164
+    },
+    "src": {
+      "files": 156,
+      "bytes": 1820971
+    },
+    "tests": {
+      "files": 233,
+      "bytes": 5371360
+    }
+  },
+  "by_suffix": {
+    ".db": {
+      "files": 1,
+      "bytes": 12918784
+    },
+    ".duckdb": {
+      "files": 95,
+      "bytes": 1278070784
+    },
+    ".entity": {
+      "files": 3,
+      "bytes": 1731916
+    },
+    ".example": {
+      "files": 1,
+      "bytes": 328
+    },
+    ".json": {
+      "files": 393,
+      "bytes": 72495890
+    },
+    ".jsonl": {
+      "files": 4,
+      "bytes": 10596
+    },
+    ".lock": {
+      "files": 1,
+      "bytes": 460
+    },
+    ".log": {
+      "files": 12,
+      "bytes": 51011
+    },
+    ".md": {
+      "files": 56,
+      "bytes": 743626
+    },
+    ".parquet": {
+      "files": 87,
+      "bytes": 74357999
+    },
+    ".py": {
+      "files": 370,
+      "bytes": 3886614
+    },
+    ".pyc": {
+      "files": 220,
+      "bytes": 5864443
+    },
+    ".sha256": {
+      "files": 1,
+      "bytes": 118168
+    },
+    ".tag": {
+      "files": 3,
+      "bytes": 427
+    },
+    ".toml": {
+      "files": 1,
+      "bytes": 1438
+    },
+    ".txt": {
+      "files": 41,
+      "bytes": 492890
+    },
+    ".xml": {
+      "files": 39,
+      "bytes": 6465206
+    },
+    ".yaml": {
+      "files": 6,
+      "bytes": 23745
+    },
+    "[none]": {
+      "files": 43,
+      "bytes": 22502614
+    }
+  },
+  "above_50_mib": [
+    {
+      "path": "evidence/metadata-projection-replay-01/reused-validation-public-01.duckdb",
+      "bytes": 224931840,
+      "mtime_ns": 1791092159660048400,
+      "suffix": ".duckdb",
+      "ephemeral": false,
+      "binary": true,
+      "private_candidate": null
+    },
+    {
+      "path": "evidence/multiasset-options-public-01/events.duckdb",
+      "bytes": 85733376,
+      "mtime_ns": 1791051963326047400,
+      "suffix": ".duckdb",
+      "ephemeral": false,
+      "binary": true,
+      "private_candidate": null
+    },
+    {
+      "path": "evidence/option-projection-replay-02/reused-validation-public-01.duckdb",
+      "bytes": 264515584,
+      "mtime_ns": 1791053683233621600,
+      "suffix": ".duckdb",
+      "ephemeral": false,
+      "binary": true,
+      "private_candidate": null
+    },
+    {
+      "path": "evidence/reused-validation-public-01/events.duckdb",
+      "bytes": 117452800,
+      "mtime_ns": 1791050705853664900,
+      "suffix": ".duckdb",
+      "ephemeral": false,
+      "binary": true,
+      "private_candidate": null
+    },
+    {
+      "path": "evidence/reused-validation-replay-01/events.duckdb",
+      "bytes": 61878272,
+      "mtime_ns": 1791051011460816800,
+      "suffix": ".duckdb",
+      "ephemeral": false,
+      "binary": true,
+      "private_candidate": null
+    }
+  ],
+  "above_100_mib": [
+    {
+      "path": "evidence/metadata-projection-replay-01/reused-validation-public-01.duckdb",
+      "bytes": 224931840,
+      "mtime_ns": 1791092159660048400,
+      "suffix": ".duckdb",
+      "ephemeral": false,
+      "binary": true,
+      "private_candidate": null
+    },
+    {
+      "path": "evidence/option-projection-replay-02/reused-validation-public-01.duckdb",
+      "bytes": 264515584,
+      "mtime_ns": 1791053683233621600,
+      "suffix": ".duckdb",
+      "ephemeral": false,
+      "binary": true,
+      "private_candidate": null
+    },
+    {
+      "path": "evidence/reused-validation-public-01/events.duckdb",
+      "bytes": 117452800,
+      "mtime_ns": 1791050705853664900,
+      "suffix": ".duckdb",
+      "ephemeral": false,
+      "binary": true,
+      "private_candidate": null
+    }
+  ],
+  "private_filename_candidates": [
+    {
+      "path": "evidence/authenticated-chains/BTC-chain.json",
+      "bytes": 1856344,
+      "mtime_ns": 1789929517354380800,
+      "suffix": ".json",
+      "ephemeral": false,
+      "binary": false,
+      "private_candidate": "possible account/private evidence; metadata-only candidate, not a confirmed secret"
+    },
+    {
+      "path": "evidence/authenticated-chains/ETH-chain.json",
+      "bytes": 1510996,
+      "mtime_ns": 1789929518691626700,
+      "suffix": ".json",
+      "ephemeral": false,
+      "binary": false,
+      "private_candidate": "possible account/private evidence; metadata-only candidate, not a confirmed secret"
+    },
+    {
+      "path": "evidence/authenticated-chains/PAXG-chain.json",
+      "bytes": 203,
+      "mtime_ns": 1789929520814166400,
+      "suffix": ".json",
+      "ephemeral": false,
+      "binary": false,
+      "private_candidate": "possible account/private evidence; metadata-only candidate, not a confirmed secret"
+    },
+    {
+      "path": "evidence/authenticated-chains/SOL-chain.json",
+      "bytes": 451905,
+      "mtime_ns": 1789929519910429900,
+      "suffix": ".json",
+      "ephemeral": false,
+      "binary": false,
+      "private_candidate": "possible account/private evidence; metadata-only candidate, not a confirmed secret"
+    },
+    {
+      "path": "evidence/authenticated-check.json",
+      "bytes": 299,
+      "mtime_ns": 1789927373221903600,
+      "suffix": ".json",
+      "ephemeral": false,
+      "binary": false,
+      "private_candidate": "possible account/private evidence; metadata-only candidate, not a confirmed secret"
+    },
+    {
+      "path": "evidence/authenticated-diagnostics-v2.json",
+      "bytes": 203,
+      "mtime_ns": 1789928724161259400,
+      "suffix": ".json",
+      "ephemeral": false,
+      "binary": false,
+      "private_candidate": "possible account/private evidence; metadata-only candidate, not a confirmed secret"
+    },
+    {
+      "path": "evidence/authenticated-diagnostics.json",
+      "bytes": 323,
+      "mtime_ns": 1789927420120759800,
+      "suffix": ".json",
+      "ephemeral": false,
+      "binary": false,
+      "private_candidate": "possible account/private evidence; metadata-only candidate, not a confirmed secret"
+    },
+    {
+      "path": "evidence/authenticated-probe.json",
+      "bytes": 5900,
+      "mtime_ns": 1789929520816169700,
+      "suffix": ".json",
+      "ephemeral": false,
+      "binary": false,
+      "private_candidate": "possible account/private evidence; metadata-only candidate, not a confirmed secret"
+    }
+  ],
+  "links_not_followed": [],
+  "historical_archives": [
+    {
+      "name": "selective-options-0.2.1.zip",
+      "bytes": 5679785,
+      "mib": 5.417,
+      "sha256_sidecar_present": false,
+      "members": 85,
+      "uncompressed_bytes": 21186433,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective-options-0.3.1.zip",
+      "bytes": 24455660,
+      "mib": 23.323,
+      "sha256_sidecar_present": false,
+      "members": 105,
+      "uncompressed_bytes": 64288241,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective-options-0.3.10.zip",
+      "bytes": 25241540,
+      "mib": 24.072,
+      "sha256_sidecar_present": true,
+      "members": 200,
+      "uncompressed_bytes": 86958508,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective-options-0.3.11.zip",
+      "bytes": 25262911,
+      "mib": 24.093,
+      "sha256_sidecar_present": true,
+      "members": 210,
+      "uncompressed_bytes": 88610137,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective-options-0.3.12.zip",
+      "bytes": 25285523,
+      "mib": 24.114,
+      "sha256_sidecar_present": true,
+      "members": 220,
+      "uncompressed_bytes": 90261852,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective-options-0.3.13.zip",
+      "bytes": 25376906,
+      "mib": 24.201,
+      "sha256_sidecar_present": true,
+      "members": 228,
+      "uncompressed_bytes": 94152798,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective-options-0.3.14.zip",
+      "bytes": 25472396,
+      "mib": 24.292,
+      "sha256_sidecar_present": true,
+      "members": 234,
+      "uncompressed_bytes": 98217584,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective-options-0.3.15.zip",
+      "bytes": 25500097,
+      "mib": 24.319,
+      "sha256_sidecar_present": true,
+      "members": 246,
+      "uncompressed_bytes": 100410238,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective-options-0.3.16.zip",
+      "bytes": 25509380,
+      "mib": 24.328,
+      "sha256_sidecar_present": true,
+      "members": 250,
+      "uncompressed_bytes": 100443441,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective-options-0.3.17.zip",
+      "bytes": 25536020,
+      "mib": 24.353,
+      "sha256_sidecar_present": true,
+      "members": 266,
+      "uncompressed_bytes": 103672633,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective-options-0.3.18.zip",
+      "bytes": 25558113,
+      "mib": 24.374,
+      "sha256_sidecar_present": true,
+      "members": 272,
+      "uncompressed_bytes": 108184928,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective-options-0.3.19.zip",
+      "bytes": 25574059,
+      "mib": 24.389,
+      "sha256_sidecar_present": true,
+      "members": 275,
+      "uncompressed_bytes": 108275122,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective-options-0.3.2.zip",
+      "bytes": 24625946,
+      "mib": 23.485,
+      "sha256_sidecar_present": true,
+      "members": 115,
+      "uncompressed_bytes": 67531628,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective-options-0.3.20.zip",
+      "bytes": 25756391,
+      "mib": 24.563,
+      "sha256_sidecar_present": true,
+      "members": 293,
+      "uncompressed_bytes": 116123901,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective-options-0.3.21.zip",
+      "bytes": 25862563,
+      "mib": 24.664,
+      "sha256_sidecar_present": true,
+      "members": 305,
+      "uncompressed_bytes": 120109489,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective-options-0.3.22.zip",
+      "bytes": 25904361,
+      "mib": 24.704,
+      "sha256_sidecar_present": true,
+      "members": 317,
+      "uncompressed_bytes": 123408153,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective-options-0.3.23.zip",
+      "bytes": 25931539,
+      "mib": 24.73,
+      "sha256_sidecar_present": true,
+      "members": 325,
+      "uncompressed_bytes": 123560606,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective-options-0.3.24.zip",
+      "bytes": 26038274,
+      "mib": 24.832,
+      "sha256_sidecar_present": true,
+      "members": 338,
+      "uncompressed_bytes": 127567894,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective-options-0.3.25.zip",
+      "bytes": 26081606,
+      "mib": 24.873,
+      "sha256_sidecar_present": true,
+      "members": 350,
+      "uncompressed_bytes": 130879714,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective-options-0.3.26.zip",
+      "bytes": 26185801,
+      "mib": 24.973,
+      "sha256_sidecar_present": true,
+      "members": 362,
+      "uncompressed_bytes": 134879986,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective-options-0.3.27.zip",
+      "bytes": 26308948,
+      "mib": 25.09,
+      "sha256_sidecar_present": true,
+      "members": 378,
+      "uncompressed_bytes": 140497828,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective-options-0.3.28.zip",
+      "bytes": 29442420,
+      "mib": 28.078,
+      "sha256_sidecar_present": true,
+      "members": 397,
+      "uncompressed_bytes": 153184221,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective-options-0.3.29.zip",
+      "bytes": 30706168,
+      "mib": 29.284,
+      "sha256_sidecar_present": true,
+      "members": 411,
+      "uncompressed_bytes": 156781974,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective-options-0.3.3.zip",
+      "bytes": 24689096,
+      "mib": 23.545,
+      "sha256_sidecar_present": true,
+      "members": 126,
+      "uncompressed_bytes": 69184820,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective-options-0.3.30.zip",
+      "bytes": 53177411,
+      "mib": 50.714,
+      "sha256_sidecar_present": true,
+      "members": 428,
+      "uncompressed_bytes": 224959361,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective-options-0.3.31.zip",
+      "bytes": 75038182,
+      "mib": 71.562,
+      "sha256_sidecar_present": true,
+      "members": 442,
+      "uncompressed_bytes": 292465078,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective-options-0.3.32.zip",
+      "bytes": 99821189,
+      "mib": 95.197,
+      "sha256_sidecar_present": true,
+      "members": 456,
+      "uncompressed_bytes": 367890832,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective-options-0.3.33.zip",
+      "bytes": 162993741,
+      "mib": 155.443,
+      "sha256_sidecar_present": true,
+      "members": 473,
+      "uncompressed_bytes": 559282544,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": [
+        {
+          "path": "selective-options/evidence/reused-validation-public-01/events.duckdb",
+          "bytes": 117452800
+        }
+      ]
+    },
+    {
+      "name": "selective-options-0.3.34.zip",
+      "bytes": 209654456,
+      "mib": 199.942,
+      "sha256_sidecar_present": true,
+      "members": 490,
+      "uncompressed_bytes": 699670143,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": [
+        {
+          "path": "selective-options/evidence/reused-validation-public-01/events.duckdb",
+          "bytes": 117452800
+        }
+      ]
+    },
+    {
+      "name": "selective-options-0.3.35.zip",
+      "bytes": 312638969,
+      "mib": 298.156,
+      "sha256_sidecar_present": true,
+      "members": 501,
+      "uncompressed_bytes": 1028845596,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": [
+        {
+          "path": "selective-options/evidence/option-projection-replay-02/reused-validation-public-01.duckdb",
+          "bytes": 264515584
+        },
+        {
+          "path": "selective-options/evidence/reused-validation-public-01/events.duckdb",
+          "bytes": 117452800
+        }
+      ]
+    },
+    {
+      "name": "selective-options-0.3.36.zip",
+      "bytes": 417106917,
+      "mib": 397.784,
+      "sha256_sidecar_present": true,
+      "members": 561,
+      "uncompressed_bytes": 1331375068,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": [
+        {
+          "path": "selective-options/evidence/metadata-projection-replay-01/reused-validation-public-01.duckdb",
+          "bytes": 224931840
+        },
+        {
+          "path": "selective-options/evidence/option-projection-replay-02/reused-validation-public-01.duckdb",
+          "bytes": 264515584
+        },
+        {
+          "path": "selective-options/evidence/reused-validation-public-01/events.duckdb",
+          "bytes": 117452800
+        }
+      ]
+    },
+    {
+      "name": "selective-options-0.3.37.zip",
+      "bytes": 418038743,
+      "mib": 398.673,
+      "sha256_sidecar_present": true,
+      "members": 609,
+      "uncompressed_bytes": 1345519044,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": [
+        {
+          "path": "selective-options/evidence/metadata-projection-replay-01/reused-validation-public-01.duckdb",
+          "bytes": 224931840
+        },
+        {
+          "path": "selective-options/evidence/option-projection-replay-02/reused-validation-public-01.duckdb",
+          "bytes": 264515584
+        },
+        {
+          "path": "selective-options/evidence/reused-validation-public-01/events.duckdb",
+          "bytes": 117452800
+        }
+      ]
+    },
+    {
+      "name": "selective-options-0.3.38.zip",
+      "bytes": 418207524,
+      "mib": 398.834,
+      "sha256_sidecar_present": true,
+      "members": 645,
+      "uncompressed_bytes": 1353925511,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": [
+        {
+          "path": "selective-options/evidence/metadata-projection-replay-01/reused-validation-public-01.duckdb",
+          "bytes": 224931840
+        },
+        {
+          "path": "selective-options/evidence/option-projection-replay-02/reused-validation-public-01.duckdb",
+          "bytes": 264515584
+        },
+        {
+          "path": "selective-options/evidence/reused-validation-public-01/events.duckdb",
+          "bytes": 117452800
+        }
+      ]
+    },
+    {
+      "name": "selective-options-0.3.39.zip",
+      "bytes": 419767477,
+      "mib": 400.321,
+      "sha256_sidecar_present": true,
+      "members": 696,
+      "uncompressed_bytes": 1363105274,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": [
+        {
+          "path": "selective-options/evidence/metadata-projection-replay-01/reused-validation-public-01.duckdb",
+          "bytes": 224931840
+        },
+        {
+          "path": "selective-options/evidence/option-projection-replay-02/reused-validation-public-01.duckdb",
+          "bytes": 264515584
+        },
+        {
+          "path": "selective-options/evidence/reused-validation-public-01/events.duckdb",
+          "bytes": 117452800
+        }
+      ]
+    },
+    {
+      "name": "selective-options-0.3.4.zip",
+      "bytes": 24758857,
+      "mib": 23.612,
+      "sha256_sidecar_present": true,
+      "members": 133,
+      "uncompressed_bytes": 70840899,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective-options-0.3.40.zip",
+      "bytes": 419895215,
+      "mib": 400.443,
+      "sha256_sidecar_present": true,
+      "members": 729,
+      "uncompressed_bytes": 1366785006,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": [
+        {
+          "path": "selective-options/evidence/metadata-projection-replay-01/reused-validation-public-01.duckdb",
+          "bytes": 224931840
+        },
+        {
+          "path": "selective-options/evidence/option-projection-replay-02/reused-validation-public-01.duckdb",
+          "bytes": 264515584
+        },
+        {
+          "path": "selective-options/evidence/reused-validation-public-01/events.duckdb",
+          "bytes": 117452800
+        }
+      ]
+    },
+    {
+      "name": "selective-options-0.3.41.zip",
+      "bytes": 420426488,
+      "mib": 400.95,
+      "sha256_sidecar_present": true,
+      "members": 774,
+      "uncompressed_bytes": 1377056209,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": [
+        {
+          "path": "selective-options/evidence/metadata-projection-replay-01/reused-validation-public-01.duckdb",
+          "bytes": 224931840
+        },
+        {
+          "path": "selective-options/evidence/option-projection-replay-02/reused-validation-public-01.duckdb",
+          "bytes": 264515584
+        },
+        {
+          "path": "selective-options/evidence/reused-validation-public-01/events.duckdb",
+          "bytes": 117452800
+        }
+      ]
+    },
+    {
+      "name": "selective-options-0.3.42.zip",
+      "bytes": 420591102,
+      "mib": 401.107,
+      "sha256_sidecar_present": true,
+      "members": 802,
+      "uncompressed_bytes": 1380806396,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": [
+        {
+          "path": "selective-options/evidence/metadata-projection-replay-01/reused-validation-public-01.duckdb",
+          "bytes": 224931840
+        },
+        {
+          "path": "selective-options/evidence/option-projection-replay-02/reused-validation-public-01.duckdb",
+          "bytes": 264515584
+        },
+        {
+          "path": "selective-options/evidence/reused-validation-public-01/events.duckdb",
+          "bytes": 117452800
+        }
+      ]
+    },
+    {
+      "name": "selective-options-0.3.43.zip",
+      "bytes": 420812402,
+      "mib": 401.318,
+      "sha256_sidecar_present": true,
+      "members": 837,
+      "uncompressed_bytes": 1387333678,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": [
+        {
+          "path": "selective-options/evidence/metadata-projection-replay-01/reused-validation-public-01.duckdb",
+          "bytes": 224931840
+        },
+        {
+          "path": "selective-options/evidence/option-projection-replay-02/reused-validation-public-01.duckdb",
+          "bytes": 264515584
+        },
+        {
+          "path": "selective-options/evidence/reused-validation-public-01/events.duckdb",
+          "bytes": 117452800
+        }
+      ]
+    },
+    {
+      "name": "selective-options-0.3.44.zip",
+      "bytes": 420981587,
+      "mib": 401.479,
+      "sha256_sidecar_present": true,
+      "members": 871,
+      "uncompressed_bytes": 1392792361,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": [
+        {
+          "path": "selective-options/evidence/metadata-projection-replay-01/reused-validation-public-01.duckdb",
+          "bytes": 224931840
+        },
+        {
+          "path": "selective-options/evidence/option-projection-replay-02/reused-validation-public-01.duckdb",
+          "bytes": 264515584
+        },
+        {
+          "path": "selective-options/evidence/reused-validation-public-01/events.duckdb",
+          "bytes": 117452800
+        }
+      ]
+    },
+    {
+      "name": "selective-options-0.3.45.zip",
+      "bytes": 421270840,
+      "mib": 401.755,
+      "sha256_sidecar_present": true,
+      "members": 908,
+      "uncompressed_bytes": 1396897741,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": [
+        {
+          "path": "selective-options/evidence/metadata-projection-replay-01/reused-validation-public-01.duckdb",
+          "bytes": 224931840
+        },
+        {
+          "path": "selective-options/evidence/option-projection-replay-02/reused-validation-public-01.duckdb",
+          "bytes": 264515584
+        },
+        {
+          "path": "selective-options/evidence/reused-validation-public-01/events.duckdb",
+          "bytes": 117452800
+        }
+      ]
+    },
+    {
+      "name": "selective-options-0.3.46.zip",
+      "bytes": 421622875,
+      "mib": 402.091,
+      "sha256_sidecar_present": true,
+      "members": 968,
+      "uncompressed_bytes": 1416329366,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": [
+        {
+          "path": "selective-options/evidence/metadata-projection-replay-01/reused-validation-public-01.duckdb",
+          "bytes": 224931840
+        },
+        {
+          "path": "selective-options/evidence/option-projection-replay-02/reused-validation-public-01.duckdb",
+          "bytes": 264515584
+        },
+        {
+          "path": "selective-options/evidence/reused-validation-public-01/events.duckdb",
+          "bytes": 117452800
+        }
+      ]
+    },
+    {
+      "name": "selective-options-0.3.47.zip",
+      "bytes": 429955213,
+      "mib": 410.037,
+      "sha256_sidecar_present": true,
+      "members": 1032,
+      "uncompressed_bytes": 1437673415,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": [
+        {
+          "path": "selective-options/evidence/metadata-projection-replay-01/reused-validation-public-01.duckdb",
+          "bytes": 224931840
+        },
+        {
+          "path": "selective-options/evidence/option-projection-replay-02/reused-validation-public-01.duckdb",
+          "bytes": 264515584
+        },
+        {
+          "path": "selective-options/evidence/reused-validation-public-01/events.duckdb",
+          "bytes": 117452800
+        }
+      ]
+    },
+    {
+      "name": "selective-options-0.3.5.zip",
+      "bytes": 24888690,
+      "mib": 23.736,
+      "sha256_sidecar_present": true,
+      "members": 141,
+      "uncompressed_bytes": 74597033,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective-options-0.3.6.zip",
+      "bytes": 24967895,
+      "mib": 23.811,
+      "sha256_sidecar_present": true,
+      "members": 148,
+      "uncompressed_bytes": 76519512,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective-options-0.3.7.zip",
+      "bytes": 25049256,
+      "mib": 23.889,
+      "sha256_sidecar_present": true,
+      "members": 160,
+      "uncompressed_bytes": 78439074,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective-options-0.3.8.zip",
+      "bytes": 25126605,
+      "mib": 23.963,
+      "sha256_sidecar_present": true,
+      "members": 167,
+      "uncompressed_bytes": 80347753,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective-options-0.3.9.zip",
+      "bytes": 25199601,
+      "mib": 24.032,
+      "sha256_sidecar_present": true,
+      "members": 187,
+      "uncompressed_bytes": 83592296,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective-options-milestone-1.zip",
+      "bytes": 203790,
+      "mib": 0.194,
+      "sha256_sidecar_present": false,
+      "members": 58,
+      "uncompressed_bytes": 4145743,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json"
+      ],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective-options-milestone-2-pilot.zip",
+      "bytes": 4007486,
+      "mib": 3.822,
+      "sha256_sidecar_present": false,
+      "members": 80,
+      "uncompressed_bytes": 17189059,
+      "credential_filename_candidates": [
+        "selective-options/evidence/authenticated-chains/BTC-chain.json",
+        "selective-options/evidence/authenticated-chains/ETH-chain.json",
+        "selective-options/evidence/authenticated-chains/PAXG-chain.json",
+        "selective-options/evidence/authenticated-chains/SOL-chain.json",
+        "selective-options/evidence/authenticated-check.json",
+        "selective-options/evidence/authenticated-diagnostics-v2.json",
+        "selective-options/evidence/authenticated-diagnostics.json",
+        "selective-options/evidence/authenticated-probe.json"
+      ],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective_options-0.3.45-py3-none-any.whl",
+      "bytes": 199709,
+      "mib": 0.19,
+      "sha256_sidecar_present": true,
+      "members": 73,
+      "uncompressed_bytes": 650324,
+      "credential_filename_candidates": [],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective_options-0.3.46-py3-none-any.whl",
+      "bytes": 215664,
+      "mib": 0.206,
+      "sha256_sidecar_present": true,
+      "members": 76,
+      "uncompressed_bytes": 713110,
+      "credential_filename_candidates": [],
+      "above_100_mib_members": []
+    },
+    {
+      "name": "selective_options-0.3.47-py3-none-any.whl",
+      "bytes": 233153,
+      "mib": 0.222,
+      "sha256_sidecar_present": true,
+      "members": 80,
+      "uncompressed_bytes": 778807,
+      "credential_filename_candidates": [],
+      "above_100_mib_members": []
+    }
+  ],
+  "historical_archive_bytes": 6718836540,
+  "test_binary_dependency_inventory": [
+    {
+      "test": "tests/test_active_rotation_verifier.py",
+      "evidence_directories": [
+        "crypto-news-public-02",
+        "stablecoin-supply-public-01"
+      ],
+      "archive_filenames": [],
+      "path_literals": [
+        "capture/events.duckdb",
+        "events.duckdb",
+        "events.parquet",
+        "evidence/crypto-news-public-02",
+        "evidence/stablecoin-supply-public-01"
+      ]
+    },
+    {
+      "test": "tests/test_bar_checkpoint_audit.py",
+      "evidence_directories": [
+        "bar-checkpoint-resume-01"
+      ],
+      "archive_filenames": [],
+      "path_literals": [
+        "cohort-0-resumed/events.duckdb",
+        "evidence/bar-checkpoint-resume-01",
+        "seed-verified.duckdb"
+      ]
+    },
+    {
+      "test": "tests/test_binance_funding_view.py",
+      "evidence_directories": [
+        "binance-funding-public-01"
+      ],
+      "archive_filenames": [],
+      "path_literals": [
+        "events.duckdb",
+        "evidence/binance-funding-public-01"
+      ]
+    },
+    {
+      "test": "tests/test_binance_taker.py",
+      "evidence_directories": [
+        "binance-taker-public-01"
+      ],
+      "archive_filenames": [],
+      "path_literals": [
+        "events.duckdb",
+        "evidence/binance-taker-public-01/responses.json"
+      ]
+    },
+    {
+      "test": "tests/test_calendar_quality.py",
+      "evidence_directories": [
+        "bea-calendar-public-02"
+      ],
+      "archive_filenames": [],
+      "path_literals": []
+    },
+    {
+      "test": "tests/test_crypto_news_verifier.py",
+      "evidence_directories": [
+        "crypto-news-public-01"
+      ],
+      "archive_filenames": [],
+      "path_literals": [
+        "budget.duckdb",
+        "events.duckdb",
+        "events.parquet",
+        "evidence/crypto-news-public-01"
+      ]
+    },
+    {
+      "test": "tests/test_flow_quality.py",
+      "evidence_directories": [
+        "binance-accounts-public-01",
+        "binance-taker-public-02"
+      ],
+      "archive_filenames": [],
+      "path_literals": [
+        "events.duckdb"
+      ]
+    },
+    {
+      "test": "tests/test_flow_view.py",
+      "evidence_directories": [
+        "binance-accounts-public-01",
+        "binance-taker-public-02"
+      ],
+      "archive_filenames": [],
+      "path_literals": [
+        "events.duckdb"
+      ]
+    },
+    {
+      "test": "tests/test_history_verifier.py",
+      "evidence_directories": [
+        "bybit-funding-history-01",
+        "bybit-oi-history-01"
+      ],
+      "archive_filenames": [],
+      "path_literals": []
+    },
+    {
+      "test": "tests/test_news_restart_verifier.py",
+      "evidence_directories": [
+        "news-quality-public-01"
+      ],
+      "archive_filenames": [],
+      "path_literals": [
+        "events.duckdb",
+        "events.parquet",
+        "evidence/news-quality-public-01/run"
+      ]
+    },
+    {
+      "test": "tests/test_options_features_verifier.py",
+      "evidence_directories": [
+        "reused-validation-public-01"
+      ],
+      "archive_filenames": [
+        "selective-options-0.3.46.zip"
+      ],
+      "path_literals": [
+        ".duckdb.wal",
+        "evidence/new-proof",
+        "evidence/old-native/events.duckdb",
+        "evidence/reused-validation-public-01/events.duckdb",
+        "project/outputs/selective-options/evidence/proof",
+        "selective-options-0.3.46.zip"
+      ]
+    },
+    {
+      "test": "tests/test_options_research_validation.py",
+      "evidence_directories": [
+        "reused-validation-public-01"
+      ],
+      "archive_filenames": [],
+      "path_literals": [
+        ".duckdb.wal",
+        "evidence/reused-validation-public-01/events.duckdb",
+        "source.duckdb"
+      ]
+    },
+    {
+      "test": "tests/test_parallel_foundations_audit.py",
+      "evidence_directories": [
+        "parallel-foundations-01"
+      ],
+      "archive_filenames": [],
+      "path_literals": [
+        "evidence/parallel-foundations-01",
+        "native-and-bars.duckdb"
+      ]
+    },
+    {
+      "test": "tests/test_rotation_verifier.py",
+      "evidence_directories": [
+        "crypto-news-public-02",
+        "stablecoin-supply-public-01"
+      ],
+      "archive_filenames": [],
+      "path_literals": [
+        "events.duckdb",
+        "evidence/crypto-news-public-02",
+        "evidence/stablecoin-supply-public-01",
+        "restored/events.duckdb"
+      ]
+    },
+    {
+      "test": "tests/test_spot_batch_verifier.py",
+      "evidence_directories": [
+        "live-gap-02"
+      ],
+      "archive_filenames": [],
+      "path_literals": [
+        "events.duckdb",
+        "events.parquet",
+        "evidence/live-gap-02"
+      ]
+    },
+    {
+      "test": "tests/test_stablecoin_restart_verifier.py",
+      "evidence_directories": [
+        "stablecoin-supply-public-01"
+      ],
+      "archive_filenames": [],
+      "path_literals": [
+        "events.duckdb",
+        "evidence/stablecoin-supply-public-01"
+      ]
+    },
+    {
+      "test": "tests/test_stablecoin_supply_verifier.py",
+      "evidence_directories": [
+        "stablecoin-supply-public-01"
+      ],
+      "archive_filenames": [],
+      "path_literals": [
+        "evidence/stablecoin-supply-public-01"
+      ]
+    }
+  ],
+  "required_evidence_directories": [
+    "bar-checkpoint-resume-01",
+    "bea-calendar-public-02",
+    "binance-accounts-public-01",
+    "binance-funding-public-01",
+    "binance-taker-public-01",
+    "binance-taker-public-02",
+    "bybit-funding-history-01",
+    "bybit-oi-history-01",
+    "crypto-news-public-01",
+    "crypto-news-public-02",
+    "live-gap-02",
+    "news-quality-public-01",
+    "parallel-foundations-01",
+    "reused-validation-public-01",
+    "stablecoin-supply-public-01"
+  ],
+  "required_evidence_files": 148,
+  "required_evidence_bytes": 174741664,
+  "contents_of_credentials_or_account_evidence_read": false,
+  "new_public_requests": 0,
+  "github_mutations": 0,
+  "project_mutations": 0
+}

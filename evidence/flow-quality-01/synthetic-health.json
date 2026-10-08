@@ -1,0 +1,54 @@
+[
+  {
+    "event_id": "e75bd5d0ad956a63294b816200c657951a52aa5c7b0ce87a9246b28ba9e9f4ea",
+    "source": "binance_taker",
+    "environment": "public_reference",
+    "asset": "GLOBAL",
+    "symbol": "USDT_PERPETUAL",
+    "kind": "feed_health",
+    "event_time_ms": 1790864885610,
+    "observed_at_ms": 1790864885610,
+    "timestamp_kind": "receipt",
+    "schema_version": 1,
+    "payload_json": "{\"code\":403,\"ok\":false,\"reason\":\"HTTP_ERROR\"}"
+  },
+  {
+    "event_id": "7f52054328c9e676d6054c8da53b436611a89b622087618dae4b90f10cdc31ec",
+    "source": "binance_taker",
+    "environment": "public_reference",
+    "asset": "BTC",
+    "symbol": "USDT_PERPETUAL",
+    "kind": "feed_health",
+    "event_time_ms": 1790864886610,
+    "observed_at_ms": 1790864886610,
+    "timestamp_kind": "receipt",
+    "schema_version": 1,
+    "payload_json": "{\"code\":0,\"ok\":true,\"reason\":\"OK\"}"
+  },
+  {
+    "event_id": "237612ded4bf2e70dbee38804e83b2e73fa4f766abb93f9196c6f18f5c115416",
+    "source": "binance_accounts",
+    "environment": "public_reference",
+    "asset": "GLOBAL",
+    "symbol": "USDT_PERPETUAL",
+    "kind": "feed_health",
+    "event_time_ms": 1790866194711,
+    "observed_at_ms": 1790866194711,
+    "timestamp_kind": "receipt",
+    "schema_version": 1,
+    "payload_json": "{\"code\":403,\"ok\":false,\"reason\":\"HTTP_ERROR\"}"
+  },
+  {
+    "event_id": "9ff5ef9d54057c18ceeaa525a536dfe43a8461b51b2305b4a8c0513213400ad3",
+    "source": "binance_accounts",
+    "environment": "public_reference",
+    "asset": "BTC",
+    "symbol": "USDT_PERPETUAL",
+    "kind": "feed_health",
+    "event_time_ms": 1790866195711,
+    "observed_at_ms": 1790866195711,
+    "timestamp_kind": "receipt",
+    "schema_version": 1,
+    "payload_json": "{\"code\":0,\"ok\":true,\"reason\":\"OK\"}"
+  }
+]

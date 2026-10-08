@@ -1,0 +1,65 @@
+{
+  "scope": "REGISTERED_INTEGRATION_FIXTURES_NOT_HISTORICAL_STRATEGY_TRIALS",
+  "trial_count_N": 3,
+  "completed": 3,
+  "failed": 0,
+  "unresolved": 0,
+  "historical_strategy_trials": 0,
+  "paper_days": 0,
+  "paper_trades": 0,
+  "runs": [
+    {
+      "label": "scratch-attempt-01",
+      "original_directory": "C:\\Users\\Divan\\Documents\\Codex\\2026-09-20\\files-pasted-by-the-user-build\\work\\parallel-foundations-0345\\attempt-01",
+      "journal": "scratch-attempt-01.jsonl",
+      "journal_sha256": "57cc17a594b36e62ecf694e21d93ac33f03566063bfaee51409ab5ad4b6a7121",
+      "report": "scratch-attempt-01-report.json",
+      "report_sha256": "e7e0b40e9ce6a78c3a6559f9819096740e6d1319ce9ed03705428390b249af58",
+      "trial_id": "2bda5f59a8ec4ca5be7d6444dede2ad7",
+      "counts": {
+        "started": 1,
+        "completed": 1,
+        "failed": 0,
+        "unresolved": 0,
+        "trial_count_N": 1
+      },
+      "data_kind": "synthetic_fixture"
+    },
+    {
+      "label": "scratch-attempt-02",
+      "original_directory": "C:\\Users\\Divan\\Documents\\Codex\\2026-09-20\\files-pasted-by-the-user-build\\work\\parallel-foundations-0345\\attempt-02",
+      "journal": "scratch-attempt-02.jsonl",
+      "journal_sha256": "436ea92ebd87e61aee26978a93550e523b067c6a199b2cb7d318a31e35fe21e8",
+      "report": "scratch-attempt-02-report.json",
+      "report_sha256": "6b783cc878dff668b47b7e00082c286155789c873adf5ecd3e3754a38a3741c5",
+      "trial_id": "87d298f2f16e4e93930aa9b1be2e72e0",
+      "counts": {
+        "started": 1,
+        "completed": 1,
+        "failed": 0,
+        "unresolved": 0,
+        "trial_count_N": 1
+      },
+      "data_kind": "synthetic_fixture"
+    },
+    {
+      "label": "final-proof",
+      "original_directory": "C:\\Users\\Divan\\Documents\\Codex\\2026-09-20\\files-pasted-by-the-user-build\\outputs\\selective-options\\evidence\\parallel-foundations-01",
+      "journal": "final-proof.jsonl",
+      "journal_sha256": "cfe6c34bb83d232f2fec3aba528fb32d143be04462c951181cefb17ed35c0d68",
+      "report": "final-proof-report.json",
+      "report_sha256": "ddee97d01e2095473e5c6286848433e4e0e6d25e714321d38264642ef84f3b67",
+      "trial_id": "943cbc0ae97a47929a6f962e3a288da8",
+      "counts": {
+        "started": 1,
+        "completed": 1,
+        "failed": 0,
+        "unresolved": 0,
+        "trial_count_N": 1
+      },
+      "data_kind": "synthetic_fixture"
+    }
+  ],
+  "temporary_unit_test_registries_are_development_fixtures": true,
+  "trading_enabled": false
+}

@@ -1,0 +1,192 @@
+{
+  "status": "FIXED_CANONICAL_PUBLISHER_RSS_ENDPOINT_VERIFIED",
+  "source": "coindesk_rss",
+  "old_fixed_feed_url": "https://www.coindesk.com/arc/outboundfeeds/rss/?outputType=xml",
+  "new_fixed_feed_url": "https://www.coindesk.com/arc/outboundfeeds/rss?outputType=xml",
+  "migration_basis": "native legacy HTTP308 Location resolves exactly to independently requested successful fixed same-origin RSS target; official publisher page independently links RSS path",
+  "real_public_requests_attempted": 3,
+  "retries": 0,
+  "automatic_redirect_follows": 0,
+  "official_documentation_rss_links": [
+    "/arc/outboundfeeds/rss/",
+    "https://www.coindesk.com/arc/outboundfeeds/rss/"
+  ],
+  "native_metadata_items": 25,
+  "rejected_items": 0,
+  "independent_dom_native_comparisons": [
+    {
+      "event_id": "8f1aaee45c4ba8f31ba1018d44a58886b515529ac700a611f4d7eb40411169a3",
+      "native_guid": "81095c8a-ed91-4e91-9c0c-c85c83ad8c83",
+      "source_claim_ms": 1791043200000,
+      "received_at_ms": 1791113622891
+    },
+    {
+      "event_id": "01ff834a5b3feca30460f80bfcffd217d18e6b76d352885a6a2c3045b26e8306",
+      "native_guid": "9e758b83-a1e1-4ad5-8c5b-7599463e0fa9",
+      "source_claim_ms": 1791043200000,
+      "received_at_ms": 1791113622891
+    },
+    {
+      "event_id": "2248a5116fb0fe40bd501c935f5ebe279ab7128d13ac19fc8dfb494155353f7e",
+      "native_guid": "ecb3ed09-8960-4340-9ba8-3ed6321b321c",
+      "source_claim_ms": 1791039600000,
+      "received_at_ms": 1791113622891
+    },
+    {
+      "event_id": "402c952b2574e34acd97e514a4911fd294d95492d9ab80c2517f313999d937b8",
+      "native_guid": "2436bfb1-684c-4422-b89c-9cd7eb55c08e",
+      "source_claim_ms": 1791032400000,
+      "received_at_ms": 1791113622891
+    },
+    {
+      "event_id": "aa637cbee164c6a1cd63894c512d6a32f20986a44c2f02b4616573cc7e937c97",
+      "native_guid": "5d8599a9-5574-45da-b2c5-6302ff0dd2d5",
+      "source_claim_ms": 1791032400000,
+      "received_at_ms": 1791113622891
+    },
+    {
+      "event_id": "ead8dbe96f0f9cb609b61f1d0806ce30896c6f796207a97e3a2a24a53a49f3b3",
+      "native_guid": "df62f6d6-07a7-4ca7-b760-b4e373ca7c0b",
+      "source_claim_ms": 1790976200000,
+      "received_at_ms": 1791113622891
+    },
+    {
+      "event_id": "deff7f5d3269c3efc7ff4ac4a371f76ef7e4ed9d60d21e3c018d8cebbf456f20",
+      "native_guid": "b69aa3c1-3224-4765-aa53-cb977c72fd3e",
+      "source_claim_ms": 1790962480000,
+      "received_at_ms": 1791113622891
+    },
+    {
+      "event_id": "13625cb1d720f1c4218cbcb0ee6b5f810673d98117db9e6369b152fba45dbae9",
+      "native_guid": "222c482a-168d-45e6-9e66-422f00f149cd",
+      "source_claim_ms": 1790961335000,
+      "received_at_ms": 1791113622891
+    },
+    {
+      "event_id": "6713fc0cea96396362b027f3deee502e909395a1e6c43cd1058f77485a02e788",
+      "native_guid": "ca5e5500-b8f6-4275-805b-60265a8fb9b9",
+      "source_claim_ms": 1790961168000,
+      "received_at_ms": 1791113622891
+    },
+    {
+      "event_id": "f44553c45d34e07a2d430a7cd34da5674ada9028b97791a45ed55bfd36d20c07",
+      "native_guid": "0ee2ef92-9303-4977-ada4-3af266aeaf02",
+      "source_claim_ms": 1790947339000,
+      "received_at_ms": 1791113622891
+    },
+    {
+      "event_id": "c2fd277ba988ad3071933ac4df8e2351278756b013f1ff5bc078e3f24bfbfa21",
+      "native_guid": "a2305041-eb99-4205-8c7a-0d5f0eeffd61",
+      "source_claim_ms": 1790944313000,
+      "received_at_ms": 1791113622891
+    },
+    {
+      "event_id": "6ded38f77b074c64cc34b0ed76c7b394c4fedc04bcdb821a11b91dab24d78e8b",
+      "native_guid": "fbd0c6dd-34d3-45dc-ae88-fc2e8ad69ed0",
+      "source_claim_ms": 1790940600000,
+      "received_at_ms": 1791113622891
+    },
+    {
+      "event_id": "0c63cdcf19bfe1c2edc0e9a3d543a627571b41054c8bbc3e9ce0045b965350a8",
+      "native_guid": "fd7e28fa-2b6e-4335-a513-55e0fbabb49d",
+      "source_claim_ms": 1790940160000,
+      "received_at_ms": 1791113622891
+    },
+    {
+      "event_id": "a8a42d94f4969835685a814d939dcf7a85da5bc5fb0426238f27c92b9596bf8c",
+      "native_guid": "da31ac5a-3a27-4234-84ff-fcacdf5d00c2",
+      "source_claim_ms": 1790937076000,
+      "received_at_ms": 1791113622891
+    },
+    {
+      "event_id": "bd3e65b0601527b204b57e35cbd7b800d7be3e194573a5461f5a98179bea93d3",
+      "native_guid": "36f6b207-5449-47ee-b294-f781cbeb08a1",
+      "source_claim_ms": 1790932461000,
+      "received_at_ms": 1791113622891
+    },
+    {
+      "event_id": "f977ff0ca5e0596aa45fbcc7455ace9d6de5308079feb2e38c460346b289edc4",
+      "native_guid": "26731399-afe0-4f6c-8ca8-a5a2dd0efa53",
+      "source_claim_ms": 1790929699000,
+      "received_at_ms": 1791113622891
+    },
+    {
+      "event_id": "6f674bf1b04d4374856fd2907919e0159e4d2835f05f6d61c9f27e8749132308",
+      "native_guid": "7d3f6176-38a9-407a-a4f7-8f391e347272",
+      "source_claim_ms": 1790928714000,
+      "received_at_ms": 1791113622891
+    },
+    {
+      "event_id": "95138f4ce187bfae06cf643c4f961fea8a2d3d9937b5b510701879d2aa502fee",
+      "native_guid": "6a44c07b-4032-42eb-967d-d79f50947229",
+      "source_claim_ms": 1790886004000,
+      "received_at_ms": 1791113622891
+    },
+    {
+      "event_id": "5b407d838a74f46b91793270ec62f66a1fc0e58d988197114984b7b1af2b4667",
+      "native_guid": "c1473acf-270d-4eae-a62a-d6d7559fa1da",
+      "source_claim_ms": 1790880329000,
+      "received_at_ms": 1791113622891
+    },
+    {
+      "event_id": "48869e01f8ef42850b383d63c35ee54ff6366cdb93048c78f06e2505e810189f",
+      "native_guid": "61279dbc-4972-4d97-a8ff-8f57859ce3b1",
+      "source_claim_ms": 1790866800000,
+      "received_at_ms": 1791113622891
+    },
+    {
+      "event_id": "ed2e9001c5ad1f9bd93c220944357e255d3ca09472323a53e1942b57c8e89417",
+      "native_guid": "14dc8d40-cbf4-4f69-bea6-e56414ccbd44",
+      "source_claim_ms": 1790864294000,
+      "received_at_ms": 1791113622891
+    },
+    {
+      "event_id": "f9c5e3fc33f3a43337e2743707156e87d2bf1aacb0cc9ac1ef7c53e8db475140",
+      "native_guid": "2a95b7d3-7eb7-42c9-97fe-c93eedb12b0e",
+      "source_claim_ms": 1790855957000,
+      "received_at_ms": 1791113622891
+    },
+    {
+      "event_id": "352ff8a3a033a8f7b803a7d32a16785609968e6a996c4cee167fa165ff2dc38c",
+      "native_guid": "4492d7c6-344c-4e94-a01f-189070b6490f",
+      "source_claim_ms": 1790855880000,
+      "received_at_ms": 1791113622891
+    },
+    {
+      "event_id": "5f5c27e883a9f814eca20ac227969ecf2d068a84d063ad086b22daf19f3454a2",
+      "native_guid": "2b400425-53e9-47b4-a72e-802d6f99adad",
+      "source_claim_ms": 1790854238000,
+      "received_at_ms": 1791113622891
+    },
+    {
+      "event_id": "bfcd4af0634d05ee56b22d2958e8a1b5f5578dcf60c4be9fc307742c0d2d4e04",
+      "native_guid": "b53a393b-b77f-4641-87fa-ab8c9945634d",
+      "source_claim_ms": 1790852400000,
+      "received_at_ms": 1791113622891
+    }
+  ],
+  "original_0340_source_sha256": "0ad84c80cf916e6677b214fe6883e2003b5a97287ab93795d062fa47ce5286d1",
+  "current_0341_source_sha256": "97944a8d9a9518685249ac0e3f68a521489b3f5ec2c893f10702fb7ff174565b",
+  "historical_0340_health_id": "43384125c00ade209aa8f5716cb1ed6e282e9f6c372ded5f669144aacd68ae33",
+  "historical_0340_quality_byte_fields_unchanged": true,
+  "historical_0340_files_sha256": {
+    "evidence\\crypto-news-public-01\\events.duckdb": "d5ec81feac61289b1903730b2b390c6beb4ff80e5349bb314b71648972ae7910",
+    "evidence\\crypto-news-public-01\\events.parquet": "e5eea71ad74cac7e897a245d6dd29a2b4eae9b5ea74fdd568eb43c6d2721ed95",
+    "evidence\\crypto-news-public-01\\events.parquet.manifest.json": "b6b740793a0a06e111703162392db81b66eb2cbd3ce562e6a04718480182aeb0",
+    "evidence\\crypto-news-public-01\\post-probe-provenance.json": "2fa5357b43fbbffe36a7cdea248f978390cc8900f64fa89860ee158c50dcc764",
+    "evidence\\crypto-news-public-01\\README.md": "bc7685c2c6a0f22b78f47962b3085c3cda26708ded491cc95bd1ad417dbeb097",
+    "evidence\\crypto-news-public-01\\report.json": "00901ff01b867e29285c89b3c3d5866d3fa1cae2b873db869ee54f804a3cae37",
+    "evidence\\crypto-news-public-01\\response.xml": "7c040f8633b8823d72ed63da9b3b2dfe9846e912c66a64c9433ec9c4815d76c2",
+    "evidence\\crypto-news-public-01\\source-snapshot.py": "0ad84c80cf916e6677b214fe6883e2003b5a97287ab93795d062fa47ce5286d1",
+    "evidence\\crypto-news-public-01\\verification-script.py": "f399941a34cbce84e1e1151508f98e87009bb8e207b77bbb2a5182a0b3812b4c"
+  },
+  "request_evidence_sha256": "1fbde68aba92b4119e1c7a34b4f92395b3dfc2bef661b62927043b03863b9529",
+  "continuous_history_verified": false,
+  "complete_news_coverage": false,
+  "first_publication_independently_verified": false,
+  "trading_approval": false,
+  "orders_submitted": 0,
+  "owned_tests_passed": 65,
+  "ruff_passed": true,
+  "mypy_source_files_passed": 1
+}

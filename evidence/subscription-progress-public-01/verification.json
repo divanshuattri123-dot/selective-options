@@ -1,0 +1,28 @@
+{
+  "version": "0.3.31",
+  "status": "UNCAPPED_COVERAGE_NOT_VERIFIED",
+  "failure_type": null,
+  "asset": "BTC",
+  "duration_s": 75,
+  "stream_cap_per_asset": null,
+  "closed_reload_coverage_matches": true,
+  "saved_rows": 21351,
+  "coverage": {
+    "asset": "BTC",
+    "as_of_ms": 1791048393466,
+    "state": "BLOCKED",
+    "blocker": "OPTION_STREAM_INACTIVE",
+    "trading_approval": false,
+    "trade_history_continuity_verified": false,
+    "all_options_native_fields_available": false,
+    "stream_control_event_id": "10123d428680c24291a657e366541996eedd291a43d4d4c049c4737544659949"
+  },
+  "configured_leg_max_age_ms": 30000,
+  "configured_universe_max_age_ms": 3600000,
+  "all_required_assets_or_feeds_verified": false,
+  "trade_history_continuity_verified": false,
+  "sustained_capacity_verified": false,
+  "milestone_2_complete": false,
+  "trading_enabled": false,
+  "orders_submitted": 0
+}

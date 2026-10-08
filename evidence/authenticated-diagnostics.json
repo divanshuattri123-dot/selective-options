@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-09-20T18:03:38.007384+00:00",
+  "endpoint": "wss://test.deribit.com/ws/api/v2",
+  "orders_submitted": 0,
+  "authentication": "PASSED",
+  "token_scopes": [
+    "connection",
+    "mainaccount"
+  ],
+  "key_inspection_error_code": 13021,
+  "connection_cancel_on_disconnect_enabled": false
+}

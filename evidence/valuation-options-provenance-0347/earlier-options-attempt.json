@@ -1,0 +1,11 @@
+{
+  "status": "FINAL_SUCCESS_REFUSED_AFTER_SOURCE_DRIFT",
+  "artifacts": {
+    "api-call/options-features.json": "7f0313c7a2c421ad1f76ab879ae087100a8ed3918774defb17c8aa5cc9b474b2",
+    "api-put/options-features.json": "c56f43d7d27112739cdd1a54f44d5d9c08e5fcd875a5f3dba738d6b58f04f51c",
+    "cli-call/options-features.json": "7f0313c7a2c421ad1f76ab879ae087100a8ed3918774defb17c8aa5cc9b474b2",
+    "cli-put/options-features.json": "c56f43d7d27112739cdd1a54f44d5d9c08e5fcd875a5f3dba738d6b58f04f51c"
+  },
+  "final_report_published": false,
+  "new_public_requests": 0
+}

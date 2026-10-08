@@ -1,0 +1,234 @@
+{
+  "data": {
+    "max_clock_skew_s": 5.0,
+    "max_price_divergence_bps": 25.0,
+    "max_staleness_s": 30.0,
+    "min_sources_per_asset": 2
+  },
+  "drawdown": {
+    "daily_stop_pct": 3.0,
+    "monthly_stop_pct": 10.0,
+    "peak_to_trough_pct": 15.0,
+    "weekly_stop_pct": 6.0
+  },
+  "execution": {
+    "cancel_on_disconnect": true,
+    "leg_timeout_s": 20.0,
+    "max_slippage_bps": 40.0,
+    "passive_first": true,
+    "reconciliation_interval_s": 60.0,
+    "slice_count": 3
+  },
+  "exits": {
+    "iv_crush_exit_pts": 15.0,
+    "long_profit_pct": 100.0,
+    "long_scale_out_fraction": 0.5,
+    "long_stop_loss_pct": 50.0,
+    "reevaluate_atr_multiple": 2.0,
+    "short_exit_dte": 21,
+    "short_loss_credit_multiple": 2.0,
+    "short_take_profit_pct": 50.0
+  },
+  "gate": {
+    "cooldown_after_n_losses": 2,
+    "cooldown_hours": 48.0,
+    "max_spread_cost_pct_of_debit": 6.0,
+    "max_trades_per_month": 10,
+    "min_composite_conviction": 72.0,
+    "min_confidence_each": 0.55,
+    "min_expectancy_R": 0.35,
+    "min_pillar_agreement": 3,
+    "min_pillar_score_each": 40.0,
+    "min_reward_risk": 2.0,
+    "min_samples": 30,
+    "p_haircut": 0.85
+  },
+  "gold": {
+    "external_adapter": null,
+    "max_basis_bps": 150.0,
+    "mode": "auto",
+    "session_filter": "LBMA_COMEX"
+  },
+  "greeks": {
+    "max_net_delta_pct_equity": 25.0,
+    "max_net_gamma_notional": null,
+    "max_net_theta_daily_pct": 0.6,
+    "max_net_vega_pct_equity": 8.0
+  },
+  "ingestion": {
+    "bar_lateness_s": 5.0,
+    "bar_timeframes_s": [
+      300,
+      900,
+      3600,
+      14400,
+      86400
+    ],
+    "bea_calendar_enabled": false,
+    "bea_calendar_poll_interval_s": 3600.0,
+    "binance_account_ratio_enabled": false,
+    "binance_account_ratio_poll_interval_s": 300.0,
+    "binance_enabled": false,
+    "binance_funding_history_enabled": false,
+    "binance_funding_history_hours": 48,
+    "binance_funding_history_max_pages": 10,
+    "binance_funding_history_page_size": 200,
+    "binance_funding_history_poll_interval_s": 900.0,
+    "binance_funding_history_timeout_s": 90.0,
+    "binance_poll_interval_s": 30.0,
+    "binance_taker_enabled": false,
+    "binance_taker_poll_interval_s": 300.0,
+    "bybit_enabled": false,
+    "bybit_poll_interval_s": 30.0,
+    "chain_poll_interval_s": 3600.0,
+    "derivatives_enabled": false,
+    "derivatives_poll_interval_s": 20.0,
+    "duration_s": 60.0,
+    "eth_gas_enabled": false,
+    "eth_gas_max_block_age_s": 1800.0,
+    "eth_gas_poll_interval_s": 120.0,
+    "flush_interval_s": 1.0,
+    "hot_buffer_events": 2000,
+    "kraken_auto_recovery_enabled": false,
+    "kraken_backfill_interval_s": 1.0,
+    "kraken_backfill_max_pages": 5,
+    "kraken_backfill_page_size": 1000,
+    "kraken_backfill_timeout_s": 60.0,
+    "max_stream_instruments_per_asset": 2,
+    "news_poll_interval_s": 300.0,
+    "policy_news_sources": [],
+    "queue_capacity": 20000,
+    "queue_timeout_s": 10.0,
+    "reconnect_delay_s": 1.0,
+    "reference_sources": [],
+    "solana_network_enabled": false,
+    "solana_network_max_sample_age_s": 180.0,
+    "solana_network_poll_interval_s": 300.0,
+    "solana_network_timeout_s": 90.0,
+    "spot_poll_interval_s": 10.0,
+    "spot_trades_enabled": false,
+    "storage_batch_size": 500,
+    "stream_universe_refresh_interval_s": 60.0,
+    "subscription_batch_size": 50,
+    "volatility_lookback_minutes": 5
+  },
+  "liquidity": {
+    "book_depth_multiple": 3.0,
+    "max_spread_pct_of_mid": 8.0,
+    "min_24h_volume": 20.0,
+    "min_open_interest": 50.0
+  },
+  "promotion": {
+    "artifact_max_age_days": 90,
+    "live_ramp": [
+      0.25,
+      0.5,
+      1.0
+    ],
+    "max_paper_vs_backtest_divergence_pct": 40.0,
+    "max_pbo": 0.35,
+    "min_dsr_confidence": 0.95,
+    "min_live_trades": 40,
+    "min_paper_days": 60,
+    "min_paper_expectancy_R": 0.25,
+    "min_paper_trades": 25,
+    "positive_regimes_required": 3,
+    "required_brier_score": 0.22,
+    "trades_per_ramp_stage": 20
+  },
+  "rate_limits": {
+    "discovery": {
+      "capacity": 500000.0,
+      "cost": 10000.0,
+      "refill_per_s": 10000.0
+    },
+    "ordinary": {
+      "capacity": 5000.0,
+      "cost": 500.0,
+      "refill_per_s": 2500.0
+    },
+    "subscriptions": {
+      "capacity": 30000.0,
+      "cost": 3000.0,
+      "refill_per_s": 10000.0
+    }
+  },
+  "risk": {
+    "allow_naked_short": false,
+    "blackout_after_min": 30.0,
+    "blackout_before_min": 120.0,
+    "gap_shock_pct": 30.0,
+    "iv_shock_points": 50.0,
+    "kelly_cap_pct": 2.0,
+    "kelly_fraction": 0.25,
+    "max_concurrent_positions": 4,
+    "max_crypto_beta_positions": 3,
+    "max_positions_per_asset": 1,
+    "max_risk_per_trade_pct": 2.0,
+    "max_tail_loss_pct": null,
+    "risk_per_trade_pct": 1.0,
+    "tail_paths": 10000
+  },
+  "signals": {
+    "lookback_days_iv_rank": 252,
+    "news_decay_halflife_hours": 8.0,
+    "news_dedup_similarity": 0.88,
+    "weights": {
+      "fundamental": 0.3,
+      "technical": 0.35,
+      "volatility_flow": 0.35
+    }
+  },
+  "structure": {
+    "catalyst_buffer_days": 7,
+    "max_dte": 60,
+    "min_dte": 21,
+    "min_dte_exit": 14,
+    "short_strike_delta": [
+      0.15,
+      0.25
+    ],
+    "target_long_delta": [
+      0.25,
+      0.4
+    ]
+  },
+  "system": {
+    "assets": [
+      "BTC"
+    ],
+    "base_currency": "USD",
+    "heartbeat_timeout_s": 60.0,
+    "log_level": "INFO",
+    "loop_interval_s": 15.0,
+    "mode": "testnet"
+  },
+  "tax": {
+    "asymmetric_regime": true,
+    "fx_source": null,
+    "jurisdiction": "IN",
+    "other_person_threshold_inr": 10000.0,
+    "retention_years": 7,
+    "specified_person_threshold_inr": 50000.0,
+    "tds_rate_pct": 1.0,
+    "vda_rate_pct": 31.2
+  },
+  "venue": {
+    "auth_refresh_margin_s": 60.0,
+    "connect_timeout_s": 15.0,
+    "key_profile": "testnet",
+    "max_message_bytes": 16777216,
+    "request_timeout_s": 15.0,
+    "retry_attempts": 3,
+    "retry_base_s": 1.0,
+    "retry_max_s": 10.0,
+    "ticker_samples_per_asset": 2,
+    "ws_url": "wss://test.deribit.com/ws/api/v2"
+  },
+  "vol": {
+    "buy_premium_below_iv_pct": 30.0,
+    "min_move_edge_pct": 20.0,
+    "require_panic_floor_for_short_premium": true,
+    "sell_premium_above_iv_pct": 60.0
+  }
+}

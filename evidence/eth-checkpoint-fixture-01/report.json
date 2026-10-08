@@ -1,0 +1,26 @@
+{
+  "version": "0.3.18",
+  "status": "OFFLINE_SYNTHETIC_HANDOFF_VERIFIED",
+  "network_requests": 0,
+  "source": "synthetic block/RPC fixtures, not public chain data",
+  "committed_reload_equal": true,
+  "original_receipt_preserved": true,
+  "pre_receipt_excluded": true,
+  "checks": [
+    {
+      "block_number": 100,
+      "accepted": true
+    },
+    {
+      "block_number": 99,
+      "accepted": false
+    },
+    {
+      "block_number": 101,
+      "accepted": true
+    }
+  ],
+  "latest_block": 101,
+  "trading_enabled": false,
+  "orders_submitted": 0
+}

@@ -1,0 +1,18 @@
+{
+  "status": "FAILED",
+  "symbol": "BTC/USD",
+  "anchor_event_id": "551be10623517639fc2fd050096ccafb36a8a47d150886d88dd04d67dd978a84",
+  "after_trade_id": 109230581,
+  "requested_through_id": 109230583,
+  "started_at_ms": 1790508256454,
+  "stage": "PUBLISH",
+  "marker_id": null,
+  "publication_outcome": "UNKNOWN_UNTIL_RETURN",
+  "runtime_activated": false,
+  "bars_rebuilt": false,
+  "trading_enabled": false,
+  "pages": 1,
+  "failure_type": "IntegrityError",
+  "failure_reason": "LOOKAHEAD: recovery rows are unavailable at this time",
+  "ended_at_ms": 1790508257006
+}

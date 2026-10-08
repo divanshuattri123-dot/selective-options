@@ -1,0 +1,9 @@
+# Capped public testnet universe refresh
+
+Version 0.3.29 captured BTC on Deribit testnet for 110 seconds, with a two-option cap and an optional 60-second streamed-universe refresh interval. It saved 4,286 event/outbox rows and two acknowledged seven-channel sessions, separated by one scheduled refresh. The process and sockets stopped afterward; no private API or order was used.
+
+`verification.json` records actual lifecycle controls and scope. `report.json` is the stopped capture's report, and `config.sanitized.json` contains its public configuration. `events.parquet` is sealed with its companion checksum manifest. The saved data is separate from production execution and does not establish all-symbol coverage or current socket activity.
+
+`verify_saved.py` uses zero new network requests. Its independent read-only SQL checks compare ten before/at control visibility boundaries, native lifecycle order, connection numbers and an actual refresh interval of at least 60,000 milliseconds. It rebuilds the as-of freshness views: all four tracked ticker/book checks become `STREAM_INACTIVE` at the refresh marker, and previous-session cached quotes cannot satisfy the next acknowledgement. All saved records equal the sealed archive after closed database reload; original database bytes remain unchanged. Results are in `independent-proof.json`.
+
+Changing from an expired/removed contract to a newly listed contract is tested with clearly synthetic socket fixtures in `tests/test_universe_refresh.py`. No actual listing or expiry change was observed/proven in this finite public run. Periodic rediscovery creates an explicitly recorded unverified gap; option trade-history backfill/reconciliation remains required. Full uncapped capacity, continuous history, every required feed, long-running deployment and seven-day unattended validation remain pending. Trading is disabled.

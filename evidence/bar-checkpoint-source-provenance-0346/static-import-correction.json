@@ -1,0 +1,10 @@
+{
+  "changed_file": "scripts/audit_bar_checkpoint.py",
+  "before_sha256": "cea4b1e2846a7d09248d7a7f34cd582cc15f50eb78308dc02e9704212854fcfd",
+  "after_sha256": "f852859b614a55f5a1fe987993cdbb3a7fc4019070adde7297b485d1fcc9450e",
+  "runtime_functions_and_constants_ast_equal": true,
+  "runtime_helper_import_before": "scripts.audit_parallel_foundations",
+  "runtime_helper_import_after": "relative .audit_parallel_foundations in package scripts",
+  "production_source_changed": false,
+  "strict_project_mypy_source_files": 109
+}

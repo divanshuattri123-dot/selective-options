@@ -1,0 +1,29 @@
+{
+  "version": "0.3.19",
+  "checked_at": "2026-09-30T14:43:51.717531+00:00",
+  "status": "OFFLINE_STORAGE_CANCELLATION_VERIFIED",
+  "network_requests": 0,
+  "test_scope": "Deterministic worker gates, actual local DuckDB connections, synthetic events; no public feed or soak claim",
+  "regression_cases": [
+    "test_repeated_cancel_drains_worker_and_retains_failure_cause[False]",
+    "test_repeated_cancel_drains_worker_and_retains_failure_cause[True]",
+    "test_worker_cancelled_error_does_not_spin",
+    "test_resource_cleanup_is_drained_even_when_cancelled_again",
+    "test_acquisition_failure_has_no_resource_to_release",
+    "test_cancelled_store_open_closes_actual_connection",
+    "test_schema_failure_closes_partial_connection",
+    "test_cancelled_append_holds_lock_until_commit_then_close",
+    "test_cancelled_restore_reader_closes_before_output_creation"
+  ],
+  "suite_tests": 630,
+  "suite_failures": 0,
+  "coverage_percent": 97.33,
+  "suite_evidence": "storage-cancellation-suite-0319.xml",
+  "limitations": [
+    "Cancellation is propagated only after the in-flight worker stops; no hard shutdown deadline",
+    "An interrupted append can already be committed; inspect durable state before retrying",
+    "Filesystem publication and abrupt process death are outside this cancellation increment",
+    "Milestone 2 remains incomplete"
+  ],
+  "trading_enabled": false
+}

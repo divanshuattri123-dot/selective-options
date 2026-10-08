@@ -1,0 +1,14 @@
+{
+  "version": "0.3.47",
+  "imported_package": "C:\\Users\\Divan\\Documents\\Codex\\2026-09-20\\files-pasted-by-the-user-build\\work\\wheel-runtime-0347\\selective_options\\__init__.py",
+  "isolated_wheel_import_verified": true,
+  "source_modules_exact": 75,
+  "cli_config_validated": true,
+  "installed_coinmetrics_constructor_executed": true,
+  "installed_coinmetrics_quality_exact": true,
+  "cli_options_features_executed": true,
+  "options_expiries": 13,
+  "options_report_sha256": "7f0313c7a2c421ad1f76ab879ae087100a8ed3918774defb17c8aa5cc9b474b2",
+  "new_public_requests": 0,
+  "trading_enabled": false
+}

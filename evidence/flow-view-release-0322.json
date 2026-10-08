@@ -1,0 +1,35 @@
+{
+  "version": "0.3.22",
+  "tests_passed": 732,
+  "coverage_percent": 97.47,
+  "flow_view_coverage": {
+    "covered_lines": 62,
+    "num_statements": 62,
+    "percent_covered": 98.80952380952381,
+    "percent_covered_display": "99",
+    "missing_lines": 0,
+    "excluded_lines": 0,
+    "percent_statements_covered": 100.0,
+    "percent_statements_covered_display": "100",
+    "num_branches": 22,
+    "num_partial_branches": 1,
+    "covered_branches": 21,
+    "missing_branches": 1,
+    "percent_branches_covered": 95.45454545454545,
+    "percent_branches_covered_display": "95"
+  },
+  "wheel_source_modules": 44,
+  "wheel_source_exact_match": true,
+  "wheel_sha256": "6a86918a78660628ee89ab98db67f7be039af057bc5be0fa1294b2369a63073a",
+  "generated_docs_idempotent": true,
+  "generated_doc_sha256": {
+    "README.md": "4285f8919e56fcc02637dfa000a03238249a3eb7badff6606ce70abf232db981",
+    "PARAMETERS.md": "f445b668adf3b9c713b10e73eae5cf1d00c511a3e3eb933871c5d7c3d0d08454",
+    "config\\default.yaml": "1b6fdcdb25615c7c09c9238ade80153930e622c7e398ad389cf2f0341f233e9f"
+  },
+  "config_valid": true,
+  "network_requests_this_increment": 0,
+  "milestone": 2,
+  "milestone_advance_allowed": false,
+  "trading_enabled": false
+}

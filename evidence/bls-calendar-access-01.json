@@ -1,0 +1,10 @@
+{
+  "url": "https://www.bls.gov/schedule/news_release/bls.ics",
+  "failure_type": "HTTPError",
+  "http_status": 403,
+  "observed_at_ms": 1790606459696,
+  "source": "BLS official calendar",
+  "availability": "ACCESS_DENIED",
+  "cause": "not established",
+  "alternate_host_attempted": false
+}

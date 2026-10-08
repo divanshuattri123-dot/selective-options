@@ -1,0 +1,66 @@
+[
+  {
+    "asset": "PAXG",
+    "symbol": "PAXG/USD",
+    "open_time_ms": 1790001900000,
+    "timeframe_s": 300,
+    "trade_count": 5,
+    "recomputed_exactly": true
+  },
+  {
+    "asset": "BTC",
+    "symbol": "BTC/USD",
+    "open_time_ms": 1790001900000,
+    "timeframe_s": 300,
+    "trade_count": 803,
+    "recomputed_exactly": true
+  },
+  {
+    "asset": "ETH",
+    "symbol": "ETH/USD",
+    "open_time_ms": 1790001900000,
+    "timeframe_s": 300,
+    "trade_count": 278,
+    "recomputed_exactly": true
+  },
+  {
+    "asset": "SOL",
+    "symbol": "SOL/USD",
+    "open_time_ms": 1790001900000,
+    "timeframe_s": 300,
+    "trade_count": 214,
+    "recomputed_exactly": true
+  },
+  {
+    "asset": "PAXG",
+    "symbol": "PAXG/USD",
+    "open_time_ms": 1790002200000,
+    "timeframe_s": 300,
+    "trade_count": 21,
+    "recomputed_exactly": true
+  },
+  {
+    "asset": "SOL",
+    "symbol": "SOL/USD",
+    "open_time_ms": 1790002200000,
+    "timeframe_s": 300,
+    "trade_count": 271,
+    "recomputed_exactly": true
+  },
+  {
+    "asset": "BTC",
+    "symbol": "BTC/USD",
+    "open_time_ms": 1790002200000,
+    "timeframe_s": 300,
+    "trade_count": 1423,
+    "recomputed_exactly": true
+  },
+  {
+    "asset": "ETH",
+    "symbol": "ETH/USD",
+    "open_time_ms": 1790002200000,
+    "timeframe_s": 300,
+    "trade_count": 1042,
+    "recomputed_exactly": true
+  }
+]

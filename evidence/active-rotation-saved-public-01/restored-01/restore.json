@@ -1,0 +1,18 @@
+{
+  "status": "ROTATION_RESTORE_FINISHED",
+  "rows": 31,
+  "parts": 1,
+  "catalog_sha256": "db205065bb2e826f11505490e1765f5b85c3054ff0f78b1f8a4818716006b91e",
+  "source_sha256": "c289d23a0ed5b7dd2522a0865273a0dac8977b077aa20d0fdb3f9a345e244f8c",
+  "as_of_ms": 1791113913327,
+  "partition_ms": 86400000,
+  "observation_timestamps_preserved": true,
+  "source_timestamps_preserved": true,
+  "redis_delivery_pending": 31,
+  "delivery": "AT_LEAST_ONCE",
+  "consumer_deduplication_key": "event_id",
+  "history_complete": false,
+  "ready_for_signals": false,
+  "trading_enabled": false,
+  "limitation": "Delivery acknowledgements are not archived; all events are pending replay."
+}

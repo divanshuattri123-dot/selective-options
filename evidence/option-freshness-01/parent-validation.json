@@ -1,0 +1,15 @@
+{
+  "status": "FINAL_PARENT_AUDITS_EXACTLY_MATCH_INDEPENDENT_SAVED_PROOFS",
+  "milliseconds_conversion_overflow_is_value_error": true,
+  "all_four_saved_asset_diagnostics_exact": true,
+  "original_files_unchanged": true,
+  "source_code_sha256": {
+    "scripts/audit_option_freshness.py": "6d927f1ce5c4f89d5bbc8d75c0c4ce0c22a6f866758d9d7ac29f8d5c7654099b",
+    "tests/test_option_freshness_audit.py": "e7c1f084fee88b3e03f841a28e7e258a044af0bef887d8862d9fc96e487822ea"
+  },
+  "original_worker_snapshots_and_validation_preserved": true,
+  "parent_targeted_tests_passed": 81,
+  "final_freshness_cases": 55,
+  "new_network_requests": 0,
+  "orders_submitted": 0
+}

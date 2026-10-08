@@ -1,0 +1,36 @@
+{
+  "checked_at": "2026-09-20T18:38:32.573846+00:00",
+  "endpoint": "wss://test.deribit.com/ws/api/v2",
+  "credential_revision": 1,
+  "orders_submitted": 0,
+  "settings_changed_by_agent": false,
+  "authentication": "PASSED",
+  "token_scopes": [
+    "connection",
+    "trade:read_write",
+    "account:read",
+    "mainaccount"
+  ],
+  "matching_key_count": 1,
+  "key_enabled": true,
+  "key_max_scopes": [
+    "block_rfq:none",
+    "block_trade:none",
+    "trade:read_write",
+    "custody:none",
+    "account:read",
+    "wallet:none",
+    "sbe_order_entry:none",
+    "fix_drop_copy:none",
+    "sbe_market_data:none",
+    "rest_order_entry:none"
+  ],
+  "key_scope_verification": "PASSED",
+  "token_scope_verification": "PASSED",
+  "connection_cancel_on_disconnect_enabled": true,
+  "account_cancel_on_disconnect_enabled": true,
+  "readiness_passed": true,
+  "native_auth_session": "PASSED",
+  "real_refresh_grant": "PASSED_EARLY_REFRESH_SCHEDULER_CLOCK_ADVANCED",
+  "authenticated_market_discovery": "PASSED"
+}

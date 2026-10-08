@@ -1,0 +1,25 @@
+{
+  "status": "POST_PROBE_LABEL_ONLY_CORRECTION_VERIFIED",
+  "historical_report_unchanged": true,
+  "historical_probe_verifier_sha256": "f399941a34cbce84e1e1151508f98e87009bb8e207b77bbb2a5182a0b3812b4c",
+  "final_current_verifier_sha256": "935a23361aafe90e7dd2ec5b47c5a95fd27e56b1bed45acdefb6f7968aafd8fb",
+  "source_module_unchanged_sha256": "0ad84c80cf916e6677b214fe6883e2003b5a97287ab93795d062fa47ce5286d1",
+  "changes": [
+    "One response entity basis label changed from parser to response hook; no behavior changed."
+  ],
+  "bytes_differ_only_by_exact_label_replacement": true,
+  "http_status": 308,
+  "rss_parser_called_for_this_entity": false,
+  "native_metadata_accepted": 0,
+  "requests_during_original_probe": 1,
+  "additional_public_requests_after_correction": 0,
+  "verification": {
+    "owned_tests_passed": 25,
+    "ruff_check": "PASS",
+    "ruff_format": "PASS",
+    "strict_mypy": "PASS"
+  },
+  "redirects_followed": 0,
+  "retries": 0,
+  "trading_approval": false
+}

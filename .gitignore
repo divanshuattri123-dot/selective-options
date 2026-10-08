@@ -1,0 +1,26 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+state/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Checksum-bound native data and checkpoint binaries live in private releases.
+*.duckdb
+*.parquet
+*.zip
+*.whl
+*.partial
+.evidence-download-*/
+evidence/github-ci.xml

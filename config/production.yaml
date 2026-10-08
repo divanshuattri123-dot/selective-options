@@ -1,0 +1,6 @@
+# Declarative future profile. Probe and arm both refuse production in this build.
+system:
+  mode: live
+venue:
+  key_profile: production
+  ws_url: wss://www.deribit.com/ws/api/v2

@@ -1,0 +1,409 @@
+{
+  "source": "evidence\\reused-validation-public-01\\events.duckdb",
+  "source_sha256_before": "97c10f3c2f59a67edff83104fceca3b0b195b1498432597abde62e509f4cabdc",
+  "source_sha256_after": "97c10f3c2f59a67edff83104fceca3b0b195b1498432597abde62e509f4cabdc",
+  "original_source_unchanged": true,
+  "native_rows": 62089,
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "network_requests": 0,
+  "production_source_edits": 0,
+  "measurement_scope": "Execute, parameter bind, fetch all only; three runs on one fresh read-only connection per process. Process deadline includes opening database, oracle load and EXPLAIN. Processes run sequentially. No performance pass threshold.",
+  "results": [
+    {
+      "method": "existing_in",
+      "size": 1000,
+      "case": "mixed",
+      "requested_count": 1040,
+      "expected_count": 1000,
+      "duplicate_input_count": 20,
+      "exact_native_rows_equal": true,
+      "elapsed_ns": [
+        2786221300,
+        2655224200,
+        2535533200
+      ],
+      "median_ns": 2655224200,
+      "duckdb_version": "1.5.5",
+      "threads": 8,
+      "memory_limit": "12.5 GiB",
+      "query_plan_file": "existing_in-1000-mixed.plan.txt",
+      "status": "EXACT_ROWS_VERIFIED",
+      "process_wall_seconds": 11.699306700000307
+    },
+    {
+      "method": "semi_join",
+      "size": 1000,
+      "case": "mixed",
+      "requested_count": 1040,
+      "expected_count": 1000,
+      "duplicate_input_count": 20,
+      "exact_native_rows_equal": true,
+      "elapsed_ns": [
+        2602128800,
+        2550537800,
+        2580934000
+      ],
+      "median_ns": 2580934000,
+      "duckdb_version": "1.5.5",
+      "threads": 8,
+      "memory_limit": "12.5 GiB",
+      "query_plan_file": "semi_join-1000-mixed.plan.txt",
+      "status": "EXACT_ROWS_VERIFIED",
+      "process_wall_seconds": 11.276161100002355
+    },
+    {
+      "method": "distinct_join",
+      "size": 1000,
+      "case": "mixed",
+      "requested_count": 1040,
+      "expected_count": 1000,
+      "duplicate_input_count": 20,
+      "exact_native_rows_equal": true,
+      "elapsed_ns": [
+        2821571000,
+        2598132400,
+        2650191300
+      ],
+      "median_ns": 2650191300,
+      "duckdb_version": "1.5.5",
+      "threads": 8,
+      "memory_limit": "12.5 GiB",
+      "query_plan_file": "distinct_join-1000-mixed.plan.txt",
+      "status": "EXACT_ROWS_VERIFIED",
+      "process_wall_seconds": 11.66246149998915
+    },
+    {
+      "method": "materialized_semi",
+      "size": 1000,
+      "case": "mixed",
+      "requested_count": 1040,
+      "expected_count": 1000,
+      "duplicate_input_count": 20,
+      "exact_native_rows_equal": true,
+      "elapsed_ns": [
+        2717671900,
+        3029535000,
+        2840222600
+      ],
+      "median_ns": 2840222600,
+      "duckdb_version": "1.5.5",
+      "threads": 8,
+      "memory_limit": "12.5 GiB",
+      "query_plan_file": "materialized_semi-1000-mixed.plan.txt",
+      "status": "EXACT_ROWS_VERIFIED",
+      "process_wall_seconds": 12.295668199993088
+    },
+    {
+      "method": "chunked_in",
+      "size": 1000,
+      "case": "mixed",
+      "requested_count": 1040,
+      "expected_count": 1000,
+      "duplicate_input_count": 20,
+      "exact_native_rows_equal": true,
+      "elapsed_ns": [
+        2997486900,
+        3437595300,
+        3321520700
+      ],
+      "median_ns": 3321520700,
+      "duckdb_version": "1.5.5",
+      "threads": 8,
+      "memory_limit": "12.5 GiB",
+      "query_plan_file": "chunked_in-1000-mixed.plan.txt",
+      "status": "EXACT_ROWS_VERIFIED",
+      "process_wall_seconds": 11.921661200001836
+    },
+    {
+      "method": "existing_in",
+      "size": 20001,
+      "case": "mixed",
+      "status": "PROCESS_DEADLINE",
+      "deadline_seconds": 15,
+      "process_wall_seconds": 15.030656799994176
+    },
+    {
+      "method": "semi_join",
+      "size": 20001,
+      "case": "mixed",
+      "status": "PROCESS_DEADLINE",
+      "deadline_seconds": 15,
+      "process_wall_seconds": 15.02867289999267
+    },
+    {
+      "method": "distinct_join",
+      "size": 20001,
+      "case": "mixed",
+      "status": "PROCESS_DEADLINE",
+      "deadline_seconds": 15,
+      "process_wall_seconds": 15.03114189999178
+    },
+    {
+      "method": "materialized_semi",
+      "size": 20001,
+      "case": "mixed",
+      "status": "PROCESS_DEADLINE",
+      "deadline_seconds": 15,
+      "process_wall_seconds": 15.021281499997713
+    },
+    {
+      "method": "chunked_in",
+      "size": 20001,
+      "case": "mixed",
+      "status": "PROCESS_DEADLINE",
+      "deadline_seconds": 15,
+      "process_wall_seconds": 15.036572400000296
+    },
+    {
+      "method": "existing_in",
+      "size": 62089,
+      "case": "mixed",
+      "status": "PROCESS_DEADLINE",
+      "deadline_seconds": 15,
+      "process_wall_seconds": 15.017746600002283
+    },
+    {
+      "method": "semi_join",
+      "size": 62089,
+      "case": "mixed",
+      "status": "PROCESS_DEADLINE",
+      "deadline_seconds": 15,
+      "process_wall_seconds": 15.029696999990847
+    },
+    {
+      "method": "distinct_join",
+      "size": 62089,
+      "case": "mixed",
+      "status": "PROCESS_DEADLINE",
+      "deadline_seconds": 15,
+      "process_wall_seconds": 15.032516999999643
+    },
+    {
+      "method": "materialized_semi",
+      "size": 62089,
+      "case": "mixed",
+      "status": "PROCESS_DEADLINE",
+      "deadline_seconds": 15,
+      "process_wall_seconds": 15.026777999999467
+    },
+    {
+      "method": "chunked_in",
+      "size": 62089,
+      "case": "mixed",
+      "status": "PROCESS_DEADLINE",
+      "deadline_seconds": 15,
+      "process_wall_seconds": 15.028728000004776
+    },
+    {
+      "method": "existing_in",
+      "size": 0,
+      "case": "empty",
+      "requested_count": 0,
+      "expected_count": 0,
+      "duplicate_input_count": 0,
+      "exact_native_rows_equal": true,
+      "elapsed_ns": [
+        4603600,
+        3948900,
+        3966800
+      ],
+      "median_ns": 3966800,
+      "duckdb_version": "1.5.5",
+      "threads": 8,
+      "memory_limit": "12.5 GiB",
+      "query_plan_file": "existing_in-0-empty.plan.txt",
+      "status": "EXACT_ROWS_VERIFIED",
+      "process_wall_seconds": 0.9757769999996526
+    },
+    {
+      "method": "existing_in",
+      "size": 25,
+      "case": "missing",
+      "requested_count": 25,
+      "expected_count": 0,
+      "duplicate_input_count": 0,
+      "exact_native_rows_equal": true,
+      "elapsed_ns": [
+        64880700,
+        64565000,
+        65050200
+      ],
+      "median_ns": 64880700,
+      "duckdb_version": "1.5.5",
+      "threads": 8,
+      "memory_limit": "12.5 GiB",
+      "query_plan_file": "existing_in-25-missing.plan.txt",
+      "status": "EXACT_ROWS_VERIFIED",
+      "process_wall_seconds": 1.1992459000030067
+    },
+    {
+      "method": "semi_join",
+      "size": 0,
+      "case": "empty",
+      "requested_count": 0,
+      "expected_count": 0,
+      "duplicate_input_count": 0,
+      "exact_native_rows_equal": true,
+      "elapsed_ns": [
+        4871500,
+        3845700,
+        4861300
+      ],
+      "median_ns": 4861300,
+      "duckdb_version": "1.5.5",
+      "threads": 8,
+      "memory_limit": "12.5 GiB",
+      "query_plan_file": "semi_join-0-empty.plan.txt",
+      "status": "EXACT_ROWS_VERIFIED",
+      "process_wall_seconds": 1.0227976000023773
+    },
+    {
+      "method": "semi_join",
+      "size": 25,
+      "case": "missing",
+      "requested_count": 25,
+      "expected_count": 0,
+      "duplicate_input_count": 0,
+      "exact_native_rows_equal": true,
+      "elapsed_ns": [
+        74497300,
+        63865200,
+        68360900
+      ],
+      "median_ns": 68360900,
+      "duckdb_version": "1.5.5",
+      "threads": 8,
+      "memory_limit": "12.5 GiB",
+      "query_plan_file": "semi_join-25-missing.plan.txt",
+      "status": "EXACT_ROWS_VERIFIED",
+      "process_wall_seconds": 1.3365928000130225
+    },
+    {
+      "method": "distinct_join",
+      "size": 0,
+      "case": "empty",
+      "requested_count": 0,
+      "expected_count": 0,
+      "duplicate_input_count": 0,
+      "exact_native_rows_equal": true,
+      "elapsed_ns": [
+        6258300,
+        4343600,
+        4130200
+      ],
+      "median_ns": 4343600,
+      "duckdb_version": "1.5.5",
+      "threads": 8,
+      "memory_limit": "12.5 GiB",
+      "query_plan_file": "distinct_join-0-empty.plan.txt",
+      "status": "EXACT_ROWS_VERIFIED",
+      "process_wall_seconds": 1.0044893000012962
+    },
+    {
+      "method": "distinct_join",
+      "size": 25,
+      "case": "missing",
+      "requested_count": 25,
+      "expected_count": 0,
+      "duplicate_input_count": 0,
+      "exact_native_rows_equal": true,
+      "elapsed_ns": [
+        83849800,
+        123623100,
+        108143600
+      ],
+      "median_ns": 108143600,
+      "duckdb_version": "1.5.5",
+      "threads": 8,
+      "memory_limit": "12.5 GiB",
+      "query_plan_file": "distinct_join-25-missing.plan.txt",
+      "status": "EXACT_ROWS_VERIFIED",
+      "process_wall_seconds": 1.361449399992125
+    },
+    {
+      "method": "materialized_semi",
+      "size": 0,
+      "case": "empty",
+      "requested_count": 0,
+      "expected_count": 0,
+      "duplicate_input_count": 0,
+      "exact_native_rows_equal": true,
+      "elapsed_ns": [
+        5494300,
+        4437800,
+        4032800
+      ],
+      "median_ns": 4437800,
+      "duckdb_version": "1.5.5",
+      "threads": 8,
+      "memory_limit": "12.5 GiB",
+      "query_plan_file": "materialized_semi-0-empty.plan.txt",
+      "status": "EXACT_ROWS_VERIFIED",
+      "process_wall_seconds": 1.0942068000003928
+    },
+    {
+      "method": "materialized_semi",
+      "size": 25,
+      "case": "missing",
+      "requested_count": 25,
+      "expected_count": 0,
+      "duplicate_input_count": 0,
+      "exact_native_rows_equal": true,
+      "elapsed_ns": [
+        75749300,
+        75569400,
+        72682100
+      ],
+      "median_ns": 75569400,
+      "duckdb_version": "1.5.5",
+      "threads": 8,
+      "memory_limit": "12.5 GiB",
+      "query_plan_file": "materialized_semi-25-missing.plan.txt",
+      "status": "EXACT_ROWS_VERIFIED",
+      "process_wall_seconds": 1.2913055999961216
+    },
+    {
+      "method": "chunked_in",
+      "size": 0,
+      "case": "empty",
+      "requested_count": 0,
+      "expected_count": 0,
+      "duplicate_input_count": 0,
+      "exact_native_rows_equal": true,
+      "elapsed_ns": [
+        12200,
+        5700,
+        2000
+      ],
+      "median_ns": 5700,
+      "duckdb_version": "1.5.5",
+      "threads": 8,
+      "memory_limit": "12.5 GiB",
+      "query_plan_file": "chunked_in-0-empty.plan.txt",
+      "status": "EXACT_ROWS_VERIFIED",
+      "process_wall_seconds": 0.9572940000070957
+    },
+    {
+      "method": "chunked_in",
+      "size": 25,
+      "case": "missing",
+      "requested_count": 25,
+      "expected_count": 0,
+      "duplicate_input_count": 0,
+      "exact_native_rows_equal": true,
+      "elapsed_ns": [
+        64864600,
+        64030800,
+        64871400
+      ],
+      "median_ns": 64864600,
+      "duckdb_version": "1.5.5",
+      "threads": 8,
+      "memory_limit": "12.5 GiB",
+      "query_plan_file": "chunked_in-25-missing.plan.txt",
+      "status": "EXACT_ROWS_VERIFIED",
+      "process_wall_seconds": 1.213189699992654
+    }
+  ]
+}

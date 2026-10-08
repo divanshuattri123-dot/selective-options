@@ -1,0 +1,47 @@
+{
+  "version": "0.3.28",
+  "started_at_ms": 1791028536481,
+  "orders_submitted": 0,
+  "trading_enabled": false,
+  "paper_trading_started": false,
+  "scope": "one recent performance sample and returned vote-account activated stake",
+  "status": "PUBLIC_NETWORK_SAMPLE_VERIFIED",
+  "rows": 3,
+  "pending_outbox_rows": 3,
+  "public_requests_attempted": 4,
+  "accepted_rpc_results": 4,
+  "pit_checks": 6,
+  "repeat_deduplication_verified": true,
+  "archive_exact_match": true,
+  "closed_reload_verified": true,
+  "parquet_sha256": "b3304a862fd902512acdb2bb44505f638c725a95d212a809ab11185f18beb942",
+  "quality": {
+    "source": "solana_public",
+    "asset": "SOL",
+    "as_of_ms": 1791028544400,
+    "state": "NETWORK_SAMPLE_VERIFIED",
+    "blocker": null,
+    "trading_approval": false,
+    "health_event_id": "4c58bde509d87bfb8a8d9cdfcb7241b0fecafb9d5d5b27ddd23e63582c822d92",
+    "health_received_at_ms": 1791028544400,
+    "health_reason": "NETWORK_SAMPLES_ACCEPTED",
+    "event_ids": [
+      "a195c48b735d46423da5ca0771c3b8c5edd789c83a3420efee06d0dc3942eff1",
+      "9e4d8e5ea1a07bf2bd4d503b56445b0644b89e6792d6176a3b6b2c773c08bb1c"
+    ],
+    "performance_time_ms": 1791028531000,
+    "stake_received_at_ms": 1791028543940
+  },
+  "health": {
+    "code": 0,
+    "error_type": null,
+    "event_ids": [
+      "a195c48b735d46423da5ca0771c3b8c5edd789c83a3420efee06d0dc3942eff1",
+      "9e4d8e5ea1a07bf2bd4d503b56445b0644b89e6792d6176a3b6b2c773c08bb1c"
+    ],
+    "ok": true,
+    "reason": "NETWORK_SAMPLES_ACCEPTED",
+    "scope": "performance and vote-account stake; sink accepted, no atomic commit claim"
+  },
+  "ended_at_ms": 1791028545188
+}

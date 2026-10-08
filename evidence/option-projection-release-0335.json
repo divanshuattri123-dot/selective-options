@@ -1,0 +1,139 @@
+{
+  "version": "0.3.35",
+  "tests_passed": 1229,
+  "added_tests": 48,
+  "coverage_percent": 97.97,
+  "store_coverage": {
+    "covered_lines": 162,
+    "num_statements": 163,
+    "percent_covered": 99.49238578680203,
+    "percent_covered_display": "99",
+    "missing_lines": 1,
+    "excluded_lines": 0,
+    "percent_statements_covered": 99.38650306748467,
+    "percent_statements_covered_display": "99",
+    "num_branches": 34,
+    "num_partial_branches": 0,
+    "covered_branches": 34,
+    "missing_branches": 0,
+    "percent_branches_covered": 100.0,
+    "percent_branches_covered_display": "100"
+  },
+  "wheel_source_modules": 52,
+  "wheel_source_exact_match": true,
+  "config_valid": true,
+  "ruff_checked": true,
+  "ruff_formatted_source_script_test_files": 126,
+  "mypy_source_script_files": 73,
+  "bounded_option_materialization_implemented": true,
+  "capture_report_uses_bounded_projection": true,
+  "context_validated_before_quote_query": true,
+  "both_clocks_and_resync_constrain_sql_before_ranking": true,
+  "all_latest_clock_pair_ties_retained": true,
+  "controls_and_metadata_not_pruned": true,
+  "shared_application_row_budget": 100000,
+  "single_overflow_sentinel": true,
+  "source_native_asset_equivalence": [
+    {
+      "source_artifact": "reused-validation-public-01",
+      "asset": "BTC",
+      "retained_native_rows": 62089,
+      "final_materialized_query_rows": [
+        1013,
+        2020
+      ],
+      "final_materialized_total": 3033,
+      "original_saved_view_exactly_matches": true,
+      "source_and_receipt_pit_boundaries": 5,
+      "coverage_state": "INCOMPLETE_LEG_OBSERVATIONS",
+      "blocker": null
+    },
+    {
+      "source_artifact": "multiasset-options-public-01",
+      "asset": "ETH",
+      "retained_native_rows": 47756,
+      "final_materialized_query_rows": [
+        807,
+        1608
+      ],
+      "final_materialized_total": 2415,
+      "original_saved_view_exactly_matches": true,
+      "source_and_receipt_pit_boundaries": 5,
+      "coverage_state": "INCOMPLETE_LEG_OBSERVATIONS",
+      "blocker": null
+    },
+    {
+      "source_artifact": "multiasset-options-public-01",
+      "asset": "SOL",
+      "retained_native_rows": 47756,
+      "final_materialized_query_rows": [
+        145,
+        284
+      ],
+      "final_materialized_total": 429,
+      "original_saved_view_exactly_matches": true,
+      "source_and_receipt_pit_boundaries": 5,
+      "coverage_state": "INCOMPLETE_LEG_OBSERVATIONS",
+      "blocker": null
+    },
+    {
+      "source_artifact": "multiasset-options-public-01",
+      "asset": "PAXG",
+      "retained_native_rows": 47756,
+      "final_materialized_query_rows": [
+        3
+      ],
+      "final_materialized_total": 3,
+      "original_saved_view_exactly_matches": true,
+      "source_and_receipt_pit_boundaries": 5,
+      "coverage_state": "BLOCKED",
+      "blocker": "OPTION_SELECTED_UNIVERSE_EMPTY"
+    }
+  ],
+  "original_native_source_rows": 109845,
+  "source_and_receipt_pit_boundaries": 20,
+  "synthetic_retained_history_proof": {
+    "scope": "EXPLICITLY_SYNTHETIC_OLD_QUOTE_HISTORY_ADDED_TO_NATIVE_REPLAY",
+    "synthetic_history_rows": 110000,
+    "native_rows_unchanged": 62089,
+    "retained_total_rows": 172089,
+    "old_full_materialization_blocker": "OPTION_COVERAGE_OVER_BUDGET",
+    "bounded_projection_matches_original_saved_view": true,
+    "bounded_materialized_query_rows": [
+      1013,
+      2020
+    ],
+    "pending_outbox_rows": 172089,
+    "synthetic_events_not_claimed_as_public_history": true
+  },
+  "historical_event_or_outbox_rows_deleted": 0,
+  "stale_age_bounds_or_native_clocks_relaxed": false,
+  "independent_in_memory_coverage_policy_unchanged": true,
+  "closed_reload_exact_native_subset_and_archives_verified": true,
+  "original_source_bytes_unchanged": true,
+  "new_network_requests": 0,
+  "projection_worker_cancellation_drained_under_serialized_lock": true,
+  "invalid_policy_and_blocked_context_preflight_verified": true,
+  "corrupt_unrelated_status_roots_preserved_for_refusal": true,
+  "incomplete_local_harness_preserved": "work/option-projection-attempt-01",
+  "complete_saved_derived_artifacts": "option-projection-replay-02",
+  "large_id_lookup_query_plan_or_root_cause_established": false,
+  "database_scan_time_size_or_engine_memory_bounded": false,
+  "metadata_control_generation_materialization_bounded": false,
+  "all_required_assets_or_feeds_verified": false,
+  "all_native_option_fields_verified": false,
+  "full_fresh_option_stream_verified": false,
+  "uncapped_sustained_public_capacity_verified": false,
+  "option_trade_history_continuity_verified": false,
+  "seven_day_unattended_operation_verified": false,
+  "milestone": 2,
+  "milestone_advance_allowed": false,
+  "trading_enabled": false,
+  "generated_docs_idempotent": true,
+  "generated_doc_sha256": {
+    "README.md": "7566bfe69604037a6b6ed2b8474b5c960d08dbd342fb234dbbce9958db0c3837",
+    "PARAMETERS.md": "e50f08a20714b7e107fe4bded26a22b8236e1cbab1a1af7d89dea6a30c49554c",
+    "config\\default.yaml": "d30c26ce62ba546fed706ad85ab33beb3f64cadee56e0dc94261ac81a12e9503"
+  },
+  "wheel_sha256": "1baa6dafea29a060a1c976645f9f2cb7db8ea478daee5e7c2a8bea95e7dc0af7"
+}

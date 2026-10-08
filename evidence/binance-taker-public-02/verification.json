@@ -1,0 +1,87 @@
+{
+  "status": "SAVED_PUBLIC_RESPONSES_INDEPENDENTLY_VERIFIED",
+  "network_requests": 0,
+  "flow_rows": 12,
+  "database_rows": 16,
+  "exact_reported_decimal_values": true,
+  "period_and_receipt_checks": true,
+  "point_in_time_checks": 24,
+  "database_parquet_exact_match": true,
+  "observations": [
+    {
+      "event_id": "12daaaaca076b19f035f832a9884928e64c4823e5e81e51e5618b8e2785c8e4a",
+      "asset": "PAXG",
+      "period_start_ms": 1790863800000,
+      "observed_at_ms": 1790864884094
+    },
+    {
+      "event_id": "165e065c46710706b0050863ceffd24ec975085c5ac3e9c63f033988d8523dfa",
+      "asset": "ETH",
+      "period_start_ms": 1790863800000,
+      "observed_at_ms": 1790864882810
+    },
+    {
+      "event_id": "4966ebbabeb0226eb324fa658aa74c8cec8977e97246a624b8362408b71dfad9",
+      "asset": "BTC",
+      "period_start_ms": 1790864400000,
+      "observed_at_ms": 1790864882340
+    },
+    {
+      "event_id": "60bb5c16628c17cd81a0d6733afedfbc23483f8f54a102ed3d5db7fdb713a475",
+      "asset": "SOL",
+      "period_start_ms": 1790864400000,
+      "observed_at_ms": 1790864883353
+    },
+    {
+      "event_id": "82b3db2f44533dd6eb123a4341fa05bf4fa7e9938b69b9354e2ecf0b043a5d64",
+      "asset": "PAXG",
+      "period_start_ms": 1790864100000,
+      "observed_at_ms": 1790864884094
+    },
+    {
+      "event_id": "8ee58357c9f0a518147e68379aca3f091fa039970f1382b2989e4003f21b009c",
+      "asset": "SOL",
+      "period_start_ms": 1790864100000,
+      "observed_at_ms": 1790864883353
+    },
+    {
+      "event_id": "968255d6a4b2ba87421a2d85df119392ec5f1f4dd7e1c87432529685e5e2a522",
+      "asset": "ETH",
+      "period_start_ms": 1790864100000,
+      "observed_at_ms": 1790864882810
+    },
+    {
+      "event_id": "acc8343c28a60b88120cd5fc96ee48d158edb8f31dbc60c849a726722260774b",
+      "asset": "ETH",
+      "period_start_ms": 1790863500000,
+      "observed_at_ms": 1790864882810
+    },
+    {
+      "event_id": "b5346268a1a6b11f4961414161eb9bd2f6dfe0a3e69ba2572e2ac2733dffe7ac",
+      "asset": "BTC",
+      "period_start_ms": 1790863800000,
+      "observed_at_ms": 1790864882340
+    },
+    {
+      "event_id": "eb10ee04ba1ad55a81783668b7c0048c2714e63df70767e77be60a73ecb35aac",
+      "asset": "BTC",
+      "period_start_ms": 1790864100000,
+      "observed_at_ms": 1790864882340
+    },
+    {
+      "event_id": "f98f70dc72b3ddead03288c2591bafb99bc1c172567356c3abc06427e92415f0",
+      "asset": "PAXG",
+      "period_start_ms": 1790863500000,
+      "observed_at_ms": 1790864884094
+    },
+    {
+      "event_id": "fa886b73552e5e918c357212c9a9f1da5417cbf06f5a3d691f060a55380fa13f",
+      "asset": "SOL",
+      "period_start_ms": 1790863800000,
+      "observed_at_ms": 1790864883353
+    }
+  ],
+  "continuous_history_verified": false,
+  "volume_normalization_verified": false,
+  "trading_enabled": false
+}

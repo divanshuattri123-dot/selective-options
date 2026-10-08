@@ -1,0 +1,13 @@
+{
+  "version": "0.3.46",
+  "imported_package": "C:\\Users\\Divan\\Documents\\Codex\\2026-09-20\\files-pasted-by-the-user-build\\work\\wheel-runtime-0346\\selective_options\\__init__.py",
+  "isolated_wheel_import_verified": true,
+  "source_modules_exact": 71,
+  "cli_config_validated": true,
+  "cli_trend_features_executed": true,
+  "installed_checkpoint_loader_executed": true,
+  "checkpoint_members": 50,
+  "feature_report_sha256": "032d5b04f819119b070f62f3ea36aad57897364df18bd5985a7a2d6e392a044b",
+  "new_public_requests": 0,
+  "trading_enabled": false
+}

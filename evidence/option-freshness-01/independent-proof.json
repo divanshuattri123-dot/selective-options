@@ -1,0 +1,148 @@
+{
+  "latest_current_script_rerun_exact": true,
+  "original_source_hashes_unchanged": true,
+  "saved_coverage_exact": true,
+  "independent_latest_identity_both_clock_native_provenance_and_statistics_exact": true,
+  "assets": [
+    {
+      "asset": "BTC",
+      "independent_latest_rows": 2020,
+      "by_kind": {
+        "ticker": {
+          "selected_legs": 1010,
+          "stale_legs": 0,
+          "source_age_range_ms": [
+            1758,
+            3325
+          ],
+          "receipt_age_range_ms": [
+            2998,
+            3747
+          ],
+          "selected_receipt_minus_source_range_ms": [
+            -1280,
+            -398
+          ],
+          "negative_selected_difference_count": 1010,
+          "stored_selected_session_observations": 51776,
+          "recent_receipts_with_old_source_count": 0
+        },
+        "book": {
+          "selected_legs": 1010,
+          "stale_legs": 74,
+          "source_age_range_ms": [
+            1758,
+            78852
+          ],
+          "receipt_age_range_ms": [
+            2983,
+            74909
+          ],
+          "selected_receipt_minus_source_range_ms": [
+            -1532,
+            4162
+          ],
+          "negative_selected_difference_count": 983,
+          "stored_selected_session_observations": 8206,
+          "recent_receipts_with_old_source_count": 0
+        }
+      }
+    },
+    {
+      "asset": "ETH",
+      "independent_latest_rows": 1608,
+      "by_kind": {
+        "ticker": {
+          "selected_legs": 804,
+          "stale_legs": 0,
+          "source_age_range_ms": [
+            772,
+            2851
+          ],
+          "receipt_age_range_ms": [
+            2297,
+            4308
+          ],
+          "selected_receipt_minus_source_range_ms": [
+            -1531,
+            -318
+          ],
+          "negative_selected_difference_count": 804,
+          "stored_selected_session_observations": 31622,
+          "recent_receipts_with_old_source_count": 0
+        },
+        "book": {
+          "selected_legs": 804,
+          "stale_legs": 158,
+          "source_age_range_ms": [
+            766,
+            68308
+          ],
+          "receipt_age_range_ms": [
+            2288,
+            67719
+          ],
+          "selected_receipt_minus_source_range_ms": [
+            -1528,
+            3643
+          ],
+          "negative_selected_difference_count": 669,
+          "stored_selected_session_observations": 11305,
+          "recent_receipts_with_old_source_count": 0
+        }
+      }
+    },
+    {
+      "asset": "SOL",
+      "independent_latest_rows": 284,
+      "by_kind": {
+        "ticker": {
+          "selected_legs": 142,
+          "stale_legs": 0,
+          "source_age_range_ms": [
+            5344,
+            5344
+          ],
+          "receipt_age_range_ms": [
+            6012,
+            6383
+          ],
+          "selected_receipt_minus_source_range_ms": [
+            -1039,
+            -668
+          ],
+          "negative_selected_difference_count": 142,
+          "stored_selected_session_observations": 2707,
+          "recent_receipts_with_old_source_count": 0
+        },
+        "book": {
+          "selected_legs": 142,
+          "stale_legs": 142,
+          "source_age_range_ms": [
+            54584,
+            58611
+          ],
+          "receipt_age_range_ms": [
+            55319,
+            56181
+          ],
+          "selected_receipt_minus_source_range_ms": [
+            -737,
+            3096
+          ],
+          "negative_selected_difference_count": 13,
+          "stored_selected_session_observations": 142,
+          "recent_receipts_with_old_source_count": 0
+        }
+      }
+    },
+    {
+      "asset": "PAXG",
+      "blocker": "OPTION_SELECTED_UNIVERSE_EMPTY"
+    }
+  ],
+  "new_network_requests": 0,
+  "orders_submitted": 0,
+  "milestone_2_complete": false,
+  "trading_enabled": false
+}

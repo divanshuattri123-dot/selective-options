@@ -1,0 +1,118 @@
+"""Bounded read-only SQL identity lookup experiment; no network or source mutation."""
+import hashlib
+import json
+import platform
+import subprocess
+import sys
+import time
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent
+PROJECT = ROOT.parent.parent / "outputs" / "selective-options"
+SOURCE = PROJECT / "evidence" / "reused-validation-public-01" / "events.duckdb"
+SQL = {
+    "existing_in": "SELECT * FROM events WHERE event_id IN (SELECT unnest(?))",
+    "semi_join": "SELECT e.* FROM events e SEMI JOIN unnest(?) ids(event_id) ON e.event_id=ids.event_id",
+    "distinct_join": "SELECT e.* FROM events e JOIN (SELECT DISTINCT unnest(?) AS event_id) ids USING(event_id)",
+    "materialized_semi": "WITH ids AS MATERIALIZED (SELECT unnest(?) AS event_id) SELECT e.* FROM events e SEMI JOIN ids ON e.event_id=ids.event_id",
+    "chunked_in": "SELECT * FROM events WHERE event_id IN (SELECT unnest(?))",
+    "json_semi": "SELECT e.* FROM events e SEMI JOIN json_each(?) ids ON e.event_id=(ids.value ->> '$')",
+    "json_in": "SELECT * FROM events WHERE event_id IN (SELECT value ->> '$' FROM json_each(?))",
+    "json_symbol_in": "SELECT * FROM events WHERE symbol IN (SELECT value ->> '$' FROM json_each(?))",
+    "json_symbol_semi": "SELECT e.* FROM events e SEMI JOIN json_each(?) symbols ON e.symbol=(symbols.value ->> '$')",
+}
+
+
+def digest(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def worker(method, size, case, out):
+    import duckdb
+
+    with duckdb.connect(str(SOURCE), read_only=True) as db:
+        original = db.execute("SELECT * FROM events ORDER BY event_id").fetchall()
+        assert len(original) == 62089
+        oracle = {str(row[0]): tuple(row) for row in original}
+        symbol_mode = method.startswith("json_symbol_")
+        base_ids = list(dict.fromkeys(str(row[4]) for row in original))[:size] if symbol_mode else list(oracle)[:size]
+        if case == "mixed":
+            requested = base_ids + base_ids[: min(20, size)] + ["absent-id-" + str(i) for i in range(20)]
+        elif case == "empty":
+            requested = []
+        elif case == "missing":
+            requested = ["absent-id-" + str(i) for i in range(size)]
+        else:
+            requested = base_ids
+        requested_set = set(requested)
+        expected = {str(row[0]): tuple(row) for row in original if str(row[4]) in requested_set} if symbol_mode else {key: oracle[key] for key in requested_set if key in oracle}
+        params = json.dumps(requested) if method.startswith("json_") else requested
+        plan = db.execute("EXPLAIN " + SQL[method], [requested[:256] if method == "chunked_in" else params]).fetchall()
+        (ROOT / (out.stem + ".plan.txt")).write_text("\n".join(str(row[1]) for row in plan), encoding="utf-8")
+        settings = db.execute("SELECT current_setting('threads'), current_setting('memory_limit')").fetchone()
+        times = []
+        for _ in range(3):
+            started = time.perf_counter_ns()
+            if method == "chunked_in":
+                result = []
+                unique = list(dict.fromkeys(requested))
+                for index in range(0, len(unique), 256):
+                    result.extend(db.execute(SQL[method], [unique[index:index + 256]]).fetchall())
+            else:
+                result = db.execute(SQL[method], [json.dumps(requested) if method.startswith("json_") else requested]).fetchall()
+            elapsed = time.perf_counter_ns() - started
+            actual = {str(row[0]): tuple(row) for row in result}
+            assert len(result) == len(actual) == len(expected)
+            assert actual == expected
+            times.append(elapsed)
+        out.write_text(json.dumps({
+            "method": method, "size": size, "case": case, "requested_count": len(requested),
+            "expected_count": len(expected), "duplicate_input_count": len(requested) - len(set(requested)),
+            "exact_native_rows_equal": True, "elapsed_ns": times,
+            "median_ns": sorted(times)[1], "duckdb_version": duckdb.__version__,
+            "threads": settings[0], "memory_limit": settings[1],
+            "query_plan_file": out.stem + ".plan.txt",
+        }, indent=2), encoding="utf-8")
+
+
+def main():
+    before = digest(SOURCE)
+    results = []
+    cases = [(method, size, "mixed") for size in (1000, 20001, 62089) for method in SQL]
+    cases.extend((method, size, case) for method in SQL for size, case in ((0, "empty"), (25, "missing")))
+    for method, size, case in cases:
+        filename = ROOT / f"{method}-{size}-{case}.json"
+        assert not filename.exists()
+        started = time.perf_counter()
+        process = subprocess.Popen([sys.executable, str(__file__), "worker", method, str(size), case, str(filename)], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        try:
+            stdout, stderr = process.communicate(timeout=15)
+        except subprocess.TimeoutExpired:
+            process.kill()
+            stdout, stderr = process.communicate(timeout=5)
+            result = {"method": method, "size": size, "case": case, "status": "PROCESS_DEADLINE", "deadline_seconds": 15}
+        else:
+            assert process.returncode == 0, stderr.decode("utf-8", errors="replace")
+            result = json.loads(filename.read_text(encoding="utf-8")) | {"status": "EXACT_ROWS_VERIFIED"}
+        result["process_wall_seconds"] = time.perf_counter() - started
+        results.append(result)
+        (ROOT / "progress.json").write_text(json.dumps(results, indent=2), encoding="utf-8")
+        print(method, size, case, result["status"], flush=True)
+    after = digest(SOURCE)
+    assert before == after
+    report = {
+        "source": str(SOURCE.relative_to(PROJECT)), "source_sha256_before": before,
+        "source_sha256_after": after, "original_source_unchanged": True,
+        "native_rows": 62089, "python": sys.version, "platform": platform.platform(),
+        "network_requests": 0, "production_source_edits": 0,
+        "measurement_scope": "Execute, parameter bind, fetch all only; three runs on one fresh read-only connection per process. Process deadline includes opening database, oracle load and EXPLAIN. Processes run sequentially. No performance pass threshold.",
+        "results": results,
+    }
+    (ROOT / "report.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
+
+
+if __name__ == "__main__":
+    if len(sys.argv) > 1 and sys.argv[1] == "worker":
+        worker(sys.argv[2], int(sys.argv[3]), sys.argv[4], Path(sys.argv[5]))
+    else:
+        main()

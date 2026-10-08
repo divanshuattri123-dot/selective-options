@@ -1,0 +1,19 @@
+{
+  "build_version": "0.3.8",
+  "status": "OFFLINE_RUNTIME_ACTIVATION_VERIFIED",
+  "evidence_type": "saved public events with intentional omission; no live network or Redis server",
+  "anchor_id": 108674374,
+  "through_id": 108674494,
+  "selected_rows": 120,
+  "raw_rows": 137,
+  "database_rows": 139,
+  "marker_id": "d8ffa42be37082ada157ebce0681a27f9b4457ded41c56e12482bff23b301c1c",
+  "durable_anchor_barrier_verified": true,
+  "consumer_delivery_before_activation_verified": true,
+  "saved_overlap_deduplicated": true,
+  "active_bars_partial_without_recovery_recount": true,
+  "redis_pending": 139,
+  "automatic_socket_routing_enabled": false,
+  "trading_enabled": false,
+  "parquet_sha256": "16fe9a0377ed52a7ec2400ba0e7c9ce775e6d93a6acdabf28ebfe35450c9d9f5"
+}

@@ -1,0 +1,14 @@
+{
+  "version": "0.3.15",
+  "source_url": "https://apps.bea.gov/API/signup/release_dates.json",
+  "started_at_ms": 1790606797166,
+  "orders_submitted": 0,
+  "trading_enabled": false,
+  "paper_trading_started": false,
+  "observed_at_ms": 1790606798741,
+  "status": "FAILED_OR_UNAVAILABLE",
+  "failure_type": "ValidationError",
+  "reason": null,
+  "code": null,
+  "ended_at_ms": 1790606798769
+}

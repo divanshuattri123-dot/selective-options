@@ -1,0 +1,83 @@
+{
+  "status": "EXACT_NATIVE_JSON_SET_LOOKUPS_VERIFIED",
+  "native_rows": 62089,
+  "checks": [
+    {
+      "sql": "SELECT e.* FROM events e SEMI JOIN json_each(?) ids ON e.event_id=(ids.value ->> '$')",
+      "requested": 1,
+      "returned": 0,
+      "exact_native_rows_equal": true
+    },
+    {
+      "sql": "SELECT e.* FROM events e SEMI JOIN json_each(?) ids ON e.event_id=(ids.value ->> '$')",
+      "requested": 1021,
+      "returned": 1000,
+      "exact_native_rows_equal": true
+    },
+    {
+      "sql": "SELECT e.* FROM events e SEMI JOIN json_each(?) ids ON e.event_id=(ids.value ->> '$')",
+      "requested": 20022,
+      "returned": 20001,
+      "exact_native_rows_equal": true
+    },
+    {
+      "sql": "SELECT e.* FROM events e SEMI JOIN json_each(?) ids ON e.event_id=(ids.value ->> '$')",
+      "requested": 62110,
+      "returned": 62089,
+      "exact_native_rows_equal": true
+    },
+    {
+      "sql": "SELECT * FROM events WHERE event_id IN (SELECT value ->> '$' FROM json_each(?))",
+      "requested": 1,
+      "returned": 0,
+      "exact_native_rows_equal": true
+    },
+    {
+      "sql": "SELECT * FROM events WHERE event_id IN (SELECT value ->> '$' FROM json_each(?))",
+      "requested": 1021,
+      "returned": 1000,
+      "exact_native_rows_equal": true
+    },
+    {
+      "sql": "SELECT * FROM events WHERE event_id IN (SELECT value ->> '$' FROM json_each(?))",
+      "requested": 20022,
+      "returned": 20001,
+      "exact_native_rows_equal": true
+    },
+    {
+      "sql": "SELECT * FROM events WHERE event_id IN (SELECT value ->> '$' FROM json_each(?))",
+      "requested": 62110,
+      "returned": 62089,
+      "exact_native_rows_equal": true
+    },
+    {
+      "sql": "SELECT * FROM events WHERE symbol IN (SELECT value ->> '$' FROM json_each(?))",
+      "requested": 1,
+      "returned": 0,
+      "exact_native_rows_equal": true
+    },
+    {
+      "sql": "SELECT * FROM events WHERE symbol IN (SELECT value ->> '$' FROM json_each(?))",
+      "requested": 1021,
+      "returned": 61374,
+      "exact_native_rows_equal": true
+    },
+    {
+      "sql": "SELECT * FROM events WHERE symbol IN (SELECT value ->> '$' FROM json_each(?))",
+      "requested": 1033,
+      "returned": 62089,
+      "exact_native_rows_equal": true
+    },
+    {
+      "sql": "SELECT * FROM events WHERE symbol IN (SELECT value ->> '$' FROM json_each(?))",
+      "requested": 1033,
+      "returned": 62089,
+      "exact_native_rows_equal": true
+    }
+  ],
+  "source_sha256": "97c10f3c2f59a67edff83104fceca3b0b195b1498432597abde62e509f4cabdc",
+  "original_bytes_unchanged": true,
+  "new_network_requests": 0,
+  "orders_submitted": 0,
+  "performance_threshold_claimed": false
+}

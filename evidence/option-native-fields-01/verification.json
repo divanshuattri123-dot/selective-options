@@ -1,0 +1,32 @@
+{
+  "status": "EXACT_FINAL_SCRIPT_NATIVE_AUDITS_VERIFIED",
+  "checks": [
+    {
+      "asset": "BTC",
+      "exact_saved_audit_equal": true,
+      "members": 1010,
+      "full_native_chain_fresh": false
+    },
+    {
+      "asset": "ETH",
+      "exact_saved_audit_equal": true,
+      "members": 804,
+      "full_native_chain_fresh": false
+    },
+    {
+      "asset": "SOL",
+      "exact_saved_audit_equal": true,
+      "members": 142,
+      "full_native_chain_fresh": false
+    },
+    {
+      "asset": "PAXG",
+      "exact_saved_audit_equal": true,
+      "members": 0,
+      "full_native_chain_fresh": false
+    }
+  ],
+  "original_bytes_unchanged": true,
+  "new_network_requests": 0,
+  "orders_submitted": 0
+}

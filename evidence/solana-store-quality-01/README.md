@@ -1,0 +1,3 @@
+# Saved public SOL bounded query proof
+
+Three unchanged native rows from solana-network-public-01 are retained alongside 1,000 clearly labelled unrelated fixtures. The new exact scope query returns only the three native rows, with both clocks checked before LIMIT and overflow refusal. Six native PIT boundaries, exact quality/archive/outbox/closed reload and original source hashes passed. Parent independently checks all 1,003 retained rows and both budget outcomes. Zero network calls occurred; database scan/time/engine memory and complete history are not bounded or verified. verification-source.py preserves the original finite proof harness.

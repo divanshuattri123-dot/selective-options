@@ -1,0 +1,21 @@
+# Fixed publisher RSS endpoint discovery — 4 October 2026
+
+This directory records three direct public HTTPS requests with default TLS, a 15-second timeout per request, a 2 MB decoded-entity budget, no retries and no automatic redirect following. It is endpoint discovery and saved native metadata verification, not continuous ingestion, complete news coverage or trading approval.
+
+1. The immutable .40 fixed URL `https://www.coindesk.com/arc/outboundfeeds/rss/?outputType=xml` returned HTTP 308. Its exact native Location header was `/arc/outboundfeeds/rss?outputType=xml`. The 15 decoded response bytes match the earlier .40 redirect entity SHA-256 `7c040f8633b8823d72ed63da9b3b2dfe9846e912c66a64c9433ec9c4815d76c2`.
+2. CoinDesk's own RSS documentation at `https://www.coindesk.com/coindesk-news/2021/09/17/coindesk-rss` returned HTTP 200. Its saved HTML independently contains publisher RSS links. Those links are exactly listed in `verification.json`; the historical article's body links still include a trailing slash, while its page navigation includes the slashless path. No migration announcement or migration date is inferred.
+3. The native relative Location was explicitly resolved on the fixed `https://www.coindesk.com` origin, then the exact HTTPS host, path and `outputType=xml` query were validated before one independent direct request. `https://www.coindesk.com/arc/outboundfeeds/rss?outputType=xml` returned HTTP 200, `application/xml`, with 30,250 decoded entity bytes. This is a separately issued discovery request, not collector redirect handling.
+
+The discovery budget is exhausted. `discovery.json` preserves exact HTTP statuses, native Location/content-type values, receipts, entity filenames, lengths and hashes. `discovery-verifier.py` preserves the first two-request script, whose conservative absolute-URL guard did not accept the native relative Location. `relative-location-verifier.py` preserves the separate third request and its exact same-origin/path/query checks. These scripts must not be rerun against this directory. No existing public evidence, database, .40 source snapshot or .40 ZIP was overwritten.
+
+`native-verification.py` makes no network request. It independently parses the saved RSS with a DTD/entity/external-resource-refusing DOM, compares all 25 direct native title/link/GUID/pubDate values against the production parser, and checks all native publication claims and actual observation receipts. All 25 items were accepted; none was rejected. Full RSS bodies are saved as HTTP evidence, but the collector emits metadata only and never requests article bodies, follows item links or assigns sentiment/classification. Publisher publication time is a claim; independent first publication and completeness remain unverified.
+
+The .41 collector fixed URL is slashless. Its request still refuses redirects and preserves an optional native Location header through the finite verification hook; the hook never initiates a request or changes canonical metadata/health payloads. Canonical provenance accepts exactly the new and legacy fixed URL strings, allowing retained .40 rows to reconstruct with their original payloads and IDs. The old failed .40 health row was loaded read-only and its entire quality dictionary still equals its immutable historical report. Source/environment/asset/symbol scopes remain unchanged. New default payloads retain the actual canonical URL, so their identities naturally include that updated provenance; previous observations are not rewritten.
+
+`source-0340.py` SHA-256: `0ad84c80cf916e6677b214fe6883e2003b5a97287ab93795d062fa47ce5286d1`.
+
+Frozen `source-0341.py` SHA-256: `97944a8d9a9518685249ac0e3f68a521489b3f5ec2c893f10702fb7ff174565b`.
+
+All 65 owned collector cases passed in 1.58 seconds, including legacy redirect refusal, exact provenance allowlists, historical canonical failure/recovery and native empty-auth/control-character URL guards. Ruff lint/format and strict source mypy passed. These are software fixtures; actual public observations are confined to the three requests above. A separate independent one-request collector/storage verifier may be recorded elsewhere; this directory does not claim its result.
+
+No accounts, private requests, credentials, orders, production execution, elapsed soak run or later milestone completion occurred.

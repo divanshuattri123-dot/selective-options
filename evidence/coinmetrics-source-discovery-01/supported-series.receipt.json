@@ -1,0 +1,26 @@
+{
+  "url": "https://community-api.coinmetrics.io/v4/timeseries/asset-metrics",
+  "parameters": {
+    "assets": "btc,eth",
+    "metrics": "CapMrktCurUSD,CapMVRVCur",
+    "frequency": "1d",
+    "page_size": "10",
+    "limit_per_asset": "2",
+    "paging_from": "end"
+  },
+  "started_at_ms": 1791387494280,
+  "authentication": "none",
+  "max_bytes": 2000000,
+  "status": 200,
+  "headers": {
+    "Date": "Wed, 07 Oct 2026 15:38:21 GMT",
+    "Content-Type": "application/json",
+    "x-ratelimit-plan": "download",
+    "x-ratelimit-limit": "6000, 6000;w=20;comment=\"sliding window\"",
+    "x-ratelimit-remaining": "5999",
+    "x-ratelimit-reset": "20"
+  },
+  "received_at_ms": 1791387494992,
+  "bytes": 598,
+  "sha256": "a84f23e9eea88bbb5fe884c893afdb85bdc5b48e2c28fefcc4fa3dd5bc852734"
+}

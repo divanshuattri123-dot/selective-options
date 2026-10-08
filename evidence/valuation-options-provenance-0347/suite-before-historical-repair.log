@@ -1,0 +1,307 @@
+........................................................................ [  2%]
+........................................................................ [  4%]
+........................................................................ [  6%]
+........................................................................ [  9%]
+.....................FFFFFF.F........................................... [ 11%]
+........................................................................ [ 13%]
+........................................................................ [ 15%]
+........................................................................ [ 18%]
+........................................................................ [ 20%]
+........................................................................ [ 22%]
+........................................................................ [ 24%]
+........................................................................ [ 27%]
+........................................................................ [ 29%]
+........................................................................ [ 31%]
+........................................................................ [ 33%]
+........................................................................ [ 36%]
+........................................................................ [ 38%]
+........................................................................ [ 40%]
+........................................................................ [ 42%]
+........................................................................ [ 45%]
+........................................................................ [ 47%]
+........................................................................ [ 49%]
+........................................................................ [ 52%]
+........................................................................ [ 54%]
+........................................................................ [ 56%]
+........................................................................ [ 58%]
+........................................................................ [ 61%]
+........................................................................ [ 63%]
+........................................................................ [ 65%]
+........................................................................ [ 67%]
+........................................................................ [ 70%]
+........................................................................ [ 72%]
+........................................................................ [ 74%]
+........................................................................ [ 76%]
+........................................................................ [ 79%]
+........................................................................ [ 81%]
+........................................................................ [ 83%]
+........................................................................ [ 85%]
+........................................................................ [ 88%]
+........................................................................ [ 90%]
+........................................................................ [ 92%]
+........................................................................ [ 95%]
+........................................................................ [ 97%]
+........................................................................ [ 99%]
+..............                                                           [100%]
+================================== FAILURES ===================================
+___________ test_intact_audit_binds_every_artifact_and_is_readonly ____________
+
+intact_proof = WindowsPath('C:/Users/Divan/Documents/Codex/2026-09-20/files-pasted-by-the-user-build/outputs/selective-options/evidence/bar-checkpoint-resume-01')
+tmp_path = WindowsPath('C:/Users/Divan/AppData/Local/Temp/pytest-of-Divan/pytest-285/test_intact_audit_binds_every_0')
+
+    async def test_intact_audit_binds_every_artifact_and_is_readonly(intact_proof, tmp_path):
+        before = tree(intact_proof)
+        output = tmp_path / "audit.json"
+>       result = await audit(intact_proof, output, require_current_code=False)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_bar_checkpoint_audit.py:57: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+scripts\audit_bar_checkpoint.py:782: in audit
+    result = await complete_thread(_audit, proof, root, require_current_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\selective_options\store.py:44: in complete_thread
+    result = await asyncio.shield(task)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\asyncio\threads.py:25: in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py:59: in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+scripts\audit_bar_checkpoint.py:574: in _audit
+    require(set(recorded_code) == set(current_code), "EXACT_CODE_FILE_SET")
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+condition = False, reason = 'EXACT_CODE_FILE_SET'
+
+    def require(condition: bool, reason: str) -> None:
+        if not condition:
+>           raise AuditError(reason)
+E           scripts.audit_parallel_foundations.AuditError: EXACT_CODE_FILE_SET
+
+scripts\audit_parallel_foundations.py:38: AuditError
+_____ test_semantic_bucket_count_refused_after_all_related_seals_updated ______
+
+copied_proof = WindowsPath('C:/Users/Divan/AppData/Local/Temp/pytest-of-Divan/pytest-285/test_semantic_bucket_count_ref0/proof')
+tmp_path = WindowsPath('C:/Users/Divan/AppData/Local/Temp/pytest-of-Divan/pytest-285/test_semantic_bucket_count_ref0')
+
+    async def test_semantic_bucket_count_refused_after_all_related_seals_updated(
+        copied_proof, tmp_path
+    ):
+        directory = copied_proof / "cohort-0-initial/bar-checkpoint"
+        state_path = directory / "state-000000.json"
+        state = json.loads(state_path.read_text())
+        state["buckets"][0]["count"] += 1
+        write(state_path, state)
+        manifest_path = directory / "checkpoint.json"
+        manifest = json.loads(manifest_path.read_text())
+        manifest["books"][0]["state_sha256"] = digest(state_path)
+        manifest["books"][0]["state_bytes"] = state_path.stat().st_size
+        write(manifest_path, manifest)
+        reseal_phase(copied_proof, 0, "initial")
+        output = tmp_path / "audit.json"
+>       with pytest.raises(AuditError, match="BAR_COUNT"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: Regex pattern did not match.
+E         Expected regex: 'BAR_COUNT'
+E         Actual message: 'EXACT_CODE_FILE_SET'
+
+tests\test_bar_checkpoint_audit.py:86: AssertionError
+_______ test_closed_seed_ack_refused_after_digest_and_reports_resealed ________
+
+copied_proof = WindowsPath('C:/Users/Divan/AppData/Local/Temp/pytest-of-Divan/pytest-285/test_closed_seed_ack_refused_a0/proof')
+tmp_path = WindowsPath('C:/Users/Divan/AppData/Local/Temp/pytest-of-Divan/pytest-285/test_closed_seed_ack_refused_a0')
+
+    async def test_closed_seed_ack_refused_after_digest_and_reports_resealed(copied_proof, tmp_path):
+        directory = copied_proof / "cohort-0-resumed"
+        database = directory / "seed-verified.duckdb"
+        with duckdb.connect(str(database)) as connection:
+            connection.execute("UPDATE delivery_outbox SET delivered=true")
+        capture_path = directory / "report.json"
+        capture = json.loads(capture_path.read_text())
+        capture["bar_resume"]["closed_seed_verification"]["database_sha256"] = digest(database)
+        write(capture_path, capture)
+        path = copied_proof / "report.json"
+        report = json.loads(path.read_text())
+        report["captures"][0]["resumed"]["closed_seed_observation_sha256"] = digest(database)
+        report["captures"][0]["resumed"]["capture_report_sha256"] = digest(capture_path)
+        write(path, report)
+        output = tmp_path / "audit.json"
+>       with pytest.raises(AuditError, match="OUTBOX_EXACT_ALL_PENDING"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: Regex pattern did not match.
+E         Expected regex: 'OUTBOX_EXACT_ALL_PENDING'
+E         Actual message: 'EXACT_CODE_FILE_SET'
+
+tests\test_bar_checkpoint_audit.py:106: AssertionError
+__________ test_native_receipt_change_refused_against_sealed_archive __________
+
+copied_proof = WindowsPath('C:/Users/Divan/AppData/Local/Temp/pytest-of-Divan/pytest-285/test_native_receipt_change_ref0/proof')
+tmp_path = WindowsPath('C:/Users/Divan/AppData/Local/Temp/pytest-of-Divan/pytest-285/test_native_receipt_change_ref0')
+
+    async def test_native_receipt_change_refused_against_sealed_archive(copied_proof, tmp_path):
+        with duckdb.connect(str(copied_proof / "cohort-0-resumed/events.duckdb")) as connection:
+            connection.execute("UPDATE events SET observed_at_ms=observed_at_ms+1 WHERE kind='trade'")
+>       with pytest.raises(AuditError, match="PARQUET_TYPED_ROWS"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: Regex pattern did not match.
+E         Expected regex: 'PARQUET_TYPED_ROWS'
+E         Actual message: 'EXACT_CODE_FILE_SET'
+
+tests\test_bar_checkpoint_audit.py:114: AssertionError
+_______ test_rank_current_exclusion_refused_after_feature_seal_updated ________
+
+copied_proof = WindowsPath('C:/Users/Divan/AppData/Local/Temp/pytest-of-Divan/pytest-285/test_rank_current_exclusion_re0/proof')
+tmp_path = WindowsPath('C:/Users/Divan/AppData/Local/Temp/pytest-of-Divan/pytest-285/test_rank_current_exclusion_re0')
+
+    async def test_rank_current_exclusion_refused_after_feature_seal_updated(copied_proof, tmp_path):
+        path = copied_proof / "trend-result/features.json"
+        result = json.loads(path.read_text())
+        result["trend_report"]["percentile_references"][0]["current_excluded"] = False
+        write(path, result)
+        report_path = copied_proof / "report.json"
+        report = json.loads(report_path.read_text())
+        report["feature_result_sha256"] = digest(path)
+        write(report_path, report)
+>       with pytest.raises(AuditError, match="TREND_EXACT_PRIOR_REFERENCE"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: Regex pattern did not match.
+E         Expected regex: 'TREND_EXACT_PRIOR_REFERENCE'
+E         Actual message: 'EXACT_CODE_FILE_SET'
+
+tests\test_bar_checkpoint_audit.py:128: AssertionError
+____________ test_default_binding_refuses_fabricated_recorded_code ____________
+
+copied_proof = WindowsPath('C:/Users/Divan/AppData/Local/Temp/pytest-of-Divan/pytest-285/test_default_binding_refuses_f0/proof')
+tmp_path = WindowsPath('C:/Users/Divan/AppData/Local/Temp/pytest-of-Divan/pytest-285/test_default_binding_refuses_f0')
+
+    async def test_default_binding_refuses_fabricated_recorded_code(copied_proof, tmp_path):
+        path = copied_proof / "report.json"
+        report = json.loads(path.read_text())
+        report["code_hashes"]["src/selective_options/bar_checkpoint.py"] = "0" * 64
+        write(path, report)
+>       with pytest.raises(AuditError, match="FROZEN_CODE_OR_PRODUCER_CHANGED"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: Regex pattern did not match.
+E         Expected regex: 'FROZEN_CODE_OR_PRODUCER_CHANGED'
+E         Actual message: 'EXACT_CODE_FILE_SET'
+
+tests\test_bar_checkpoint_audit.py:138: AssertionError
+___________ test_cancelled_publication_drains_then_revokes_success ____________
+
+intact_proof = WindowsPath('C:/Users/Divan/Documents/Codex/2026-09-20/files-pasted-by-the-user-build/outputs/selective-options/evidence/bar-checkpoint-resume-01')
+tmp_path = WindowsPath('C:/Users/Divan/AppData/Local/Temp/pytest-of-Divan/pytest-285/test_cancelled_publication_dra0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000021DB3B24B30>
+
+    async def test_cancelled_publication_drains_then_revokes_success(
+        intact_proof, tmp_path, monkeypatch
+    ):
+        entered, release = threading.Event(), threading.Event()
+        real = module._publish
+    
+        def gated(*args):
+            real(*args)
+            entered.set()
+            assert release.wait(5)
+    
+        monkeypatch.setattr(module, "_publish", gated)
+        output = tmp_path / "audit.json"
+        task = asyncio.create_task(audit(intact_proof, output, require_current_code=False))
+>       assert await asyncio.to_thread(entered.wait, 20)
+E       assert False
+
+tests\test_bar_checkpoint_audit.py:184: AssertionError
+=============================== tests coverage ================================
+______________ coverage: platform win32, python 3.12.10-final-0 _______________
+
+Name                                               Stmts   Miss Branch BrPart  Cover   Missing
+----------------------------------------------------------------------------------------------
+src\selective_options\__init__.py                      1      0      0      0   100%
+src\selective_options\active_rotation.py             122      7     34      3    92%   105, 113, 164-167, 200
+src\selective_options\archive.py                      87      1     20      1    98%   112
+src\selective_options\archive_rotation.py            242     15    100     12    92%   65, 88->105, 177, 184, 199, 202, 243, 270, 404, 410, 459-463, 469
+src\selective_options\auth.py                         49      0     10      0   100%
+src\selective_options\backtest.py                    264      3     82      3    98%   222, 228, 241
+src\selective_options\bar_checkpoint.py              456     52    208     43    85%   117, 138, 145, 149, 156, 173, 176, 181, 202, 222, 241, 250, 283, 288, 290, 368, 370, 384-386, 445, 464, 466, 468, 471, 481, 497, 512, 541-542, 547, 550, 553, 559, 568, 593-596, 612, 617, 665, 679, 708, 711, 742, 746, 749, 764, 779, 782, 818
+src\selective_options\bar_runtime.py                  54      4     22      4    89%   38, 42, 77, 111
+src\selective_options\bar_state.py                   221      9    106      8    95%   84-85, 111, 117, 121, 134, 213, 217, 223, 232->exit
+src\selective_options\bars.py                         78      0     26      0   100%
+src\selective_options\bea_calendar.py                103      0     38      0   100%
+src\selective_options\binance.py                     134      0     44      0   100%
+src\selective_options\binance_accounts.py             42      0     18      0   100%
+src\selective_options\binance_funding_history.py      77      0     30      0   100%
+src\selective_options\binance_funding_view.py         43      0     14      0   100%
+src\selective_options\binance_taker.py                92      0     32      0   100%
+src\selective_options\bus.py                          46      0      4      0   100%
+src\selective_options\bybit.py                       143      0     44      0   100%
+src\selective_options\calendar_quality.py             60      0     28      0   100%
+src\selective_options\checkpoints.py                  30      2     12      2    90%   49, 51
+src\selective_options\cli.py                         149      3     32      3    97%   217, 310, 352
+src\selective_options\coinmetrics.py                 285     15    102     12    93%   87, 89, 91, 93, 111, 176, 183, 185, 206, 273, 419, 538-543
+src\selective_options\coinmetrics_quality.py          89      3     52      3    96%   93, 107, 145
+src\selective_options\collectors.py                  338     27     82     10    90%   193->179, 348, 493-498, 512->511, 523, 527->524, 530->524, 542, 564, 567, 572, 593-610, 614-616
+src\selective_options\config.py                      302      0     30      0   100%
+src\selective_options\crypto_news.py                 191      5     60      1    98%   167, 436-441
+src\selective_options\derivatives.py                  97      1     32      2    98%   188, 189->170
+src\selective_options\errors.py                       13      0      0      0   100%
+src\selective_options\eth_checkpoint.py               59      1     18      1    97%   47
+src\selective_options\eth_gas.py                     141      2     50      2    98%   78, 307
+src\selective_options\eth_gas_quality.py              88      3     48      3    96%   23, 126, 188
+src\selective_options\events.py                       50      0     10      0   100%
+src\selective_options\features.py                    273      3    116      3    98%   157, 201, 213
+src\selective_options\flow_quality.py                 76      0     38      0   100%
+src\selective_options\flow_view.py                    62      0     22      0   100%
+src\selective_options\funding_checkpoint.py           27      0      6      0   100%
+src\selective_options\funding_history.py              67      0     24      0   100%
+src\selective_options\funding_poll.py                 49      0     10      0   100%
+src\selective_options\gap_recovery.py                 49      1      8      1    96%   95
+src\selective_options\ingestion.py                   371     11    172      2    98%   192, 225, 253-255, 329-331, 449-451
+src\selective_options\interlock.py                     4      0      0      0   100%
+src\selective_options\liquidations.py                281      9    102     10    95%   108, 129, 154, 257, 260, 283->exit, 400, 410, 453, 477
+src\selective_options\logging.py                      22      0      4      1    96%   15->exit
+src\selective_options\models.py                      137      0      6      0   100%
+src\selective_options\news.py                        107      2     32      2    97%   180, 190
+src\selective_options\news_quality.py                103      1     42      1    99%   88
+src\selective_options\oi_history.py                   78      0     26      0   100%
+src\selective_options\option_coverage.py             138      0     76      0   100%
+src\selective_options\options_features.py            247      8    114      5    96%   118, 139, 205, 207, 254-255, 277, 296
+src\selective_options\options_research.py             53      5     22      5    87%   37, 57, 86, 88, 90
+src\selective_options\quality.py                      96      0     46      4    97%   68->75, 71->70, 73->70, 182->174
+src\selective_options\rate_limit.py                   31      0      4      0   100%
+src\selective_options\recovery.py                     24      0      6      0   100%
+src\selective_options\recovery_handoff.py             54      0     22      1    99%   25->23
+src\selective_options\recovery_journal.py            100      0     28      0   100%
+src\selective_options\recovery_runtime.py             54      1     18      2    96%   70, 75->78
+src\selective_options\research.py                    126      9     46      9    90%   56, 80, 84, 107, 109, 117, 122, 150, 274
+src\selective_options\rotation_restore.py            148      6     58      4    94%   113, 124-126, 184->exit, 204, 208
+src\selective_options\rotation_runtime.py             81      2     16      1    97%   34-35
+src\selective_options\rpc.py                          67      0     14      1    99%   69->exit
+src\selective_options\security.py                     62      0     34      0   100%
+src\selective_options\socket_recovery.py             105      2     34      2    97%   143, 149
+src\selective_options\solana_network.py              138      0     50      0   100%
+src\selective_options\solana_quality.py               73      1     36      1    98%   116
+src\selective_options\spot_trades.py                 287     16    106     15    92%   128, 130, 179, 184, 193, 197, 369, 445, 457, 460, 464->492, 480, 484-489, 491, 495
+src\selective_options\stablecoin_checkpoint.py        37      4     10      2    87%   44-45, 57, 60
+src\selective_options\stablecoin_supply.py           309      7    120      7    97%   253, 306, 340, 449, 515, 530, 609
+src\selective_options\startup.py                      72      1     24      1    98%   136
+src\selective_options\store.py                       221      1     36      0    99%   54
+src\selective_options\tips_yield.py                  193      4     64      0    98%   281-287
+src\selective_options\trade_backfill.py              136      0     52      0   100%
+src\selective_options\trade_reconciliation.py        151      1     54      1    99%   219
+src\selective_options\trend_features.py              133      4     42      2    97%   60, 82, 179-180
+src\selective_options\trials.py                      144      8     38      6    92%   64, 92, 124, 129, 137, 182, 251-252
+src\selective_options\venue.py                        41      0     12      0   100%
+----------------------------------------------------------------------------------------------
+TOTAL                                               9173    260   3178    202    96%
+Coverage JSON written to file ../../work/coverage-0347.json
+Required test coverage of 85.0% reached. Total coverage: 96.16%
+=========================== short test summary info ===========================
+FAILED tests/test_bar_checkpoint_audit.py::test_intact_audit_binds_every_artifact_and_is_readonly
+FAILED tests/test_bar_checkpoint_audit.py::test_semantic_bucket_count_refused_after_all_related_seals_updated
+FAILED tests/test_bar_checkpoint_audit.py::test_closed_seed_ack_refused_after_digest_and_reports_resealed
+FAILED tests/test_bar_checkpoint_audit.py::test_native_receipt_change_refused_against_sealed_archive
+FAILED tests/test_bar_checkpoint_audit.py::test_rank_current_exclusion_refused_after_feature_seal_updated
+FAILED tests/test_bar_checkpoint_audit.py::test_default_binding_refuses_fabricated_recorded_code
+FAILED tests/test_bar_checkpoint_audit.py::test_cancelled_publication_drains_then_revokes_success
+7 failed, 3175 passed in 552.54s (0:09:12)

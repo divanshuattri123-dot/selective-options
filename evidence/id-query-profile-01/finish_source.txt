@@ -1,0 +1,84 @@
+"""Finalize bounded JSON-bind evidence after the alternative-list experiment ends."""
+import json
+import subprocess
+import sys
+import time
+from pathlib import Path
+
+from profile import ROOT, SOURCE, digest
+
+
+def main():
+    before = digest(SOURCE)
+    results = []
+    for method in ("json_semi", "json_in", "json_symbol_in", "json_symbol_semi"):
+        cases = ((1000, "mixed"), (20001, "mixed"), (62089, "mixed"), (0, "empty"), (25, "missing")) if not method.startswith("json_symbol_") else ((62089, "mixed"), (0, "empty"), (25, "missing"))
+        for size, case in cases:
+            output = ROOT / f"final-{method}-{size}-{case}.json"
+            if output.exists():
+                result = json.loads(output.read_text(encoding="utf-8"))
+                assert result["method"] == method and result["size"] == size and result["case"] == case
+                assert result["exact_native_rows_equal"] is True
+                result["process_wall_seconds"] = None
+                result["resumed_existing_completed_worker"] = True
+                results.append(result)
+                continue
+            started = time.perf_counter()
+            worker = subprocess.Popen([sys.executable, str(ROOT / "profile.py"), "worker", method, str(size), case, str(output)], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            try:
+                stdout, stderr = worker.communicate(timeout=15)
+            except subprocess.TimeoutExpired:
+                worker.kill()
+                stdout, stderr = worker.communicate(timeout=5)
+                raise AssertionError("bounded JSON worker exceeded process deadline")
+            assert worker.returncode == 0, stderr.decode("utf-8", errors="replace")
+            result = json.loads(output.read_text(encoding="utf-8"))
+            result["process_wall_seconds"] = time.perf_counter() - started
+            results.append(result)
+            print(method, size, case, "EXACT_ROWS_VERIFIED", flush=True)
+    import duckdb
+    with duckdb.connect() as db:
+        special = ["a'quoted", "\\backslash", "line\nfeed", "\u20ac-unicode", "?parameter", "'); DELETE FROM events; --"]
+        db.execute("CREATE TABLE events(event_id VARCHAR PRIMARY KEY, symbol VARCHAR, payload_json VARCHAR)")
+        for key in special:
+            db.execute("INSERT INTO events VALUES (?, ?, ?)", [key, key, json.dumps({"native": key})])
+        oracle = {row[0]: tuple(row) for row in db.execute("SELECT * FROM events").fetchall()}
+        requested = special + special + ["absent", ""]
+        sql = "SELECT e.* FROM events e SEMI JOIN json_each(?) ids ON e.event_id=(ids.value ->> '$')"
+        rows = db.execute(sql, [json.dumps(requested)]).fetchall()
+        assert len(rows) == len(special) and {row[0]: tuple(row) for row in rows} == oracle
+        assert db.execute(sql, ["[]"]).fetchall() == []
+        assert db.execute(sql, [json.dumps(["absent", ""]) ]).fetchall() == []
+        assert db.execute("SELECT count(*) FROM events").fetchone()[0] == len(special)
+        symbol_sql = "SELECT * FROM events WHERE symbol IN (SELECT value ->> '$' FROM json_each(?))"
+        selected = db.execute(symbol_sql, [json.dumps(requested)]).fetchall()
+        assert len(selected) == len(special) and {row[0]: tuple(row) for row in selected} == oracle
+        assert db.execute(symbol_sql, ["[]"]).fetchall() == []
+        assert db.execute(symbol_sql, [json.dumps(["absent", ""])]).fetchall() == []
+    assert before == digest(SOURCE)
+    existing = json.loads((ROOT / "report.json").read_text(encoding="utf-8"))
+    assert existing["source_sha256_before"] == before
+    report = existing | {
+        "json_bind_results": results,
+        "special_literal_ids_tested": special,
+        "special_literal_exact_rows_and_duplicates_verified": True,
+        "selected_symbol_predicates_native_and_special_literal_verified": True,
+        "exact_recommended_sql": sql,
+        "exact_selected_symbol_sql": symbol_sql,
+        "special_literal_fixture_origin": "SYNTHETIC_STRING_IDENTITIES_NOT_PUBLIC_EVENTS",
+        "recommendation": "Use parameterized json_each(?) SEMI JOIN with one json.dumps(event_ids) string for large ID lookup. Existing conflict comparison, transaction/lock and read budget remain unchanged; implement and test separately.",
+        "limitations": [
+            "Local finite read-only capture only; not a sustained benchmark or production-ready implementation.",
+            "Process deadlines include connection, oracle materialization and EXPLAIN, so timeout is not a measured query-only duration.",
+            "EXPLAIN plans are saved UTF-8 but no optimizer root cause is established.",
+            "No comparison changes production source; exact append transactions and cancellation still need regression tests if adopted.",
+            "Lookup result order is unspecified; compare exact identity sets and all native row values rather than input order.",
+            "The initial exploratory JSON sample overlapped an alternative worker; final JSON cases run sequentially after that experiment.",
+            "Other unrelated application work can run on the shared machine; measurements are not isolated CPU trials.",
+        ],
+    }
+    (ROOT / "final-report.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
+
+
+if __name__ == "__main__":
+    main()

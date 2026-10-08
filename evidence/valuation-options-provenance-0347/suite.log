@@ -1,0 +1,130 @@
+........................................................................ [  2%]
+........................................................................ [  4%]
+........................................................................ [  6%]
+........................................................................ [  9%]
+........................................................................ [ 11%]
+........................................................................ [ 13%]
+........................................................................ [ 15%]
+........................................................................ [ 18%]
+........................................................................ [ 20%]
+........................................................................ [ 22%]
+........................................................................ [ 24%]
+........................................................................ [ 27%]
+........................................................................ [ 29%]
+........................................................................ [ 31%]
+........................................................................ [ 33%]
+........................................................................ [ 36%]
+........................................................................ [ 38%]
+........................................................................ [ 40%]
+........................................................................ [ 42%]
+........................................................................ [ 45%]
+........................................................................ [ 47%]
+........................................................................ [ 49%]
+........................................................................ [ 51%]
+........................................................................ [ 54%]
+........................................................................ [ 56%]
+........................................................................ [ 58%]
+........................................................................ [ 60%]
+........................................................................ [ 63%]
+........................................................................ [ 65%]
+........................................................................ [ 67%]
+........................................................................ [ 69%]
+........................................................................ [ 72%]
+........................................................................ [ 74%]
+........................................................................ [ 76%]
+........................................................................ [ 78%]
+........................................................................ [ 81%]
+........................................................................ [ 83%]
+........................................................................ [ 85%]
+........................................................................ [ 87%]
+........................................................................ [ 90%]
+........................................................................ [ 92%]
+........................................................................ [ 94%]
+........................................................................ [ 96%]
+........................................................................ [ 99%]
+........................                                                 [100%]
+=============================== tests coverage ================================
+______________ coverage: platform win32, python 3.12.10-final-0 _______________
+
+Name                                               Stmts   Miss Branch BrPart  Cover   Missing
+----------------------------------------------------------------------------------------------
+src\selective_options\__init__.py                      1      0      0      0   100%
+src\selective_options\active_rotation.py             122      7     34      3    92%   105, 113, 164-167, 200
+src\selective_options\archive.py                      87      1     20      1    98%   112
+src\selective_options\archive_rotation.py            242     15    100     12    92%   65, 88->105, 177, 184, 199, 202, 243, 270, 404, 410, 459-463, 469
+src\selective_options\auth.py                         49      0     10      0   100%
+src\selective_options\backtest.py                    264      3     82      3    98%   222, 228, 241
+src\selective_options\bar_checkpoint.py              456     52    208     43    85%   117, 138, 145, 149, 156, 173, 176, 181, 202, 222, 241, 250, 283, 288, 290, 368, 370, 384-386, 445, 464, 466, 468, 471, 481, 497, 512, 541-542, 547, 550, 553, 559, 568, 593-596, 612, 617, 665, 679, 708, 711, 742, 746, 749, 764, 779, 782, 818
+src\selective_options\bar_runtime.py                  54      4     22      4    89%   38, 42, 77, 111
+src\selective_options\bar_state.py                   221      9    106      8    95%   84-85, 111, 117, 121, 134, 213, 217, 223, 232->exit
+src\selective_options\bars.py                         78      0     26      0   100%
+src\selective_options\bea_calendar.py                103      0     38      0   100%
+src\selective_options\binance.py                     134      0     44      0   100%
+src\selective_options\binance_accounts.py             42      0     18      0   100%
+src\selective_options\binance_funding_history.py      77      0     30      0   100%
+src\selective_options\binance_funding_view.py         43      0     14      0   100%
+src\selective_options\binance_taker.py                92      0     32      0   100%
+src\selective_options\bus.py                          46      0      4      0   100%
+src\selective_options\bybit.py                       143      0     44      0   100%
+src\selective_options\calendar_quality.py             60      0     28      0   100%
+src\selective_options\checkpoints.py                  30      2     12      2    90%   49, 51
+src\selective_options\cli.py                         149      3     32      3    97%   217, 310, 352
+src\selective_options\coinmetrics.py                 285     15    102     12    93%   87, 89, 91, 93, 111, 176, 183, 185, 206, 273, 419, 538-543
+src\selective_options\coinmetrics_quality.py          89      3     52      3    96%   93, 107, 145
+src\selective_options\collectors.py                  338     27     82     10    90%   193->179, 348, 493-498, 512->511, 523, 527->524, 530->524, 542, 564, 567, 572, 593-610, 614-616
+src\selective_options\config.py                      302      0     30      0   100%
+src\selective_options\crypto_news.py                 191      5     60      1    98%   167, 436-441
+src\selective_options\derivatives.py                  97      1     32      2    98%   188, 189->170
+src\selective_options\errors.py                       13      0      0      0   100%
+src\selective_options\eth_checkpoint.py               59      1     18      1    97%   47
+src\selective_options\eth_gas.py                     141      2     50      2    98%   78, 307
+src\selective_options\eth_gas_quality.py              88      3     48      3    96%   23, 126, 188
+src\selective_options\events.py                       50      0     10      0   100%
+src\selective_options\features.py                    273      3    116      3    98%   157, 201, 213
+src\selective_options\flow_quality.py                 76      0     38      0   100%
+src\selective_options\flow_view.py                    62      0     22      0   100%
+src\selective_options\funding_checkpoint.py           27      0      6      0   100%
+src\selective_options\funding_history.py              67      0     24      0   100%
+src\selective_options\funding_poll.py                 49      0     10      0   100%
+src\selective_options\gap_recovery.py                 49      1      8      1    96%   95
+src\selective_options\ingestion.py                   371     11    172      2    98%   192, 225, 253-255, 329-331, 449-451
+src\selective_options\interlock.py                     4      0      0      0   100%
+src\selective_options\liquidations.py                281      9    102     10    95%   108, 129, 154, 257, 260, 283->exit, 400, 410, 453, 477
+src\selective_options\logging.py                      22      0      4      1    96%   15->exit
+src\selective_options\models.py                      137      0      6      0   100%
+src\selective_options\news.py                        107      2     32      2    97%   180, 190
+src\selective_options\news_quality.py                103      1     42      1    99%   88
+src\selective_options\oi_history.py                   78      0     26      0   100%
+src\selective_options\option_coverage.py             138      0     76      0   100%
+src\selective_options\options_features.py            247      8    114      5    96%   118, 139, 205, 207, 254-255, 277, 296
+src\selective_options\options_research.py             53      5     22      5    87%   37, 57, 86, 88, 90
+src\selective_options\quality.py                      96      0     46      4    97%   68->75, 71->70, 73->70, 182->174
+src\selective_options\rate_limit.py                   31      0      4      0   100%
+src\selective_options\recovery.py                     24      0      6      0   100%
+src\selective_options\recovery_handoff.py             54      0     22      1    99%   25->23
+src\selective_options\recovery_journal.py            100      0     28      0   100%
+src\selective_options\recovery_runtime.py             54      1     18      2    96%   70, 75->78
+src\selective_options\research.py                    126      9     46      9    90%   56, 80, 84, 107, 109, 117, 122, 150, 274
+src\selective_options\rotation_restore.py            148      6     58      4    94%   113, 124-126, 184->exit, 204, 208
+src\selective_options\rotation_runtime.py             81      2     16      1    97%   34-35
+src\selective_options\rpc.py                          67      0     14      1    99%   69->exit
+src\selective_options\security.py                     62      0     34      0   100%
+src\selective_options\socket_recovery.py             105      2     34      2    97%   143, 149
+src\selective_options\solana_network.py              138      0     50      0   100%
+src\selective_options\solana_quality.py               73      1     36      1    98%   116
+src\selective_options\spot_trades.py                 287     16    106     15    92%   128, 130, 179, 184, 193, 197, 369, 445, 457, 460, 464->492, 480, 484-489, 491, 495
+src\selective_options\stablecoin_checkpoint.py        37      4     10      2    87%   44-45, 57, 60
+src\selective_options\stablecoin_supply.py           309      7    120      7    97%   253, 306, 340, 449, 515, 530, 609
+src\selective_options\startup.py                      72      1     24      1    98%   136
+src\selective_options\store.py                       221      1     36      0    99%   54
+src\selective_options\tips_yield.py                  193      4     64      0    98%   281-287
+src\selective_options\trade_backfill.py              136      0     52      0   100%
+src\selective_options\trade_reconciliation.py        151      1     54      1    99%   219
+src\selective_options\trend_features.py              133      4     42      2    97%   60, 82, 179-180
+src\selective_options\trials.py                      144      8     38      6    92%   64, 92, 124, 129, 137, 182, 251-252
+src\selective_options\venue.py                        41      0     12      0   100%
+----------------------------------------------------------------------------------------------
+TOTAL                                               9173    260   3178    202    96%
+Coverage JSON written to file ../../work/coverage-0347.json
+Required test coverage of 85.0% reached. Total coverage: 96.16%
+3192 passed in 703.50s (0:11:43)

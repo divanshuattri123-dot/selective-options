@@ -1,0 +1,23 @@
+{
+  "url": "https://community-api.coinmetrics.io/v4/catalog-v2/asset-metrics",
+  "parameters": {
+    "assets": "btc,eth",
+    "metrics": "CapMrktCurUSD,CapRealUSD,CapMVRVCur,SOPR",
+    "page_size": "100"
+  },
+  "started_at_ms": 1791387462282,
+  "authentication": "none",
+  "max_bytes": 2000000,
+  "status": 200,
+  "headers": {
+    "Date": "Wed, 07 Oct 2026 15:37:49 GMT",
+    "Content-Type": "application/json",
+    "x-ratelimit-plan": "download",
+    "x-ratelimit-limit": "6000, 6000;w=20;comment=\"sliding window\"",
+    "x-ratelimit-remaining": "5999",
+    "x-ratelimit-reset": "20"
+  },
+  "received_at_ms": 1791387462626,
+  "bytes": 728,
+  "sha256": "0c8b2bfe506e33a7942702b4abd2d8e13e6af6e7e0904dafc18ab94f67658fb1"
+}

@@ -1,0 +1,112 @@
+{
+  "version": "0.3.16",
+  "status": "OFFLINE_REPLAY_VERIFIED",
+  "source_directory": "bea-calendar-public-02",
+  "snapshot_body_sha256": "a6541c6003af77ce6d151d97f1503475bf63caccc305bad7a9300f934a95c752",
+  "network_requests": 0,
+  "health_events": "SIMULATED_FIXTURES_NOT_PUBLIC_EVIDENCE",
+  "cases": {
+    "unobserved": {
+      "as_of_ms": 1790606856969,
+      "max_age_ms": 7200000,
+      "state": "BLOCKED",
+      "blockers": [
+        "MISSING_SNAPSHOT",
+        "MISSING_HEALTH"
+      ],
+      "snapshot_event_id": null,
+      "health_event_id": null,
+      "required_series": [
+        "Gross Domestic Product",
+        "Personal Income and Outlays"
+      ],
+      "next_scheduled_at_ms": {
+        "Gross Domestic Product": null,
+        "Personal Income and Outlays": null
+      },
+      "scope": "Named BEA series only; publisher completeness and other calendars unverified",
+      "trading_approval": false
+    },
+    "missing_health": {
+      "as_of_ms": 1790606856970,
+      "max_age_ms": 7200000,
+      "state": "BLOCKED",
+      "blockers": [
+        "MISSING_HEALTH"
+      ],
+      "snapshot_event_id": "3384fb13db51fb96b394fe203b4e1d65ba094a2d0248ef52515561d7227b1deb",
+      "health_event_id": null,
+      "required_series": [
+        "Gross Domestic Product",
+        "Personal Income and Outlays"
+      ],
+      "next_scheduled_at_ms": {
+        "Gross Domestic Product": 1790771400000,
+        "Personal Income and Outlays": 1790771400000
+      },
+      "scope": "Named BEA series only; publisher completeness and other calendars unverified",
+      "trading_approval": false
+    },
+    "before_failure": {
+      "as_of_ms": 1790606857969,
+      "max_age_ms": 7200000,
+      "state": "OBSERVED_SCOPE_AVAILABLE",
+      "blockers": [],
+      "snapshot_event_id": "3384fb13db51fb96b394fe203b4e1d65ba094a2d0248ef52515561d7227b1deb",
+      "health_event_id": "a7cb1ecc4a055b821fb8e6bfb5c8674cc8f6d6010dfb423a289d1a7edb0a4b73",
+      "required_series": [
+        "Gross Domestic Product",
+        "Personal Income and Outlays"
+      ],
+      "next_scheduled_at_ms": {
+        "Gross Domestic Product": 1790771400000,
+        "Personal Income and Outlays": 1790771400000
+      },
+      "scope": "Named BEA series only; publisher completeness and other calendars unverified",
+      "trading_approval": false
+    },
+    "at_failure": {
+      "as_of_ms": 1790606857970,
+      "max_age_ms": 7200000,
+      "state": "BLOCKED",
+      "blockers": [
+        "SOURCE_UNAVAILABLE"
+      ],
+      "snapshot_event_id": "3384fb13db51fb96b394fe203b4e1d65ba094a2d0248ef52515561d7227b1deb",
+      "health_event_id": "ec79acfca2ee6a08fad95319a626105f5a2c6630b1de5d2c43d3bcc24cb1b3c6",
+      "required_series": [
+        "Gross Domestic Product",
+        "Personal Income and Outlays"
+      ],
+      "next_scheduled_at_ms": {
+        "Gross Domestic Product": 1790771400000,
+        "Personal Income and Outlays": 1790771400000
+      },
+      "scope": "Named BEA series only; publisher completeness and other calendars unverified",
+      "trading_approval": false
+    },
+    "stale": {
+      "as_of_ms": 1790614056971,
+      "max_age_ms": 7200000,
+      "state": "BLOCKED",
+      "blockers": [
+        "STALE_HEALTH",
+        "STALE_SNAPSHOT"
+      ],
+      "snapshot_event_id": "3384fb13db51fb96b394fe203b4e1d65ba094a2d0248ef52515561d7227b1deb",
+      "health_event_id": "a7cb1ecc4a055b821fb8e6bfb5c8674cc8f6d6010dfb423a289d1a7edb0a4b73",
+      "required_series": [
+        "Gross Domestic Product",
+        "Personal Income and Outlays"
+      ],
+      "next_scheduled_at_ms": {
+        "Gross Domestic Product": 1790771400000,
+        "Personal Income and Outlays": 1790771400000
+      },
+      "scope": "Named BEA series only; publisher completeness and other calendars unverified",
+      "trading_approval": false
+    }
+  },
+  "orders_submitted": 0,
+  "trading_enabled": false
+}

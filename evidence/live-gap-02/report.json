@@ -1,0 +1,51 @@
+{
+  "build_version": "0.3.9",
+  "status": "PUBLIC_GAP_TEST_PASSED",
+  "evidence_type": "live public Kraken BTC stream plus REST; one trade intentionally omitted from collector input",
+  "started_at_ms": 1790508364942,
+  "ended_at_ms": 1790508372814,
+  "deadline_s": 90.0,
+  "rows": 64,
+  "counts": [
+    {
+      "source": "kraken",
+      "environment": "public_reference",
+      "asset": "BTC",
+      "kind": "trade",
+      "count": 55
+    },
+    {
+      "source": "kraken",
+      "environment": "public_reference",
+      "asset": "SYSTEM",
+      "kind": "status",
+      "count": 3
+    },
+    {
+      "source": "kraken_recovery",
+      "environment": "public_reference",
+      "asset": "BTC",
+      "kind": "status",
+      "count": 1
+    },
+    {
+      "source": "kraken_rest",
+      "environment": "public_reference",
+      "asset": "BTC",
+      "kind": "trade",
+      "count": 5
+    }
+  ],
+  "omitted_trade_id": 109230677,
+  "omission_recovered_from_rest": true,
+  "recovered_through_id": 109230681,
+  "post_repair_live_successor_verified": true,
+  "pending_repair_books": [],
+  "failure_type": null,
+  "failure_reason": null,
+  "redis": "NOT_CONFIGURED",
+  "orders_submitted": 0,
+  "trading_enabled": false,
+  "paper_trading_started": false,
+  "parquet_sha256": "972644e6fa11682bd018a8d37957dcd0ecd2e2d69d47e5f0b2312ce0966304c6"
+}

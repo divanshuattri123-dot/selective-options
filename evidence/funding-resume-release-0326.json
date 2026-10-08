@@ -1,0 +1,42 @@
+{
+  "version": "0.3.26",
+  "tests_passed": 891,
+  "coverage_percent": 97.65,
+  "funding_checkpoint_coverage": {
+    "covered_lines": 27,
+    "num_statements": 27,
+    "percent_covered": 100.0,
+    "percent_covered_display": "100",
+    "missing_lines": 0,
+    "excluded_lines": 0,
+    "percent_statements_covered": 100.0,
+    "percent_statements_covered_display": "100",
+    "num_branches": 6,
+    "num_partial_branches": 0,
+    "covered_branches": 6,
+    "missing_branches": 0,
+    "percent_branches_covered": 100.0,
+    "percent_branches_covered_display": "100"
+  },
+  "wheel_source_modules": 48,
+  "wheel_source_exact_match": true,
+  "config_valid": true,
+  "public_market_requests_this_increment": 5,
+  "original_seed_rows_preserved": 5,
+  "fresh_public_observations": 6,
+  "combined_rows": 11,
+  "selected_charges": 6,
+  "source_database_matches_original_release": true,
+  "committed_reload_verified": true,
+  "recurring_capture_verified": false,
+  "milestone": 2,
+  "milestone_advance_allowed": false,
+  "trading_enabled": false,
+  "generated_docs_idempotent": true,
+  "generated_doc_sha256": {
+    "README.md": "6f3073faac39013c241fcf7c9eaed347bebb676affb54bbe362685843686fc23",
+    "PARAMETERS.md": "f445b668adf3b9c713b10e73eae5cf1d00c511a3e3eb933871c5d7c3d0d08454",
+    "config\\default.yaml": "1b6fdcdb25615c7c09c9238ade80153930e622c7e398ad389cf2f0341f233e9f"
+  },
+  "wheel_sha256": "c38661d4752b2497252c8c0f3ddde30652be1becbf36cbea1a9f2b25c11bbc57"
+}

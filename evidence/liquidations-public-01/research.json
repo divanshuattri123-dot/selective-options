@@ -1,0 +1,17 @@
+{
+  "references": [
+    {
+      "url": "https://developers.binance.info/docs/derivatives/usds-margined-futures/websocket-market-streams/All-Market-Mini-Tickers-Stream",
+      "accessed_date": "2026-10-04",
+      "supports": [
+        "Current routed market socket URL and SUBSCRIBE request with string id",
+        "Exact native order string quantities, prices, side/status, E event time and T trade time",
+        "Newest per-symbol liquidation snapshot in each 1000 ms window; silence does not establish no market liquidations"
+      ]
+    }
+  ],
+  "old_reference_behavior": "Older Liquidation-Order-Streams paths redirected to a generic developer landing; working current Market page used instead",
+  "clock_policy": "pre_stop_as_of_ms is exactly one millisecond before actual stop request. All original native and local event clocks remain untouched. Canonical pre-stop rows are recomputed after draining writes and filtered by both clocks. Same-instant stop health remains eligible at its actual cutoff and blocks quality.",
+  "probe_duration_policy": "configured total budget 20 seconds: 18 second receive/task wait plus 2 second socket close allowance; scheduling and committed-write drain are not hard real-time deadlines",
+  "observed_scope": "One acknowledgment frame; no real native liquidation snapshot arrived. Eight stored health rows prove a finite acknowledged session and subsequent disconnection only. No full ledger, first publication history, normalized flow or trading approval."
+}

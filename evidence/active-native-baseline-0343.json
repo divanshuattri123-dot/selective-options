@@ -1,0 +1,56 @@
+{
+  "native_and_previous_proof_files": {
+    "crypto-news-public-02": {
+      "events.duckdb": "76bf7ecb50cf560bff24338ee5b4c41345fcc11fcf3d05eea14a4031b187915f",
+      "events.parquet": "df73462160a9bce48b0c6fe5c20fa11adaa170a46564cad6185536e71bea5a62",
+      "events.parquet.manifest.json": "4a18f6569ccb84278233e869214fa1188d69b5b86a2d61f3a61f413c04ad4e9e",
+      "provenance.json": "41259c90f828f21c40eee5f6270f631c69c01e49cbf5ba6063c679ab6d314822",
+      "README.md": "e8d6d87b26d296430d03d3bff12c3af81822cc6d89f7bd971346db78d2fe813d",
+      "report.json": "e55c580b5395ab92a43fb1ddadbebcc9606ff66ee724a680f79070a1165b4b21",
+      "response.xml": "cddc74945dcbe5aec3218cd2b5e339c2cb3e8c9ce888e51b4208e4f5194cfc86",
+      "source-snapshot.py": "97944a8d9a9518685249ac0e3f68a521489b3f5ec2c893f10702fb7ff174565b",
+      "verification-script.py": "119ad56588ea14908a00b65a85457ec050f14c1df53a148aba5da1a2fbf67a8a"
+    },
+    "stablecoin-supply-public-01": {
+      "events.duckdb": "ad4d5c96b9cd9c72cc86f0376c45c5f2dda7712e38990f202f3f31f139bbe5b7",
+      "events.parquet": "d3510a1d361baeb4a96204cec3dab7c0d717c056c962c7cdb05daa0a83ecbedd",
+      "events.parquet.manifest.json": "088fb3f6b766fec128b1618a18be2932e10e335d7c6c7bc18482a5ddf85bfc9c",
+      "README.md": "2ba4a5c73b165a340f3456ec1f39b5e0f39fa434ee04bc3a4cb036338801681f",
+      "report.json": "3a441627f204c5f0f4b95d25ed981d52f72162d6fcfd193c5a75a6eca60e9ad1",
+      "response-01.json": "79226432df73e05966f20e4d291fb5048bfef1138d7078f8feab534126df1aa5",
+      "response-02.json": "e10c735a67ce654a63bdd37552c45756ced0e32a0b04a4afd359d23f824f8883",
+      "response-03.json": "1665b68e64bf2e9c5cde7d0f78448454b9c1078f23f01c8078ec2f3e013bdc47",
+      "response-04.json": "ed10f251ab9aa0ee01bde099eee5427539cb12d37d2561d2bea94866d63c82d6",
+      "response-05.json": "bdcaa8bdddf448e679f74bd064eb0e933f6a3ee208c3d1b5b901e216eb7f7df5",
+      "response-06.json": "9e5cd9535de9fe55c71fa9a4388741adcfc82a176b0d50a7cc22f90184642f9b",
+      "response-07.json": "a0a37b2ef578f83421f0a0642ceb3dbe20733056c829fa5cf4d4214929fd6065",
+      "verifier_snapshot.py": "6ab032210789960832e7745bdfc77b01ee0f01653d63539d3a28d672698c2094"
+    },
+    "rotation-saved-public-01": {
+      "README.md": "3dfef13b4e7b44c0670c57b9e4c6115362bdf858caee19eb818e3d1692f1e219",
+      "report.json": "657245595b2f2031f8bed626dab89f01a89f520fa562b53fc13671d43d78fc85",
+      "source.duckdb": "d9832bca435096289ed386ea6334ce7a93908aae3fb307c346f15e95fee09cce",
+      "verification-script.py": "876ba1a17f8dbdf4f64b67c8a92f9f962ab575ffcd4ed08ed049111214549761",
+      "corrupt-restore/restore-failed.json": "4d8b29d514de897e7e606980525459850d09f281ff7d81f86559942cbf44fd47",
+      "corrupt-rotation/catalog.json": "13ee3d3be3c6f3690500f83a27b934caeb5aac5d2e4e8b3784928fce562b0155",
+      "corrupt-rotation/part-000000.parquet": "8b4cd2ea87c02379bada4dd973837bc913d3a935743af1708e83d57e70f7ada6",
+      "corrupt-rotation/part-000000.parquet.manifest.json": "b7bf3c92c5d99a2752902043a26feadae357bfe00f6e0f97b39136b80ed74897",
+      "corrupt-rotation/part-000001.parquet": "43fc07f98ee3e2e6432c71666b917a94fc31fd8b859756bb9797f6f06499eae6",
+      "corrupt-rotation/part-000001.parquet.manifest.json": "190a42183ad85a4e6e8cb6cf5062b7488d7c087af307e5d9b6b1c1c7b0ad5de0",
+      "restored/events.duckdb": "abc60a1cb531f6887519079f93015417813aafeb3ffc7f3ce26ff540b45241cd",
+      "restored/restore.json": "c4a0fb5f1fa53ee4cec3b014ec9afcb45488580df5809e027b177f80eb54dc09",
+      "rotation/catalog.json": "13ee3d3be3c6f3690500f83a27b934caeb5aac5d2e4e8b3784928fce562b0155",
+      "rotation/part-000000.parquet": "a4ad9b613ed903b378b4abccf9bce4cdf140c5b21642345646968a1e6a94b7c8",
+      "rotation/part-000000.parquet.manifest.json": "b7bf3c92c5d99a2752902043a26feadae357bfe00f6e0f97b39136b80ed74897",
+      "rotation/part-000001.parquet": "43fc07f98ee3e2e6432c71666b917a94fc31fd8b859756bb9797f6f06499eae6",
+      "rotation/part-000001.parquet.manifest.json": "190a42183ad85a4e6e8cb6cf5062b7488d7c087af307e5d9b6b1c1c7b0ad5de0"
+    }
+  },
+  "unchanged_previous_modules": {
+    "src/selective_options/archive_rotation.py": "ff902497e4b360bb9897a40a93a8345eec5d089bec097dbeba9745dae78eb009",
+    "src/selective_options/rotation_restore.py": "359a2dd9bcc18af93e0c524ddf2536793da89b2ff734272b03fef6d5cd4a401e",
+    "src/selective_options/store.py": "7fabba5f5cb7876b8522bacfa5f38afaaf317ca2ff238c3e0447cd83135db1f0",
+    "scripts/verify_rotation.py": "876ba1a17f8dbdf4f64b67c8a92f9f962ab575ffcd4ed08ed049111214549761"
+  },
+  "previous_zip_sha256": "809cd0a75bf176d678aec21a2ed129f9b63b692a84e3d3ec95625221703b0208"
+}

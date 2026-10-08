@@ -1,0 +1,159 @@
+{
+  "funding_revision_views": [],
+  "funding_poll_health": [],
+  "flow_revision_views": [],
+  "flow_quality": [],
+  "build_version": "0.3.32",
+  "configuration_sha256": "62198cbb1741cc5ea3c5344793bc6faddb77d8f5c3bbc777f77e7d578230a439",
+  "parquet_sha256": "3b3d4c72bb931ff12cddab295d8bf5bb602d1d20daadf7dccafbaaad058a7b44",
+  "status": "CAPTURE_FINISHED",
+  "started_at_ms": 1791049129216,
+  "ended_at_ms": 1791049256011,
+  "collection_ended_at_ms": 1791049212425,
+  "shutdown_drain_ms": 43586,
+  "requested_duration_s": 75,
+  "rows": 25560,
+  "trade_checkpoint_seed_rows": 0,
+  "eth_gas_checkpoint_event_id": null,
+  "eth_gas_checkpoint_handoff": "NOT_REQUESTED",
+  "recovery_marker": null,
+  "automatic_kraken_recovery_enabled": false,
+  "recovery_handoff": "NOT_REQUESTED",
+  "recovery_selected_rows": 0,
+  "trade_checkpoint_event_ids": [],
+  "trade_recovery_pending_symbols": [],
+  "trade_recovery_scope": "Kraken only; committed WS tail or explicit recovery marker, with optional bounded automatic REST repair of forward gaps after acknowledgements. Bar state and other collectors start fresh; repaired active bars stay partial.",
+  "counts": [
+    {
+      "source": "deribit",
+      "environment": "testnet",
+      "asset": "BTC",
+      "kind": "book",
+      "count": 4467
+    },
+    {
+      "source": "deribit",
+      "environment": "testnet",
+      "asset": "BTC",
+      "kind": "chain_summary",
+      "count": 1010
+    },
+    {
+      "source": "deribit",
+      "environment": "testnet",
+      "asset": "BTC",
+      "kind": "index",
+      "count": 36
+    },
+    {
+      "source": "deribit",
+      "environment": "testnet",
+      "asset": "BTC",
+      "kind": "instrument",
+      "count": 1010
+    },
+    {
+      "source": "deribit",
+      "environment": "testnet",
+      "asset": "BTC",
+      "kind": "ticker",
+      "count": 19016
+    },
+    {
+      "source": "deribit",
+      "environment": "testnet",
+      "asset": "SYSTEM",
+      "kind": "status",
+      "count": 21
+    }
+  ],
+  "redis_delivery_pending": 25560,
+  "freshness": [
+    {
+      "source": "deribit",
+      "asset": "BTC",
+      "kind": "chain_summary",
+      "state": "STALE",
+      "age_ms": 123869,
+      "timestamp_kind": "source"
+    },
+    {
+      "source": "deribit",
+      "asset": "BTC",
+      "kind": "ticker",
+      "state": "STALE",
+      "age_ms": 54760,
+      "timestamp_kind": "source"
+    },
+    {
+      "source": "deribit",
+      "asset": "BTC",
+      "kind": "book",
+      "state": "STALE",
+      "age_ms": 55062,
+      "timestamp_kind": "source"
+    },
+    {
+      "source": "deribit",
+      "asset": "BTC",
+      "kind": "index",
+      "state": "STALE",
+      "age_ms": 54862,
+      "timestamp_kind": "source"
+    }
+  ],
+  "calendar_quality": {
+    "state": "NOT_CONFIGURED"
+  },
+  "solana_network_quality": {
+    "state": "NOT_CONFIGURED"
+  },
+  "option_instrument_freshness": [],
+  "option_stream_coverage": [
+    {
+      "asset": "BTC",
+      "as_of_ms": 1791049256011,
+      "state": "BLOCKED",
+      "blocker": "OPTION_STREAM_INACTIVE",
+      "trading_approval": false,
+      "trade_history_continuity_verified": false,
+      "all_options_native_fields_available": false,
+      "stream_control_event_id": "a360636b05c20d55e2fb33b6331f8dcdbe29db08551ab38a1307fa91af9cd42d"
+    }
+  ],
+  "bar_policy": "Only locally closed bars; complete=false for partial first intervals or connection gaps. Empty intervals are not synthesized.",
+  "reference_comparison": [
+    {
+      "asset": "BTC",
+      "state": "INSUFFICIENT_SOURCES",
+      "sources": []
+    }
+  ],
+  "deribit_connections": 1,
+  "deribit_universe_refreshes": 0,
+  "stream_universe_refresh_interval_s": null,
+  "stream_cap_per_asset": null,
+  "missing_capabilities": [
+    "on-chain",
+    "crypto news, sentiment and comprehensive financial news",
+    "macro calendar and releases",
+    "XAU/USD gold reference",
+    "historical underlying OHLCV",
+    "historical underlying trade/bar coverage",
+    "historical perpetual/funding archive and full volatility-index coverage",
+    "liquidations",
+    "complete cross-venue funding/OI coverage: Bybit USDT snapshots are optional; other venues/history pending",
+    "cross-venue options flow",
+    "full-universe stream coverage",
+    "gap recovery outside bounded Kraken REST coverage; other stream checkpoints and bar-state restart",
+    "deployed Redis consumer bus"
+  ],
+  "milestone_2_complete": false,
+  "ready_for_signals": false,
+  "trading_enabled": false,
+  "orders_submitted": 0,
+  "redis_mirror": "NOT_CONFIGURED",
+  "failure_type": null,
+  "freshness_scope": "asset/feed aggregates and selected option instruments; not trading approval",
+  "reference_caveat": "Coinbase last-trade vs Kraken midpoint; Kraken has receipt time only. Public references are separate from testnet prices."
+}

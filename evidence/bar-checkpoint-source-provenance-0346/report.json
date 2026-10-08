@@ -1,0 +1,28 @@
+{
+  "version": "0.3.46",
+  "status": "STATIC_IMPORT_CORRECTION_SEPARATELY_VERIFIED",
+  "changed_file": "scripts/audit_bar_checkpoint.py",
+  "production_source_unchanged": true,
+  "runtime_definitions_ast_equal": true,
+  "correction": {
+    "changed_file": "scripts/audit_bar_checkpoint.py",
+    "before_sha256": "cea4b1e2846a7d09248d7a7f34cd582cc15f50eb78308dc02e9704212854fcfd",
+    "after_sha256": "f852859b614a55f5a1fe987993cdbb3a7fc4019070adde7297b485d1fcc9450e",
+    "runtime_functions_and_constants_ast_equal": true,
+    "runtime_helper_import_before": "scripts.audit_parallel_foundations",
+    "runtime_helper_import_after": "relative .audit_parallel_foundations in package scripts",
+    "production_source_changed": false,
+    "strict_project_mypy_source_files": 109
+  },
+  "post_correction_audit_tests_passed": 9,
+  "post_correction_audit_tests_elapsed_s": 57.14,
+  "strict_project_mypy_source_files": 109,
+  "artifact_sha256": {
+    "auditor-before-type-import.py": "cea4b1e2846a7d09248d7a7f34cd582cc15f50eb78308dc02e9704212854fcfd",
+    "freeze-before-type-import.json": "4ad7c9d2d5b126c40e86acf5c23abd5ae414ab15a637f7733bd082c3644182bc",
+    "freeze-final.json": "c4c435d472e2ee50667f3490b253f43c5ff19d7bf2a46313c8ea5e428f36c812",
+    "post-correction-audit-tests.log": "748962f86ad78f606cb6f292b9df80dafebf85450e9b22bda6dd41e8de3c60cd",
+    "project-mypy.log": "ca208347e8b6239306779cb04c160896bf5ae395001893d12ff537fadbc196e1",
+    "static-import-correction.json": "567b1097abb66a0e5b50a90f1cfe0d706f26405d358515dc2f26d1a1e9728e8c"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "status": "SAVED_PUBLIC_LIFECYCLE_PIT_AND_ARCHIVE_VERIFIED",
+  "new_public_requests": 0,
+  "saved_rows": 4286,
+  "pending_outbox_rows": 4286,
+  "sql_control_pit_boundaries": 10,
+  "stream_controls_match": true,
+  "actual_refresh_after_ms": 60013,
+  "inactive_leg_checks": 4,
+  "second_session_precludes_previous_session_cached_quotes": true,
+  "exact_archive_and_closed_reload": true,
+  "source_database_unchanged": true,
+  "source_database_sha256": "9ee31ddade8ca76b4d296e4dd6c3daaa3c2e6c3c033b61b1a37ebe0b5d9376b8",
+  "stream_cap_per_asset": 2,
+  "listing_or_expiry_change_proven": false,
+  "trade_history_continuity_verified": false,
+  "full_universe_stream_verified": false,
+  "trading_enabled": false,
+  "orders_submitted": 0
+}

@@ -1,0 +1,5 @@
+# Native field inventory of preserved option captures
+
+Reports in `btc` and `eth-sol-paxg` were generated read-only by `scripts/audit_option_native_fields.py`. Original source hashes and exact saved coverage views match. All inventoried fields are valid for 1,956 selected native tickers: 1,010 BTC, 804 ETH, 142 SOL. The inventory covers prices/IV, OI, native stats.volume, delta/gamma/vega/theta, underlying/index references and exact metadata strike/currency/index. Raw values, unknown native stats keys, absence, null and invalid containers remain distinct. Native units/time windows and features are not inferred, and summary rows never stand in for ticker observations.
+
+All fresh full-chain flags remain false: 74 BTC, 158 ETH and 142 SOL books are stale at the original cutoffs. PAXG has an empty selected universe and no vacuous field pass. This is finite field availability rather than liquidity, production, historical continuity, M3 or M2 completion. No requests or orders were made; trading remains disabled. Use a fresh output directory when replaying the script.

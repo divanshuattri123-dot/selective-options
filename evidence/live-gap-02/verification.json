@@ -1,0 +1,13 @@
+{
+  "status": "VERIFIED",
+  "database_parquet_exact_rows": 64,
+  "distinct_consecutive_native_ids": 56,
+  "first_native_id": 109230627,
+  "last_native_id": 109230682,
+  "selected_recovery_rows": 5,
+  "marker_verified_at_ms": 1790508371686,
+  "future_source_or_receipt_rows_at_verification": 0,
+  "preverification_marker_rejected": true,
+  "parquet_sha256": "972644e6fa11682bd018a8d37957dcd0ecd2e2d69d47e5f0b2312ce0966304c6",
+  "no_new_network_access": true
+}

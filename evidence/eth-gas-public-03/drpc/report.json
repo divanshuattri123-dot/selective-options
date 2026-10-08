@@ -1,0 +1,58 @@
+{
+  "version": "0.3.36",
+  "started_at_ms": 1791093199370,
+  "provider": "drpc",
+  "endpoint": "https://eth.drpc.org/",
+  "source": "ethereum_drpc",
+  "tls_verification": "default certificate and hostname verification; no override",
+  "orders_submitted": 0,
+  "trading_enabled": false,
+  "paper_trading_started": false,
+  "max_requests": 4,
+  "network_deadline_s": 45,
+  "response_byte_limit": 4000000,
+  "referenced_block_exact_match": true,
+  "fee_history_base_fee_exact_match": true,
+  "fee_history_gas_ratio_match": true,
+  "referenced_block_number": 26116938,
+  "reference_receipt_order_verified": true,
+  "verification_basis": "same public provider RPC consistency; not independent chain consensus",
+  "status": "PUBLIC_FINALIZED_GAS_VERIFIED",
+  "rows": 2,
+  "pit_checks": 1,
+  "archive_exact_match": true,
+  "closed_reload_exact_match": true,
+  "outbox_exact_match": true,
+  "repeat_deduplication_verified": true,
+  "parquet_sha256": "051f07aef1d9db2e88ed639ca7edb8603e6640aacab8f487a9875ee74cf72a3e",
+  "gas_observations": [
+    {
+      "base_fee_per_gas_wei": "62463442",
+      "block_hash": "0xeccedb6637d53846da387d58d1aaef5bcd11e18a85689a16e87ce5475c2cb70d",
+      "block_number": 26116938,
+      "chain_id": 1,
+      "coverage": "sampled finalized blocks; no continuous history or exchange-flow attribution",
+      "execution_quote": false,
+      "finality_basis": "RPC provider assertion; not independently verified",
+      "gas_limit": "60000000",
+      "gas_units": "gas",
+      "gas_used": "3401226",
+      "parent_hash": "0x4639c8f568e383aa42f0aa21d6aa768fa6be72a712dc21351805f266c67262bf",
+      "requested_block_tag": "finalized",
+      "timestamp_basis": "block header time; first publication unavailable; receipt also required",
+      "transaction_count": 49
+    }
+  ],
+  "health": [
+    {
+      "code": 0,
+      "error_type": null,
+      "ok": true,
+      "reason": "FINALIZED_GAS_OBSERVED"
+    }
+  ],
+  "ended_at_ms": 1791093200719,
+  "public_requests_attempted": 4,
+  "accepted_rpc_results": 4,
+  "raw_response_records": 4
+}

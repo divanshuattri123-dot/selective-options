@@ -1,0 +1,107 @@
+{
+  "version": "0.3.21",
+  "started_at_ms": 1790866190799,
+  "ended_at_ms": 1790866194300,
+  "status": "PUBLIC_GLOBAL_ACCOUNT_RATIOS_VERIFIED",
+  "failure_type": null,
+  "rows": 16,
+  "counts": [
+    {
+      "source": "binance_accounts",
+      "environment": "public_reference",
+      "asset": "BTC",
+      "kind": "account_ratio",
+      "count": 3
+    },
+    {
+      "source": "binance_accounts",
+      "environment": "public_reference",
+      "asset": "BTC",
+      "kind": "feed_health",
+      "count": 1
+    },
+    {
+      "source": "binance_accounts",
+      "environment": "public_reference",
+      "asset": "ETH",
+      "kind": "account_ratio",
+      "count": 3
+    },
+    {
+      "source": "binance_accounts",
+      "environment": "public_reference",
+      "asset": "ETH",
+      "kind": "feed_health",
+      "count": 1
+    },
+    {
+      "source": "binance_accounts",
+      "environment": "public_reference",
+      "asset": "PAXG",
+      "kind": "account_ratio",
+      "count": 3
+    },
+    {
+      "source": "binance_accounts",
+      "environment": "public_reference",
+      "asset": "PAXG",
+      "kind": "feed_health",
+      "count": 1
+    },
+    {
+      "source": "binance_accounts",
+      "environment": "public_reference",
+      "asset": "SOL",
+      "kind": "account_ratio",
+      "count": 3
+    },
+    {
+      "source": "binance_accounts",
+      "environment": "public_reference",
+      "asset": "SOL",
+      "kind": "feed_health",
+      "count": 1
+    }
+  ],
+  "source_health": [
+    {
+      "asset": "BTC",
+      "code": 0,
+      "ok": true,
+      "reason": "AGGREGATES_ACCEPTED"
+    },
+    {
+      "asset": "ETH",
+      "code": 0,
+      "ok": true,
+      "reason": "AGGREGATES_ACCEPTED"
+    },
+    {
+      "asset": "SOL",
+      "code": 0,
+      "ok": true,
+      "reason": "AGGREGATES_ACCEPTED"
+    },
+    {
+      "asset": "PAXG",
+      "code": 0,
+      "ok": true,
+      "reason": "AGGREGATES_ACCEPTED"
+    }
+  ],
+  "pit_checks": 12,
+  "archive_exact_match": true,
+  "parquet_sha256": "4307ea329f80084bd11b31b5a5c0d8a86a34a4eaf9d802bf8bd06d5f6e260291",
+  "public_requests_attempted": 5,
+  "public_responses_accepted": 5,
+  "repeat_deduplication_verified": true,
+  "period_end_not_after_receipt": true,
+  "flow_rows": 12,
+  "account_field_semantics_independently_verified": false,
+  "continuous_history_verified": false,
+  "publication_time_available": false,
+  "timestamp_basis": "source and receipt; both required",
+  "orders_submitted": 0,
+  "trading_enabled": false,
+  "paper_trading_started": false
+}

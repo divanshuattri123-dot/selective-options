@@ -1,0 +1,26 @@
+{
+  "status": "PASSED",
+  "checked_at": "2026-09-22T16:01:11.355553+00:00",
+  "rows": 120,
+  "exact_contiguous_ids": true,
+  "raw_decimal_values_and_timestamps_match": true,
+  "all_observations_within_actual_fetch": true,
+  "zero_visible_rows_before_first_receipt": true,
+  "parquet_equals_database": true,
+  "point_in_time_page_visibility": [
+    {
+      "as_of_ms": 1790092764256,
+      "visible_rows": 44
+    },
+    {
+      "as_of_ms": 1790092765584,
+      "visible_rows": 93
+    },
+    {
+      "as_of_ms": 1790092767072,
+      "visible_rows": 120
+    }
+  ],
+  "trading_enabled": false,
+  "stream_repaired": false
+}

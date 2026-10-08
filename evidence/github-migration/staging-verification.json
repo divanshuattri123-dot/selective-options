@@ -1,0 +1,11 @@
+{
+  "status": "GIT_IMPORT_BYTES_AND_CREDENTIAL_FIELDS_VERIFIED",
+  "git_files": 861,
+  "git_bytes": 85532936,
+  "staging_byte_identity_verified": true,
+  "frozen_code_scripts_tests_unchanged": true,
+  "all_current_and_historical_text_secret_patterns_checked": true,
+  "historical_authenticated_json_entries_reviewed": 203,
+  "nonempty_credential_fields_found": 0,
+  "trading_enabled": false
+}

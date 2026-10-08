@@ -1,0 +1,26 @@
+{
+  "status": "FROZEN_SOURCE_AND_TESTS_VERIFIED",
+  "version": "0.3.47",
+  "artifact_sha256": {
+    "build-before-isolation.log": "8690b2e7a542b35bd81d340a8137ca4d1e65f9e4cccb06b31792a38bbaf79cf8",
+    "build.log": "e0372c47719d234e9cc19b9d550025a527902e8aafc3a5d6cf384d24dcf13aea",
+    "coverage.json": "a2ba464d2f785ded86c9ebc9d10c56c510bb0466fad9f0225c71395918145423",
+    "earlier-options-attempt.json": "6f129fdff8106a6a3317866cb78b2ee91f1dc2f86996727294b46552ee93f1f9",
+    "format.log": "491df8b4018cfaa1eef1deaefae05a3f1ae7b417a1a7721f683389c514f8bddf",
+    "freeze-before-historical-repair.json": "4a23dfe63d6fe7e1c4ae59487c9e6d959f6697ee22f0ca64bef2c6459e68c486",
+    "freeze-final.json": "353a030dd45c5557ab3d2480a17e2408bdc461518cd2ff70b949e1e9e2827f65",
+    "historical-audit-correction.json": "db6a1defa268142ecf2f88c7d93171b2db5c5be1aace48015bdd900f8a7ae637",
+    "historical-audit-tests-before.py": "27ad8cd1bb03bffd54877e494aa45481eb4990ddfae7c858c85de074881cc641",
+    "historical-auditor-before.py": "f852859b614a55f5a1fe987993cdbb3a7fc4019070adde7297b485d1fcc9450e",
+    "integration-regressions.log": "74e2471fff66aa377586e0aa70efc20e56be0af93961d2c5ec44b737222e9e4e",
+    "integration-review.md": "78099f1e643ab803cf2e2ee6bb16fb57efe1eefd23687dcdace8611d0e395731",
+    "mypy.log": "99c4e6265bf7392dd2d0730bffde63fd9344b7a3a9ae7e21c44e10400eee1ab9",
+    "options-proof.log": "f5a5dfe759b1e43b685b7ea0a1535db8faeb3597730533656a220b21084bedc8",
+    "public-proof.log": "59273c75ee7e4d003bd27bfe45f6f20b7cc57cd012a933fd7c0cbac80377155d",
+    "ruff.log": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0",
+    "suite-before-historical-repair.log": "943e3b5c2cb8c25463130f9d69b279cc179f24a853ac52a380d10e5927a86dbb",
+    "suite.log": "3ee522caee868cf6043d58ff38d1d53033299157a4b625695dd5db59b5b28d90"
+  },
+  "production_source_unchanged_during_proofs_and_suite": true,
+  "draft_options_failure_preserved": true
+}

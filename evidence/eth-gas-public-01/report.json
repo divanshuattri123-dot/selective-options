@@ -1,0 +1,23 @@
+{
+  "version": "0.3.17",
+  "started_at_ms": 1790693278720,
+  "orders_submitted": 0,
+  "trading_enabled": false,
+  "paper_trading_started": false,
+  "status": "SOURCE_UNAVAILABLE",
+  "rows": 1,
+  "public_requests": 0,
+  "pit_checks": 0,
+  "archive_exact_match": true,
+  "repeat_deduplication_verified": true,
+  "parquet_sha256": "a5f3e7132d007f4d9efb498348eed812cf0ecce607b03dc6e6f0027b6582894f",
+  "gas_observations": [],
+  "health": [
+    {
+      "code": 0,
+      "ok": false,
+      "reason": "TRANSPORT_UNAVAILABLE"
+    }
+  ],
+  "ended_at_ms": 1790693279194
+}

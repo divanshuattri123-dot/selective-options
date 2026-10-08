@@ -1,0 +1,18 @@
+{
+  "build_version": "0.3.7",
+  "status": "OFFLINE_GAP_COORDINATOR_VERIFIED",
+  "evidence_type": "saved public HTTP pages and WebSocket records; mocked transport, no network",
+  "pages": 3,
+  "database_rows": 139,
+  "raw_rows": 137,
+  "selected_rows": 120,
+  "buffered_websocket_rows": 17,
+  "through_id": 108674494,
+  "marker_id": "d8ffa42be37082ada157ebce0681a27f9b4457ded41c56e12482bff23b301c1c",
+  "original_raw_records_and_receipts_preserved": true,
+  "open_writer_reload_and_closed_database_reload_verified": true,
+  "runtime_activated": false,
+  "automatic_capture_repair_enabled": false,
+  "trading_enabled": false,
+  "parquet_sha256": "16fe9a0377ed52a7ec2400ba0e7c9ce775e6d93a6acdabf28ebfe35450c9d9f5"
+}

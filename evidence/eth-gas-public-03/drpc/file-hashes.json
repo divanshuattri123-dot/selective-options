@@ -1,0 +1,15 @@
+{
+  "recorded_at_ms": 1791093630563,
+  "hash_algorithm": "sha256",
+  "basis": "Saved public evidence checksums; not provider authentication",
+  "files": {
+    "events.duckdb": "3f3e7760a0bfc4b015afab79305e97ee8cc0ef494440ec65ee112c68bea77200",
+    "events.parquet": "051f07aef1d9db2e88ed639ca7edb8603e6640aacab8f487a9875ee74cf72a3e",
+    "events.parquet.manifest.json": "e87322c94e978d3217224b92dd2b2040db556729b6fdf8e767b2d635545460a1",
+    "raw-responses.json": "0759ee29bf186250e808d4c53aa09f549cf780c78391c7330d8ec80aee9d9fb6",
+    "report.json": "967de874cb541a3cddac063d724d145440dc5ec226b2ac71f1e5dbcc99348544",
+    "research.json": "8b2c1b0a147ad2ecf54665b77b3ae540cd033291fb6ff251562c204e248b73f1",
+    "results.json": "307a07ab0af0848455e3100f90300669362d008fd76dc4d4000e4e133820c209",
+    "verification.json": "fbb559dbe9a950ad0f21e55506a6ac6c1ef6b2e91d2c92db0faf6c4de9521a7e"
+  }
+}

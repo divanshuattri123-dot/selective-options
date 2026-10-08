@@ -1,0 +1,13 @@
+{
+  "event_id": "2c393d63e4f9e3fbe40f04dfa0c51958900dc22d2130fd489ba049b933b29aa4",
+  "source": "kraken",
+  "environment": "public_reference",
+  "asset": "BTC",
+  "symbol": "BTC/USD",
+  "kind": "trade",
+  "event_time_ms": 1790508362108,
+  "observed_at_ms": 1790508368824,
+  "timestamp_kind": "source",
+  "schema_version": 1,
+  "payload_json": "{\"price\":84900.6,\"qty\":0.01152496,\"quote_currency\":\"USD\",\"side\":\"sell\",\"source_timestamp\":\"2026-09-27T11:26:02.108100+00:00\",\"trade_id\":109230676}"
+}

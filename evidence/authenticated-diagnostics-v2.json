@@ -1,0 +1,7 @@
+{
+  "checked_at": "2026-09-20T18:25:22.416967+00:00",
+  "endpoint": "wss://test.deribit.com/ws/api/v2",
+  "credential_revision": 2,
+  "orders_submitted": 0,
+  "authentication_error_code": 13004
+}

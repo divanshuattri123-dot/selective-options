@@ -1,0 +1,78 @@
+name: verified-checkpoint
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: checkpoint-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: windows-latest
+    timeout-minutes: 45
+    env:
+      PROJECT: C:/Users/Divan/Documents/Codex/2026-09-20/files-pasted-by-the-user-build/outputs/selective-options
+      PYTHON: C:/Users/Divan/Documents/Codex/2026-09-20/files-pasted-by-the-user-build/work/.venv/Scripts/python.exe
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12.10"
+      - name: Preserve physical historical-proof layout
+        run: |
+          if (Test-Path -LiteralPath $env:PROJECT) { throw "Historical staging target already exists" }
+          New-Item -ItemType Directory -Path (Split-Path -Parent $env:PROJECT) -Force | Out-Null
+          git -c core.autocrlf=false clone --local --no-hardlinks $env:GITHUB_WORKSPACE $env:PROJECT
+          if ($LASTEXITCODE -ne 0) { throw "Physical staging clone failed" }
+          python -m venv (Split-Path -Parent (Split-Path -Parent $env:PYTHON))
+          if ($LASTEXITCODE -ne 0) { throw "Validation environment creation failed" }
+      - name: Restore verified private native evidence
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          Set-Location -LiteralPath $env:PROJECT
+          & $env:PYTHON tools/restore_github_evidence.py
+          if ($LASTEXITCODE -ne 0) { throw "Evidence restore failed" }
+      - name: Install exercised runtime and validation tools
+        run: |
+          Set-Location -LiteralPath $env:PROJECT
+          & $env:PYTHON -m pip install -r requirements.lock -r ci/requirements-dev.lock
+          if ($LASTEXITCODE -ne 0) { throw "Locked dependency installation failed" }
+          & $env:PYTHON -m pip install -e .
+          if ($LASTEXITCODE -ne 0) { throw "Project installation failed" }
+      - name: Static analysis and generated-document consistency
+        run: |
+          Set-Location -LiteralPath $env:PROJECT
+          & $env:PYTHON -m ruff check src scripts tests tools
+          if ($LASTEXITCODE -ne 0) { throw "Ruff lint failed" }
+          & $env:PYTHON -m ruff format --check src scripts tests tools
+          if ($LASTEXITCODE -ne 0) { throw "Ruff formatting failed" }
+          & $env:PYTHON -m mypy
+          if ($LASTEXITCODE -ne 0) { throw "Mypy failed" }
+          & $env:PYTHON scripts/render_config.py
+          if ($LASTEXITCODE -ne 0) { throw "Configuration document generation failed" }
+          git diff --exit-code -- config/default.yaml PARAMETERS.md README.md
+          if ($LASTEXITCODE -ne 0) { throw "Generated configuration/documents differ" }
+          & $env:PYTHON -c 'import subprocess,sys; sys.path.insert(0,"scripts"); import check_secrets; sys.argv=["check_secrets"]+subprocess.check_output(["git","ls-files","-z"]).decode().rstrip("\0").split("\0"); raise SystemExit(check_secrets.main())'
+          if ($LASTEXITCODE -ne 0) { throw "Credential-pattern check failed" }
+      - name: Full offline validation suite
+        run: |
+          Set-Location -LiteralPath $env:PROJECT
+          & $env:PYTHON -m pytest --cov --cov-report=term-missing --junitxml=evidence/github-ci.xml
+          if ($LASTEXITCODE -ne 0) { throw "Full offline validation failed" }
+          & (Join-Path (Split-Path -Parent $env:PYTHON) selective-options.exe) check-config
+          if ($LASTEXITCODE -ne 0) { throw "Configuration validation failed" }
+      - name: Retain CI diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: checkpoint-validation
+          path: C:/Users/Divan/Documents/Codex/2026-09-20/files-pasted-by-the-user-build/outputs/selective-options/evidence/github-ci.xml
+          if-no-files-found: ignore

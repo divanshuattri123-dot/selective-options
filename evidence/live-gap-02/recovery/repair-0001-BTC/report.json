@@ -1,0 +1,20 @@
+{
+  "status": "COMMITTED_AND_RELOADED",
+  "symbol": "BTC/USD",
+  "anchor_event_id": "2c393d63e4f9e3fbe40f04dfa0c51958900dc22d2130fd489ba049b933b29aa4",
+  "after_trade_id": 109230676,
+  "requested_through_id": 109230681,
+  "started_at_ms": 1790508370694,
+  "stage": "COMPLETE",
+  "marker_id": "b1af23542735779bb2eb65c3a3a1c3db1058e37612f0bcfefcde7dc45e37054b",
+  "publication_outcome": "COMMITTED",
+  "runtime_activated": false,
+  "bars_rebuilt": false,
+  "trading_enabled": false,
+  "pages": 1,
+  "selected_rows": 5,
+  "raw_rows": 9,
+  "through_id": 109230681,
+  "verified_at_ms": 1790508371686,
+  "ended_at_ms": 1790508371836
+}

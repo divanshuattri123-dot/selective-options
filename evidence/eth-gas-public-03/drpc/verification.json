@@ -1,0 +1,24 @@
+{
+  "status": "SAVED_PUBLIC_BYTES_AND_CHECKPOINT_VERIFIED",
+  "verification_at_ms": 1791093607100,
+  "network_requests": 0,
+  "source": "ethereum_drpc",
+  "raw_response_sha256": [
+    "79226432df73e05966f20e4d291fb5048bfef1138d7078f8feab534126df1aa5",
+    "6e40c3309095a9684053f12038222acd2e7e7a053a6fa45acbe2ca568d2f0436",
+    "74d4ee074c135289f108814def5a9aff01ce6717340bc43681998ad19a81f2e5",
+    "c0167163f0968ab1a358c31782b1575cbba0fa0aa803d3760ddfc90b566bdaa3"
+  ],
+  "rpc_identity_and_results_exact": true,
+  "original_receipts_preserved": true,
+  "referenced_block_exact_match": true,
+  "referenced_block_full_raw_result_exact_match": true,
+  "fee_history_native_fee_and_ratio_match": true,
+  "stored_native_fields_exact_match": true,
+  "duckdb_parquet_exact_match": true,
+  "receipt_pit_checks": 1,
+  "outbox_pending_rows": 2,
+  "closed_checkpoint_equal": true,
+  "wrong_provider_checkpoint_rejected": true,
+  "limitations": "One finalized block from one public provider; RPC consistency is not independent consensus validation, continuous coverage, staking/netflows/L2 feeds, or live execution evidence. M2 partial; no orders."
+}

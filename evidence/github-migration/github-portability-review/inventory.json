@@ -1,0 +1,4235 @@
+{
+  "scope": "read-only local portability inventory; no new full-suite run",
+  "project": "C:\\Users\\Divan\\Documents\\Codex\\2026-09-20\\files-pasted-by-the-user-build\\outputs\\selective-options",
+  "frozen_suite_record": {
+    "passed": 3192,
+    "coverage_percent": 96.16
+  },
+  "verified_original_release_assets": [
+    {
+      "name": "selective-options-0.3.42.zip",
+      "bytes": 420591102,
+      "sha256": "809cd0a75bf176d678aec21a2ed129f9b63b692a84e3d3ec95625221703b0208",
+      "destination_relative_to_project": "../selective-options-0.3.42.zip"
+    },
+    {
+      "name": "selective-options-0.3.44.zip",
+      "bytes": 420981587,
+      "sha256": "211521b5c2e2c3b22ab677df3e4a3f9cbc1952552cfaab31c60f4e50d8a26d82",
+      "destination_relative_to_project": "../selective-options-0.3.44.zip"
+    },
+    {
+      "name": "selective-options-0.3.45.zip",
+      "bytes": 421270840,
+      "sha256": "5019f646b9b554801a0e48c9ba6e539a78e8b0336f7c77aa976dff2f0288514d",
+      "destination_relative_to_project": "../selective-options-0.3.45.zip"
+    },
+    {
+      "name": "selective-options-0.3.46.zip",
+      "bytes": 421622875,
+      "sha256": "bfcebe34564f69b2816e8b646cffa552bdd91b807b641ef021930768db8bf9f8",
+      "destination_relative_to_project": "../selective-options-0.3.46.zip"
+    },
+    {
+      "name": "selective-options-0.3.47.zip",
+      "bytes": 429955213,
+      "sha256": "59322565071d7a85446895c6571ac39fca6080afbe8f4ce11449383fc92e6991",
+      "destination_relative_to_project": "../selective-options-0.3.47.zip"
+    }
+  ],
+  "packaged_evidence_files": 774,
+  "packaged_evidence_uncompressed_bytes": 1434434923,
+  "packaged_evidence": [
+    {
+      "path": "evidence/active-native-baseline-0343.json",
+      "bytes": 4681,
+      "zip_crc32": "90e247c9"
+    },
+    {
+      "path": "evidence/active-rotation-parent-validation-0343.json",
+      "bytes": 16286,
+      "zip_crc32": "c5d1a009"
+    },
+    {
+      "path": "evidence/active-rotation-release-0343.json",
+      "bytes": 8809,
+      "zip_crc32": "9a40a6a7"
+    },
+    {
+      "path": "evidence/active-rotation-saved-public-01/capture/archive-rotations/snapshot-000000/active-rotation.json",
+      "bytes": 1248,
+      "zip_crc32": "12b913a6"
+    },
+    {
+      "path": "evidence/active-rotation-saved-public-01/capture/archive-rotations/snapshot-000000/rotation/catalog.json",
+      "bytes": 931,
+      "zip_crc32": "0a9b3fc8"
+    },
+    {
+      "path": "evidence/active-rotation-saved-public-01/capture/archive-rotations/snapshot-000000/rotation/part-000000.parquet",
+      "bytes": 10682,
+      "zip_crc32": "e96e37eb"
+    },
+    {
+      "path": "evidence/active-rotation-saved-public-01/capture/archive-rotations/snapshot-000000/rotation/part-000000.parquet.manifest.json",
+      "bytes": 144,
+      "zip_crc32": "1a8b771b"
+    },
+    {
+      "path": "evidence/active-rotation-saved-public-01/capture/archive-rotations/snapshot-000000/snapshot.duckdb",
+      "bytes": 536576,
+      "zip_crc32": "1e3b1b89"
+    },
+    {
+      "path": "evidence/active-rotation-saved-public-01/capture/archive-rotations/snapshot-000001/active-rotation.json",
+      "bytes": 1248,
+      "zip_crc32": "2dff2423"
+    },
+    {
+      "path": "evidence/active-rotation-saved-public-01/capture/archive-rotations/snapshot-000001/rotation/catalog.json",
+      "bytes": 931,
+      "zip_crc32": "f61cecf1"
+    },
+    {
+      "path": "evidence/active-rotation-saved-public-01/capture/archive-rotations/snapshot-000001/rotation/part-000000.parquet",
+      "bytes": 10761,
+      "zip_crc32": "c32778d7"
+    },
+    {
+      "path": "evidence/active-rotation-saved-public-01/capture/archive-rotations/snapshot-000001/rotation/part-000000.parquet.manifest.json",
+      "bytes": 144,
+      "zip_crc32": "447a4d37"
+    },
+    {
+      "path": "evidence/active-rotation-saved-public-01/capture/archive-rotations/snapshot-000001/snapshot.duckdb",
+      "bytes": 536576,
+      "zip_crc32": "e6b80eb9"
+    },
+    {
+      "path": "evidence/active-rotation-saved-public-01/capture/config.sanitized.json",
+      "bytes": 7112,
+      "zip_crc32": "57ff87d3"
+    },
+    {
+      "path": "evidence/active-rotation-saved-public-01/capture/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "bb246bf7"
+    },
+    {
+      "path": "evidence/active-rotation-saved-public-01/capture/events.parquet",
+      "bytes": 10810,
+      "zip_crc32": "48ce65fe"
+    },
+    {
+      "path": "evidence/active-rotation-saved-public-01/capture/events.parquet.manifest.json",
+      "bytes": 144,
+      "zip_crc32": "717fa9f9"
+    },
+    {
+      "path": "evidence/active-rotation-saved-public-01/capture/report.json",
+      "bytes": 13538,
+      "zip_crc32": "b08a0e16"
+    },
+    {
+      "path": "evidence/active-rotation-saved-public-01/README.md",
+      "bytes": 1079,
+      "zip_crc32": "a7ac7ece"
+    },
+    {
+      "path": "evidence/active-rotation-saved-public-01/report.json",
+      "bytes": 134227,
+      "zip_crc32": "000c013f"
+    },
+    {
+      "path": "evidence/active-rotation-saved-public-01/restored-00/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "4290d719"
+    },
+    {
+      "path": "evidence/active-rotation-saved-public-01/restored-00/restore.json",
+      "bytes": 693,
+      "zip_crc32": "b64366b6"
+    },
+    {
+      "path": "evidence/active-rotation-saved-public-01/restored-01/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "3f7f489d"
+    },
+    {
+      "path": "evidence/active-rotation-saved-public-01/restored-01/restore.json",
+      "bytes": 693,
+      "zip_crc32": "ce2a92ef"
+    },
+    {
+      "path": "evidence/active-rotation-saved-public-01/verification-script.py",
+      "bytes": 24907,
+      "zip_crc32": "cc29d320"
+    },
+    {
+      "path": "evidence/active-rotation-suite-0343.xml",
+      "bytes": 306750,
+      "zip_crc32": "b487f3ae"
+    },
+    {
+      "path": "evidence/authenticated-chains/BTC-chain.json",
+      "bytes": 1856344,
+      "zip_crc32": "dc27e779"
+    },
+    {
+      "path": "evidence/authenticated-chains/ETH-chain.json",
+      "bytes": 1510996,
+      "zip_crc32": "962261cd"
+    },
+    {
+      "path": "evidence/authenticated-chains/PAXG-chain.json",
+      "bytes": 203,
+      "zip_crc32": "33bfb681"
+    },
+    {
+      "path": "evidence/authenticated-chains/SOL-chain.json",
+      "bytes": 451905,
+      "zip_crc32": "dbea20c5"
+    },
+    {
+      "path": "evidence/authenticated-check.json",
+      "bytes": 299,
+      "zip_crc32": "c4ad8d0b"
+    },
+    {
+      "path": "evidence/authenticated-diagnostics-v2.json",
+      "bytes": 203,
+      "zip_crc32": "f59ce13e"
+    },
+    {
+      "path": "evidence/authenticated-diagnostics.json",
+      "bytes": 323,
+      "zip_crc32": "c8e80d97"
+    },
+    {
+      "path": "evidence/authenticated-probe.json",
+      "bytes": 5900,
+      "zip_crc32": "307c64fd"
+    },
+    {
+      "path": "evidence/bar-checkpoint-parent-audit-0346.json",
+      "bytes": 68966,
+      "zip_crc32": "5a6e5a1a"
+    },
+    {
+      "path": "evidence/bar-checkpoint-release-0346.json",
+      "bytes": 35137,
+      "zip_crc32": "c05438b7"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-0-initial/bar-checkpoint/checkpoint.json",
+      "bytes": 7604,
+      "zip_crc32": "4d920227"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-0-initial/bar-checkpoint/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "3dc07d04"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-0-initial/bar-checkpoint/state-000000.json",
+      "bytes": 1691,
+      "zip_crc32": "e4bd5fc7"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-0-initial/config.sanitized.json",
+      "bytes": 7115,
+      "zip_crc32": "aa90f671"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-0-initial/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "e41c9adc"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-0-initial/events.parquet",
+      "bytes": 5828,
+      "zip_crc32": "5ec917c4"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-0-initial/events.parquet.manifest.json",
+      "bytes": 143,
+      "zip_crc32": "be37b450"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-0-initial/report.json",
+      "bytes": 14600,
+      "zip_crc32": "ed076e6c"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-0-resumed/bar-checkpoint/checkpoint.json",
+      "bytes": 971,
+      "zip_crc32": "da77a6d9"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-0-resumed/bar-checkpoint/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "2fed11b3"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-0-resumed/bar-checkpoint/state-000000.json",
+      "bytes": 266,
+      "zip_crc32": "dea6fa22"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-0-resumed/config.sanitized.json",
+      "bytes": 7115,
+      "zip_crc32": "aa90f671"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-0-resumed/events.duckdb",
+      "bytes": 2895872,
+      "zip_crc32": "cb2d8c7a"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-0-resumed/events.parquet",
+      "bytes": 6458,
+      "zip_crc32": "5b59a1ff"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-0-resumed/events.parquet.manifest.json",
+      "bytes": 143,
+      "zip_crc32": "14501a87"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-0-resumed/report.json",
+      "bytes": 7952,
+      "zip_crc32": "82345588"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-0-resumed/restored.json",
+      "bytes": 6448,
+      "zip_crc32": "a589ae16"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-0-resumed/seed-verified.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "d8f4769d"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-1-initial/bar-checkpoint/checkpoint.json",
+      "bytes": 1574,
+      "zip_crc32": "ed30655e"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-1-initial/bar-checkpoint/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "01d7b46c"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-1-initial/bar-checkpoint/state-000000.json",
+      "bytes": 1681,
+      "zip_crc32": "9f504b9d"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-1-initial/config.sanitized.json",
+      "bytes": 7115,
+      "zip_crc32": "aa90f671"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-1-initial/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "992438ba"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-1-initial/events.parquet",
+      "bytes": 3216,
+      "zip_crc32": "fdf728a5"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-1-initial/events.parquet.manifest.json",
+      "bytes": 142,
+      "zip_crc32": "8b07fbe4"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-1-initial/report.json",
+      "bytes": 7653,
+      "zip_crc32": "cc73c0b1"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-1-resumed/bar-checkpoint/checkpoint.json",
+      "bytes": 971,
+      "zip_crc32": "c8c98ad2"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-1-resumed/bar-checkpoint/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "3356899e"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-1-resumed/bar-checkpoint/state-000000.json",
+      "bytes": 266,
+      "zip_crc32": "3a907da6"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-1-resumed/config.sanitized.json",
+      "bytes": 7115,
+      "zip_crc32": "aa90f671"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-1-resumed/events.duckdb",
+      "bytes": 2895872,
+      "zip_crc32": "dcfea2a6"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-1-resumed/events.parquet",
+      "bytes": 3777,
+      "zip_crc32": "76acb93c"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-1-resumed/events.parquet.manifest.json",
+      "bytes": 142,
+      "zip_crc32": "a9c864c0"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-1-resumed/report.json",
+      "bytes": 7947,
+      "zip_crc32": "ac5b1a35"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-1-resumed/restored.json",
+      "bytes": 3153,
+      "zip_crc32": "587295b7"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/cohort-1-resumed/seed-verified.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "ea16393b"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/report.json",
+      "bytes": 34581,
+      "zip_crc32": "32820b43"
+    },
+    {
+      "path": "evidence/bar-checkpoint-resume-01/trend-result/features.json",
+      "bytes": 11306,
+      "zip_crc32": "13b51f64"
+    },
+    {
+      "path": "evidence/bar-checkpoint-source-provenance-0346/auditor-before-type-import.py",
+      "bytes": 30122,
+      "zip_crc32": "f0acd04e"
+    },
+    {
+      "path": "evidence/bar-checkpoint-source-provenance-0346/freeze-before-type-import.json",
+      "bytes": 23467,
+      "zip_crc32": "789f7f74"
+    },
+    {
+      "path": "evidence/bar-checkpoint-source-provenance-0346/freeze-final.json",
+      "bytes": 23467,
+      "zip_crc32": "a737392c"
+    },
+    {
+      "path": "evidence/bar-checkpoint-source-provenance-0346/post-correction-audit-tests.log",
+      "bytes": 101,
+      "zip_crc32": "563198cf"
+    },
+    {
+      "path": "evidence/bar-checkpoint-source-provenance-0346/project-mypy.log",
+      "bytes": 46,
+      "zip_crc32": "70b48821"
+    },
+    {
+      "path": "evidence/bar-checkpoint-source-provenance-0346/report.json",
+      "bytes": 1580,
+      "zip_crc32": "087b00d3"
+    },
+    {
+      "path": "evidence/bar-checkpoint-source-provenance-0346/static-import-correction.json",
+      "bytes": 537,
+      "zip_crc32": "d831d95d"
+    },
+    {
+      "path": "evidence/bar-checkpoint-suite-0346.xml",
+      "bytes": 386912,
+      "zip_crc32": "6054420a"
+    },
+    {
+      "path": "evidence/bar-checkpoint-wheel-runtime-0346.json",
+      "bytes": 571,
+      "zip_crc32": "0cf0c62f"
+    },
+    {
+      "path": "evidence/bar-replay-verification.json",
+      "bytes": 1416,
+      "zip_crc32": "6c82d9dc"
+    },
+    {
+      "path": "evidence/bea-calendar-public-01/events.duckdb",
+      "bytes": 274432,
+      "zip_crc32": "63364917"
+    },
+    {
+      "path": "evidence/bea-calendar-public-01/report.json",
+      "bytes": 406,
+      "zip_crc32": "d9492ab8"
+    },
+    {
+      "path": "evidence/bea-calendar-public-01/response.json",
+      "bytes": 9053,
+      "zip_crc32": "e9ec627d"
+    },
+    {
+      "path": "evidence/bea-calendar-public-02/events.duckdb",
+      "bytes": 1847296,
+      "zip_crc32": "72f8ab71"
+    },
+    {
+      "path": "evidence/bea-calendar-public-02/events.parquet",
+      "bytes": 4871,
+      "zip_crc32": "cd0a101a"
+    },
+    {
+      "path": "evidence/bea-calendar-public-02/events.parquet.manifest.json",
+      "bytes": 142,
+      "zip_crc32": "aae7739e"
+    },
+    {
+      "path": "evidence/bea-calendar-public-02/report.json",
+      "bytes": 1237,
+      "zip_crc32": "40878807"
+    },
+    {
+      "path": "evidence/bea-calendar-public-02/response.json",
+      "bytes": 9053,
+      "zip_crc32": "e9ec627d"
+    },
+    {
+      "path": "evidence/binance-accounts-public-01/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "4278107e"
+    },
+    {
+      "path": "evidence/binance-accounts-public-01/events.parquet",
+      "bytes": 4570,
+      "zip_crc32": "216ade44"
+    },
+    {
+      "path": "evidence/binance-accounts-public-01/events.parquet.manifest.json",
+      "bytes": 143,
+      "zip_crc32": "e1d9a8fd"
+    },
+    {
+      "path": "evidence/binance-accounts-public-01/report.json",
+      "bytes": 2630,
+      "zip_crc32": "4284d484"
+    },
+    {
+      "path": "evidence/binance-accounts-public-01/responses.json",
+      "bytes": 2272107,
+      "zip_crc32": "91a3a154"
+    },
+    {
+      "path": "evidence/binance-accounts-public-01/verification.json",
+      "bytes": 2884,
+      "zip_crc32": "b3f5139a"
+    },
+    {
+      "path": "evidence/binance-accounts-public-01/verify_saved.py",
+      "bytes": 3900,
+      "zip_crc32": "04e66303"
+    },
+    {
+      "path": "evidence/binance-accounts-suite-0321.xml",
+      "bytes": 82397,
+      "zip_crc32": "7d1b2354"
+    },
+    {
+      "path": "evidence/binance-funding-public-01/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "9ed4e1b2"
+    },
+    {
+      "path": "evidence/binance-funding-public-01/events.parquet",
+      "bytes": 4371,
+      "zip_crc32": "3d68e516"
+    },
+    {
+      "path": "evidence/binance-funding-public-01/events.parquet.manifest.json",
+      "bytes": 142,
+      "zip_crc32": "6d0def12"
+    },
+    {
+      "path": "evidence/binance-funding-public-01/NOTE.md",
+      "bytes": 2198,
+      "zip_crc32": "bcbd23a6"
+    },
+    {
+      "path": "evidence/binance-funding-public-01/report.json",
+      "bytes": 951,
+      "zip_crc32": "9d4785c8"
+    },
+    {
+      "path": "evidence/binance-funding-public-01/responses.json",
+      "bytes": 2271121,
+      "zip_crc32": "f86de15e"
+    },
+    {
+      "path": "evidence/binance-funding-public-01/verification.json",
+      "bytes": 1657,
+      "zip_crc32": "146c334a"
+    },
+    {
+      "path": "evidence/binance-funding-public-01/verify_saved.py",
+      "bytes": 5659,
+      "zip_crc32": "a7877074"
+    },
+    {
+      "path": "evidence/binance-funding-release-0324.json",
+      "bytes": 1328,
+      "zip_crc32": "43cf3f9f"
+    },
+    {
+      "path": "evidence/binance-funding-suite-0324.xml",
+      "bytes": 99043,
+      "zip_crc32": "330a7ea4"
+    },
+    {
+      "path": "evidence/binance-public-01/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "22540ba4"
+    },
+    {
+      "path": "evidence/binance-public-01/events.parquet",
+      "bytes": 4444,
+      "zip_crc32": "2e68d628"
+    },
+    {
+      "path": "evidence/binance-public-01/events.parquet.manifest.json",
+      "bytes": 143,
+      "zip_crc32": "e7d5c5d3"
+    },
+    {
+      "path": "evidence/binance-public-01/report.json",
+      "bytes": 3516,
+      "zip_crc32": "e0bcbb58"
+    },
+    {
+      "path": "evidence/binance-public-01/responses.json",
+      "bytes": 2253066,
+      "zip_crc32": "821d2463"
+    },
+    {
+      "path": "evidence/binance-public-02/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "100c1f61"
+    },
+    {
+      "path": "evidence/binance-public-02/events.parquet",
+      "bytes": 4956,
+      "zip_crc32": "c10af881"
+    },
+    {
+      "path": "evidence/binance-public-02/events.parquet.manifest.json",
+      "bytes": 143,
+      "zip_crc32": "40dfd7b6"
+    },
+    {
+      "path": "evidence/binance-public-02/report.json",
+      "bytes": 4176,
+      "zip_crc32": "ef0ee2f3"
+    },
+    {
+      "path": "evidence/binance-public-02/responses.json",
+      "bytes": 2454611,
+      "zip_crc32": "32743865"
+    },
+    {
+      "path": "evidence/binance-public-02/verification.json",
+      "bytes": 236,
+      "zip_crc32": "bac8ca94"
+    },
+    {
+      "path": "evidence/binance-taker-public-01/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "4b696923"
+    },
+    {
+      "path": "evidence/binance-taker-public-01/events.parquet",
+      "bytes": 2204,
+      "zip_crc32": "37dddc6b"
+    },
+    {
+      "path": "evidence/binance-taker-public-01/events.parquet.manifest.json",
+      "bytes": 142,
+      "zip_crc32": "576cc1d8"
+    },
+    {
+      "path": "evidence/binance-taker-public-01/NOTE.md",
+      "bytes": 925,
+      "zip_crc32": "33325ff7"
+    },
+    {
+      "path": "evidence/binance-taker-public-01/report.json",
+      "bytes": 1079,
+      "zip_crc32": "557c85b7"
+    },
+    {
+      "path": "evidence/binance-taker-public-01/responses.json",
+      "bytes": 2269608,
+      "zip_crc32": "f00cc9e2"
+    },
+    {
+      "path": "evidence/binance-taker-public-02/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "0ac1133a"
+    },
+    {
+      "path": "evidence/binance-taker-public-02/events.parquet",
+      "bytes": 4660,
+      "zip_crc32": "8cbd0e68"
+    },
+    {
+      "path": "evidence/binance-taker-public-02/events.parquet.manifest.json",
+      "bytes": 143,
+      "zip_crc32": "16b82c1c"
+    },
+    {
+      "path": "evidence/binance-taker-public-02/report.json",
+      "bytes": 2572,
+      "zip_crc32": "dae2ad19"
+    },
+    {
+      "path": "evidence/binance-taker-public-02/responses.json",
+      "bytes": 2271630,
+      "zip_crc32": "5b3c57ee"
+    },
+    {
+      "path": "evidence/binance-taker-public-02/verification.json",
+      "bytes": 2891,
+      "zip_crc32": "fc371dbc"
+    },
+    {
+      "path": "evidence/binance-taker-public-02/verify_saved.py",
+      "bytes": 3637,
+      "zip_crc32": "0432c03e"
+    },
+    {
+      "path": "evidence/binance-taker-suite-0320.xml",
+      "bytes": 78935,
+      "zip_crc32": "52efefa5"
+    },
+    {
+      "path": "evidence/bls-calendar-access-01.json",
+      "bytes": 302,
+      "zip_crc32": "88f322ee"
+    },
+    {
+      "path": "evidence/build-status.json",
+      "bytes": 20156,
+      "zip_crc32": "1a8815fb"
+    },
+    {
+      "path": "evidence/bybit-funding-history-01/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "23a8ebbd"
+    },
+    {
+      "path": "evidence/bybit-funding-history-01/events.parquet",
+      "bytes": 4010,
+      "zip_crc32": "d662bbcb"
+    },
+    {
+      "path": "evidence/bybit-funding-history-01/events.parquet.manifest.json",
+      "bytes": 142,
+      "zip_crc32": "edd53564"
+    },
+    {
+      "path": "evidence/bybit-funding-history-01/report.json",
+      "bytes": 582,
+      "zip_crc32": "cbf79c6c"
+    },
+    {
+      "path": "evidence/bybit-funding-history-01/responses.json",
+      "bytes": 24626,
+      "zip_crc32": "55da1bf1"
+    },
+    {
+      "path": "evidence/bybit-oi-history-01/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "f11786d4"
+    },
+    {
+      "path": "evidence/bybit-oi-history-01/events.parquet",
+      "bytes": 4355,
+      "zip_crc32": "ee6eee8f"
+    },
+    {
+      "path": "evidence/bybit-oi-history-01/events.parquet.manifest.json",
+      "bytes": 143,
+      "zip_crc32": "ebd30a25"
+    },
+    {
+      "path": "evidence/bybit-oi-history-01/report.json",
+      "bytes": 650,
+      "zip_crc32": "407773b2"
+    },
+    {
+      "path": "evidence/bybit-oi-history-01/responses.json",
+      "bytes": 25716,
+      "zip_crc32": "816479b9"
+    },
+    {
+      "path": "evidence/bybit-oi-history-01/verification.json",
+      "bytes": 363,
+      "zip_crc32": "874cc4e6"
+    },
+    {
+      "path": "evidence/bybit-public-01/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "fcc0a594"
+    },
+    {
+      "path": "evidence/bybit-public-01/events.parquet",
+      "bytes": 4180,
+      "zip_crc32": "f0e00725"
+    },
+    {
+      "path": "evidence/bybit-public-01/events.parquet.manifest.json",
+      "bytes": 142,
+      "zip_crc32": "fe8d5a29"
+    },
+    {
+      "path": "evidence/bybit-public-01/report.json",
+      "bytes": 1913,
+      "zip_crc32": "56494973"
+    },
+    {
+      "path": "evidence/bybit-public-01/responses.json",
+      "bytes": 61265,
+      "zip_crc32": "c607e4f5"
+    },
+    {
+      "path": "evidence/bybit-public-02/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "a7298914"
+    },
+    {
+      "path": "evidence/bybit-public-02/events.parquet",
+      "bytes": 4772,
+      "zip_crc32": "7d55e85e"
+    },
+    {
+      "path": "evidence/bybit-public-02/events.parquet.manifest.json",
+      "bytes": 143,
+      "zip_crc32": "a4db6d2a"
+    },
+    {
+      "path": "evidence/bybit-public-02/report.json",
+      "bytes": 2832,
+      "zip_crc32": "079c1d1e"
+    },
+    {
+      "path": "evidence/bybit-public-02/responses.json",
+      "bytes": 66041,
+      "zip_crc32": "f66181d1"
+    },
+    {
+      "path": "evidence/calendar-quality-01.json",
+      "bytes": 3990,
+      "zip_crc32": "daf4ac6e"
+    },
+    {
+      "path": "evidence/chains/BTC-chain.json",
+      "bytes": 1856452,
+      "zip_crc32": "ccc2a30b"
+    },
+    {
+      "path": "evidence/chains/ETH-chain.json",
+      "bytes": 1503955,
+      "zip_crc32": "dc8f8a33"
+    },
+    {
+      "path": "evidence/chains/PAXG-chain.json",
+      "bytes": 203,
+      "zip_crc32": "2e736d85"
+    },
+    {
+      "path": "evidence/chains/SOL-chain.json",
+      "bytes": 451902,
+      "zip_crc32": "c111e8ea"
+    },
+    {
+      "path": "evidence/coinmetrics-parent-audit-0347.json",
+      "bytes": 15195,
+      "zip_crc32": "745cf7b2"
+    },
+    {
+      "path": "evidence/coinmetrics-public-01/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "2530a4d8"
+    },
+    {
+      "path": "evidence/coinmetrics-public-01/events.parquet",
+      "bytes": 6162,
+      "zip_crc32": "934307d0"
+    },
+    {
+      "path": "evidence/coinmetrics-public-01/events.parquet.manifest.json",
+      "bytes": 143,
+      "zip_crc32": "e9a315f4"
+    },
+    {
+      "path": "evidence/coinmetrics-public-01/native-entities.json",
+      "bytes": 4741,
+      "zip_crc32": "4bad9c9b"
+    },
+    {
+      "path": "evidence/coinmetrics-public-01/report.json",
+      "bytes": 13988,
+      "zip_crc32": "3e4d2fff"
+    },
+    {
+      "path": "evidence/coinmetrics-public-01/restored/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "14e6156b"
+    },
+    {
+      "path": "evidence/coinmetrics-public-01/restored/restore.json",
+      "bytes": 421,
+      "zip_crc32": "d0bfefe6"
+    },
+    {
+      "path": "evidence/coinmetrics-source-discovery-01/catalog.body.json",
+      "bytes": 728,
+      "zip_crc32": "74933aed"
+    },
+    {
+      "path": "evidence/coinmetrics-source-discovery-01/catalog.receipt.json",
+      "bytes": 744,
+      "zip_crc32": "e65457fc"
+    },
+    {
+      "path": "evidence/coinmetrics-source-discovery-01/DISCOVERY.md",
+      "bytes": 2798,
+      "zip_crc32": "d6ae95c9"
+    },
+    {
+      "path": "evidence/coinmetrics-source-discovery-01/preservation.json",
+      "bytes": 1327,
+      "zip_crc32": "242c0174"
+    },
+    {
+      "path": "evidence/coinmetrics-source-discovery-01/probe.py",
+      "bytes": 2239,
+      "zip_crc32": "75bc0c73"
+    },
+    {
+      "path": "evidence/coinmetrics-source-discovery-01/reference.body.json",
+      "bytes": 2309,
+      "zip_crc32": "5bc6b43a"
+    },
+    {
+      "path": "evidence/coinmetrics-source-discovery-01/reference.receipt.json",
+      "bytes": 723,
+      "zip_crc32": "6fedb3c4"
+    },
+    {
+      "path": "evidence/coinmetrics-source-discovery-01/series.body.json",
+      "bytes": 152,
+      "zip_crc32": "082b5082"
+    },
+    {
+      "path": "evidence/coinmetrics-source-discovery-01/series.receipt.json",
+      "bytes": 823,
+      "zip_crc32": "886aa6f0"
+    },
+    {
+      "path": "evidence/coinmetrics-source-discovery-01/sopr-series.body.json",
+      "bytes": 146,
+      "zip_crc32": "026e937f"
+    },
+    {
+      "path": "evidence/coinmetrics-source-discovery-01/sopr-series.receipt.json",
+      "bytes": 787,
+      "zip_crc32": "fd82680d"
+    },
+    {
+      "path": "evidence/coinmetrics-source-discovery-01/supported-series.body.json",
+      "bytes": 598,
+      "zip_crc32": "aacc1efb"
+    },
+    {
+      "path": "evidence/coinmetrics-source-discovery-01/supported-series.receipt.json",
+      "bytes": 807,
+      "zip_crc32": "21b7ef9f"
+    },
+    {
+      "path": "evidence/coverage.json",
+      "bytes": 342804,
+      "zip_crc32": "b58d4f9b"
+    },
+    {
+      "path": "evidence/crypto-news-public-01/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "06c8fb5a"
+    },
+    {
+      "path": "evidence/crypto-news-public-01/events.parquet",
+      "bytes": 3241,
+      "zip_crc32": "3b7c7d7c"
+    },
+    {
+      "path": "evidence/crypto-news-public-01/events.parquet.manifest.json",
+      "bytes": 142,
+      "zip_crc32": "46803541"
+    },
+    {
+      "path": "evidence/crypto-news-public-01/post-probe-provenance.json",
+      "bytes": 1008,
+      "zip_crc32": "310a54c9"
+    },
+    {
+      "path": "evidence/crypto-news-public-01/README.md",
+      "bytes": 2054,
+      "zip_crc32": "90466a77"
+    },
+    {
+      "path": "evidence/crypto-news-public-01/report.json",
+      "bytes": 3506,
+      "zip_crc32": "d7f1b2b3"
+    },
+    {
+      "path": "evidence/crypto-news-public-01/response.xml",
+      "bytes": 15,
+      "zip_crc32": "c059c8c8"
+    },
+    {
+      "path": "evidence/crypto-news-public-01/source-snapshot.py",
+      "bytes": 16506,
+      "zip_crc32": "0baad22b"
+    },
+    {
+      "path": "evidence/crypto-news-public-01/verification-script.py",
+      "bytes": 16335,
+      "zip_crc32": "ec08f43e"
+    },
+    {
+      "path": "evidence/crypto-news-public-02/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "8ec87e35"
+    },
+    {
+      "path": "evidence/crypto-news-public-02/events.parquet",
+      "bytes": 9673,
+      "zip_crc32": "ee220bd8"
+    },
+    {
+      "path": "evidence/crypto-news-public-02/events.parquet.manifest.json",
+      "bytes": 143,
+      "zip_crc32": "913a0c78"
+    },
+    {
+      "path": "evidence/crypto-news-public-02/provenance.json",
+      "bytes": 3094,
+      "zip_crc32": "064ab5d0"
+    },
+    {
+      "path": "evidence/crypto-news-public-02/README.md",
+      "bytes": 3817,
+      "zip_crc32": "622bc9a2"
+    },
+    {
+      "path": "evidence/crypto-news-public-02/report.json",
+      "bytes": 24494,
+      "zip_crc32": "297a28cd"
+    },
+    {
+      "path": "evidence/crypto-news-public-02/response.xml",
+      "bytes": 30250,
+      "zip_crc32": "a58e346e"
+    },
+    {
+      "path": "evidence/crypto-news-public-02/source-snapshot.py",
+      "bytes": 17737,
+      "zip_crc32": "813b6f8e"
+    },
+    {
+      "path": "evidence/crypto-news-public-02/verification-script.py",
+      "bytes": 19396,
+      "zip_crc32": "750c2a8c"
+    },
+    {
+      "path": "evidence/eth-checkpoint-fixture-01/report.json",
+      "bytes": 581,
+      "zip_crc32": "77f17a98"
+    },
+    {
+      "path": "evidence/eth-checkpoint-fixture-01/source.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "2fe73fa4"
+    },
+    {
+      "path": "evidence/eth-checkpoint-fixture-01/target.duckdb",
+      "bytes": 2895872,
+      "zip_crc32": "f616e97e"
+    },
+    {
+      "path": "evidence/eth-gas-public-01/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "31be07c4"
+    },
+    {
+      "path": "evidence/eth-gas-public-01/events.parquet",
+      "bytes": 2284,
+      "zip_crc32": "4b2944bd"
+    },
+    {
+      "path": "evidence/eth-gas-public-01/events.parquet.manifest.json",
+      "bytes": 142,
+      "zip_crc32": "399cfd09"
+    },
+    {
+      "path": "evidence/eth-gas-public-01/NOTE.md",
+      "bytes": 817,
+      "zip_crc32": "c42a63ed"
+    },
+    {
+      "path": "evidence/eth-gas-public-01/report.json",
+      "bytes": 585,
+      "zip_crc32": "1c7db413"
+    },
+    {
+      "path": "evidence/eth-gas-public-01/results.json",
+      "bytes": 4,
+      "zip_crc32": "0c577d0f"
+    },
+    {
+      "path": "evidence/eth-gas-public-02/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "dc59e759"
+    },
+    {
+      "path": "evidence/eth-gas-public-02/events.parquet",
+      "bytes": 2513,
+      "zip_crc32": "af2886c0"
+    },
+    {
+      "path": "evidence/eth-gas-public-02/events.parquet.manifest.json",
+      "bytes": 142,
+      "zip_crc32": "86253fec"
+    },
+    {
+      "path": "evidence/eth-gas-public-02/report.json",
+      "bytes": 682,
+      "zip_crc32": "89a40603"
+    },
+    {
+      "path": "evidence/eth-gas-public-02/results.json",
+      "bytes": 4,
+      "zip_crc32": "0c577d0f"
+    },
+    {
+      "path": "evidence/eth-gas-public-03/drpc/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "41ce0142"
+    },
+    {
+      "path": "evidence/eth-gas-public-03/drpc/events.parquet",
+      "bytes": 3238,
+      "zip_crc32": "e3f44f54"
+    },
+    {
+      "path": "evidence/eth-gas-public-03/drpc/events.parquet.manifest.json",
+      "bytes": 142,
+      "zip_crc32": "a4fd2a3a"
+    },
+    {
+      "path": "evidence/eth-gas-public-03/drpc/file-hashes.json",
+      "bytes": 909,
+      "zip_crc32": "b4221b7e"
+    },
+    {
+      "path": "evidence/eth-gas-public-03/drpc/raw-responses.json",
+      "bytes": 45865,
+      "zip_crc32": "4f90bf63"
+    },
+    {
+      "path": "evidence/eth-gas-public-03/drpc/report.json",
+      "bytes": 2109,
+      "zip_crc32": "fb4b8e39"
+    },
+    {
+      "path": "evidence/eth-gas-public-03/drpc/research.json",
+      "bytes": 2071,
+      "zip_crc32": "78fdac52"
+    },
+    {
+      "path": "evidence/eth-gas-public-03/drpc/results.json",
+      "bytes": 18966,
+      "zip_crc32": "98c0d485"
+    },
+    {
+      "path": "evidence/eth-gas-public-03/drpc/verification.json",
+      "bytes": 1164,
+      "zip_crc32": "de0e7d0e"
+    },
+    {
+      "path": "evidence/eth-gas-public-03/final-source-hashes.json",
+      "bytes": 960,
+      "zip_crc32": "3756ca12"
+    },
+    {
+      "path": "evidence/eth-gas-public-03/HANDOFF.md",
+      "bytes": 4214,
+      "zip_crc32": "71b65dd6"
+    },
+    {
+      "path": "evidence/eth-gas-public-03/README.md",
+      "bytes": 1504,
+      "zip_crc32": "82b87a76"
+    },
+    {
+      "path": "evidence/eth-gas-public-03/verify_saved_used.py",
+      "bytes": 5975,
+      "zip_crc32": "54a5218f"
+    },
+    {
+      "path": "evidence/eth-gas-runtime-public-01/first/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "38cbcf9d"
+    },
+    {
+      "path": "evidence/eth-gas-runtime-public-01/first/events.parquet",
+      "bytes": 3673,
+      "zip_crc32": "6e624c55"
+    },
+    {
+      "path": "evidence/eth-gas-runtime-public-01/first/events.parquet.manifest.json",
+      "bytes": 142,
+      "zip_crc32": "591e1495"
+    },
+    {
+      "path": "evidence/eth-gas-runtime-public-01/first/raw-responses.json",
+      "bytes": 32953,
+      "zip_crc32": "5afc600c"
+    },
+    {
+      "path": "evidence/eth-gas-runtime-public-01/first/report.json",
+      "bytes": 1999,
+      "zip_crc32": "a9849d19"
+    },
+    {
+      "path": "evidence/eth-gas-runtime-public-01/first/results.json",
+      "bytes": 19531,
+      "zip_crc32": "41cf3e82"
+    },
+    {
+      "path": "evidence/eth-gas-runtime-public-01/README.md",
+      "bytes": 1130,
+      "zip_crc32": "a2c86c87"
+    },
+    {
+      "path": "evidence/eth-gas-runtime-public-01/report.json",
+      "bytes": 11286,
+      "zip_crc32": "3b52f327"
+    },
+    {
+      "path": "evidence/eth-gas-runtime-public-01/restarted/events.duckdb",
+      "bytes": 2895872,
+      "zip_crc32": "10f370dd"
+    },
+    {
+      "path": "evidence/eth-gas-runtime-public-01/restarted/events.parquet",
+      "bytes": 3676,
+      "zip_crc32": "26ba9dee"
+    },
+    {
+      "path": "evidence/eth-gas-runtime-public-01/restarted/events.parquet.manifest.json",
+      "bytes": 142,
+      "zip_crc32": "21075a15"
+    },
+    {
+      "path": "evidence/eth-gas-runtime-public-01/restarted/raw-responses.json",
+      "bytes": 32953,
+      "zip_crc32": "0a16e02b"
+    },
+    {
+      "path": "evidence/eth-gas-runtime-public-01/restarted/report.json",
+      "bytes": 2063,
+      "zip_crc32": "a2fd95dd"
+    },
+    {
+      "path": "evidence/eth-gas-runtime-public-01/restarted/results.json",
+      "bytes": 19531,
+      "zip_crc32": "f3942eff"
+    },
+    {
+      "path": "evidence/eth-gas-runtime-public-01/worker-handoff.json",
+      "bytes": 3577,
+      "zip_crc32": "65061b22"
+    },
+    {
+      "path": "evidence/eth-tls-diagnostic-01.json",
+      "bytes": 654,
+      "zip_crc32": "7d1fa6e9"
+    },
+    {
+      "path": "evidence/fed-calendar-access-01.json",
+      "bytes": 351,
+      "zip_crc32": "7d89ba89"
+    },
+    {
+      "path": "evidence/flow-quality-01/NOTE.md",
+      "bytes": 1612,
+      "zip_crc32": "47db5094"
+    },
+    {
+      "path": "evidence/flow-quality-01/report.json",
+      "bytes": 25127,
+      "zip_crc32": "94ec24aa"
+    },
+    {
+      "path": "evidence/flow-quality-01/synthetic-health.json",
+      "bytes": 1843,
+      "zip_crc32": "a1cd7b50"
+    },
+    {
+      "path": "evidence/flow-quality-01/verify_saved.py",
+      "bytes": 5389,
+      "zip_crc32": "c5cb8619"
+    },
+    {
+      "path": "evidence/flow-quality-release-0323.json",
+      "bytes": 1239,
+      "zip_crc32": "1afb2e68"
+    },
+    {
+      "path": "evidence/flow-quality-suite-0323.xml",
+      "bytes": 91065,
+      "zip_crc32": "fc77c140"
+    },
+    {
+      "path": "evidence/flow-view-01/NOTE.md",
+      "bytes": 2075,
+      "zip_crc32": "8edf69f2"
+    },
+    {
+      "path": "evidence/flow-view-01/report.json",
+      "bytes": 3675,
+      "zip_crc32": "43b5a092"
+    },
+    {
+      "path": "evidence/flow-view-01/restored/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "e1035e9c"
+    },
+    {
+      "path": "evidence/flow-view-01/restored/restore.json",
+      "bytes": 419,
+      "zip_crc32": "ce63ad8e"
+    },
+    {
+      "path": "evidence/flow-view-01/synthetic.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "1ab38cd4"
+    },
+    {
+      "path": "evidence/flow-view-01/synthetic.parquet",
+      "bytes": 4450,
+      "zip_crc32": "893cabb1"
+    },
+    {
+      "path": "evidence/flow-view-01/synthetic.parquet.manifest.json",
+      "bytes": 142,
+      "zip_crc32": "c4df56cd"
+    },
+    {
+      "path": "evidence/flow-view-01/verify_saved.py",
+      "bytes": 6672,
+      "zip_crc32": "fad209ba"
+    },
+    {
+      "path": "evidence/flow-view-release-0322.json",
+      "bytes": 1258,
+      "zip_crc32": "788f7fca"
+    },
+    {
+      "path": "evidence/flow-view-suite-0322.xml",
+      "bytes": 85506,
+      "zip_crc32": "90cb81fd"
+    },
+    {
+      "path": "evidence/funding-denial-fixture.json",
+      "bytes": 702,
+      "zip_crc32": "fb2c8d31"
+    },
+    {
+      "path": "evidence/funding-poll-public-01/collect_once.py",
+      "bytes": 4889,
+      "zip_crc32": "6f398d1b"
+    },
+    {
+      "path": "evidence/funding-poll-public-01/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "658dddec"
+    },
+    {
+      "path": "evidence/funding-poll-public-01/events.parquet",
+      "bytes": 4498,
+      "zip_crc32": "ae34cfd0"
+    },
+    {
+      "path": "evidence/funding-poll-public-01/events.parquet.manifest.json",
+      "bytes": 142,
+      "zip_crc32": "8cc9b4d8"
+    },
+    {
+      "path": "evidence/funding-poll-public-01/fixture.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "bb4fb7da"
+    },
+    {
+      "path": "evidence/funding-poll-public-01/fixture.parquet",
+      "bytes": 5068,
+      "zip_crc32": "a1ede0f4"
+    },
+    {
+      "path": "evidence/funding-poll-public-01/fixture.parquet.manifest.json",
+      "bytes": 143,
+      "zip_crc32": "69300eab"
+    },
+    {
+      "path": "evidence/funding-poll-public-01/NOTE.md",
+      "bytes": 2978,
+      "zip_crc32": "36346208"
+    },
+    {
+      "path": "evidence/funding-poll-public-01/report.json",
+      "bytes": 2156,
+      "zip_crc32": "6d51be10"
+    },
+    {
+      "path": "evidence/funding-poll-public-01/responses.json",
+      "bytes": 2271120,
+      "zip_crc32": "42043e91"
+    },
+    {
+      "path": "evidence/funding-poll-public-01/verification.json",
+      "bytes": 1237,
+      "zip_crc32": "ddf994dc"
+    },
+    {
+      "path": "evidence/funding-poll-public-01/verify_saved.py",
+      "bytes": 7110,
+      "zip_crc32": "98f991b2"
+    },
+    {
+      "path": "evidence/funding-poll-release-0327.json",
+      "bytes": 1609,
+      "zip_crc32": "065f8f75"
+    },
+    {
+      "path": "evidence/funding-poll-suite-0327.xml",
+      "bytes": 110247,
+      "zip_crc32": "2c34b2e9"
+    },
+    {
+      "path": "evidence/funding-resume-public-01/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "d5955303"
+    },
+    {
+      "path": "evidence/funding-resume-public-01/events.parquet",
+      "bytes": 4588,
+      "zip_crc32": "609da7ae"
+    },
+    {
+      "path": "evidence/funding-resume-public-01/events.parquet.manifest.json",
+      "bytes": 143,
+      "zip_crc32": "2a7cd3cc"
+    },
+    {
+      "path": "evidence/funding-resume-public-01/NOTE.md",
+      "bytes": 1709,
+      "zip_crc32": "1a22d9c3"
+    },
+    {
+      "path": "evidence/funding-resume-public-01/report.json",
+      "bytes": 2324,
+      "zip_crc32": "6b9d49fc"
+    },
+    {
+      "path": "evidence/funding-resume-public-01/responses.json",
+      "bytes": 2271120,
+      "zip_crc32": "e0baf123"
+    },
+    {
+      "path": "evidence/funding-resume-public-01/verification.json",
+      "bytes": 561,
+      "zip_crc32": "42090c0a"
+    },
+    {
+      "path": "evidence/funding-resume-public-01/verify_saved.py",
+      "bytes": 3998,
+      "zip_crc32": "7128af9e"
+    },
+    {
+      "path": "evidence/funding-resume-release-0326.json",
+      "bytes": 1503,
+      "zip_crc32": "75861c14"
+    },
+    {
+      "path": "evidence/funding-resume-suite-0326.xml",
+      "bytes": 105524,
+      "zip_crc32": "5589260b"
+    },
+    {
+      "path": "evidence/funding-view-01/mixed-fixture.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "c0c907f9"
+    },
+    {
+      "path": "evidence/funding-view-01/mixed-fixture.parquet",
+      "bytes": 4583,
+      "zip_crc32": "ba455a3a"
+    },
+    {
+      "path": "evidence/funding-view-01/mixed-fixture.parquet.manifest.json",
+      "bytes": 143,
+      "zip_crc32": "799b307a"
+    },
+    {
+      "path": "evidence/funding-view-01/NOTE.md",
+      "bytes": 2122,
+      "zip_crc32": "c802cb0c"
+    },
+    {
+      "path": "evidence/funding-view-01/report.json",
+      "bytes": 2740,
+      "zip_crc32": "ec255782"
+    },
+    {
+      "path": "evidence/funding-view-01/restored/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "b8582cfd"
+    },
+    {
+      "path": "evidence/funding-view-01/restored/restore.json",
+      "bytes": 421,
+      "zip_crc32": "03934e3f"
+    },
+    {
+      "path": "evidence/funding-view-01/verify_saved.py",
+      "bytes": 6294,
+      "zip_crc32": "804c3083"
+    },
+    {
+      "path": "evidence/funding-view-release-0325.json",
+      "bytes": 1317,
+      "zip_crc32": "fd14f1e7"
+    },
+    {
+      "path": "evidence/funding-view-suite-0325.xml",
+      "bytes": 103340,
+      "zip_crc32": "a0c1500d"
+    },
+    {
+      "path": "evidence/gap-coordinator-01/attempt/anchor.json",
+      "bytes": 520,
+      "zip_crc32": "fd2e5435"
+    },
+    {
+      "path": "evidence/gap-coordinator-01/attempt/page-001.json",
+      "bytes": 3501,
+      "zip_crc32": "f12d9b64"
+    },
+    {
+      "path": "evidence/gap-coordinator-01/attempt/page-002.json",
+      "bytes": 3502,
+      "zip_crc32": "bedd1197"
+    },
+    {
+      "path": "evidence/gap-coordinator-01/attempt/page-003.json",
+      "bytes": 3493,
+      "zip_crc32": "9325412b"
+    },
+    {
+      "path": "evidence/gap-coordinator-01/attempt/report.json",
+      "bytes": 653,
+      "zip_crc32": "dee5e1dd"
+    },
+    {
+      "path": "evidence/gap-coordinator-01/events.duckdb",
+      "bytes": 1847296,
+      "zip_crc32": "2626dd88"
+    },
+    {
+      "path": "evidence/gap-coordinator-01/events.parquet",
+      "bytes": 17281,
+      "zip_crc32": "f9cf0dde"
+    },
+    {
+      "path": "evidence/gap-coordinator-01/events.parquet.manifest.json",
+      "bytes": 145,
+      "zip_crc32": "88c45933"
+    },
+    {
+      "path": "evidence/gap-coordinator-01/report.json",
+      "bytes": 731,
+      "zip_crc32": "7e5aeaf2"
+    },
+    {
+      "path": "evidence/id-query-profile-01/chunked_in-0-empty.plan.txt",
+      "bytes": 3123,
+      "zip_crc32": "b584936b"
+    },
+    {
+      "path": "evidence/id-query-profile-01/chunked_in-1000-mixed.plan.txt",
+      "bytes": 54207,
+      "zip_crc32": "fd78188a"
+    },
+    {
+      "path": "evidence/id-query-profile-01/chunked_in-20001-mixed.plan.txt",
+      "bytes": 54207,
+      "zip_crc32": "fd78188a"
+    },
+    {
+      "path": "evidence/id-query-profile-01/chunked_in-25-missing.plan.txt",
+      "bytes": 3071,
+      "zip_crc32": "63f7ea27"
+    },
+    {
+      "path": "evidence/id-query-profile-01/chunked_in-62089-mixed.plan.txt",
+      "bytes": 54207,
+      "zip_crc32": "fd78188a"
+    },
+    {
+      "path": "evidence/id-query-profile-01/distinct_join-0-empty.plan.txt",
+      "bytes": 5058,
+      "zip_crc32": "642ddd81"
+    },
+    {
+      "path": "evidence/id-query-profile-01/distinct_join-1000-mixed.plan.txt",
+      "bytes": 5006,
+      "zip_crc32": "112f03a8"
+    },
+    {
+      "path": "evidence/id-query-profile-01/distinct_join-25-missing.plan.txt",
+      "bytes": 5006,
+      "zip_crc32": "112f03a8"
+    },
+    {
+      "path": "evidence/id-query-profile-01/existing_in-0-empty.plan.txt",
+      "bytes": 3123,
+      "zip_crc32": "b584936b"
+    },
+    {
+      "path": "evidence/id-query-profile-01/existing_in-1000-mixed.plan.txt",
+      "bytes": 210947,
+      "zip_crc32": "91092a96"
+    },
+    {
+      "path": "evidence/id-query-profile-01/existing_in-25-missing.plan.txt",
+      "bytes": 3071,
+      "zip_crc32": "63f7ea27"
+    },
+    {
+      "path": "evidence/id-query-profile-01/exploratory-report.json",
+      "bytes": 11728,
+      "zip_crc32": "e9a4bf33"
+    },
+    {
+      "path": "evidence/id-query-profile-01/final-json_in-0-empty.plan.txt",
+      "bytes": 3131,
+      "zip_crc32": "a344477d"
+    },
+    {
+      "path": "evidence/id-query-profile-01/final-json_in-1000-mixed.plan.txt",
+      "bytes": 3131,
+      "zip_crc32": "a344477d"
+    },
+    {
+      "path": "evidence/id-query-profile-01/final-json_in-20001-mixed.plan.txt",
+      "bytes": 3131,
+      "zip_crc32": "a344477d"
+    },
+    {
+      "path": "evidence/id-query-profile-01/final-json_in-25-missing.plan.txt",
+      "bytes": 3131,
+      "zip_crc32": "a344477d"
+    },
+    {
+      "path": "evidence/id-query-profile-01/final-json_in-62089-mixed.plan.txt",
+      "bytes": 3131,
+      "zip_crc32": "a344477d"
+    },
+    {
+      "path": "evidence/id-query-profile-01/final-json_semi-0-empty.plan.txt",
+      "bytes": 2471,
+      "zip_crc32": "3ae3e6c0"
+    },
+    {
+      "path": "evidence/id-query-profile-01/final-json_semi-1000-mixed.plan.txt",
+      "bytes": 2471,
+      "zip_crc32": "3ae3e6c0"
+    },
+    {
+      "path": "evidence/id-query-profile-01/final-json_semi-20001-mixed.plan.txt",
+      "bytes": 2471,
+      "zip_crc32": "3ae3e6c0"
+    },
+    {
+      "path": "evidence/id-query-profile-01/final-json_semi-25-missing.plan.txt",
+      "bytes": 2471,
+      "zip_crc32": "3ae3e6c0"
+    },
+    {
+      "path": "evidence/id-query-profile-01/final-json_semi-62089-mixed.plan.txt",
+      "bytes": 2471,
+      "zip_crc32": "3ae3e6c0"
+    },
+    {
+      "path": "evidence/id-query-profile-01/final-json_symbol_in-0-empty.plan.txt",
+      "bytes": 3874,
+      "zip_crc32": "4ffa9048"
+    },
+    {
+      "path": "evidence/id-query-profile-01/final-json_symbol_in-25-missing.plan.txt",
+      "bytes": 3874,
+      "zip_crc32": "4ffa9048"
+    },
+    {
+      "path": "evidence/id-query-profile-01/final-json_symbol_in-62089-mixed.plan.txt",
+      "bytes": 3874,
+      "zip_crc32": "4ffa9048"
+    },
+    {
+      "path": "evidence/id-query-profile-01/final-json_symbol_semi-0-empty.plan.txt",
+      "bytes": 3214,
+      "zip_crc32": "83b70c72"
+    },
+    {
+      "path": "evidence/id-query-profile-01/final-json_symbol_semi-25-missing.plan.txt",
+      "bytes": 3214,
+      "zip_crc32": "83b70c72"
+    },
+    {
+      "path": "evidence/id-query-profile-01/final-json_symbol_semi-62089-mixed.plan.txt",
+      "bytes": 3214,
+      "zip_crc32": "83b70c72"
+    },
+    {
+      "path": "evidence/id-query-profile-01/finish_source.txt",
+      "bytes": 5329,
+      "zip_crc32": "05aa4cfd"
+    },
+    {
+      "path": "evidence/id-query-profile-01/json_semi-62089-mixed.plan.txt",
+      "bytes": 2471,
+      "zip_crc32": "3ae3e6c0"
+    },
+    {
+      "path": "evidence/id-query-profile-01/materialized_semi-0-empty.plan.txt",
+      "bytes": 4638,
+      "zip_crc32": "3eccd696"
+    },
+    {
+      "path": "evidence/id-query-profile-01/materialized_semi-1000-mixed.plan.txt",
+      "bytes": 4553,
+      "zip_crc32": "66d8bfb6"
+    },
+    {
+      "path": "evidence/id-query-profile-01/materialized_semi-25-missing.plan.txt",
+      "bytes": 4553,
+      "zip_crc32": "66d8bfb6"
+    },
+    {
+      "path": "evidence/id-query-profile-01/profile_source.txt",
+      "bytes": 6514,
+      "zip_crc32": "4b16cef0"
+    },
+    {
+      "path": "evidence/id-query-profile-01/README.md",
+      "bytes": 1752,
+      "zip_crc32": "5de5e23a"
+    },
+    {
+      "path": "evidence/id-query-profile-01/report.json",
+      "bytes": 22601,
+      "zip_crc32": "cb8e0854"
+    },
+    {
+      "path": "evidence/id-query-profile-01/semi_join-0-empty.plan.txt",
+      "bytes": 2523,
+      "zip_crc32": "36b39d70"
+    },
+    {
+      "path": "evidence/id-query-profile-01/semi_join-1000-mixed.plan.txt",
+      "bytes": 2471,
+      "zip_crc32": "1a0cb0fb"
+    },
+    {
+      "path": "evidence/id-query-profile-01/semi_join-25-missing.plan.txt",
+      "bytes": 2471,
+      "zip_crc32": "1a0cb0fb"
+    },
+    {
+      "path": "evidence/id-query-profile-01/verification.json",
+      "bytes": 2762,
+      "zip_crc32": "928406b8"
+    },
+    {
+      "path": "evidence/id-query-profile-01/verify_saved.py",
+      "bytes": 2650,
+      "zip_crc32": "d667d6b6"
+    },
+    {
+      "path": "evidence/ingestion-pilot-01/events.duckdb",
+      "bytes": 3944448,
+      "zip_crc32": "eafd467c"
+    },
+    {
+      "path": "evidence/ingestion-pilot-01/events.parquet",
+      "bytes": 583866,
+      "zip_crc32": "224de854"
+    },
+    {
+      "path": "evidence/ingestion-pilot-01/report.json",
+      "bytes": 9554,
+      "zip_crc32": "80443265"
+    },
+    {
+      "path": "evidence/ingestion-pilot-02/events.duckdb",
+      "bytes": 3944448,
+      "zip_crc32": "fa978d77"
+    },
+    {
+      "path": "evidence/ingestion-pilot-02/events.parquet",
+      "bytes": 577946,
+      "zip_crc32": "f8dbb817"
+    },
+    {
+      "path": "evidence/ingestion-pilot-02/report.json",
+      "bytes": 9777,
+      "zip_crc32": "0a8f11da"
+    },
+    {
+      "path": "evidence/ingestion-pilot-03/events.duckdb",
+      "bytes": 3420160,
+      "zip_crc32": "b7587fff"
+    },
+    {
+      "path": "evidence/ingestion-pilot-03/events.parquet",
+      "bytes": 532434,
+      "zip_crc32": "eb9616bf"
+    },
+    {
+      "path": "evidence/ingestion-pilot-03/report.json",
+      "bytes": 13532,
+      "zip_crc32": "58eb8193"
+    },
+    {
+      "path": "evidence/ingestion-pilot-04/events.duckdb",
+      "bytes": 31993856,
+      "zip_crc32": "0d3ceafd"
+    },
+    {
+      "path": "evidence/ingestion-pilot-04/events.parquet",
+      "bytes": 3715980,
+      "zip_crc32": "dcf38e59"
+    },
+    {
+      "path": "evidence/ingestion-pilot-04/report.json",
+      "bytes": 14711,
+      "zip_crc32": "d73ada43"
+    },
+    {
+      "path": "evidence/ingestion-pilot-05/config.sanitized.json",
+      "bytes": 5314,
+      "zip_crc32": "7155f8e8"
+    },
+    {
+      "path": "evidence/ingestion-pilot-05/events.duckdb",
+      "bytes": 6565888,
+      "zip_crc32": "b0307f49"
+    },
+    {
+      "path": "evidence/ingestion-pilot-05/events.parquet",
+      "bytes": 645843,
+      "zip_crc32": "31a526b0"
+    },
+    {
+      "path": "evidence/ingestion-pilot-05/events.parquet.manifest.json",
+      "bytes": 148,
+      "zip_crc32": "9f63a164"
+    },
+    {
+      "path": "evidence/ingestion-pilot-05/report.json",
+      "bytes": 22843,
+      "zip_crc32": "849eefee"
+    },
+    {
+      "path": "evidence/line-ending-consistency-0344.json",
+      "bytes": 525,
+      "zip_crc32": "c213514b"
+    },
+    {
+      "path": "evidence/liquidations-public-01/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "01a2d46e"
+    },
+    {
+      "path": "evidence/liquidations-public-01/events.parquet",
+      "bytes": 4175,
+      "zip_crc32": "94e0bcbe"
+    },
+    {
+      "path": "evidence/liquidations-public-01/events.parquet.manifest.json",
+      "bytes": 142,
+      "zip_crc32": "45509d92"
+    },
+    {
+      "path": "evidence/liquidations-public-01/frames.json",
+      "bytes": 269,
+      "zip_crc32": "dfbade92"
+    },
+    {
+      "path": "evidence/liquidations-public-01/report.json",
+      "bytes": 8002,
+      "zip_crc32": "d409bb7c"
+    },
+    {
+      "path": "evidence/liquidations-public-01/research.json",
+      "bytes": 1520,
+      "zip_crc32": "cd46cb47"
+    },
+    {
+      "path": "evidence/liquidations-public-01/verification_snapshot.py",
+      "bytes": 13844,
+      "zip_crc32": "773e8232"
+    },
+    {
+      "path": "evidence/live-gap-01/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "ec562ff5"
+    },
+    {
+      "path": "evidence/live-gap-01/events.parquet",
+      "bytes": 5828,
+      "zip_crc32": "c414313d"
+    },
+    {
+      "path": "evidence/live-gap-01/events.parquet.manifest.json",
+      "bytes": 143,
+      "zip_crc32": "c622fa00"
+    },
+    {
+      "path": "evidence/live-gap-01/intentionally-omitted.json",
+      "bytes": 521,
+      "zip_crc32": "04508ef8"
+    },
+    {
+      "path": "evidence/live-gap-01/recovery/repair-0001-BTC/anchor.json",
+      "bytes": 522,
+      "zip_crc32": "ad6a7b7e"
+    },
+    {
+      "path": "evidence/live-gap-01/recovery/repair-0001-BTC/page-001.json",
+      "bytes": 270,
+      "zip_crc32": "2641b47c"
+    },
+    {
+      "path": "evidence/live-gap-01/recovery/repair-0001-BTC/report.json",
+      "bytes": 591,
+      "zip_crc32": "f380ba64"
+    },
+    {
+      "path": "evidence/live-gap-01/report.json",
+      "bytes": 1135,
+      "zip_crc32": "1c82ba53"
+    },
+    {
+      "path": "evidence/live-gap-02/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "dd44e5a1"
+    },
+    {
+      "path": "evidence/live-gap-02/events.parquet",
+      "bytes": 7517,
+      "zip_crc32": "ae282c25"
+    },
+    {
+      "path": "evidence/live-gap-02/events.parquet.manifest.json",
+      "bytes": 143,
+      "zip_crc32": "c7804293"
+    },
+    {
+      "path": "evidence/live-gap-02/intentionally-omitted.json",
+      "bytes": 522,
+      "zip_crc32": "b300f001"
+    },
+    {
+      "path": "evidence/live-gap-02/recovery/repair-0001-BTC/anchor.json",
+      "bytes": 523,
+      "zip_crc32": "55ccdca3"
+    },
+    {
+      "path": "evidence/live-gap-02/recovery/repair-0001-BTC/page-001.json",
+      "bytes": 891,
+      "zip_crc32": "76bb9a42"
+    },
+    {
+      "path": "evidence/live-gap-02/recovery/repair-0001-BTC/report.json",
+      "bytes": 649,
+      "zip_crc32": "eaf6fc9e"
+    },
+    {
+      "path": "evidence/live-gap-02/report.json",
+      "bytes": 1385,
+      "zip_crc32": "ab4d1b60"
+    },
+    {
+      "path": "evidence/live-gap-02/verification.json",
+      "bytes": 472,
+      "zip_crc32": "51fe41f0"
+    },
+    {
+      "path": "evidence/metadata-projection-01/README.md",
+      "bytes": 1270,
+      "zip_crc32": "d9631375"
+    },
+    {
+      "path": "evidence/metadata-projection-01/report.json",
+      "bytes": 4416,
+      "zip_crc32": "044238b4"
+    },
+    {
+      "path": "evidence/metadata-projection-01/verify_saved.py",
+      "bytes": 11141,
+      "zip_crc32": "c5a7b9f0"
+    },
+    {
+      "path": "evidence/metadata-projection-replay-01/btc-with-synthetic-old-metadata.parquet",
+      "bytes": 9471521,
+      "zip_crc32": "4032352a"
+    },
+    {
+      "path": "evidence/metadata-projection-replay-01/multiasset-options-public-01.duckdb",
+      "bytes": 47460352,
+      "zip_crc32": "85a90c7d"
+    },
+    {
+      "path": "evidence/metadata-projection-replay-01/multiasset-options-public-01.native.parquet",
+      "bytes": 3650143,
+      "zip_crc32": "f89b830d"
+    },
+    {
+      "path": "evidence/metadata-projection-replay-01/reused-validation-public-01.duckdb",
+      "bytes": 224931840,
+      "zip_crc32": "d07baa96"
+    },
+    {
+      "path": "evidence/metadata-projection-replay-01/reused-validation-public-01.native.parquet",
+      "bytes": 5273105,
+      "zip_crc32": "9917f962"
+    },
+    {
+      "path": "evidence/multiasset-options-public-01/age-proof.json",
+      "bytes": 2828,
+      "zip_crc32": "5e83e2e4"
+    },
+    {
+      "path": "evidence/multiasset-options-public-01/config.sanitized.json",
+      "bytes": 6474,
+      "zip_crc32": "8df42042"
+    },
+    {
+      "path": "evidence/multiasset-options-public-01/events.duckdb",
+      "bytes": 85733376,
+      "zip_crc32": "18546c51"
+    },
+    {
+      "path": "evidence/multiasset-options-public-01/events.parquet",
+      "bytes": 3650143,
+      "zip_crc32": "f89b830d"
+    },
+    {
+      "path": "evidence/multiasset-options-public-01/events.parquet.manifest.json",
+      "bytes": 149,
+      "zip_crc32": "fcc918cb"
+    },
+    {
+      "path": "evidence/multiasset-options-public-01/independent-proof.json",
+      "bytes": 2562,
+      "zip_crc32": "c640db5e"
+    },
+    {
+      "path": "evidence/multiasset-options-public-01/README.md",
+      "bytes": 2206,
+      "zip_crc32": "84000a40"
+    },
+    {
+      "path": "evidence/multiasset-options-public-01/report.json",
+      "bytes": 845460,
+      "zip_crc32": "c57c1637"
+    },
+    {
+      "path": "evidence/multiasset-options-public-01/verification.json",
+      "bytes": 409524,
+      "zip_crc32": "4c75e0c5"
+    },
+    {
+      "path": "evidence/multiasset-options-public-01/verifier_used.py",
+      "bytes": 5343,
+      "zip_crc32": "a37fb0d2"
+    },
+    {
+      "path": "evidence/multiasset-options-public-01/verify_saved.py",
+      "bytes": 13020,
+      "zip_crc32": "e76da9cd"
+    },
+    {
+      "path": "evidence/multiasset-options-public-01/verify_saved_ages.py",
+      "bytes": 4097,
+      "zip_crc32": "4ea2b3e0"
+    },
+    {
+      "path": "evidence/multiasset-options-release-0334.json",
+      "bytes": 5957,
+      "zip_crc32": "6332913a"
+    },
+    {
+      "path": "evidence/multiasset-options-replay-01/events.duckdb",
+      "bytes": 45887488,
+      "zip_crc32": "838e508c"
+    },
+    {
+      "path": "evidence/multiasset-options-replay-01/events.parquet",
+      "bytes": 3650143,
+      "zip_crc32": "f89b830d"
+    },
+    {
+      "path": "evidence/multiasset-options-suite-0334.xml",
+      "bytes": 142656,
+      "zip_crc32": "d30f5c36"
+    },
+    {
+      "path": "evidence/new-feed-parent-validation-0339.json",
+      "bytes": 9465,
+      "zip_crc32": "33858bc6"
+    },
+    {
+      "path": "evidence/new-feeds-release-0339.json",
+      "bytes": 7878,
+      "zip_crc32": "c3332f22"
+    },
+    {
+      "path": "evidence/new-feeds-suite-0339.xml",
+      "bytes": 229999,
+      "zip_crc32": "7429d2f0"
+    },
+    {
+      "path": "evidence/news-endpoint-discovery-01/discovery-verifier.py",
+      "bytes": 2864,
+      "zip_crc32": "d51bdb0b"
+    },
+    {
+      "path": "evidence/news-endpoint-discovery-01/discovery.json",
+      "bytes": 2300,
+      "zip_crc32": "ca76a4f0"
+    },
+    {
+      "path": "evidence/news-endpoint-discovery-01/legacy.entity",
+      "bytes": 15,
+      "zip_crc32": "c059c8c8"
+    },
+    {
+      "path": "evidence/news-endpoint-discovery-01/native-verification.py",
+      "bytes": 5335,
+      "zip_crc32": "78b84707"
+    },
+    {
+      "path": "evidence/news-endpoint-discovery-01/publisher-doc.entity",
+      "bytes": 1701651,
+      "zip_crc32": "fc224089"
+    },
+    {
+      "path": "evidence/news-endpoint-discovery-01/publisher-location-target.entity",
+      "bytes": 30250,
+      "zip_crc32": "a58e346e"
+    },
+    {
+      "path": "evidence/news-endpoint-discovery-01/README.md",
+      "bytes": 4339,
+      "zip_crc32": "834b9ba9"
+    },
+    {
+      "path": "evidence/news-endpoint-discovery-01/relative-location-verifier.py",
+      "bytes": 2370,
+      "zip_crc32": "2ea97094"
+    },
+    {
+      "path": "evidence/news-endpoint-discovery-01/source-0340.py",
+      "bytes": 16506,
+      "zip_crc32": "0baad22b"
+    },
+    {
+      "path": "evidence/news-endpoint-discovery-01/source-0341.py",
+      "bytes": 17737,
+      "zip_crc32": "813b6f8e"
+    },
+    {
+      "path": "evidence/news-endpoint-discovery-01/verification.json",
+      "bytes": 8822,
+      "zip_crc32": "241ff247"
+    },
+    {
+      "path": "evidence/news-provenance-0341/final-source.py",
+      "bytes": 17877,
+      "zip_crc32": "bc451efd"
+    },
+    {
+      "path": "evidence/news-provenance-0341/README.md",
+      "bytes": 1094,
+      "zip_crc32": "782457b7"
+    },
+    {
+      "path": "evidence/news-provenance-0341/report.json",
+      "bytes": 862,
+      "zip_crc32": "9fc37a4a"
+    },
+    {
+      "path": "evidence/news-quality-01/events.duckdb",
+      "bytes": 2109440,
+      "zip_crc32": "12457586"
+    },
+    {
+      "path": "evidence/news-quality-01/events.parquet",
+      "bytes": 5773,
+      "zip_crc32": "5714b09d"
+    },
+    {
+      "path": "evidence/news-quality-01/labelled-fixture-health.json",
+      "bytes": 5075,
+      "zip_crc32": "2f6277de"
+    },
+    {
+      "path": "evidence/news-quality-01/native-records.json",
+      "bytes": 15861,
+      "zip_crc32": "31f2546d"
+    },
+    {
+      "path": "evidence/news-quality-01/report.json",
+      "bytes": 22991,
+      "zip_crc32": "71bb8506"
+    },
+    {
+      "path": "evidence/news-quality-public-01/README.md",
+      "bytes": 1193,
+      "zip_crc32": "e1f4f442"
+    },
+    {
+      "path": "evidence/news-quality-public-01/run/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "8ae7743a"
+    },
+    {
+      "path": "evidence/news-quality-public-01/run/events.parquet",
+      "bytes": 5920,
+      "zip_crc32": "eb4d5b5e"
+    },
+    {
+      "path": "evidence/news-quality-public-01/run/events.parquet.manifest.json",
+      "bytes": 143,
+      "zip_crc32": "7ee53aa0"
+    },
+    {
+      "path": "evidence/news-quality-public-01/run/report.json",
+      "bytes": 3893,
+      "zip_crc32": "97e6ff3d"
+    },
+    {
+      "path": "evidence/news-quality-public-01/run/response.xml",
+      "bytes": 9645,
+      "zip_crc32": "87d2a764"
+    },
+    {
+      "path": "evidence/news-quality-public-01/verify_public.py",
+      "bytes": 5056,
+      "zip_crc32": "143fbb0d"
+    },
+    {
+      "path": "evidence/news-restart-01/before-restart.parquet",
+      "bytes": 5990,
+      "zip_crc32": "e26dd4c0"
+    },
+    {
+      "path": "evidence/news-restart-01/before-restart.parquet.manifest.json",
+      "bytes": 143,
+      "zip_crc32": "6af01958"
+    },
+    {
+      "path": "evidence/news-restart-01/events.duckdb",
+      "bytes": 3420160,
+      "zip_crc32": "b42a2039"
+    },
+    {
+      "path": "evidence/news-restart-01/events.parquet",
+      "bytes": 6045,
+      "zip_crc32": "3681fbc0"
+    },
+    {
+      "path": "evidence/news-restart-01/events.parquet.manifest.json",
+      "bytes": 143,
+      "zip_crc32": "8fa33789"
+    },
+    {
+      "path": "evidence/news-restart-01/failure.parquet",
+      "bytes": 5999,
+      "zip_crc32": "3dbe2f7b"
+    },
+    {
+      "path": "evidence/news-restart-01/failure.parquet.manifest.json",
+      "bytes": 143,
+      "zip_crc32": "1a653b67"
+    },
+    {
+      "path": "evidence/news-restart-01/README.md",
+      "bytes": 1239,
+      "zip_crc32": "fcdd4a65"
+    },
+    {
+      "path": "evidence/news-restart-01/report.json",
+      "bytes": 34197,
+      "zip_crc32": "cb6dfebc"
+    },
+    {
+      "path": "evidence/news-resume-final-validation-0341.json",
+      "bytes": 12762,
+      "zip_crc32": "ac9c128c"
+    },
+    {
+      "path": "evidence/news-resume-parent-validation-0341.json",
+      "bytes": 12724,
+      "zip_crc32": "2ccae599"
+    },
+    {
+      "path": "evidence/news-resume-release-0341.json",
+      "bytes": 8523,
+      "zip_crc32": "72c886f4"
+    },
+    {
+      "path": "evidence/news-resume-suite-0341-attempt-01.xml",
+      "bytes": 268023,
+      "zip_crc32": "47911301"
+    },
+    {
+      "path": "evidence/news-resume-suite-0341-attempt-02.xml",
+      "bytes": 266393,
+      "zip_crc32": "e19b0caa"
+    },
+    {
+      "path": "evidence/news-resume-suite-0341.xml",
+      "bytes": 267405,
+      "zip_crc32": "7cb33643"
+    },
+    {
+      "path": "evidence/news-supply-parent-validation-0340.json",
+      "bytes": 10688,
+      "zip_crc32": "5699468a"
+    },
+    {
+      "path": "evidence/news-supply-release-0340.json",
+      "bytes": 8142,
+      "zip_crc32": "2b93c932"
+    },
+    {
+      "path": "evidence/news-supply-suite-0340.xml",
+      "bytes": 252967,
+      "zip_crc32": "f9d5c1d0"
+    },
+    {
+      "path": "evidence/okx-public-access-01.json",
+      "bytes": 721,
+      "zip_crc32": "4124c7dd"
+    },
+    {
+      "path": "evidence/option-coverage-public-01/config.sanitized.json",
+      "bytes": 6445,
+      "zip_crc32": "3e9070f6"
+    },
+    {
+      "path": "evidence/option-coverage-public-01/events.duckdb",
+      "bytes": 42479616,
+      "zip_crc32": "e77ad433"
+    },
+    {
+      "path": "evidence/option-coverage-public-01/events.parquet",
+      "bytes": 1724339,
+      "zip_crc32": "039213ab"
+    },
+    {
+      "path": "evidence/option-coverage-public-01/events.parquet.manifest.json",
+      "bytes": 149,
+      "zip_crc32": "bd65d4c2"
+    },
+    {
+      "path": "evidence/option-coverage-public-01/independent-proof.json",
+      "bytes": 1613,
+      "zip_crc32": "d32aabef"
+    },
+    {
+      "path": "evidence/option-coverage-public-01/README.md",
+      "bytes": 1404,
+      "zip_crc32": "af5e2267"
+    },
+    {
+      "path": "evidence/option-coverage-public-01/report.json",
+      "bytes": 4957,
+      "zip_crc32": "b44a04a9"
+    },
+    {
+      "path": "evidence/option-coverage-public-01/verification.json",
+      "bytes": 928,
+      "zip_crc32": "ab208af3"
+    },
+    {
+      "path": "evidence/option-coverage-public-01/verify_saved.py",
+      "bytes": 7183,
+      "zip_crc32": "42edf336"
+    },
+    {
+      "path": "evidence/option-coverage-release-0330.json",
+      "bytes": 2408,
+      "zip_crc32": "52e67838"
+    },
+    {
+      "path": "evidence/option-coverage-replay-01/events.duckdb",
+      "bytes": 22032384,
+      "zip_crc32": "226e1dd3"
+    },
+    {
+      "path": "evidence/option-coverage-replay-01/events.parquet",
+      "bytes": 1724339,
+      "zip_crc32": "039213ab"
+    },
+    {
+      "path": "evidence/option-coverage-suite-0330.xml",
+      "bytes": 137392,
+      "zip_crc32": "c6890568"
+    },
+    {
+      "path": "evidence/option-freshness-01/audit_used.py",
+      "bytes": 17974,
+      "zip_crc32": "a1747db9"
+    },
+    {
+      "path": "evidence/option-freshness-01/btc/report.json",
+      "bytes": 4274769,
+      "zip_crc32": "d76e3d73"
+    },
+    {
+      "path": "evidence/option-freshness-01/eth-sol-paxg/report.json",
+      "bytes": 4002264,
+      "zip_crc32": "02cab8d3"
+    },
+    {
+      "path": "evidence/option-freshness-01/final-validation.json",
+      "bytes": 802,
+      "zip_crc32": "033d00fd"
+    },
+    {
+      "path": "evidence/option-freshness-01/independent-proof.json",
+      "bytes": 4019,
+      "zip_crc32": "49786018"
+    },
+    {
+      "path": "evidence/option-freshness-01/parent-validation.json",
+      "bytes": 673,
+      "zip_crc32": "cbb900ab"
+    },
+    {
+      "path": "evidence/option-freshness-01/parent_audit_used.py",
+      "bytes": 18093,
+      "zip_crc32": "d94826d8"
+    },
+    {
+      "path": "evidence/option-freshness-01/parent_tests_used.py",
+      "bytes": 12700,
+      "zip_crc32": "47ce45e6"
+    },
+    {
+      "path": "evidence/option-freshness-01/README.md",
+      "bytes": 5085,
+      "zip_crc32": "6606b66f"
+    },
+    {
+      "path": "evidence/option-freshness-01/targeted-tests.xml",
+      "bytes": 24113,
+      "zip_crc32": "c20a39ad"
+    },
+    {
+      "path": "evidence/option-freshness-01/tests_used.py",
+      "bytes": 12527,
+      "zip_crc32": "4624dac8"
+    },
+    {
+      "path": "evidence/option-freshness-01/verify_final.py",
+      "bytes": 2198,
+      "zip_crc32": "d0c76ea6"
+    },
+    {
+      "path": "evidence/option-freshness-01/verify_parent.py",
+      "bytes": 2257,
+      "zip_crc32": "641ef27c"
+    },
+    {
+      "path": "evidence/option-freshness-01/verify_saved.py",
+      "bytes": 10830,
+      "zip_crc32": "9da5610b"
+    },
+    {
+      "path": "evidence/option-native-fields-01/btc/report.json",
+      "bytes": 5667203,
+      "zip_crc32": "65ed394a"
+    },
+    {
+      "path": "evidence/option-native-fields-01/eth-sol-paxg/report.json",
+      "bytes": 5285925,
+      "zip_crc32": "97789a5b"
+    },
+    {
+      "path": "evidence/option-native-fields-01/README.md",
+      "bytes": 1083,
+      "zip_crc32": "86fa8815"
+    },
+    {
+      "path": "evidence/option-native-fields-01/tests.xml",
+      "bytes": 5841,
+      "zip_crc32": "5af944e9"
+    },
+    {
+      "path": "evidence/option-native-fields-01/verification.json",
+      "bytes": 740,
+      "zip_crc32": "8cbbfe3e"
+    },
+    {
+      "path": "evidence/option-projection-01/README.md",
+      "bytes": 2110,
+      "zip_crc32": "690401ed"
+    },
+    {
+      "path": "evidence/option-projection-01/report.json",
+      "bytes": 4517,
+      "zip_crc32": "d35611a6"
+    },
+    {
+      "path": "evidence/option-projection-01/verify_saved.py",
+      "bytes": 10031,
+      "zip_crc32": "4cdaabfb"
+    },
+    {
+      "path": "evidence/option-projection-release-0335.json",
+      "bytes": 5294,
+      "zip_crc32": "6f2e496e"
+    },
+    {
+      "path": "evidence/option-projection-replay-02/btc-with-synthetic-old-history.parquet",
+      "bytes": 9645833,
+      "zip_crc32": "c906cfb3"
+    },
+    {
+      "path": "evidence/option-projection-replay-02/multiasset-options-public-01.duckdb",
+      "bytes": 45887488,
+      "zip_crc32": "0f9225f0"
+    },
+    {
+      "path": "evidence/option-projection-replay-02/multiasset-options-public-01.native.parquet",
+      "bytes": 3650143,
+      "zip_crc32": "f89b830d"
+    },
+    {
+      "path": "evidence/option-projection-replay-02/reused-validation-public-01.duckdb",
+      "bytes": 264515584,
+      "zip_crc32": "29c961fb"
+    },
+    {
+      "path": "evidence/option-projection-replay-02/reused-validation-public-01.native.parquet",
+      "bytes": 5273105,
+      "zip_crc32": "9917f962"
+    },
+    {
+      "path": "evidence/option-projection-suite-0335.xml",
+      "bytes": 148982,
+      "zip_crc32": "511aad23"
+    },
+    {
+      "path": "evidence/options-features-saved-native-01/api-call/options-features.json",
+      "bytes": 3992546,
+      "zip_crc32": "90a3d174"
+    },
+    {
+      "path": "evidence/options-features-saved-native-01/api-put/options-features.json",
+      "bytes": 3992548,
+      "zip_crc32": "bea74643"
+    },
+    {
+      "path": "evidence/options-features-saved-native-01/cli-call/options-features.json",
+      "bytes": 3992546,
+      "zip_crc32": "90a3d174"
+    },
+    {
+      "path": "evidence/options-features-saved-native-01/cli-put/options-features.json",
+      "bytes": 3992548,
+      "zip_crc32": "bea74643"
+    },
+    {
+      "path": "evidence/options-features-saved-native-01/report.json",
+      "bytes": 73344,
+      "zip_crc32": "ad26a736"
+    },
+    {
+      "path": "evidence/original-key-recheck.json",
+      "bytes": 352,
+      "zip_crc32": "72d5d320"
+    },
+    {
+      "path": "evidence/parallel-feeds-release-0337.json",
+      "bytes": 7537,
+      "zip_crc32": "011eb765"
+    },
+    {
+      "path": "evidence/parallel-feeds-suite-0337.xml",
+      "bytes": 179464,
+      "zip_crc32": "aa1bc540"
+    },
+    {
+      "path": "evidence/parallel-foundations-01/backtest-result/backtest.json",
+      "bytes": 5350,
+      "zip_crc32": "8b569ea2"
+    },
+    {
+      "path": "evidence/parallel-foundations-01/bar-state-cohort-0.json",
+      "bytes": 1692,
+      "zip_crc32": "3733ecdf"
+    },
+    {
+      "path": "evidence/parallel-foundations-01/bar-state-cohort-1.json",
+      "bytes": 1682,
+      "zip_crc32": "bcf6b921"
+    },
+    {
+      "path": "evidence/parallel-foundations-01/feature-result/features.json",
+      "bytes": 4726,
+      "zip_crc32": "a7082775"
+    },
+    {
+      "path": "evidence/parallel-foundations-01/features-fixture.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "5be61715"
+    },
+    {
+      "path": "evidence/parallel-foundations-01/native-and-bars.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "7295e06c"
+    },
+    {
+      "path": "evidence/parallel-foundations-01/native-and-bars.parquet",
+      "bytes": 6623,
+      "zip_crc32": "42103764"
+    },
+    {
+      "path": "evidence/parallel-foundations-01/native-and-bars.parquet.manifest.json",
+      "bytes": 143,
+      "zip_crc32": "343c6553"
+    },
+    {
+      "path": "evidence/parallel-foundations-01/report.json",
+      "bytes": 16181,
+      "zip_crc32": "ff3c93ab"
+    },
+    {
+      "path": "evidence/parallel-foundations-01/trials.jsonl",
+      "bytes": 2649,
+      "zip_crc32": "81794dcc"
+    },
+    {
+      "path": "evidence/parallel-foundations-parent-audit-0345.json",
+      "bytes": 182046,
+      "zip_crc32": "f8d315f9"
+    },
+    {
+      "path": "evidence/parallel-foundations-release-0345.json",
+      "bytes": 32923,
+      "zip_crc32": "f929bcad"
+    },
+    {
+      "path": "evidence/parallel-foundations-suite-0345.xml",
+      "bytes": 362630,
+      "zip_crc32": "c77f9a81"
+    },
+    {
+      "path": "evidence/parallel-foundations-trials-0345/final-proof-report.json",
+      "bytes": 16181,
+      "zip_crc32": "ff3c93ab"
+    },
+    {
+      "path": "evidence/parallel-foundations-trials-0345/final-proof.jsonl",
+      "bytes": 2649,
+      "zip_crc32": "81794dcc"
+    },
+    {
+      "path": "evidence/parallel-foundations-trials-0345/report.json",
+      "bytes": 2568,
+      "zip_crc32": "f957f169"
+    },
+    {
+      "path": "evidence/parallel-foundations-trials-0345/scratch-attempt-01-report.json",
+      "bytes": 15538,
+      "zip_crc32": "8dd3a658"
+    },
+    {
+      "path": "evidence/parallel-foundations-trials-0345/scratch-attempt-01.jsonl",
+      "bytes": 2649,
+      "zip_crc32": "304c36ee"
+    },
+    {
+      "path": "evidence/parallel-foundations-trials-0345/scratch-attempt-02-report.json",
+      "bytes": 16181,
+      "zip_crc32": "d7fc3a52"
+    },
+    {
+      "path": "evidence/parallel-foundations-trials-0345/scratch-attempt-02.jsonl",
+      "bytes": 2649,
+      "zip_crc32": "a01b7183"
+    },
+    {
+      "path": "evidence/parallel-foundations-wheel-runtime-0345.json",
+      "bytes": 297,
+      "zip_crc32": "308693b9"
+    },
+    {
+      "path": "evidence/parallel-ingestion-release-0336.json",
+      "bytes": 15251,
+      "zip_crc32": "1d8f0821"
+    },
+    {
+      "path": "evidence/parallel-ingestion-suite-0336.xml",
+      "bytes": 159424,
+      "zip_crc32": "b6845a65"
+    },
+    {
+      "path": "evidence/public-testnet-probe.json",
+      "bytes": 5900,
+      "zip_crc32": "40c998c3"
+    },
+    {
+      "path": "evidence/pytest.xml",
+      "bytes": 34355,
+      "zip_crc32": "cf030018"
+    },
+    {
+      "path": "evidence/receive-timing-public-01/config.sanitized.json",
+      "bytes": 6445,
+      "zip_crc32": "3e9070f6"
+    },
+    {
+      "path": "evidence/receive-timing-public-01/events.duckdb",
+      "bytes": 45887488,
+      "zip_crc32": "78d49de4"
+    },
+    {
+      "path": "evidence/receive-timing-public-01/events.parquet",
+      "bytes": 2080724,
+      "zip_crc32": "70bba6ff"
+    },
+    {
+      "path": "evidence/receive-timing-public-01/events.parquet.manifest.json",
+      "bytes": 149,
+      "zip_crc32": "f39546d7"
+    },
+    {
+      "path": "evidence/receive-timing-public-01/independent-proof.json",
+      "bytes": 9563,
+      "zip_crc32": "aa0f5f43"
+    },
+    {
+      "path": "evidence/receive-timing-public-01/README.md",
+      "bytes": 1750,
+      "zip_crc32": "91248fc0"
+    },
+    {
+      "path": "evidence/receive-timing-public-01/report.json",
+      "bytes": 4958,
+      "zip_crc32": "793a7658"
+    },
+    {
+      "path": "evidence/receive-timing-public-01/verification.json",
+      "bytes": 928,
+      "zip_crc32": "46b45be3"
+    },
+    {
+      "path": "evidence/receive-timing-public-01/verify_saved.py",
+      "bytes": 10723,
+      "zip_crc32": "9a4c0277"
+    },
+    {
+      "path": "evidence/receive-timing-release-0332.json",
+      "bytes": 3022,
+      "zip_crc32": "79d00c50"
+    },
+    {
+      "path": "evidence/receive-timing-replay-01/events.duckdb",
+      "bytes": 25178112,
+      "zip_crc32": "0e3b63d5"
+    },
+    {
+      "path": "evidence/receive-timing-replay-01/events.parquet",
+      "bytes": 2080724,
+      "zip_crc32": "70bba6ff"
+    },
+    {
+      "path": "evidence/receive-timing-suite-0332.xml",
+      "bytes": 139443,
+      "zip_crc32": "9f83505d"
+    },
+    {
+      "path": "evidence/recovery-handoff-01/events.duckdb",
+      "bytes": 1847296,
+      "zip_crc32": "cf0fdd2c"
+    },
+    {
+      "path": "evidence/recovery-handoff-01/events.parquet",
+      "bytes": 17285,
+      "zip_crc32": "8ac7187e"
+    },
+    {
+      "path": "evidence/recovery-handoff-01/events.parquet.manifest.json",
+      "bytes": 145,
+      "zip_crc32": "41d03f3d"
+    },
+    {
+      "path": "evidence/recovery-handoff-01/report.json",
+      "bytes": 858,
+      "zip_crc32": "789db05c"
+    },
+    {
+      "path": "evidence/recovery-journal-01/events.duckdb",
+      "bytes": 1847296,
+      "zip_crc32": "199bae34"
+    },
+    {
+      "path": "evidence/recovery-journal-01/events.parquet",
+      "bytes": 17285,
+      "zip_crc32": "8ac7187e"
+    },
+    {
+      "path": "evidence/recovery-journal-01/events.parquet.manifest.json",
+      "bytes": 145,
+      "zip_crc32": "41d03f3d"
+    },
+    {
+      "path": "evidence/recovery-journal-01/report.json",
+      "bytes": 9510,
+      "zip_crc32": "8b681d9e"
+    },
+    {
+      "path": "evidence/recovery-journal-01/restored/events.duckdb",
+      "bytes": 1847296,
+      "zip_crc32": "fb82e121"
+    },
+    {
+      "path": "evidence/recovery-journal-01/restored/restore.json",
+      "bytes": 423,
+      "zip_crc32": "9be829e0"
+    },
+    {
+      "path": "evidence/restart-parent-validation-0338.json",
+      "bytes": 1155,
+      "zip_crc32": "4a7c7452"
+    },
+    {
+      "path": "evidence/restart-quality-release-0338.json",
+      "bytes": 7162,
+      "zip_crc32": "65f66e75"
+    },
+    {
+      "path": "evidence/restart-quality-suite-0338.xml",
+      "bytes": 193002,
+      "zip_crc32": "d8c4b384"
+    },
+    {
+      "path": "evidence/restore-verification.json",
+      "bytes": 625,
+      "zip_crc32": "52770298"
+    },
+    {
+      "path": "evidence/reused-validation-01/README.md",
+      "bytes": 947,
+      "zip_crc32": "23db65cd"
+    },
+    {
+      "path": "evidence/reused-validation-01/report.json",
+      "bytes": 1329,
+      "zip_crc32": "fa99f890"
+    },
+    {
+      "path": "evidence/reused-validation-01/verify_saved.py",
+      "bytes": 6776,
+      "zip_crc32": "e055e293"
+    },
+    {
+      "path": "evidence/reused-validation-public-01/config.sanitized.json",
+      "bytes": 6445,
+      "zip_crc32": "3e9070f6"
+    },
+    {
+      "path": "evidence/reused-validation-public-01/events.duckdb",
+      "bytes": 117452800,
+      "zip_crc32": "fecd93d8"
+    },
+    {
+      "path": "evidence/reused-validation-public-01/events.parquet",
+      "bytes": 5273105,
+      "zip_crc32": "9917f962"
+    },
+    {
+      "path": "evidence/reused-validation-public-01/events.parquet.manifest.json",
+      "bytes": 149,
+      "zip_crc32": "5947994a"
+    },
+    {
+      "path": "evidence/reused-validation-public-01/independent-proof.json",
+      "bytes": 1982,
+      "zip_crc32": "6ffbef91"
+    },
+    {
+      "path": "evidence/reused-validation-public-01/README.md",
+      "bytes": 1611,
+      "zip_crc32": "0d306110"
+    },
+    {
+      "path": "evidence/reused-validation-public-01/report.json",
+      "bytes": 903052,
+      "zip_crc32": "c340ed52"
+    },
+    {
+      "path": "evidence/reused-validation-public-01/verification.json",
+      "bytes": 414995,
+      "zip_crc32": "5028b67e"
+    },
+    {
+      "path": "evidence/reused-validation-public-01/verify_saved.py",
+      "bytes": 10941,
+      "zip_crc32": "cda3cfe0"
+    },
+    {
+      "path": "evidence/reused-validation-release-0333.json",
+      "bytes": 4135,
+      "zip_crc32": "7f7fd3cb"
+    },
+    {
+      "path": "evidence/reused-validation-replay-01/events.duckdb",
+      "bytes": 61878272,
+      "zip_crc32": "f25f272c"
+    },
+    {
+      "path": "evidence/reused-validation-replay-01/events.parquet",
+      "bytes": 5273105,
+      "zip_crc32": "9917f962"
+    },
+    {
+      "path": "evidence/reused-validation-suite-0333.xml",
+      "bytes": 141112,
+      "zip_crc32": "d42ac0fc"
+    },
+    {
+      "path": "evidence/rotation-parent-validation-0342.json",
+      "bytes": 11898,
+      "zip_crc32": "89bd080f"
+    },
+    {
+      "path": "evidence/rotation-release-0342.json",
+      "bytes": 8411,
+      "zip_crc32": "f05a7785"
+    },
+    {
+      "path": "evidence/rotation-saved-public-01/corrupt-restore/restore-failed.json",
+      "bytes": 56,
+      "zip_crc32": "8034d755"
+    },
+    {
+      "path": "evidence/rotation-saved-public-01/corrupt-rotation/catalog.json",
+      "bytes": 1343,
+      "zip_crc32": "352d4c31"
+    },
+    {
+      "path": "evidence/rotation-saved-public-01/corrupt-rotation/part-000000.parquet",
+      "bytes": 2715,
+      "zip_crc32": "fe69673d"
+    },
+    {
+      "path": "evidence/rotation-saved-public-01/corrupt-rotation/part-000000.parquet.manifest.json",
+      "bytes": 142,
+      "zip_crc32": "13622dd0"
+    },
+    {
+      "path": "evidence/rotation-saved-public-01/corrupt-rotation/part-000001.parquet",
+      "bytes": 10870,
+      "zip_crc32": "2ff5df8f"
+    },
+    {
+      "path": "evidence/rotation-saved-public-01/corrupt-rotation/part-000001.parquet.manifest.json",
+      "bytes": 144,
+      "zip_crc32": "efd633e4"
+    },
+    {
+      "path": "evidence/rotation-saved-public-01/README.md",
+      "bytes": 839,
+      "zip_crc32": "73593d54"
+    },
+    {
+      "path": "evidence/rotation-saved-public-01/report.json",
+      "bytes": 72752,
+      "zip_crc32": "8ae9e568"
+    },
+    {
+      "path": "evidence/rotation-saved-public-01/restored/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "ce96b9be"
+    },
+    {
+      "path": "evidence/rotation-saved-public-01/restored/restore.json",
+      "bytes": 693,
+      "zip_crc32": "1513d315"
+    },
+    {
+      "path": "evidence/rotation-saved-public-01/rotation/catalog.json",
+      "bytes": 1343,
+      "zip_crc32": "352d4c31"
+    },
+    {
+      "path": "evidence/rotation-saved-public-01/rotation/part-000000.parquet",
+      "bytes": 2695,
+      "zip_crc32": "c70c7702"
+    },
+    {
+      "path": "evidence/rotation-saved-public-01/rotation/part-000000.parquet.manifest.json",
+      "bytes": 142,
+      "zip_crc32": "13622dd0"
+    },
+    {
+      "path": "evidence/rotation-saved-public-01/rotation/part-000001.parquet",
+      "bytes": 10870,
+      "zip_crc32": "2ff5df8f"
+    },
+    {
+      "path": "evidence/rotation-saved-public-01/rotation/part-000001.parquet.manifest.json",
+      "bytes": 144,
+      "zip_crc32": "efd633e4"
+    },
+    {
+      "path": "evidence/rotation-saved-public-01/source.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "ae1eec83"
+    },
+    {
+      "path": "evidence/rotation-saved-public-01/verification-script.py",
+      "bytes": 23580,
+      "zip_crc32": "d5193d21"
+    },
+    {
+      "path": "evidence/rotation-suite-0342.xml",
+      "bytes": 289457,
+      "zip_crc32": "d1921378"
+    },
+    {
+      "path": "evidence/runtime-recovery-01/events.duckdb",
+      "bytes": 1847296,
+      "zip_crc32": "2626dd88"
+    },
+    {
+      "path": "evidence/runtime-recovery-01/events.parquet",
+      "bytes": 17281,
+      "zip_crc32": "f9cf0dde"
+    },
+    {
+      "path": "evidence/runtime-recovery-01/events.parquet.manifest.json",
+      "bytes": 145,
+      "zip_crc32": "88c45933"
+    },
+    {
+      "path": "evidence/runtime-recovery-01/report.json",
+      "bytes": 783,
+      "zip_crc32": "9ba11637"
+    },
+    {
+      "path": "evidence/settings-recheck-latest.json",
+      "bytes": 1113,
+      "zip_crc32": "983b9d18"
+    },
+    {
+      "path": "evidence/settings-recheck.json",
+      "bytes": 1245,
+      "zip_crc32": "f6e0a002"
+    },
+    {
+      "path": "evidence/settings-start-check.json",
+      "bytes": 1042,
+      "zip_crc32": "98e05225"
+    },
+    {
+      "path": "evidence/solana-network-public-01/events.duckdb",
+      "bytes": 3158016,
+      "zip_crc32": "08c63147"
+    },
+    {
+      "path": "evidence/solana-network-public-01/events.parquet",
+      "bytes": 533013,
+      "zip_crc32": "7313c8fd"
+    },
+    {
+      "path": "evidence/solana-network-public-01/events.parquet.manifest.json",
+      "bytes": 144,
+      "zip_crc32": "621c8de2"
+    },
+    {
+      "path": "evidence/solana-network-public-01/fixture.duckdb",
+      "bytes": 3158016,
+      "zip_crc32": "e226dfaf"
+    },
+    {
+      "path": "evidence/solana-network-public-01/fixture.parquet",
+      "bytes": 533096,
+      "zip_crc32": "762e4716"
+    },
+    {
+      "path": "evidence/solana-network-public-01/fixture.parquet.manifest.json",
+      "bytes": 144,
+      "zip_crc32": "f4c41249"
+    },
+    {
+      "path": "evidence/solana-network-public-01/independent-proof.json",
+      "bytes": 899,
+      "zip_crc32": "0c2277c4"
+    },
+    {
+      "path": "evidence/solana-network-public-01/README.md",
+      "bytes": 2436,
+      "zip_crc32": "806acb0b"
+    },
+    {
+      "path": "evidence/solana-network-public-01/report.json",
+      "bytes": 1688,
+      "zip_crc32": "41a90c4e"
+    },
+    {
+      "path": "evidence/solana-network-public-01/results.json",
+      "bytes": 5089986,
+      "zip_crc32": "2bee4bbf"
+    },
+    {
+      "path": "evidence/solana-network-public-01/verify_saved.py",
+      "bytes": 7748,
+      "zip_crc32": "e11550a0"
+    },
+    {
+      "path": "evidence/solana-network-release-0328.json",
+      "bytes": 2381,
+      "zip_crc32": "6f4c893c"
+    },
+    {
+      "path": "evidence/solana-network-suite-0328.xml",
+      "bytes": 127168,
+      "zip_crc32": "982b1005"
+    },
+    {
+      "path": "evidence/solana-store-quality-01/events.duckdb",
+      "bytes": 3158016,
+      "zip_crc32": "360cef18"
+    },
+    {
+      "path": "evidence/solana-store-quality-01/events.parquet",
+      "bytes": 571166,
+      "zip_crc32": "ef1aa79d"
+    },
+    {
+      "path": "evidence/solana-store-quality-01/events.parquet.manifest.json",
+      "bytes": 147,
+      "zip_crc32": "be49c2d7"
+    },
+    {
+      "path": "evidence/solana-store-quality-01/README.md",
+      "bytes": 652,
+      "zip_crc32": "4b8871d9"
+    },
+    {
+      "path": "evidence/solana-store-quality-01/report.json",
+      "bytes": 969,
+      "zip_crc32": "e302ecb9"
+    },
+    {
+      "path": "evidence/solana-store-quality-01/verification-source.py",
+      "bytes": 3686,
+      "zip_crc32": "ef4bfe0d"
+    },
+    {
+      "path": "evidence/spot-batch-parent-validation-0344-02.json",
+      "bytes": 8475,
+      "zip_crc32": "1a12e7b5"
+    },
+    {
+      "path": "evidence/spot-batch-parent-validation-0344.json",
+      "bytes": 8475,
+      "zip_crc32": "d09cba18"
+    },
+    {
+      "path": "evidence/spot-batch-release-0344.json",
+      "bytes": 8369,
+      "zip_crc32": "6ee66ad1"
+    },
+    {
+      "path": "evidence/spot-batch-saved-public-01/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "4fca9d91"
+    },
+    {
+      "path": "evidence/spot-batch-saved-public-01/events.parquet",
+      "bytes": 6983,
+      "zip_crc32": "c6c94b87"
+    },
+    {
+      "path": "evidence/spot-batch-saved-public-01/events.parquet.manifest.json",
+      "bytes": 143,
+      "zip_crc32": "31243971"
+    },
+    {
+      "path": "evidence/spot-batch-saved-public-01/README.md",
+      "bytes": 1089,
+      "zip_crc32": "b7be94c7"
+    },
+    {
+      "path": "evidence/spot-batch-saved-public-01/report.json",
+      "bytes": 126257,
+      "zip_crc32": "f01fc601"
+    },
+    {
+      "path": "evidence/spot-batch-saved-public-01/verification-script.py",
+      "bytes": 32004,
+      "zip_crc32": "b7c0a854"
+    },
+    {
+      "path": "evidence/spot-batch-suite-0344.xml",
+      "bytes": 322715,
+      "zip_crc32": "4bfea8cd"
+    },
+    {
+      "path": "evidence/spot-native-baseline-0344.json",
+      "bytes": 11523,
+      "zip_crc32": "20f78631"
+    },
+    {
+      "path": "evidence/spot-sink-failure-fixture-0344/capture/config.sanitized.json",
+      "bytes": 7077,
+      "zip_crc32": "d90a0df8"
+    },
+    {
+      "path": "evidence/spot-sink-failure-fixture-0344/capture/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "e593fcf7"
+    },
+    {
+      "path": "evidence/spot-sink-failure-fixture-0344/capture/events.parquet",
+      "bytes": 2515,
+      "zip_crc32": "6ab6cc3f"
+    },
+    {
+      "path": "evidence/spot-sink-failure-fixture-0344/capture/events.parquet.manifest.json",
+      "bytes": 142,
+      "zip_crc32": "fd22e371"
+    },
+    {
+      "path": "evidence/spot-sink-failure-fixture-0344/capture/report.json",
+      "bytes": 5676,
+      "zip_crc32": "405b9e97"
+    },
+    {
+      "path": "evidence/spot-sink-failure-fixture-0344/README.md",
+      "bytes": 1326,
+      "zip_crc32": "a20f41c1"
+    },
+    {
+      "path": "evidence/spot-sink-failure-fixture-0344/report.json",
+      "bytes": 8191,
+      "zip_crc32": "e34dbe49"
+    },
+    {
+      "path": "evidence/spot-sink-failure-fixture-0344/verification-script.py",
+      "bytes": 7866,
+      "zip_crc32": "494a2502"
+    },
+    {
+      "path": "evidence/spot-sink-failure-fixture-0344-02/capture/config.sanitized.json",
+      "bytes": 7077,
+      "zip_crc32": "d90a0df8"
+    },
+    {
+      "path": "evidence/spot-sink-failure-fixture-0344-02/capture/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "6a6d57ac"
+    },
+    {
+      "path": "evidence/spot-sink-failure-fixture-0344-02/capture/events.parquet",
+      "bytes": 2515,
+      "zip_crc32": "642753f9"
+    },
+    {
+      "path": "evidence/spot-sink-failure-fixture-0344-02/capture/events.parquet.manifest.json",
+      "bytes": 142,
+      "zip_crc32": "4b951a8a"
+    },
+    {
+      "path": "evidence/spot-sink-failure-fixture-0344-02/capture/report.json",
+      "bytes": 5676,
+      "zip_crc32": "f9dae428"
+    },
+    {
+      "path": "evidence/spot-sink-failure-fixture-0344-02/README.md",
+      "bytes": 1326,
+      "zip_crc32": "a20f41c1"
+    },
+    {
+      "path": "evidence/spot-sink-failure-fixture-0344-02/report.json",
+      "bytes": 8191,
+      "zip_crc32": "2cb3f69c"
+    },
+    {
+      "path": "evidence/spot-sink-failure-fixture-0344-02/verification-script.py",
+      "bytes": 8078,
+      "zip_crc32": "eee7ad91"
+    },
+    {
+      "path": "evidence/stablecoin-capture-resume-01/failure/config.sanitized.json",
+      "bytes": 6899,
+      "zip_crc32": "f18a2435"
+    },
+    {
+      "path": "evidence/stablecoin-capture-resume-01/failure/events.duckdb",
+      "bytes": 2895872,
+      "zip_crc32": "19997847"
+    },
+    {
+      "path": "evidence/stablecoin-capture-resume-01/failure/events.parquet",
+      "bytes": 4203,
+      "zip_crc32": "b2ec3642"
+    },
+    {
+      "path": "evidence/stablecoin-capture-resume-01/failure/events.parquet.manifest.json",
+      "bytes": 142,
+      "zip_crc32": "b6415ab9"
+    },
+    {
+      "path": "evidence/stablecoin-capture-resume-01/failure/report.json",
+      "bytes": 7011,
+      "zip_crc32": "57f5dac5"
+    },
+    {
+      "path": "evidence/stablecoin-capture-resume-01/README.md",
+      "bytes": 1065,
+      "zip_crc32": "0f965689"
+    },
+    {
+      "path": "evidence/stablecoin-capture-resume-01/repeat/config.sanitized.json",
+      "bytes": 6899,
+      "zip_crc32": "f18a2435"
+    },
+    {
+      "path": "evidence/stablecoin-capture-resume-01/repeat/events.duckdb",
+      "bytes": 2895872,
+      "zip_crc32": "b3c5de3e"
+    },
+    {
+      "path": "evidence/stablecoin-capture-resume-01/repeat/events.parquet",
+      "bytes": 4301,
+      "zip_crc32": "d8fc8bf8"
+    },
+    {
+      "path": "evidence/stablecoin-capture-resume-01/repeat/events.parquet.manifest.json",
+      "bytes": 142,
+      "zip_crc32": "627f71f6"
+    },
+    {
+      "path": "evidence/stablecoin-capture-resume-01/repeat/report.json",
+      "bytes": 7152,
+      "zip_crc32": "a0e8a5ae"
+    },
+    {
+      "path": "evidence/stablecoin-capture-resume-01/report.json",
+      "bytes": 18276,
+      "zip_crc32": "98301998"
+    },
+    {
+      "path": "evidence/stablecoin-restart-01/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "d1592a2f"
+    },
+    {
+      "path": "evidence/stablecoin-restart-01/failed.parquet",
+      "bytes": 4756,
+      "zip_crc32": "ee6ec737"
+    },
+    {
+      "path": "evidence/stablecoin-restart-01/failed.parquet.manifest.json",
+      "bytes": 142,
+      "zip_crc32": "cb0f21b7"
+    },
+    {
+      "path": "evidence/stablecoin-restart-01/original.parquet",
+      "bytes": 4088,
+      "zip_crc32": "b498f71a"
+    },
+    {
+      "path": "evidence/stablecoin-restart-01/original.parquet.manifest.json",
+      "bytes": 142,
+      "zip_crc32": "ea15da4e"
+    },
+    {
+      "path": "evidence/stablecoin-restart-01/README.md",
+      "bytes": 1598,
+      "zip_crc32": "abd8ec6e"
+    },
+    {
+      "path": "evidence/stablecoin-restart-01/recovered.parquet",
+      "bytes": 4924,
+      "zip_crc32": "e26a1b64"
+    },
+    {
+      "path": "evidence/stablecoin-restart-01/recovered.parquet.manifest.json",
+      "bytes": 142,
+      "zip_crc32": "cc39ab10"
+    },
+    {
+      "path": "evidence/stablecoin-restart-01/report.json",
+      "bytes": 25974,
+      "zip_crc32": "7cb5e49b"
+    },
+    {
+      "path": "evidence/stablecoin-restart-01/verifier_snapshot.py",
+      "bytes": 18965,
+      "zip_crc32": "db75656a"
+    },
+    {
+      "path": "evidence/stablecoin-supply-public-01/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "642eb699"
+    },
+    {
+      "path": "evidence/stablecoin-supply-public-01/events.parquet",
+      "bytes": 4088,
+      "zip_crc32": "b498f71a"
+    },
+    {
+      "path": "evidence/stablecoin-supply-public-01/events.parquet.manifest.json",
+      "bytes": 142,
+      "zip_crc32": "ea15da4e"
+    },
+    {
+      "path": "evidence/stablecoin-supply-public-01/README.md",
+      "bytes": 869,
+      "zip_crc32": "c38a1c9a"
+    },
+    {
+      "path": "evidence/stablecoin-supply-public-01/report.json",
+      "bytes": 93754,
+      "zip_crc32": "d71d70f3"
+    },
+    {
+      "path": "evidence/stablecoin-supply-public-01/response-01.json",
+      "bytes": 39,
+      "zip_crc32": "2da34494"
+    },
+    {
+      "path": "evidence/stablecoin-supply-public-01/response-02.json",
+      "bytes": 21537,
+      "zip_crc32": "3b074753"
+    },
+    {
+      "path": "evidence/stablecoin-supply-public-01/response-03.json",
+      "bytes": 102,
+      "zip_crc32": "148556a7"
+    },
+    {
+      "path": "evidence/stablecoin-supply-public-01/response-04.json",
+      "bytes": 102,
+      "zip_crc32": "e7447558"
+    },
+    {
+      "path": "evidence/stablecoin-supply-public-01/response-05.json",
+      "bytes": 102,
+      "zip_crc32": "fe18c341"
+    },
+    {
+      "path": "evidence/stablecoin-supply-public-01/response-06.json",
+      "bytes": 102,
+      "zip_crc32": "8238689d"
+    },
+    {
+      "path": "evidence/stablecoin-supply-public-01/response-07.json",
+      "bytes": 21537,
+      "zip_crc32": "3a51a85d"
+    },
+    {
+      "path": "evidence/stablecoin-supply-public-01/verifier_snapshot.py",
+      "bytes": 13882,
+      "zip_crc32": "7fdab3f0"
+    },
+    {
+      "path": "evidence/storage-cancellation-01.json",
+      "bytes": 1414,
+      "zip_crc32": "e1cafc2e"
+    },
+    {
+      "path": "evidence/storage-cancellation-suite-0319.xml",
+      "bytes": 73971,
+      "zip_crc32": "d081151e"
+    },
+    {
+      "path": "evidence/storage-verification.json",
+      "bytes": 883,
+      "zip_crc32": "67de348c"
+    },
+    {
+      "path": "evidence/subscription-progress-public-01/config.sanitized.json",
+      "bytes": 6445,
+      "zip_crc32": "3e9070f6"
+    },
+    {
+      "path": "evidence/subscription-progress-public-01/events.duckdb",
+      "bytes": 42217472,
+      "zip_crc32": "c8f9cbe2"
+    },
+    {
+      "path": "evidence/subscription-progress-public-01/events.parquet",
+      "bytes": 1796364,
+      "zip_crc32": "4f45df92"
+    },
+    {
+      "path": "evidence/subscription-progress-public-01/events.parquet.manifest.json",
+      "bytes": 149,
+      "zip_crc32": "c689652a"
+    },
+    {
+      "path": "evidence/subscription-progress-public-01/independent-proof.json",
+      "bytes": 1950,
+      "zip_crc32": "3376e56b"
+    },
+    {
+      "path": "evidence/subscription-progress-public-01/README.md",
+      "bytes": 1672,
+      "zip_crc32": "785324eb"
+    },
+    {
+      "path": "evidence/subscription-progress-public-01/report.json",
+      "bytes": 4958,
+      "zip_crc32": "0c39741e"
+    },
+    {
+      "path": "evidence/subscription-progress-public-01/verification.json",
+      "bytes": 928,
+      "zip_crc32": "fa40770a"
+    },
+    {
+      "path": "evidence/subscription-progress-public-01/verify_saved.py",
+      "bytes": 9203,
+      "zip_crc32": "aa143477"
+    },
+    {
+      "path": "evidence/subscription-progress-release-0331.json",
+      "bytes": 2785,
+      "zip_crc32": "eae81160"
+    },
+    {
+      "path": "evidence/subscription-progress-replay-01/events.duckdb",
+      "bytes": 21508096,
+      "zip_crc32": "1810614d"
+    },
+    {
+      "path": "evidence/subscription-progress-replay-01/events.parquet",
+      "bytes": 1796364,
+      "zip_crc32": "4f45df92"
+    },
+    {
+      "path": "evidence/subscription-progress-suite-0331.xml",
+      "bytes": 137997,
+      "zip_crc32": "a140b3ee"
+    },
+    {
+      "path": "evidence/tests.xml",
+      "bytes": 72783,
+      "zip_crc32": "73254bdd"
+    },
+    {
+      "path": "evidence/tips-yield-public-01/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "a300a6d5"
+    },
+    {
+      "path": "evidence/tips-yield-public-01/events.parquet",
+      "bytes": 2813,
+      "zip_crc32": "208535ac"
+    },
+    {
+      "path": "evidence/tips-yield-public-01/events.parquet.manifest.json",
+      "bytes": 142,
+      "zip_crc32": "65197d3a"
+    },
+    {
+      "path": "evidence/tips-yield-public-01/README.md",
+      "bytes": 2862,
+      "zip_crc32": "50d88064"
+    },
+    {
+      "path": "evidence/tips-yield-public-01/report.json",
+      "bytes": 2888,
+      "zip_crc32": "d3d7927b"
+    },
+    {
+      "path": "evidence/tips-yield-public-01/verification_source.py",
+      "bytes": 12177,
+      "zip_crc32": "a320298b"
+    },
+    {
+      "path": "evidence/trade-backfill-01/anchor.json",
+      "bytes": 520,
+      "zip_crc32": "fd2e5435"
+    },
+    {
+      "path": "evidence/trade-backfill-01/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "527bdc2b"
+    },
+    {
+      "path": "evidence/trade-backfill-01/events.parquet",
+      "bytes": 10508,
+      "zip_crc32": "98e52a62"
+    },
+    {
+      "path": "evidence/trade-backfill-01/events.parquet.manifest.json",
+      "bytes": 145,
+      "zip_crc32": "daea00a9"
+    },
+    {
+      "path": "evidence/trade-backfill-01/page-001.json",
+      "bytes": 3501,
+      "zip_crc32": "f12d9b64"
+    },
+    {
+      "path": "evidence/trade-backfill-01/page-002.json",
+      "bytes": 3502,
+      "zip_crc32": "bedd1197"
+    },
+    {
+      "path": "evidence/trade-backfill-01/page-003.json",
+      "bytes": 3493,
+      "zip_crc32": "9325412b"
+    },
+    {
+      "path": "evidence/trade-backfill-01/report.json",
+      "bytes": 625,
+      "zip_crc32": "0bc1c5d7"
+    },
+    {
+      "path": "evidence/trade-backfill-01/verification.json",
+      "bytes": 645,
+      "zip_crc32": "427d89c5"
+    },
+    {
+      "path": "evidence/trade-reconciliation-01/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "58fbfa43"
+    },
+    {
+      "path": "evidence/trade-reconciliation-01/events.parquet",
+      "bytes": 11495,
+      "zip_crc32": "d241218a"
+    },
+    {
+      "path": "evidence/trade-reconciliation-01/events.parquet.manifest.json",
+      "bytes": 145,
+      "zip_crc32": "950d5418"
+    },
+    {
+      "path": "evidence/trade-reconciliation-01/report.json",
+      "bytes": 9344,
+      "zip_crc32": "cc68082f"
+    },
+    {
+      "path": "evidence/trade-recovery-01/after/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "12440b44"
+    },
+    {
+      "path": "evidence/trade-recovery-01/after/events.parquet",
+      "bytes": 15852,
+      "zip_crc32": "58157e23"
+    },
+    {
+      "path": "evidence/trade-recovery-01/after/events.parquet.manifest.json",
+      "bytes": 145,
+      "zip_crc32": "a1e6f5c5"
+    },
+    {
+      "path": "evidence/trade-recovery-01/before/events.duckdb",
+      "bytes": 1585152,
+      "zip_crc32": "7fa8b7df"
+    },
+    {
+      "path": "evidence/trade-recovery-01/before/events.parquet",
+      "bytes": 15783,
+      "zip_crc32": "93fecbb2"
+    },
+    {
+      "path": "evidence/trade-recovery-01/before/events.parquet.manifest.json",
+      "bytes": 145,
+      "zip_crc32": "5d7005ba"
+    },
+    {
+      "path": "evidence/trade-recovery-01/verification.json",
+      "bytes": 940,
+      "zip_crc32": "54aa691f"
+    },
+    {
+      "path": "evidence/universe-refresh-public-01/config.sanitized.json",
+      "bytes": 6399,
+      "zip_crc32": "c956f7a9"
+    },
+    {
+      "path": "evidence/universe-refresh-public-01/events.duckdb",
+      "bytes": 3158016,
+      "zip_crc32": "c08079fe"
+    },
+    {
+      "path": "evidence/universe-refresh-public-01/events.parquet",
+      "bytes": 249907,
+      "zip_crc32": "a82c6673"
+    },
+    {
+      "path": "evidence/universe-refresh-public-01/events.parquet.manifest.json",
+      "bytes": 147,
+      "zip_crc32": "abf69174"
+    },
+    {
+      "path": "evidence/universe-refresh-public-01/independent-proof.json",
+      "bytes": 757,
+      "zip_crc32": "d592a600"
+    },
+    {
+      "path": "evidence/universe-refresh-public-01/README.md",
+      "bytes": 1880,
+      "zip_crc32": "bbe44acc"
+    },
+    {
+      "path": "evidence/universe-refresh-public-01/report.json",
+      "bytes": 5440,
+      "zip_crc32": "d08e160a"
+    },
+    {
+      "path": "evidence/universe-refresh-public-01/verification.json",
+      "bytes": 2533,
+      "zip_crc32": "fcf8230c"
+    },
+    {
+      "path": "evidence/universe-refresh-public-01/verify_saved.py",
+      "bytes": 4912,
+      "zip_crc32": "18fababa"
+    },
+    {
+      "path": "evidence/universe-refresh-release-0329.json",
+      "bytes": 2590,
+      "zip_crc32": "5263aa32"
+    },
+    {
+      "path": "evidence/universe-refresh-suite-0329.xml",
+      "bytes": 130325,
+      "zip_crc32": "b30f20f2"
+    },
+    {
+      "path": "evidence/valuation-options-provenance-0347/build-before-isolation.log",
+      "bytes": 1739,
+      "zip_crc32": "528dc428"
+    },
+    {
+      "path": "evidence/valuation-options-provenance-0347/build.log",
+      "bytes": 13968,
+      "zip_crc32": "ed29ec63"
+    },
+    {
+      "path": "evidence/valuation-options-provenance-0347/coverage.json",
+      "bytes": 753028,
+      "zip_crc32": "93c8088e"
+    },
+    {
+      "path": "evidence/valuation-options-provenance-0347/earlier-options-attempt.json",
+      "bytes": 576,
+      "zip_crc32": "810aab24"
+    },
+    {
+      "path": "evidence/valuation-options-provenance-0347/format.log",
+      "bytes": 29,
+      "zip_crc32": "48ad4e47"
+    },
+    {
+      "path": "evidence/valuation-options-provenance-0347/freeze-before-historical-repair.json",
+      "bytes": 24824,
+      "zip_crc32": "420916a1"
+    },
+    {
+      "path": "evidence/valuation-options-provenance-0347/freeze-final.json",
+      "bytes": 24824,
+      "zip_crc32": "637a1eaf"
+    },
+    {
+      "path": "evidence/valuation-options-provenance-0347/historical-audit-correction.json",
+      "bytes": 1135,
+      "zip_crc32": "14cb7b7c"
+    },
+    {
+      "path": "evidence/valuation-options-provenance-0347/historical-audit-tests-before.py",
+      "bytes": 9022,
+      "zip_crc32": "b106fbd0"
+    },
+    {
+      "path": "evidence/valuation-options-provenance-0347/historical-auditor-before.py",
+      "bytes": 30548,
+      "zip_crc32": "816bd075"
+    },
+    {
+      "path": "evidence/valuation-options-provenance-0347/integration-regressions.log",
+      "bytes": 183,
+      "zip_crc32": "bd310d1e"
+    },
+    {
+      "path": "evidence/valuation-options-provenance-0347/integration-review.md",
+      "bytes": 3083,
+      "zip_crc32": "e24292d7"
+    },
+    {
+      "path": "evidence/valuation-options-provenance-0347/mypy.log",
+      "bytes": 46,
+      "zip_crc32": "79f82458"
+    },
+    {
+      "path": "evidence/valuation-options-provenance-0347/options-proof.log",
+      "bytes": 162,
+      "zip_crc32": "9758d8e1"
+    },
+    {
+      "path": "evidence/valuation-options-provenance-0347/public-proof.log",
+      "bytes": 162,
+      "zip_crc32": "6233e2b9"
+    },
+    {
+      "path": "evidence/valuation-options-provenance-0347/report.json",
+      "bytes": 1972,
+      "zip_crc32": "bbafd7ea"
+    },
+    {
+      "path": "evidence/valuation-options-provenance-0347/ruff.log",
+      "bytes": 20,
+      "zip_crc32": "630ce403"
+    },
+    {
+      "path": "evidence/valuation-options-provenance-0347/suite-before-historical-repair.log",
+      "bytes": 22476,
+      "zip_crc32": "6b221967"
+    },
+    {
+      "path": "evidence/valuation-options-provenance-0347/suite.log",
+      "bytes": 12079,
+      "zip_crc32": "0882f9b9"
+    },
+    {
+      "path": "evidence/valuation-options-release-0347.json",
+      "bytes": 37629,
+      "zip_crc32": "41a96f92"
+    },
+    {
+      "path": "evidence/valuation-options-suite-0347-before-historical-repair.xml",
+      "bytes": 438280,
+      "zip_crc32": "751a45a4"
+    },
+    {
+      "path": "evidence/valuation-options-suite-0347.xml",
+      "bytes": 429680,
+      "zip_crc32": "4355a86e"
+    },
+    {
+      "path": "evidence/valuation-options-wheel-runtime-0347.json",
+      "bytes": 625,
+      "zip_crc32": "6905db48"
+    },
+    {
+      "path": "evidence/verify_active_parent_0343.py",
+      "bytes": 13251,
+      "zip_crc32": "c403125e"
+    },
+    {
+      "path": "evidence/verify_capture_resume_0341.py",
+      "bytes": 6980,
+      "zip_crc32": "541d0883"
+    },
+    {
+      "path": "evidence/verify_news_resume_0341.py",
+      "bytes": 9681,
+      "zip_crc32": "27c11b08"
+    },
+    {
+      "path": "evidence/verify_news_resume_final_0341.py",
+      "bytes": 10482,
+      "zip_crc32": "e96dcbf0"
+    },
+    {
+      "path": "evidence/verify_rotation_parent_0342.py",
+      "bytes": 11299,
+      "zip_crc32": "4a29ff88"
+    },
+    {
+      "path": "evidence/verify_saved_new_feeds_0339.py",
+      "bytes": 7077,
+      "zip_crc32": "742ef296"
+    },
+    {
+      "path": "evidence/verify_saved_news_supply_0340.py",
+      "bytes": 7063,
+      "zip_crc32": "31b15b56"
+    },
+    {
+      "path": "evidence/verify_saved_restart_0338.py",
+      "bytes": 5289,
+      "zip_crc32": "0a39f489"
+    },
+    {
+      "path": "evidence/verify_spot_batch_parent_0344.py",
+      "bytes": 15341,
+      "zip_crc32": "811a76da"
+    }
+  ],
+  "published_proof_roots_available": [
+    "parallel-foundations-01",
+    "bar-checkpoint-resume-01"
+  ],
+  "required_saved_work_artifacts": [],
+  "validation_support_zip_required": false,
+  "required_generated_runtime": "../../work/.venv/Scripts/python.exe",
+  "historical_absolute_source_identity": "C:\\Users\\Divan\\Documents\\Codex\\2026-09-20\\files-pasted-by-the-user-build\\outputs\\selective-options\\evidence\\live-gap-02",
+  "identity_matches_current_root": true,
+  "identity_matches_relocated_root": false,
+  "dependency_references": [
+    {
+      "path": "tests/test_active_rotation_verifier.py",
+      "line": 22,
+      "text": "scratch = ROOT.parents[1] / \"work/active-rotation-0343\""
+    },
+    {
+      "path": "tests/test_bar_checkpoint_audit.py",
+      "line": 21,
+      "text": "scratch = ROOT.parents[1] / \"work/bar-checkpoint-0346/attempt-02\""
+    },
+    {
+      "path": "tests/test_coinmetrics_audit.py",
+      "line": 160,
+      "text": "str(producer.ROOT.parents[1] / \"work/.venv/Scripts/python.exe\"),"
+    },
+    {
+      "path": "tests/test_coinmetrics_verifier.py",
+      "line": 51,
+      "text": "output = tmp_path / \"project/work/coinmetrics-0347/attempt\""
+    },
+    {
+      "path": "tests/test_crypto_news_verifier.py",
+      "line": 74,
+      "text": "scratch = ROOT.parents[1] / \"work/crypto-news-0341\""
+    },
+    {
+      "path": "tests/test_news_restart_verifier.py",
+      "line": 26,
+      "text": "scratch = ROOT / \"work/news-restart-0338\""
+    },
+    {
+      "path": "tests/test_news_restart_verifier.py",
+      "line": 132,
+      "text": "output = ROOT / \"work/news-restart-forbidden\""
+    },
+    {
+      "path": "tests/test_options_features_verifier.py",
+      "line": 167,
+      "text": "baseline = root.parent / \"selective-options-0.3.46.zip\""
+    },
+    {
+      "path": "tests/test_options_features_verifier.py",
+      "line": 215,
+      "text": "baseline = proof.ROOT.parent / \"selective-options-0.3.46.zip\""
+    },
+    {
+      "path": "tests/test_parallel_foundations_audit.py",
+      "line": 15,
+      "text": "scratch = ROOT.parents[1] / \"work/parallel-foundations-0345/attempt-02\""
+    },
+    {
+      "path": "tests/test_rotation_verifier.py",
+      "line": 22,
+      "text": "scratch = ROOT.parents[1] / \"work/rotation-0342\""
+    },
+    {
+      "path": "tests/test_spot_batch_verifier.py",
+      "line": 24,
+      "text": "scratch = ROOT.parents[1] / \"work/spot-batch-0344\""
+    },
+    {
+      "path": "tests/test_stablecoin_restart_verifier.py",
+      "line": 22,
+      "text": "scratch = ROOT.parents[1] / \"work/stablecoin-restart-0340\""
+    },
+    {
+      "path": "tests/test_tips_yield.py",
+      "line": 36,
+      "text": "scratch = ROOT.parents[1] / \"work/tips-yield-0339\""
+    },
+    {
+      "path": "tests/test_tips_yield_verifier.py",
+      "line": 27,
+      "text": "scratch = ROOT.parents[1] / \"work/tips-yield-0339\""
+    },
+    {
+      "path": "tests/test_verify_liquidations.py",
+      "line": 23,
+      "text": "return tmp_path / \"work/liquidations-0339/proof\""
+    },
+    {
+      "path": "scripts/audit_bar_checkpoint.py",
+      "line": 566,
+      "text": "zip_path = root.parent / \"selective-options-0.3.45.zip\""
+    },
+    {
+      "path": "scripts/audit_parallel_foundations.py",
+      "line": 761,
+      "text": "old_zip = root.parent / \"selective-options-0.3.44.zip\""
+    },
+    {
+      "path": "scripts/audit_parallel_foundations.py",
+      "line": 764,
+      "text": "\"../selective-options-0.3.44.zip\": OLD_ZIP_HASH,"
+    },
+    {
+      "path": "scripts/audit_parallel_foundations.py",
+      "line": 771,
+      "text": "preserved.get(\"../selective-options-0.3.44.zip\") == OLD_ZIP_HASH, \"PRESERVED_ZIP_BASELINE\""
+    },
+    {
+      "path": "scripts/audit_parallel_foundations.py",
+      "line": 776,
+      "text": "\"../selective-options-0.3.44.zip\","
+    },
+    {
+      "path": "scripts/verify_active_rotation.py",
+      "line": 78,
+      "text": "scratch = (ROOT.parents[1] / \"work/active-rotation-0343\").resolve()"
+    },
+    {
+      "path": "scripts/verify_active_rotation.py",
+      "line": 345,
+      "text": "legacy_zip = ROOT.parent / \"selective-options-0.3.42.zip\""
+    },
+    {
+      "path": "scripts/verify_bar_checkpoint.py",
+      "line": 277,
+      "text": "scratch = ROOT.parents[1] / \"work/bar-checkpoint-0346\""
+    },
+    {
+      "path": "scripts/verify_bar_checkpoint.py",
+      "line": 287,
+      "text": "assert file_digest(ROOT / \"../selective-options-0.3.45.zip\") == PRIOR_ZIP_SHA"
+    },
+    {
+      "path": "scripts/verify_bar_checkpoint.py",
+      "line": 353,
+      "text": "assert file_digest(ROOT / \"../selective-options-0.3.45.zip\") == PRIOR_ZIP_SHA"
+    },
+    {
+      "path": "scripts/verify_coinmetrics.py",
+      "line": 54,
+      "text": "scratch = (ROOT.parents[1] / \"work/coinmetrics-0347\").resolve()"
+    },
+    {
+      "path": "scripts/verify_crypto_news.py",
+      "line": 47,
+      "text": "scratch = (ROOT.parents[1] / \"work/crypto-news-0341\").resolve()"
+    },
+    {
+      "path": "scripts/verify_liquidations.py",
+      "line": 32,
+      "text": "scratch = (ROOT.parents[1] / \"work/liquidations-0339\").resolve()"
+    },
+    {
+      "path": "scripts/verify_news_restart.py",
+      "line": 85,
+      "text": "\"output must be news-restart-01 or within workspace work/news-restart-0338\""
+    },
+    {
+      "path": "scripts/verify_options_features.py",
+      "line": 264,
+      "text": "scratch = (ROOT.parents[1] / \"work/options-features-0347\").resolve()"
+    },
+    {
+      "path": "scripts/verify_options_features.py",
+      "line": 433,
+      "text": "\"--baseline\", type=Path, default=ROOT.parent / \"selective-options-0.3.46.zip\""
+    },
+    {
+      "path": "scripts/verify_parallel_foundations.py",
+      "line": 150,
+      "text": "scratch = ROOT.parents[1] / \"work/parallel-foundations-0345\""
+    },
+    {
+      "path": "scripts/verify_parallel_foundations.py",
+      "line": 157,
+      "text": "\"../selective-options-0.3.44.zip\","
+    },
+    {
+      "path": "scripts/verify_parallel_foundations.py",
+      "line": 163,
+      "text": "preserved[\"../selective-options-0.3.44.zip\"]"
+    },
+    {
+      "path": "scripts/verify_rotation.py",
+      "line": 207,
+      "text": "scratch = (ROOT.parents[1] / \"work/rotation-0342\").resolve()"
+    },
+    {
+      "path": "scripts/verify_spot_batch.py",
+      "line": 111,
+      "text": "scratch = (ROOT.parents[1] / \"work/spot-batch-0344\").resolve()"
+    },
+    {
+      "path": "scripts/verify_stablecoin_restart.py",
+      "line": 92,
+      "text": "scratch = (ROOT.parents[1] / \"work/stablecoin-restart-0340\").resolve()"
+    },
+    {
+      "path": "scripts/verify_stablecoin_supply.py",
+      "line": 39,
+      "text": "scratch = (ROOT.parents[1] / \"work/stablecoin-supply-0339\").resolve()"
+    },
+    {
+      "path": "scripts/verify_tips_yield.py",
+      "line": 33,
+      "text": "scratch = (ROOT.parents[1] / \"work/tips-yield-0339\").resolve()"
+    },
+    {
+      "path": "scripts/verify_tips_yield.py",
+      "line": 38,
+      "text": "\"output must be tips-yield-public-01 or within workspace work/tips-yield-0339\""
+    }
+  ],
+  "review_environment": {
+    "python": "3.12.10",
+    "system": "Windows",
+    "packages": {
+      "pydantic": "2.13.5",
+      "pydantic-settings": "2.15.0",
+      "PyYAML": "6.0.3",
+      "websockets": "15.0.1",
+      "duckdb": "1.5.5",
+      "aiohttp": "3.14.3",
+      "redis": "6.4.0",
+      "defusedxml": "0.7.1",
+      "pytest": "9.1.1",
+      "pytest-asyncio": "1.4.0",
+      "pytest-cov": "7.1.0",
+      "mypy": "1.20.2",
+      "ruff": "0.16.8",
+      "types-PyYAML": "6.0.12.20260906",
+      "build": "1.6.1",
+      "pre-commit": "4.6.2",
+      "types-defusedxml": "0.7.0.20260504",
+      "setuptools": null
+    }
+  },
+  "immutable_source_hashes": {
+    "src/selective_options/__init__.py": "76450769e5028a6ca27e8b45c614eca3952f8425f5eddc3d1a6e629ccd1dead6",
+    "src/selective_options/active_rotation.py": "d70147e58d748e38d96582999ddbb531fced8c88c88252f87f2a2c1e31ac916f",
+    "src/selective_options/archive.py": "c9aa1fe4e9f364fcc52fe3926cebe9cd8ccb19a1f07fed81dd9ddd6979387f21",
+    "src/selective_options/archive_rotation.py": "ff902497e4b360bb9897a40a93a8345eec5d089bec097dbeba9745dae78eb009",
+    "src/selective_options/auth.py": "ad9d7094d07ed320d38954d1f0741632216aa5fbe5b9ac85b67300c5f6938ae7",
+    "src/selective_options/backtest.py": "98cbb8ac3a49a46c844033affb144262b7c404c17cc45558c5bdf18f95340518",
+    "src/selective_options/bar_checkpoint.py": "604b571ade7f102fcf4d2ddeda0a7fb0e2ed4a0e11a8a81beb8a215a62c179a5",
+    "src/selective_options/bar_runtime.py": "9826fc1094c50f76198408c848bf81a53408e6b621fde1daf3ee23931af4c49a",
+    "src/selective_options/bar_state.py": "d72b9942db36bb9963943df1b65b34ac588df9fb8a72c24d4f8f555f5e363e07",
+    "src/selective_options/bars.py": "6f4a9d595912ede5bede429a1324c1a5f970ba6553c0b244155938686dbbdfbe",
+    "src/selective_options/bea_calendar.py": "9850b19e5731cac2123fadce941416523140081aeb8345d99bfd1cd4b59d29c7",
+    "src/selective_options/binance.py": "6d8a3be788619ecb9789aa8f15c736a139432d3f6dc2d832c3df4e70ae57d8f0",
+    "src/selective_options/binance_accounts.py": "b13bda1383d65ff8c8c046fd0ed7169927638a58d820134ac3856c4d2d5317b2",
+    "src/selective_options/binance_funding_history.py": "460772b62438469cc398b4a8bdfaef683509f75ec4c5cf5d708e907dfa8df263",
+    "src/selective_options/binance_funding_view.py": "f12ab764d8221b3ab3098b8ef3ee162c65e601401cadde8e91bde229a8e437d1",
+    "src/selective_options/binance_taker.py": "edcfb1df3f932d3298e4d1f84e1301da468988c9eb069f4b3019c18b704fb45b",
+    "src/selective_options/bus.py": "4aee9ff07ba9d98f8ec754e6d2324d25900973876209599eb1ee18e57d545a8a",
+    "src/selective_options/bybit.py": "f8b2af515d2a4a63b99d10f8ce93e6d93f7642b77f728d60846ba52ada56b79d",
+    "src/selective_options/calendar_quality.py": "9025ea1d5c0ddfdccd9aa11d423b1ab0f345d7f7a29cde650df4d7952a912d61",
+    "src/selective_options/checkpoints.py": "c8d2d1165179207fa8b8377cbd2bf5b92701e5e4dbb6c842cd506f5e2435df08",
+    "src/selective_options/cli.py": "37b8bf4ade80e2fda449f193047cdd4d4174b64dd721c9d10241906b62098a2b",
+    "src/selective_options/coinmetrics.py": "dd563dd337736b6aabc18ea35f304dc4a09429728c83a43e1cf770e94ec3a129",
+    "src/selective_options/coinmetrics_quality.py": "90f8a2a0378a6c008f0748a58edfab3360e060f697b8ee42b5eb37c311239fa0",
+    "src/selective_options/collectors.py": "fcff8848b4b658382ea88963d569cc3a3e8d650492b966bdd4650186eee6c5fe",
+    "src/selective_options/config.py": "b905ab6c393d15e5fcbbf205ec63f36e6f3c659d058b78634657302d375f691e",
+    "src/selective_options/crypto_news.py": "71da3cc160859c1aabdb197f6fe9832fd00be8e7d57d5eb2daddd497e431d5af",
+    "src/selective_options/derivatives.py": "8bf7872a6558f1137492c3c7c16c7194d0a28e006ebb6129265c723ed33c5869",
+    "src/selective_options/errors.py": "3504a40914d1e0587e93ecf201b5b7bc133f21b05438acd868d732b0a3cd9873",
+    "src/selective_options/eth_checkpoint.py": "2ccd36558f73301fe623f37601baa8b67705b1bcc10834c1611b8115572ccfc1",
+    "src/selective_options/eth_gas.py": "32579b383df0ead15cf0a26e2efc88c8766e3ca53a9fca7864450056e7c354ba",
+    "src/selective_options/eth_gas_quality.py": "119756aa00cee9913470e8093d2f13891851fe8a61e7543e8f86d74709447b00",
+    "src/selective_options/events.py": "6a45866c1e1b70f45d4f9335deab679ba7fa3d1f7369c544ffd9d7ac4e57de08",
+    "src/selective_options/features.py": "6ecaa2501ea2c25dafe7e43519c5832ee1f82b403721bc26d5b66ffaa04b6b4a",
+    "src/selective_options/flow_quality.py": "cd3c0bb1e590926c8ceb10ca5de9b738f0c617195ad8cc97eeefad754b682217",
+    "src/selective_options/flow_view.py": "d28e547107fc46a5ab35fd166c0770bccf8c730fc6e0769171328a8186939c85",
+    "src/selective_options/funding_checkpoint.py": "1899570e8acb76cb29505a8464faf26b326a0c41d17c4b3da316c6c0476accb5",
+    "src/selective_options/funding_history.py": "07d4d99fe4ebff577a80442c852b6a1c8a212fea7262bb71fd2855201298ff41",
+    "src/selective_options/funding_poll.py": "44f6c1507ef50168880fc5347339a5d307797fa7e1e563f6015d2a80ba92af67",
+    "src/selective_options/gap_recovery.py": "ed72849a5fdec72ac4ef6de0a2e0f26d5ca3ac4a1714055df82514c5b313ee5c",
+    "src/selective_options/ingestion.py": "29683f997e32244a544809152385b8a711bd55e34f6378ab8b12670c3df33da2",
+    "src/selective_options/interlock.py": "4d7106653000850c9378f468a51e75466afbe32ab6fff17f6b82d03f4a41df1a",
+    "src/selective_options/liquidations.py": "12ea3eaa2f207235f8ac6c0d58bc7221538722c725b965d19c8712854cd842cc",
+    "src/selective_options/logging.py": "592fb10c2852587b7dce7e235c38fffc25a1e05d2d9c0bccabd4bb94c6e10f82",
+    "src/selective_options/models.py": "1312544e13cc21fef773ad20c3e3d98f985f566b30e79d2017c70162e129cec7",
+    "src/selective_options/news.py": "e586f6d2f7f325d899cdda8311dc3138915d1e558f6093a2a1c4f1920233cd98",
+    "src/selective_options/news_quality.py": "b96310daede32b6c63848267c6dbc6d265632af2010329aec8ee43d48c2a3296",
+    "src/selective_options/oi_history.py": "736a2f96620a68b59a0e9682b73d66e8fd8c71c0f303faa901b3d7feae8da66e",
+    "src/selective_options/option_coverage.py": "fcc48feaa4bfc05864c0e5e079a7fee0e44672e8506d21e66bed68d13e6d525a",
+    "src/selective_options/options_features.py": "07d3739032dbee4b61b9463b9bf2583057199ce1e7435532433d1911b3273b6b",
+    "src/selective_options/options_research.py": "6e47eb58704190f18107caf9940e6e14d155735ea21a94c8b21c6f7ceb95e6ef",
+    "src/selective_options/quality.py": "b495503823f849bb247704e5b08449b523cbb22afe9eed61b6b192733c579262",
+    "src/selective_options/rate_limit.py": "48b94f8fe93b39328a16b586c4a6c863933f987c00a117b61fe4d30a2b039a09",
+    "src/selective_options/recovery.py": "8eb9edf4505be934068e290c6f182b1db6fa5a8770d4ad7bde509aa5f4765bb9",
+    "src/selective_options/recovery_handoff.py": "19283c4fed90bb3dbb6386cb046104e12085cd7a0df391919b43e46db5121696",
+    "src/selective_options/recovery_journal.py": "51dc74e946d1ec5c56acf8191300c6c7d066719530f20bc79fe83255dc145118",
+    "src/selective_options/recovery_runtime.py": "22f72298a582e4421bf6c0f6c50829fb108401fe93ee5f08333e8a81af46e8c9",
+    "src/selective_options/research.py": "a13caa495110868f3dd735227760cd26d8e15fdaabc75396f1602f0513cd3d93",
+    "src/selective_options/rotation_restore.py": "359a2dd9bcc18af93e0c524ddf2536793da89b2ff734272b03fef6d5cd4a401e",
+    "src/selective_options/rotation_runtime.py": "e284cd2c2f074553bb0becd89869262b7bf28465f9493bc49ee8ad9373c8d22f",
+    "src/selective_options/rpc.py": "b1d04ba432a78b571ee69925a53243923c40ec98d7a19b4c2e53444a740bc6c9",
+    "src/selective_options/security.py": "2055dab307fd47c185fd1c68524d5551ac08b6d9631236d5eb323baaaa30c98e",
+    "src/selective_options/socket_recovery.py": "b81850aac7ed504a87be45326a3dcdd2ef10ba09963e9c283a102c28026a6a17",
+    "src/selective_options/solana_network.py": "5324e80502d64ae688e2459997d2da56052527defa96ede765636c22df79fb29",
+    "src/selective_options/solana_quality.py": "c94cdb232e689cd18692ae8407b76ecc5173a7bfdd6d991bd90199723c82e2e7",
+    "src/selective_options/spot_trades.py": "fda336ab4358e998069941743646d8b0f374b807ce651c938249d738ee05ea8d",
+    "src/selective_options/stablecoin_checkpoint.py": "16689576e48808c4dc87f6f601d7f3b174775a877531529a5b70913cb33b2ae6",
+    "src/selective_options/stablecoin_supply.py": "b6a44996700e22414d5712cce2b4f52804db480041debdccad97255de4e5cf7c",
+    "src/selective_options/startup.py": "f9592b5d994af2790bd17803a21d2d08d57a9f166d744e43a6bcdacade2ec6be",
+    "src/selective_options/store.py": "7e20b3359fce43d8f6ab595c7c13ad5b245552c8bbc6ce5256ec7d257f31780a",
+    "src/selective_options/tips_yield.py": "168d17bf73dd0e3e345f564ea6849ee2335b00f284af9ab88ec1a69778723919",
+    "src/selective_options/trade_backfill.py": "2674ba7f6a466aa33e0ade7c526f6b01de3017a8cde29ed901a3db4a7d09a004",
+    "src/selective_options/trade_reconciliation.py": "fb18a7353e06e2349fbddc12d4355015c29c39a319df9aa033e48b8f785a5238",
+    "src/selective_options/trend_features.py": "7dbcb052b2d8b5a2a5b6b960843e3617ebed91ad272541571254193cf341737b",
+    "src/selective_options/trials.py": "2904ccb11514d0650ad70dd8abe89c30626d8c4a606771ff65ba63bdd8a807da",
+    "src/selective_options/venue.py": "abac8d12d6b3db0e95cae26f2a9e1734780fcf7c7c46cf87dbe4d00f0366278a"
+  },
+  "network_calls": 0,
+  "secret_access": false,
+  "canonical_files_modified": false
+}

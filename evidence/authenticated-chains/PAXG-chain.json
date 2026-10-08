@@ -1,0 +1,11 @@
+{
+  "asset": "PAXG",
+  "observed_at_ms": 1789929520812,
+  "discovery": {
+    "asset": "PAXG",
+    "query_currency": "PAXG",
+    "fallback_used": false,
+    "instruments": []
+  },
+  "rows": []
+}

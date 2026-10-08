@@ -1,0 +1,71 @@
+{
+  "version": "0.3.25",
+  "status": "OFFLINE_FUNDING_REVISION_AND_RESTORE_VERIFIED",
+  "network_requests": 0,
+  "original_public_rows": 6,
+  "original_public_receipt_checks": [
+    {
+      "original_receipt_ms": 1790926798940,
+      "selected_public_charges": 2
+    },
+    {
+      "original_receipt_ms": 1790926799554,
+      "selected_public_charges": 4
+    },
+    {
+      "original_receipt_ms": 1790926800272,
+      "selected_public_charges": 6
+    }
+  ],
+  "original_public_database_sha256_unchanged": "e8a87b3606193059f999f61cb503c6aa06aa81ceddccd9b557f37402417327d0",
+  "synthetic_rows": 4,
+  "synthetic_event_ids": [
+    "7e6ae60585e949e0ff46d158e153f9f8c0958f38bfe200f28e12a78c985d45f0",
+    "f60da6880cc7a3ac0dbc75b2e576596f9d929eb4e654c155d837c31c7b97302d",
+    "0b9bb9cae4e5233e6cb8b271d4a9488e1cf7af92431d3ab1c7c28a9e4ff30211",
+    "7cdde0b7a7a327587dc97fdaa3077085c4a83b24a98905fc3a2fb7bffb517c74"
+  ],
+  "synthetic_scope": "A -> B -> A and unchanged later poll; rates/receipts changed only as fixtures, not actual venue revisions",
+  "synthetic_revision_checks": [
+    {
+      "synthetic_as_of_ms": 1790926801272,
+      "selected_charges": 6,
+      "revised_charge_event_id": "7e6ae60585e949e0ff46d158e153f9f8c0958f38bfe200f28e12a78c985d45f0"
+    },
+    {
+      "synthetic_as_of_ms": 1790926802272,
+      "selected_charges": 6,
+      "revised_charge_event_id": "f60da6880cc7a3ac0dbc75b2e576596f9d929eb4e654c155d837c31c7b97302d"
+    },
+    {
+      "synthetic_as_of_ms": 1790926803272,
+      "selected_charges": 6,
+      "revised_charge_event_id": "0b9bb9cae4e5233e6cb8b271d4a9488e1cf7af92431d3ab1c7c28a9e4ff30211"
+    },
+    {
+      "synthetic_as_of_ms": 1790926804272,
+      "selected_charges": 6,
+      "revised_charge_event_id": "7cdde0b7a7a327587dc97fdaa3077085c4a83b24a98905fc3a2fb7bffb517c74"
+    }
+  ],
+  "restored_rows": 10,
+  "exact_poll_replay_deduplicated": true,
+  "parquet_exact_match": true,
+  "parquet_sha256": "1eb35ae6419eadfa3203c385086a046dbcc6dc6d8b6de7514d9a351c904e20cc",
+  "restore": {
+    "status": "RESTORE_FINISHED",
+    "rows": 10,
+    "archive_sha256": "1eb35ae6419eadfa3203c385086a046dbcc6dc6d8b6de7514d9a351c904e20cc",
+    "observation_timestamps_preserved": true,
+    "redis_delivery_pending": 10,
+    "ready_for_signals": false,
+    "trading_enabled": false,
+    "limitation": "Event archive only; Redis acknowledgements are not archived. Replay is at-least-once and consumers deduplicate event_id."
+  },
+  "historical_schedule_completeness": "NOT_PROVEN",
+  "rate_aggregation_implemented": false,
+  "historical_intervals_available": false,
+  "finality_verified": false,
+  "trading_enabled": false,
+  "orders_submitted": 0
+}

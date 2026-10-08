@@ -1,0 +1,39 @@
+{
+  "version": "0.3.24",
+  "tests_passed": 841,
+  "coverage_percent": 97.6,
+  "binance_funding_history_coverage": {
+    "covered_lines": 77,
+    "num_statements": 77,
+    "percent_covered": 100.0,
+    "percent_covered_display": "100",
+    "missing_lines": 0,
+    "excluded_lines": 0,
+    "percent_statements_covered": 100.0,
+    "percent_statements_covered_display": "100",
+    "num_branches": 30,
+    "num_partial_branches": 0,
+    "covered_branches": 30,
+    "missing_branches": 0,
+    "percent_branches_covered": 100.0,
+    "percent_branches_covered_display": "100"
+  },
+  "wheel_source_modules": 46,
+  "wheel_source_exact_match": true,
+  "wheel_sha256": "fa0806ed680c58b752abd4f0ce845d818d9c66e46ca027c35164f459fb19c89d",
+  "generated_docs_idempotent": true,
+  "generated_doc_sha256": {
+    "README.md": "85f9fd89526e7bf768717107c5a073369cecb17de0bc6e4623199d02834ad7fc",
+    "PARAMETERS.md": "f445b668adf3b9c713b10e73eae5cf1d00c511a3e3eb933871c5d7c3d0d08454",
+    "config\\default.yaml": "1b6fdcdb25615c7c09c9238ade80153930e622c7e398ad389cf2f0341f233e9f"
+  },
+  "config_valid": true,
+  "public_requests_this_increment": 5,
+  "public_settlement_rows": 6,
+  "public_assets_verified": [
+    "BTC"
+  ],
+  "milestone": 2,
+  "milestone_advance_allowed": false,
+  "trading_enabled": false
+}

@@ -1,0 +1,10 @@
+{
+  "status": "RESTORE_FINISHED",
+  "rows": 16,
+  "archive_sha256": "d8cc9617fbc4d77a9b3e1224ddbaeb6ecaf11c6d396563b2bdf05de2366a9b00",
+  "observation_timestamps_preserved": true,
+  "redis_delivery_pending": 16,
+  "ready_for_signals": false,
+  "trading_enabled": false,
+  "limitation": "Event archive only; Redis acknowledgements are not archived. Replay is at-least-once and consumers deduplicate event_id."
+}

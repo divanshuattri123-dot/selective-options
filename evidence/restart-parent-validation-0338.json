@@ -1,0 +1,35 @@
+{
+  "status": "INDEPENDENT_SAVED_RESTART_EVIDENCE_VERIFIED",
+  "eth_public_poll_stages": [
+    {
+      "stage": "first",
+      "rows": 2,
+      "raw_rpc_exact_native_fields": true,
+      "quality_exact": true,
+      "archive_outbox_exact": true,
+      "retained_receipt": 1791095526003,
+      "response_receipt": 1791095526003,
+      "db_sha256": "cf806d110e3d0d69c9df7bb5d107fe4c3da4652f2dc23b2eac58568c2e1c9f4b"
+    },
+    {
+      "stage": "restarted",
+      "rows": 2,
+      "raw_rpc_exact_native_fields": true,
+      "quality_exact": true,
+      "archive_outbox_exact": true,
+      "retained_receipt": 1791095526003,
+      "response_receipt": 1791095527054,
+      "db_sha256": "d7080328040e2e67b04bfe02c490b632558ec0031df5729ade7e3234bbf9cdc2"
+    }
+  ],
+  "same_native_block_in_both_real_polls": true,
+  "eth_public_requests": 4,
+  "source_hashes_exact_current_code": true,
+  "news_native_records": 16,
+  "news_labelled_synthetic_health": 3,
+  "news_exact_original_rows_preserved": true,
+  "news_real_requests": 0,
+  "news_quality_scenarios_exact": 13,
+  "milestone_2_complete": false,
+  "trading_enabled": false
+}

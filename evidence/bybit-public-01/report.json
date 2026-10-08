@@ -1,0 +1,87 @@
+{
+  "version": "0.3.10",
+  "started_at_ms": 1790526903090,
+  "ended_at_ms": 1790526905606,
+  "status": "PUBLIC_SNAPSHOTS_VERIFIED",
+  "failure_type": null,
+  "rows": 6,
+  "counts": [
+    {
+      "source": "bybit",
+      "environment": "public_reference",
+      "asset": "BTC",
+      "kind": "feed_health",
+      "count": 1
+    },
+    {
+      "source": "bybit",
+      "environment": "public_reference",
+      "asset": "ETH",
+      "kind": "feed_health",
+      "count": 1
+    },
+    {
+      "source": "bybit",
+      "environment": "public_reference",
+      "asset": "PAXG",
+      "kind": "feed_health",
+      "count": 1
+    },
+    {
+      "source": "bybit",
+      "environment": "public_reference",
+      "asset": "PAXG",
+      "kind": "funding",
+      "count": 1
+    },
+    {
+      "source": "bybit",
+      "environment": "public_reference",
+      "asset": "PAXG",
+      "kind": "perpetual",
+      "count": 1
+    },
+    {
+      "source": "bybit",
+      "environment": "public_reference",
+      "asset": "SOL",
+      "kind": "feed_health",
+      "count": 1
+    }
+  ],
+  "source_health": [
+    {
+      "asset": "BTC",
+      "code": 0,
+      "ok": false,
+      "reason": "INVALID_DATA"
+    },
+    {
+      "asset": "ETH",
+      "code": 0,
+      "ok": false,
+      "reason": "INVALID_DATA"
+    },
+    {
+      "asset": "SOL",
+      "code": 0,
+      "ok": false,
+      "reason": "INVALID_DATA"
+    },
+    {
+      "asset": "PAXG",
+      "code": 0,
+      "ok": true,
+      "reason": "SNAPSHOT_ACCEPTED"
+    }
+  ],
+  "pit_checks": 2,
+  "archive_exact_match": true,
+  "parquet_sha256": "0cd6865e5df3c821f11b6b91fa7960bc5a407f4b1fd89228a7c6aac584e17930",
+  "public_responses": 5,
+  "publication_time_available": false,
+  "timestamp_basis": "receipt",
+  "orders_submitted": 0,
+  "trading_enabled": false,
+  "paper_trading_started": false
+}

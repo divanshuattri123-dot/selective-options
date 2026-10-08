@@ -1,0 +1,9 @@
+{
+  "url": "https://www.federalreserve.gov/newsevents/calendar.htm",
+  "http_status": 403,
+  "availability": "ACCESS_DENIED",
+  "cause": "not established",
+  "recorded_at_ms": 1790692993383,
+  "alternate_route_attempted": false,
+  "note": "HTTPError observed during the current development turn; recorded time is not the exact HTTP receipt."
+}

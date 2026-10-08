@@ -1,0 +1,39 @@
+┌───────────────────────────┐
+│         HASH_JOIN         │
+│    ────────────────────   │
+│      Join Type: SEMI      │
+│                           │
+│        Conditions:        ├──────────────┐
+│       event_id = #0       │              │
+│                           │              │
+│        ~12,417 rows       │              │
+└─────────────┬─────────────┘              │
+┌─────────────┴─────────────┐┌─────────────┴─────────────┐
+│          SEQ_SCAN         ││         PROJECTION        │
+│    ────────────────────   ││    ────────────────────   │
+│           Table:          ││  UNNEST(['absent-id-0',   │
+│     events.main.events    ││ 'absent-id-1', 'absent-id │
+│                           ││    -2', 'absent-id-3',    │
+│   Type: Sequential Scan   ││ 'absent-id-4', 'absent-id │
+│                           ││    -5', 'absent-id-6',    │
+│        Projections:       ││ 'absent-id-7', 'absent-id │
+│          event_id         ││    -8', 'absent-id-9',    │
+│           source          ││ 'absent-id-10', 'absent-id│
+│        environment        ││   -11', 'absent-id-12',   │
+│           asset           ││ 'absent-id-13', 'absent-id│
+│           symbol          ││   -14', 'absent-id-15',   │
+│            kind           ││ 'absent-id-16', 'absent-id│
+│       event_time_ms       ││   -17', 'absent-id-18',   │
+│       observed_at_ms      ││ 'absent-id-19', 'absent-id│
+│       timestamp_kind      ││   -20', 'absent-id-21',   │
+│       schema_version      ││ 'absent-id-22', 'absent-id│
+│        payload_json       ││   -23', 'absent-id-24'])  │
+│                           ││                           │
+│        ~62,089 rows       ││           ~1 row          │
+└───────────────────────────┘└─────────────┬─────────────┘
+                             ┌─────────────┴─────────────┐
+                             │           UNNEST          │
+                             └─────────────┬─────────────┘
+                             ┌─────────────┴─────────────┐
+                             │         DUMMY_SCAN        │
+                             └───────────────────────────┘

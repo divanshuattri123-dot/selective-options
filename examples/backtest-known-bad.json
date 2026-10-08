@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "data_kind": "synthetic_fixture",
+  "provenance": {
+    "description": "manual spread and fee loss; no historical prices"
+  },
+  "as_of_ms": 5000,
+  "instrument": {
+    "instrument_id": "FIXTURE-LINEAR-PREMIUM",
+    "currency": "USD",
+    "quantity_unit": "contracts",
+    "quote_price_unit": "currency_per_underlying_unit",
+    "contract_multiplier": "10",
+    "accounting": "single_instrument_long_only_linear_premium",
+    "funding_required": false,
+    "settlement_required": false,
+    "transfer_tax_required": false
+  },
+  "fees": {
+    "policy_id": "synthetic-taker-fee-0.001",
+    "maker_rate": "0",
+    "taker_rate": "0.001",
+    "basis": "executed_premium_notional"
+  },
+  "policy": {
+    "latency_ms": 50,
+    "max_quote_age_ms": 500,
+    "min_displayed_contracts": "1",
+    "adverse_slippage_rate": "0",
+    "pessimistic": true,
+    "passive_model": "strict_later_executable_crossing_taker_assumption"
+  },
+  "orders": [
+    {
+      "order_id": "buy",
+      "instrument_id": "FIXTURE-LINEAR-PREMIUM",
+      "side": "buy",
+      "order_type": "market",
+      "contracts": "2",
+      "submitted_at_ms": 1000
+    },
+    {
+      "order_id": "sell",
+      "instrument_id": "FIXTURE-LINEAR-PREMIUM",
+      "side": "sell",
+      "order_type": "market",
+      "contracts": "2",
+      "submitted_at_ms": 3000
+    }
+  ],
+  "quotes": [
+    {
+      "quote_id": "entry",
+      "liquidity_id": "entry-native-allocation",
+      "instrument_id": "FIXTURE-LINEAR-PREMIUM",
+      "source_time_ms": 2000,
+      "observed_at_ms": 2001,
+      "health": "available",
+      "bid": "99",
+      "ask": "101",
+      "bid_contracts": "3",
+      "ask_contracts": "3"
+    },
+    {
+      "quote_id": "exit",
+      "liquidity_id": "exit-native-allocation",
+      "instrument_id": "FIXTURE-LINEAR-PREMIUM",
+      "source_time_ms": 4000,
+      "observed_at_ms": 4001,
+      "health": "available",
+      "bid": "99",
+      "ask": "101",
+      "bid_contracts": "3",
+      "ask_contracts": "3"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "build_version": "0.3.9",
+  "status": "FAILED",
+  "evidence_type": "live public Kraken BTC stream plus REST; one trade intentionally omitted from collector input",
+  "started_at_ms": 1790508242628,
+  "ended_at_ms": 1790508257424,
+  "deadline_s": 90.0,
+  "rows": 54,
+  "counts": [
+    {
+      "source": "kraken",
+      "environment": "public_reference",
+      "asset": "BTC",
+      "kind": "trade",
+      "count": 50
+    },
+    {
+      "source": "kraken",
+      "environment": "public_reference",
+      "asset": "SYSTEM",
+      "kind": "status",
+      "count": 4
+    }
+  ],
+  "omitted_trade_id": 109230582,
+  "omission_recovered_from_rest": false,
+  "recovered_through_id": null,
+  "post_repair_live_successor_verified": false,
+  "pending_repair_books": [
+    "BTC/USD"
+  ],
+  "failure_type": "IntegrityError",
+  "failure_reason": "LOOKAHEAD: recovery rows are unavailable at this time",
+  "redis": "NOT_CONFIGURED",
+  "orders_submitted": 0,
+  "trading_enabled": false,
+  "paper_trading_started": false,
+  "parquet_sha256": "aaaa7d2af5077484a46f25af372e8524a4b030cc8dcc3b7eb229668d3c274235"
+}

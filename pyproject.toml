@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "selective-options"
+version = "0.3.47"
+description = "Testnet-first selective options system: ingestion and point-in-time storage"
+requires-python = ">=3.11"
+dependencies = ["pydantic>=2.10,<3", "pydantic-settings>=2.7,<3", "PyYAML>=6.0.2,<7", "websockets>=14,<16", "duckdb>=1.2,<2", "aiohttp>=3.11,<4", "redis>=5,<7", "defusedxml>=0.7,<1"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "pytest-asyncio>=0.25,<2", "pytest-cov>=6,<8", "mypy>=1.14,<2", "ruff>=0.9,<1", "types-PyYAML>=6", "build>=1.2,<2", "pre-commit>=4,<5", "types-defusedxml>=0.7"]
+
+[project.scripts]
+selective-options = "selective_options.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+markers = ["network: explicitly enabled public testnet integration"]
+
+[tool.coverage.run]
+branch = true
+source = ["selective_options"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 85
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+files = ["src", "scripts"]
+plugins = ["pydantic.mypy"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "ASYNC"]
+ignore = ["E501"]  # Formatter preserves long config descriptions and operator messages.

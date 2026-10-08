@@ -1,0 +1,16 @@
+{
+  "status": "LOCAL_IMPORT_PREPARED",
+  "private_repository_verified": true,
+  "repository_url": "https://github.com/divanshuattri123-dot/selective-options",
+  "original_code_scripts_tests_unchanged": true,
+  "secret_pattern_scan_passed": true,
+  "historical_release_assets": 105,
+  "historical_release_asset_bytes": 6718843705,
+  "git_original_files": 850,
+  "omitted_evidence_files": 182,
+  "omitted_evidence_bytes": 1352428783,
+  "original_local_tests_passed": 3192,
+  "github_ci_verified": false,
+  "milestone_status": "PARTIAL",
+  "trading_enabled": false
+}

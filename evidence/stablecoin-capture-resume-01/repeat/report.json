@@ -1,0 +1,202 @@
+{
+  "stablecoin_resume": {
+    "requested": true,
+    "selection_as_of_ms": 1791110801434,
+    "anchor_event_id": "d63385c29a2efb75c3efc08591d3acbf9126778cad3453d4cac758d9e52f0299",
+    "anchor_observed_at_ms": 1791110791393,
+    "health_event_id": "d0087d23dcf400852d58afe9c8398288cecef6d9aedb9a06b0d29dfaeb448519",
+    "health_observed_at_ms": 1791110791433,
+    "copied_events": 2,
+    "original_receipts_preserved": true,
+    "complete_history_copied": false,
+    "transport_resumed_by_copy": false,
+    "delivery_acknowledgements_restored": false
+  },
+  "crypto_news_quality": null,
+  "stablecoin_supply_quality": {
+    "source": "ethereum_drpc",
+    "asset": "GLOBAL",
+    "symbol": "ETH_MAINNET_STABLECOIN_SUPPLY",
+    "as_of_ms": 1791110801434,
+    "state": "POLL_OBSERVED_VERIFIED",
+    "blocker": null,
+    "health_event_id": "93207fe3994bb76267e113863c04713192c5ed84902f8a45dd773b12963a95b1",
+    "health_received_at_ms": 1791110801433,
+    "response_received_at_ms": 1791110801393,
+    "accepted_event_id": "bb58295f0ee6b3b6269680ffb3dfefab1125594bf2767507f710e8291fdfef0d",
+    "accepted_observed_at_ms": 1791110801393,
+    "poll_ok": true,
+    "reason": "SUPPLY_SNAPSHOT_OBSERVED",
+    "error_type": null,
+    "code": 0,
+    "block_number": 26118403,
+    "block_hash": "0x4c9a692c6108a2d04914caa371761fc7ef2fd287b733df4edfec20650ef93cc4",
+    "block_time_ms": 1791109847000,
+    "poll_age_ms": 1,
+    "response_age_ms": 41,
+    "block_age_ms": 954434,
+    "historical_poll_revisions": 2,
+    "legacy_health_rows": 0,
+    "max_poll_age_ms": 1200000,
+    "max_block_age_ms": 1800000,
+    "scope": "Ethereum mainnet USDC and USDT contract totalSupply only; no all-chain supply, exchange balances or flow attribution",
+    "poll_revision_basis": "one complete same-block poll; every response receipt retained; not first publication",
+    "binding_basis": "sink accepted; not atomic commit proof",
+    "first_publication_independently_verified": false,
+    "finality_independently_verified": false,
+    "all_chain_supply_complete": false,
+    "continuous_history_complete": false,
+    "exchange_balance_coverage": false,
+    "trading_approval": false
+  },
+  "tips_yield_quality": null,
+  "liquidations_quality": [],
+  "eth_gas_quality": null,
+  "funding_revision_views": [],
+  "funding_poll_health": [],
+  "flow_revision_views": [],
+  "flow_quality": [],
+  "policy_news_quality": [],
+  "build_version": "0.3.41",
+  "configuration_sha256": "d3f617e07f35277111d6417926d933acffbdf13aee8d782e92974f6211a9fdb3",
+  "parquet_sha256": "c72f5808ed95bffc9034a5285c3cdfcf5e5512997d473296a8171b2db5ad3f41",
+  "status": "CAPTURE_FINISHED",
+  "started_at_ms": 1791110801434,
+  "ended_at_ms": 1791110801434,
+  "collection_ended_at_ms": 1791110801434,
+  "shutdown_drain_ms": 0,
+  "requested_duration_s": 0.1,
+  "rows": 4,
+  "trade_checkpoint_seed_rows": 0,
+  "eth_gas_checkpoint_event_id": null,
+  "eth_gas_provider": "publicnode",
+  "eth_gas_source": "ethereum_publicnode",
+  "eth_gas_checkpoint_handoff": "NOT_REQUESTED",
+  "recovery_marker": null,
+  "automatic_kraken_recovery_enabled": false,
+  "recovery_handoff": "NOT_REQUESTED",
+  "recovery_selected_rows": 0,
+  "trade_checkpoint_event_ids": [],
+  "trade_recovery_pending_symbols": [],
+  "trade_recovery_scope": "Kraken only; committed WS tail or explicit recovery marker, with optional bounded automatic REST repair of forward gaps after acknowledgements. Bar state and other collectors start fresh; repaired active bars stay partial.",
+  "counts": [
+    {
+      "source": "ethereum_drpc",
+      "environment": "public_reference",
+      "asset": "GLOBAL",
+      "kind": "feed_health",
+      "count": 2
+    },
+    {
+      "source": "ethereum_drpc",
+      "environment": "public_reference",
+      "asset": "GLOBAL",
+      "kind": "on_chain",
+      "count": 2
+    }
+  ],
+  "redis_delivery_pending": 4,
+  "freshness": [
+    {
+      "source": "deribit",
+      "asset": "BTC",
+      "kind": "chain_summary",
+      "state": "MISSING",
+      "age_ms": null,
+      "timestamp_kind": null
+    },
+    {
+      "source": "deribit",
+      "asset": "BTC",
+      "kind": "ticker",
+      "state": "MISSING",
+      "age_ms": null,
+      "timestamp_kind": null
+    },
+    {
+      "source": "deribit",
+      "asset": "BTC",
+      "kind": "book",
+      "state": "MISSING",
+      "age_ms": null,
+      "timestamp_kind": null
+    },
+    {
+      "source": "deribit",
+      "asset": "BTC",
+      "kind": "index",
+      "state": "MISSING",
+      "age_ms": null,
+      "timestamp_kind": null
+    },
+    {
+      "source": "ethereum_drpc",
+      "asset": "GLOBAL",
+      "kind": "on_chain",
+      "state": "FRESH",
+      "age_ms": 954434,
+      "timestamp_kind": "source"
+    },
+    {
+      "source": "ethereum_drpc",
+      "asset": "GLOBAL",
+      "kind": "feed_health",
+      "state": "FRESH",
+      "age_ms": 1,
+      "timestamp_kind": "receipt"
+    }
+  ],
+  "calendar_quality": {
+    "state": "NOT_CONFIGURED"
+  },
+  "solana_network_quality": {
+    "state": "NOT_CONFIGURED"
+  },
+  "option_instrument_freshness": [],
+  "option_stream_coverage": [
+    {
+      "asset": "BTC",
+      "as_of_ms": 1791110801434,
+      "state": "BLOCKED",
+      "blocker": "OPTION_STREAM_CONTROL_MISSING",
+      "trading_approval": false,
+      "trade_history_continuity_verified": false,
+      "all_options_native_fields_available": false
+    }
+  ],
+  "bar_policy": "Only locally closed bars; complete=false for partial first intervals or connection gaps. Empty intervals are not synthesized.",
+  "reference_comparison": [
+    {
+      "asset": "BTC",
+      "state": "INSUFFICIENT_SOURCES",
+      "sources": []
+    }
+  ],
+  "deribit_connections": 0,
+  "deribit_universe_refreshes": 0,
+  "stream_universe_refresh_interval_s": null,
+  "stream_cap_per_asset": 6,
+  "missing_capabilities": [
+    "on-chain",
+    "crypto news, sentiment and comprehensive financial news",
+    "macro calendar and releases",
+    "XAU/USD gold reference",
+    "historical underlying OHLCV",
+    "historical underlying trade/bar coverage",
+    "historical perpetual/funding archive and full volatility-index coverage",
+    "complete liquidation ledger and historical continuity; optional forceOrder snapshots are lossy",
+    "complete cross-venue funding/OI coverage: Bybit USDT snapshots are optional; other venues/history pending",
+    "cross-venue options flow",
+    "full-universe stream coverage",
+    "gap recovery outside bounded Kraken REST coverage; other stream checkpoints and bar-state restart",
+    "deployed Redis consumer bus"
+  ],
+  "milestone_2_complete": false,
+  "ready_for_signals": false,
+  "trading_enabled": false,
+  "orders_submitted": 0,
+  "redis_mirror": "NOT_CONFIGURED",
+  "failure_type": null,
+  "freshness_scope": "asset/feed aggregates and selected option instruments; not trading approval",
+  "reference_caveat": "Coinbase last-trade vs Kraken midpoint; Kraken has receipt time only. Public references are separate from testnet prices."
+}
