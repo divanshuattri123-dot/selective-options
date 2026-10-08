@@ -142,7 +142,7 @@ def ensure_target(root: Path, target: Path) -> None:
         if candidate.exists() or candidate.is_symlink():
             metadata = candidate.lstat()
             if candidate.is_symlink() or getattr(metadata, "st_file_attributes", 0) & 0x400:
-                raise ValueError("Evidence target has a symlink or reparse ancestor")
+                raise ValueError("Evidence target escapes through a symlink or reparse ancestor")
         if candidate == root:
             break
 
@@ -221,6 +221,7 @@ def main() -> int:
     for entry in entries:
         relative = safe_relative(entry["path"])
         target = ROOT.joinpath(*relative.parts)
+        ensure_target(ROOT, target)
         if target.exists():
             if file_sha256(target) != entry["sha256"]:
                 raise ValueError(f"Existing evidence differs; refusing overwrite: {relative}")
