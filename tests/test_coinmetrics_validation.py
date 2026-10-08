@@ -418,6 +418,7 @@ def quiet_capture(monkeypatch):
         await asyncio.Event().wait()
 
     monkeypatch.setattr(ingestion.DeribitCollector, "run", idle)
+    monkeypatch.setattr(ingestion.SpotTradeCollector, "run", idle)
     monkeypatch.setattr(ingestion, "poll_chains", idle)
     monkeypatch.setattr(ingestion, "now_ms", lambda: FINISH)
 

@@ -27,17 +27,15 @@ jobs:
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
         with:
           python-version: "3.12.10"
-      - name: Install locked runtime and validation tools
-        run: |
-          python -m pip install -r requirements.lock -r ci/requirements-dev.lock
-          python -m pip install --no-deps -e .
+      - name: Exercise cloud setup with locked dependencies
+        run: bash tools/cloud_setup.sh
       - name: Restore checksum-verified private historical evidence
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run: python tools/restore_github_evidence.py
+        run: .venv-cloud/bin/python tools/restore_github_evidence.py
       - name: Validate portable offline build
         if: ${{ always() && !cancelled() }}
-        run: python tools/cloud_validate.py --output state/cloud-validation
+        run: .venv-cloud/bin/python tools/cloud_validate.py --output state/cloud-validation
       - name: Publish readable build summary
         if: always()
         run: |
