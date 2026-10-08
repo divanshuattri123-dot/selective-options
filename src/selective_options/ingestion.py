@@ -19,6 +19,7 @@ from .bus import CommitBarrier, EventBus, HotBuffer, RedisMirror
 from .bybit import BybitCollector
 from .calendar_quality import calendar_quality
 from .checkpoints import load_trade_checkpoints
+from .coinmetrics_checkpoint import load_coinmetrics_resume
 from .collectors import DeribitCollector, SpotCollector, now_ms, poll_chains
 from .config import AppConfig
 from .derivatives import DerivativesCollector
@@ -125,6 +126,7 @@ async def capture(
     resume_stablecoin_from: Path | None = None,
     resume_bars_from: Path | None = None,
     save_bars_on_stop: bool | None = None,
+    resume_coinmetrics_from: Path | None = None,
 ) -> dict[str, object]:
     duration = config.ingestion.duration_s if duration_s is None else duration_s
     if not math.isfinite(duration) or duration <= 0:
@@ -176,6 +178,25 @@ async def capture(
         if resume_stablecoin_from is not None
         else None
     )
+    if resume_coinmetrics_from is not None and not config.ingestion.coinmetrics_enabled:
+        raise ValueError("Coin Metrics checkpoint recovery requires enabled Coin Metrics capture")
+    if resume_coinmetrics_from is not None and not {"BTC", "ETH"}.issubset(
+        set(config.system.assets)
+    ):
+        raise ValueError("Coin Metrics checkpoint recovery requires configured BTC and ETH assets")
+    coinmetrics_policy = {
+        "max_poll_age_ms": int(config.ingestion.coinmetrics_poll_interval_s * 2000),
+        "max_data_age_ms": int(config.ingestion.coinmetrics_max_data_age_s * 1000),
+        "max_rows": 10_000,
+        "max_bytes": 64_000_000,
+    }
+    coinmetrics_resume_at: int | None = None
+    coinmetrics_seed: tuple[MarketEvent, ...] = ()
+    if resume_coinmetrics_from is not None:
+        coinmetrics_resume_at = now_ms()
+        coinmetrics_seed = await load_coinmetrics_resume(
+            resume_coinmetrics_from, coinmetrics_resume_at, **coinmetrics_policy
+        )
     eth_seed = (
         await load_eth_checkpoint(
             resume_eth_gas_from, now_ms(), provider=config.ingestion.eth_gas_provider
@@ -296,6 +317,26 @@ async def capture(
             )
         except BaseException:
             await store.close()
+            raise
+    if coinmetrics_seed:
+        try:
+            pending_before_coinmetrics = await store.pending_delivery_count()
+            await store.append(list(coinmetrics_seed), exact=True)
+            await store.close()
+            copied_coinmetrics = await load_coinmetrics_resume(
+                output / "events.duckdb", now_ms(), **coinmetrics_policy
+            )
+            if copied_coinmetrics != coinmetrics_seed:
+                raise IntegrityError("COINMETRICS_CHECKPOINT_CHANGED_DURING_COPY")
+            store = await DuckStore.open(
+                output / "events.duckdb", int(config.data.max_clock_skew_s * 1000)
+            )
+            if await store.pending_delivery_count() != pending_before_coinmetrics + len(
+                coinmetrics_seed
+            ):
+                raise IntegrityError("COINMETRICS_CHECKPOINT_OUTBOX_MISMATCH")
+        except BaseException:
+            await drain_shutdown(store.close())
             raise
     stablecoin = None
     if config.ingestion.stablecoin_supply_enabled:
@@ -713,6 +754,23 @@ async def capture(
                 "delivery_acknowledgements_restored": False,
             }
             if stablecoin_pair is not None
+            else None,
+            "coinmetrics_resume": {
+                "requested": True,
+                "selection_as_of_ms": coinmetrics_resume_at,
+                "scope": ["BTC", "ETH"],
+                "copied_events": len(coinmetrics_seed),
+                "max_events_total": coinmetrics_policy["max_rows"],
+                "max_event_value_bytes": coinmetrics_policy["max_bytes"],
+                "original_native_values_and_receipts_preserved": True,
+                "copied_outbox_pending": True,
+                "history_complete": False,
+                "provider_finality_independently_verified": False,
+                "transport_resumed_by_copy": False,
+                "ready_for_signals": False,
+                "trading_enabled": False,
+            }
+            if coinmetrics_seed
             else None,
             "coinmetrics_quality": {
                 "supported_configured_assets": [

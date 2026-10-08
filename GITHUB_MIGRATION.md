@@ -76,8 +76,15 @@ auditor and proof bytes remain unchanged. No trading credentials are configured.
 
 The initial migration enables manual workflow dispatch while release assets are
 uploaded. Normal push and pull-request checks are enabled after restoration and
-validation are verified. GitHub CI results are separate from the already recorded
-local 0.3.47 results; inspect the Actions run before treating a new commit as passed.
+validation are verified. The first clean Windows GitHub run passed at
+`34ed883748e31d56d936096bc543f8ffc1d053fd`: 3,192 full-suite tests, zero failures,
+errors or skips, plus successful dependency installation, static analysis, generated
+document consistency, secret-pattern check, configuration validation, and the
+migration-helper step. The exact result is recorded in
+`evidence/github-migration/ci-run-37773515709.json`; the run is
+https://github.com/divanshuattri123-dot/selective-options/actions/runs/37773515709.
+That run validates only the 0.3.47 import commit. Later commits require their own
+validation run before they can be described as CI-passed.
 
 ## Continuing development
 

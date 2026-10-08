@@ -1,0 +1,21 @@
+{
+  "status": "SAVED_NATIVE_OPTION_QUOTE_CONVERSION_VALIDATED",
+  "data_kind": "existing_saved_deribit_testnet_evidence",
+  "source": "evidence/reused-validation-public-01/events.duckdb",
+  "source_sha256": "97c10f3c2f59a67edff83104fceca3b0b195b1498432597abde62e509f4cabdc",
+  "as_of_ms": 1791050702961,
+  "symbol": "BTC-25DEC26-140000-C",
+  "discovery_event_id": "2c23e7e290a0051c15fcb72c08f334c152bce605c2e704264faec9ece85257fa",
+  "metadata_event_id": "dabb86a3d766fba5cefd134a149da74b6d174cc469b4a66a6c4090b2e1cb9022",
+  "materialized_quote_count": 51,
+  "quote_with_both_sides": 51,
+  "quote_with_missing_side": 0,
+  "source_time_after_receipt_count": 51,
+  "max_clock_skew_ms": 5000,
+  "source_ahead_policy": "preserved for audit within explicit skew bound; simulator rejects with QUOTE_CLOCK_ORDER before any fill",
+  "orders_submitted": 0,
+  "simulation_run": false,
+  "gate2_complete": false,
+  "trading_enabled": false,
+  "limitation": "read-only quote adapter and unit check only; no venue economics or strategy edge"
+}

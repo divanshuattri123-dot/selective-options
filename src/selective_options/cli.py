@@ -75,6 +75,12 @@ def parser() -> argparse.ArgumentParser:
         help="Validate and copy a healthy bound paired supply anchor; failures/staleness refuse",
     )
     capture_parser.add_argument(
+        "--resume-coinmetrics-from",
+        type=Path,
+        default=None,
+        help="Validate and copy bounded BTC/ETH daily valuation history before capture producers",
+    )
+    capture_parser.add_argument(
         "--recovery-marker",
         default=None,
         help="Explicit committed mixed-source plan in --resume-trades-from; validates and resumes its sequence",
@@ -209,6 +215,7 @@ def main() -> int:
                     recovery_marker=args.recovery_marker,
                     resume_eth_gas_from=args.resume_eth_gas_from,
                     resume_stablecoin_from=args.resume_stablecoin_from,
+                    resume_coinmetrics_from=args.resume_coinmetrics_from,
                     **capture_options,
                 )
             )

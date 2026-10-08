@@ -1,0 +1,32 @@
+{
+  "run_id": 37773515709,
+  "url": "https://github.com/divanshuattri123-dot/selective-options/actions/runs/37773515709",
+  "conclusion": "success",
+  "head_sha": "34ed883748e31d56d936096bc543f8ffc1d053fd",
+  "created_at_utc": "2026-10-08T11:57:30Z",
+  "completed_at_utc": "2026-10-08T12:08:10Z",
+  "full_offline_suite": {
+    "tests": 3192,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "duration_seconds": 459.497
+  },
+  "other_successful_steps": [
+    "private native evidence restore",
+    "locked runtime and validation-tool installation",
+    "Ruff lint",
+    "Ruff format check",
+    "strict mypy",
+    "generated configuration/document consistency",
+    "tracked-file credential-pattern check",
+    "installed CLI configuration validation",
+    "migration-helper test step"
+  ],
+  "limits": [
+    "Validates commit 34ed883748e31d56d936096bc543f8ffc1d053fd only",
+    "M2 remains PARTIAL",
+    "No live provider or trading account calls",
+    "No trading readiness or strategy performance is established"
+  ]
+}

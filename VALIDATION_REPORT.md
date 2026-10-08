@@ -2,6 +2,14 @@
 
 **Trading eligibility: NOT VALIDATED. Live arming always fails.** This is an implementation/readiness report, not evidence of a profitable strategy. No return, win-rate, Sharpe, PBO or DSR result has been fabricated.
 
+## Coin Metrics resume and saved-option research bridge — version 0.3.48 (8 October 2026)
+
+All 3,231 tests passed with zero failures, errors or skips in 572.49 seconds; combined statement/branch coverage is 95.25% against the 85% requirement. Ruff lint and formatting passed 237 Python files, and strict mypy passed 118 source/script files. The complete JUnit and machine-readable summary are retained under `evidence/full-suite-0349/`. M2 remains PARTIAL; strategy/backtester acceptance and production trading remain disabled.
+
+The optional Coin Metrics resume input validates and copies a bounded, healthy checkpoint before capture producers are constructed. Its tests exercise saved data and labelled synthetic later observations; the feature remains disabled unless explicitly selected and does not claim complete history or initiate a transport. No network request was made for this increment.
+
+The saved-option bridge validates one fixed-hash Deribit testnet archive and materializes 51 two-sided quotes without simulation or orders. All 51 selected rows have source clocks ahead of receipt clocks by less than the explicit 5-second skew budget. The loader retains these observations for audit; the shared simulator's `QUOTE_CLOCK_ORDER` guard prevents any fill. Synthetic fixtures test strict post-discovery order timing, native tick-step boundaries, minimum-size floor semantics, partial fills and accounting. Deribit native minimum quantity is not assumed to be an increment, and the base tick applies at exact step thresholds. Review findings are captured by regression tests. The bridge is API-only research, not an edge, payoff-complete options backtester, Gate 2 evidence or execution route. The saved quote proof is in `evidence/option-backtest-bridge-0349/`; see `RESEARCH.md` for assumptions and limitations.
+
 ## Native daily valuation and discrete options features — version 0.3.47 (8 October 2026)
 
 Completed the next ingestion/quality increment and independent options analytics. All 3,192 tests passed in 703.50 seconds, 304 net new cases, with 96.16% combined branch/statement coverage. The 75 production modules and proof-producing scripts stayed unchanged through the native proofs and final suite; the separately repaired historical auditor is included in the final freeze. Ruff lint/format passed 231 Python files; strict mypy passed 116 source/script files. The isolated installed wheel matches all 75 modules, including 66 unchanged .46 modules, and executes configuration, collector construction, native quality and the actual offline options CLI. M2 remains PARTIAL; full feature/backtester acceptance and trading remain disabled.

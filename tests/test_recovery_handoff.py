@@ -205,6 +205,7 @@ def test_cli_threads_explicit_marker(monkeypatch, tmp_path):
         "recovery_marker": "explicit-marker",
         "resume_eth_gas_from": None,
         "resume_stablecoin_from": None,
+        "resume_coinmetrics_from": None,
     }
 
 

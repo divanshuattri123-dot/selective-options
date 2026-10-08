@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "version": "0.3.48",
+  "date": "2026-10-08",
+  "commands": {
+    "pytest": {
+      "command": "python -m pytest --cov --cov-report=term-missing --junitxml=evidence/full-suite-0349/junit.xml",
+      "tests": 3231,
+      "passed": 3231,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "duration_seconds": 572.49,
+      "combined_coverage_percent": 95.25,
+      "required_coverage_percent": 85.0
+    },
+    "ruff_check": "passed: src scripts tests tools",
+    "ruff_format_check": "passed: 237 Python files",
+    "mypy": "passed: 118 source and script files",
+    "native_option_quotes": {
+      "evidence": "evidence/option-backtest-bridge-0349/report.json",
+      "quotes_materialized": 51,
+      "two_sided_quotes": 51,
+      "source_time_after_receipt": 51,
+      "simulation_run": false,
+      "orders_submitted": 0
+    },
+    "new_live_requests": 0,
+    "orders_submitted": 0,
+    "gate2_complete": false,
+    "trading_enabled": false
+  }
+}
