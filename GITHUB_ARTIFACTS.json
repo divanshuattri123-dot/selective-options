@@ -639,6 +639,12 @@
       "bytes": 9342,
       "sha256": "655d883497abbccc9ceee66466dc640b4128a4cc51ac0a89cb37bac0304bd8af",
       "release_tag": "v0.3.49"
+    },
+    {
+      "name": "selective-options-0.3.51-evidence.zip",
+      "bytes": 137923,
+      "sha256": "ecf48d63871b11c5be61f74fb01cb4a34fccf89646e677bbc77a980c9c904f81",
+      "release_tag": "v0.3.51"
     }
   ],
   "evidence_files": [
@@ -1569,6 +1575,90 @@
       "bytes": 142,
       "sha256": "5d2e1acbe05bfb47d046f86bfc29a7a9aa77811879d67317fd433c8fe3734626",
       "archive_asset": "selective-options-0.3.49-fomc-evidence.zip"
+    },
+    {
+      "path": "evidence/capture-stop-saved-native-01/cohort-0-initial/bar-checkpoint/events.duckdb",
+      "bytes": 1585152,
+      "sha256": "a6f58930ed67eed231925c62ff8f61eee2ed8a1ae038994d26d821f8e7822c46",
+      "archive_asset": "selective-options-0.3.51-evidence.zip"
+    },
+    {
+      "path": "evidence/capture-stop-saved-native-01/cohort-0-initial/events.duckdb",
+      "bytes": 1585152,
+      "sha256": "3bf2db6b9f9f472e0ba4ad0fa6b443c701a9d552a2ee2969382fbc34d8aaa9be",
+      "archive_asset": "selective-options-0.3.51-evidence.zip"
+    },
+    {
+      "path": "evidence/capture-stop-saved-native-01/cohort-0-initial/events.parquet",
+      "bytes": 5828,
+      "sha256": "c5d0f62ea3d213ca91f55906fc2890de90828798897cae6d6930dad44315fb91",
+      "archive_asset": "selective-options-0.3.51-evidence.zip"
+    },
+    {
+      "path": "evidence/capture-stop-saved-native-01/cohort-0-resumed/bar-checkpoint/events.duckdb",
+      "bytes": 1585152,
+      "sha256": "dec93612ee3d9f83defebbc22ebd16cfe1bd270a263eb87b9b90748b0910a491",
+      "archive_asset": "selective-options-0.3.51-evidence.zip"
+    },
+    {
+      "path": "evidence/capture-stop-saved-native-01/cohort-0-resumed/events.duckdb",
+      "bytes": 2895872,
+      "sha256": "c9a4febcd18609d0f82a2df16a586073e8d560effc4922a63c67c2916369dc3b",
+      "archive_asset": "selective-options-0.3.51-evidence.zip"
+    },
+    {
+      "path": "evidence/capture-stop-saved-native-01/cohort-0-resumed/events.parquet",
+      "bytes": 6458,
+      "sha256": "08efc12b83730f06836a386f826637055224f33c0735256d385176dff14debc8",
+      "archive_asset": "selective-options-0.3.51-evidence.zip"
+    },
+    {
+      "path": "evidence/capture-stop-saved-native-01/cohort-0-resumed/seed-verified.duckdb",
+      "bytes": 1585152,
+      "sha256": "ce50a7647f4a9b9915a8dfb4e103a0abbffca4a04e4791e1961c8ebf0ce2eb98",
+      "archive_asset": "selective-options-0.3.51-evidence.zip"
+    },
+    {
+      "path": "evidence/capture-stop-saved-native-01/cohort-1-initial/bar-checkpoint/events.duckdb",
+      "bytes": 1585152,
+      "sha256": "1535e2735e9449e6ec2487788d52878a287cb77bb4efa449dea5ff110b8d7338",
+      "archive_asset": "selective-options-0.3.51-evidence.zip"
+    },
+    {
+      "path": "evidence/capture-stop-saved-native-01/cohort-1-initial/events.duckdb",
+      "bytes": 1585152,
+      "sha256": "013cdcae3ba8dcd5d56c69286404e0c078075fbccd3698aa64fdf045c32597bb",
+      "archive_asset": "selective-options-0.3.51-evidence.zip"
+    },
+    {
+      "path": "evidence/capture-stop-saved-native-01/cohort-1-initial/events.parquet",
+      "bytes": 3216,
+      "sha256": "7fdcc3331554f61337fdbb2caf70722b58886569b64c4d3478f709742000f22d",
+      "archive_asset": "selective-options-0.3.51-evidence.zip"
+    },
+    {
+      "path": "evidence/capture-stop-saved-native-01/cohort-1-resumed/bar-checkpoint/events.duckdb",
+      "bytes": 1585152,
+      "sha256": "7e70df2d76a6435981c1251ead27eb3bbda4f6a4eb9a3770b88cd00cf4ce8744",
+      "archive_asset": "selective-options-0.3.51-evidence.zip"
+    },
+    {
+      "path": "evidence/capture-stop-saved-native-01/cohort-1-resumed/events.duckdb",
+      "bytes": 2895872,
+      "sha256": "d5c0106457bde706336c36ce1cc0acdaeee46afae84ed9a6d3ff3572f15f71bd",
+      "archive_asset": "selective-options-0.3.51-evidence.zip"
+    },
+    {
+      "path": "evidence/capture-stop-saved-native-01/cohort-1-resumed/events.parquet",
+      "bytes": 3777,
+      "sha256": "0edeb2236120d5e641006062920f4dbb72302afa8f01dbff45c664184c9b96f5",
+      "archive_asset": "selective-options-0.3.51-evidence.zip"
+    },
+    {
+      "path": "evidence/capture-stop-saved-native-01/cohort-1-resumed/seed-verified.duckdb",
+      "bytes": 1585152,
+      "sha256": "1d320cb3a8cc7a8e95e7f7728ca1c7e8e5659d859998c5f45c8e0614cddc9801",
+      "archive_asset": "selective-options-0.3.51-evidence.zip"
     }
   ],
   "validation_assets": [
@@ -1577,7 +1667,8 @@
     "selective-options-0.3.44.zip",
     "selective-options-0.3.45.zip",
     "selective-options-0.3.46.zip",
-    "selective-options-0.3.49-fomc-evidence.zip"
+    "selective-options-0.3.49-fomc-evidence.zip",
+    "selective-options-0.3.51-evidence.zip"
   ],
   "historical_proof_workspace": "C:\\Users\\Divan\\Documents\\Codex\\2026-09-20\\files-pasted-by-the-user-build",
   "historical_proof_requires_physical_windows_path": true,

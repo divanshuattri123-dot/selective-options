@@ -2,7 +2,7 @@
 
 **Version 0.3.51 adds cooperative finite-capture shutdown and native put/call research alongside ongoing ingestion; milestone 2 remains incomplete.** There is no signal or execution path, and arming always refuses. Development continues in the existing local chat after the reported Codex Cloud environment/account error. GitHub remains the private source and hosted verification path; continuous collector hosting remains unprovisioned.
 
-The previous frozen .50 suite passed 3,287 tests with 95.03% branch/statement coverage. Current .51 focused checks, saved-native proofs and final regression scope are recorded in `VALIDATION_REPORT.md` and `evidence/full-suite-0.3.51/`; historical .50 evidence remains unchanged in `evidence/full-suite-0351/`.
+The frozen .51 suite passes 3,426 application tests with 95.19% coverage and 65 migration cases; hosted full Windows, portable Linux and container verification pass on source commit `3cca5bb`. Linux executes 3,484 selected cases with seven explicit historical exclusions, and verifies actual SIGTERM delivery. All 83 installed-wheel modules match source. Detailed scope and preservation hashes are in `VALIDATION_REPORT.md` and `evidence/full-suite-0.3.51/`; historical .50 evidence remains unchanged in `evidence/full-suite-0351/`.
 
 ## Verified implementation
 

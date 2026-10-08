@@ -1,0 +1,255 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options
+configfile: pyproject.toml
+testpaths: tests
+plugins: asyncio-1.4.0, cov-7.1.0
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collected 3426 items
+
+tests\test_active_rotation.py .......................................... [  1%]
+.............                                                            [  1%]
+tests\test_active_rotation_cli.py ......                                 [  1%]
+tests\test_active_rotation_verifier.py .....................             [  2%]
+tests\test_archive.py .......                                            [  2%]
+tests\test_archive_rotation.py ......................................... [  3%]
+....................................                                     [  4%]
+tests\test_backtest.py ................................................. [  6%]
+.........                                                                [  6%]
+tests\test_bar_capture_validation.py ...............................     [  7%]
+tests\test_bar_checkpoint.py ........................................... [  8%]
+...........                                                              [  9%]
+tests\test_bar_checkpoint_audit.py ...................                   [  9%]
+tests\test_bar_checkpoint_cli.py ..................                      [ 10%]
+tests\test_bar_state.py ................................................ [ 11%]
+...............................................................          [ 13%]
+tests\test_bea_calendar.py .....................................         [ 14%]
+tests\test_binance.py ...........................................        [ 15%]
+tests\test_binance_accounts.py ..............................            [ 16%]
+tests\test_binance_accounts_verifier.py ..                               [ 16%]
+tests\test_binance_funding_history.py .................................. [ 17%]
+..............................                                           [ 18%]
+tests\test_binance_funding_view.py ................................      [ 19%]
+tests\test_binance_taker.py ..........................................   [ 20%]
+tests\test_binance_taker_verifier.py ..                                  [ 20%]
+tests\test_bybit.py ................................                     [ 21%]
+tests\test_calendar_quality.py .......................                   [ 22%]
+tests\test_capture_lifecycle.py .....................................    [ 23%]
+tests\test_capture_rotation.py .........                                 [ 23%]
+tests\test_capture_sigterm_process.py .                                  [ 23%]
+tests\test_coinmetrics.py .............................................. [ 25%]
+.......................................................                  [ 26%]
+tests\test_coinmetrics_audit.py .............                            [ 26%]
+tests\test_coinmetrics_capture_resume.py ......                          [ 27%]
+tests\test_coinmetrics_checkpoint.py ...................                 [ 27%]
+tests\test_coinmetrics_quality.py .....................................  [ 28%]
+tests\test_coinmetrics_validation.py ................................    [ 29%]
+tests\test_coinmetrics_verifier.py .............                         [ 30%]
+tests\test_config.py ............................                        [ 30%]
+tests\test_crypto_news.py .............................................. [ 32%]
+.......................                                                  [ 32%]
+tests\test_crypto_news_store.py .............                            [ 33%]
+tests\test_crypto_news_verifier.py ..................................... [ 34%]
+..........                                                               [ 34%]
+tests\test_derivatives.py ............                                   [ 35%]
+tests\test_eth_checkpoint.py ........................                    [ 35%]
+tests\test_eth_gas.py .................................................. [ 37%]
+....                                                                     [ 37%]
+tests\test_eth_gas_quality.py .......................................... [ 38%]
+......                                                                   [ 38%]
+tests\test_eth_gas_verifier.py .........................                 [ 39%]
+tests\test_eth_provider_integration.py ..............                    [ 39%]
+tests\test_eth_runtime_restart_verifier.py ........                      [ 40%]
+tests\test_eth_store_quality.py ............                             [ 40%]
+tests\test_features.py ................................................. [ 41%]
+....................................                                     [ 42%]
+tests\test_flow_quality.py ............................................. [ 44%]
+                                                                         [ 44%]
+tests\test_flow_view.py ..........................                       [ 45%]
+tests\test_fomc_calendar.py ..................................           [ 46%]
+tests\test_freshness_pit.py ..........                                   [ 46%]
+tests\test_funding_checkpoint.py ..................                      [ 46%]
+tests\test_funding_history.py ...........................                [ 47%]
+tests\test_funding_poll.py .....................................         [ 48%]
+tests\test_gap_recovery.py .....................                         [ 49%]
+tests\test_history_verifier.py ..                                        [ 49%]
+tests\test_ingestion.py .....................                            [ 49%]
+tests\test_json_id_lookup.py ........                                    [ 50%]
+tests\test_liquidations.py ............................................. [ 51%]
+.....                                                                    [ 51%]
+tests\test_multiasset_coverage_verifier.py ...........                   [ 51%]
+tests\test_new_feed_store.py .........................                   [ 52%]
+tests\test_new_feed_store_replay.py ......                               [ 52%]
+tests\test_news.py ..................                                    [ 53%]
+tests\test_news_quality.py ...................................           [ 54%]
+tests\test_news_restart_verifier.py ...................                  [ 54%]
+tests\test_news_store_integration.py ............                        [ 55%]
+tests\test_oi_history.py ............................                    [ 56%]
+tests\test_option_coverage.py .......................................... [ 57%]
+.....                                                                    [ 57%]
+tests\test_option_coverage_verifier.py .........                         [ 57%]
+tests\test_option_flow_research.py .................                     [ 58%]
+tests\test_option_freshness_audit.py ................................... [ 59%]
+....................                                                     [ 59%]
+tests\test_option_metadata_projection.py ..........................      [ 60%]
+tests\test_option_native_fields_audit.py ............................... [ 61%]
+.........                                                                [ 61%]
+tests\test_option_projection.py ........................................ [ 62%]
+.......                                                                  [ 63%]
+tests\test_options_features.py ......................................... [ 64%]
+........                                                                 [ 64%]
+tests\test_options_features_verifier.py ................................ [ 65%]
+....                                                                     [ 65%]
+tests\test_options_flow_features.py .................................... [ 66%]
+..................................                                       [ 67%]
+tests\test_options_flow_verifier.py ..............                       [ 68%]
+tests\test_options_research_validation.py .............                  [ 68%]
+tests\test_options_skew.py ......................                        [ 69%]
+tests\test_parallel_foundations_audit.py .......                         [ 69%]
+tests\test_receive_timing.py ..........                                  [ 69%]
+tests\test_recovery_handoff.py .....................                     [ 70%]
+tests\test_recovery_journal.py ................                          [ 70%]
+tests\test_recovery_quality.py ..........                                [ 71%]
+tests\test_recovery_runtime.py .................                         [ 71%]
+tests\test_research.py ...........                                       [ 71%]
+tests\test_research_validation.py ..............                         [ 72%]
+tests\test_reused_json_validation.py ...........                         [ 72%]
+tests\test_rotation_cli.py ....                                          [ 72%]
+tests\test_rotation_restore.py ......................................... [ 73%]
+..............                                                           [ 74%]
+tests\test_rotation_runtime.py .................................         [ 75%]
+tests\test_rotation_verifier.py .....................                    [ 75%]
+tests\test_rpc.py .....................                                  [ 76%]
+tests\test_saved_option_backtest.py ..............                       [ 76%]
+tests\test_secret_hook.py .....                                          [ 77%]
+tests\test_security_auth.py ...............................              [ 77%]
+tests\test_socket_recovery.py ................                           [ 78%]
+tests\test_solana_network.py ........................................... [ 79%]
+........................................................................ [ 81%]
+...............                                                          [ 82%]
+tests\test_solana_store_quality.py ........                              [ 82%]
+tests\test_solana_verifier.py .......                                    [ 82%]
+tests\test_spot_batch_verifier.py ..................                     [ 83%]
+tests\test_spot_sink_failstop.py ..........                              [ 83%]
+tests\test_spot_trade_batch_atomicity.py ............................... [ 84%]
+..............                                                           [ 84%]
+tests\test_spot_trade_batch_validation.py .............................  [ 85%]
+tests\test_spot_trades_bars.py ..............                            [ 86%]
+tests\test_stablecoin_capture_resume.py .....................            [ 86%]
+tests\test_stablecoin_checkpoint.py ...........................          [ 87%]
+tests\test_stablecoin_restart_verifier.py ...........                    [ 87%]
+tests\test_stablecoin_seed.py ............                               [ 88%]
+tests\test_stablecoin_supply.py ........................................ [ 89%]
+...................................................                      [ 90%]
+tests\test_stablecoin_supply_verifier.py ................                [ 91%]
+tests\test_startup_cli.py ..............                                 [ 91%]
+tests\test_storage_cancellation.py .........                             [ 91%]
+tests\test_subscription_progress.py ....                                 [ 92%]
+tests\test_tips_yield.py ............................................... [ 93%]
+.......                                                                  [ 93%]
+tests\test_tips_yield_verifier.py ...............                        [ 94%]
+tests\test_trade_backfill.py .........................                   [ 94%]
+tests\test_trade_checkpoints.py .................                        [ 95%]
+tests\test_trade_reconciliation.py ..................................... [ 96%]
+....                                                                     [ 96%]
+tests\test_trend_features.py .........................................   [ 97%]
+tests\test_trend_research_validation.py ...................              [ 98%]
+tests\test_trials.py .................                                   [ 98%]
+tests\test_universe_refresh.py ..................                        [ 99%]
+tests\test_universe_refresh_verifier.py ......                           [ 99%]
+tests\test_venue.py ..........                                           [ 99%]
+tests\test_verify_liquidations.py ...........                            [100%]
+
+- generated xml file: C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\evidence\full-suite-0.3.51\pytest.xml -
+=============================== tests coverage ================================
+______________ coverage: platform win32, python 3.12.10-final-0 _______________
+
+Name                                               Stmts   Miss Branch BrPart  Cover   Missing
+----------------------------------------------------------------------------------------------
+src\selective_options\__init__.py                      1      0      0      0   100%
+src\selective_options\active_rotation.py             122      7     34      3    92%   105, 113, 164-167, 200
+src\selective_options\archive.py                      87      1     20      1    98%   112
+src\selective_options\archive_rotation.py            242     15    100     12    92%   65, 88->105, 177, 184, 199, 202, 243, 270, 404, 410, 459-463, 469
+src\selective_options\auth.py                         49      0     10      0   100%
+src\selective_options\backtest.py                    264      3     82      3    98%   222, 228, 241
+src\selective_options\bar_checkpoint.py              456     52    208     43    85%   117, 138, 145, 149, 156, 173, 176, 181, 202, 222, 241, 250, 283, 288, 290, 368, 370, 384-386, 445, 464, 466, 468, 471, 481, 497, 512, 541-542, 547, 550, 553, 559, 568, 593-596, 612, 617, 665, 679, 708, 711, 742, 746, 749, 764, 779, 782, 818
+src\selective_options\bar_runtime.py                  54      4     22      4    89%   38, 42, 77, 111
+src\selective_options\bar_state.py                   221      9    106      8    95%   84-85, 111, 117, 121, 134, 213, 217, 223, 232->exit
+src\selective_options\bars.py                         78      0     26      0   100%
+src\selective_options\bea_calendar.py                103      0     38      0   100%
+src\selective_options\binance.py                     134      0     44      0   100%
+src\selective_options\binance_accounts.py             42      0     18      0   100%
+src\selective_options\binance_funding_history.py      77      0     30      0   100%
+src\selective_options\binance_funding_view.py         43      0     14      0   100%
+src\selective_options\binance_taker.py                92      0     32      0   100%
+src\selective_options\bus.py                          46      0      4      0   100%
+src\selective_options\bybit.py                       143      0     44      0   100%
+src\selective_options\calendar_quality.py             60      0     28      0   100%
+src\selective_options\capture_lifecycle.py            56      1     14      0    99%   20
+src\selective_options\checkpoints.py                  30      2     12      2    90%   49, 51
+src\selective_options\cli.py                         193      3     38      3    97%   276, 408, 450
+src\selective_options\coinmetrics.py                 285     15    102     12    93%   87, 89, 91, 93, 111, 176, 183, 185, 206, 273, 419, 538-543
+src\selective_options\coinmetrics_checkpoint.py       87     11     38      7    86%   96, 112-113, 117-118, 121, 144, 147, 169, 177, 184
+src\selective_options\coinmetrics_quality.py          89      3     52      3    96%   93, 107, 145
+src\selective_options\collectors.py                  338     27     82     10    90%   193->179, 348, 493-498, 512->511, 523, 527->524, 530->524, 542, 564, 567, 572, 593-610, 614-616
+src\selective_options\config.py                      304      0     30      0   100%
+src\selective_options\crypto_news.py                 191      5     60      1    98%   167, 436-441
+src\selective_options\derivatives.py                  97      1     32      2    98%   188, 189->170
+src\selective_options\errors.py                       13      0      0      0   100%
+src\selective_options\eth_checkpoint.py               59      1     18      1    97%   47
+src\selective_options\eth_gas.py                     141      2     50      2    98%   78, 307
+src\selective_options\eth_gas_quality.py              88      3     48      3    96%   23, 126, 188
+src\selective_options\events.py                       50      0     10      0   100%
+src\selective_options\features.py                    273      3    116      3    98%   157, 201, 213
+src\selective_options\flow_quality.py                 76      0     38      0   100%
+src\selective_options\flow_view.py                    62      0     22      0   100%
+src\selective_options\fomc_calendar.py               255     12     92      8    94%   119, 130, 145->147, 170, 316, 350, 358, 362-363, 371, 377-379
+src\selective_options\funding_checkpoint.py           27      0      6      0   100%
+src\selective_options\funding_history.py              67      0     24      0   100%
+src\selective_options\funding_poll.py                 49      0     10      0   100%
+src\selective_options\gap_recovery.py                 49      1      8      1    96%   95
+src\selective_options\ingestion.py                   437     14    210      5    97%   221, 254, 282-284, 338, 345-348, 378-380, 404
+src\selective_options\interlock.py                     4      0      0      0   100%
+src\selective_options\liquidations.py                281      9    102     10    95%   108, 129, 154, 257, 260, 283->exit, 400, 410, 453, 477
+src\selective_options\logging.py                      22      0      4      1    96%   15->exit
+src\selective_options\models.py                      137      0      6      0   100%
+src\selective_options\news.py                        107      2     32      2    97%   180, 190
+src\selective_options\news_quality.py                103      1     42      1    99%   88
+src\selective_options\oi_history.py                   78      0     26      0   100%
+src\selective_options\option_backtest.py             296     64    136     52    73%   73, 76, 102, 104, 106, 108, 120, 123, 136, 138-141, 156, 164, 177, 181-184, 197, 199, 206, 211, 224-225, 233, 236-237, 239, 255, 267, 283, 286, 288, 296->298, 301, 305, 333, 340-341, 356, 359, 363, 366, 368, 370, 389, 391, 405->401, 415, 423, 432, 443, 451, 458, 486, 489, 502, 504, 551, 573, 583, 633, 651, 670
+src\selective_options\option_coverage.py             138      0     76      0   100%
+src\selective_options\option_flow_research.py         30      0      8      0   100%
+src\selective_options\option_skew_research.py         28      2      4      2    88%   66, 90
+src\selective_options\options_features.py            247      7    114      5    97%   118, 205, 207, 254-255, 277, 296
+src\selective_options\options_flow_features.py       267      3    102      3    98%   187, 204, 404
+src\selective_options\options_research.py             53      5     22      5    87%   37, 57, 86, 88, 90
+src\selective_options\options_skew.py                238     24     98     18    88%   93, 105, 177, 182, 192, 212->211, 229, 234-235, 247, 251, 257, 269-270, 278, 280-281, 284, 310-311, 323-324, 389-398, 457
+src\selective_options\quality.py                      96      0     46      4    97%   68->75, 71->70, 73->70, 182->174
+src\selective_options\rate_limit.py                   31      0      4      0   100%
+src\selective_options\recovery.py                     24      0      6      0   100%
+src\selective_options\recovery_handoff.py             54      0     22      1    99%   25->23
+src\selective_options\recovery_journal.py            100      0     28      0   100%
+src\selective_options\recovery_runtime.py             54      1     18      2    96%   70, 75->78
+src\selective_options\research.py                    126      9     46      9    90%   56, 80, 84, 107, 109, 117, 122, 150, 274
+src\selective_options\rotation_restore.py            148      6     58      4    94%   113, 124-126, 184->exit, 204, 208
+src\selective_options\rotation_runtime.py             81      2     16      1    97%   34-35
+src\selective_options\rpc.py                          67      0     14      1    99%   69->exit
+src\selective_options\security.py                     62      0     34      0   100%
+src\selective_options\socket_recovery.py             105      2     34      2    97%   143, 149
+src\selective_options\solana_network.py              138      0     50      0   100%
+src\selective_options\solana_quality.py               73      1     36      1    98%   116
+src\selective_options\spot_trades.py                 287     16    106     15    92%   128, 130, 179, 184, 193, 197, 369, 445, 457, 460, 464->492, 480, 484-489, 491, 495
+src\selective_options\stablecoin_checkpoint.py        37      4     10      2    87%   44-45, 57, 60
+src\selective_options\stablecoin_supply.py           309      7    120      7    97%   253, 306, 340, 449, 515, 530, 609
+src\selective_options\startup.py                      72      1     24      1    98%   136
+src\selective_options\store.py                       221      1     36      0    99%   54
+src\selective_options\tips_yield.py                  193      4     64      0    98%   281-287
+src\selective_options\trade_backfill.py              136      0     52      0   100%
+src\selective_options\trade_reconciliation.py        151      1     54      1    99%   219
+src\selective_options\trend_features.py              133      4     42      2    97%   60, 82, 179-180
+src\selective_options\trials.py                      144      8     38      6    92%   64, 92, 124, 129, 137, 182, 251-252
+src\selective_options\venue.py                        41      0     12      0   100%
+----------------------------------------------------------------------------------------------
+TOTAL                                              10542    379   3714    295    95%
+Required test coverage of 85.0% reached. Total coverage: 95.19%
+====================== 3426 passed in 652.06s (0:10:52) =======================

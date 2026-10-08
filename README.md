@@ -3,8 +3,9 @@
 **Phone and cloud development:** Use the private repository's
 [Actions](https://github.com/divanshuattri123-dot/selective-options/actions) to run
 hosted builds and inspect results. [CLOUD_MIGRATION.md](CLOUD_MIGRATION.md) contains
-the exact mobile controls, portable setup and Codex Cloud instructions. The previous
-0.3.50 hosted full suite passed; continuous collector hosting remains unprovisioned.
+the exact mobile controls, portable setup and Codex Cloud instructions. Development
+currently continues in this local chat. The 0.3.51 hosted full Windows, portable
+Linux and container checks pass; continuous collector hosting remains unprovisioned.
 
 The system exists to place **very few trades with a large positive expected value**, not many trades with a good-looking win rate. It stays flat by default. It only fires when technical, volatility/flow, and fundamental/news evidence independently point the same direction at the same time, and when the options market is pricing that direction cheaply enough to pay for being right.
 
@@ -22,7 +23,7 @@ A 40% hit rate at 4R average winner beats an 85% hit rate at 0.3R. Optimise `E`,
 
 **Build status: milestone 1 readiness passed; milestone 2 ingestion pilot implemented and tested, but incomplete.** Authentication, maximum key permissions, account/connection cancel-on-disconnect, native refresh and authenticated discovery passed. An 11-minute capture stored 61,061 events, including 4,597 underlying trades and eight complete five-minute bars. A separate 10,707-event archive was restored and verified without changing its observation timestamps. No orders were placed. `arm` remains disabled in every profile.
 
-Version 0.3.51 adds cooperative finite-capture stop and offline native put/call research. Four saved-data capture pipelines preserve 55 native trades and resume stopped bar state; a separate audit checks all 1,010 saved option members over 13 expiries. One zero-call-volume expiry remains unavailable, so the research report stays PARTIAL. Full local and hosted verification results are recorded in [VALIDATION_REPORT.md](VALIDATION_REPORT.md). Development continues in this existing local chat after the Codex Cloud environment error. See [RUNBOOK.md](RUNBOOK.md) and [RESEARCH.md](RESEARCH.md) for the explicit stop and research commands.
+Version 0.3.51 adds cooperative finite-capture stop and offline native put/call research. Four saved-data capture pipelines preserve 55 native trades and resume stopped bar state; a separate audit checks all 1,010 saved option members over 13 expiries. One zero-call-volume expiry remains unavailable, so the research report stays PARTIAL. All 3,426 application tests and 65 migration cases pass; local coverage is 95.19%. Full local and hosted verification results are recorded in [VALIDATION_REPORT.md](VALIDATION_REPORT.md). Development continues in this existing local chat after the Codex Cloud environment error. See [RUNBOOK.md](RUNBOOK.md) and [RESEARCH.md](RESEARCH.md) for the explicit stop and research commands.
 
 Version 0.3.50 adds an offline discrete-delta risk-reversal view using native call/put mark-IV values and signed deltas. The saved testnet replay produced 12 pairs from 13 expiries; one invalid put was withheld and a +119.63-point mark-IV difference remains an explicitly unvalidated outlier. All 3,287 tests pass with 95.03% coverage; Ruff, strict mypy and the installed 80-module wheel check pass. Three official BLS paths returned HTTP 403, so that feed remains unavailable. This does not complete ingestion, feature/backtest acceptance or live readiness. See [RESEARCH.md](RESEARCH.md), [INGESTION_STATUS.md](INGESTION_STATUS.md), and [VALIDATION_REPORT.md](VALIDATION_REPORT.md).
 

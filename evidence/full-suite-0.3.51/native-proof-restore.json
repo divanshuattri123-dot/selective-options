@@ -1,0 +1,9 @@
+{
+  "status": "PASSED",
+  "scope": "Exact new native-proof ZIP restored through production helper into fresh temporary checkout; byte/hash checks and second idempotent restore",
+  "native_files": 14,
+  "second_restore_files": 0,
+  "archive_sha256": "ecf48d63871b11c5be61f74fb01cb4a34fccf89646e677bbc77a980c9c904f81",
+  "restore_helper_sha256": "896ee30f29b438b525dd3b1092ded384d616aee59543cbb9d8ac37c46a2d33df",
+  "network_requests": 0
+}

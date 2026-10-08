@@ -2,31 +2,13 @@
 
 ## Local continuation 0.3.51 (8 October 2026)
 
-The executable changes are cooperative finite-capture stop and offline native
-put/call research. Focused integration passes 88 cases; the independent native
-verifier passes 14 tamper/consistency cases; the separate migration suite passes
-65 cases. Ruff lint/format passes 258 Python files and strict mypy passes 130
-configured source/script files. These checks precede the full frozen-source run.
+The frozen .51 local run passes all 3,426 application tests with 95.19% combined statement/branch coverage and all 65 migration-helper cases, with zero failures/errors/skips. The unchanged 258 Python source/test files match the final fingerprint; Ruff lint/format and strict mypy (130 configured files) pass. On exact source commit `3cca5bbcc97ee7708d1bdf8bf962f30486329501`, hosted Windows run 37813118994 passes the complete 3,426 application plus 65 migration cases; Linux/container run 37813119008 passes 3,484 selected cases with seven declared historical Windows exclusions, zero failures/errors/skips and no blocked external network attempts. The isolated 0.3.51 wheel matches all 83 source modules. Actual POSIX child-process SIGTERM delivery passes, including committed readiness, a drained producer-cleanup tail, two exact durable rows and restored handlers. Non-root container configuration, named-volume persistence and arming refusal pass.
 
-`evidence/capture-stop-saved-native-01/verification.json` passes four actual
-transport-mocked capture pipelines, exact DuckDB/Parquet/outbox/input binding,
-stopped-bar checkpoint/resume and unchanged original hashes over 55 saved Kraken
-trades. Lifecycle clocks are labelled synthetic; no actual service interruption
-or periodic crash checkpoint is claimed.
+The local complete suite also passes the independent strict JUnit gate for all 3,491 application/migration cases. The portable Linux scope is a separately declared subset; all seven historical cases are included in the complete Windows run. The Linux pytest worker and the isolated signal child each report zero blocked external network attempts within their documented guard scopes.
 
-`evidence/options-flow-saved-native-01/verification.json` independently checks
-1,010 saved option members across 13 expiries against Decimal/Fraction arithmetic
-and exact native quote/metadata/source inputs. OI aggregate is `456277/588510`;
-rolling-volume aggregate is `127070/449111`. One volume expiry has a zero call
-denominator and remains unavailable, so the report correctly stays PARTIAL.
-This is historical testnet research, not current health, a signal or a trial.
+Fresh saved-native replay checks four actual transport-mocked capture pipelines over 55 original Kraken trades, exact DuckDB/Parquet/outbox/input binding and stopped-bar checkpoint/resume. The separate Decimal/Fraction audit checks all 1,010 saved option members over 13 expiries. OI aggregate is `456277/588510`; rolling-volume aggregate is `127070/449111`. One expiry has zero call volume and stays unavailable, preserving PARTIAL status. These are historical native-data proofs and labelled lifecycle fixtures; no current-feed health, arbitrary crash recovery, sustained run, strategy acceptance or paper-day credit is claimed.
 
-The child-process fixture on Windows verifies explicit graceful-signal CLI
-refusal (exit 2, no capture output) and handler preservation, with no pytest skip.
-Actual `os.kill(SIGTERM)` delivery, committed readiness and producer-cleanup tail
-drain will run in the Linux workflow; a dispatch alone is not a passing result.
-Final full-suite, hosted and checksum-bound results are recorded below when
-complete. Full M2/later acceptance and trading remain disabled.
+Private release [v0.3.51](https://github.com/divanshuattri123-dot/selective-options/releases/tag/v0.3.51) permanently preserves all three original hosted validation archives and the exact 14-file native capture proof ZIP. The production restore helper reopens all 14 files into a fresh checkout with exact byte/hash checks; its second restore is idempotent. The appended inventory retains all historical entries and now lists 199 native evidence files plus seven validation archives (206 restore prerequisites). Final JUnit, logs, source fingerprint, platform scope and preservation hashes are in `evidence/full-suite-0.3.51/`. A following documentation/evidence-only commit records these completed checks without rerunning unchanged executable tests. M2 remains PARTIAL and trading remains disabled.
 
 ## Previous build audit and cloud migration (8 October 2026)
 

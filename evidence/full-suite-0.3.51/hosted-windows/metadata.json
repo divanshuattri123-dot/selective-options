@@ -1,0 +1,57 @@
+{
+  "run_id": 37813118994,
+  "commit": "3cca5bbcc97ee7708d1bdf8bf962f30486329501",
+  "status": "completed",
+  "conclusion": "success",
+  "url": "https://github.com/divanshuattri123-dot/selective-options/actions/runs/37813118994",
+  "artifacts": [
+    {
+      "id": 11567020714,
+      "name": "checkpoint-validation",
+      "sha256": "1eae0a64c889568d8f58776127d2ec0b7f427b9a5fae6d04f04f4b363cb1ae24",
+      "bytes": 57680,
+      "expires_at": "2027-01-06T16:59:49Z",
+      "head_sha": "3cca5bbcc97ee7708d1bdf8bf962f30486329501",
+      "files": [
+        {
+          "name": "evidence/github-ci.xml",
+          "bytes": 461994,
+          "sha256": "594eba16b3e396540a7bc1376327a81761e3bc9428f85dc3222a253c4404358b"
+        },
+        {
+          "name": "evidence/github-migration-ci.xml",
+          "bytes": 15773,
+          "sha256": "c33c1dd96559bd6641adf10af8bf85adedf3a235527faf2e14220bfe23eb4b21"
+        },
+        {
+          "name": "state/capture-sigterm-process/4dfa7c344fea42559116d13f0f3353b8/child/verification.json",
+          "bytes": 629,
+          "sha256": "503b0b18f92fb2b6e6c5a3c855ae53056ba7935353e8aa6dd49417a1c755c8be"
+        },
+        {
+          "name": "state/capture-sigterm-process/4dfa7c344fea42559116d13f0f3353b8/parent-verification.json",
+          "bytes": 564,
+          "sha256": "d25c8c61c3ce55089388b3ebe0ae2a5d539cfb7d4571d8d03ce836184701abb4"
+        },
+        {
+          "name": "state/capture-sigterm-process/4dfa7c344fea42559116d13f0f3353b8/stderr.log",
+          "bytes": 181,
+          "sha256": "5481fd655430b55f444a08c05cb0bb31d9d922e445549aed8785a78408912ae2"
+        },
+        {
+          "name": "state/capture-sigterm-process/4dfa7c344fea42559116d13f0f3353b8/stdout.log",
+          "bytes": 81,
+          "sha256": "47747d9c6e6ef502aa2c5c2be6e17bdcfeebfe09253377f339524b298c633b44"
+        }
+      ],
+      "log_tails": {
+        "state/capture-sigterm-process/4dfa7c344fea42559116d13f0f3353b8/stderr.log": [
+          "{\"timestamp\": \"2026-10-08T17:04:29.107730+00:00\", \"level\": \"ERROR\", \"event\": \"STARTUP_HALTED type=ValueError detail= trading_enabled=false\", \"signal_id\": null, \"error_type\": null}"
+        ],
+        "state/capture-sigterm-process/4dfa7c344fea42559116d13f0f3353b8/stdout.log": [
+          "{\"sigterm_process_status\": \"UNSUPPORTED_PLATFORM_REFUSED\", \"platform\": \"win32\"}"
+        ]
+      }
+    }
+  ]
+}

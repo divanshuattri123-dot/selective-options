@@ -1,0 +1,31 @@
+{
+  "status": "PASSED",
+  "application_version": "0.3.51",
+  "source_commit": "3cca5bbcc97ee7708d1bdf8bf962f30486329501",
+  "scope": "Complete local original-Windows-layout offline application suite plus separate migration-helper suite",
+  "checks": {
+    "pytest": {
+      "tests": 3426,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "elapsed_s": 651.738,
+      "junit_sha256": "965983e844147ea660c3aa592efaf5c0c019377e14b9673250db775bfa93ae6d"
+    },
+    "migration": {
+      "tests": 65,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "elapsed_s": 1.554,
+      "junit_sha256": "ff1a70b25cdfae34098a44fd79811504ab64b4203833712775b98f73e18285b7"
+    }
+  },
+  "coverage_percent": 95.19,
+  "executable_test_freeze_unchanged": true,
+  "frozen_python_files": 258,
+  "ruff_scope_python_files": 258,
+  "mypy_configured_files": 130,
+  "trading_enabled": false,
+  "milestone_status": "PARTIAL"
+}

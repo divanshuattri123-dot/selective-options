@@ -1,0 +1,22 @@
+{
+  "platform": "linux",
+  "scope": "Finite child process; actual capture, mocked producers and no external network",
+  "expected_event_ids": [
+    "f56835a6d23be1f90c84be90e2f8c646d750ef99b3c74fb0017c38ba92719e9f",
+    "49883c09c73ce2aef1bd4531e44990dcf37df4d4edc3e8113464a238cca2f102"
+  ],
+  "orders_submitted": 0,
+  "trading_enabled": false,
+  "actual_sigterm_expected": true,
+  "capture_exit_code": 0,
+  "previous_sigterm_handler_restored": true,
+  "sigint_handler_preserved": true,
+  "previous_handler_invocations": 0,
+  "blocked_external_network_attempts": 0,
+  "status": "ACTUAL_POSIX_SIGTERM_CAPTURE_VERIFIED",
+  "report_sha256": "02d557337b0d8881c06513b2d25a4e6f5058c4b7b98fea6b5e0e69ba3a824f3e",
+  "parquet_sha256": "15a1d2a977b4268fc47106cd6d10c457b934cc20894a0e2668a17184a44d322d",
+  "duckdb_sha256": "ffbcd4d7dfef940740b99ac54c099c5c64095e802f586e58dde881352797eaf1",
+  "durable_rows": 2,
+  "producer_cleanup_tail_drained": true
+}

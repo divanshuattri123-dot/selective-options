@@ -1,0 +1,33 @@
+{
+  "status": "PASSED",
+  "source_commit": "3cca5bbcc97ee7708d1bdf8bf962f30486329501",
+  "full_windows_junit_counts": {
+    "github-ci.xml": {
+      "tests": 3426,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "elapsed_s": 493.209
+    },
+    "github-migration-ci.xml": {
+      "tests": 65,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "elapsed_s": 4.298
+    }
+  },
+  "signal_checks": {
+    "hosted-linux": {
+      "status": "ACTUAL_POSIX_SIGTERM_CAPTURE_VERIFIED",
+      "capture_exit_code": 0,
+      "blocked_external_network_attempts": 0
+    },
+    "hosted-windows": {
+      "status": "UNSUPPORTED_PLATFORM_REFUSED",
+      "capture_exit_code": 2,
+      "blocked_external_network_attempts": 0
+    }
+  },
+  "trading_enabled": false
+}

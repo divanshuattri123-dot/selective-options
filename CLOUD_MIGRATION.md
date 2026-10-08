@@ -13,7 +13,13 @@ has been published and no always-on collector or hosting account has been create
 GitHub Actions still supplies hosted Windows/Linux/container verification and
 phone-accessible build results independently of that Codex environment error.
 
-## Verified hosted development setup
+## Current 0.3.51 hosted verification
+
+The frozen .51 local run passes all 3,426 application tests with 95.19% combined statement/branch coverage and all 65 migration-helper cases, with zero failures/errors/skips. The unchanged 258 Python source/test files match the final fingerprint; Ruff lint/format and strict mypy (130 configured files) pass. On exact source commit `3cca5bbcc97ee7708d1bdf8bf962f30486329501`, hosted Windows run 37813118994 passes the complete 3,426 application plus 65 migration cases; Linux/container run 37813119008 passes 3,484 selected cases with seven declared historical Windows exclusions, zero failures/errors/skips and no blocked external network attempts. The isolated 0.3.51 wheel matches all 83 source modules. Actual POSIX child-process SIGTERM delivery passes, including committed readiness, a drained producer-cleanup tail, two exact durable rows and restored handlers. Non-root container configuration, named-volume persistence and arming refusal pass.
+
+Private release [v0.3.51](https://github.com/divanshuattri123-dot/selective-options/releases/tag/v0.3.51) permanently preserves all three original hosted validation archives and the exact 14-file native capture proof ZIP. The production restore helper reopens all 14 files into a fresh checkout with exact byte/hash checks; its second restore is idempotent. The appended inventory retains all historical entries and now lists 199 native evidence files plus seven validation archives (206 restore prerequisites). Final JUnit, logs, source fingerprint, platform scope and preservation hashes are in `evidence/full-suite-0.3.51/`. A following documentation/evidence-only commit records these completed checks without rerunning unchanged executable tests. M2 remains PARTIAL and trading remains disabled.
+
+## Previous 0.3.50 hosted development setup
 
 The corrected Linux/container run
 [37805078059](https://github.com/divanshuattri123-dot/selective-options/actions/runs/37805078059)

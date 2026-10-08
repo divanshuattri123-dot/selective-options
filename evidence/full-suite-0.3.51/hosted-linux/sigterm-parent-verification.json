@@ -1,0 +1,48 @@
+{
+  "platform": "linux",
+  "actual_signal_sent": true,
+  "status": "ACTUAL_POSIX_SIGTERM_CAPTURE_VERIFIED",
+  "child_exit_code": 0,
+  "files": {
+    "child/capture/config.sanitized.json": {
+      "bytes": 7284,
+      "sha256": "e99af0fcb0d5709ca2caa08c901819f0ef6af1307a5ceb8af5feaaa8add20603"
+    },
+    "child/capture/events.duckdb": {
+      "bytes": 1585152,
+      "sha256": "ffbcd4d7dfef940740b99ac54c099c5c64095e802f586e58dde881352797eaf1"
+    },
+    "child/capture/events.parquet": {
+      "bytes": 2241,
+      "sha256": "15a1d2a977b4268fc47106cd6d10c457b934cc20894a0e2668a17184a44d322d"
+    },
+    "child/capture/events.parquet.manifest.json": {
+      "bytes": 136,
+      "sha256": "df24d65d6d825e6a4ddef6174996a2ce2665c096acc6bf43a745c7e58750c8c4"
+    },
+    "child/capture/report.json": {
+      "bytes": 5803,
+      "sha256": "02d557337b0d8881c06513b2d25a4e6f5058c4b7b98fea6b5e0e69ba3a824f3e"
+    },
+    "child/producer-stopped.json": {
+      "bytes": 90,
+      "sha256": "34dec908b576d05b0cbe7f383a9783135aec3910a40cf203841ed797bfb9eae3"
+    },
+    "child/ready.json": {
+      "bytes": 116,
+      "sha256": "3e77a5f94d65f64ffc7564438d14646678243e36f4cd423aa0825a2313ad203b"
+    },
+    "child/verification.json": {
+      "bytes": 944,
+      "sha256": "502cabe26ccf4174a21d73255b5be0a8ff940fbc467ea791d30039217fbb8cd7"
+    },
+    "stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout.log": {
+      "bytes": 5892,
+      "sha256": "0c30ed792d5dc028f555d5fce66c058674613c5ed0dc3f5500d8db9f3b25ad2e"
+    }
+  }
+}
