@@ -1,0 +1,124 @@
+{
+  "repository": "divanshuattri123-dot/selective-options",
+  "private": true,
+  "run": {
+    "id": 37799465762,
+    "head_sha": "9903928afa11e791a6896934b84b487848246412",
+    "status": "completed",
+    "conclusion": "success",
+    "html_url": "https://github.com/divanshuattri123-dot/selective-options/actions/runs/37799465762",
+    "event": "workflow_dispatch",
+    "created_at": "2026-10-08T15:17:09Z",
+    "updated_at": "2026-10-08T15:27:33Z"
+  },
+  "jobs": [
+    {
+      "id": 113387514401,
+      "name": "verify",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-10-08T15:17:14Z",
+      "completed_at": "2026-10-08T15:27:32Z",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-08T15:17:15Z",
+          "completed_at": "2026-10-08T15:17:17Z"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-08T15:17:17Z",
+          "completed_at": "2026-10-08T15:17:23Z"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-08T15:17:23Z",
+          "completed_at": "2026-10-08T15:17:24Z"
+        },
+        {
+          "name": "Preserve physical historical-proof layout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-08T15:17:24Z",
+          "completed_at": "2026-10-08T15:17:35Z"
+        },
+        {
+          "name": "Restore verified private native evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-08T15:17:35Z",
+          "completed_at": "2026-10-08T15:18:51Z"
+        },
+        {
+          "name": "Install exercised runtime and validation tools",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-08T15:18:51Z",
+          "completed_at": "2026-10-08T15:19:41Z"
+        },
+        {
+          "name": "Static analysis and generated-document consistency",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-08T15:19:41Z",
+          "completed_at": "2026-10-08T15:19:58Z"
+        },
+        {
+          "name": "Full offline validation suite",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-08T15:19:58Z",
+          "completed_at": "2026-10-08T15:27:24Z"
+        },
+        {
+          "name": "Retain CI diagnostics",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-08T15:27:24Z",
+          "completed_at": "2026-10-08T15:27:26Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-10-08T15:27:26Z",
+          "completed_at": "2026-10-08T15:27:26Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18,
+          "started_at": "2026-10-08T15:27:27Z",
+          "completed_at": "2026-10-08T15:27:29Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-10-08T15:27:29Z",
+          "completed_at": "2026-10-08T15:27:29Z"
+        }
+      ]
+    }
+  ],
+  "trading_enabled": false,
+  "milestone": "M2_PARTIAL"
+}

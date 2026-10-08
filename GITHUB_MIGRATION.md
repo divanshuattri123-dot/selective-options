@@ -100,11 +100,31 @@ The immutable downloadable full-source/evidence snapshot remains the 0.3.47
 release asset; 0.3.48 source, tests, small validation evidence and history are on
 the private `main` branch.
 
+## Cloud development and phone controls
+
+The 0.3.50 run passed on `9903928afa11e791a6896934b84b487848246412`:
+3,287 offline tests, 95.03% coverage and 24 private-evidence restore tests, with
+all workflow steps successful. Exact metadata is in
+`evidence/cloud-migration/previous-ci-run.json`.
+
+See [CLOUD_MIGRATION.md](CLOUD_MIGRATION.md) for the phone workflow links, portable
+Linux development setup, explicit historical test scope and Codex Cloud setup.
+The GitHub repository becomes the development source of truth. Both hosted build
+workflows can be dispatched from the phone browser and run on main pushes and pull
+requests. The historical Windows layout remains on a disposable GitHub runner;
+it does not require this desktop to be running.
+
+The user confirmed no hosting account yet. No continuous collector/database or
+Codex Cloud environment is claimed deployed; publishing Codex Cloud needs the user's
+account sign-in, and sustained runtime hosting still needs provisioned persistent
+infrastructure. The former desktop heartbeat was deleted when the user paused.
+
 ## Continuing development
 
-The local canonical project is still `outputs/selective-options`; it now has a Git
-remote and a `main` branch. Continue implementing there, keep the work log and
-verification evidence current, then commit and push reviewed changes. Use new
+The private GitHub main branch is the development source of truth; the local project
+at `outputs/selective-options` is a working checkout. Continue implementing in a
+checkout or configured cloud workspace, keep the work log and verification evidence
+current, then commit and push reviewed changes. Use new
 checkpoint releases for new large immutable data artifacts; retain the historical
 archives and their hashes.
 

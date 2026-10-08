@@ -1,5 +1,11 @@
 # Selective High-Conviction Options Trading System
 
+**Phone and cloud development:** Use the private repository's
+[Actions](https://github.com/divanshuattri123-dot/selective-options/actions) to run
+hosted builds and inspect results. [CLOUD_MIGRATION.md](CLOUD_MIGRATION.md) contains
+the exact mobile controls, portable setup and Codex Cloud instructions. The previous
+0.3.50 hosted full suite passed; continuous collector hosting remains unprovisioned.
+
 The system exists to place **very few trades with a large positive expected value**, not many trades with a good-looking win rate. It stays flat by default. It only fires when technical, volatility/flow, and fundamental/news evidence independently point the same direction at the same time, and when the options market is pricing that direction cheaply enough to pay for being right.
 
 The success metric is **expectancy per trade after all costs**, defined as:

@@ -1,5 +1,20 @@
 # Validation report — foundation and partial ingestion
 
+## Previous build audit and cloud migration (8 October 2026)
+
+The exact 0.3.50 source commit `9903928afa11e791a6896934b84b487848246412` passes
+GitHub run 37799465762: 3,287 offline tests, 95.03% coverage and 24 migration tests,
+with all restore/static/configuration steps successful. The fresh offline audit
+repeats 40 skew/refresh cases and 24 restore-helper cases successfully and finds no
+new source regression. Stale current-status summaries were corrected; original
+native evidence, source and proof tests remain unchanged. The run metadata and
+audit details are in `evidence/cloud-migration/`.
+
+Cloud build tooling is validated separately from historical Windows proof and
+milestone acceptance. See `CLOUD_MIGRATION.md` for exact scope, phone controls and
+remaining Codex sign-in/continuous-hosting prerequisites. No sustained runtime,
+strategy edge or production execution is certified by this migration.
+
 **Trading eligibility: NOT VALIDATED. Live arming always fails.** This is an implementation/readiness report, not evidence of a profitable strategy. No return, win-rate, Sharpe, PBO or DSR result has been fabricated.
 
 ## Discrete option risk reversal and BLS access status — version 0.3.50 (8 October 2026)

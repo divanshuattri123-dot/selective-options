@@ -2,6 +2,10 @@ name: verified-checkpoint
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 permissions:
   contents: read
@@ -21,8 +25,10 @@ jobs:
       run:
         shell: pwsh
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
         with:
           python-version: "3.12.10"
       - name: Preserve physical historical-proof layout
@@ -69,12 +75,16 @@ jobs:
           if ($LASTEXITCODE -ne 0) { throw "Full offline validation failed" }
           & (Join-Path (Split-Path -Parent $env:PYTHON) selective-options.exe) check-config
           if ($LASTEXITCODE -ne 0) { throw "Configuration validation failed" }
-          & $env:PYTHON -m pytest -q migration-tests/test_restore_github_evidence.py
+          & $env:PYTHON -m pytest -q migration-tests --junitxml=evidence/github-migration-ci.xml
           if ($LASTEXITCODE -ne 0) { throw "Migration helper validation failed" }
+          & $env:PYTHON tools/check_ci_junit.py evidence/github-ci.xml evidence/github-migration-ci.xml --github-summary
+          if ($LASTEXITCODE -ne 0) { throw "Zero-skip full-suite evidence gate failed" }
       - name: Retain CI diagnostics
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
         with:
           name: checkpoint-validation
-          path: C:/Users/Divan/Documents/Codex/2026-09-20/files-pasted-by-the-user-build/outputs/selective-options/evidence/github-ci.xml
+          path: |
+            C:/Users/Divan/Documents/Codex/2026-09-20/files-pasted-by-the-user-build/outputs/selective-options/evidence/github-ci.xml
+            C:/Users/Divan/Documents/Codex/2026-09-20/files-pasted-by-the-user-build/outputs/selective-options/evidence/github-migration-ci.xml
           if-no-files-found: ignore

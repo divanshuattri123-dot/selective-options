@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "description": "Portable offline validation. The preserved Windows verified-checkpoint workflow remains authoritative for the complete historical proof suite.",
+  "historical_authority": ".github/workflows/ci.yaml",
+  "exclusions": [
+    {
+      "nodeid": "tests/test_parallel_foundations_audit.py::test_intact_saved_proof_independent_audit_is_read_only",
+      "platforms": ["linux", "darwin"],
+      "reason": "Immutable parallel-foundations report binds source_evidence to the original absolute Windows path; scripts/audit_parallel_foundations.py:681-684 refuses relocated source."
+    },
+    {
+      "nodeid": "tests/test_parallel_foundations_audit.py::test_semantic_bucket_corruption_refused_even_when_report_hash_updated",
+      "platforms": ["linux", "darwin"],
+      "reason": "The preserved report's absolute Windows source_evidence check runs before the expected semantic corruption check; scripts/audit_parallel_foundations.py:681-684."
+    },
+    {
+      "nodeid": "tests/test_parallel_foundations_audit.py::test_changed_native_receipt_refused_before_success_report",
+      "platforms": ["linux", "darwin"],
+      "reason": "The preserved report's absolute Windows source_evidence check runs before the expected native receipt check; scripts/audit_parallel_foundations.py:681-684."
+    },
+    {
+      "nodeid": "tests/test_parallel_foundations_audit.py::test_analytical_feature_corruption_refused",
+      "platforms": ["linux", "darwin"],
+      "reason": "The preserved report's absolute Windows source_evidence check runs before the expected analytical feature check; scripts/audit_parallel_foundations.py:681-684."
+    },
+    {
+      "nodeid": "tests/test_parallel_foundations_audit.py::test_torn_trial_chain_refused",
+      "platforms": ["linux", "darwin"],
+      "reason": "The preserved report's absolute Windows source_evidence check runs before the expected trial chain check; scripts/audit_parallel_foundations.py:681-684."
+    },
+    {
+      "nodeid": "tests/test_parallel_foundations_audit.py::test_overclaim_missing_piece_and_code_mismatch_refuse",
+      "platforms": ["linux", "darwin"],
+      "reason": "The preserved report's absolute Windows source_evidence check runs before the expected frozen code check; scripts/audit_parallel_foundations.py:681-684."
+    },
+    {
+      "nodeid": "tests/test_coinmetrics_audit.py::test_actual_module_cli_refuses_mock_and_does_not_create_output",
+      "platforms": ["linux", "darwin"],
+      "reason": "This historical CLI regression launches the original work/.venv/Scripts/python.exe executable at tests/test_coinmetrics_audit.py:160, which is unavailable on Linux/macOS."
+    }
+  ]
+}
