@@ -9,10 +9,12 @@ from pydantic import ValidationError
 
 from .archive import restore_archive
 from .archive_rotation import rotate_archive
+from .capture_lifecycle import CaptureStopRequest, scoped_sigterm_stop
 from .config import load_config
 from .ingestion import capture
 from .interlock import LiveEngine
 from .logging import configure_logging
+from .option_flow_research import research_option_flow
 from .option_skew_research import research_option_skew
 from .options_research import research_options
 from .recovery import replay_store
@@ -25,6 +27,7 @@ from .trade_backfill import backfill_trades
 class BarCaptureOptions(TypedDict, total=False):
     resume_bars_from: Path
     save_bars_on_stop: bool
+    stop_request: CaptureStopRequest
 
 
 def parser() -> argparse.ArgumentParser:
@@ -51,6 +54,11 @@ def parser() -> argparse.ArgumentParser:
     )
     capture_parser.add_argument("--output", type=Path, required=True)
     capture_parser.add_argument("--duration", type=float, default=None)
+    capture_parser.add_argument(
+        "--graceful-stop-signals",
+        action="store_true",
+        help="Opt in to scoped POSIX SIGTERM stop/drain; unsupported on Windows. SIGINT and task cancellation still fail capture",
+    )
     capture_parser.add_argument(
         "--resume-bars-from",
         type=Path,
@@ -170,6 +178,23 @@ def parser() -> argparse.ArgumentParser:
     options_parser.add_argument("--flat-threshold-iv-points", type=float, required=True)
     options_parser.add_argument("--max-rows", type=int, default=100000)
     options_parser.add_argument("--max-expiries", type=int, default=128)
+    flow_parser = commands.add_parser(
+        "research-option-flow",
+        help="Offline native OI and rolling-volume put/call ratios; cannot trade",
+    )
+    flow_parser.add_argument("--database", type=Path, required=True)
+    flow_parser.add_argument("--output", type=Path, required=True)
+    flow_parser.add_argument("--asset", choices=("BTC", "ETH", "SOL", "PAXG"), required=True)
+    flow_parser.add_argument("--as-of-ms", type=int, required=True)
+    flow_parser.add_argument(
+        "--amount-unit-policy", choices=("deribit_option_base_currency",), required=True
+    )
+    flow_parser.add_argument("--volume-field", choices=("stats.volume",), required=True)
+    flow_parser.add_argument("--max-quote-age-ms", type=int, required=True)
+    flow_parser.add_argument("--max-discovery-age-ms", type=int, required=True)
+    flow_parser.add_argument("--max-clock-skew-ms", type=int, required=True)
+    flow_parser.add_argument("--max-rows", type=int, default=100000)
+    flow_parser.add_argument("--max-expiries", type=int, default=128)
     skew_parser = commands.add_parser(
         "research-option-skew",
         help="Offline same-expiry native delta risk reversals; cannot trade",
@@ -223,19 +248,29 @@ def main() -> int:
                 capture_options["resume_bars_from"] = args.resume_bars_from
             if args.save_bars_on_stop is not None:
                 capture_options["save_bars_on_stop"] = args.save_bars_on_stop
-            report_data = asyncio.run(
-                capture(
-                    config,
-                    args.output,
-                    args.duration,
-                    args.resume_trades_from,
-                    recovery_marker=args.recovery_marker,
-                    resume_eth_gas_from=args.resume_eth_gas_from,
-                    resume_stablecoin_from=args.resume_stablecoin_from,
-                    resume_coinmetrics_from=args.resume_coinmetrics_from,
-                    **capture_options,
-                )
-            )
+
+            async def run_capture() -> dict[str, object]:
+                async def collect() -> dict[str, object]:
+                    return await capture(
+                        config,
+                        args.output,
+                        args.duration,
+                        args.resume_trades_from,
+                        recovery_marker=args.recovery_marker,
+                        resume_eth_gas_from=args.resume_eth_gas_from,
+                        resume_stablecoin_from=args.resume_stablecoin_from,
+                        resume_coinmetrics_from=args.resume_coinmetrics_from,
+                        **capture_options,
+                    )
+
+                if args.graceful_stop_signals:
+                    request = CaptureStopRequest()
+                    capture_options["stop_request"] = request
+                    with scoped_sigterm_stop(request):
+                        return await collect()
+                return await collect()
+
+            report_data = asyncio.run(run_capture())
             print(json.dumps(report_data, indent=2))
         elif args.command == "replay":
             print(json.dumps(asyncio.run(replay_store(config, args.database)), indent=2))
@@ -342,6 +377,25 @@ def main() -> int:
                         max_discovery_age_ms=args.max_discovery_age_ms,
                         max_clock_skew_ms=args.max_clock_skew_ms,
                         max_underlying_mismatch_fraction=args.max_underlying_mismatch_fraction,
+                        max_rows=args.max_rows,
+                        max_expiries=args.max_expiries,
+                    ),
+                    indent=2,
+                )
+            )
+        elif args.command == "research-option-flow":
+            print(
+                json.dumps(
+                    research_option_flow(
+                        args.database,
+                        args.output,
+                        asset=args.asset,
+                        as_of_ms=args.as_of_ms,
+                        amount_unit_policy=args.amount_unit_policy,
+                        volume_field=args.volume_field,
+                        max_quote_age_ms=args.max_quote_age_ms,
+                        max_discovery_age_ms=args.max_discovery_age_ms,
+                        max_clock_skew_ms=args.max_clock_skew_ms,
                         max_rows=args.max_rows,
                         max_expiries=args.max_expiries,
                     ),

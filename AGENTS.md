@@ -1,7 +1,7 @@
 # Working on selective-options
 
 Read SPECIFICATION.md, INGESTION_STATUS.md, COMPLETION_CHECKLIST.md and the newest
-WORK_LOG.md entry before changing this project. The current application is 0.3.50;
+WORK_LOG.md entry before changing this project. The current application is 0.3.51;
 milestone 2 remains PARTIAL. Independent feature/backtester engineering is authorized
 alongside ingestion using saved data and clearly labelled fixtures. Acceptance of
 later milestones still depends on their preceding specification gates.

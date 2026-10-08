@@ -1,5 +1,33 @@
 # Validation report — foundation and partial ingestion
 
+## Local continuation 0.3.51 (8 October 2026)
+
+The executable changes are cooperative finite-capture stop and offline native
+put/call research. Focused integration passes 88 cases; the independent native
+verifier passes 14 tamper/consistency cases; the separate migration suite passes
+65 cases. Ruff lint/format passes 258 Python files and strict mypy passes 130
+configured source/script files. These checks precede the full frozen-source run.
+
+`evidence/capture-stop-saved-native-01/verification.json` passes four actual
+transport-mocked capture pipelines, exact DuckDB/Parquet/outbox/input binding,
+stopped-bar checkpoint/resume and unchanged original hashes over 55 saved Kraken
+trades. Lifecycle clocks are labelled synthetic; no actual service interruption
+or periodic crash checkpoint is claimed.
+
+`evidence/options-flow-saved-native-01/verification.json` independently checks
+1,010 saved option members across 13 expiries against Decimal/Fraction arithmetic
+and exact native quote/metadata/source inputs. OI aggregate is `456277/588510`;
+rolling-volume aggregate is `127070/449111`. One volume expiry has a zero call
+denominator and remains unavailable, so the report correctly stays PARTIAL.
+This is historical testnet research, not current health, a signal or a trial.
+
+The child-process fixture on Windows verifies explicit graceful-signal CLI
+refusal (exit 2, no capture output) and handler preservation, with no pytest skip.
+Actual `os.kill(SIGTERM)` delivery, committed readiness and producer-cleanup tail
+drain will run in the Linux workflow; a dispatch alone is not a passing result.
+Final full-suite, hosted and checksum-bound results are recorded below when
+complete. Full M2/later acceptance and trading remain disabled.
+
 ## Previous build audit and cloud migration (8 October 2026)
 
 The exact 0.3.50 source commit `9903928afa11e791a6896934b84b487848246412` passes

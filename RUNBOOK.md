@@ -510,3 +510,54 @@ Use `research-features --include-trend` for ADX/directional indices and prior-on
 ## Optional daily valuation capture (0.3.47)
 
 Set `ingestion.coinmetrics_enabled: true` in an explicit local profile to add public native daily BTC/ETH market cap/MVRV observations to supervised capture. No key is required. Other configured assets are reported unsupported for this source; an enabled profile with neither BTC nor ETH refuses validation. Defaults: hourly pause after each bounded poll, seven daily labels ending on the prior UTC day, 30-second whole-poll timeout, four pages/128 rows/two-million entity bytes and three-day latest-period age. Strict config bounds match construction: minimum poll 60 seconds; age 1–30 days; response 1,024–4,000,000 bytes. Every repeat is a receipt observation, not first publication. Failed/empty/stale/missing/latest-null outcomes block quality; preserve them and investigate the recorded reason before restarting. Redirects, endpoint substitution and immediate retry are refused. `coinmetrics_quality` in the capture report keeps actual response, poll and provider-period ages separate and records both unsupported assets and metrics. It never certifies complete history or trading. For a new finite native proof only, `python scripts/verify_coinmetrics.py --output <allowed-new-work-path>` makes one bounded poll; `python -m scripts.audit_coinmetrics --proof <proof> --output <new-external-json>` audits saved bytes without transport. Do not overwrite published proofs.
+
+## Cooperative stop of a finite capture (0.3.51)
+
+An explicit voluntary stop now uses the same supervised drain as the finite deadline. The library API works on Windows and POSIX and installs no process signal handlers. Create a fresh `CaptureStopRequest` for each capture and call `request()` from its owning event loop when the operator requests a stop. The first `OPERATOR` or `SIGTERM` reason wins; repeated requests do not interrupt cleanup. Reusing a request, or setting it before capture starts, refuses before output or transport. A request arriving during awaited seed/store setup prevents producer startup and finishes the zero-producer drain/report path; existing setup validation still applies.
+
+This runnable library example voluntarily requests a stop after five seconds, with a separate 300-second finite safety deadline. It uses the configured public collectors if run; it is not an offline fixture. Use a new output directory each time.
+
+```python
+import asyncio
+from pathlib import Path
+
+from selective_options.capture_lifecycle import CaptureStopRequest
+from selective_options.config import load_config
+from selective_options.ingestion import capture
+
+
+async def main():
+    config = load_config(Path("config"), "testnet")
+    stop = CaptureStopRequest()
+    # An operator callback on this same event loop can instead call stop.request().
+    scheduled_stop = asyncio.get_running_loop().call_later(5, stop.request)
+    try:
+        return await capture(
+            config,
+            Path("state/library-stop-001"),
+            duration_s=300,
+            stop_request=stop,
+        )
+    finally:
+        scheduled_stop.cancel()
+
+
+report = asyncio.run(main())
+print(report["status"], report["capture_stop"])
+```
+
+On a POSIX host, the CLI can opt in to operating-system SIGTERM handling:
+
+```sh
+selective-options capture --duration 300 --output state/capture-stop-001 --graceful-stop-signals
+```
+
+Send SIGTERM to that process after it starts. The handler schedules a cooperative request on the capture's event loop and is restored to its previous value when the capture exits, including failure. Only this capture coroutine has the handler; it is not installed by imports or ordinary library calls. The flag requires POSIX and the main thread. Windows or non-main-thread use refuses with CLI exit `2` before capture creates output or starts producers. External Windows termination is not made catchable by this feature. The default CLI behavior is unchanged without the flag. SIGINT/Ctrl+C and hard task cancellation still follow the `FAILED` capture path; CLI Ctrl+C returns `130`.
+
+Inspect `report.json` together with the process exit code. `capture_stop.trigger` records why collection ended (`DURATION_ELAPSED`, `STOP_REQUESTED`, `WORKER_FAILURE` or `HARD_CANCEL`). `capture_stop.reason` records the final outcome and becomes `FAILED` if later cleanup, drain or checkpoint work fails. `request_reason` identifies the accepted voluntary reason, while `signal_handling` distinguishes `SCOPED_POSIX_SIGTERM` from `NOT_REQUESTED`. `CAPTURE_FINISHED` remains a finite recorder result and does not certify required feed coverage or permission to trade.
+
+Shutdown cancels and awaits every producer, including its final cleanup publications, then drains the archive worker while the writer remains available for commit barriers. It stops and drains the writer afterward. An accepted producer cleanup tail remains eligible for durable storage and the final sealed archive. A tied worker failure or a non-cancellation exception from producer cleanup overrides a successful stop; ordinary store/mirror close failures also attempt durable `FAILED` report publication before propagating. Filesystem, archive or report-write failures can still prevent a valid report from being published. A native database worker is drained rather than force-killed, so this does not impose a maximum wall-clock shutdown time.
+
+Add `--save-bars-on-stop` only when the existing explicit stopped-bar checkpoint is required. The checkpoint is attempted after producers, archive work and writer drain succeed. Unresolved recovery, missing consumed-input membership and cancellation during an uncertain sink emission still refuse a checkpoint and fail capture; a signaled stop is not automatically resumable. Resume only an accepted `bar-checkpoint/checkpoint.json` through `--resume-bars-from <prior-capture>/bar-checkpoint` in a fresh capture, using the existing configuration, both-clock, exact membership and native-tail checks. Original receipts/watermark remain intact, retained buckets become partial at restart, actual recovery snapshots remain mandatory and delivery acknowledgements are not restored. A stopped checkpoint does not repair the original data gap, recover arbitrary active history or provide periodic crash recovery.
+
+The saved-native replay is retained in `evidence/capture-stop-saved-native-01/verification.json`. Its four actual capture pipelines use mocked transport and explicitly synthetic lifecycle clocks over separate 50/5 original Kraken trade cohorts; original missing trade ID `109230677` remains unrepaired. Historical native proof bytes remain unchanged. That proof establishes cooperative stopped-checkpoint/seed handling, not operating-system signal delivery. `tests/test_capture_sigterm_process.py` and `scripts/verify_capture_sigterm_process.py` separately exercise the actual child-process CLI: Windows verification confirms explicit unsupported refusal, while actual POSIX SIGTERM delivery awaits the hosted Linux check. Process evidence is retained under `state/cloud-validation/capture-sigterm-process/<unique-id>/` during cloud validation, or `state/capture-sigterm-process/<unique-id>/` for other runs. M2 stays PARTIAL; no sustained recovery, continuous deployment, seven-day validation or orders are certified.

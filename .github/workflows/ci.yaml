@@ -87,4 +87,5 @@ jobs:
           path: |
             C:/Users/Divan/Documents/Codex/2026-09-20/files-pasted-by-the-user-build/outputs/selective-options/evidence/github-ci.xml
             C:/Users/Divan/Documents/Codex/2026-09-20/files-pasted-by-the-user-build/outputs/selective-options/evidence/github-migration-ci.xml
+            C:/Users/Divan/Documents/Codex/2026-09-20/files-pasted-by-the-user-build/outputs/selective-options/state/capture-sigterm-process/
           if-no-files-found: ignore

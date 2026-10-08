@@ -6,6 +6,13 @@ The phone controls the work; hosted runners perform the builds. A copy of the
 repository and original large evidence/checkpoints are already in private GitHub
 storage. Trading is disabled and milestone 2 remains PARTIAL.
 
+The user reported `The saved environment account changed. Select an environment again`
+and then requested continued building in the existing chat. Development currently
+runs locally. The preparation below remains available, but no Codex Cloud environment
+has been published and no always-on collector or hosting account has been created.
+GitHub Actions still supplies hosted Windows/Linux/container verification and
+phone-accessible build results independently of that Codex environment error.
+
 ## Verified hosted development setup
 
 The corrected Linux/container run

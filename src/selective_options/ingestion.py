@@ -18,6 +18,7 @@ from .binance_taker import BinanceTakerCollector
 from .bus import CommitBarrier, EventBus, HotBuffer, RedisMirror
 from .bybit import BybitCollector
 from .calendar_quality import calendar_quality
+from .capture_lifecycle import CaptureStopRequest
 from .checkpoints import load_trade_checkpoints
 from .coinmetrics_checkpoint import load_coinmetrics_resume
 from .collectors import DeribitCollector, SpotCollector, now_ms, poll_chains
@@ -129,12 +130,17 @@ async def capture(
     resume_bars_from: Path | None = None,
     save_bars_on_stop: bool | None = None,
     resume_coinmetrics_from: Path | None = None,
+    stop_request: CaptureStopRequest | None = None,
 ) -> dict[str, object]:
     duration = config.ingestion.duration_s if duration_s is None else duration_s
     if not math.isfinite(duration) or duration <= 0:
         raise ValueError("capture duration must be finite and positive")
     if config.venue.ws_url != "wss://test.deribit.com/ws/api/v2":
         raise TradingUnavailable("capture only connects to testnet")
+    if stop_request is not None:
+        if type(stop_request) is not CaptureStopRequest:
+            raise ValueError("stop_request requires a CaptureStopRequest")
+        stop_request.bind()
     if save_bars_on_stop is not None and type(save_bars_on_stop) is not bool:
         raise ValueError("save_bars_on_stop requires an explicit boolean")
     save_bars = (
@@ -377,92 +383,132 @@ async def capture(
         spot_trades.gap_handler = socket_gap_handler(spot_trades, bus, store, output / "recovery")
     stopped = asyncio.Event()
     writer = asyncio.create_task(consume(config, bus, store, hot, monitor, stopped, mirror))
-    producers = [
-        asyncio.create_task(deribit.run()),
-        asyncio.create_task(poll_chains(config, bus.publish, limiter)),
-    ]
-    producers.extend(
-        asyncio.create_task(SpotCollector(config, bus.publish, source).run())
-        for source in config.ingestion.reference_sources
-    )
-    if config.ingestion.derivatives_enabled:
-        producers.append(
-            asyncio.create_task(DerivativesCollector(config, bus.publish, limiter).run())
-        )
-    if config.ingestion.bybit_enabled:
-        producers.append(asyncio.create_task(BybitCollector(config, bus.publish).run()))
-    if config.ingestion.binance_enabled:
-        producers.append(asyncio.create_task(BinanceCollector(config, bus.publish).run()))
-    if config.ingestion.binance_funding_history_enabled:
-        producers.append(asyncio.create_task(BinanceFundingCollector(config, bus.publish).run()))
-    if config.ingestion.binance_taker_enabled:
-        producers.append(asyncio.create_task(BinanceTakerCollector(config, bus.publish).run()))
-    if config.ingestion.binance_account_ratio_enabled:
-        producers.append(asyncio.create_task(BinanceAccountCollector(config, bus.publish).run()))
-    if config.ingestion.bea_calendar_enabled:
-        producers.append(asyncio.create_task(BEACalendarCollector(config, bus.publish).run()))
-    if config.ingestion.fomc_calendar_enabled:
-        producers.append(asyncio.create_task(FOMCCalendarCollector(config, bus.publish).run()))
-    if eth_gas is not None:
-        producers.append(asyncio.create_task(eth_gas.run()))
-    if config.ingestion.solana_network_enabled and "SOL" in config.system.assets:
-        producers.append(asyncio.create_task(SolanaNetworkCollector(config, bus.publish).run()))
-    if stablecoin is not None:
-        producers.append(asyncio.create_task(stablecoin.run()))
-    if coinmetrics is not None:
-        producers.append(asyncio.create_task(coinmetrics.run()))
-    if config.ingestion.tips_yield_enabled:
-        from .tips_yield import TipsYieldCollector
-
-        producers.append(asyncio.create_task(TipsYieldCollector(config, bus.publish).run()))
-    if config.ingestion.liquidations_enabled:
-        from .liquidations import LiquidationCollector
-
-        producers.append(asyncio.create_task(LiquidationCollector(config, bus.publish).run()))
-    if config.ingestion.crypto_news_enabled:
-        from .crypto_news import CryptoNewsCollector
-
-        producers.append(asyncio.create_task(CryptoNewsCollector(config, bus.publish).run()))
-    if spot_trades is not None:
-        producers.append(asyncio.create_task(spot_trades.run()))
-    producers.extend(
-        asyncio.create_task(PolicyNewsCollector(config, bus.publish, source).run())
-        for source in config.ingestion.policy_news_sources
-    )
+    producers: list[asyncio.Task[None]] = []
     failure: BaseException | None = None
     rotation_stopped = asyncio.Event()
     rotation_runtime = RotationRuntime(config, bus, store, output, rotation_stopped)
-    rotation_task = (
-        asyncio.create_task(rotation_runtime.run())
-        if config.ingestion.archive_rotation_interval_s is not None
-        else None
-    )
-    supervised = [writer, *producers]
-    if rotation_task is not None:
-        supervised.append(rotation_task)
+    rotation_task: asyncio.Task[None] | None = None
+    stop_waiter: asyncio.Task[None] | None = None
+    termination_reason = "DURATION_ELAPSED"
+    requested_stop_reason: str | None = None
     try:
-        done, _ = await asyncio.wait(
-            supervised, timeout=duration, return_when=asyncio.FIRST_COMPLETED
-        )
-        for task in done:
+        # A request arriving during awaited seed/store setup must not start transport.
+        if stop_request is None or not stop_request.requested:
+            producers.extend(
+                (
+                    asyncio.create_task(deribit.run()),
+                    asyncio.create_task(poll_chains(config, bus.publish, limiter)),
+                )
+            )
+            for source in config.ingestion.reference_sources:
+                producers.append(
+                    asyncio.create_task(SpotCollector(config, bus.publish, source).run())
+                )
+            if config.ingestion.derivatives_enabled:
+                producers.append(
+                    asyncio.create_task(DerivativesCollector(config, bus.publish, limiter).run())
+                )
+            if config.ingestion.bybit_enabled:
+                producers.append(asyncio.create_task(BybitCollector(config, bus.publish).run()))
+            if config.ingestion.binance_enabled:
+                producers.append(asyncio.create_task(BinanceCollector(config, bus.publish).run()))
+            if config.ingestion.binance_funding_history_enabled:
+                producers.append(
+                    asyncio.create_task(BinanceFundingCollector(config, bus.publish).run())
+                )
+            if config.ingestion.binance_taker_enabled:
+                producers.append(
+                    asyncio.create_task(BinanceTakerCollector(config, bus.publish).run())
+                )
+            if config.ingestion.binance_account_ratio_enabled:
+                producers.append(
+                    asyncio.create_task(BinanceAccountCollector(config, bus.publish).run())
+                )
+            if config.ingestion.bea_calendar_enabled:
+                producers.append(
+                    asyncio.create_task(BEACalendarCollector(config, bus.publish).run())
+                )
+            if config.ingestion.fomc_calendar_enabled:
+                producers.append(
+                    asyncio.create_task(FOMCCalendarCollector(config, bus.publish).run())
+                )
+            if eth_gas is not None:
+                producers.append(asyncio.create_task(eth_gas.run()))
+            if config.ingestion.solana_network_enabled and "SOL" in config.system.assets:
+                producers.append(
+                    asyncio.create_task(SolanaNetworkCollector(config, bus.publish).run())
+                )
+            if stablecoin is not None:
+                producers.append(asyncio.create_task(stablecoin.run()))
+            if coinmetrics is not None:
+                producers.append(asyncio.create_task(coinmetrics.run()))
+            if config.ingestion.tips_yield_enabled:
+                from .tips_yield import TipsYieldCollector
+
+                producers.append(asyncio.create_task(TipsYieldCollector(config, bus.publish).run()))
+            if config.ingestion.liquidations_enabled:
+                from .liquidations import LiquidationCollector
+
+                producers.append(
+                    asyncio.create_task(LiquidationCollector(config, bus.publish).run())
+                )
+            if config.ingestion.crypto_news_enabled:
+                from .crypto_news import CryptoNewsCollector
+
+                producers.append(
+                    asyncio.create_task(CryptoNewsCollector(config, bus.publish).run())
+                )
+            if spot_trades is not None:
+                producers.append(asyncio.create_task(spot_trades.run()))
+            for news_source in config.ingestion.policy_news_sources:
+                producers.append(
+                    asyncio.create_task(PolicyNewsCollector(config, bus.publish, news_source).run())
+                )
+            if config.ingestion.archive_rotation_interval_s is not None:
+                rotation_task = asyncio.create_task(rotation_runtime.run())
+        supervised = [writer, *producers]
+        if rotation_task is not None:
+            supervised.append(rotation_task)
+        waiting = list(supervised)
+        if stop_request is not None:
+            stop_waiter = asyncio.create_task(stop_request.wait())
+            waiting.append(stop_waiter)
+        await asyncio.wait(waiting, timeout=duration, return_when=asyncio.FIRST_COMPLETED)
+        # Check every completed worker, including a failure tied with a stop request.
+        completed = [task for task in supervised if task.done()]
+        for task in completed:
             task.result()
-        if done:
+        if completed:
             raise IntegrityError(
                 "collector, writer or archive worker exited before capture deadline"
             )
+        if stop_request is not None and stop_request.requested:
+            termination_reason = "STOP_REQUESTED"
+            requested_stop_reason = stop_request.reason
     except BaseException as exc:
         failure = exc
+        termination_reason = (
+            "HARD_CANCEL" if isinstance(exc, asyncio.CancelledError) else "WORKER_FAILURE"
+        )
     finally:
         collection_ended = now_ms()
 
         async def shutdown() -> None:
             nonlocal failure
+            if stop_waiter is not None:
+                stop_waiter.cancel()
+                await asyncio.gather(stop_waiter, return_exceptions=True)
             for task in producers:
                 task.cancel()
             rotation_stopped.set()
             if rotation_task is not None and not rotation_task.done():
                 rotation_task.cancel()
-            await asyncio.gather(*producers, return_exceptions=True)
+            producer_results = await asyncio.gather(*producers, return_exceptions=True)
+            for result in producer_results:
+                if isinstance(result, BaseException) and not isinstance(
+                    result, asyncio.CancelledError
+                ):
+                    failure = failure or result
             if rotation_task is not None:
                 try:
                     await rotation_task
@@ -752,6 +798,16 @@ async def capture(
                         as_of_ms=ended,
                     )
                 )
+        capture_stop: dict[str, object] = {
+            "reason": "FAILED" if failure is not None else termination_reason,
+            "trigger": termination_reason,
+            "request_reason": requested_stop_reason,
+            "request_enabled": stop_request is not None,
+            "signal_handling": stop_request.signal_handling
+            if stop_request is not None
+            else "NOT_REQUESTED",
+            "periodic_crash_recovery": False,
+        }
         report: dict[str, object] = {
             "archive_rotation": rotation_runtime.summary(),
             "stablecoin_resume": {
@@ -862,6 +918,7 @@ async def capture(
             "collection_ended_at_ms": collection_ended,
             "shutdown_drain_ms": ended - collection_ended,
             "requested_duration_s": duration,
+            "capture_stop": capture_stop,
             "rows": count,
             "trade_checkpoint_seed_rows": len(checkpoints),
             "eth_gas_checkpoint_event_id": eth_seed.event_id if eth_seed else None,
@@ -964,8 +1021,14 @@ async def capture(
                 if mirror is not None:
                     await mirror.close()
 
-        additional_cancel = await drain_shutdown(close_capture())
-        failure = failure or additional_cancel
+        try:
+            additional_cancel = await drain_shutdown(close_capture())
+        except BaseException as exc:
+            # A report already built before close must not remain successful when
+            # store/mirror cleanup fails. Still attempt durable FAILED publication.
+            failure = failure or exc
+        else:
+            failure = failure or additional_cancel
 
     async def publish_report() -> None:
         await complete_thread(
@@ -977,11 +1040,13 @@ async def capture(
     if failure is not None:
         report["status"] = "FAILED"
         report["failure_type"] = type(failure).__name__
+        capture_stop["reason"] = "FAILED"
     additional_cancel = await drain_shutdown(publish_report())
     failure = failure or additional_cancel
     if additional_cancel is not None and report["status"] != "FAILED":
         report["status"] = "FAILED"
         report["failure_type"] = type(failure).__name__
+        capture_stop["reason"] = "FAILED"
         await drain_shutdown(publish_report())
     if failure is not None:
         raise failure

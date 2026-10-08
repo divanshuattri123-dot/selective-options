@@ -1,0 +1,101 @@
+{
+  "status": "SAVED_NATIVE_PUT_CALL_AUDIT_PASSED",
+  "source_database_sha256": "97c10f3c2f59a67edff83104fceca3b0b195b1498432597abde62e509f4cabdc",
+  "report_sha256": "acf13bc193d0c495685d7218c819d9c233c115462da4dc43b858b50c528bc116",
+  "verifier_sha256": "e3898e901d646dba611027d311d01ad6b7809e5f62fa95b421800a47f071ff5f",
+  "checks": {
+    "checked_members": 1010,
+    "expiries": [
+      {
+        "expiration_timestamp": 1791100800000,
+        "members": 60,
+        "oi_state": "AVAILABLE",
+        "volume_state": "AVAILABLE"
+      },
+      {
+        "expiration_timestamp": 1791187200000,
+        "members": 64,
+        "oi_state": "AVAILABLE",
+        "volume_state": "AVAILABLE"
+      },
+      {
+        "expiration_timestamp": 1791273600000,
+        "members": 64,
+        "oi_state": "AVAILABLE",
+        "volume_state": "AVAILABLE"
+      },
+      {
+        "expiration_timestamp": 1791360000000,
+        "members": 54,
+        "oi_state": "AVAILABLE",
+        "volume_state": "AVAILABLE"
+      },
+      {
+        "expiration_timestamp": 1791532800000,
+        "members": 54,
+        "oi_state": "AVAILABLE",
+        "volume_state": "AVAILABLE"
+      },
+      {
+        "expiration_timestamp": 1792137600000,
+        "members": 40,
+        "oi_state": "AVAILABLE",
+        "volume_state": "AVAILABLE"
+      },
+      {
+        "expiration_timestamp": 1792742400000,
+        "members": 40,
+        "oi_state": "AVAILABLE",
+        "volume_state": "AVAILABLE"
+      },
+      {
+        "expiration_timestamp": 1793347200000,
+        "members": 108,
+        "oi_state": "AVAILABLE",
+        "volume_state": "AVAILABLE"
+      },
+      {
+        "expiration_timestamp": 1795766400000,
+        "members": 96,
+        "oi_state": "AVAILABLE",
+        "volume_state": "AVAILABLE"
+      },
+      {
+        "expiration_timestamp": 1798185600000,
+        "members": 140,
+        "oi_state": "AVAILABLE",
+        "volume_state": "AVAILABLE"
+      },
+      {
+        "expiration_timestamp": 1806048000000,
+        "members": 100,
+        "oi_state": "AVAILABLE",
+        "volume_state": "AVAILABLE"
+      },
+      {
+        "expiration_timestamp": 1813910400000,
+        "members": 108,
+        "oi_state": "AVAILABLE",
+        "volume_state": "AVAILABLE"
+      },
+      {
+        "expiration_timestamp": 1821772800000,
+        "members": 82,
+        "oi_state": "AVAILABLE",
+        "volume_state": "UNAVAILABLE"
+      }
+    ],
+    "exact_native_amount_and_ratio_checks": 2104,
+    "native_totals": [
+      "882765.0",
+      "684415.5",
+      "44911.1",
+      "12707.0"
+    ]
+  },
+  "source_mutated": false,
+  "new_public_requests": 0,
+  "historical_strategy_trials": 0,
+  "ready_for_signals": false,
+  "trading_enabled": false
+}
