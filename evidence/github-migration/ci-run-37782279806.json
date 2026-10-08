@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "repository": "divanshuattri123-dot/selective-options",
+  "private": true,
+  "run_id": 37782279806,
+  "run_url": "https://github.com/divanshuattri123-dot/selective-options/actions/runs/37782279806",
+  "workflow": "verified-checkpoint",
+  "event": "workflow_dispatch",
+  "status": "completed",
+  "conclusion": "success",
+  "commit": "74d98f1a946e666132742f1476e5c43a3dc73e1c",
+  "started_at_utc": "2026-10-08T13:10:24Z",
+  "completed_at_utc": "2026-10-08T13:20:17Z",
+  "steps": {
+    "physical_windows_history_layout": "success",
+    "private_native_evidence_restore": "success",
+    "dependency_install": "success",
+    "ruff_mypy_generated_documents_and_secret_checks": "success",
+    "configuration_check": "success",
+    "offline_pytest": {
+      "tests": 3231,
+      "passed": 3231,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "duration_seconds": 452.72,
+      "combined_coverage_percent": 95.25
+    },
+    "migration_helper_pytest": {
+      "tests": 22,
+      "passed": 22,
+      "failed": 0,
+      "duration_seconds": 1.86
+    }
+  },
+  "artifact": {
+    "id": 11553072923,
+    "name": "checkpoint-validation",
+    "size_bytes": 49993,
+    "expired": false,
+    "download_url": "https://api.github.com/repos/divanshuattri123-dot/selective-options/actions/artifacts/11553072923/zip"
+  },
+  "trading_enabled": false
+}

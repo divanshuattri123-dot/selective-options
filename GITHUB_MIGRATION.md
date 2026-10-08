@@ -87,6 +87,19 @@ https://github.com/divanshuattri123-dot/selective-options/actions/runs/377735157
 That run validates only the 0.3.47 import commit. Later commits require their own
 validation run before they can be described as CI-passed.
 
+The main branch now contains version 0.3.48. Its first workflow attempt passed
+restore, installation, static checks and all 3,231 offline tests, but the separate
+migration-helper suite caught a documentation-phrase regression. After restoring
+the expected wording, the full Windows workflow passed on
+`74d98f1a946e666132742f1476e5c43a3dc73e1c`: all 3,231 offline tests, 22 migration
+tests, Ruff, strict mypy, generated-document consistency, secret-pattern checks,
+evidence restore and configuration validation. Its exact summary is
+`evidence/github-migration/ci-run-37782279806.json`; the run is
+https://github.com/divanshuattri123-dot/selective-options/actions/runs/37782279806.
+The immutable downloadable full-source/evidence snapshot remains the 0.3.47
+release asset; 0.3.48 source, tests, small validation evidence and history are on
+the private `main` branch.
+
 ## Continuing development
 
 The local canonical project is still `outputs/selective-options`; it now has a Git
