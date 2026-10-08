@@ -2,6 +2,14 @@
 
 **Trading eligibility: NOT VALIDATED. Live arming always fails.** This is an implementation/readiness report, not evidence of a profitable strategy. No return, win-rate, Sharpe, PBO or DSR result has been fabricated.
 
+## Official Federal Reserve schedule ingestion — version 0.3.49 (8 October 2026)
+
+All 3,265 tests passed with zero failures, errors or skips in 587.99 seconds; combined statement/branch coverage is 95.23% against the 85% requirement. Ruff lint and formatting passed 241 Python files in CI's source/script/test/tool scope, and strict mypy passed 121 source/script files. The independent private-evidence restore/migration suite separately passes all 24 tests. The complete JUnit and machine-readable summary are retained under `evidence/full-suite-0350/`. M2 remains PARTIAL; strategy/backtester acceptance and production trading remain disabled.
+
+One bounded live public HTTPS request captured the official FOMC calendar. The original 165,751 response bytes and SHA-256 remain saved with the probe, two-row DuckDB, two-row Parquet archive and manifest. Offline current-parser audit made zero further requests, verified the response hash and exact storage/archive equality, and reclassified all 57 listed entries as 56 regular meetings plus one notation vote. The initial probe report's `meeting_count: 57` referred to schedule entries and did not separate that vote; it remains immutable and is clarified by `evidence/fomc-calendar-public-01/verification.json`. Receipt-time visibility, separate successful health, and scoped observed quality passed.
+
+The opt-in collector preserves whole date-only snapshots/revisions, parses multi-day and cross-year ranges, scopes health and age checks and refuses invalid, stale, ambiguous or failed observations. It is disabled by default, uses the fixed official endpoint, default TLS verification, no redirects and a bounded body. This source does not provide verified first-publication dates, exact decision/press-conference times, unscheduled meetings, macro values or consensus. It is not a trading or event-risk gate.
+
 ## Coin Metrics resume and saved-option research bridge — version 0.3.48 (8 October 2026)
 
 All 3,231 tests passed with zero failures, errors or skips in 572.49 seconds; combined statement/branch coverage is 95.25% against the 85% requirement. Ruff lint and formatting passed 237 Python files, and strict mypy passed 118 source/script files. The complete JUnit and machine-readable summary are retained under `evidence/full-suite-0349/`. M2 remains PARTIAL; strategy/backtester acceptance and production trading remain disabled.

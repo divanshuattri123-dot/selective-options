@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "version": "0.3.49",
+  "date": "2026-10-08",
+  "commands": {
+    "pytest": {
+      "command": "python -m pytest -q --tb=short --cov=selective_options --cov-branch --cov-report=term --junitxml=evidence/full-suite-0350/junit-final.xml",
+      "tests": 3265,
+      "passed": 3265,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "duration_seconds": 587.99,
+      "combined_coverage_percent": 95.23,
+      "required_coverage_percent": 85.0
+    },
+    "ruff_check": "passed: src scripts tests tools",
+    "ruff_format_check": "passed: 241 Python files",
+    "mypy": "passed: 121 source and script files",
+    "evidence_restore_migration_tests": {
+      "command": "python -m pytest -q migration-tests/test_restore_github_evidence.py",
+      "tests": 24,
+      "passed": 24,
+      "failed": 0
+    },
+    "fomc_calendar_public_probe": {
+      "evidence": "evidence/fomc-calendar-public-01/report.json",
+      "source_url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "live_requests": 1,
+      "response_bytes": 165751,
+      "schedule_entries": 57,
+      "regular_meetings": 56,
+      "notation_vote_entries": 1,
+      "years": [2021, 2022, 2023, 2024, 2025, 2026, 2027],
+      "source_or_release_time_inferred": false,
+      "first_publication_time_verified": false,
+      "release_values_available": false,
+      "consensus_available": false
+    },
+    "fomc_saved_response_audit": {
+      "evidence": "evidence/fomc-calendar-public-01/verification.json",
+      "additional_network_requests": 0,
+      "original_response_sha256": "31671857f4b7515874b15f006a4532193bf6fce7f28ce1732dcd545c55b26f04",
+      "receipt_visibility_verified": true,
+      "duckdb_parquet_exact_match": true,
+      "archive_manifest_verified": true,
+      "current_scoped_quality": "OBSERVED_SCOPE_AVAILABLE",
+      "private_release_asset": "selective-options-0.3.49-fomc-evidence.zip",
+      "private_release_tag": "v0.3.49"
+    },
+    "orders_submitted": 0,
+    "paper_trading_started": false,
+    "milestone_2_complete": false,
+    "gate2_complete": false,
+    "trading_enabled": false
+  }
+}

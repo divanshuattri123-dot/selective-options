@@ -1,6 +1,6 @@
 # Offline research foundations
 
-Version 0.3.48 continues deterministic closed-bar features and options research alongside ingestion. It adds a read-only saved-option quote bridge and synthetic round-trip research API with explicitly bounded native units. The user authorized parallel implementation on 5 October 2026. Milestone acceptance still follows the specification: M2 is partial, the full feature and backtester milestones are incomplete, and the package cannot submit orders.
+Version 0.3.49 continues deterministic closed-bar features and options research alongside ingestion. It adds an opt-in official FOMC date-only snapshot source with point-in-time health reporting. The 0.3.48 read-only saved-option quote bridge remains available for offline research. Milestone acceptance still follows the specification: M2 is partial, the full feature and backtester milestones are incomplete, and the package cannot submit orders.
 
 These tools operate on saved local inputs. No provider key is needed. Install the package as described in README.md and run the commands from the project directory. Configuration still validates before CLI commands; every profile keeps trading disabled.
 

@@ -633,6 +633,12 @@
       "bytes": 109,
       "sha256": "a92108b40ddffec2159e7e30dd8765ca36578e408a0336627d633f780a316156",
       "release_tag": "v0.3.47"
+    },
+    {
+      "name": "selective-options-0.3.49-fomc-evidence.zip",
+      "bytes": 9342,
+      "sha256": "655d883497abbccc9ceee66466dc640b4128a4cc51ac0a89cb37bac0304bd8af",
+      "release_tag": "v0.3.49"
     }
   ],
   "evidence_files": [
@@ -1545,6 +1551,24 @@
       "path": "evidence/universe-refresh-public-01/events.parquet",
       "bytes": 249907,
       "sha256": "5e098051de2abea049bcd62b9bb062c615a5ece8703e0bcbc9d0059788ad29cd"
+    },
+    {
+      "path": "evidence/fomc-calendar-public-01/events.duckdb",
+      "bytes": 1847296,
+      "sha256": "e2fbf39089de8ab8485a25548a3152191c613988686c007977676817d70c06f1",
+      "archive_asset": "selective-options-0.3.49-fomc-evidence.zip"
+    },
+    {
+      "path": "evidence/fomc-calendar-public-01/events.parquet",
+      "bytes": 4124,
+      "sha256": "c718111cb55572181dd476ce6b38eef16fdc50000a9b91938c0f2d8b177514be",
+      "archive_asset": "selective-options-0.3.49-fomc-evidence.zip"
+    },
+    {
+      "path": "evidence/fomc-calendar-public-01/events.parquet.manifest.json",
+      "bytes": 142,
+      "sha256": "5d2e1acbe05bfb47d046f86bfc29a7a9aa77811879d67317fd433c8fe3734626",
+      "archive_asset": "selective-options-0.3.49-fomc-evidence.zip"
     }
   ],
   "validation_assets": [
@@ -1552,7 +1576,8 @@
     "selective-options-0.3.42.zip",
     "selective-options-0.3.44.zip",
     "selective-options-0.3.45.zip",
-    "selective-options-0.3.46.zip"
+    "selective-options-0.3.46.zip",
+    "selective-options-0.3.49-fomc-evidence.zip"
   ],
   "historical_proof_workspace": "C:\\Users\\Divan\\Documents\\Codex\\2026-09-20\\files-pasted-by-the-user-build",
   "historical_proof_requires_physical_windows_path": true,

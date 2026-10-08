@@ -13,6 +13,8 @@ import urllib.error
 import urllib.parse
 import urllib.request
 import zipfile
+from collections.abc import Mapping
+from contextlib import ExitStack
 from pathlib import Path, PurePosixPath
 from typing import Any
 
@@ -147,19 +149,35 @@ def ensure_target(root: Path, target: Path) -> None:
             break
 
 
-def restore_entries(archive_path: Path, entries: list[dict[str, Any]], root: Path) -> int:
+def restore_entries(
+    archive_path: Path | Mapping[str, Path], entries: list[dict[str, Any]], root: Path
+) -> int:
     root = root.resolve()
+    archives = (
+        {"selective-options-0.3.47.zip": archive_path}
+        if isinstance(archive_path, Path)
+        else dict(archive_path)
+    )
+    if not archives:
+        raise ValueError("No evidence archives are configured")
     targets: list[tuple[dict[str, Any], Path]] = []
-    with zipfile.ZipFile(archive_path) as archive:
-        names = [item.filename for item in archive.infolist()]
-        if len(names) != len(set(names)):
-            raise ValueError("Duplicate names in release archive")
+    with ExitStack() as stack:
+        opened = {
+            name: stack.enter_context(zipfile.ZipFile(path)) for name, path in archives.items()
+        }
+        for archive in opened.values():
+            names = [item.filename for item in archive.infolist()]
+            if len(names) != len(set(names)):
+                raise ValueError("Duplicate names in release archive")
         for record in entries:
+            asset_name = record.get("archive_asset", "selective-options-0.3.47.zip")
+            if not isinstance(asset_name, str) or asset_name not in opened:
+                raise ValueError("Evidence inventory refers to an unavailable release archive")
             relative = safe_relative(record["path"])
             target = root.joinpath(*relative.parts)
             ensure_target(root, target)
             member = "selective-options/" + relative.as_posix()
-            info = archive.getinfo(member)
+            info = opened[asset_name].getinfo(member)
             if info.file_size != record["bytes"]:
                 raise ValueError("Archived evidence size differs from its inventory")
             if target.exists():
@@ -172,17 +190,19 @@ def restore_entries(archive_path: Path, entries: list[dict[str, Any]], root: Pat
             targets.append((record, target))
         # Validate every selected member before publishing any evidence.
         for record, _ in targets:
-            with archive.open("selective-options/" + record["path"]) as stream:
+            asset_name = record.get("archive_asset", "selective-options-0.3.47.zip")
+            with opened[asset_name].open("selective-options/" + record["path"]) as stream:
                 if hashlib.file_digest(stream, "sha256").hexdigest() != record["sha256"]:
                     raise ValueError("Archived evidence failed SHA-256 verification")
         for record, target in targets:
+            asset_name = record.get("archive_asset", "selective-options-0.3.47.zip")
             target.parent.mkdir(parents=True, exist_ok=True)
             ensure_target(root, target)
             with tempfile.NamedTemporaryFile(
                 dir=root, delete=False, suffix=".partial"
             ) as temporary:
                 staging = Path(temporary.name)
-                with archive.open("selective-options/" + record["path"]) as stream:
+                with opened[asset_name].open("selective-options/" + record["path"]) as stream:
                     shutil.copyfileobj(stream, temporary, length=1024 * 1024)
             try:
                 ensure_target(root, staging)
@@ -272,8 +292,7 @@ def main() -> int:
                 os.link(temporary, target)
             print(f"Verified checkpoint: {expected['name']}", flush=True)
         local_assets[expected["name"]] = target
-    archive = local_assets["selective-options-0.3.47.zip"]
-    restored = restore_entries(archive, missing_evidence, ROOT)
+    restored = restore_entries(local_assets, missing_evidence, ROOT)
     print(
         f"Verified {len(entries)} evidence files; restored {restored}. No market or trading account requests."
     )

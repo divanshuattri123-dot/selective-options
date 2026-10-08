@@ -356,6 +356,16 @@ class IngestionConfig(Section):
         allow_inf_nan=False,
         description="Seconds between BEA calendar polls, including failures; minimum fifteen minutes.",
     )
+    fomc_calendar_enabled: bool = Field(
+        False,
+        description="Opt in to official Federal Reserve date-only FOMC meeting snapshots; no exact announcement time or unscheduled meeting coverage.",
+    )
+    fomc_calendar_poll_interval_s: float = Field(
+        3600,
+        ge=900,
+        allow_inf_nan=False,
+        description="Seconds between official FOMC schedule polls, including failures; minimum fifteen minutes.",
+    )
     binance_enabled: bool = Field(
         default=False,
         description="Opt in to public Binance USDT perpetual/funding/native OI snapshots; no orders.",

@@ -29,6 +29,8 @@ from .eth_gas import PUBLIC_PROVIDERS, EthereumGasCollector
 from .events import MarketEvent
 from .flow_quality import flow_quality
 from .flow_view import FlowKind, flow_view_summary
+from .fomc_calendar import FOMCCalendarCollector
+from .fomc_calendar import calendar_quality as fomc_calendar_quality
 from .funding_poll import BinanceFundingCollector
 from .news import PolicyNewsCollector
 from .quality import FeedRequirement, FreshnessMonitor
@@ -45,7 +47,7 @@ from .store import DuckStore, complete_thread
 MISSING_FEEDS = (
     "complete on-chain metrics/history and attributed exchange flows; optional public subsets do not establish complete coverage",
     "crypto news, sentiment and comprehensive financial news",
-    "macro calendar and releases",
+    "CPI/PCE/NFP calendars and values, plus other central-bank calendars; BEA releases and FOMC meeting dates are limited optional public subsets",
     "XAU/USD gold reference",
     "historical underlying OHLCV",
     "historical underlying trade/bar coverage",
@@ -399,6 +401,8 @@ async def capture(
         producers.append(asyncio.create_task(BinanceAccountCollector(config, bus.publish).run()))
     if config.ingestion.bea_calendar_enabled:
         producers.append(asyncio.create_task(BEACalendarCollector(config, bus.publish).run()))
+    if config.ingestion.fomc_calendar_enabled:
+        producers.append(asyncio.create_task(FOMCCalendarCollector(config, bus.publish).run()))
     if eth_gas is not None:
         producers.append(asyncio.create_task(eth_gas.run()))
     if config.ingestion.solana_network_enabled and "SOL" in config.system.assets:
@@ -586,6 +590,16 @@ async def capture(
             requirements.extend(
                 FeedRequirement(
                     "bea", "GLOBAL", kind, int(config.ingestion.bea_calendar_poll_interval_s * 2000)
+                )
+                for kind in ("calendar", "feed_health")
+            )
+        if config.ingestion.fomc_calendar_enabled:
+            requirements.extend(
+                FeedRequirement(
+                    "federal_reserve_fomc",
+                    "GLOBAL",
+                    kind,
+                    int(config.ingestion.fomc_calendar_poll_interval_s * 2000),
                 )
                 for kind in ("calendar", "feed_health")
             )
@@ -878,6 +892,13 @@ async def capture(
                 int(config.ingestion.bea_calendar_poll_interval_s * 2000),
             )
             if config.ingestion.bea_calendar_enabled
+            else {"state": "NOT_CONFIGURED"},
+            "fomc_calendar_quality": fomc_calendar_quality(
+                (await store.snapshot("GLOBAL", ended, "public_reference")).rows(),
+                ended,
+                int(config.ingestion.fomc_calendar_poll_interval_s * 2000),
+            )
+            if config.ingestion.fomc_calendar_enabled
             else {"state": "NOT_CONFIGURED"},
             "solana_network_quality": await store.solana_network_quality(
                 ended,

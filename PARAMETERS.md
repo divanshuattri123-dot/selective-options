@@ -73,6 +73,8 @@ System, venue, rate_limits, ingestion and data-quality settings are operational 
 | `ingestion.eth_gas_max_block_age_s` | `1800` | Maximum finalized-block age; finality is delayed, not a live gas quote. |
 | `ingestion.bea_calendar_enabled` | `false` | Opt in to official BEA dated release schedule snapshots; no release values or consensus. |
 | `ingestion.bea_calendar_poll_interval_s` | `3600` | Seconds between BEA calendar polls, including failures; minimum fifteen minutes. |
+| `ingestion.fomc_calendar_enabled` | `false` | Opt in to official Federal Reserve date-only FOMC meeting snapshots; no exact announcement time or unscheduled meeting coverage. |
+| `ingestion.fomc_calendar_poll_interval_s` | `3600` | Seconds between official FOMC schedule polls, including failures; minimum fifteen minutes. |
 | `ingestion.binance_enabled` | `false` | Opt in to public Binance USDT perpetual/funding/native OI snapshots; no orders. |
 | `ingestion.binance_funding_history_enabled` | `false` | Opt in to recurring bounded recent Binance settled-funding downloads; retains poll receipts, no orders or full-history claim. |
 | `ingestion.binance_funding_history_hours` | `48` | Rolling funding-history window per poll; older gaps are outside automatic repair coverage. |

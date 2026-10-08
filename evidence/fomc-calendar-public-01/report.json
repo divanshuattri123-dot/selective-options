@@ -1,0 +1,211 @@
+{
+  "version": "0.3.49",
+  "source_url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+  "started_at_ms": 1791466434549,
+  "orders_submitted": 0,
+  "trading_enabled": false,
+  "paper_trading_started": false,
+  "status": "PUBLIC_FOMC_CALENDAR_VERIFIED",
+  "response_received_at_ms": 1791466434674,
+  "response_bytes": 165751,
+  "response_sha256": "31671857f4b7515874b15f006a4532193bf6fce7f28ce1732dcd545c55b26f04",
+  "snapshot_event_id": "e72dc1fcc7592bcd9ba07e6a902a7a6b621d40cdf231137b7d56592be6cf73fc",
+  "snapshot_receipt_visibility_verified": true,
+  "exact_replay_deduplicated": true,
+  "meeting_count": 57,
+  "listed_years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026,
+    2027
+  ],
+  "future_meetings": [
+    {
+      "year": 2026,
+      "month_label": "October",
+      "date_label": "27-28",
+      "start_date": "2026-10-27",
+      "end_date": "2026-10-28",
+      "associated_with_sep": false
+    },
+    {
+      "year": 2026,
+      "month_label": "December",
+      "date_label": "8-9*",
+      "start_date": "2026-12-08",
+      "end_date": "2026-12-09",
+      "associated_with_sep": true
+    },
+    {
+      "year": 2027,
+      "month_label": "January",
+      "date_label": "26-27",
+      "start_date": "2027-01-26",
+      "end_date": "2027-01-27",
+      "associated_with_sep": false
+    },
+    {
+      "year": 2027,
+      "month_label": "March",
+      "date_label": "16-17*",
+      "start_date": "2027-03-16",
+      "end_date": "2027-03-17",
+      "associated_with_sep": true
+    },
+    {
+      "year": 2027,
+      "month_label": "April",
+      "date_label": "27-28",
+      "start_date": "2027-04-27",
+      "end_date": "2027-04-28",
+      "associated_with_sep": false
+    },
+    {
+      "year": 2027,
+      "month_label": "June",
+      "date_label": "8-9*",
+      "start_date": "2027-06-08",
+      "end_date": "2027-06-09",
+      "associated_with_sep": true
+    },
+    {
+      "year": 2027,
+      "month_label": "July",
+      "date_label": "27-28",
+      "start_date": "2027-07-27",
+      "end_date": "2027-07-28",
+      "associated_with_sep": false
+    },
+    {
+      "year": 2027,
+      "month_label": "September",
+      "date_label": "14-15*",
+      "start_date": "2027-09-14",
+      "end_date": "2027-09-15",
+      "associated_with_sep": true
+    },
+    {
+      "year": 2027,
+      "month_label": "October",
+      "date_label": "26-27",
+      "start_date": "2027-10-26",
+      "end_date": "2027-10-27",
+      "associated_with_sep": false
+    },
+    {
+      "year": 2027,
+      "month_label": "December",
+      "date_label": "7-8*",
+      "start_date": "2027-12-07",
+      "end_date": "2027-12-08",
+      "associated_with_sep": true
+    }
+  ],
+  "quality": {
+    "as_of_ms": 1791466434790,
+    "max_age_ms": 7200000,
+    "state": "OBSERVED_SCOPE_AVAILABLE",
+    "blockers": [],
+    "snapshot_event_id": "e72dc1fcc7592bcd9ba07e6a902a7a6b621d40cdf231137b7d56592be6cf73fc",
+    "health_event_id": "7de389218c29e74b408e5993dcbe66a0a196d414de9bdfab4a5bdcab7417444d",
+    "meeting_count": 57,
+    "upcoming_meetings": [
+      {
+        "year": 2026,
+        "month_label": "October",
+        "date_label": "27-28",
+        "start_date": "2026-10-27",
+        "end_date": "2026-10-28",
+        "associated_with_sep": false
+      },
+      {
+        "year": 2026,
+        "month_label": "December",
+        "date_label": "8-9*",
+        "start_date": "2026-12-08",
+        "end_date": "2026-12-09",
+        "associated_with_sep": true
+      },
+      {
+        "year": 2027,
+        "month_label": "January",
+        "date_label": "26-27",
+        "start_date": "2027-01-26",
+        "end_date": "2027-01-27",
+        "associated_with_sep": false
+      },
+      {
+        "year": 2027,
+        "month_label": "March",
+        "date_label": "16-17*",
+        "start_date": "2027-03-16",
+        "end_date": "2027-03-17",
+        "associated_with_sep": true
+      },
+      {
+        "year": 2027,
+        "month_label": "April",
+        "date_label": "27-28",
+        "start_date": "2027-04-27",
+        "end_date": "2027-04-28",
+        "associated_with_sep": false
+      },
+      {
+        "year": 2027,
+        "month_label": "June",
+        "date_label": "8-9*",
+        "start_date": "2027-06-08",
+        "end_date": "2027-06-09",
+        "associated_with_sep": true
+      },
+      {
+        "year": 2027,
+        "month_label": "July",
+        "date_label": "27-28",
+        "start_date": "2027-07-27",
+        "end_date": "2027-07-28",
+        "associated_with_sep": false
+      },
+      {
+        "year": 2027,
+        "month_label": "September",
+        "date_label": "14-15*",
+        "start_date": "2027-09-14",
+        "end_date": "2027-09-15",
+        "associated_with_sep": true
+      },
+      {
+        "year": 2027,
+        "month_label": "October",
+        "date_label": "26-27",
+        "start_date": "2027-10-26",
+        "end_date": "2027-10-27",
+        "associated_with_sep": false
+      },
+      {
+        "year": 2027,
+        "month_label": "December",
+        "date_label": "7-8*",
+        "start_date": "2027-12-07",
+        "end_date": "2027-12-08",
+        "associated_with_sep": true
+      }
+    ],
+    "scope": "Official listed FOMC meeting dates only; date-only, no exact decision time or unscheduled meeting coverage",
+    "trading_approval": false
+  },
+  "persisted_rows": 2,
+  "outbox_pending_after_capture": 2,
+  "archive_exact_match": true,
+  "parquet_sha256": "c718111cb55572181dd476ce6b38eef16fdc50000a9b91938c0f2d8b177514be",
+  "receipt_clock_is_schedule_availability": true,
+  "exact_meeting_times_available": false,
+  "unscheduled_meeting_coverage": false,
+  "release_values_available": false,
+  "consensus_available": false,
+  "trading_approval": false,
+  "ended_at_ms": 1791466434879
+}

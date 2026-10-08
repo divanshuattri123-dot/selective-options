@@ -1,0 +1,134 @@
+{
+  "status": "SAVED_PUBLIC_FOMC_RESPONSE_RECLASSIFIED_AND_AUDITED",
+  "version": "0.3.49",
+  "network_requests": 0,
+  "raw_response_sha256": "31671857f4b7515874b15f006a4532193bf6fce7f28ce1732dcd545c55b26f04",
+  "raw_response_bytes": 165751,
+  "original_public_probe_event_id": "e72dc1fcc7592bcd9ba07e6a902a7a6b621d40cdf231137b7d56592be6cf73fc",
+  "current_parser_event_id": "854264dd138d99ef2f0de971a24cfaed50cbdc9c05fd5432d5a19243a0e8a6bd",
+  "current_parser_sha256": "0fb021c6ae65751c6c9bee3d9c946ea3da7211642f73a5e489d074ef5decc0f8",
+  "audit_script_sha256": "8a1a3f5791249544a98588c8757112a2a6ea3375d97860960f1348fff8790db2",
+  "regular_meetings": 56,
+  "notation_vote_entries": 1,
+  "total_schedule_entries": 57,
+  "listed_years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026,
+    2027
+  ],
+  "receipt_exclusion_and_visibility": true,
+  "current_quality_against_actual_saved_health": {
+    "as_of_ms": 1791466434790,
+    "max_age_ms": 7200000,
+    "state": "OBSERVED_SCOPE_AVAILABLE",
+    "blockers": [],
+    "snapshot_event_id": "854264dd138d99ef2f0de971a24cfaed50cbdc9c05fd5432d5a19243a0e8a6bd",
+    "health_event_id": "7de389218c29e74b408e5993dcbe66a0a196d414de9bdfab4a5bdcab7417444d",
+    "schedule_entry_count": 57,
+    "upcoming_events": [
+      {
+        "year": 2026,
+        "month_label": "October",
+        "date_label": "27-28",
+        "start_date": "2026-10-27",
+        "end_date": "2026-10-28",
+        "associated_with_sep": false,
+        "event_type": "meeting"
+      },
+      {
+        "year": 2026,
+        "month_label": "December",
+        "date_label": "8-9*",
+        "start_date": "2026-12-08",
+        "end_date": "2026-12-09",
+        "associated_with_sep": true,
+        "event_type": "meeting"
+      },
+      {
+        "year": 2027,
+        "month_label": "January",
+        "date_label": "26-27",
+        "start_date": "2027-01-26",
+        "end_date": "2027-01-27",
+        "associated_with_sep": false,
+        "event_type": "meeting"
+      },
+      {
+        "year": 2027,
+        "month_label": "March",
+        "date_label": "16-17*",
+        "start_date": "2027-03-16",
+        "end_date": "2027-03-17",
+        "associated_with_sep": true,
+        "event_type": "meeting"
+      },
+      {
+        "year": 2027,
+        "month_label": "April",
+        "date_label": "27-28",
+        "start_date": "2027-04-27",
+        "end_date": "2027-04-28",
+        "associated_with_sep": false,
+        "event_type": "meeting"
+      },
+      {
+        "year": 2027,
+        "month_label": "June",
+        "date_label": "8-9*",
+        "start_date": "2027-06-08",
+        "end_date": "2027-06-09",
+        "associated_with_sep": true,
+        "event_type": "meeting"
+      },
+      {
+        "year": 2027,
+        "month_label": "July",
+        "date_label": "27-28",
+        "start_date": "2027-07-27",
+        "end_date": "2027-07-28",
+        "associated_with_sep": false,
+        "event_type": "meeting"
+      },
+      {
+        "year": 2027,
+        "month_label": "September",
+        "date_label": "14-15*",
+        "start_date": "2027-09-14",
+        "end_date": "2027-09-15",
+        "associated_with_sep": true,
+        "event_type": "meeting"
+      },
+      {
+        "year": 2027,
+        "month_label": "October",
+        "date_label": "26-27",
+        "start_date": "2027-10-26",
+        "end_date": "2027-10-27",
+        "associated_with_sep": false,
+        "event_type": "meeting"
+      },
+      {
+        "year": 2027,
+        "month_label": "December",
+        "date_label": "7-8*",
+        "start_date": "2027-12-07",
+        "end_date": "2027-12-08",
+        "associated_with_sep": true,
+        "event_type": "meeting"
+      }
+    ],
+    "scope": "Official listed FOMC schedule entries only; date-only, no exact decision time or unscheduled meeting coverage",
+    "trading_approval": false
+  },
+  "original_duckdb_rows": 2,
+  "original_parquet_rows": 2,
+  "original_duckdb_parquet_exact_match": true,
+  "original_parquet_manifest_verified": true,
+  "milestone_2_complete": false,
+  "trading_enabled": false,
+  "orders_submitted": 0
+}

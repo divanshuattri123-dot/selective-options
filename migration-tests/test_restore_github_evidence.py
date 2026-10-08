@@ -169,6 +169,53 @@ def test_zip_restore_is_exact_and_idempotent(module, tmp_path):
     assert module.restore_entries(archive, records, root) == 0
 
 
+def test_mixed_release_archives_restore_only_their_pinned_members(module, tmp_path):
+    historical_dir, supplement_dir = tmp_path / "historical", tmp_path / "supplement"
+    historical_dir.mkdir()
+    supplement_dir.mkdir()
+    historical, historical_records = zip_fixture(
+        historical_dir, [("evidence/old.bin", b"old")]
+    )
+    supplement, supplement_records = zip_fixture(
+        supplement_dir, [("evidence/current.bin", b"current")]
+    )
+    supplement_records[0]["archive_asset"] = "selective-options-current-evidence.zip"
+    root = tmp_path / "checkout"
+    root.mkdir()
+    assert (
+        module.restore_entries(
+            {
+                "selective-options-0.3.47.zip": historical,
+                "selective-options-current-evidence.zip": supplement,
+            },
+            historical_records + supplement_records,
+            root,
+        )
+        == 2
+    )
+    assert (root / "evidence/old.bin").read_bytes() == b"old"
+    assert (root / "evidence/current.bin").read_bytes() == b"current"
+
+
+def test_unavailable_supplemental_archive_refuses_before_publication(module, tmp_path):
+    historical, historical_records = zip_fixture(tmp_path, [("evidence/old.bin", b"old")])
+    supplement_record = {
+        "path": "evidence/current.bin",
+        "bytes": len(b"current"),
+        "sha256": sha(b"current"),
+        "archive_asset": "selective-options-current-evidence.zip",
+    }
+    root = tmp_path / "checkout"
+    root.mkdir()
+    with pytest.raises(ValueError, match="unavailable release archive"):
+        module.restore_entries(
+            {"selective-options-0.3.47.zip": historical},
+            historical_records + [supplement_record],
+            root,
+        )
+    assert not list(root.rglob("*.bin"))
+
+
 def test_conflicting_existing_file_refuses_before_other_publication(module, tmp_path):
     archive, records = zip_fixture(
         tmp_path, [("evidence/new.bin", b"new"), ("evidence/existing.bin", b"expected")]

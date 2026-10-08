@@ -235,6 +235,12 @@ For normal finite capture, set `ingestion.bea_calendar_enabled: true` or `SELECT
 
 BLS ICS returned HTTP 403 (`evidence/bls-calendar-access-01.json`). Do not repeatedly retry or switch hosts to bypass that response. Other calendars remain independent unfinished work. No private API, order or paper run is enabled by calendar capture.
 
+## Federal Reserve FOMC meeting dates (0.3.49)
+
+Set `ingestion.fomc_calendar_enabled: true` or `SELECTIVE_INGESTION__FOMC_CALENDAR_ENABLED=true` only when the bounded public schedule poll is wanted. The fixed endpoint is the [official FOMC calendar](https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm). Polling defaults to once per hour, with at least fifteen minutes between requests, no redirects, a 1 MiB response limit and default TLS verification. Each whole-page snapshot and separate health record become visible at their HTTP receipt. `fomc_calendar_quality` reports missing, stale, ambiguous or failed snapshots and checks for a later listed meeting date.
+
+The source provides date-only schedule entries. One entry on the preserved page is explicitly a notation vote rather than a regular meeting; parsing labels it separately. The page does not provide exact policy announcement or press-conference times, unscheduled-meeting coverage, release values, expectations or a verified first-publication time. UTC civil-date comparison is conservative for date-only rows; it is not an event-risk or trade gate. One finite public response has 57 entries spanning 2021–2027. The current parser's offline replay identifies 56 regular meetings plus one notation vote and rechecks the original response hash, receipt visibility, stored database, Parquet and manifest under `evidence/fomc-calendar-public-01/verification.json` without another network request. These ignored binary snapshot files are pinned in the private `v0.3.49` release supplement listed in `GITHUB_ARTIFACTS.json`; the evidence-restore helper rehydrates them by their named archive. Use a new output directory for another public request; the source defaults disabled.
+
 ## Binance public snapshots (0.3.13)
 
 ```powershell
