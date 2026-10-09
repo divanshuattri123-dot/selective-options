@@ -1,0 +1,395 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options
+configfile: pyproject.toml
+testpaths: tests
+plugins: asyncio-1.4.0, cov-7.1.0
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collected 3657 items
+
+tests\test_active_rotation.py .......................................... [  1%]
+.............                                                            [  1%]
+tests\test_active_rotation_cli.py ......                                 [  1%]
+tests\test_active_rotation_verifier.py .....................             [  2%]
+tests\test_archive.py .......                                            [  2%]
+tests\test_archive_rotation.py ......................................... [  3%]
+....................................                                     [  4%]
+tests\test_backtest.py ................................................. [  5%]
+.........                                                                [  6%]
+tests\test_bar_capture_validation.py ...............................     [  6%]
+tests\test_bar_checkpoint.py ........................................... [  8%]
+...........                                                              [  8%]
+tests\test_bar_checkpoint_audit.py ...................                   [  8%]
+tests\test_bar_checkpoint_cli.py ..................                      [  9%]
+tests\test_bar_checkpoint_read_binding.py ................               [  9%]
+tests\test_bar_state.py ................................................ [ 11%]
+...............................................................          [ 12%]
+tests\test_bea_calendar.py .....................................         [ 13%]
+tests\test_binance.py ...........................................        [ 15%]
+tests\test_binance_accounts.py ..............................            [ 15%]
+tests\test_binance_accounts_verifier.py ..                               [ 15%]
+tests\test_binance_funding_history.py .................................. [ 16%]
+..............................                                           [ 17%]
+tests\test_binance_funding_view.py ................................      [ 18%]
+tests\test_binance_taker.py ..........................................   [ 19%]
+tests\test_binance_taker_verifier.py ..                                  [ 19%]
+tests\test_bybit.py ................................                     [ 20%]
+tests\test_calendar_quality.py .......................                   [ 21%]
+tests\test_capture_cancelled_failures.py ......                          [ 21%]
+tests\test_capture_lifecycle.py .....................................    [ 22%]
+tests\test_capture_periodic_bars.py ......                               [ 22%]
+tests\test_capture_rotation.py .........                                 [ 22%]
+tests\test_capture_sigterm_process.py .                                  [ 22%]
+tests\test_coinmetrics.py .............................................. [ 24%]
+.......................................................                  [ 25%]
+tests\test_coinmetrics_audit.py .............                            [ 26%]
+tests\test_coinmetrics_capture_resume.py ......                          [ 26%]
+tests\test_coinmetrics_checkpoint.py ...................                 [ 26%]
+tests\test_coinmetrics_quality.py .....................................  [ 27%]
+tests\test_coinmetrics_validation.py ................................    [ 28%]
+tests\test_coinmetrics_verifier.py .............                         [ 28%]
+tests\test_config.py ............................                        [ 29%]
+tests\test_crypto_news.py .............................................. [ 31%]
+.......................                                                  [ 31%]
+tests\test_crypto_news_store.py .............                            [ 31%]
+tests\test_crypto_news_verifier.py ..................................... [ 33%]
+..........                                                               [ 33%]
+tests\test_derivatives.py ............                                   [ 33%]
+tests\test_eth_checkpoint.py ........................                    [ 34%]
+tests\test_eth_gas.py .................................................. [ 35%]
+....                                                                     [ 35%]
+tests\test_eth_gas_quality.py .......................................... [ 36%]
+......                                                                   [ 37%]
+tests\test_eth_gas_verifier.py .........................                 [ 37%]
+tests\test_eth_provider_integration.py ..............                    [ 38%]
+tests\test_eth_runtime_restart_verifier.py ........                      [ 38%]
+tests\test_eth_store_quality.py ............                             [ 38%]
+tests\test_features.py ................................................. [ 40%]
+....................................                                     [ 40%]
+tests\test_flow_quality.py ............................................. [ 42%]
+                                                                         [ 42%]
+tests\test_flow_view.py ..........................                       [ 42%]
+tests\test_fomc_calendar.py ..................................           [ 43%]
+tests\test_freshness_pit.py ..........                                   [ 44%]
+tests\test_funding_checkpoint.py ..................                      [ 44%]
+tests\test_funding_history.py ...........................                [ 45%]
+tests\test_funding_poll.py .....................................         [ 46%]
+tests\test_gap_recovery.py .....................                         [ 46%]
+tests\test_history_verifier.py ..                                        [ 47%]
+tests\test_ingestion.py .....................                            [ 47%]
+tests\test_json_id_lookup.py ........                                    [ 47%]
+tests\test_liquidations.py ............................................. [ 49%]
+.....                                                                    [ 49%]
+tests\test_multiasset_coverage_verifier.py ...........                   [ 49%]
+tests\test_new_feed_store.py .........................                   [ 50%]
+tests\test_new_feed_store_replay.py ......                               [ 50%]
+tests\test_news.py ..................                                    [ 50%]
+tests\test_news_quality.py ...................................           [ 51%]
+tests\test_news_restart_verifier.py ...................                  [ 52%]
+tests\test_news_store_integration.py ............                        [ 52%]
+tests\test_oi_history.py ............................                    [ 53%]
+tests\test_option_coverage.py .......................................... [ 54%]
+.....                                                                    [ 54%]
+tests\test_option_coverage_verifier.py .........                         [ 54%]
+tests\test_option_flow_research.py .................                     [ 55%]
+tests\test_option_freshness_audit.py ................................... [ 56%]
+....................                                                     [ 56%]
+tests\test_option_metadata_projection.py ..........................      [ 57%]
+tests\test_option_native_fields_audit.py ............................... [ 58%]
+.........                                                                [ 58%]
+tests\test_option_projection.py ........................................ [ 59%]
+.......                                                                  [ 59%]
+tests\test_options_features.py ......................................... [ 61%]
+........                                                                 [ 61%]
+tests\test_options_features_verifier.py ................................ [ 62%]
+....                                                                     [ 62%]
+tests\test_options_flow_features.py .................................... [ 63%]
+..................................                                       [ 64%]
+tests\test_options_flow_verifier.py ..............                       [ 64%]
+tests\test_options_research_validation.py .............                  [ 64%]
+tests\test_options_skew.py ......................                        [ 65%]
+tests\test_parallel_foundations_audit.py .......                         [ 65%]
+tests\test_periodic_bar_config.py ..........                             [ 66%]
+tests\test_periodic_bar_runtime.py ..................................... [ 67%]
+.F........................                                               [ 67%]
+tests\test_range_volatility.py ......................................... [ 68%]
+...................                                                      [ 69%]
+tests\test_range_volatility_research.py .................                [ 69%]
+tests\test_receive_timing.py ..........                                  [ 70%]
+tests\test_recovery_handoff.py .....................                     [ 70%]
+tests\test_recovery_journal.py ................                          [ 71%]
+tests\test_recovery_quality.py ..........                                [ 71%]
+tests\test_recovery_runtime.py .................                         [ 71%]
+tests\test_research.py ...........                                       [ 72%]
+tests\test_research_validation.py ..............                         [ 72%]
+tests\test_reused_json_validation.py ...........                         [ 72%]
+tests\test_rotation_cli.py ....                                          [ 72%]
+tests\test_rotation_restore.py ......................................... [ 74%]
+..............                                                           [ 74%]
+tests\test_rotation_runtime.py .................................         [ 75%]
+tests\test_rotation_verifier.py .....................                    [ 75%]
+tests\test_rpc.py .....................                                  [ 76%]
+tests\test_saved_option_backtest.py ..............                       [ 76%]
+tests\test_secret_hook.py .....                                          [ 77%]
+tests\test_security_auth.py ...............................              [ 77%]
+tests\test_socket_recovery.py ................                           [ 78%]
+tests\test_solana_network.py ........................................... [ 79%]
+........................................................................ [ 81%]
+...............                                                          [ 81%]
+tests\test_solana_store_quality.py ........                              [ 82%]
+tests\test_solana_verifier.py .......                                    [ 82%]
+tests\test_spot_batch_verifier.py ..................                     [ 82%]
+tests\test_spot_sink_failstop.py ..........                              [ 83%]
+tests\test_spot_trade_batch_atomicity.py ............................... [ 83%]
+..............                                                           [ 84%]
+tests\test_spot_trade_batch_validation.py .............................  [ 85%]
+tests\test_spot_trades_bars.py ..............                            [ 85%]
+tests\test_stablecoin_capture_resume.py .....................            [ 86%]
+tests\test_stablecoin_checkpoint.py ...........................          [ 86%]
+tests\test_stablecoin_restart_verifier.py ...........                    [ 87%]
+tests\test_stablecoin_seed.py ............                               [ 87%]
+tests\test_stablecoin_supply.py ........................................ [ 88%]
+...................................................                      [ 89%]
+tests\test_stablecoin_supply_verifier.py ................                [ 90%]
+tests\test_startup_cli.py ..............                                 [ 90%]
+tests\test_storage_cancellation.py .........                             [ 90%]
+tests\test_subscription_progress.py ....                                 [ 91%]
+tests\test_tips_yield.py ............................................... [ 92%]
+.......                                                                  [ 92%]
+tests\test_tips_yield_verifier.py ...............                        [ 92%]
+tests\test_trade_backfill.py .........................                   [ 93%]
+tests\test_trade_checkpoints.py .................                        [ 94%]
+tests\test_trade_reconciliation.py ..................................... [ 95%]
+....                                                                     [ 95%]
+tests\test_trend_features.py .........................................   [ 96%]
+tests\test_trend_research_validation.py ...................              [ 96%]
+tests\test_trials.py .................                                   [ 97%]
+tests\test_universe_refresh.py ..................                        [ 97%]
+tests\test_universe_refresh_verifier.py ......                           [ 97%]
+tests\test_venue.py ..........                                           [ 98%]
+tests\test_verify_liquidations.py ...........                            [ 98%]
+tests\test_verify_periodic_bars.py ..........                            [ 98%]
+tests\test_verify_range_volatility.py .................................. [ 99%]
+.........                                                                [100%]
+
+================================== FAILURES ===================================
+_ test_explicit_selected_generation_refuses_corruption_without_older_fallback[pending] _
+
+collector = <selective_options.spot_trades.SpotTradeCollector object at 0x000001C0CEF18AD0>
+bus = <selective_options.bus.EventBus object at 0x000001C0CEF1BBF0>
+store = <selective_options.store.DuckStore object at 0x000001C0CEF19610>
+output = WindowsPath('C:/Users/Divan/AppData/Local/Temp/pytest-of-Divan/pytest-410/test_explicit_selected_generat5/generation-000000')
+index = 0
+
+    async def create_bar_generation(
+        collector: SpotTradeCollector,
+        bus: EventBus,
+        store: DuckStore,
+        output: Path,
+        index: int,
+    ) -> dict[str, object]:
+        """Create one fresh immutable generation; a failed attempt is never selected."""
+        if type(index) is not int or not 0 <= index <= 255:
+            raise ValueError("generation index must be an explicit integer in 0..255")
+        output = _path(output)
+        if output.name != f"generation-{index:06d}":
+            raise ValueError("generation basename must match its explicit index")
+        if output.exists():
+            raise FileExistsError("bar generation requires a new output directory")
+        if not output.parent.is_dir():
+            raise FileNotFoundError("bar generation parent must already exist")
+        created: list[bool] = []
+        try:
+            await complete_thread(_new_directory, output, created)
+>           checkpoint = await save_active_collector_bar_checkpoint(
+                collector, bus, store, output / "checkpoint"
+            )
+
+src\selective_options\periodic_bar_runtime.py:154: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src\selective_options\bar_runtime.py:99: in save_active_collector_bar_checkpoint
+    return await create_bar_checkpoint(
+src\selective_options\bar_checkpoint.py:655: in create_bar_checkpoint
+    manifest = await complete_thread(
+src\selective_options\store.py:44: in complete_thread
+    result = await asyncio.shield(task)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\asyncio\threads.py:25: in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py:59: in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\selective_options\bar_checkpoint.py:396: in _stage
+    output.mkdir(exist_ok=False)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/Divan/AppData/Local/Temp/pytest-of-Divan/pytest-410/test_explicit_selected_generat5/generation-000000/checkpoint')
+mode = 511, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\Divan\\AppData\\Local\\Temp\\pytest-of-Divan\\pytest-410\\test_explicit_selected_generat5\\generation-000000\\checkpoint'
+
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1311: FileNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = WindowsPath('C:/Users/Divan/AppData/Local/Temp/pytest-of-Divan/pytest-410/test_explicit_selected_generat5')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001C0CEF44410>
+tamper = 'pending'
+
+    @pytest.mark.parametrize(
+        "tamper", ["marker", "inner_marker", "state", "database", "extra", "pending"]
+    )
+    async def test_explicit_selected_generation_refuses_corruption_without_older_fallback(
+        tmp_path, monkeypatch, tamper
+    ):
+        async with running(tmp_path, monkeypatch) as (collector, bus, store, _):
+            older = tmp_path / "generation-000000"
+>           old_report = await create_bar_generation(collector, bus, store, older, 0)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_periodic_bar_runtime.py:666: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src\selective_options\periodic_bar_runtime.py:179: in create_bar_generation
+    await _cleanup(complete_thread(_failed, output, failure_type))
+src\selective_options\bar_checkpoint.py:623: in _cleanup
+    await asyncio.shield(task)
+src\selective_options\store.py:44: in complete_thread
+    result = await asyncio.shield(task)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\asyncio\threads.py:25: in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py:59: in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\selective_options\periodic_bar_runtime.py:128: in _failed
+    with (output / "failure.json").open("x", encoding="utf-8") as stream:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/Divan/AppData/Local/Temp/pytest-of-Divan/pytest-410/test_explicit_selected_generat5/generation-000000/failure.json')
+mode = 'x', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Divan\\AppData\\Local\\Temp\\pytest-of-Divan\\pytest-410\\test_explicit_selected_generat5\\generation-000000\\failure.json'
+
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError
+---------------------------- Captured stderr call -----------------------------
+{"timestamp": "2026-10-09T08:57:53.094598+00:00", "level": "WARNING", "event": "TRADE_SNAPSHOT_INITIALIZED source=kraken", "signal_id": null, "error_type": null}
+------------------------------ Captured log call ------------------------------
+WARNING  selective_options.collectors:collectors.py:37 TRADE_SNAPSHOT_INITIALIZED source=kraken
+- generated xml file: C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\evidence\full-suite-0.3.52\pytest.xml -
+=============================== tests coverage ================================
+______________ coverage: platform win32, python 3.12.10-final-0 _______________
+
+Name                                                 Stmts   Miss Branch BrPart  Cover   Missing
+------------------------------------------------------------------------------------------------
+src\selective_options\__init__.py                        1      0      0      0   100%
+src\selective_options\active_rotation.py               122      7     34      3    92%   105, 113, 164-167, 200
+src\selective_options\archive.py                        87      1     20      1    98%   112
+src\selective_options\archive_rotation.py              242     15    100     12    92%   65, 88->105, 177, 184, 199, 202, 243, 270, 404, 410, 459-463, 469
+src\selective_options\auth.py                           49      0     10      0   100%
+src\selective_options\backtest.py                      264      3     82      3    98%   222, 228, 241
+src\selective_options\bar_checkpoint.py                479     49    218     44    87%   120, 141, 148, 152, 181, 198, 201, 206, 227, 247, 266, 275, 308, 313, 315, 393, 395, 409-411, 470, 489, 491, 493, 496, 506, 524, 539, 573-574, 579, 582, 585, 591, 600, 626->621, 628, 644, 649, 705, 719, 757, 760, 800, 804, 807, 822, 837, 840, 876
+src\selective_options\bar_runtime.py                    69      2     24      2    96%   113, 148
+src\selective_options\bar_state.py                     221      9    106      8    95%   84-85, 111, 117, 121, 134, 213, 217, 223, 232->exit
+src\selective_options\bars.py                           78      0     26      0   100%
+src\selective_options\bea_calendar.py                  103      0     38      0   100%
+src\selective_options\binance.py                       134      0     44      0   100%
+src\selective_options\binance_accounts.py               42      0     18      0   100%
+src\selective_options\binance_funding_history.py        77      0     30      0   100%
+src\selective_options\binance_funding_view.py           43      0     14      0   100%
+src\selective_options\binance_taker.py                  92      0     32      0   100%
+src\selective_options\bus.py                            46      0      4      0   100%
+src\selective_options\bybit.py                         143      0     44      0   100%
+src\selective_options\calendar_quality.py               60      0     28      0   100%
+src\selective_options\capture_lifecycle.py              66      1     18      0    99%   39
+src\selective_options\checkpoints.py                    30      2     12      2    90%   49, 51
+src\selective_options\cli.py                           210      3     40      3    98%   296, 449, 491
+src\selective_options\coinmetrics.py                   285     15    102     12    93%   87, 89, 91, 93, 111, 176, 183, 185, 206, 273, 419, 538-543
+src\selective_options\coinmetrics_checkpoint.py         87     11     38      7    86%   96, 112-113, 117-118, 121, 144, 147, 169, 177, 184
+src\selective_options\coinmetrics_quality.py            89      3     52      3    96%   93, 107, 145
+src\selective_options\collectors.py                    338     27     82     10    90%   193->179, 348, 493-498, 512->511, 523, 527->524, 530->524, 542, 564, 567, 572, 593-610, 614-616
+src\selective_options\config.py                        308      0     32      0   100%
+src\selective_options\crypto_news.py                   191      5     60      1    98%   167, 436-441
+src\selective_options\derivatives.py                    97      1     32      2    98%   188, 189->170
+src\selective_options\errors.py                         13      0      0      0   100%
+src\selective_options\eth_checkpoint.py                 59      1     18      1    97%   47
+src\selective_options\eth_gas.py                       141      2     50      2    98%   78, 307
+src\selective_options\eth_gas_quality.py                88      3     48      3    96%   23, 126, 188
+src\selective_options\events.py                         50      0     10      0   100%
+src\selective_options\features.py                      273      3    116      3    98%   157, 201, 213
+src\selective_options\flow_quality.py                   76      0     38      0   100%
+src\selective_options\flow_view.py                      62      0     22      0   100%
+src\selective_options\fomc_calendar.py                 255     12     92      8    94%   119, 130, 145->147, 170, 316, 350, 358, 362-363, 371, 377-379
+src\selective_options\funding_checkpoint.py             27      0      6      0   100%
+src\selective_options\funding_history.py                67      0     24      0   100%
+src\selective_options\funding_poll.py                   49      0     10      0   100%
+src\selective_options\gap_recovery.py                   49      1      8      1    96%   95
+src\selective_options\ingestion.py                     463     14    218      5    97%   222, 255, 287-289, 343, 350-353, 383-385, 414
+src\selective_options\interlock.py                       4      0      0      0   100%
+src\selective_options\liquidations.py                  281      9    102     10    95%   108, 129, 154, 257, 260, 283->exit, 400, 410, 453, 477
+src\selective_options\logging.py                        22      0      4      1    96%   15->exit
+src\selective_options\models.py                        137      0      6      0   100%
+src\selective_options\news.py                          107      2     32      2    97%   180, 190
+src\selective_options\news_quality.py                  103      1     42      1    99%   88
+src\selective_options\oi_history.py                     78      0     26      0   100%
+src\selective_options\option_backtest.py               296     64    136     52    73%   73, 76, 102, 104, 106, 108, 120, 123, 136, 138-141, 156, 164, 177, 181-184, 197, 199, 206, 211, 224-225, 233, 236-237, 239, 255, 267, 283, 286, 288, 296->298, 301, 305, 333, 340-341, 356, 359, 363, 366, 368, 370, 389, 391, 405->401, 415, 423, 432, 443, 451, 458, 486, 489, 502, 504, 551, 573, 583, 633, 651, 670
+src\selective_options\option_coverage.py               138      0     76      0   100%
+src\selective_options\option_flow_research.py           30      0      8      0   100%
+src\selective_options\option_skew_research.py           28      2      4      2    88%   66, 90
+src\selective_options\options_features.py              247      7    114      5    97%   118, 205, 207, 254-255, 277, 296
+src\selective_options\options_flow_features.py         267      3    102      3    98%   187, 204, 404
+src\selective_options\options_research.py               53      5     22      5    87%   37, 57, 86, 88, 90
+src\selective_options\options_skew.py                  238     24     98     18    88%   93, 105, 177, 182, 192, 212->211, 229, 234-235, 247, 251, 257, 269-270, 278, 280-281, 284, 310-311, 323-324, 389-398, 457
+src\selective_options\periodic_bar_runtime.py          180     10     48      7    93%   86, 99, 172->180, 233, 235, 269-270, 280, 296-297, 304
+src\selective_options\quality.py                        96      0     46      4    97%   68->75, 71->70, 73->70, 182->174
+src\selective_options\range_volatility.py              152      9     60      7    92%   89, 104, 108, 120, 122, 124-126, 139
+src\selective_options\range_volatility_research.py      26      0      4      0   100%
+src\selective_options\rate_limit.py                     31      0      4      0   100%
+src\selective_options\recovery.py                       24      0      6      0   100%
+src\selective_options\recovery_handoff.py               54      0     22      1    99%   25->23
+src\selective_options\recovery_journal.py              100      0     28      0   100%
+src\selective_options\recovery_runtime.py               56      1     18      2    96%   72, 78->81
+src\selective_options\research.py                      126      8     46      8    91%   80, 84, 107, 109, 117, 122, 150, 274
+src\selective_options\rotation_restore.py              148      6     58      4    94%   113, 124-126, 184->exit, 204, 208
+src\selective_options\rotation_runtime.py               86      2     18      1    97%   35-36
+src\selective_options\rpc.py                            67      0     14      1    99%   69->exit
+src\selective_options\security.py                       62      0     34      0   100%
+src\selective_options\socket_recovery.py               106      2     34      2    97%   143, 150
+src\selective_options\solana_network.py                138      0     50      0   100%
+src\selective_options\solana_quality.py                 73      1     36      1    98%   116
+src\selective_options\spot_trades.py                   310     16    106     15    92%   128, 130, 183, 188, 197, 199, 382, 478, 490, 493, 497->525, 513, 517-522, 524, 528
+src\selective_options\stablecoin_checkpoint.py          37      4     10      2    87%   44-45, 57, 60
+src\selective_options\stablecoin_supply.py             309      7    120      7    97%   253, 306, 340, 449, 515, 530, 609
+src\selective_options\startup.py                        72      1     24      1    98%   136
+src\selective_options\store.py                         221      1     36      0    99%   54
+src\selective_options\tips_yield.py                    193      4     64      0    98%   281-287
+src\selective_options\trade_backfill.py                136      0     52      0   100%
+src\selective_options\trade_reconciliation.py          151      1     54      1    99%   219
+src\selective_options\trend_features.py                133      4     42      2    97%   60, 82, 179-180
+src\selective_options\trials.py                        144      8     38      6    92%   64, 92, 124, 129, 137, 182, 251-252
+src\selective_options\venue.py                          41      0     12      0   100%
+------------------------------------------------------------------------------------------------
+TOTAL                                                11026    392   3856    307    95%
+Coverage JSON written to file C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\evidence\full-suite-0.3.52\coverage.json
+Required test coverage of 85.0% reached. Total coverage: 95.24%
+=========================== short test summary info ===========================
+FAILED tests/test_periodic_bar_runtime.py::test_explicit_selected_generation_refuses_corruption_without_older_fallback[pending]
+================= 1 failed, 3656 passed in 884.09s (0:14:44) ==================

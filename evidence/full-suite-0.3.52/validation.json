@@ -1,0 +1,65 @@
+{
+  "status": "PASSED",
+  "application_version": "0.3.52",
+  "source_commit": "c362b94b2b01c0f74a6ecfd6cf5a4b703e5ced4e",
+  "scope": "Complete local original-Windows-layout offline application suite plus separate migration-helper suite",
+  "platform": "win32",
+  "checks": {
+    "pytest": {
+      "tests": 3657,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "elapsed_s": 831.019,
+      "junit_sha256": "f228c2260b997696b0818fece57eaeb7cf478c4d5276f3623d9e82f886b5fec8"
+    },
+    "migration": {
+      "tests": 65,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "elapsed_s": 2.698,
+      "junit_sha256": "665a77ed59c2ee07770af47f8e06765b849ad032439c16a4b00cd50cf83765e6"
+    }
+  },
+  "steps": [
+    {
+      "name": "ruff",
+      "exit_code": 0,
+      "elapsed_s": 1.172
+    },
+    {
+      "name": "format",
+      "exit_code": 0,
+      "elapsed_s": 0.219
+    },
+    {
+      "name": "mypy",
+      "exit_code": 0,
+      "elapsed_s": 1.312
+    },
+    {
+      "name": "config",
+      "exit_code": 0,
+      "elapsed_s": 1.86
+    },
+    {
+      "name": "pytest",
+      "exit_code": 0,
+      "elapsed_s": 834.562
+    },
+    {
+      "name": "migration",
+      "exit_code": 0,
+      "elapsed_s": 12.141
+    }
+  ],
+  "coverage_percent": 95.24,
+  "executable_test_freeze_unchanged": true,
+  "frozen_python_files": 272,
+  "ruff_scope_python_files": 272,
+  "mypy_configured_files": 135,
+  "trading_enabled": false,
+  "milestone_status": "PARTIAL",
+  "isolated_pytest_basetemp": "C:\\Users\\Divan\\Documents\\Codex\\2026-09-20\\files-pasted-by-the-user-build\\work\\t52-final"
+}

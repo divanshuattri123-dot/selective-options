@@ -1,0 +1,1 @@
+{"reports": [{"errors": 0, "failures": 0, "report_index": 1, "skipped": 0, "status": "PASSED", "tests": 3657}, {"errors": 0, "failures": 0, "report_index": 2, "skipped": 0, "status": "PASSED", "tests": 65}], "status": "PASSED", "validated_report_counts": {"errors": 0, "failures": 0, "skipped": 0, "tests": 3722}}

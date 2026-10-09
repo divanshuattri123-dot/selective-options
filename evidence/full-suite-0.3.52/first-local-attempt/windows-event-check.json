@@ -1,0 +1,56 @@
+{
+  "format_version": 1,
+  "checked_at_utc": "2026-10-09T09:17:14.3648823+00:00",
+  "failure_at_utc": "2026-10-09T08:57:53.094598Z",
+  "window_start_utc": "2026-10-09T14:24:00+05:30",
+  "window_end_utc": "2026-10-09T14:31:00+05:30",
+  "computer_timezone": "India Standard Time",
+  "source_edits": false,
+  "os_changes": false,
+  "checks": [
+    {
+      "log": "System",
+      "filter": "Storage providers only; warnings/errors in bounded window",
+      "status": "QUERY_FAILED",
+      "events": [],
+      "relevant_event_count": null,
+      "error_type": "System.Exception",
+      "error_id": "NoMatchingProvidersFound,Microsoft.PowerShell.Commands.GetWinEventCommand"
+    },
+    {
+      "log": "Microsoft-Windows-Windows Defender/Operational",
+      "filter": "Detection/action and controlled-folder-access event IDs 1006,1007,1008,1009,1116,1117,1118,1119,1123,1124,1127,1128 in bounded window",
+      "status": "QUERIED_NO_MATCHING_EVENTS",
+      "events": [],
+      "relevant_event_count": 0,
+      "error_type": null,
+      "log_enabled": true,
+      "log_record_count": 4646
+    },
+    {
+      "log": "System",
+      "filter": "Exact bounded XPath storage-provider warnings/errors; avoids missing provider-registration failure",
+      "providers": [
+        "disk",
+        "iaStorAC",
+        "iaStorV",
+        "Microsoft-Windows-Ntfs",
+        "Ntfs",
+        "partmgr",
+        "storahci",
+        "stornvme",
+        "volmgr"
+      ],
+      "status": "QUERIED_NO_MATCHING_EVENTS",
+      "events": [],
+      "relevant_event_count": 0,
+      "error_type": null
+    }
+  ],
+  "conclusion": "The bounded event check does not determine the cause of the original missing-directory failure. No OS settings were changed and no disk scan was run.",
+  "limitations": [
+    "Windows event logs do not audit every file or directory deletion.",
+    "No relevant event in this bounded window would not prove absence of an external deletion or transient filesystem behavior.",
+    "Event messages and paths are omitted to avoid exposing unrelated personal data."
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "cause": "UNDETERMINED",
+  "concrete_findings": [
+    "Failure occurs while creating older generation-000000 before any tampering or selected-generation refusal executes.",
+    "_new_directory completed and appended created=True. Inner staging parent.is_dir passed before checkpoint mkdir raised WinError 3.",
+    "The subsequent failure.json write also reports the parent path missing. Post-run inspection originally found source.duckdb but no generation directory.",
+    "The 121-character checkpoint path provides no evidence of a MAX_PATH-length failure.",
+    "Repository inspection found no generation-directory removal or pytest numbered-tree cleanup call in this runtime/test path.",
+    "The private checkpoint DB verifier removes only its own selective-options-bar-read-* TemporaryDirectory.",
+    "Standard installed pytest cleanup checks numbered-directory lockfiles and uses a three-day lock timeout. This inspection does not identify who removed the failed directory.",
+    "The failure was not reproduced by either focused pending run or the complete 63-case periodic runtime file with a separate fresh basetemp."
+  ],
+  "created_at_utc": "2026-10-09T09:11:44.246583+00:00",
+  "decision": "Do not change source to retry, recreate unexplained missing output, or hide filesystem errors. Retain failed full run and repeat unchanged source with an isolated fresh basetemp.",
+  "failed_checkpoint_path": "C:\\Users\\Divan\\AppData\\Local\\Temp\\pytest-of-Divan\\pytest-410\\test_explicit_selected_generat5\\generation-000000\\checkpoint",
+  "failed_checkpoint_path_characters": 121,
+  "failed_test": "tests/test_periodic_bar_runtime.py::test_explicit_selected_generation_refuses_corruption_without_older_fallback[pending]",
+  "format_version": 1,
+  "network_scope": {
+    "limitation": "No system-wide network instrumentation was used, so this does not assert absence of unrelated background network traffic.",
+    "live_readiness_claimed": false,
+    "network_requested_by_investigation": false,
+    "test_inputs": "Saved fixtures and mocked transports; no exchange/public-feed fetch or order operation was invoked by these commands."
+  },
+  "retained_failed_evidence_sha256": {
+    "config.log": "6b5541afab1b4740daf2cc6a7568fd1100d898e37c5912643438001811df3d67",
+    "coverage.json": "063548b8e1a1ab74d2ec4a8e68e4746629798130234a8302b0235ed5b6421c77",
+    "failure.json": "605e239de19606636e929b4fb62092bc8e0549d9219ba648ff713a007283a9ba",
+    "format.log": "869436c8f05e15a33d8f0726ba55b59eaa224bc789f77c56ddd23cb7512c3f89",
+    "mypy.log": "4655baa132d62306c2599cdaba3a28c92702eed4d94418fabd2f14a499caa500",
+    "pytest.log": "a36fa4726a87bd5c56a615d05d6ad137464f34a37f98013a308c88ccd1e5aaf3",
+    "pytest.xml": "a6c4d832dbd5778d4870d56280204d78f1234d91fad023d38bbdf8c162669229",
+    "ruff.log": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+    "source-freeze.json": "b35c3b0dfc408d3922d13a183748d8a1f0c6e614b929fa29f81f32972c3f7b35"
+  },
+  "runs": [
+    {
+      "basetemp": "default pytest numbered temporary tree",
+      "copied_junit": "focused-pending-no-coverage.junit.xml",
+      "coverage_enabled": false,
+      "coverage_file": null,
+      "errors": 0,
+      "failures": 0,
+      "junit_sha256": "e446b0f660068f1694364b5773190645ec8df8a55563daa5133f76a9ec11b6f1",
+      "junit_suite_elapsed_seconds": 2.674,
+      "junit_timestamp": "2026-10-09T14:34:53.613926+05:30",
+      "name": "focused_pending_without_coverage",
+      "pytest_terminal_elapsed_seconds": 3.58,
+      "skipped": 0,
+      "source_junit": "C:\\Users\\Divan\\Documents\\Codex\\2026-09-20\\files-pasted-by-the-user-build\\work\\periodic-pending-refusal-repro.xml",
+      "status": "PASSED",
+      "tests": 1
+    },
+    {
+      "basetemp": "default pytest numbered temporary tree",
+      "copied_junit": "focused-pending-isolated-coverage.junit.xml",
+      "coverage_enabled": true,
+      "coverage_file": "C:\\Users\\Divan\\Documents\\Codex\\2026-09-20\\files-pasted-by-the-user-build\\work\\periodic-pending-isolated.coverage",
+      "errors": 0,
+      "failures": 0,
+      "junit_sha256": "2a8af2e38de820dbd5506d26b96c2d57de395ba42a74c3fca3b86e37fca623d1",
+      "junit_suite_elapsed_seconds": 7.817,
+      "junit_timestamp": "2026-10-09T14:36:13.320673+05:30",
+      "name": "focused_pending_with_isolated_coverage",
+      "pytest_terminal_elapsed_seconds": 8.09,
+      "skipped": 0,
+      "source_junit": "C:\\Users\\Divan\\Documents\\Codex\\2026-09-20\\files-pasted-by-the-user-build\\work\\periodic-pending-refusal-cov-repro.xml",
+      "status": "PASSED",
+      "tests": 1
+    },
+    {
+      "basetemp": "C:\\Users\\Divan\\Documents\\Codex\\2026-09-20\\files-pasted-by-the-user-build\\work\\t52-periodic-investigation-01",
+      "copied_junit": "periodic-file-isolated-basetemp.junit.xml",
+      "coverage_enabled": false,
+      "coverage_file": null,
+      "errors": 0,
+      "failures": 0,
+      "junit_sha256": "813892ec9dea729932070f0205a628335d8bc50c00b3ae20867e54d0fd95d751",
+      "junit_suite_elapsed_seconds": 31.237,
+      "junit_timestamp": "2026-10-09T14:38:40.712036+05:30",
+      "name": "whole_periodic_file_fresh_basetemp",
+      "pytest_terminal_elapsed_seconds": 31.78,
+      "skipped": 0,
+      "source_junit": "C:\\Users\\Divan\\Documents\\Codex\\2026-09-20\\files-pasted-by-the-user-build\\work\\periodic-refusal-investigation-full-file.xml",
+      "status": "PASSED",
+      "tests": 63
+    }
+  ],
+  "source_and_tests_match_HEAD": true,
+  "source_commit": "c362b94b2b01c0f74a6ecfd6cf5a4b703e5ced4e",
+  "source_edits": false,
+  "source_file_sha256": {
+    "src/selective_options/bar_checkpoint.py": "7f391a87a218afca23c2edb8f22d6c4e4b63ebdf2ab5e6edd0b98fa86757f5b5",
+    "src/selective_options/bar_runtime.py": "e9a585d03202fe7ac13060d4f59816a797fa28df05f0fe1c148cff3733ff08bd",
+    "src/selective_options/periodic_bar_runtime.py": "f7abfa22e7486a9d7734d83a37b4ae7c4316d379a99ab1a70782410cbb600691",
+    "tests/test_periodic_bar_runtime.py": "05ff575b9670a6de2982992639f3aae1bfa0409ee489118d9196e7fb612bffd5"
+  },
+  "status": "INVESTIGATION_COMPLETE_CAUSE_UNDETERMINED",
+  "test_edits": false,
+  "unproven_hypotheses": [
+    "External temporary-directory cleaner",
+    "Parallel pytest cleanup or lock interference",
+    "Transient filesystem behavior"
+  ]
+}

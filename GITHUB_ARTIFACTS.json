@@ -645,6 +645,12 @@
       "bytes": 137923,
       "sha256": "ecf48d63871b11c5be61f74fb01cb4a34fccf89646e677bbc77a980c9c904f81",
       "release_tag": "v0.3.51"
+    },
+    {
+      "name": "selective-options-0.3.52-evidence.zip",
+      "bytes": 153732,
+      "sha256": "a776ce0e2feb07796219d8a535dafaec7cec545b8065af9f77ed7b5d39e3de58",
+      "release_tag": "v0.3.52"
     }
   ],
   "evidence_files": [
@@ -1659,6 +1665,102 @@
       "bytes": 1585152,
       "sha256": "1d320cb3a8cc7a8e95e7f7728ca1c7e8e5659d859998c5f45c8e0614cddc9801",
       "archive_asset": "selective-options-0.3.51-evidence.zip"
+    },
+    {
+      "path": "evidence/periodic-bars-saved-native-01/cohort-0-initial/bar-generations/generation-000000/checkpoint/events.duckdb",
+      "bytes": 1585152,
+      "sha256": "771c66069dde85e4ff884853b6514c27932b637dd0177e100fc362fca761fdef",
+      "archive_asset": "selective-options-0.3.52-evidence.zip"
+    },
+    {
+      "path": "evidence/periodic-bars-saved-native-01/cohort-0-initial/bar-generations/generation-000001/checkpoint/events.duckdb",
+      "bytes": 1585152,
+      "sha256": "a6f58930ed67eed231925c62ff8f61eee2ed8a1ae038994d26d821f8e7822c46",
+      "archive_asset": "selective-options-0.3.52-evidence.zip"
+    },
+    {
+      "path": "evidence/periodic-bars-saved-native-01/cohort-0-initial/events.duckdb",
+      "bytes": 1585152,
+      "sha256": "faa621c2481d3cc08e2758355f93ad9b7f3d49750f88aeeb74c6de3c770aa8df",
+      "archive_asset": "selective-options-0.3.52-evidence.zip"
+    },
+    {
+      "path": "evidence/periodic-bars-saved-native-01/cohort-0-initial/events.parquet",
+      "bytes": 5828,
+      "sha256": "c5d0f62ea3d213ca91f55906fc2890de90828798897cae6d6930dad44315fb91",
+      "archive_asset": "selective-options-0.3.52-evidence.zip"
+    },
+    {
+      "path": "evidence/periodic-bars-saved-native-01/cohort-0-resumed/bar-checkpoint/events.duckdb",
+      "bytes": 1585152,
+      "sha256": "dec93612ee3d9f83defebbc22ebd16cfe1bd270a263eb87b9b90748b0910a491",
+      "archive_asset": "selective-options-0.3.52-evidence.zip"
+    },
+    {
+      "path": "evidence/periodic-bars-saved-native-01/cohort-0-resumed/events.duckdb",
+      "bytes": 2895872,
+      "sha256": "b67af86f939ef09c3a3574cf990dda2ddf09bbf022f386b3718f151a15754d0f",
+      "archive_asset": "selective-options-0.3.52-evidence.zip"
+    },
+    {
+      "path": "evidence/periodic-bars-saved-native-01/cohort-0-resumed/events.parquet",
+      "bytes": 6458,
+      "sha256": "08efc12b83730f06836a386f826637055224f33c0735256d385176dff14debc8",
+      "archive_asset": "selective-options-0.3.52-evidence.zip"
+    },
+    {
+      "path": "evidence/periodic-bars-saved-native-01/cohort-0-resumed/seed-verified.duckdb",
+      "bytes": 1585152,
+      "sha256": "3f71ef7c7717d0518672a0e746025866446845c6da688406b26a3d631c627d43",
+      "archive_asset": "selective-options-0.3.52-evidence.zip"
+    },
+    {
+      "path": "evidence/periodic-bars-saved-native-01/cohort-1-initial/bar-generations/generation-000000/checkpoint/events.duckdb",
+      "bytes": 1585152,
+      "sha256": "8e25547f40acaf6aa5c0fd7ac77e51872c5e25a00c46dc12900998509f0f08c1",
+      "archive_asset": "selective-options-0.3.52-evidence.zip"
+    },
+    {
+      "path": "evidence/periodic-bars-saved-native-01/cohort-1-initial/bar-generations/generation-000001/checkpoint/events.duckdb",
+      "bytes": 1585152,
+      "sha256": "1535e2735e9449e6ec2487788d52878a287cb77bb4efa449dea5ff110b8d7338",
+      "archive_asset": "selective-options-0.3.52-evidence.zip"
+    },
+    {
+      "path": "evidence/periodic-bars-saved-native-01/cohort-1-initial/events.duckdb",
+      "bytes": 1585152,
+      "sha256": "5057039d93ac1e13f97dc6bacdad334da5eb53c5841b3520bb2b0075901d99a0",
+      "archive_asset": "selective-options-0.3.52-evidence.zip"
+    },
+    {
+      "path": "evidence/periodic-bars-saved-native-01/cohort-1-initial/events.parquet",
+      "bytes": 3232,
+      "sha256": "dc6f30c6cef19c869b1bc5cf2f1a8dd7e57733b56d3abaf26ff2e6a51e466cdd",
+      "archive_asset": "selective-options-0.3.52-evidence.zip"
+    },
+    {
+      "path": "evidence/periodic-bars-saved-native-01/cohort-1-resumed/bar-checkpoint/events.duckdb",
+      "bytes": 1585152,
+      "sha256": "7e70df2d76a6435981c1251ead27eb3bbda4f6a4eb9a3770b88cd00cf4ce8744",
+      "archive_asset": "selective-options-0.3.52-evidence.zip"
+    },
+    {
+      "path": "evidence/periodic-bars-saved-native-01/cohort-1-resumed/events.duckdb",
+      "bytes": 2895872,
+      "sha256": "eebdcee5224327074a273297bed90485506b32e1e1e4b8ed832fedc00f454e7a",
+      "archive_asset": "selective-options-0.3.52-evidence.zip"
+    },
+    {
+      "path": "evidence/periodic-bars-saved-native-01/cohort-1-resumed/events.parquet",
+      "bytes": 3777,
+      "sha256": "0edeb2236120d5e641006062920f4dbb72302afa8f01dbff45c664184c9b96f5",
+      "archive_asset": "selective-options-0.3.52-evidence.zip"
+    },
+    {
+      "path": "evidence/periodic-bars-saved-native-01/cohort-1-resumed/seed-verified.duckdb",
+      "bytes": 1585152,
+      "sha256": "a7ea4ac2fb49af721c7ca4497b5d926c31ebcb2b2a774c248dbba35bb1e2b1cc",
+      "archive_asset": "selective-options-0.3.52-evidence.zip"
     }
   ],
   "validation_assets": [
@@ -1668,7 +1770,8 @@
     "selective-options-0.3.45.zip",
     "selective-options-0.3.46.zip",
     "selective-options-0.3.49-fomc-evidence.zip",
-    "selective-options-0.3.51-evidence.zip"
+    "selective-options-0.3.51-evidence.zip",
+    "selective-options-0.3.52-evidence.zip"
   ],
   "historical_proof_workspace": "C:\\Users\\Divan\\Documents\\Codex\\2026-09-20\\files-pasted-by-the-user-build",
   "historical_proof_requires_physical_windows_path": true,

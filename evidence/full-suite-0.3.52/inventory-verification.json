@@ -1,0 +1,20 @@
+{
+  "status": "PASSED",
+  "source_commit": "c362b94b2b01c0f74a6ecfd6cf5a4b703e5ced4e",
+  "native_evidence_files": 215,
+  "database_or_parquet_files": 214,
+  "bound_native_manifest_files": 1,
+  "validation_archives": 8,
+  "restore_prerequisites": 223,
+  "canonical_prerequisite_check": {
+    "manifest_sha256": "1516fe1ec336622856080ae938e5f94389827bb9b9a9970f4b53b43e326e5555",
+    "required_files": 223,
+    "verified_files": 223,
+    "issues": [],
+    "restore_command": "python tools/restore_github_evidence.py"
+  },
+  "all_inventory_bytes_and_hashes_verified": true,
+  "historical_entries_and_metadata_preserved": true,
+  "documentation_only_finalization": true,
+  "trading_enabled": false
+}

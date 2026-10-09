@@ -1,0 +1,311 @@
+{
+  "schema_version": 1,
+  "status": "PASSED_WITH_SCOPE_LIMITATIONS",
+  "audited_at_utc": "2026-10-09T09:08:51.025396+00:00",
+  "source_commit": "c362b94b2b01c0f74a6ecfd6cf5a4b703e5ced4e",
+  "hosted_run": {
+    "run_id": 37907490437,
+    "url": "https://github.com/divanshuattri123-dot/selective-options/actions/runs/37907490437",
+    "status": "completed",
+    "conclusion": "success"
+  },
+  "metadata_sha256": "4bf7d4a39810ddc071f3632d75bba0ad03eaff2efd85e7aad5089c54f5e76c20",
+  "original_archives": [
+    {
+      "id": 11604809966,
+      "name": "cloud-build-c362b94b2b01c0f74a6ecfd6cf5a4b703e5ced4e",
+      "bytes": 454114,
+      "sha256": "bf607818543d8c0911708afaace9da52673bb813f34e625e906bf4293889edb5",
+      "member_count": 26,
+      "recorded_head_sha": "c362b94b2b01c0f74a6ecfd6cf5a4b703e5ced4e"
+    },
+    {
+      "id": 11604734565,
+      "name": "cloud-container-c362b94b2b01c0f74a6ecfd6cf5a4b703e5ced4e",
+      "bytes": 4666,
+      "sha256": "93d493be45eeaf6645b3695bf154a5857501903f62ce30e5e92d3a789c2b2e4b",
+      "member_count": 6,
+      "recorded_head_sha": "c362b94b2b01c0f74a6ecfd6cf5a4b703e5ced4e"
+    }
+  ],
+  "linux_tests": {
+    "tests": 3715,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "collected": 3722,
+    "application_selected": 3650,
+    "migration_selected": 65,
+    "all_selected_case_identities_match_junit": true,
+    "excluded_cases": [
+      {
+        "nodeid": "tests/test_coinmetrics_audit.py::test_actual_module_cli_refuses_mock_and_does_not_create_output",
+        "reason": "This historical CLI regression launches the original work/.venv/Scripts/python.exe executable at tests/test_coinmetrics_audit.py:160, which is unavailable on Linux/macOS."
+      },
+      {
+        "nodeid": "tests/test_parallel_foundations_audit.py::test_intact_saved_proof_independent_audit_is_read_only",
+        "reason": "Immutable parallel-foundations report binds source_evidence to the original absolute Windows path; scripts/audit_parallel_foundations.py:681-684 refuses relocated source."
+      },
+      {
+        "nodeid": "tests/test_parallel_foundations_audit.py::test_semantic_bucket_corruption_refused_even_when_report_hash_updated",
+        "reason": "The preserved report's absolute Windows source_evidence check runs before the expected semantic corruption check; scripts/audit_parallel_foundations.py:681-684."
+      },
+      {
+        "nodeid": "tests/test_parallel_foundations_audit.py::test_changed_native_receipt_refused_before_success_report",
+        "reason": "The preserved report's absolute Windows source_evidence check runs before the expected native receipt check; scripts/audit_parallel_foundations.py:681-684."
+      },
+      {
+        "nodeid": "tests/test_parallel_foundations_audit.py::test_analytical_feature_corruption_refused",
+        "reason": "The preserved report's absolute Windows source_evidence check runs before the expected analytical feature check; scripts/audit_parallel_foundations.py:681-684."
+      },
+      {
+        "nodeid": "tests/test_parallel_foundations_audit.py::test_torn_trial_chain_refused",
+        "reason": "The preserved report's absolute Windows source_evidence check runs before the expected trial chain check; scripts/audit_parallel_foundations.py:681-684."
+      },
+      {
+        "nodeid": "tests/test_parallel_foundations_audit.py::test_overclaim_missing_piece_and_code_mismatch_refuse",
+        "reason": "The preserved report's absolute Windows source_evidence check runs before the expected frozen code check; scripts/audit_parallel_foundations.py:681-684."
+      }
+    ],
+    "blocked_network_attempts": []
+  },
+  "wheel": {
+    "version": "0.3.52",
+    "sha256": "7a359bc17fba77d0f046ac5b59d76bdc5bd365c62fd98d2a9fe72145e488cfdd",
+    "modules": 86,
+    "all_module_bytes_match_exact_git_commit": true,
+    "module_inventory_sha256": "d491ef5328c5650478251ddc9cf1b4b14ede0bc483c21cb412eea810447af14f"
+  },
+  "actual_sigterm": {
+    "scope": "Actual Linux OS SIGTERM to a finite child capture with mocked producers and two explicitly synthetic lifecycle fixture rows; not native market collector coverage",
+    "parent_signal_sent": true,
+    "child_exit_code": 0,
+    "durable_rows": 2,
+    "database_parquet_rows_equal": true,
+    "producer_cleanup_tail_event_id": "49883c09c73ce2aef1bd4531e44990dcf37df4d4edc3e8113464a238cca2f102",
+    "first_committed_event_id": "f56835a6d23be1f90c84be90e2f8c646d750ef99b3c74fb0017c38ba92719e9f",
+    "outbox_rows": 2,
+    "outbox_delivered": 0,
+    "original_handler_restored": true,
+    "sigint_handler_preserved": true,
+    "blocked_external_network_attempts": 0
+  },
+  "container": {
+    "status": "PASSED",
+    "image_id": "sha256:dda8c8844a16860fc62aff882d1fef862299713abffd9649f7115050e511c4e5",
+    "uid": 10001,
+    "named_volume_marker_persisted_across_two_containers": true,
+    "arming_exit_code": 2,
+    "runtime_network": "none",
+    "scope": "finite non-root container smoke and two-container named-volume persistence; no collector soak"
+  },
+  "checks": [
+    {
+      "check": "run_source_commit",
+      "passed": true
+    },
+    {
+      "check": "run_completed_successfully",
+      "passed": true
+    },
+    {
+      "check": "exact_source_commit_available",
+      "passed": true
+    },
+    {
+      "check": "artifact_11604809966_original_archive_hash_and_size",
+      "passed": true
+    },
+    {
+      "check": "artifact_11604809966_recorded_head_sha",
+      "passed": true
+    },
+    {
+      "check": "artifact_11604809966_unique_members_and_crc",
+      "passed": true
+    },
+    {
+      "check": "artifact_11604809966_exact_member_inventory",
+      "passed": true
+    },
+    {
+      "check": "artifact_11604809966_all_recorded_member_hashes",
+      "passed": true
+    },
+    {
+      "check": "artifact_11604809966_summary_source_and_success",
+      "passed": true
+    },
+    {
+      "check": "artifact_11604809966_extracted_summary_byte_identity",
+      "passed": true
+    },
+    {
+      "check": "artifact_11604734565_original_archive_hash_and_size",
+      "passed": true
+    },
+    {
+      "check": "artifact_11604734565_recorded_head_sha",
+      "passed": true
+    },
+    {
+      "check": "artifact_11604734565_unique_members_and_crc",
+      "passed": true
+    },
+    {
+      "check": "artifact_11604734565_exact_member_inventory",
+      "passed": true
+    },
+    {
+      "check": "artifact_11604734565_all_recorded_member_hashes",
+      "passed": true
+    },
+    {
+      "check": "artifact_11604734565_summary_source_and_success",
+      "passed": true
+    },
+    {
+      "check": "artifact_11604734565_extracted_summary_byte_identity",
+      "passed": true
+    },
+    {
+      "check": "linux_clean_git_provenance",
+      "passed": true
+    },
+    {
+      "check": "linux_platform_python",
+      "passed": true
+    },
+    {
+      "check": "all_build_step_exit_codes_zero",
+      "passed": true
+    },
+    {
+      "check": "summary_selection_identical",
+      "passed": true
+    },
+    {
+      "check": "all_private_evidence_prerequisites_verified",
+      "passed": true
+    },
+    {
+      "check": "evidence_manifest_exact_commit_hash",
+      "passed": true
+    },
+    {
+      "check": "dependency_locks_exact_commit_hashes",
+      "passed": true
+    },
+    {
+      "check": "scope_manifest_exact_commit_hash",
+      "passed": true
+    },
+    {
+      "check": "all_seven_exact_declared_windows_exclusions",
+      "passed": true
+    },
+    {
+      "check": "no_unexpected_skips_or_network_guard_attempts",
+      "passed": true
+    },
+    {
+      "check": "actual_junit_cases_match_every_selected_nodeid",
+      "passed": true
+    },
+    {
+      "check": "junit_actual_cases_and_declared_zero_nonpasses",
+      "passed": true
+    },
+    {
+      "check": "junit_summary_and_collection_totals",
+      "passed": true
+    },
+    {
+      "check": "wheel_original_hash",
+      "passed": true
+    },
+    {
+      "check": "all_86_wheel_modules_exact_commit_bytes",
+      "passed": true
+    },
+    {
+      "check": "source_module_inventory_hash",
+      "passed": true
+    },
+    {
+      "check": "wheel_package_version_exact_commit",
+      "passed": true
+    },
+    {
+      "check": "isolated_wheel_import_and_config",
+      "passed": true
+    },
+    {
+      "check": "sigterm_parent_retained_file_hashes",
+      "passed": true
+    },
+    {
+      "check": "actual_posix_signal_child_and_handler_evidence",
+      "passed": true
+    },
+    {
+      "check": "sigterm_case_actually_executed_in_junit",
+      "passed": true
+    },
+    {
+      "check": "sigterm_successful_capture_report",
+      "passed": true
+    },
+    {
+      "check": "sigterm_bound_database_archive_report_hashes",
+      "passed": true
+    },
+    {
+      "check": "sigterm_two_exact_database_parquet_rows_and_outbox",
+      "passed": true
+    },
+    {
+      "check": "sigterm_original_database_copy_unchanged_by_read",
+      "passed": true
+    },
+    {
+      "check": "sigterm_cleanup_fixture_tail_and_precise_scope",
+      "passed": true
+    },
+    {
+      "check": "sigterm_network_guard_report_and_trading_disabled",
+      "passed": true
+    },
+    {
+      "check": "container_exact_dockerfile_commit_hash",
+      "passed": true
+    },
+    {
+      "check": "container_image_id_build_log_binding",
+      "passed": true
+    },
+    {
+      "check": "container_uid10001_named_volume_two_container_persistence",
+      "passed": true
+    },
+    {
+      "check": "container_testnet_config_and_arm_refusal",
+      "passed": true
+    },
+    {
+      "check": "container_finite_no_soak_runtime_network_scope",
+      "passed": true
+    }
+  ],
+  "findings": [],
+  "limits": [
+    "Stored metadata and original archives were audited offline; no fresh GitHub/API query was made.",
+    "The seven exact historical Windows cases remain outside this Linux subset; the separate full Windows run was pending when this audit was requested and was not evaluated here.",
+    "Zero blocked external TCP/DNS attempts is the recorded Python-process guard result; build/install traffic and other processes/protocols are outside the worker guard.",
+    "SIGTERM proves finite process lifecycle and cleanup of explicitly synthetic fixture rows; it does not prove live native market transport, power-loss recovery, persistent hosting, current feed health or a collector soak.",
+    "The container check proves finite UID10001 configuration, named-volume persistence and arming refusal; it does not provision a service."
+  ],
+  "runtime_acceptance": "REQUIRES_ROOT_FULL_VALIDATION; this audit does not accept milestone 2, later strategy gates or live execution",
+  "trading_enabled": false,
+  "orders_submitted": 0
+}

@@ -1,0 +1,43 @@
+{
+  "repository": "divanshuattri123-dot/selective-options",
+  "private": true,
+  "source_commit": "c362b94b2b01c0f74a6ecfd6cf5a4b703e5ced4e",
+  "release_url": "https://github.com/divanshuattri123-dot/selective-options/releases/tag/v0.3.52",
+  "asset": {
+    "id": 624488463,
+    "url": "https://github.com/divanshuattri123-dot/selective-options/releases/download/v0.3.52/selective-options-0.3.52-evidence.zip",
+    "name": "selective-options-0.3.52-evidence.zip",
+    "bytes": 153732,
+    "sha256": "a776ce0e2feb07796219d8a535dafaec7cec545b8065af9f77ed7b5d39e3de58",
+    "release_tag": "v0.3.52"
+  },
+  "hosted_validation_archives": [
+    {
+      "id": 624488639,
+      "name": "cloud-build-c362b94.zip",
+      "bytes": 454114,
+      "sha256": "bf607818543d8c0911708afaace9da52673bb813f34e625e906bf4293889edb5",
+      "url": "https://github.com/divanshuattri123-dot/selective-options/releases/download/v0.3.52/cloud-build-c362b94.zip",
+      "original_artifact_id": 11604809966
+    },
+    {
+      "id": 624488845,
+      "name": "cloud-container-c362b94.zip",
+      "bytes": 4666,
+      "sha256": "93d493be45eeaf6645b3695bf154a5857501903f62ce30e5e92d3a789c2b2e4b",
+      "url": "https://github.com/divanshuattri123-dot/selective-options/releases/download/v0.3.52/cloud-container-c362b94.zip",
+      "original_artifact_id": 11604734565
+    },
+    {
+      "id": 624488993,
+      "name": "windows-checkpoint-c362b94.zip",
+      "bytes": 62139,
+      "sha256": "280a6a6a6c8e97542a28824513eb2246ce54346e8a01ff9c342a344f783a54e3",
+      "url": "https://github.com/divanshuattri123-dot/selective-options/releases/download/v0.3.52/windows-checkpoint-c362b94.zip",
+      "original_artifact_id": 11606245622
+    }
+  ],
+  "evidence_files_added": 16,
+  "trading_enabled": false,
+  "milestone_status": "PARTIAL"
+}

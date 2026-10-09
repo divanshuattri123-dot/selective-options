@@ -1,0 +1,20 @@
+{
+  "status": "PASSED",
+  "source_commit": "c362b94b2b01c0f74a6ecfd6cf5a4b703e5ced4e",
+  "scope": "Exact prepared native-proof ZIP restored with the production restore_entries helper into a fresh isolated work directory; every path/byte/hash verified before and after the second idempotent restore",
+  "native_files": 16,
+  "second_restore_files": 0,
+  "native_bytes": 21662559,
+  "archive_name": "selective-options-0.3.52-evidence.zip",
+  "archive_bytes": 153732,
+  "archive_sha256": "a776ce0e2feb07796219d8a535dafaec7cec545b8065af9f77ed7b5d39e3de58",
+  "restore_helper_sha256": "896ee30f29b438b525dd3b1092ded384d616aee59543cbb9d8ac37c46a2d33df",
+  "prepared_inventory_sha256": "c8cb61bcdd8816eac6eb08751605b37fd9db06544d2e7917657e94a4c7c2b729",
+  "verification_helper_sha256": "18482ce41d6cf0798ed62fc32c46f64ca76051ee0cd8622a32b113743a0db71c",
+  "native_paths_and_original_bytes_unchanged": true,
+  "restored_inventory_exact": true,
+  "fresh_isolated_destination": "C:/Users/Divan/Documents/Codex/2026-09-20/files-pasted-by-the-user-build/work/restore-0352-mrz8drgp",
+  "network_requests": 0,
+  "github_mutations": 0,
+  "trading_enabled": false
+}

@@ -4,7 +4,7 @@
 [Actions](https://github.com/divanshuattri123-dot/selective-options/actions) to run
 hosted builds and inspect results. [CLOUD_MIGRATION.md](CLOUD_MIGRATION.md) contains
 the exact mobile controls, portable setup and Codex Cloud instructions. Development
-currently continues in this local chat. The 0.3.51 hosted full Windows, portable
+currently continues in this local chat. The 0.3.52 hosted full Windows, portable
 Linux and container checks pass; continuous collector hosting remains unprovisioned.
 
 The system exists to place **very few trades with a large positive expected value**, not many trades with a good-looking win rate. It stays flat by default. It only fires when technical, volatility/flow, and fundamental/news evidence independently point the same direction at the same time, and when the options market is pricing that direction cheaply enough to pay for being right.
@@ -23,7 +23,7 @@ A 40% hit rate at 4R average winner beats an 85% hit rate at 0.3R. Optimise `E`,
 
 **Build status: milestone 1 readiness passed; milestone 2 ingestion pilot implemented and tested, but incomplete.** Authentication, maximum key permissions, account/connection cancel-on-disconnect, native refresh and authenticated discovery passed. An 11-minute capture stored 61,061 events, including 4,597 underlying trades and eight complete five-minute bars. A separate 10,707-event archive was restored and verified without changing its observation timestamps. No orders were placed. `arm` remains disabled in every profile.
 
-Version 0.3.52 adds opt-in periodic unfinished-bar generations during finite capture and offline Parkinson/Garman–Klass range-volatility research. Consistent collector boundaries and FIFO commits protect each explicitly selected snapshot; short native bar history retains warmup and partial-history refusals. See [RUNBOOK.md](RUNBOOK.md) and [RESEARCH.md](RESEARCH.md). Milestone 2 remains PARTIAL; current validation results are recorded in [VALIDATION_REPORT.md](VALIDATION_REPORT.md).
+Version 0.3.52 adds opt-in periodic unfinished-bar generations during finite capture and offline Parkinson/Garman–Klass range-volatility research. Consistent collector boundaries and FIFO commits protect each explicitly selected snapshot; short native bar history retains warmup and partial-history refusals. See [RUNBOOK.md](RUNBOOK.md) and [RESEARCH.md](RESEARCH.md). All 3,657 application tests and 65 migration cases pass; local coverage is 95.24%. Hosted full Windows, scoped Linux and container checks pass on the same source. Milestone 2 remains PARTIAL; validation and restore evidence are recorded in [VALIDATION_REPORT.md](VALIDATION_REPORT.md).
 
 Version 0.3.51 adds cooperative finite-capture stop and offline native put/call research. Four saved-data capture pipelines preserve 55 native trades and resume stopped bar state; a separate audit checks all 1,010 saved option members over 13 expiries. One zero-call-volume expiry remains unavailable, so the research report stays PARTIAL. All 3,426 application tests and 65 migration cases pass; local coverage is 95.19%. Full local and hosted verification results are recorded in [VALIDATION_REPORT.md](VALIDATION_REPORT.md). Development continues in this existing local chat after the Codex Cloud environment error. See [RUNBOOK.md](RUNBOOK.md) and [RESEARCH.md](RESEARCH.md) for the explicit stop and research commands.
 

@@ -1,0 +1,56 @@
+{
+  "status": "FAILED",
+  "source_commit": "c362b94b2b01c0f74a6ecfd6cf5a4b703e5ced4e",
+  "application_tests": 3657,
+  "passed": 3656,
+  "failed": 1,
+  "failure_node": "tests/test_periodic_bar_runtime.py::test_explicit_selected_generation_refuses_corruption_without_older_fallback[pending]",
+  "failure": "WinError 3 while creating inner checkpoint after outer parent creation and parent-is-dir check; failure-artifact write also found the outer directory missing. Failure precedes deliberate tampering.",
+  "cause": "UNDETERMINED; no source change or false success accepted. Focused reproduction and full repeat with private basetemp required.",
+  "elapsed_s": 888.438,
+  "coverage_percent": 95.24,
+  "files": [
+    {
+      "name": "source-freeze.json",
+      "bytes": 30087,
+      "sha256": "b35c3b0dfc408d3922d13a183748d8a1f0c6e614b929fa29f81f32972c3f7b35"
+    },
+    {
+      "name": "ruff.log",
+      "bytes": 19,
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    {
+      "name": "format.log",
+      "bytes": 28,
+      "sha256": "869436c8f05e15a33d8f0726ba55b59eaa224bc789f77c56ddd23cb7512c3f89"
+    },
+    {
+      "name": "mypy.log",
+      "bytes": 46,
+      "sha256": "4655baa132d62306c2599cdaba3a28c92702eed4d94418fabd2f14a499caa500"
+    },
+    {
+      "name": "config.log",
+      "bytes": 135,
+      "sha256": "6b5541afab1b4740daf2cc6a7568fd1100d898e37c5912643438001811df3d67"
+    },
+    {
+      "name": "pytest.log",
+      "bytes": 31465,
+      "sha256": "a36fa4726a87bd5c56a615d05d6ad137464f34a37f98013a308c88ccd1e5aaf3"
+    },
+    {
+      "name": "pytest.xml",
+      "bytes": 504366,
+      "sha256": "a6c4d832dbd5778d4870d56280204d78f1234d91fad023d38bbdf8c162669229"
+    },
+    {
+      "name": "coverage.json",
+      "bytes": 884378,
+      "sha256": "063548b8e1a1ab74d2ec4a8e68e4746629798130234a8302b0235ed5b6421c77"
+    }
+  ],
+  "trading_enabled": false,
+  "milestone_status": "PARTIAL"
+}
