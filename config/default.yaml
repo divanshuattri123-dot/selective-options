@@ -66,6 +66,8 @@ ingestion:
   bar_lateness_s: 5  # Wait after a candle closes before emitting it; later unexpected trades halt capture instead of revising history silently.
   bar_checkpoint_on_stop: false  # Opt in to a committed native-input bar checkpoint after producers stop and the writer drains; this is not periodic crash recovery.
   bar_checkpoint_max_events: 10000  # Maximum exact union of open-bar native inputs and sequence anchors for optional bar checkpoints/resume; overflow refuses before publication.
+  bar_checkpoint_interval_s: null  # Opt in to gated, FIFO-committed immutable open-bar generations during finite capture; null disables. This does not certify whole-source continuity or power-loss recovery.
+  bar_checkpoint_max_generations: 32  # Maximum published periodic bar generations per finite capture; exhaustion halts instead of overwriting or silently dropping recovery evidence.
   eth_gas_enabled: false  # Opt in to public Ethereum mainnet finalized-block gas samples; read-only.
   eth_gas_provider: publicnode  # Explicit public no-key Ethereum RPC provider; source identities and restart checkpoints remain provider-scoped, with no automatic fallback.
   solana_network_enabled: false  # Opt in to read-only public Solana performance and visible vote-account activated stake; no transactions.

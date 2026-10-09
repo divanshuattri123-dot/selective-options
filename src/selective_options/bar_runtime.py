@@ -1,8 +1,9 @@
-"""Explicit stopped-capture bar save and already-verified seed installation.
+"""Explicit stopped or mutation-gated bar save and verified seed installation.
 
-Callers stop and drain every producer and writer before saving. This layer binds
-the collector's prospective consumed-input ledger to the committed checkpoint;
-it never guesses membership from arbitrary stored historical trades.
+The stopped API requires drained producers and writer; the active API owns the
+collector mutation gate and FIFO writer barrier. Both bind the prospective
+consumed-input ledger to committed rows, without guessing membership from stored
+historical trades or certifying whole-source/crash recovery.
 """
 
 from pathlib import Path
@@ -14,15 +15,14 @@ from .bar_checkpoint import (
     validate_bar_resume,
 )
 from .bar_state import decode_bar_state, encode_bar_state, restore_bar_state
+from .bus import EventBus
+from .collectors import now_ms
 from .errors import IntegrityError
 from .spot_trades import SpotTradeCollector, TradeSequence, stored_trade
 from .store import DuckStore
 
 
-async def save_collector_bar_checkpoint(
-    collector: SpotTradeCollector, store: DuckStore, output: Path, as_of_ms: int
-) -> dict[str, object]:
-    """Save only after stopped producers and a successful durable writer drain."""
+def _collector_ready(collector: SpotTradeCollector) -> None:
     if not collector.track_bar_inputs:
         raise IntegrityError("BAR_CHECKPOINT_TRACKING_DISABLED")
     if collector._emission_failed:
@@ -40,8 +40,7 @@ async def save_collector_bar_checkpoint(
         collector.bars
     ):
         raise IntegrityError("BAR_CHECKPOINT_AMBIGUOUS_BOOK_FRONTIER")
-    books = []
-    for symbol, builder in sorted(collector.bars.items()):
+    for symbol in collector.bars:
         tail = collector.last_events[symbol]
         if (
             tail.symbol != symbol
@@ -49,6 +48,13 @@ async def save_collector_bar_checkpoint(
             or collector.sequences[symbol].last != stored_trade(tail).trade_id
         ):
             raise IntegrityError("BAR_CHECKPOINT_SEQUENCE_TAIL_MISMATCH")
+
+
+def _collector_books(collector: SpotTradeCollector, as_of_ms: int) -> tuple[CheckpointBook, ...]:
+    _collector_ready(collector)
+    books = []
+    for symbol, builder in sorted(collector.bars.items()):
+        tail = collector.last_events[symbol]
         books.append(
             CheckpointBook(
                 state_blob=encode_bar_state(builder, as_of_ms),
@@ -56,13 +62,43 @@ async def save_collector_bar_checkpoint(
                 tail_event=tail,
             )
         )
+    return tuple(books)
+
+
+async def save_collector_bar_checkpoint(
+    collector: SpotTradeCollector, store: DuckStore, output: Path, as_of_ms: int
+) -> dict[str, object]:
+    """Save only after stopped producers and a successful durable writer drain."""
     return await create_bar_checkpoint(
         store,
         output,
-        tuple(books),
+        _collector_books(collector, as_of_ms),
         as_of_ms,
         max_events=collector.bar_input_limit,
     )
+
+
+async def save_active_collector_bar_checkpoint(
+    collector: SpotTradeCollector, bus: EventBus, store: DuckStore, output: Path
+) -> dict[str, object]:
+    """Freeze complete local batches, flush the writer, then save exact consumed inputs.
+
+    Lock order is collector gate -> FIFO barrier -> store lock. This first bounded
+    implementation holds the gate through immutable validation/publication too;
+    it makes no producer throughput or lock-duration guarantee. The writer stays
+    available, and the existing checkpoint worker drains before releasing the
+    gate on cancellation. Feed health and whole-source/crash recovery remain unproven.
+    """
+    async with collector.bar_checkpoint_lock:
+        # Recheck after acquisition; suspension/poison may have changed while
+        # waiting for a complete producer emission and frontier installation.
+        _collector_ready(collector)
+        await bus.flush()
+        cutoff = now_ms()
+        books = _collector_books(collector, cutoff)
+        return await create_bar_checkpoint(
+            store, output, books, cutoff, max_events=collector.bar_input_limit
+        )
 
 
 def install_bar_resume(
@@ -87,6 +123,7 @@ def install_bar_resume(
         or collector.repairing
         or collector.pending_frames
         or collector.recovery_lock.locked()
+        or collector.bar_checkpoint_lock.locked()
         or collector._emission_failed
     ):
         raise IntegrityError("BAR_CHECKPOINT_COLLECTOR_MUST_BE_FRESH")

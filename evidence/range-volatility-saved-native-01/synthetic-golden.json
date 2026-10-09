@@ -1,0 +1,419 @@
+{
+  "data_kind": "synthetic_analytical_golden",
+  "checks": {
+    "materialized_rows": 3,
+    "selected_bars": 3,
+    "complete_bars": 3,
+    "partial_bars": 0,
+    "blockers": [],
+    "windows": [
+      {
+        "window": 2,
+        "state": "AVAILABLE",
+        "reason": null,
+        "values": {
+          "parkinson": {
+            "decimal_variance_per_bar": "0.0536598233651835665332774521849684158029587549661651912323374448148095575478538313935282739382196916",
+            "decimal_annualized_volatility": "75.10473109031212365184988210114790894191484914347691660529527959382535429402722822781294229278362661",
+            "reported_variance_per_bar": 0.053659823365183566,
+            "reported_annualized_volatility": 75.10473109031213
+          },
+          "garman_klass": {
+            "decimal_variance_per_bar": "0.04797628465296041739405841123309225734928671088427516801394602412748192694192097744536328947921292528",
+            "decimal_annualized_volatility": "71.01596329501698082604611876562875597624848051315026712784993725612845528118607428175978030389908544",
+            "reported_variance_per_bar": 0.04797628465296043,
+            "reported_annualized_volatility": 71.01596329501699
+          }
+        }
+      },
+      {
+        "window": 3,
+        "state": "AVAILABLE",
+        "reason": null,
+        "values": {
+          "parkinson": {
+            "decimal_variance_per_bar": "0.0406145067612400767208362793229640427681386360390773142455996851061790374243932407354080684453418324",
+            "decimal_annualized_volatility": "65.34062251571802147008358761424389208303076150203245480151340925864514622319520777241589073897758207",
+            "reported_variance_per_bar": 0.04061450676124007,
+            "reported_annualized_volatility": 65.34062251571802
+          },
+          "garman_klass": {
+            "decimal_variance_per_bar": "0.0383891224225207023039277563052937310928822494335400689102111038254042148430106300557793008079386627",
+            "decimal_annualized_volatility": "63.52530636726891241816632661312760317235359620920766422039581220038041581161000003796368614457416938",
+            "reported_variance_per_bar": 0.03838912242252071,
+            "reported_annualized_volatility": 63.52530636726892
+          }
+        }
+      },
+      {
+        "window": 20,
+        "state": "WARMUP",
+        "reason": "INSUFFICIENT_CLOSED_BARS",
+        "values": {}
+      }
+    ],
+    "preserved_rows": [
+      {
+        "event_id": "6a70f73e83b8ca93b89129f2d6b83cdf9e080d47e7fd43c83f89349dec3afd0b",
+        "source": "synthetic_fixture",
+        "environment": "public_reference",
+        "asset": "BTC",
+        "symbol": "FIXTURE-BTC/USD",
+        "kind": "bar",
+        "event_time_ms": 300000,
+        "observed_at_ms": 300010,
+        "timestamp_kind": "source",
+        "schema_version": 1,
+        "payload_json": "{\"close\":105.0,\"close_time_ms\":300000,\"closed\":true,\"complete\":true,\"high\":110.0,\"low\":90.0,\"open\":100.0,\"open_time_ms\":0,\"timeframe_s\":300,\"trade_count\":5,\"volume\":10.0}"
+      },
+      {
+        "event_id": "5fbd759f2283ee46cfc5c9940d74a44119b640f3e42916adef325cb396dfc8cb",
+        "source": "synthetic_fixture",
+        "environment": "public_reference",
+        "asset": "BTC",
+        "symbol": "FIXTURE-BTC/USD",
+        "kind": "bar",
+        "event_time_ms": 600000,
+        "observed_at_ms": 600010,
+        "timestamp_kind": "source",
+        "schema_version": 1,
+        "payload_json": "{\"close\":120.0,\"close_time_ms\":600000,\"closed\":true,\"complete\":true,\"high\":130.0,\"low\":95.0,\"open\":105.0,\"open_time_ms\":300000,\"timeframe_s\":300,\"trade_count\":5,\"volume\":10.0}"
+      },
+      {
+        "event_id": "6a915e293f8f935dadd6b9af5930cb3719de16399342a31a389ea0cf5982703c",
+        "source": "synthetic_fixture",
+        "environment": "public_reference",
+        "asset": "BTC",
+        "symbol": "FIXTURE-BTC/USD",
+        "kind": "bar",
+        "event_time_ms": 900000,
+        "observed_at_ms": 900010,
+        "timestamp_kind": "source",
+        "schema_version": 1,
+        "payload_json": "{\"close\":85.0,\"close_time_ms\":900000,\"closed\":true,\"complete\":true,\"high\":125.0,\"low\":80.0,\"open\":120.0,\"open_time_ms\":600000,\"timeframe_s\":300,\"trade_count\":5,\"volume\":10.0}"
+      }
+    ]
+  },
+  "range_volatility_report": {
+    "formula_version": "range-volatility-v1",
+    "state": "RANGE_VOLATILITY_COMPUTED",
+    "base": {
+      "formula_version": "closed-bars-v1",
+      "state": "FEATURES_COMPUTED",
+      "asset": "BTC",
+      "environment": "public_reference",
+      "source": "synthetic_fixture",
+      "symbol": "FIXTURE-BTC/USD",
+      "timeframe_s": 300,
+      "as_of_ms": 900010,
+      "history_budget": 2000,
+      "bars_available": 3,
+      "bars_used": 3,
+      "first_close_ms": 300000,
+      "latest_close_ms": 900000,
+      "latest_bar_age_ms": 10,
+      "max_latest_age_ms": 600000,
+      "history_sha256": "76fefb1e582b9c8cd3ee930080bb9e932fdf9eed6c10b9bee1b3ba1938ea8973",
+      "annualization_periods_per_year": 105120.0,
+      "blockers": [],
+      "features": [
+        {
+          "name": "ema_8",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "price",
+          "bars_required": 8,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "ema_8_slope",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "price_per_bar",
+          "bars_required": 9,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "ema_21",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "price",
+          "bars_required": 21,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "ema_21_slope",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "price_per_bar",
+          "bars_required": 22,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "ema_50",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "price",
+          "bars_required": 50,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "ema_50_slope",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "price_per_bar",
+          "bars_required": 51,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "ema_200",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "price",
+          "bars_required": 200,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "ema_200_slope",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "price_per_bar",
+          "bars_required": 201,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "rsi_14",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "index_0_to_100",
+          "bars_required": 15,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "atr_14",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "price",
+          "bars_required": 15,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "macd_12_26",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "price",
+          "bars_required": 26,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "macd_signal_9",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "price",
+          "bars_required": 34,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "macd_histogram",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "price",
+          "bars_required": 34,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "bollinger_width_20",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "fraction",
+          "bars_required": 20,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "roc_5",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "fraction",
+          "bars_required": 6,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "roc_20",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "fraction",
+          "bars_required": 21,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "realized_vol_20",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "annualized_log_return_std",
+          "bars_required": 21,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "realized_vol_60",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "annualized_log_return_std",
+          "bars_required": 61,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        }
+      ],
+      "history_truncated": false,
+      "source_frontier_complete": false,
+      "ready_for_signals": false,
+      "trading_enabled": false
+    },
+    "windows": [
+      2,
+      3,
+      20
+    ],
+    "features": [
+      {
+        "name": "parkinson_variance_per_bar_2",
+        "state": "AVAILABLE",
+        "value": 0.053659823365183566,
+        "unit": "log_return_variance_per_bar",
+        "bars_required": 2,
+        "reason": null
+      },
+      {
+        "name": "parkinson_vol_2",
+        "state": "AVAILABLE",
+        "value": 75.10473109031213,
+        "unit": "annualized_log_return_std",
+        "bars_required": 2,
+        "reason": null
+      },
+      {
+        "name": "garman_klass_variance_per_bar_2",
+        "state": "AVAILABLE",
+        "value": 0.04797628465296043,
+        "unit": "log_return_variance_per_bar",
+        "bars_required": 2,
+        "reason": null
+      },
+      {
+        "name": "garman_klass_vol_2",
+        "state": "AVAILABLE",
+        "value": 71.01596329501699,
+        "unit": "annualized_log_return_std",
+        "bars_required": 2,
+        "reason": null
+      },
+      {
+        "name": "parkinson_variance_per_bar_3",
+        "state": "AVAILABLE",
+        "value": 0.04061450676124007,
+        "unit": "log_return_variance_per_bar",
+        "bars_required": 3,
+        "reason": null
+      },
+      {
+        "name": "parkinson_vol_3",
+        "state": "AVAILABLE",
+        "value": 65.34062251571802,
+        "unit": "annualized_log_return_std",
+        "bars_required": 3,
+        "reason": null
+      },
+      {
+        "name": "garman_klass_variance_per_bar_3",
+        "state": "AVAILABLE",
+        "value": 0.03838912242252071,
+        "unit": "log_return_variance_per_bar",
+        "bars_required": 3,
+        "reason": null
+      },
+      {
+        "name": "garman_klass_vol_3",
+        "state": "AVAILABLE",
+        "value": 63.52530636726892,
+        "unit": "annualized_log_return_std",
+        "bars_required": 3,
+        "reason": null
+      },
+      {
+        "name": "parkinson_variance_per_bar_20",
+        "state": "WARMUP",
+        "value": null,
+        "unit": "log_return_variance_per_bar",
+        "bars_required": 20,
+        "reason": "INSUFFICIENT_CLOSED_BARS"
+      },
+      {
+        "name": "parkinson_vol_20",
+        "state": "WARMUP",
+        "value": null,
+        "unit": "annualized_log_return_std",
+        "bars_required": 20,
+        "reason": "INSUFFICIENT_CLOSED_BARS"
+      },
+      {
+        "name": "garman_klass_variance_per_bar_20",
+        "state": "WARMUP",
+        "value": null,
+        "unit": "log_return_variance_per_bar",
+        "bars_required": 20,
+        "reason": "INSUFFICIENT_CLOSED_BARS"
+      },
+      {
+        "name": "garman_klass_vol_20",
+        "state": "WARMUP",
+        "value": null,
+        "unit": "annualized_log_return_std",
+        "bars_required": 20,
+        "reason": "INSUFFICIENT_CLOSED_BARS"
+      }
+    ],
+    "window_references": [
+      {
+        "window": 2,
+        "bars_available": 3,
+        "bars_used": 2,
+        "first_open_ms": 300000,
+        "first_close_ms": 600000,
+        "latest_close_ms": 900000,
+        "history_sha256": "9b1657de15e1a4123d7c2e83270da649b2fe033ce1510c73c25c515479f27914"
+      },
+      {
+        "window": 3,
+        "bars_available": 3,
+        "bars_used": 3,
+        "first_open_ms": 0,
+        "first_close_ms": 300000,
+        "latest_close_ms": 900000,
+        "history_sha256": "76fefb1e582b9c8cd3ee930080bb9e932fdf9eed6c10b9bee1b3ba1938ea8973"
+      },
+      {
+        "window": 20,
+        "bars_available": 3,
+        "bars_used": 0,
+        "first_open_ms": null,
+        "first_close_ms": null,
+        "latest_close_ms": null,
+        "history_sha256": null
+      }
+    ],
+    "input_event_ids": [
+      "6a70f73e83b8ca93b89129f2d6b83cdf9e080d47e7fd43c83f89349dec3afd0b",
+      "5fbd759f2283ee46cfc5c9940d74a44119b640f3e42916adef325cb396dfc8cb",
+      "6a915e293f8f935dadd6b9af5930cb3719de16399342a31a389ea0cf5982703c"
+    ],
+    "windows_are_bar_counts": true,
+    "zero_drift_diffusion_assumed": true,
+    "zero_drift_verified": false,
+    "continuous_extrema_verified": false,
+    "opening_jumps_modelled": false,
+    "sampling_bias_corrected": false,
+    "annualization_calendar_verified": false,
+    "current_feed_health_verified": false,
+    "source_frontier_complete": false,
+    "ready_for_signals": false,
+    "trading_enabled": false
+  }
+}

@@ -7,6 +7,7 @@ from typing import Any
 
 from .active_rotation import rotate_active_store
 from .bus import EventBus
+from .capture_lifecycle import cancelled_worker_failure
 from .collectors import now_ms
 from .config import AppConfig
 from .errors import IntegrityError
@@ -114,17 +115,31 @@ class RotationRuntime:
                 self.status = "WAITING"
             self.status = "STOPPED"
         except BaseException as exc:
-            if isinstance(exc, asyncio.CancelledError) and self.stopped.is_set():
+            drained_failure = (
+                cancelled_worker_failure(exc) if isinstance(exc, asyncio.CancelledError) else None
+            )
+            effective = drained_failure if drained_failure is not None else exc
+            if (
+                isinstance(exc, asyncio.CancelledError)
+                and drained_failure is None
+                and self.stopped.is_set()
+            ):
                 self.status = "STOPPED"
             else:
                 self.status = "FAILED"
-                self.failure_type = type(exc).__name__
+                self.failure_type = type(effective).__name__
             if self.last_attempt is not None and self.last_attempt.get("status") == "IN_PROGRESS":
                 self.last_attempt = {
                     **self.last_attempt,
-                    "status": "CANCELLED" if isinstance(exc, asyncio.CancelledError) else "FAILED",
-                    "failure_type": type(exc).__name__,
+                    "status": "CANCELLED"
+                    if isinstance(effective, asyncio.CancelledError)
+                    else "FAILED",
+                    "failure_type": type(effective).__name__,
                 }
+            if drained_failure is not None:
+                raise IntegrityError(
+                    "ARCHIVE_ROTATION_CANCELLATION_DRAIN_FAILURE"
+                ) from drained_failure
             raise
 
     def summary(self) -> dict[str, object]:

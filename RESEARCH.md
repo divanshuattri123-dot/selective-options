@@ -1,5 +1,28 @@
 # Offline research foundations
 
+Version 0.3.52 adds Parkinson and practical Garman–Klass OHLC range-volatility estimates through `research-range-volatility`. These read-only estimators use complete contiguous bars and explicit bar-count windows; missing data, warmup, numerical collapse and unavailable annualization remain visible. M2 and later strategy acceptance remain incomplete.
+
+## OHLC range-volatility research
+
+Supply a closed database, both-clock cutoff, exact asset/environment/source/symbol/timeframe, explicit windows and maximum latest-bar age. The command uses the same complete-history audit as `research-features`; an incomplete or gappy prefix cannot be silently trimmed to rescue a tail window. An explicit `--history-start-ms` selects a narrower history and is recorded in the report. History over the row budget refuses rather than truncating. Input hashes and per-window event references bind the exact saved rows; the source remains read-only and the output directory must be new.
+
+```powershell
+selective-options research-range-volatility `
+  --database CLOSED_CAPTURE/events.duckdb --output NEW_RANGE_RESULT `
+  --asset BTC --environment public_reference --source kraken `
+  --symbol BTC/USD --timeframe-s 300 --as-of-ms EXPLICIT_CUTOFF_MS `
+  --windows 2 3 20 --max-latest-age-ms 300000 --max-bars 2000 `
+  --annualization-periods-per-year 105120
+```
+
+The `2 3 20` values are complete bar counts, not days. The annualization value above is an explicit 365 × 24 × 12 assumption for five-minute bars; the program does not verify that calendar or infer it from the asset. Omitting the annualization argument keeps raw variance available while withholding annualized volatility. A complete-history report can still contain individual WARMUP or UNAVAILABLE values.
+
+For each bar, Parkinson variance is `ln(H/L)^2 / (4 ln 2)`. Practical Garman–Klass variance is `0.5 ln(H/L)^2 − (2 ln 2 − 1) ln(C/O)^2`. The reported window variance is the arithmetic mean of those per-bar contributions; annualized volatility is `sqrt(mean_variance × explicit_periods_per_year)`. These are the formulas in the [original Parkinson paper](https://www.cmegroup.com/trading/fx/files/michael_parkinson.pdf) and equation 19a of the [original Garman–Klass paper](https://www.cmegroup.com/trading/fx/files/a_estimation_of_security_price.pdf).
+
+The estimators assume a zero-drift continuous diffusion. They do not model opening jumps or correct discrete-extrema/microstructure bias. Stored contiguous intervals do not establish continuous trading or the true intrabar extrema. Stable log ratios preserve nearby large prices; nonfinite values, negative contributions and nonzero arithmetic collapsing to zero are refused. No feature is a signal, validated edge or trading approval.
+
+Saved native proof uses the two complete contiguous BTC five-minute bars from `evidence/ingestion-pilot-04/` with an explicitly recorded inclusive history start. Window 2 can be calculated; windows 3 and 20 remain in warmup. The earlier partial prefix stays unavailable when included. Separate Decimal reference calculations use clearly labelled synthetic bars. See `evidence/range-volatility-saved-native-01/` after validation; this short sample does not certify the required 7/14/30-day research history.
+
 Version 0.3.51 adds read-only native option put/call ratios by open interest and rolling 24-hour volume, per expiry and across a complete discovered cohort. The API and CLI retain native base-currency amounts, exact rational arithmetic, both clocks and explicit unavailable results; they do not convert amounts into contract counts or generate signals. The saved BTC testnet result is partial because one expiry has a zero call-volume denominator. Ingestion remains M2 PARTIAL, and later milestone acceptance remains gated.
 
 Version 0.3.50 adds a read-only discrete delta risk-reversal research view while ingestion work continues. It computes call minus put mark implied volatility in native percentage points from signed nearest-delta contracts for each expiry; it rejects tied selections, stale or invalid members, mismatched references, incomplete discovery, and lookahead. It does not interpolate or authorize signals. The finite saved-testnet replay contains an unvalidated 119.63-point observation, preserved without clipping; see the evidence and limitations below. Milestone acceptance still follows the specification: M2 is partial, the full feature and backtester milestones are incomplete, and the package cannot submit orders.

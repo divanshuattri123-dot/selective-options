@@ -1,5 +1,11 @@
 # Validation report — foundation and partial ingestion
 
+
+
+## Version 0.3.52 validation
+
+The final source adds periodic OPEN-bar generations, range-volatility research and the two independently reproduced checkpoint/shutdown fixes. Focused tests and saved-native verifiers pass. Complete frozen local and exact-commit hosted results are pending in `evidence/full-suite-0.3.52/`; this pending increment does not supersede the completed .51 acceptance recorded below. M2 remains PARTIAL and trading stays disabled.
+
 ## Local continuation 0.3.51 (8 October 2026)
 
 The frozen .51 local run passes all 3,426 application tests with 95.19% combined statement/branch coverage and all 65 migration-helper cases, with zero failures/errors/skips. The unchanged 258 Python source/test files match the final fingerprint; Ruff lint/format and strict mypy (130 configured files) pass. On exact source commit `3cca5bbcc97ee7708d1bdf8bf962f30486329501`, hosted Windows run 37813118994 passes the complete 3,426 application plus 65 migration cases; Linux/container run 37813119008 passes 3,484 selected cases with seven declared historical Windows exclusions, zero failures/errors/skips and no blocked external network attempts. The isolated 0.3.51 wheel matches all 83 source modules. Actual POSIX child-process SIGTERM delivery passes, including committed readiness, a drained producer-cleanup tail, two exact durable rows and restored handlers. Non-root container configuration, named-volume persistence and arming refusal pass.

@@ -13,7 +13,26 @@ from contextlib import contextmanager
 from types import FrameType
 from typing import Literal
 
+from .errors import IntegrityError
+
 StopReason = Literal["OPERATOR", "SIGTERM"]
+
+
+def cancelled_worker_failure(error: asyncio.CancelledError) -> BaseException | None:
+    """Retain an explicit drained worker error hidden by caller cancellation.
+
+    Pure cancellation has no worker failure. Thread-drain helpers preserve a
+    worker's error as an explicit cause; gather(return_exceptions=True) on a
+    cancelled Task can discard that cause, so classify inside its direct await.
+    """
+    current: BaseException | None = error
+    visited: set[int] = set()
+    while isinstance(current, asyncio.CancelledError):
+        if id(current) in visited:
+            return IntegrityError("CAPTURE_CANCELLATION_CAUSE_CYCLE")
+        visited.add(id(current))
+        current = current.__cause__
+    return current
 
 
 def _supports_sigterm() -> bool:

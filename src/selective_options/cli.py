@@ -17,6 +17,7 @@ from .logging import configure_logging
 from .option_flow_research import research_option_flow
 from .option_skew_research import research_option_skew
 from .options_research import research_options
+from .range_volatility_research import research_range_volatility
 from .recovery import replay_store
 from .research import research_backtest, research_features
 from .rotation_restore import restore_rotation
@@ -158,6 +159,25 @@ def parser() -> argparse.ArgumentParser:
     features_parser.add_argument("--include-trend", action="store_true")
     features_parser.add_argument("--percentile-window", type=int, default=100)
     features_parser.add_argument("--percentile-min-history", type=int, default=20)
+    range_parser = commands.add_parser(
+        "research-range-volatility",
+        help="Offline Parkinson/Garman-Klass OHLC estimators; cannot trade",
+    )
+    range_parser.add_argument("--database", type=Path, required=True)
+    range_parser.add_argument("--output", type=Path, required=True)
+    range_parser.add_argument("--asset", required=True)
+    range_parser.add_argument(
+        "--environment", choices=("testnet", "public_reference"), required=True
+    )
+    range_parser.add_argument("--source", required=True)
+    range_parser.add_argument("--symbol", required=True)
+    range_parser.add_argument("--timeframe-s", type=int, required=True)
+    range_parser.add_argument("--as-of-ms", type=int, required=True)
+    range_parser.add_argument("--windows", type=int, nargs="+", required=True)
+    range_parser.add_argument("--max-latest-age-ms", type=int, required=True)
+    range_parser.add_argument("--max-bars", type=int, default=2000)
+    range_parser.add_argument("--history-start-ms", type=int, default=None)
+    range_parser.add_argument("--annualization-periods-per-year", type=float, default=None)
     options_parser = commands.add_parser(
         "research-options",
         help="Offline native ATM-IV term structure with explicit policies; cannot trade",
@@ -337,6 +357,27 @@ def main() -> int:
                         include_trend=args.include_trend,
                         percentile_window=args.percentile_window,
                         percentile_min_history=args.percentile_min_history,
+                    ),
+                    indent=2,
+                )
+            )
+        elif args.command == "research-range-volatility":
+            print(
+                json.dumps(
+                    research_range_volatility(
+                        args.database,
+                        args.output,
+                        asset=args.asset,
+                        environment=args.environment,
+                        source=args.source,
+                        symbol=args.symbol,
+                        timeframe_s=args.timeframe_s,
+                        as_of_ms=args.as_of_ms,
+                        windows=tuple(args.windows),
+                        max_latest_age_ms=args.max_latest_age_ms,
+                        max_bars=args.max_bars,
+                        annualization_periods_per_year=args.annualization_periods_per_year,
+                        history_start_ms=args.history_start_ms,
                     ),
                     indent=2,
                 )

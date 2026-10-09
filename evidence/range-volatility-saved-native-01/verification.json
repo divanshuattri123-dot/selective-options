@@ -1,0 +1,364 @@
+{
+  "status": "SAVED_BAR_RANGE_VOLATILITY_AUDIT_PASSED",
+  "source_database": "C:\\Users\\Divan\\Documents\\Codex\\2026-09-20\\files-pasted-by-the-user-build\\outputs\\selective-options\\evidence\\ingestion-pilot-04\\events.duckdb",
+  "source_database_sha256": "691fd0d9e9b36544b4844d3743fe5941c144d7b7e365ee695872d5660891393b",
+  "data_kind": "saved_native_capture",
+  "as_of_ms": 1790002505185,
+  "source_scopes": [
+    {
+      "materialized_rows": 4,
+      "selected_bars": 3,
+      "complete_bars": 2,
+      "partial_bars": 1,
+      "blockers": [
+        "INCOMPLETE_BAR"
+      ],
+      "windows": [
+        {
+          "window": 2,
+          "state": "UNAVAILABLE",
+          "reason": "INCOMPLETE_BAR",
+          "values": {}
+        },
+        {
+          "window": 3,
+          "state": "UNAVAILABLE",
+          "reason": "INCOMPLETE_BAR",
+          "values": {}
+        },
+        {
+          "window": 20,
+          "state": "UNAVAILABLE",
+          "reason": "INCOMPLETE_BAR",
+          "values": {}
+        }
+      ],
+      "preserved_rows": [
+        {
+          "event_id": "7de22cc141a72ff763652e304de6874f1aa79abcc51ace5ade8f05ab093df007",
+          "source": "kraken",
+          "environment": "public_reference",
+          "asset": "BTC",
+          "symbol": "BTC/USD",
+          "kind": "bar",
+          "event_time_ms": 1790001900000,
+          "observed_at_ms": 1790001905253,
+          "timestamp_kind": "source",
+          "schema_version": 1,
+          "payload_json": "{\"aggregation_version\":1,\"close\":85772.1,\"close_time_ms\":1790001900000,\"closed\":true,\"complete\":false,\"coverage_start_ms\":1790001879250,\"high\":85780.5,\"lateness_ms\":5000,\"low\":85748.2,\"open\":85760.6,\"open_time_ms\":1790001600000,\"timeframe_s\":300,\"trade_count\":114,\"volume\":1.69717785,\"volume_unit\":\"base_asset\"}"
+        },
+        {
+          "event_id": "207b61d89e707b293e1879864e0fd5c87778fc4d653b37d59c607104679aaf70",
+          "source": "kraken",
+          "environment": "public_reference",
+          "asset": "BTC",
+          "symbol": "BTC/USD",
+          "kind": "bar",
+          "event_time_ms": 1790002200000,
+          "observed_at_ms": 1790002205160,
+          "timestamp_kind": "source",
+          "schema_version": 1,
+          "payload_json": "{\"aggregation_version\":1,\"close\":85969.0,\"close_time_ms\":1790002200000,\"closed\":true,\"complete\":true,\"coverage_start_ms\":1790001879250,\"high\":85977.4,\"lateness_ms\":5000,\"low\":85688.5,\"open\":85773.0,\"open_time_ms\":1790001900000,\"timeframe_s\":300,\"trade_count\":803,\"volume\":17.07447173,\"volume_unit\":\"base_asset\"}"
+        },
+        {
+          "event_id": "5fa3a97a0ffcfcfeda78728a1443ddfb5ac81ce103444f1b12aba54419512817",
+          "source": "kraken",
+          "environment": "public_reference",
+          "asset": "BTC",
+          "symbol": "BTC/USD",
+          "kind": "bar",
+          "event_time_ms": 1790002500000,
+          "observed_at_ms": 1790002505185,
+          "timestamp_kind": "source",
+          "schema_version": 1,
+          "payload_json": "{\"aggregation_version\":1,\"close\":86052.9,\"close_time_ms\":1790002500000,\"closed\":true,\"complete\":true,\"coverage_start_ms\":1790001879250,\"high\":86100.0,\"lateness_ms\":5000,\"low\":85954.7,\"open\":85974.4,\"open_time_ms\":1790002200000,\"timeframe_s\":300,\"trade_count\":1423,\"volume\":70.9700024,\"volume_unit\":\"base_asset\"}"
+        }
+      ],
+      "explicit_history_start_ms": null,
+      "data_kind": "saved_native_capture"
+    },
+    {
+      "materialized_rows": 2,
+      "selected_bars": 2,
+      "complete_bars": 2,
+      "partial_bars": 0,
+      "blockers": [],
+      "windows": [
+        {
+          "window": 2,
+          "state": "AVAILABLE",
+          "reason": null,
+          "values": {
+            "parkinson": {
+              "decimal_variance_per_bar": "0.000002557468542648728753279177036518167444653799824280725132350828742886656289337031276872428031088716942",
+              "decimal_annualized_volatility": "0.5184988844763644875248988627562120630707045942550663244302919901914954563028322967518843917004850342",
+              "reported_variance_per_bar": 2.5574685426486677e-06,
+              "reported_annualized_volatility": 0.5184988844763583
+            },
+            "garman_klass": {
+              "decimal_variance_per_bar": "0.000002378273039833836850838830926314636731308869951393369724513127688163372848408268567315097257560823078",
+              "decimal_annualized_volatility": "0.5000040619308336476628403097638899756091864054245164940564896577656462173512870339899537552855295974",
+              "reported_variance_per_bar": 2.378273039833752e-06,
+              "reported_annualized_volatility": 0.5000040619308248
+            }
+          }
+        },
+        {
+          "window": 3,
+          "state": "WARMUP",
+          "reason": "INSUFFICIENT_CLOSED_BARS",
+          "values": {}
+        },
+        {
+          "window": 20,
+          "state": "WARMUP",
+          "reason": "INSUFFICIENT_CLOSED_BARS",
+          "values": {}
+        }
+      ],
+      "preserved_rows": [
+        {
+          "event_id": "207b61d89e707b293e1879864e0fd5c87778fc4d653b37d59c607104679aaf70",
+          "source": "kraken",
+          "environment": "public_reference",
+          "asset": "BTC",
+          "symbol": "BTC/USD",
+          "kind": "bar",
+          "event_time_ms": 1790002200000,
+          "observed_at_ms": 1790002205160,
+          "timestamp_kind": "source",
+          "schema_version": 1,
+          "payload_json": "{\"aggregation_version\":1,\"close\":85969.0,\"close_time_ms\":1790002200000,\"closed\":true,\"complete\":true,\"coverage_start_ms\":1790001879250,\"high\":85977.4,\"lateness_ms\":5000,\"low\":85688.5,\"open\":85773.0,\"open_time_ms\":1790001900000,\"timeframe_s\":300,\"trade_count\":803,\"volume\":17.07447173,\"volume_unit\":\"base_asset\"}"
+        },
+        {
+          "event_id": "5fa3a97a0ffcfcfeda78728a1443ddfb5ac81ce103444f1b12aba54419512817",
+          "source": "kraken",
+          "environment": "public_reference",
+          "asset": "BTC",
+          "symbol": "BTC/USD",
+          "kind": "bar",
+          "event_time_ms": 1790002500000,
+          "observed_at_ms": 1790002505185,
+          "timestamp_kind": "source",
+          "schema_version": 1,
+          "payload_json": "{\"aggregation_version\":1,\"close\":86052.9,\"close_time_ms\":1790002500000,\"closed\":true,\"complete\":true,\"coverage_start_ms\":1790001879250,\"high\":86100.0,\"lateness_ms\":5000,\"low\":85954.7,\"open\":85974.4,\"open_time_ms\":1790002200000,\"timeframe_s\":300,\"trade_count\":1423,\"volume\":70.9700024,\"volume_unit\":\"base_asset\"}"
+        }
+      ],
+      "explicit_history_start_ms": 1790002200000,
+      "data_kind": "saved_native_capture"
+    }
+  ],
+  "synthetic_golden": {
+    "data_kind": "synthetic_analytical_golden",
+    "checks": {
+      "materialized_rows": 3,
+      "selected_bars": 3,
+      "complete_bars": 3,
+      "partial_bars": 0,
+      "blockers": [],
+      "windows": [
+        {
+          "window": 2,
+          "state": "AVAILABLE",
+          "reason": null,
+          "values": {
+            "parkinson": {
+              "decimal_variance_per_bar": "0.0536598233651835665332774521849684158029587549661651912323374448148095575478538313935282739382196916",
+              "decimal_annualized_volatility": "75.10473109031212365184988210114790894191484914347691660529527959382535429402722822781294229278362661",
+              "reported_variance_per_bar": 0.053659823365183566,
+              "reported_annualized_volatility": 75.10473109031213
+            },
+            "garman_klass": {
+              "decimal_variance_per_bar": "0.04797628465296041739405841123309225734928671088427516801394602412748192694192097744536328947921292528",
+              "decimal_annualized_volatility": "71.01596329501698082604611876562875597624848051315026712784993725612845528118607428175978030389908544",
+              "reported_variance_per_bar": 0.04797628465296043,
+              "reported_annualized_volatility": 71.01596329501699
+            }
+          }
+        },
+        {
+          "window": 3,
+          "state": "AVAILABLE",
+          "reason": null,
+          "values": {
+            "parkinson": {
+              "decimal_variance_per_bar": "0.0406145067612400767208362793229640427681386360390773142455996851061790374243932407354080684453418324",
+              "decimal_annualized_volatility": "65.34062251571802147008358761424389208303076150203245480151340925864514622319520777241589073897758207",
+              "reported_variance_per_bar": 0.04061450676124007,
+              "reported_annualized_volatility": 65.34062251571802
+            },
+            "garman_klass": {
+              "decimal_variance_per_bar": "0.0383891224225207023039277563052937310928822494335400689102111038254042148430106300557793008079386627",
+              "decimal_annualized_volatility": "63.52530636726891241816632661312760317235359620920766422039581220038041581161000003796368614457416938",
+              "reported_variance_per_bar": 0.03838912242252071,
+              "reported_annualized_volatility": 63.52530636726892
+            }
+          }
+        },
+        {
+          "window": 20,
+          "state": "WARMUP",
+          "reason": "INSUFFICIENT_CLOSED_BARS",
+          "values": {}
+        }
+      ],
+      "preserved_rows": [
+        {
+          "event_id": "6a70f73e83b8ca93b89129f2d6b83cdf9e080d47e7fd43c83f89349dec3afd0b",
+          "source": "synthetic_fixture",
+          "environment": "public_reference",
+          "asset": "BTC",
+          "symbol": "FIXTURE-BTC/USD",
+          "kind": "bar",
+          "event_time_ms": 300000,
+          "observed_at_ms": 300010,
+          "timestamp_kind": "source",
+          "schema_version": 1,
+          "payload_json": "{\"close\":105.0,\"close_time_ms\":300000,\"closed\":true,\"complete\":true,\"high\":110.0,\"low\":90.0,\"open\":100.0,\"open_time_ms\":0,\"timeframe_s\":300,\"trade_count\":5,\"volume\":10.0}"
+        },
+        {
+          "event_id": "5fbd759f2283ee46cfc5c9940d74a44119b640f3e42916adef325cb396dfc8cb",
+          "source": "synthetic_fixture",
+          "environment": "public_reference",
+          "asset": "BTC",
+          "symbol": "FIXTURE-BTC/USD",
+          "kind": "bar",
+          "event_time_ms": 600000,
+          "observed_at_ms": 600010,
+          "timestamp_kind": "source",
+          "schema_version": 1,
+          "payload_json": "{\"close\":120.0,\"close_time_ms\":600000,\"closed\":true,\"complete\":true,\"high\":130.0,\"low\":95.0,\"open\":105.0,\"open_time_ms\":300000,\"timeframe_s\":300,\"trade_count\":5,\"volume\":10.0}"
+        },
+        {
+          "event_id": "6a915e293f8f935dadd6b9af5930cb3719de16399342a31a389ea0cf5982703c",
+          "source": "synthetic_fixture",
+          "environment": "public_reference",
+          "asset": "BTC",
+          "symbol": "FIXTURE-BTC/USD",
+          "kind": "bar",
+          "event_time_ms": 900000,
+          "observed_at_ms": 900010,
+          "timestamp_kind": "source",
+          "schema_version": 1,
+          "payload_json": "{\"close\":85.0,\"close_time_ms\":900000,\"closed\":true,\"complete\":true,\"high\":125.0,\"low\":80.0,\"open\":120.0,\"open_time_ms\":600000,\"timeframe_s\":300,\"trade_count\":5,\"volume\":10.0}"
+        }
+      ]
+    }
+  },
+  "windows_are_bar_counts": true,
+  "annualization_periods_per_year": 105120.0,
+  "annualization_assumption": "Explicit 365 days/year * 24 hours/day * 12 five-minute bars/hour; not a verified market calendar",
+  "annualization_calendar_verified": false,
+  "decimal_reference_precision": 100,
+  "decimal_comparison_relative_tolerance": 1e-12,
+  "decimal_comparison_absolute_tolerance": 0.0,
+  "result_artifact_sha256": {
+    "api-0/range-volatility.json": "313aa9112bd475a6ed4a9e84f11f468194688686d714e82e26460727e9dba63f",
+    "cli-0/range-volatility.json": "313aa9112bd475a6ed4a9e84f11f468194688686d714e82e26460727e9dba63f",
+    "api-1/range-volatility.json": "6c2e115237395e7616f4df8927f13a1ff9fb42737bfef31903d7272e3a123750",
+    "cli-1/range-volatility.json": "6c2e115237395e7616f4df8927f13a1ff9fb42737bfef31903d7272e3a123750",
+    "synthetic-golden.json": "c6019e443d674a772339f7c188e70afa99cf283adac8163d1bc158533d9cb03d"
+  },
+  "tested_source_sha256": {
+    "src/selective_options/__init__.py": "cadea24829b9cb958ced716cf265bc17c13068ee3612768d46cb6431ff440ae7",
+    "src/selective_options/active_rotation.py": "d70147e58d748e38d96582999ddbb531fced8c88c88252f87f2a2c1e31ac916f",
+    "src/selective_options/archive.py": "c9aa1fe4e9f364fcc52fe3926cebe9cd8ccb19a1f07fed81dd9ddd6979387f21",
+    "src/selective_options/archive_rotation.py": "ff902497e4b360bb9897a40a93a8345eec5d089bec097dbeba9745dae78eb009",
+    "src/selective_options/auth.py": "ad9d7094d07ed320d38954d1f0741632216aa5fbe5b9ac85b67300c5f6938ae7",
+    "src/selective_options/backtest.py": "98cbb8ac3a49a46c844033affb144262b7c404c17cc45558c5bdf18f95340518",
+    "src/selective_options/bar_checkpoint.py": "7f391a87a218afca23c2edb8f22d6c4e4b63ebdf2ab5e6edd0b98fa86757f5b5",
+    "src/selective_options/bar_runtime.py": "e9a585d03202fe7ac13060d4f59816a797fa28df05f0fe1c148cff3733ff08bd",
+    "src/selective_options/bar_state.py": "d72b9942db36bb9963943df1b65b34ac588df9fb8a72c24d4f8f555f5e363e07",
+    "src/selective_options/bars.py": "6f4a9d595912ede5bede429a1324c1a5f970ba6553c0b244155938686dbbdfbe",
+    "src/selective_options/bea_calendar.py": "9850b19e5731cac2123fadce941416523140081aeb8345d99bfd1cd4b59d29c7",
+    "src/selective_options/binance.py": "6d8a3be788619ecb9789aa8f15c736a139432d3f6dc2d832c3df4e70ae57d8f0",
+    "src/selective_options/binance_accounts.py": "b13bda1383d65ff8c8c046fd0ed7169927638a58d820134ac3856c4d2d5317b2",
+    "src/selective_options/binance_funding_history.py": "460772b62438469cc398b4a8bdfaef683509f75ec4c5cf5d708e907dfa8df263",
+    "src/selective_options/binance_funding_view.py": "f12ab764d8221b3ab3098b8ef3ee162c65e601401cadde8e91bde229a8e437d1",
+    "src/selective_options/binance_taker.py": "edcfb1df3f932d3298e4d1f84e1301da468988c9eb069f4b3019c18b704fb45b",
+    "src/selective_options/bus.py": "4aee9ff07ba9d98f8ec754e6d2324d25900973876209599eb1ee18e57d545a8a",
+    "src/selective_options/bybit.py": "f8b2af515d2a4a63b99d10f8ce93e6d93f7642b77f728d60846ba52ada56b79d",
+    "src/selective_options/calendar_quality.py": "9025ea1d5c0ddfdccd9aa11d423b1ab0f345d7f7a29cde650df4d7952a912d61",
+    "src/selective_options/capture_lifecycle.py": "8cb68f7714a55bcbcf597d51c3a5cf09193832f8367b8dcc0d2723bb93da5050",
+    "src/selective_options/checkpoints.py": "c8d2d1165179207fa8b8377cbd2bf5b92701e5e4dbb6c842cd506f5e2435df08",
+    "src/selective_options/cli.py": "66eba1742446663f5e6420b28243a93eed8bbaab95241c6716fde8fd0d5f4308",
+    "src/selective_options/coinmetrics.py": "dd563dd337736b6aabc18ea35f304dc4a09429728c83a43e1cf770e94ec3a129",
+    "src/selective_options/coinmetrics_checkpoint.py": "314d0b8a1433e312faeef9d7715bd23eaaa6cefa18bcabd05e397b894f2d839b",
+    "src/selective_options/coinmetrics_quality.py": "90f8a2a0378a6c008f0748a58edfab3360e060f697b8ee42b5eb37c311239fa0",
+    "src/selective_options/collectors.py": "fcff8848b4b658382ea88963d569cc3a3e8d650492b966bdd4650186eee6c5fe",
+    "src/selective_options/config.py": "ca5cfa4f54b9b9592d886983e79951007748f11ca4d34e9d779c8c16e89ca2af",
+    "src/selective_options/crypto_news.py": "71da3cc160859c1aabdb197f6fe9832fd00be8e7d57d5eb2daddd497e431d5af",
+    "src/selective_options/derivatives.py": "8bf7872a6558f1137492c3c7c16c7194d0a28e006ebb6129265c723ed33c5869",
+    "src/selective_options/errors.py": "3504a40914d1e0587e93ecf201b5b7bc133f21b05438acd868d732b0a3cd9873",
+    "src/selective_options/eth_checkpoint.py": "2ccd36558f73301fe623f37601baa8b67705b1bcc10834c1611b8115572ccfc1",
+    "src/selective_options/eth_gas.py": "32579b383df0ead15cf0a26e2efc88c8766e3ca53a9fca7864450056e7c354ba",
+    "src/selective_options/eth_gas_quality.py": "119756aa00cee9913470e8093d2f13891851fe8a61e7543e8f86d74709447b00",
+    "src/selective_options/events.py": "6a45866c1e1b70f45d4f9335deab679ba7fa3d1f7369c544ffd9d7ac4e57de08",
+    "src/selective_options/features.py": "6ecaa2501ea2c25dafe7e43519c5832ee1f82b403721bc26d5b66ffaa04b6b4a",
+    "src/selective_options/flow_quality.py": "cd3c0bb1e590926c8ceb10ca5de9b738f0c617195ad8cc97eeefad754b682217",
+    "src/selective_options/flow_view.py": "d28e547107fc46a5ab35fd166c0770bccf8c730fc6e0769171328a8186939c85",
+    "src/selective_options/fomc_calendar.py": "0fb021c6ae65751c6c9bee3d9c946ea3da7211642f73a5e489d074ef5decc0f8",
+    "src/selective_options/funding_checkpoint.py": "1899570e8acb76cb29505a8464faf26b326a0c41d17c4b3da316c6c0476accb5",
+    "src/selective_options/funding_history.py": "07d4d99fe4ebff577a80442c852b6a1c8a212fea7262bb71fd2855201298ff41",
+    "src/selective_options/funding_poll.py": "44f6c1507ef50168880fc5347339a5d307797fa7e1e563f6015d2a80ba92af67",
+    "src/selective_options/gap_recovery.py": "ed72849a5fdec72ac4ef6de0a2e0f26d5ca3ac4a1714055df82514c5b313ee5c",
+    "src/selective_options/ingestion.py": "5465185a726019a4706e436ded64d1f88db20423bd0078d2db0fca4bb910165f",
+    "src/selective_options/interlock.py": "4d7106653000850c9378f468a51e75466afbe32ab6fff17f6b82d03f4a41df1a",
+    "src/selective_options/liquidations.py": "12ea3eaa2f207235f8ac6c0d58bc7221538722c725b965d19c8712854cd842cc",
+    "src/selective_options/logging.py": "592fb10c2852587b7dce7e235c38fffc25a1e05d2d9c0bccabd4bb94c6e10f82",
+    "src/selective_options/models.py": "1312544e13cc21fef773ad20c3e3d98f985f566b30e79d2017c70162e129cec7",
+    "src/selective_options/news.py": "e586f6d2f7f325d899cdda8311dc3138915d1e558f6093a2a1c4f1920233cd98",
+    "src/selective_options/news_quality.py": "b96310daede32b6c63848267c6dbc6d265632af2010329aec8ee43d48c2a3296",
+    "src/selective_options/oi_history.py": "736a2f96620a68b59a0e9682b73d66e8fd8c71c0f303faa901b3d7feae8da66e",
+    "src/selective_options/option_backtest.py": "e4a46483abf5e891f24a78d260ffed1cfb29b5b23447c27d2b21d5b7840c38f9",
+    "src/selective_options/option_coverage.py": "fcc48feaa4bfc05864c0e5e079a7fee0e44672e8506d21e66bed68d13e6d525a",
+    "src/selective_options/option_flow_research.py": "369b0f03d152f2ccf657ea95cf7d8026a4e23b5154e4a297f3f940f707573afb",
+    "src/selective_options/option_skew_research.py": "136e682bf3c3be1d7aa779a40c680d62bb53744ecb9a8d31e6717349a5d7b935",
+    "src/selective_options/options_features.py": "07d3739032dbee4b61b9463b9bf2583057199ce1e7435532433d1911b3273b6b",
+    "src/selective_options/options_flow_features.py": "7376e60ef453c445d72aa58d11023ee4d3eeeea38539e4553bc11716d31965f2",
+    "src/selective_options/options_research.py": "6e47eb58704190f18107caf9940e6e14d155735ea21a94c8b21c6f7ceb95e6ef",
+    "src/selective_options/options_skew.py": "22c27cd46b3f157018dbf765860030cd478d97a6e0a27fa87bf55f9d670b95e4",
+    "src/selective_options/periodic_bar_runtime.py": "f7abfa22e7486a9d7734d83a37b4ae7c4316d379a99ab1a70782410cbb600691",
+    "src/selective_options/quality.py": "b495503823f849bb247704e5b08449b523cbb22afe9eed61b6b192733c579262",
+    "src/selective_options/range_volatility.py": "f57f95ac3660c775e836c46481ec2df4ecb6cd08163d25b1c100ca21648ab58a",
+    "src/selective_options/range_volatility_research.py": "f73a6c4d3001fcb10c6ba3e57b2e203086e2e1fbd3acf1ea0a693a72e85810ec",
+    "src/selective_options/rate_limit.py": "48b94f8fe93b39328a16b586c4a6c863933f987c00a117b61fe4d30a2b039a09",
+    "src/selective_options/recovery.py": "8eb9edf4505be934068e290c6f182b1db6fa5a8770d4ad7bde509aa5f4765bb9",
+    "src/selective_options/recovery_handoff.py": "19283c4fed90bb3dbb6386cb046104e12085cd7a0df391919b43e46db5121696",
+    "src/selective_options/recovery_journal.py": "51dc74e946d1ec5c56acf8191300c6c7d066719530f20bc79fe83255dc145118",
+    "src/selective_options/recovery_runtime.py": "9f644d37264dd0ebed9c9cb36129504b9ba75736a6cc8cbc66f3b6bc8d5f5c9d",
+    "src/selective_options/research.py": "a13caa495110868f3dd735227760cd26d8e15fdaabc75396f1602f0513cd3d93",
+    "src/selective_options/rotation_restore.py": "359a2dd9bcc18af93e0c524ddf2536793da89b2ff734272b03fef6d5cd4a401e",
+    "src/selective_options/rotation_runtime.py": "226191b961ca5628e6eba181111e52691b54a5731ab7ef5f3863d1035473bd21",
+    "src/selective_options/rpc.py": "b1d04ba432a78b571ee69925a53243923c40ec98d7a19b4c2e53444a740bc6c9",
+    "src/selective_options/security.py": "2055dab307fd47c185fd1c68524d5551ac08b6d9631236d5eb323baaaa30c98e",
+    "src/selective_options/socket_recovery.py": "6dc3ccae95562f267ea8eb689ba2cd6217382d1eef0c9c31b15656ee04e43b49",
+    "src/selective_options/solana_network.py": "5324e80502d64ae688e2459997d2da56052527defa96ede765636c22df79fb29",
+    "src/selective_options/solana_quality.py": "c94cdb232e689cd18692ae8407b76ecc5173a7bfdd6d991bd90199723c82e2e7",
+    "src/selective_options/spot_trades.py": "c1e8031b7dbd01591e754c714f2d9cc384d28c98af6d4a04fd0554344788bd17",
+    "src/selective_options/stablecoin_checkpoint.py": "16689576e48808c4dc87f6f601d7f3b174775a877531529a5b70913cb33b2ae6",
+    "src/selective_options/stablecoin_supply.py": "b6a44996700e22414d5712cce2b4f52804db480041debdccad97255de4e5cf7c",
+    "src/selective_options/startup.py": "f9592b5d994af2790bd17803a21d2d08d57a9f166d744e43a6bcdacade2ec6be",
+    "src/selective_options/store.py": "7e20b3359fce43d8f6ab595c7c13ad5b245552c8bbc6ce5256ec7d257f31780a",
+    "src/selective_options/tips_yield.py": "168d17bf73dd0e3e345f564ea6849ee2335b00f284af9ab88ec1a69778723919",
+    "src/selective_options/trade_backfill.py": "2674ba7f6a466aa33e0ade7c526f6b01de3017a8cde29ed901a3db4a7d09a004",
+    "src/selective_options/trade_reconciliation.py": "fb18a7353e06e2349fbddc12d4355015c29c39a319df9aa033e48b8f785a5238",
+    "src/selective_options/trend_features.py": "7dbcb052b2d8b5a2a5b6b960843e3617ebed91ad272541571254193cf341737b",
+    "src/selective_options/trials.py": "2904ccb11514d0650ad70dd8abe89c30626d8c4a606771ff65ba63bdd8a807da",
+    "src/selective_options/venue.py": "abac8d12d6b3db0e95cae26f2a9e1734780fcf7c7c46cf87dbe4d00f0366278a"
+  },
+  "verifier_sha256": "84529ea5a9fcc22d95f974ca99bf97c7efebed8ad9de38b0f219e22101ef07fd",
+  "research_api_runs": 2,
+  "actual_cli_runs": 2,
+  "source_mutated": false,
+  "source_clocks_payloads_ids_preserved": true,
+  "new_public_requests": 0,
+  "orders_submitted": 0,
+  "new_strategy_trials": 0,
+  "historical_strategy_validation": false,
+  "complete_7_14_30_day_history_verified": false,
+  "current_feed_health_verified": false,
+  "milestone_2_complete": false,
+  "ready_for_signals": false,
+  "trading_enabled": false
+}

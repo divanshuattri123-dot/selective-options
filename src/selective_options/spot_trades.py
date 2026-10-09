@@ -139,6 +139,10 @@ class SpotTradeCollector:
         self.last_events: dict[str, MarketEvent] = {}
         self.repairing: set[str] = set()
         self.recovery_lock = asyncio.Lock()
+        # Active checkpoints hold this gate through a complete emission/frontier
+        # boundary and their FIFO writer barrier. Never acquire it while holding
+        # the store lock; the independent writer must remain able to drain.
+        self.bar_checkpoint_lock = asyncio.Lock()
         self.gap_handler: GapHandler | None = None
         self.pending_frames: deque[Frame] = deque()
         self.checkpoint_assets: dict[str, str] = {}
@@ -182,22 +186,27 @@ class SpotTradeCollector:
                     instruments = KrakenInstruments.model_validate(message.get("data"))
                 elif message.get("channel") not in {"heartbeat", "status"}:
                     raise IntegrityError("unexpected instrument discovery response")
-        self.symbols = {
+        symbols: dict[str, str] = {
             row.symbol: row.base
             for row in instruments.pairs
             if row.base in self.config.system.assets
             and row.quote == "USD"
             and row.status == "online"
         }
-        if not self.symbols:
+        if not symbols:
             raise IntegrityError("NO_SPOT_TRADE_SYMBOLS")
-        if any(
-            self.symbols.get(symbol) != asset for symbol, asset in self.checkpoint_assets.items()
-        ):
+        if any(symbols.get(symbol) != asset for symbol, asset in self.checkpoint_assets.items()):
             raise IntegrityError("CHECKPOINT_MARKET_UNAVAILABLE")
-        await status(self.sink, "kraken", "TRADE_PRODUCTS_DISCOVERED", symbols=list(self.symbols))
+        async with self.bar_checkpoint_lock:
+            self.symbols = symbols
+            self.awaiting_snapshot.update(symbols)
+        await status(self.sink, "kraken", "TRADE_PRODUCTS_DISCOVERED", symbols=list(symbols))
 
     async def _trades(self, message: dict[str, JsonValue], received: int) -> None:
+        async with self.bar_checkpoint_lock:
+            await self._trades_locked(message, received)
+
+    async def _trades_locked(self, message: dict[str, JsonValue], received: int) -> None:
         if self._emission_failed:
             raise IntegrityError("SPOT_EMISSION_OUTCOME_UNKNOWN")
         parsed = KrakenTradeMessage.model_validate(message)
@@ -317,6 +326,10 @@ class SpotTradeCollector:
         self.awaiting_snapshot.difference_update(snapshot_symbols)
 
     async def _flush(self, received: int) -> None:
+        async with self.bar_checkpoint_lock:
+            await self._flush_locked(received)
+
+    async def _flush_locked(self, received: int) -> None:
         if self._emission_failed:
             raise IntegrityError("SPOT_EMISSION_OUTCOME_UNKNOWN")
         candidate_bars = dict(self.bars)
@@ -406,6 +419,22 @@ class SpotTradeCollector:
             # reconnectable websocket transport failure after possible delivery.
             raise IntegrityError("SPOT_EMISSION_FAILED") from exc
 
+    async def take_pending_frame(self) -> Frame | None:
+        """Remove a buffered frame without crossing a checkpoint state freeze."""
+        async with self.bar_checkpoint_lock:
+            return self.pending_frames.popleft() if self.pending_frames else None
+
+    async def _defer_frames(self, frames: list[Frame]) -> None:
+        async with self.bar_checkpoint_lock:
+            self.pending_frames.extendleft(reversed(frames))
+
+    async def _disconnected(self, received: int) -> None:
+        async with self.bar_checkpoint_lock:
+            self.pending_frames.clear()
+            for builder in self.bars.values():
+                builder.mark_gap(received)
+            self.awaiting_snapshot.update(self.sequences)
+
     async def run(self) -> None:
         if self._emission_failed:
             raise IntegrityError("SPOT_EMISSION_OUTCOME_UNKNOWN")
@@ -420,9 +449,12 @@ class SpotTradeCollector:
                     ping_interval=20,
                     ping_timeout=20,
                 ) as socket:
-                    self.connections += 1
+                    async with self.bar_checkpoint_lock:
+                        self.connections += 1
+                        self.awaiting_snapshot.update(self.sequences)
                     await self._discover(socket)
-                    self.awaiting_snapshot.update(self.symbols)
+                    async with self.bar_checkpoint_lock:
+                        self.awaiting_snapshot.update(self.symbols)
                     await socket.send(
                         json.dumps(
                             {
@@ -441,8 +473,9 @@ class SpotTradeCollector:
                         asyncio.get_running_loop().time() + self.config.venue.request_timeout_s
                     )
                     while True:
-                        if self.pending_frames:
-                            message, received = self.pending_frames.popleft()
+                        buffered = await self.take_pending_frame()
+                        if buffered is not None:
+                            message, received = buffered
                         else:
                             message = await self._read(socket)
                             received = now_ms()
@@ -479,7 +512,7 @@ class SpotTradeCollector:
                                 ):
                                     raise
                                 deferred = await self.gap_handler(socket, message, received, gap)
-                                self.pending_frames.extendleft(reversed(deferred))
+                                await self._defer_frames(deferred)
                         elif message.get("channel") == "instrument":
                             updates = KrakenInstruments.model_validate(message.get("data"))
                             if any(
@@ -505,11 +538,8 @@ class SpotTradeCollector:
                     raise exc from exc.__cause__
                 raise
             except (OSError, TimeoutError, WebSocketException) as exc:
-                self.pending_frames.clear()
                 received = now_ms()
-                for builder in self.bars.values():
-                    builder.mark_gap(received)
-                self.awaiting_snapshot.update(self.sequences)
+                await self._disconnected(received)
                 await status(
                     self.sink, "kraken", "SPOT_TRADE_DISCONNECTED", error_type=type(exc).__name__
                 )

@@ -2,6 +2,24 @@
 
 This build offers a one-shot readiness probe and a finite public-data recorder. It has no positions, execution loop, dashboard, kill command, or live deployment. Stopping it closes its WebSocket. It never places orders and cannot cancel orders opened by other software.
 
+## Periodic unfinished-bar generations
+
+Version 0.3.52 adds opt-in periodic snapshots during a finite supervised capture. Set `ingestion.bar_checkpoint_interval_s` to an integer from 1 to 86400 and `ingestion.bar_checkpoint_max_generations` from 1 to 256. The defaults are `null` (disabled) and 32. Spot trades must be enabled. An environment override is also supported, for example:
+
+```powershell
+$env:SELECTIVE_INGESTION__BAR_CHECKPOINT_INTERVAL_S = "60"
+$env:SELECTIVE_INGESTION__BAR_CHECKPOINT_MAX_GENERATIONS = "10"
+selective-options capture --output NEW_FINITE_CAPTURE --duration 300
+```
+
+Every snapshot freezes the collector at a complete batch/frontier boundary, waits for preceding events to commit through the FIFO writer barrier, and validates exact consumed native inputs and the committed book tail. The collector gate stays held through inner checkpoint codec validation/publication while the writer remains available. The later outer immutable verification and generation seal run after releasing the gate. This favors a consistent resumable snapshot; no throughput or gate-duration bound is claimed.
+
+Fresh immutable directories are `bar-generations/generation-000000/checkpoint/`, then `generation-000001/`, and so on. `generation.json` is published last and pins the inner checkpoint manifest. The capture report records each marker's SHA-256. `load_bar_generation` requires an explicitly selected directory and expected marker digest; it validates every inner checkpoint file and refuses unexplained files, failed/cancelled attempts and altered markers. It never searches for a latest generation or falls back from a corrupt selection. The existing `--resume-bars-from EXPLICIT_GENERATION/checkpoint` validates that chosen inner checkpoint again during capture startup; the separate generation loader additionally checks the outer digest pin.
+
+Missing or unsafe collector state, a failed snapshot, an unexpected worker exit, or exhaustion of the configured generation budget halts capture and is reported as a failure. Shutdown cancels and drains active snapshot work before closing the writer/store. Late successful markers from a cancelled attempt are revoked. A restored capture marks retained unfinished buckets partial and requires discovery plus a recovery snapshot before accepting updates.
+
+These finite, explicitly selected OPEN-bar artifacts do not restore delivery acknowledgements, purge source history, certify a whole-source frontier, or prove operating-system/power-loss recovery or continuous service. `periodic_crash_recovery`, signal readiness and trading controls remain false. The saved-native replay in `evidence/periodic-bars-saved-native-01/` uses mocked transport, clocks and scheduling; it earns no live or paper-day validation credit.
+
 ## Install and run
 
 From the repository directory, with Python 3.11+:

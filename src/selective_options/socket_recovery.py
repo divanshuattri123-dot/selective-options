@@ -145,8 +145,9 @@ def socket_gap_handler(
 
                 async def receive() -> MarketEvent:
                     while not router.ready:
-                        if collector.pending_frames:
-                            frame, observed = collector.pending_frames.popleft()
+                        buffered = await collector.take_pending_frame()
+                        if buffered is not None:
+                            frame, observed = buffered
                         else:
                             frame = await collector._read(socket)
                             observed = now_ms()

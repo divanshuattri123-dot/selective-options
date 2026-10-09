@@ -18,7 +18,7 @@ from .binance_taker import BinanceTakerCollector
 from .bus import CommitBarrier, EventBus, HotBuffer, RedisMirror
 from .bybit import BybitCollector
 from .calendar_quality import calendar_quality
-from .capture_lifecycle import CaptureStopRequest
+from .capture_lifecycle import CaptureStopRequest, cancelled_worker_failure
 from .checkpoints import load_trade_checkpoints
 from .coinmetrics_checkpoint import load_coinmetrics_resume
 from .collectors import DeribitCollector, SpotCollector, now_ms, poll_chains
@@ -34,6 +34,7 @@ from .fomc_calendar import FOMCCalendarCollector
 from .fomc_calendar import calendar_quality as fomc_calendar_quality
 from .funding_poll import BinanceFundingCollector
 from .news import PolicyNewsCollector
+from .periodic_bar_runtime import PeriodicBarRuntime
 from .quality import FeedRequirement, FreshnessMonitor
 from .rate_limit import EndpointLimiter
 from .recovery_handoff import handoff_recovery
@@ -273,7 +274,11 @@ async def capture(
                     track_bar_inputs=True,
                     bar_input_limit=config.ingestion.bar_checkpoint_max_events,
                 )
-                if bar_resume is not None or save_bars
+                if (
+                    bar_resume is not None
+                    or save_bars
+                    or config.ingestion.bar_checkpoint_interval_s is not None
+                )
                 else SpotTradeCollector(config, bus.publish, checkpoints)
             )
             if bar_resume is not None:
@@ -388,6 +393,11 @@ async def capture(
     rotation_stopped = asyncio.Event()
     rotation_runtime = RotationRuntime(config, bus, store, output, rotation_stopped)
     rotation_task: asyncio.Task[None] | None = None
+    periodic_bars_stopped = asyncio.Event()
+    periodic_bars_runtime = PeriodicBarRuntime(
+        config, bus, store, spot_trades, output, periodic_bars_stopped
+    )
+    periodic_bars_task: asyncio.Task[None] | None = None
     stop_waiter: asyncio.Task[None] | None = None
     termination_reason = "DURATION_ELAPSED"
     requested_stop_reason: str | None = None
@@ -466,9 +476,13 @@ async def capture(
                 )
             if config.ingestion.archive_rotation_interval_s is not None:
                 rotation_task = asyncio.create_task(rotation_runtime.run())
+            if config.ingestion.bar_checkpoint_interval_s is not None:
+                periodic_bars_task = asyncio.create_task(periodic_bars_runtime.run())
         supervised = [writer, *producers]
         if rotation_task is not None:
             supervised.append(rotation_task)
+        if periodic_bars_task is not None:
+            supervised.append(periodic_bars_task)
         waiting = list(supervised)
         if stop_request is not None:
             stop_waiter = asyncio.create_task(stop_request.wait())
@@ -503,21 +517,39 @@ async def capture(
             rotation_stopped.set()
             if rotation_task is not None and not rotation_task.done():
                 rotation_task.cancel()
-            producer_results = await asyncio.gather(*producers, return_exceptions=True)
+            periodic_bars_stopped.set()
+            if periodic_bars_task is not None and not periodic_bars_task.done():
+                periodic_bars_task.cancel()
+
+            async def producer_outcome(task: asyncio.Task[None]) -> BaseException | None:
+                try:
+                    await task
+                except asyncio.CancelledError as exc:
+                    return cancelled_worker_failure(exc)
+                except BaseException as exc:
+                    return exc
+                return None
+
+            producer_results = await asyncio.gather(*(producer_outcome(task) for task in producers))
             for result in producer_results:
-                if isinstance(result, BaseException) and not isinstance(
-                    result, asyncio.CancelledError
-                ):
+                if result is not None:
                     failure = failure or result
             if rotation_task is not None:
                 try:
                     await rotation_task
-                except asyncio.CancelledError:
-                    pass  # Stop was requested; the active core has already drained.
+                except asyncio.CancelledError as exc:
+                    failure = failure or cancelled_worker_failure(exc)
                 except BaseException as exc:
                     failure = failure or exc
-            # Keep the consumer available for any archive barrier until that worker
-            # has stopped, then drain the writer before reporting or closing its store.
+            if periodic_bars_task is not None:
+                try:
+                    await periodic_bars_task
+                except asyncio.CancelledError as exc:
+                    failure = failure or cancelled_worker_failure(exc)
+                except BaseException as exc:
+                    failure = failure or exc
+            # Keep the consumer available for each checkpoint barrier until both
+            # workers stop, then drain the writer before reporting or closing its store.
             stopped.set()
             try:
                 await writer
@@ -810,6 +842,7 @@ async def capture(
         }
         report: dict[str, object] = {
             "archive_rotation": rotation_runtime.summary(),
+            "periodic_bar_checkpoints": periodic_bars_runtime.summary(),
             "stablecoin_resume": {
                 "requested": True,
                 "selection_as_of_ms": stablecoin_resume_at,

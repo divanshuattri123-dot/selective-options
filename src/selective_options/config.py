@@ -301,6 +301,20 @@ class IngestionConfig(Section):
         le=100000,
         description="Maximum exact union of open-bar native inputs and sequence anchors for optional bar checkpoints/resume; overflow refuses before publication.",
     )
+    bar_checkpoint_interval_s: int | None = Field(
+        None,
+        strict=True,
+        ge=1,
+        le=86400,
+        description="Opt in to gated, FIFO-committed immutable open-bar generations during finite capture; null disables. This does not certify whole-source continuity or power-loss recovery.",
+    )
+    bar_checkpoint_max_generations: int = Field(
+        32,
+        strict=True,
+        ge=1,
+        le=256,
+        description="Maximum published periodic bar generations per finite capture; exhaustion halts instead of overwriting or silently dropping recovery evidence.",
+    )
     eth_gas_enabled: bool = Field(
         False,
         description="Opt in to public Ethereum mainnet finalized-block gas samples; read-only.",
@@ -918,6 +932,11 @@ class AppConfig(BaseSettings):
             raise ValueError("mode, key profile and allowlisted endpoint must agree")
         if len(set(self.system.assets)) != len(self.system.assets):
             raise ValueError("duplicate assets are not permitted")
+        if (
+            self.ingestion.bar_checkpoint_interval_s is not None
+            and not self.ingestion.spot_trades_enabled
+        ):
+            raise ValueError("periodic bar checkpoints require enabled spot trades")
         if self.ingestion.coinmetrics_enabled and not any(
             asset in ("BTC", "ETH") for asset in self.system.assets
         ):

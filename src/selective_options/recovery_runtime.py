@@ -25,17 +25,19 @@ def _unchanged(collector: SpotTradeCollector, anchor: MarketEvent) -> None:
 async def begin_gap_repair(
     collector: SpotTradeCollector, bus: EventBus, store: DuckStore, symbol: str
 ) -> MarketEvent:
-    if symbol in collector.repairing:
-        raise IntegrityError("SPOT_BOOK_RECOVERY_IN_PROGRESS")
-    anchor = collector.last_events.get(symbol)
-    if anchor is None or collector.symbols.get(symbol) != anchor.asset:
-        raise IntegrityError("RECOVERY_NO_BOOK_ANCHOR")
-    # Suspension precedes the first await. Failure leaves this book suspended.
-    collector.repairing.add(symbol)
-    builder = collector.bars.get(symbol)
-    if builder is not None:
-        builder.mark_gap(now_ms())
-    _unchanged(collector, anchor)
+    async with collector.bar_checkpoint_lock:
+        if symbol in collector.repairing:
+            raise IntegrityError("SPOT_BOOK_RECOVERY_IN_PROGRESS")
+        anchor = collector.last_events.get(symbol)
+        if anchor is None or collector.symbols.get(symbol) != anchor.asset:
+            raise IntegrityError("RECOVERY_NO_BOOK_ANCHOR")
+        # Suspension precedes any repair I/O or publication. Waiting for an
+        # existing checkpoint gate cannot mutate its frozen builder/ledger.
+        collector.repairing.add(symbol)
+        builder = collector.bars.get(symbol)
+        if builder is not None:
+            builder.mark_gap(now_ms())
+        _unchanged(collector, anchor)
     await bus.flush()
     if await store.read_events([anchor.event_id]) != (anchor,):
         raise IntegrityError("RECOVERY_ANCHOR_NOT_COMMITTED_EXACTLY")
@@ -70,13 +72,14 @@ async def activate_gap_repair(
             raise IntegrityError("RECOVERY_MARKER_MISSING")
         await bus.publish(marker[0])
         await bus.flush()
-        _unchanged(collector, anchor)
-        builder = collector.bars.get(anchor.symbol)
-        if builder is not None:
-            builder.mark_gap(now_ms())
-        # No await during installation. Missing trades do not enter bar builders.
-        collector.sequences[anchor.symbol] = sequence
-        collector.last_events[anchor.symbol] = plan.selected[-1]
-        collector.awaiting_snapshot.discard(anchor.symbol)
-        collector.repairing.remove(anchor.symbol)
+        async with collector.bar_checkpoint_lock:
+            _unchanged(collector, anchor)
+            builder = collector.bars.get(anchor.symbol)
+            if builder is not None:
+                builder.mark_gap(now_ms())
+            # No await during installation. Missing trades do not enter bar builders.
+            collector.sequences[anchor.symbol] = sequence
+            collector.last_events[anchor.symbol] = plan.selected[-1]
+            collector.awaiting_snapshot.discard(anchor.symbol)
+            collector.repairing.remove(anchor.symbol)
         return plan

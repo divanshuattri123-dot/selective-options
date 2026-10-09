@@ -13,7 +13,10 @@ import asyncio
 import hashlib
 import json
 import os
-from collections.abc import Coroutine
+import re
+import tempfile
+from collections.abc import Coroutine, Iterator
+from contextlib import contextmanager
 from pathlib import Path
 from typing import Any, Literal
 
@@ -148,6 +151,28 @@ def _read(path: Path, max_bytes: int) -> bytes:
     if len(value) > max_bytes:
         raise IntegrityError("BAR_CHECKPOINT_BYTE_BUDGET")
     return value
+
+
+@contextmanager
+def _database_snapshot(
+    database: Path, expected_sha256: str, expected_bytes: int, max_bytes: int
+) -> Iterator[duckdb.DuckDBPyConnection]:
+    """Read SQL only from a private closed copy of the actual verified bytes.
+
+    Source pre/post hashes alone cannot bind a DuckDB open to the bytes that were
+    hashed when a source file is transiently replaced. The bounded bytes read
+    here are immutable Python bytes, verified before the isolated temporary copy
+    is created. Close the read-only connection before removing that private copy.
+    """
+    data = _read(database, max_bytes)
+    if len(data) != expected_bytes or hashlib.sha256(data).hexdigest() != expected_sha256:
+        raise IntegrityError("BAR_CHECKPOINT_DATABASE_CHANGED")
+    with tempfile.TemporaryDirectory(prefix="selective-options-bar-read-") as directory:
+        snapshot = Path(directory) / "events.duckdb"
+        with snapshot.open("xb") as stream:
+            stream.write(data)
+        with duckdb.connect(str(snapshot), read_only=True) as connection:
+            yield connection
 
 
 def _event(event: MarketEvent, cutoff: int) -> MarketEvent:
@@ -486,7 +511,9 @@ def _verify(
         or _digest(database, max_bytes) != manifest.events_sha256
     ):
         raise IntegrityError("BAR_CHECKPOINT_DATABASE_CHANGED")
-    with duckdb.connect(str(database), read_only=True) as connection:
+    with _database_snapshot(
+        database, manifest.events_sha256, manifest.events_bytes, max_bytes
+    ) as connection:
         _schema(connection)
         cursor = connection.execute(
             "SELECT * FROM events ORDER BY event_id LIMIT ?", [max_events + 1]
@@ -523,6 +550,11 @@ def _verify(
         if part.scope.asset not in assets:
             raise IntegrityError("BAR_CHECKPOINT_ASSET_MISMATCH")
         blob = _read(path, max_bytes)
+        # Bind the bytes actually decoded, not only path hashes before/after
+        # the read. A transient replacement can otherwise restore the path
+        # while returning a different, internally valid coverage declaration.
+        if len(blob) != part.state_bytes or hashlib.sha256(blob).hexdigest() != part.state_sha256:
+            raise IntegrityError("BAR_CHECKPOINT_STATE_CHANGED")
         state = decode_bar_state(blob, max_buckets=100_000, max_bytes=max_bytes)
         if (
             state.scope != part.scope
@@ -653,12 +685,20 @@ def _load(
     max_events: int,
     max_books: int,
     max_bytes: int,
+    expected_manifest_sha256: str | None = None,
 ) -> BarCheckpointResume:
     path = _path(output / "checkpoint.json")
     if not path.is_file():
         raise FileNotFoundError("committed bar checkpoint marker is required")
     before = _digest(path, max_bytes)
+    if expected_manifest_sha256 is not None and before != expected_manifest_sha256:
+        raise IntegrityError("BAR_CHECKPOINT_MANIFEST_DIGEST_MISMATCH")
     data = _read(path, max_bytes)
+    actual = hashlib.sha256(data).hexdigest()
+    if actual != before or (
+        expected_manifest_sha256 is not None and actual != expected_manifest_sha256
+    ):
+        raise IntegrityError("BAR_CHECKPOINT_MANIFEST_CHANGED")
     json.loads(data, object_pairs_hook=_pairs)
     manifest = CheckpointManifest.model_validate_json(data, strict=True)
     if len(data) > max_bytes:
@@ -690,9 +730,18 @@ async def load_bar_checkpoint(
     max_events: int = DEFAULT_MAX_EVENTS,
     max_books: int = DEFAULT_MAX_BOOKS,
     max_bytes: int = DEFAULT_MAX_BYTES,
+    expected_manifest_sha256: str | None = None,
 ) -> BarCheckpointResume:
-    """Read-only validation before any producer starts; restored bars must be incomplete."""
+    """Validate actual read bytes, optionally pinned to an explicit manifest digest.
+
+    Read-only validation precedes producer startup; restored bars must be incomplete.
+    """
     _policy(now_ms, max_events, max_books, max_bytes)
+    if expected_manifest_sha256 is not None and (
+        type(expected_manifest_sha256) is not str
+        or not re.fullmatch(r"[0-9a-f]{64}", expected_manifest_sha256)
+    ):
+        raise ValueError("manifest selection requires an explicit lowercase SHA256 digest")
     if (
         type(assets) is not tuple
         or not assets
@@ -710,7 +759,16 @@ async def load_bar_checkpoint(
     if not output.is_dir():
         raise FileNotFoundError("bar checkpoint directory does not exist")
     return await complete_thread(
-        _load, output, now_ms, assets, timeframes_s, lateness_ms, max_events, max_books, max_bytes
+        _load,
+        output,
+        now_ms,
+        assets,
+        timeframes_s,
+        lateness_ms,
+        max_events,
+        max_books,
+        max_bytes,
+        expected_manifest_sha256,
     )
 
 
@@ -789,7 +847,7 @@ def _verify_seed(
     if not database.is_file() or database.with_suffix(database.suffix + ".wal").exists():
         raise IntegrityError("BAR_CHECKPOINT_SEED_MUST_BE_CLOSED")
     before = _digest(database, max_bytes)
-    with duckdb.connect(str(database), read_only=True) as connection:
+    with _database_snapshot(database, before, database.stat().st_size, max_bytes) as connection:
         _schema(connection)
         cursor = connection.execute(
             "SELECT * FROM events ORDER BY event_id LIMIT ?", [max_events + 1]

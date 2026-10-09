@@ -1,0 +1,336 @@
+{
+  "source_database_sha256": "691fd0d9e9b36544b4844d3743fe5941c144d7b7e365ee695872d5660891393b",
+  "source_mutated": false,
+  "source_scope_and_cutoff": {
+    "asset": "BTC",
+    "environment": "public_reference",
+    "source": "kraken",
+    "symbol": "BTC/USD",
+    "as_of_ms": 1790002505185,
+    "explicit_history_start_ms": null,
+    "materialized_rows": 4,
+    "full_history_or_source_authenticity_verified": false
+  },
+  "range_volatility_report": {
+    "formula_version": "range-volatility-v1",
+    "state": "UNAVAILABLE",
+    "base": {
+      "formula_version": "closed-bars-v1",
+      "state": "UNAVAILABLE",
+      "asset": "BTC",
+      "environment": "public_reference",
+      "source": "kraken",
+      "symbol": "BTC/USD",
+      "timeframe_s": 300,
+      "as_of_ms": 1790002505185,
+      "history_budget": 2000,
+      "bars_available": 3,
+      "bars_used": 0,
+      "first_close_ms": 1790001900000,
+      "latest_close_ms": 1790002500000,
+      "latest_bar_age_ms": 5185,
+      "max_latest_age_ms": 600000,
+      "history_sha256": "95a389a288049b8d84fc9ef8b08092b5335dd7327efa8e58143a5f56f49f9657",
+      "annualization_periods_per_year": 105120.0,
+      "blockers": [
+        "INCOMPLETE_BAR"
+      ],
+      "features": [
+        {
+          "name": "ema_8",
+          "state": "UNAVAILABLE",
+          "value": null,
+          "unit": "price",
+          "bars_required": 8,
+          "reason": "INCOMPLETE_BAR"
+        },
+        {
+          "name": "ema_8_slope",
+          "state": "UNAVAILABLE",
+          "value": null,
+          "unit": "price_per_bar",
+          "bars_required": 9,
+          "reason": "INCOMPLETE_BAR"
+        },
+        {
+          "name": "ema_21",
+          "state": "UNAVAILABLE",
+          "value": null,
+          "unit": "price",
+          "bars_required": 21,
+          "reason": "INCOMPLETE_BAR"
+        },
+        {
+          "name": "ema_21_slope",
+          "state": "UNAVAILABLE",
+          "value": null,
+          "unit": "price_per_bar",
+          "bars_required": 22,
+          "reason": "INCOMPLETE_BAR"
+        },
+        {
+          "name": "ema_50",
+          "state": "UNAVAILABLE",
+          "value": null,
+          "unit": "price",
+          "bars_required": 50,
+          "reason": "INCOMPLETE_BAR"
+        },
+        {
+          "name": "ema_50_slope",
+          "state": "UNAVAILABLE",
+          "value": null,
+          "unit": "price_per_bar",
+          "bars_required": 51,
+          "reason": "INCOMPLETE_BAR"
+        },
+        {
+          "name": "ema_200",
+          "state": "UNAVAILABLE",
+          "value": null,
+          "unit": "price",
+          "bars_required": 200,
+          "reason": "INCOMPLETE_BAR"
+        },
+        {
+          "name": "ema_200_slope",
+          "state": "UNAVAILABLE",
+          "value": null,
+          "unit": "price_per_bar",
+          "bars_required": 201,
+          "reason": "INCOMPLETE_BAR"
+        },
+        {
+          "name": "rsi_14",
+          "state": "UNAVAILABLE",
+          "value": null,
+          "unit": "index_0_to_100",
+          "bars_required": 15,
+          "reason": "INCOMPLETE_BAR"
+        },
+        {
+          "name": "atr_14",
+          "state": "UNAVAILABLE",
+          "value": null,
+          "unit": "price",
+          "bars_required": 15,
+          "reason": "INCOMPLETE_BAR"
+        },
+        {
+          "name": "macd_12_26",
+          "state": "UNAVAILABLE",
+          "value": null,
+          "unit": "price",
+          "bars_required": 26,
+          "reason": "INCOMPLETE_BAR"
+        },
+        {
+          "name": "macd_signal_9",
+          "state": "UNAVAILABLE",
+          "value": null,
+          "unit": "price",
+          "bars_required": 34,
+          "reason": "INCOMPLETE_BAR"
+        },
+        {
+          "name": "macd_histogram",
+          "state": "UNAVAILABLE",
+          "value": null,
+          "unit": "price",
+          "bars_required": 34,
+          "reason": "INCOMPLETE_BAR"
+        },
+        {
+          "name": "bollinger_width_20",
+          "state": "UNAVAILABLE",
+          "value": null,
+          "unit": "fraction",
+          "bars_required": 20,
+          "reason": "INCOMPLETE_BAR"
+        },
+        {
+          "name": "roc_5",
+          "state": "UNAVAILABLE",
+          "value": null,
+          "unit": "fraction",
+          "bars_required": 6,
+          "reason": "INCOMPLETE_BAR"
+        },
+        {
+          "name": "roc_20",
+          "state": "UNAVAILABLE",
+          "value": null,
+          "unit": "fraction",
+          "bars_required": 21,
+          "reason": "INCOMPLETE_BAR"
+        },
+        {
+          "name": "realized_vol_20",
+          "state": "UNAVAILABLE",
+          "value": null,
+          "unit": "annualized_log_return_std",
+          "bars_required": 21,
+          "reason": "INCOMPLETE_BAR"
+        },
+        {
+          "name": "realized_vol_60",
+          "state": "UNAVAILABLE",
+          "value": null,
+          "unit": "annualized_log_return_std",
+          "bars_required": 61,
+          "reason": "INCOMPLETE_BAR"
+        }
+      ],
+      "history_truncated": false,
+      "source_frontier_complete": false,
+      "ready_for_signals": false,
+      "trading_enabled": false
+    },
+    "windows": [
+      2,
+      3,
+      20
+    ],
+    "features": [
+      {
+        "name": "parkinson_variance_per_bar_2",
+        "state": "UNAVAILABLE",
+        "value": null,
+        "unit": "log_return_variance_per_bar",
+        "bars_required": 2,
+        "reason": "INCOMPLETE_BAR"
+      },
+      {
+        "name": "parkinson_vol_2",
+        "state": "UNAVAILABLE",
+        "value": null,
+        "unit": "annualized_log_return_std",
+        "bars_required": 2,
+        "reason": "INCOMPLETE_BAR"
+      },
+      {
+        "name": "garman_klass_variance_per_bar_2",
+        "state": "UNAVAILABLE",
+        "value": null,
+        "unit": "log_return_variance_per_bar",
+        "bars_required": 2,
+        "reason": "INCOMPLETE_BAR"
+      },
+      {
+        "name": "garman_klass_vol_2",
+        "state": "UNAVAILABLE",
+        "value": null,
+        "unit": "annualized_log_return_std",
+        "bars_required": 2,
+        "reason": "INCOMPLETE_BAR"
+      },
+      {
+        "name": "parkinson_variance_per_bar_3",
+        "state": "UNAVAILABLE",
+        "value": null,
+        "unit": "log_return_variance_per_bar",
+        "bars_required": 3,
+        "reason": "INCOMPLETE_BAR"
+      },
+      {
+        "name": "parkinson_vol_3",
+        "state": "UNAVAILABLE",
+        "value": null,
+        "unit": "annualized_log_return_std",
+        "bars_required": 3,
+        "reason": "INCOMPLETE_BAR"
+      },
+      {
+        "name": "garman_klass_variance_per_bar_3",
+        "state": "UNAVAILABLE",
+        "value": null,
+        "unit": "log_return_variance_per_bar",
+        "bars_required": 3,
+        "reason": "INCOMPLETE_BAR"
+      },
+      {
+        "name": "garman_klass_vol_3",
+        "state": "UNAVAILABLE",
+        "value": null,
+        "unit": "annualized_log_return_std",
+        "bars_required": 3,
+        "reason": "INCOMPLETE_BAR"
+      },
+      {
+        "name": "parkinson_variance_per_bar_20",
+        "state": "UNAVAILABLE",
+        "value": null,
+        "unit": "log_return_variance_per_bar",
+        "bars_required": 20,
+        "reason": "INCOMPLETE_BAR"
+      },
+      {
+        "name": "parkinson_vol_20",
+        "state": "UNAVAILABLE",
+        "value": null,
+        "unit": "annualized_log_return_std",
+        "bars_required": 20,
+        "reason": "INCOMPLETE_BAR"
+      },
+      {
+        "name": "garman_klass_variance_per_bar_20",
+        "state": "UNAVAILABLE",
+        "value": null,
+        "unit": "log_return_variance_per_bar",
+        "bars_required": 20,
+        "reason": "INCOMPLETE_BAR"
+      },
+      {
+        "name": "garman_klass_vol_20",
+        "state": "UNAVAILABLE",
+        "value": null,
+        "unit": "annualized_log_return_std",
+        "bars_required": 20,
+        "reason": "INCOMPLETE_BAR"
+      }
+    ],
+    "window_references": [
+      {
+        "window": 2,
+        "bars_available": 3,
+        "bars_used": 0,
+        "first_open_ms": null,
+        "first_close_ms": null,
+        "latest_close_ms": null,
+        "history_sha256": null
+      },
+      {
+        "window": 3,
+        "bars_available": 3,
+        "bars_used": 0,
+        "first_open_ms": null,
+        "first_close_ms": null,
+        "latest_close_ms": null,
+        "history_sha256": null
+      },
+      {
+        "window": 20,
+        "bars_available": 3,
+        "bars_used": 0,
+        "first_open_ms": null,
+        "first_close_ms": null,
+        "latest_close_ms": null,
+        "history_sha256": null
+      }
+    ],
+    "input_event_ids": [],
+    "windows_are_bar_counts": true,
+    "zero_drift_diffusion_assumed": true,
+    "zero_drift_verified": false,
+    "continuous_extrema_verified": false,
+    "opening_jumps_modelled": false,
+    "sampling_bias_corrected": false,
+    "annualization_calendar_verified": false,
+    "current_feed_health_verified": false,
+    "source_frontier_complete": false,
+    "ready_for_signals": false,
+    "trading_enabled": false
+  },
+  "ready_for_signals": false,
+  "trading_enabled": false
+}
