@@ -1,0 +1,32 @@
+{
+  "version": "0.3.57",
+  "status": "SAVED_NATIVE_WARMUP_AND_CAUSAL_FIXTURE_VERIFIED",
+  "native_source": "evidence/ingestion-pilot-04/events.duckdb",
+  "native_source_sha256": "691fd0d9e9b36544b4844d3743fe5941c144d7b7e365ee695872d5660891393b",
+  "native_source_unchanged": true,
+  "native_rows": 2,
+  "native_state": "WARMUP",
+  "native_pivots": 0,
+  "fixture_provenance": "independent_analytical_fixture_not_market_data",
+  "fixture_pivot": {
+    "kind": "SWING_HIGH",
+    "pivot_event_id": "015c55f41dabe99700452fb032f19940b3c813fda11312a044a8f39c70a85218",
+    "confirmation_event_id": "0abd6aed1d068788967f98b1b90cf0d815c5b628eac8aa714bd6a7faddc01ae1",
+    "pivot_close_ms": 1200000,
+    "confirmation_close_ms": 1800000
+  },
+  "source_code_sha256": {
+    "src/selective_options/swing_structure_features.py": "9f5c1ba4c2c600c6de5b5c0fd73abf45746d361fcf7552145c865c613254d3d7",
+    "src/selective_options/swing_structure_research.py": "8b638593edc95dd89aee9201ec7a1d6fb1fc94bbd310c400546d8a1c39d5f4d6",
+    "src/selective_options/features.py": "6ecaa2501ea2c25dafe7e43519c5832ee1f82b403721bc26d5b66ffaa04b6b4a",
+    "src/selective_options/research.py": "a13caa495110868f3dd735227760cd26d8e15fdaabc75396f1602f0513cd3d93",
+    "src/selective_options/events.py": "6a45866c1e1b70f45d4f9335deab679ba7fa3d1f7369c544ffd9d7ac4e57de08",
+    "src/selective_options/cli.py": "f465dcb2206b58ecb0c04cc88a705d7fe4c91bc75abecc2903c228f870d347de",
+    "scripts/verify_swing_structure.py": "9552524b36d5fdbfefb25f55d6cb8082e6110d87f575b5b1ce77bff873fc8609"
+  },
+  "real_network_requests": 0,
+  "ready_for_signals": false,
+  "trading_enabled": false,
+  "orders_submitted": 0,
+  "milestone_2_complete": false
+}

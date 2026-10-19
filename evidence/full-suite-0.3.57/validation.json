@@ -1,0 +1,60 @@
+{
+  "application_version": "0.3.57",
+  "status": "LOCAL_VALIDATION_PASSED_HOSTED_PENDING",
+  "application_suite": {
+    "tests": 3921,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "duration_seconds": 798.72,
+    "coverage_percent": 94.59,
+    "junit": "retry-01/application-junit.xml",
+    "log": "retry-01/application.log"
+  },
+  "migration_suite": {
+    "tests": 65,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "duration_seconds": 4.91,
+    "junit": "migration-junit.xml",
+    "log": "migration.log"
+  },
+  "combined_junit_gate": {
+    "tests": 3986,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "tool": "tools/check_ci_junit.py"
+  },
+  "static_checks": {
+    "ruff_check_scope": "src scripts tests tools",
+    "ruff_check": "passed",
+    "ruff_format": "passed",
+    "ruff_formatted_python_files": 302,
+    "mypy": "passed",
+    "mypy_source_files": 151,
+    "targeted_secret_scan": "passed"
+  },
+  "runtime_and_package_checks": {
+    "config": "VALID",
+    "profile": "testnet",
+    "milestone": 2,
+    "milestone_status": "PARTIAL",
+    "trading_enabled": false,
+    "isolated_wheel": "verified before root integration: 96 runtime modules byte-identical"
+  },
+  "saved_native_proofs": {
+    "swing_structure": "evidence/swing-structure-saved-native-01/verification.json",
+    "current_root_hashes_match_saved_record": true,
+    "native_status": "WARMUP",
+    "fixture_status": "SAVED_NATIVE_WARMUP_AND_CAUSAL_FIXTURE_VERIFIED",
+    "network_requests": 0,
+    "orders_submitted": 0
+  },
+  "hosted_validation": "PENDING",
+  "milestone_2_complete": false,
+  "paper_days_credited": 0,
+  "paper_trades_credited": 0,
+  "live_execution_enabled": false
+}

@@ -25,6 +25,7 @@ from .research import research_backtest, research_features
 from .rotation_restore import restore_rotation
 from .startup import probe
 from .stochastic_rsi_research import research_stochastic_rsi
+from .swing_structure_research import research_swing_structure
 from .trade_backfill import backfill_trades
 
 
@@ -256,6 +257,25 @@ def parser() -> argparse.ArgumentParser:
     atr_pct_parser.add_argument("--percentile-min-history", type=int, default=20)
     atr_pct_parser.add_argument("--max-bars", type=int, default=2000)
     atr_pct_parser.add_argument("--history-start-ms", type=int, default=None)
+    swing_parser = commands.add_parser(
+        "research-swing-structure",
+        help="Offline right-confirmed swing extrema from complete closed bars; cannot trade",
+    )
+    swing_parser.add_argument("--database", type=Path, required=True)
+    swing_parser.add_argument("--output", type=Path, required=True)
+    swing_parser.add_argument("--asset", required=True)
+    swing_parser.add_argument(
+        "--environment", choices=("testnet", "public_reference"), required=True
+    )
+    swing_parser.add_argument("--source", required=True)
+    swing_parser.add_argument("--symbol", required=True)
+    swing_parser.add_argument("--timeframe-s", type=int, required=True)
+    swing_parser.add_argument("--as-of-ms", type=int, required=True)
+    swing_parser.add_argument("--max-latest-age-ms", type=int, required=True)
+    swing_parser.add_argument("--left-bars", type=int, default=2)
+    swing_parser.add_argument("--right-bars", type=int, default=2)
+    swing_parser.add_argument("--max-bars", type=int, default=2000)
+    swing_parser.add_argument("--history-start-ms", type=int, default=None)
     options_parser = commands.add_parser(
         "research-options",
         help="Offline native ATM-IV term structure with explicit policies; cannot trade",
@@ -525,6 +545,27 @@ def main() -> int:
                         atr_period=args.atr_period,
                         percentile_window=args.percentile_window,
                         percentile_min_history=args.percentile_min_history,
+                        max_bars=args.max_bars,
+                        history_start_ms=args.history_start_ms,
+                    ),
+                    indent=2,
+                )
+            )
+        elif args.command == "research-swing-structure":
+            print(
+                json.dumps(
+                    research_swing_structure(
+                        args.database,
+                        args.output,
+                        asset=args.asset,
+                        environment=args.environment,
+                        source=args.source,
+                        symbol=args.symbol,
+                        timeframe_s=args.timeframe_s,
+                        as_of_ms=args.as_of_ms,
+                        max_latest_age_ms=args.max_latest_age_ms,
+                        left_bars=args.left_bars,
+                        right_bars=args.right_bars,
                         max_bars=args.max_bars,
                         history_start_ms=args.history_start_ms,
                     ),

@@ -1,6 +1,6 @@
 {
   "application_version": "0.3.56",
-  "status": "LOCAL_VALIDATION_PASSED_HOSTED_PENDING",
+  "status": "LOCAL_AND_HOSTED_VALIDATION_PASSED",
   "application_suite": {
     "tests": 3909,
     "failures": 0,
@@ -61,7 +61,18 @@
     "application_log_sha256": "15a0cd40e99b259f230b999e62fe00afb500663f33de2f581a0e411d6b1a81c6",
     "application_junit_sha256": "302b7170400f3476ae2409fc62e1b50315dbc6630f2e86f0076d2d9b21726299"
   },
-  "hosted_validation": "PENDING",
+  "hosted_validation": {
+    "status": "PASSED",
+    "windows": {
+      "run_id": 39221162769,
+      "url": "https://github.com/divanshuattri123-dot/selective-options/actions/runs/39221162769"
+    },
+    "cloud_build": {
+      "run_id": 39221162899,
+      "url": "https://github.com/divanshuattri123-dot/selective-options/actions/runs/39221162899"
+    },
+    "scope_note": "These hosted results validate committed application version 0.3.56 only."
+  },
   "milestone_2_complete": false,
   "paper_days_credited": 0,
   "paper_trades_credited": 0,

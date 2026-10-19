@@ -1,12 +1,6 @@
-# Next independent build steps after 0.3.56
+# Next independent build steps after 0.3.57
 
-The saved-native CoinDesk resume proof, Stochastic RSI, and prior-only ATR percentile research are complete within their documented bounds. Do not repeat them. The complete status of milestone 2 is in `INGESTION_STATUS.md`; all remaining milestones remain gated, and no paper days or trades are credited.
-
-## Next model increment: causally confirmed swing structure
-
-Implement one offline description over verified, complete, closed bars: report confirmed swing highs/lows only after the configured right-side confirmation bars have themselves closed. A pivot may not be visible before that confirmation close; ties, equal plateaus, missing bars, the open right edge, stale input and future clocks need explicit deterministic handling. Preserve source/scope, both clocks, row budgets and exact event IDs in the report.
-
-Do not turn pivot structure into signal thresholds, direction labels, entries, or positions. Add an API/CLI report only through the existing immutable saved-database path and use a separate exact analytical fixture from the saved-native evidence. Unit, full local/hosted tests, static, config and wheel checks must pass before recording completion.
+The saved-native CoinDesk resume proof, Stochastic RSI, prior-only ATR percentile, and causally confirmed swing structure are complete within their documented bounds. Do not repeat them. The complete status of milestone 2 is in `INGESTION_STATUS.md`; all remaining milestones remain gated, and no paper days or trades are credited.
 
 ## M2 work continues independently
 
