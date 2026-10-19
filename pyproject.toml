@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "selective-options"
-version = "0.3.52"
+version = "0.3.53"
 description = "Testnet-first selective options system: ingestion and point-in-time storage"
 requires-python = ">=3.11"
 dependencies = ["pydantic>=2.10,<3", "pydantic-settings>=2.7,<3", "PyYAML>=6.0.2,<7", "websockets>=14,<16", "duckdb>=1.2,<2", "aiohttp>=3.11,<4", "redis>=5,<7", "defusedxml>=0.7,<1"]

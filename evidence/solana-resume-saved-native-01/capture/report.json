@@ -1,0 +1,245 @@
+{
+  "archive_rotation": {
+    "enabled": false,
+    "status": "DISABLED",
+    "interval_s": null,
+    "partition_ms": 86400000,
+    "max_partitions": 366,
+    "max_snapshots": 10,
+    "attempts": 0,
+    "completed_snapshots": 0,
+    "snapshots": [],
+    "last_attempt": null,
+    "failure_type": null,
+    "scope": "Cumulative checkpoints of rows committed when the store checkpoint transaction starts; both clocks must be at or before a cutoff selected after the FIFO commit barrier. Later commits can contain earlier clocks; no complete source frontier, feed coverage, market history, retention purge, or trading approval is inferred.",
+    "delivery_acknowledgements_copied": false,
+    "source_history_modified": false,
+    "history_complete": false,
+    "ready_for_signals": false,
+    "trading_enabled": false
+  },
+  "periodic_bar_checkpoints": {
+    "enabled": false,
+    "status": "DISABLED",
+    "interval_s": null,
+    "max_generations": 32,
+    "attempts": 0,
+    "completed_generations": 0,
+    "generations": [],
+    "last_attempt": null,
+    "failure_type": null,
+    "scope": "Exact consumed native WS inputs and book tails frozen at a complete collector batch, then committed through the FIFO writer barrier at a cutoff selected afterward. Each immutable generation is explicitly selected by its marker digest and fully verified. The collector gate remains held through INNER checkpoint codec validation/publication; outer immutable re-verification and generation sealing happen outside that gate. There is no throughput or lock-duration bound, source purge, automatic fallback, complete market/source frontier, delivery acknowledgement, sustained service or periodic crash-recovery claim.",
+    "history_complete": false,
+    "source_frontier_complete": false,
+    "current_feed_health_verified": false,
+    "delivery_acknowledgements_copied": false,
+    "source_database_hash_claimed": false,
+    "source_history_modified": false,
+    "periodic_crash_recovery": false,
+    "ready_for_signals": false,
+    "trading_enabled": false
+  },
+  "solana_resume": {
+    "requested": true,
+    "selection_as_of_ms": 1791028544400,
+    "scope": {
+      "source": "solana_public",
+      "environment": "public_reference",
+      "asset": "SOL"
+    },
+    "health_event_id": "4c58bde509d87bfb8a8d9cdfcb7241b0fecafb9d5d5b27ddd23e63582c822d92",
+    "health_observed_at_ms": 1791028544400,
+    "copied_events": 3,
+    "max_events_total": 10000,
+    "max_event_value_bytes": 16000000,
+    "original_native_values_and_receipts_preserved": true,
+    "closed_seed_revalidated_before_producers": true,
+    "copied_outbox_pending": true,
+    "delivery_acknowledgements_restored": false,
+    "history_complete": false,
+    "provider_finality_independently_verified": false,
+    "transport_resumed_by_copy": false,
+    "ready_for_signals": false,
+    "trading_enabled": false
+  },
+  "stablecoin_resume": null,
+  "coinmetrics_resume": null,
+  "coinmetrics_quality": null,
+  "crypto_news_quality": null,
+  "stablecoin_supply_quality": null,
+  "tips_yield_quality": null,
+  "liquidations_quality": [],
+  "eth_gas_quality": null,
+  "funding_revision_views": [],
+  "funding_poll_health": [],
+  "flow_revision_views": [],
+  "flow_quality": [],
+  "policy_news_quality": [],
+  "build_version": "0.3.53",
+  "configuration_sha256": "9cfa6798215692b9a48a600d9e79164c0999a28acdff4594ce913512c0154758",
+  "parquet_sha256": "b3304a862fd902512acdb2bb44505f638c725a95d212a809ab11185f18beb942",
+  "status": "CAPTURE_FINISHED",
+  "started_at_ms": 1791028544400,
+  "ended_at_ms": 1791028544400,
+  "collection_ended_at_ms": 1791028544400,
+  "shutdown_drain_ms": 0,
+  "requested_duration_s": 0.05,
+  "capture_stop": {
+    "reason": "DURATION_ELAPSED",
+    "trigger": "DURATION_ELAPSED",
+    "request_reason": null,
+    "request_enabled": false,
+    "signal_handling": "NOT_REQUESTED",
+    "periodic_crash_recovery": false
+  },
+  "rows": 3,
+  "trade_checkpoint_seed_rows": 0,
+  "eth_gas_checkpoint_event_id": null,
+  "eth_gas_provider": "publicnode",
+  "eth_gas_source": "ethereum_publicnode",
+  "eth_gas_checkpoint_handoff": "NOT_REQUESTED",
+  "recovery_marker": null,
+  "automatic_kraken_recovery_enabled": false,
+  "recovery_handoff": "NOT_REQUESTED",
+  "recovery_selected_rows": 0,
+  "trade_checkpoint_event_ids": [],
+  "trade_recovery_pending_symbols": [],
+  "trade_recovery_scope": "Kraken only; committed WS tail or explicit recovery marker, with optional bounded automatic REST repair of forward gaps after acknowledgements. Bar state and other collectors start fresh; repaired active bars stay partial.",
+  "counts": [
+    {
+      "source": "solana_public",
+      "environment": "public_reference",
+      "asset": "SOL",
+      "kind": "feed_health",
+      "count": 1
+    },
+    {
+      "source": "solana_public",
+      "environment": "public_reference",
+      "asset": "SOL",
+      "kind": "on_chain",
+      "count": 2
+    }
+  ],
+  "redis_delivery_pending": 3,
+  "freshness": [
+    {
+      "source": "deribit",
+      "asset": "SOL",
+      "kind": "chain_summary",
+      "state": "MISSING",
+      "age_ms": null,
+      "timestamp_kind": null
+    },
+    {
+      "source": "deribit",
+      "asset": "SOL",
+      "kind": "ticker",
+      "state": "MISSING",
+      "age_ms": null,
+      "timestamp_kind": null
+    },
+    {
+      "source": "deribit",
+      "asset": "SOL",
+      "kind": "book",
+      "state": "MISSING",
+      "age_ms": null,
+      "timestamp_kind": null
+    },
+    {
+      "source": "deribit",
+      "asset": "SOL",
+      "kind": "index",
+      "state": "MISSING",
+      "age_ms": null,
+      "timestamp_kind": null
+    },
+    {
+      "source": "solana_public",
+      "asset": "SOL",
+      "kind": "on_chain",
+      "state": "MISSING",
+      "age_ms": null,
+      "timestamp_kind": null
+    },
+    {
+      "source": "solana_public",
+      "asset": "SOL",
+      "kind": "feed_health",
+      "state": "MISSING",
+      "age_ms": null,
+      "timestamp_kind": null
+    }
+  ],
+  "calendar_quality": {
+    "state": "NOT_CONFIGURED"
+  },
+  "fomc_calendar_quality": {
+    "state": "NOT_CONFIGURED"
+  },
+  "solana_network_quality": {
+    "source": "solana_public",
+    "asset": "SOL",
+    "as_of_ms": 1791028544400,
+    "state": "NETWORK_SAMPLE_VERIFIED",
+    "blocker": null,
+    "trading_approval": false,
+    "health_event_id": "4c58bde509d87bfb8a8d9cdfcb7241b0fecafb9d5d5b27ddd23e63582c822d92",
+    "health_received_at_ms": 1791028544400,
+    "health_reason": "NETWORK_SAMPLES_ACCEPTED",
+    "event_ids": [
+      "a195c48b735d46423da5ca0771c3b8c5edd789c83a3420efee06d0dc3942eff1",
+      "9e4d8e5ea1a07bf2bd4d503b56445b0644b89e6792d6176a3b6b2c773c08bb1c"
+    ],
+    "performance_time_ms": 1791028531000,
+    "stake_received_at_ms": 1791028543940
+  },
+  "option_instrument_freshness": [],
+  "option_stream_coverage": [
+    {
+      "asset": "SOL",
+      "as_of_ms": 1791028544400,
+      "state": "BLOCKED",
+      "blocker": "OPTION_STREAM_CONTROL_MISSING",
+      "trading_approval": false,
+      "trade_history_continuity_verified": false,
+      "all_options_native_fields_available": false
+    }
+  ],
+  "bar_policy": "Only locally closed bars; complete=false for partial first intervals or connection gaps. Empty intervals are not synthesized.",
+  "reference_comparison": [
+    {
+      "asset": "SOL",
+      "state": "INSUFFICIENT_SOURCES",
+      "sources": []
+    }
+  ],
+  "deribit_connections": 0,
+  "deribit_universe_refreshes": 0,
+  "stream_universe_refresh_interval_s": null,
+  "stream_cap_per_asset": 6,
+  "missing_capabilities": [
+    "complete on-chain metrics/history and attributed exchange flows; optional public subsets do not establish complete coverage",
+    "crypto news, sentiment and comprehensive financial news",
+    "CPI/PCE/NFP calendars and values, plus other central-bank calendars; BEA releases and FOMC meeting dates are limited optional public subsets",
+    "XAU/USD gold reference",
+    "historical underlying OHLCV",
+    "historical underlying trade/bar coverage",
+    "historical perpetual/funding archive and full volatility-index coverage",
+    "complete liquidation ledger and historical continuity; optional forceOrder snapshots are lossy",
+    "complete cross-venue funding/OI coverage: Bybit USDT snapshots are optional; other venues/history pending",
+    "cross-venue options flow",
+    "full-universe stream coverage",
+    "gap recovery outside bounded Kraken REST coverage; periodic crash checkpoints and other stream/full-source recovery",
+    "deployed Redis consumer bus"
+  ],
+  "milestone_2_complete": false,
+  "ready_for_signals": false,
+  "trading_enabled": false,
+  "orders_submitted": 0,
+  "redis_mirror": "NOT_CONFIGURED",
+  "failure_type": null,
+  "freshness_scope": "asset/feed aggregates and selected option instruments; not trading approval",
+  "reference_caveat": "Coinbase last-trade vs Kraken midpoint; Kraken has receipt time only. Public references are separate from testnet prices."
+}

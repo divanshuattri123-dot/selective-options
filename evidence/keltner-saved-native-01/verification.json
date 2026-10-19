@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "verification_passed": true,
+  "source_database_sha256": "691fd0d9e9b36544b4844d3743fe5941c144d7b7e365ee695872d5660891393b",
+  "source_mutated": false,
+  "source_code_sha256": {
+    "src/selective_options/keltner_features.py": "67d9693269cf632baf95793b5169199aa8e9a2d798e9d65810ce2f98705adc09",
+    "src/selective_options/keltner_research.py": "15426b15dc3cbf8787ddfb06996811bd73c977dea32ee168b9e1173551623e1d",
+    "src/selective_options/features.py": "6ecaa2501ea2c25dafe7e43519c5832ee1f82b403721bc26d5b66ffaa04b6b4a",
+    "src/selective_options/research.py": "a13caa495110868f3dd735227760cd26d8e15fdaabc75396f1602f0513cd3d93",
+    "src/selective_options/events.py": "6a45866c1e1b70f45d4f9335deab679ba7fa3d1f7369c544ffd9d7ac4e57de08",
+    "src/selective_options/cli.py": "9f24d1daf1d9e0e070558162a51c809e7bd9a034051fa70e4da40209e2b0db45",
+    "scripts/verify_keltner.py": "7cecf77e93f3fa717106f967e87e3aeac792b9d4815fcfe2d78717173a4c7294"
+  },
+  "source_checks": [
+    {
+      "selected_bars": 3,
+      "complete_bars": 2,
+      "partial_bars": 1,
+      "history_sha256": "95a389a288049b8d84fc9ef8b08092b5335dd7327efa8e58143a5f56f49f9657",
+      "blockers": [
+        "INCOMPLETE_BAR"
+      ],
+      "feature_states": {
+        "keltner_center": "UNAVAILABLE",
+        "keltner_atr": "UNAVAILABLE",
+        "keltner_upper": "UNAVAILABLE",
+        "keltner_lower": "UNAVAILABLE"
+      },
+      "rational_reference": null,
+      "explicit_history_start_ms": null,
+      "data_kind": "saved_native_capture"
+    },
+    {
+      "selected_bars": 2,
+      "complete_bars": 2,
+      "partial_bars": 0,
+      "history_sha256": "fd11882e69e15631301778f4a30511a08e8e796d4f273beff26176ac3d1a32c5",
+      "blockers": [],
+      "feature_states": {
+        "keltner_center": "WARMUP",
+        "keltner_atr": "WARMUP",
+        "keltner_upper": "WARMUP",
+        "keltner_lower": "WARMUP"
+      },
+      "rational_reference": {
+        "keltner_center": null,
+        "keltner_atr": null,
+        "keltner_upper": null,
+        "keltner_lower": null
+      },
+      "explicit_history_start_ms": 1790002200000,
+      "data_kind": "saved_native_capture"
+    }
+  ],
+  "synthetic_golden": {
+    "selected_bars": 37,
+    "complete_bars": 37,
+    "partial_bars": 0,
+    "history_sha256": "3f42cf7cee30bdbf5fc6de92e33ce8006d02dfa99f741b356907af32e3ee556f",
+    "blockers": [],
+    "feature_states": {
+      "keltner_center": "AVAILABLE",
+      "keltner_atr": "AVAILABLE",
+      "keltner_upper": "AVAILABLE",
+      "keltner_lower": "AVAILABLE"
+    },
+    "rational_reference": {
+      "keltner_center": "129738482196822712090878443/1201677699803267675789640",
+      "keltner_atr": "2663461652296477798593360687/200000000000000000000000000",
+      "keltner_upper": "404361767288202834172528134952895426284103851447067/3004194249508169189474100000000000000000000000000",
+      "keltner_lower": "244330643695910726281864080047104573715896148552933/3004194249508169189474100000000000000000000000000"
+    }
+  },
+  "artifacts_sha256": {
+    "api-0/keltner.json": "9fa19c095e02b101a536f123e11610ff698c86eda58937d89003a864573165d8",
+    "cli-0/keltner.json": "9fa19c095e02b101a536f123e11610ff698c86eda58937d89003a864573165d8",
+    "api-1/keltner.json": "23fee9f50073182e5f421829c908f5d4f96580f63d10cc74f420c9df30b772e1",
+    "cli-1/keltner.json": "23fee9f50073182e5f421829c908f5d4f96580f63d10cc74f420c9df30b772e1",
+    "synthetic-golden.json": "442d9e14843c3ccd0c9a0f5c407b18196ba634f818ad12c2f5a194b97fff87c9"
+  },
+  "native_numeric_channel_established": false,
+  "sustained_history_verified": false,
+  "current_feed_health_verified": false,
+  "ready_for_signals": false,
+  "regime_classification_complete": false,
+  "trading_enabled": false
+}

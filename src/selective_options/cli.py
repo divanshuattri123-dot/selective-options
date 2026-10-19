@@ -13,6 +13,7 @@ from .capture_lifecycle import CaptureStopRequest, scoped_sigterm_stop
 from .config import load_config
 from .ingestion import capture
 from .interlock import LiveEngine
+from .keltner_research import research_keltner
 from .logging import configure_logging
 from .option_flow_research import research_option_flow
 from .option_skew_research import research_option_skew
@@ -29,6 +30,7 @@ class BarCaptureOptions(TypedDict, total=False):
     resume_bars_from: Path
     save_bars_on_stop: bool
     stop_request: CaptureStopRequest
+    resume_solana_from: Path
 
 
 def parser() -> argparse.ArgumentParser:
@@ -89,6 +91,12 @@ def parser() -> argparse.ArgumentParser:
         type=Path,
         default=None,
         help="Validate and copy bounded BTC/ETH daily valuation history before capture producers",
+    )
+    capture_parser.add_argument(
+        "--resume-solana-from",
+        type=Path,
+        default=None,
+        help="Validate all eligible SOL network poll bindings and copy the latest exact healthy three-row seed before producers",
     )
     capture_parser.add_argument(
         "--recovery-marker",
@@ -178,6 +186,26 @@ def parser() -> argparse.ArgumentParser:
     range_parser.add_argument("--max-bars", type=int, default=2000)
     range_parser.add_argument("--history-start-ms", type=int, default=None)
     range_parser.add_argument("--annualization-periods-per-year", type=float, default=None)
+    keltner_parser = commands.add_parser(
+        "research-keltner",
+        help="Offline EMA/ATR Keltner channels from complete closed bars; cannot trade",
+    )
+    keltner_parser.add_argument("--database", type=Path, required=True)
+    keltner_parser.add_argument("--output", type=Path, required=True)
+    keltner_parser.add_argument("--asset", required=True)
+    keltner_parser.add_argument(
+        "--environment", choices=("testnet", "public_reference"), required=True
+    )
+    keltner_parser.add_argument("--source", required=True)
+    keltner_parser.add_argument("--symbol", required=True)
+    keltner_parser.add_argument("--timeframe-s", type=int, required=True)
+    keltner_parser.add_argument("--as-of-ms", type=int, required=True)
+    keltner_parser.add_argument("--ema-period", type=int, required=True)
+    keltner_parser.add_argument("--atr-period", type=int, required=True)
+    keltner_parser.add_argument("--atr-multiplier", type=float, required=True)
+    keltner_parser.add_argument("--max-latest-age-ms", type=int, required=True)
+    keltner_parser.add_argument("--max-bars", type=int, default=2000)
+    keltner_parser.add_argument("--history-start-ms", type=int, default=None)
     options_parser = commands.add_parser(
         "research-options",
         help="Offline native ATM-IV term structure with explicit policies; cannot trade",
@@ -268,6 +296,8 @@ def main() -> int:
                 capture_options["resume_bars_from"] = args.resume_bars_from
             if args.save_bars_on_stop is not None:
                 capture_options["save_bars_on_stop"] = args.save_bars_on_stop
+            if args.resume_solana_from is not None:
+                capture_options["resume_solana_from"] = args.resume_solana_from
 
             async def run_capture() -> dict[str, object]:
                 async def collect() -> dict[str, object]:
@@ -377,6 +407,28 @@ def main() -> int:
                         max_latest_age_ms=args.max_latest_age_ms,
                         max_bars=args.max_bars,
                         annualization_periods_per_year=args.annualization_periods_per_year,
+                        history_start_ms=args.history_start_ms,
+                    ),
+                    indent=2,
+                )
+            )
+        elif args.command == "research-keltner":
+            print(
+                json.dumps(
+                    research_keltner(
+                        args.database,
+                        args.output,
+                        asset=args.asset,
+                        environment=args.environment,
+                        source=args.source,
+                        symbol=args.symbol,
+                        timeframe_s=args.timeframe_s,
+                        as_of_ms=args.as_of_ms,
+                        ema_period=args.ema_period,
+                        atr_period=args.atr_period,
+                        atr_multiplier=args.atr_multiplier,
+                        max_latest_age_ms=args.max_latest_age_ms,
+                        max_bars=args.max_bars,
                         history_start_ms=args.history_start_ms,
                     ),
                     indent=2,

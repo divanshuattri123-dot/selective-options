@@ -2,6 +2,22 @@
 
 This build offers a one-shot readiness probe and a finite public-data recorder. It has no positions, execution loop, dashboard, kill command, or live deployment. Stopping it closes its WebSocket. It never places orders and cannot cancel orders opened by other software.
 
+## Explicit SOL network checkpoint resume
+
+`capture --resume-solana-from CLOSED_DATABASE` is opt-in. SOL must be configured and `ingestion.solana_network_enabled` must be true. The loader uses the configured two-poll receipt age and sample-age-plus-two-polls source-age limits, at most 10,000 eligible events and 16,000,000 stored event-value bytes. Those budgets cover Python event materialization, not total database size, scan work or engine memory.
+
+```powershell
+$env:SELECTIVE_INGESTION__SOLANA_NETWORK_ENABLED = "true"
+selective-options capture --output NEW_FINITE_CAPTURE --duration 60 `
+  --resume-solana-from CLOSED_CAPTURE/events.duckdb
+```
+
+This command starts an actual finite public capture; the saved proof instead mocks every transport. An old saved database will refuse at today's clock. Do not change timestamps or relax freshness merely to make an old seed pass. No credentials are required by the public SOL collector.
+
+Before creating output, the loader audits all both-clock-eligible `solana_public/public_reference/SOL` rows and their canonical poll bindings. It refuses malformed/failed/tied latest health, unbound or multiply bound native rows, incomplete pairs, stale evidence and budget overflow. It never falls back from the latest failed poll. It selects only the latest two native snapshots and their exact health, preserving payloads, IDs and first receipts. Startup copies them with deliveries pending, closes and reopens the destination, revalidates the copied seed and outbox count, and only then starts producers.
+
+`report.json` records `solana_resume`, the selected health/receipt, copied count and limits. Complete history, independent finality, transport recovery, restored acknowledgements, signal readiness and trading remain false. A failure during destination validation can leave the refused new seed directory for diagnosis; no producer has started. The original source is read-only. This handoff does not prove OS crash/power-loss recovery or continuous collection.
+
 ## Periodic unfinished-bar generations
 
 Version 0.3.52 adds opt-in periodic snapshots during a finite supervised capture. Set `ingestion.bar_checkpoint_interval_s` to an integer from 1 to 86400 and `ingestion.bar_checkpoint_max_generations` from 1 to 256. The defaults are `null` (disabled) and 32. Spot trades must be enabled. An environment override is also supported, for example:

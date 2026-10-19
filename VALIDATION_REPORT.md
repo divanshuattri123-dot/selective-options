@@ -2,6 +2,12 @@
 
 
 
+## Version 0.3.53 validation
+
+The new SOL checkpoint/capture and independent verifier checks pass, as do all 99 Keltner-focused cases and an independent 69-case feature/research recheck. Whole-tree Ruff lint/format, strict mypy (140 configured source/script files) and testnet configuration pass. Saved-native proofs preserve source bytes and keep synthetic cases separate. Five numerical Keltner edge cases found during review were repaired before freezing; the shared historical indicator implementation is unchanged.
+
+Full frozen local regression and exact-source hosted Windows/Linux/container validation are running. No full-suite or hosted success is claimed by this initial source checkpoint. The executable fingerprint is in `evidence/full-suite-0.3.53/source-freeze.json`; completed raw checks, exact source commit and preservation evidence will be recorded here when available. M2 remains PARTIAL; paper-day/trade credit is zero and trading remains disabled. Continuous hosting remains unprovisioned.
+
 ## Version 0.3.52 validation
 
 The frozen .52 local run passes all 3,657 application tests with 95.24% combined statement/branch coverage and all 65 migration-helper cases, with zero failures/errors/skips. All 272 Python source/script/test/tool files retain their exact fingerprint and match source commit `c362b94b2b01c0f74a6ecfd6cf5a4b703e5ced4e`; Ruff lint/format, strict mypy (135 configured files) and testnet configuration pass. Hosted [Windows run 37907490372](https://github.com/divanshuattri123-dot/selective-options/actions/runs/37907490372) passes the complete 3,657 application plus 65 migration cases on that exact source. [Linux/container run 37907490437](https://github.com/divanshuattri123-dot/selective-options/actions/runs/37907490437) passes 3,715 selected cases, with seven declared historical Windows exclusions and zero failures/errors/skips. Those seven cases are included in full Windows validation. The isolated 0.3.52 wheel matches all 86 source modules. Actual POSIX child-process SIGTERM delivery, producer-cleanup tail draining, restored handlers, non-root UID 10001 container configuration, named-volume persistence and arming refusal pass. The guarded Linux pytest worker and isolated signal child report zero blocked external network attempts within their documented scopes.

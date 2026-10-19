@@ -41,6 +41,7 @@ from .recovery_handoff import handoff_recovery
 from .recovery_journal import load_recovery_evidence, publish_recovery
 from .rotation_runtime import RotationRuntime, drain_shutdown
 from .socket_recovery import socket_gap_handler
+from .solana_checkpoint import load_solana_resume
 from .solana_network import SolanaNetworkCollector
 from .spot_trades import SpotTradeCollector
 from .stablecoin_checkpoint import load_stablecoin_resume
@@ -132,6 +133,7 @@ async def capture(
     save_bars_on_stop: bool | None = None,
     resume_coinmetrics_from: Path | None = None,
     stop_request: CaptureStopRequest | None = None,
+    resume_solana_from: Path | None = None,
 ) -> dict[str, object]:
     duration = config.ingestion.duration_s if duration_s is None else duration_s
     if not math.isfinite(duration) or duration <= 0:
@@ -205,6 +207,26 @@ async def capture(
         coinmetrics_resume_at = now_ms()
         coinmetrics_seed = await load_coinmetrics_resume(
             resume_coinmetrics_from, coinmetrics_resume_at, **coinmetrics_policy
+        )
+    if resume_solana_from is not None and (
+        not config.ingestion.solana_network_enabled or "SOL" not in config.system.assets
+    ):
+        raise ValueError("SOL checkpoint recovery requires enabled SOL network capture")
+    solana_policy = {
+        "max_receipt_age_ms": int(config.ingestion.solana_network_poll_interval_s * 2000),
+        "max_sample_age_ms": int(
+            config.ingestion.solana_network_max_sample_age_s * 1000
+            + config.ingestion.solana_network_poll_interval_s * 2000
+        ),
+        "max_rows": 10_000,
+        "max_bytes": 16_000_000,
+    }
+    solana_resume_at: int | None = None
+    solana_seed: tuple[MarketEvent, ...] = ()
+    if resume_solana_from is not None:
+        solana_resume_at = now_ms()
+        solana_seed = await load_solana_resume(
+            resume_solana_from, solana_resume_at, **solana_policy
         )
     eth_seed = (
         await load_eth_checkpoint(
@@ -348,6 +370,24 @@ async def capture(
                 coinmetrics_seed
             ):
                 raise IntegrityError("COINMETRICS_CHECKPOINT_OUTBOX_MISMATCH")
+        except BaseException:
+            await drain_shutdown(store.close())
+            raise
+    if solana_seed:
+        try:
+            pending_before_solana = await store.pending_delivery_count()
+            await store.append(list(solana_seed), exact=True)
+            await store.close()
+            copied_solana = await load_solana_resume(
+                output / "events.duckdb", now_ms(), **solana_policy
+            )
+            if copied_solana != solana_seed:
+                raise IntegrityError("SOL_CHECKPOINT_CHANGED_DURING_COPY")
+            store = await DuckStore.open(
+                output / "events.duckdb", int(config.data.max_clock_skew_s * 1000)
+            )
+            if await store.pending_delivery_count() != pending_before_solana + len(solana_seed):
+                raise IntegrityError("SOL_CHECKPOINT_OUTBOX_MISMATCH")
         except BaseException:
             await drain_shutdown(store.close())
             raise
@@ -843,6 +883,35 @@ async def capture(
         report: dict[str, object] = {
             "archive_rotation": rotation_runtime.summary(),
             "periodic_bar_checkpoints": periodic_bars_runtime.summary(),
+            "solana_resume": {
+                "requested": True,
+                "selection_as_of_ms": solana_resume_at,
+                "scope": {
+                    "source": "solana_public",
+                    "environment": "public_reference",
+                    "asset": "SOL",
+                },
+                "health_event_id": next(
+                    row.event_id for row in solana_seed if row.kind == "feed_health"
+                ),
+                "health_observed_at_ms": next(
+                    row.observed_at_ms for row in solana_seed if row.kind == "feed_health"
+                ),
+                "copied_events": len(solana_seed),
+                "max_events_total": solana_policy["max_rows"],
+                "max_event_value_bytes": solana_policy["max_bytes"],
+                "original_native_values_and_receipts_preserved": True,
+                "closed_seed_revalidated_before_producers": True,
+                "copied_outbox_pending": True,
+                "delivery_acknowledgements_restored": False,
+                "history_complete": False,
+                "provider_finality_independently_verified": False,
+                "transport_resumed_by_copy": False,
+                "ready_for_signals": False,
+                "trading_enabled": False,
+            }
+            if solana_seed
+            else None,
             "stablecoin_resume": {
                 "requested": True,
                 "selection_as_of_ms": stablecoin_resume_at,

@@ -1,0 +1,241 @@
+{
+  "source_database_sha256": "691fd0d9e9b36544b4844d3743fe5941c144d7b7e365ee695872d5660891393b",
+  "source_mutated": false,
+  "source_scope_and_cutoff": {
+    "asset": "BTC",
+    "environment": "public_reference",
+    "source": "kraken",
+    "symbol": "BTC/USD",
+    "as_of_ms": 1790002505185,
+    "explicit_history_start_ms": 1790002200000,
+    "materialized_rows": 2,
+    "full_history_or_source_authenticity_verified": false
+  },
+  "keltner_report": {
+    "formula_version": "keltner-bars-v1",
+    "state": "KELTNER_COMPUTED",
+    "base": {
+      "formula_version": "closed-bars-v1",
+      "state": "FEATURES_COMPUTED",
+      "asset": "BTC",
+      "environment": "public_reference",
+      "source": "kraken",
+      "symbol": "BTC/USD",
+      "timeframe_s": 300,
+      "as_of_ms": 1790002505185,
+      "history_budget": 2000,
+      "bars_available": 2,
+      "bars_used": 2,
+      "first_close_ms": 1790002200000,
+      "latest_close_ms": 1790002500000,
+      "latest_bar_age_ms": 5185,
+      "max_latest_age_ms": 600000,
+      "history_sha256": "fd11882e69e15631301778f4a30511a08e8e796d4f273beff26176ac3d1a32c5",
+      "annualization_periods_per_year": null,
+      "blockers": [],
+      "features": [
+        {
+          "name": "ema_8",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "price",
+          "bars_required": 8,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "ema_8_slope",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "price_per_bar",
+          "bars_required": 9,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "ema_21",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "price",
+          "bars_required": 21,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "ema_21_slope",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "price_per_bar",
+          "bars_required": 22,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "ema_50",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "price",
+          "bars_required": 50,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "ema_50_slope",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "price_per_bar",
+          "bars_required": 51,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "ema_200",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "price",
+          "bars_required": 200,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "ema_200_slope",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "price_per_bar",
+          "bars_required": 201,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "rsi_14",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "index_0_to_100",
+          "bars_required": 15,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "atr_14",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "price",
+          "bars_required": 15,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "macd_12_26",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "price",
+          "bars_required": 26,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "macd_signal_9",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "price",
+          "bars_required": 34,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "macd_histogram",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "price",
+          "bars_required": 34,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "bollinger_width_20",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "fraction",
+          "bars_required": 20,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "roc_5",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "fraction",
+          "bars_required": 6,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "roc_20",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "fraction",
+          "bars_required": 21,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "realized_vol_20",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "annualized_log_return_std",
+          "bars_required": 21,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "realized_vol_60",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "annualized_log_return_std",
+          "bars_required": 61,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        }
+      ],
+      "history_truncated": false,
+      "source_frontier_complete": false,
+      "ready_for_signals": false,
+      "trading_enabled": false
+    },
+    "ema_period": 20,
+    "atr_period": 10,
+    "atr_multiplier": 2.0,
+    "center_price": "close",
+    "ema_seed": "first_period_arithmetic_mean",
+    "atr_seed": "first_period_previous_close_true_ranges_mean",
+    "atr_smoothing": "wilder_alpha_1_over_period",
+    "features": [
+      {
+        "name": "keltner_center",
+        "state": "WARMUP",
+        "value": null,
+        "unit": "price",
+        "bars_required": 20,
+        "reason": "INSUFFICIENT_CLOSED_BARS"
+      },
+      {
+        "name": "keltner_atr",
+        "state": "WARMUP",
+        "value": null,
+        "unit": "price",
+        "bars_required": 11,
+        "reason": "INSUFFICIENT_CLOSED_BARS"
+      },
+      {
+        "name": "keltner_upper",
+        "state": "WARMUP",
+        "value": null,
+        "unit": "price",
+        "bars_required": 20,
+        "reason": "INSUFFICIENT_CLOSED_BARS"
+      },
+      {
+        "name": "keltner_lower",
+        "state": "WARMUP",
+        "value": null,
+        "unit": "price",
+        "bars_required": 20,
+        "reason": "INSUFFICIENT_CLOSED_BARS"
+      }
+    ],
+    "input_event_ids": [
+      "207b61d89e707b293e1879864e0fd5c87778fc4d653b37d59c607104679aaf70",
+      "5fa3a97a0ffcfcfeda78728a1443ddfb5ac81ce103444f1b12aba54419512817"
+    ],
+    "windows_are_bar_counts": true,
+    "current_feed_health_verified": false,
+    "source_frontier_complete": false,
+    "regime_classification_complete": false,
+    "ready_for_signals": false,
+    "trading_enabled": false
+  },
+  "ready_for_signals": false,
+  "trading_enabled": false
+}

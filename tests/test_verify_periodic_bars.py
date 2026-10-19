@@ -29,7 +29,7 @@ async def test_actual_saved_native_generations_resume_and_tamper_refusal(tmp_pat
     result = await proof.verify(output)
     assert result == json.loads((output / "verification.json").read_text())
     assert result["status"] == "SAVED_NATIVE_ACTIVE_BAR_GENERATIONS_PASSED"
-    assert result["application_version"] == "0.3.52"
+    assert result["application_version"] == "0.3.53"
     assert result["saved_native_trade_count"] == 55
     assert result["separate_contiguous_cohort_sizes"] == [50, 5]
     assert result["actual_capture_pipelines"] == 4

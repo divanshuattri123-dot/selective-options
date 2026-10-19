@@ -1,0 +1,282 @@
+{
+  "data_kind": "synthetic_fixture",
+  "audit": {
+    "selected_bars": 37,
+    "complete_bars": 37,
+    "partial_bars": 0,
+    "history_sha256": "3f42cf7cee30bdbf5fc6de92e33ce8006d02dfa99f741b356907af32e3ee556f",
+    "blockers": [],
+    "feature_states": {
+      "keltner_center": "AVAILABLE",
+      "keltner_atr": "AVAILABLE",
+      "keltner_upper": "AVAILABLE",
+      "keltner_lower": "AVAILABLE"
+    },
+    "rational_reference": {
+      "keltner_center": "129738482196822712090878443/1201677699803267675789640",
+      "keltner_atr": "2663461652296477798593360687/200000000000000000000000000",
+      "keltner_upper": "404361767288202834172528134952895426284103851447067/3004194249508169189474100000000000000000000000000",
+      "keltner_lower": "244330643695910726281864080047104573715896148552933/3004194249508169189474100000000000000000000000000"
+    }
+  },
+  "report": {
+    "formula_version": "keltner-bars-v1",
+    "state": "KELTNER_COMPUTED",
+    "base": {
+      "formula_version": "closed-bars-v1",
+      "state": "FEATURES_COMPUTED",
+      "asset": "BTC",
+      "environment": "public_reference",
+      "source": "synthetic_fixture",
+      "symbol": "FIXTURE-BTC/USD",
+      "timeframe_s": 300,
+      "as_of_ms": 11400005,
+      "history_budget": 2000,
+      "bars_available": 37,
+      "bars_used": 37,
+      "first_close_ms": 600000,
+      "latest_close_ms": 11400000,
+      "latest_bar_age_ms": 5,
+      "max_latest_age_ms": 600000,
+      "history_sha256": "3f42cf7cee30bdbf5fc6de92e33ce8006d02dfa99f741b356907af32e3ee556f",
+      "annualization_periods_per_year": null,
+      "blockers": [],
+      "features": [
+        {
+          "name": "ema_8",
+          "state": "AVAILABLE",
+          "value": 106.17707254794375,
+          "unit": "price",
+          "bars_required": 8,
+          "reason": null
+        },
+        {
+          "name": "ema_8_slope",
+          "state": "AVAILABLE",
+          "value": -3.1934492994124923,
+          "unit": "price_per_bar",
+          "bars_required": 9,
+          "reason": null
+        },
+        {
+          "name": "ema_21",
+          "state": "AVAILABLE",
+          "value": 108.07367551865839,
+          "unit": "price",
+          "bars_required": 21,
+          "reason": null
+        },
+        {
+          "name": "ema_21_slope",
+          "state": "AVAILABLE",
+          "value": -1.3073675518658376,
+          "unit": "price_per_bar",
+          "bars_required": 22,
+          "reason": null
+        },
+        {
+          "name": "ema_50",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "price",
+          "bars_required": 50,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "ema_50_slope",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "price_per_bar",
+          "bars_required": 51,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "ema_200",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "price",
+          "bars_required": 200,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "ema_200_slope",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "price_per_bar",
+          "bars_required": 201,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        },
+        {
+          "name": "rsi_14",
+          "state": "AVAILABLE",
+          "value": 46.11250322126628,
+          "unit": "index_0_to_100",
+          "bars_required": 15,
+          "reason": null
+        },
+        {
+          "name": "atr_14",
+          "state": "AVAILABLE",
+          "value": 13.0452729704011,
+          "unit": "price",
+          "bars_required": 15,
+          "reason": null
+        },
+        {
+          "name": "macd_12_26",
+          "state": "AVAILABLE",
+          "value": -1.6838918502964049,
+          "unit": "price",
+          "bars_required": 26,
+          "reason": null
+        },
+        {
+          "name": "macd_signal_9",
+          "state": "AVAILABLE",
+          "value": -1.3068911294338796,
+          "unit": "price",
+          "bars_required": 34,
+          "reason": null
+        },
+        {
+          "name": "macd_histogram",
+          "state": "AVAILABLE",
+          "value": -0.37700072086252523,
+          "unit": "price",
+          "bars_required": 34,
+          "reason": null
+        },
+        {
+          "name": "bollinger_width_20",
+          "state": "AVAILABLE",
+          "value": 0.35262592308692986,
+          "unit": "fraction",
+          "bars_required": 20,
+          "reason": null
+        },
+        {
+          "name": "roc_5",
+          "state": "AVAILABLE",
+          "value": 0.02981029810298108,
+          "unit": "fraction",
+          "bars_required": 6,
+          "reason": null
+        },
+        {
+          "name": "roc_20",
+          "state": "AVAILABLE",
+          "value": -0.17391304347826086,
+          "unit": "fraction",
+          "bars_required": 21,
+          "reason": null
+        },
+        {
+          "name": "realized_vol_20",
+          "state": "UNAVAILABLE",
+          "value": null,
+          "unit": "annualized_log_return_std",
+          "bars_required": 21,
+          "reason": "ANNUALIZATION_NOT_SPECIFIED"
+        },
+        {
+          "name": "realized_vol_60",
+          "state": "WARMUP",
+          "value": null,
+          "unit": "annualized_log_return_std",
+          "bars_required": 61,
+          "reason": "INSUFFICIENT_CLOSED_BARS"
+        }
+      ],
+      "history_truncated": false,
+      "source_frontier_complete": false,
+      "ready_for_signals": false,
+      "trading_enabled": false
+    },
+    "ema_period": 20,
+    "atr_period": 10,
+    "atr_multiplier": 2.0,
+    "center_price": "close",
+    "ema_seed": "first_period_arithmetic_mean",
+    "atr_seed": "first_period_previous_close_true_ranges_mean",
+    "atr_smoothing": "wilder_alpha_1_over_period",
+    "features": [
+      {
+        "name": "keltner_center",
+        "state": "AVAILABLE",
+        "value": 107.96445853831091,
+        "unit": "price",
+        "bars_required": 20,
+        "reason": null
+      },
+      {
+        "name": "keltner_atr",
+        "state": "AVAILABLE",
+        "value": 13.317308261482392,
+        "unit": "price",
+        "bars_required": 11,
+        "reason": null
+      },
+      {
+        "name": "keltner_upper",
+        "state": "AVAILABLE",
+        "value": 134.5990750612757,
+        "unit": "price",
+        "bars_required": 20,
+        "reason": null
+      },
+      {
+        "name": "keltner_lower",
+        "state": "AVAILABLE",
+        "value": 81.32984201534612,
+        "unit": "price",
+        "bars_required": 20,
+        "reason": null
+      }
+    ],
+    "input_event_ids": [
+      "d2ee814f407754818751f71ba8c042a918e4286c7adce6e0e63f0d8981e1d368",
+      "4c829a3837295b1d2a1068d917f2acad386150d24303279cd2942cd528f6ce0a",
+      "0b88a823c1b78d517a02433b5c9ea5f1ea906f4e8b675f5c6783908b39cb4052",
+      "53e72aecc91e800a42efc9e206998f2225a08e83ef39393b3cbdcd113aa1f194",
+      "5841ed7c6c3f4db4b9a42b01d5a5c3834d119dae7328b9db57764cbdab9c3b05",
+      "6d0ee1dda9f4661ec1c241775c764872951b4bdcd4b2b4594c0d56159df537b6",
+      "8b8612e6cb5096dce89b484d01b171d8a7504f207d039f2da14700262488b235",
+      "433b36a8b453560e359ec01035b431ff93d67e617be9079f4a8c429f9e05888e",
+      "5228b822be3be57c1a41f06c0d6d426bb6ee4a3cc5c5f78689bcb9c3973d876d",
+      "d0382daf577f92414a9f451c0ed993ccb5b5de77e74bb68fb35e8c068814a3e0",
+      "941c16bf869a84bd3012596791310442c9e14abd980ca3959f75a2c080144ad3",
+      "8673f565417ec09f0b4e06d2bdeb3735afe2573387090a6e3d58dff86fc010b0",
+      "852e44b8f759fbec6d29b88b41476395ddeb23e71482b1ef76619c21262c4018",
+      "ffb81ce000443ded87321f463af762afe12915cdffd0e1fa86cdfb5aefea486f",
+      "c1d47f400a6c048458627c1b0483db03c1864d5ccea3693939b70c34d7968cd1",
+      "8991093c3437c1cfa9c9ef26ed56aaa4dd8245e4da43484d98ea83dddb8bbb97",
+      "73fa92b1b08099e5bf9ca76dacdb4722f8a96623853f6af393a5417613450a1a",
+      "7559bbc697c88fbfb5df3c044896200e560b71aed49d314e12c4880f84a54fbf",
+      "2d7e68bb1eb253eb940b889d0201405c97a9237a1345dedb164c09d6cd8031fd",
+      "782946211b9f1d46a7e6aa33a89c694d905b891b9db7baccee20d5239a2ab6e6",
+      "b01a69d95c893f1785ca14bdc00a3b2b20477b90f805132ad08eca6d4dffaa89",
+      "18f2e04ba47e5b49421d51b4f2e2b70452b0082f3acd7a3587a07f5c5b9ab100",
+      "0ff69af922982bb8cedc772ee94d9ed4b1c1f258e6971f18ce8da4cc2fbbc1bf",
+      "47e82cab7b8a4953859e7960fb337ade790e71596b829a49fe46bc10770cc575",
+      "9b6132ce723eb8b038e98d01df9106f93ea19e51d0974d1d71556b65f9ee32eb",
+      "f3b8dd2bdd224957b926259e4c73eef8c1b99003de3662a1d4ac67915a4d3481",
+      "2d69c99506244971cf223256f46dfffe0c7b63f125a9e82b18e092588d762227",
+      "48301ad43a9d22986af6abc0011e8e817a28068fe1e03783b3af4be45fe0ff83",
+      "0d98534e4e31d8c1a5d3c3c4c292c415e1513cd799bde741b07539280e8c78a1",
+      "adb6c46805e8717d0f52eb7d835b89646be5f1076d5329442e4781b1444d79fc",
+      "b3532b7f40a90f6fc8ef39d9a530722ce7c7b06a1e3eb484609b79a035a1f890",
+      "e0825cc4db866d0ea7a696c63f37d35e8622377589e295d0892dee14bcea85b9",
+      "906f890bc73001c4f61aea163aa04e719878b66940556e03a475825cfefc039c",
+      "53df2ea399a297f40d86165947cc1e2310df94a2b1988d2d4eeaf3762fd26da9",
+      "0435a1ec0adf1bf5f091beddac4b24f6b2869e330e62ac155936f668ec1e8a92",
+      "af2fda440404e3cda3f84f6b1d60aadfe8e91b94f77ebab2d829f60566700892",
+      "f8e654b36fd78f83a032bd32ac83c6cd8720c85c817841b3a248bec1f50d3648"
+    ],
+    "windows_are_bar_counts": true,
+    "current_feed_health_verified": false,
+    "source_frontier_complete": false,
+    "regime_classification_complete": false,
+    "ready_for_signals": false,
+    "trading_enabled": false
+  }
+}

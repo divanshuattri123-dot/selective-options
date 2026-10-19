@@ -1,5 +1,7 @@
 # Selective High-Conviction Options Trading System
 
+Version 0.3.53 adds explicit Solana network checkpoint resume and offline Keltner-channel research. The SOL handoff audits every eligible historical poll binding, copies the latest exact native three-row seed, and revalidates the closed destination before producers start. Keltner channels use an explicitly documented close-EMA/Wilder-ATR convention with complete-history and both-clock checks. Saved-native evidence, synthetic analytical fixtures and current source availability stay separate. M2 remains PARTIAL and trading remains disabled. See [RUNBOOK.md](RUNBOOK.md), [RESEARCH.md](RESEARCH.md), and [VALIDATION_REPORT.md](VALIDATION_REPORT.md) for commands, scope and validation.
+
 **Phone and cloud development:** Use the private repository's
 [Actions](https://github.com/divanshuattri123-dot/selective-options/actions) to run
 hosted builds and inspect results. [CLOUD_MIGRATION.md](CLOUD_MIGRATION.md) contains

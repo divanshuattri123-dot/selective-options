@@ -1,0 +1,102 @@
+{
+  "status": "SAVED_NATIVE_SOL_RESUME_VERIFIED",
+  "version": "0.3.53",
+  "scope": "offline finite saved-native seed",
+  "new_public_requests": 0,
+  "new_private_requests": 0,
+  "orders_submitted": 0,
+  "trading_enabled": false,
+  "milestone_2_complete": false,
+  "complete_history_copied": false,
+  "transport_resumed_by_copy": false,
+  "acknowledgements_restored": false,
+  "seven_day_acceptance": false,
+  "source_database_sha256": "b3c2b76352daffbdc18a26b17b6b8540fe37c1dbc88acf87d093e12a0e8a3221",
+  "source_files_sha256": {
+    "events.duckdb": "b3c2b76352daffbdc18a26b17b6b8540fe37c1dbc88acf87d093e12a0e8a3221",
+    "events.parquet": "b3304a862fd902512acdb2bb44505f638c725a95d212a809ab11185f18beb942",
+    "events.parquet.manifest.json": "a13901b62eba44f94408c7949459e3780f1e2fa76cc336fe72d3924ef433ae8d",
+    "fixture.duckdb": "c4c877dcd8068c493ae572a1225395e04a4465becf6e1ee9612c5af47411e241",
+    "fixture.parquet": "54dca0639fbd01bf2546c330df362a4cae7230b1d1f8e86e422fe9972bca77ee",
+    "fixture.parquet.manifest.json": "a93e6f99eec52efce302cd9917eddd9abacbbe8c153bcc9183eac3ee9b9a7832",
+    "independent-proof.json": "3ecead3fddd1b7f658329d21354a4735759239e3daa67ef902107213b9911544",
+    "README.md": "9dd62a1108676af5d8243a3101c1b1788e2b2bf33b9839fd9910ca1a8c0572f4",
+    "report.json": "d0eb075d1cb713dbd592fe8843c6bf9577ce84c03729d658728b9b618811b868",
+    "results.json": "4025524b9f299fa19a375d0e277c3321d62d0c087fd0b379f4f7e5e175c153d9",
+    "verify_saved.py": "319c6f027a49f36c075213e898febf6af00a012ec1860a59d7117b2af1830088"
+  },
+  "runtime_source_sha256": {
+    "src\\selective_options\\__init__.py": "fd74ee50c960d6c401d72a93e0ae161982337956e37c1c047c7c66e9ab2f5722",
+    "src\\selective_options\\ingestion.py": "6fb77b8cfff11432aaa40eb4a69012c0c77bbd601c92808b66adc80d767a1ede",
+    "src\\selective_options\\solana_checkpoint.py": "3b2dddfdbdee9b130f0da803b4bcdf7ae0938f1e1f6067464863573079077bbc",
+    "src\\selective_options\\solana_network.py": "5324e80502d64ae688e2459997d2da56052527defa96ede765636c22df79fb29",
+    "src\\selective_options\\solana_quality.py": "c94cdb232e689cd18692ae8407b76ecc5173a7bfdd6d991bd90199723c82e2e7",
+    "src\\selective_options\\events.py": "6a45866c1e1b70f45d4f9335deab679ba7fa3d1f7369c544ffd9d7ac4e57de08",
+    "src\\selective_options\\store.py": "7e20b3359fce43d8f6ab595c7c13ad5b245552c8bbc6ce5256ec7d257f31780a",
+    "src\\selective_options\\archive.py": "c9aa1fe4e9f364fcc52fe3926cebe9cd8ccb19a1f07fed81dd9ddd6979387f21",
+    "scripts\\verify_solana_resume.py": "53c39a8d00aac7e538003242250ce8f6ab867fdb3c25b13cf16975d62b75591e"
+  },
+  "selection_as_of_ms": 1791028544400,
+  "seed_event_ids": [
+    "a195c48b735d46423da5ca0771c3b8c5edd789c83a3420efee06d0dc3942eff1",
+    "9e4d8e5ea1a07bf2bd4d503b56445b0644b89e6792d6176a3b6b2c773c08bb1c",
+    "4c58bde509d87bfb8a8d9cdfcb7241b0fecafb9d5d5b27ddd23e63582c822d92"
+  ],
+  "seed_payload_sha256": {
+    "a195c48b735d46423da5ca0771c3b8c5edd789c83a3420efee06d0dc3942eff1": "3117f1abd3989cff9ceb44071b731cbba40a46c32b62416af13a2d829ae43778",
+    "9e4d8e5ea1a07bf2bd4d503b56445b0644b89e6792d6176a3b6b2c773c08bb1c": "af6858cbeca570a6672798e129c8a4431a5507da3d1fee8a696d1dcbbbfa4cbb",
+    "4c58bde509d87bfb8a8d9cdfcb7241b0fecafb9d5d5b27ddd23e63582c822d92": "73611b58a2bc81bc4473e8bbbfbbf3dc714eb1b476c8322ee788dabd806a7888"
+  },
+  "current_vote_accounts": 672,
+  "delinquent_vote_accounts": 6118,
+  "total_visible_activated_stake_lamports": "442013190171137211",
+  "raw_membership_quantities_receipts_and_identities_match": true,
+  "copied_events": 3,
+  "source_pending_outbox_rows": 3,
+  "destination_pending_outbox_rows": 3,
+  "archive_restore_pending_outbox_rows": 3,
+  "exact_sql_and_parquet_rows": true,
+  "closed_reload_verified": true,
+  "archive_restore_exact": true,
+  "source_tree_unchanged": true,
+  "sql_pit_boundary_checks": 12,
+  "startup_order": [
+    "closed_destination_revalidated_with_exact_pending_outbox",
+    "mocked_sol_constructed",
+    "mocked_producer_started",
+    "mocked_producer_started",
+    "mocked_producer_started"
+  ],
+  "network_attempts": 0,
+  "synthetic_cases": {
+    "provenance": "locally constructed fixtures; no actual source outage asserted",
+    "refusals": {
+      "later_outage": "SOL_FEED_UNAVAILABLE",
+      "unbound_prefix": "SOL_CHECKPOINT_UNBOUND_SNAPSHOT"
+    },
+    "earlier_saved_native_view_unchanged": true
+  },
+  "capture_resume": {
+    "requested": true,
+    "selection_as_of_ms": 1791028544400,
+    "scope": {
+      "source": "solana_public",
+      "environment": "public_reference",
+      "asset": "SOL"
+    },
+    "health_event_id": "4c58bde509d87bfb8a8d9cdfcb7241b0fecafb9d5d5b27ddd23e63582c822d92",
+    "health_observed_at_ms": 1791028544400,
+    "copied_events": 3,
+    "max_events_total": 10000,
+    "max_event_value_bytes": 16000000,
+    "original_native_values_and_receipts_preserved": true,
+    "closed_seed_revalidated_before_producers": true,
+    "copied_outbox_pending": true,
+    "delivery_acknowledgements_restored": false,
+    "history_complete": false,
+    "provider_finality_independently_verified": false,
+    "transport_resumed_by_copy": false,
+    "ready_for_signals": false,
+    "trading_enabled": false
+  }
+}

@@ -2,6 +2,25 @@
 
 Version 0.3.52 adds Parkinson and practical Garman–Klass OHLC range-volatility estimates through `research-range-volatility`. These read-only estimators use complete contiguous bars and explicit bar-count windows; missing data, warmup, numerical collapse and unavailable annualization remain visible. M2 and later strategy acceptance remain incomplete.
 
+## Keltner-channel research
+
+Version 0.3.53 adds `compute_keltner_features` and `research-keltner`, using formula version `keltner-bars-v1`. The modern channel's center is a close-price EMA; its envelope is center plus/minus an explicit multiplier times Wilder ATR. The close EMA seeds the arithmetic mean of its first `p` closes, then uses alpha `2/(p+1)`. ATR seeds the mean of `q` previous-close true ranges, then uses alpha `1/q`, requiring `q+1` bars. The envelopes require `max(p,q+1)` bars. All outputs use price units and periods count bars. This exact convention is recorded; bitwise agreement with other libraries is not claimed. [StockCharts' modern Keltner construction](https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-overlays/keltner-channels), [TA-Lib EMA seed](https://github.com/TA-Lib/ta-lib/blob/v0.6.4/src/ta_func/ta_EMA.c), [TA-Lib ATR seed](https://github.com/TA-Lib/ta-lib/blob/v0.6.4/src/ta_func/ta_ATR.c).
+
+```powershell
+selective-options research-keltner `
+  --database CLOSED_CAPTURE/events.duckdb --output NEW_KELTNER_RESULT `
+  --asset BTC --environment public_reference --source kraken `
+  --symbol BTC/USD --timeframe-s 300 --as-of-ms EXPLICIT_CUTOFF_MS `
+  --ema-period 20 --atr-period 10 --atr-multiplier 2 `
+  --max-latest-age-ms 300000 --max-bars 2000
+```
+
+The same complete contiguous closed-bar audit and both source/receipt clocks apply. Partial/gappy/stale history and conflicting rows remain unavailable; over-budget history refuses instead of silently trimming/reseeding the indicator. An optional inclusive `--history-start-ms` selects and records a narrower history explicitly. The database is read-only, hash/WAL guarded, and the output directory must be new. The API writes `keltner.json`; no strategy trial is created.
+
+Flat zero ATR produces coincident bands. A negative mathematical lower band is retained as a mathematical output, not a tradable price. Overflow and nonzero envelope distances that collapse to the center are unavailable. Period-one averages assign the latest observation directly, and seed arithmetic preserves representable subnormal mass; independent regression cases cover both numerical boundaries. Each value separately reports AVAILABLE, WARMUP or UNAVAILABLE.
+
+The saved native BTC segment contains only two complete five-minute bars, so standard 20/10/2 settings remain WARMUP. The included partial prefix remains UNAVAILABLE. Separate exact rational analytical fixtures are labelled synthetic. See `evidence/keltner-saved-native-01/`. These channels are not a probability interval, regime classification, signal, validated edge or trading approval. M2 and later model acceptance remain incomplete.
+
 ## OHLC range-volatility research
 
 Supply a closed database, both-clock cutoff, exact asset/environment/source/symbol/timeframe, explicit windows and maximum latest-bar age. The command uses the same complete-history audit as `research-features`; an incomplete or gappy prefix cannot be silently trimmed to rescue a tail window. An explicit `--history-start-ms` selects a narrower history and is recorded in the report. History over the row budget refuses rather than truncating. Input hashes and per-window event references bind the exact saved rows; the source remains read-only and the output directory must be new.
