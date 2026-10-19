@@ -28,6 +28,7 @@ FeedURL = Literal[
 ]
 MAX_BYTES = 2_097_152
 MAX_ITEMS = 100
+MAX_RETAINED_IDENTITIES = 100_000
 REFERENCES = ("https://www.coindesk.com/coindesk-news/2021/09/17/coindesk-rss",)
 SCOPE = "CoinDesk RSS metadata; sink accepted, no atomic commit claim"
 
@@ -364,8 +365,31 @@ def crypto_news_quality(
 
 
 class CryptoNewsCollector:
-    def __init__(self, config: AppConfig, sink: Sink) -> None:
+    def __init__(
+        self,
+        config: AppConfig,
+        sink: Sink,
+        *,
+        initial_metadata: tuple[MarketEvent, ...] = (),
+    ) -> None:
         self.config, self.sink = config, sink
+        if type(initial_metadata) is not tuple or len(initial_metadata) > MAX_RETAINED_IDENTITIES:
+            raise IntegrityError("CRYPTO_NEWS_INITIAL_METADATA_INVALID")
+        self._metadata_by_event_id: dict[str, MarketEvent] = {}
+        for row in initial_metadata:
+            if (
+                row.kind != "news"
+                or row.source != SOURCE
+                or row.environment != "public_reference"
+                or row.asset != "GLOBAL"
+                or row.symbol != SYMBOL
+            ):
+                raise IntegrityError("CRYPTO_NEWS_INITIAL_METADATA_SCOPE")
+            _news_valid(row)
+            prior = self._metadata_by_event_id.get(row.event_id)
+            if prior is not None:
+                raise IntegrityError("CRYPTO_NEWS_INITIAL_METADATA_DUPLICATE")
+            self._metadata_by_event_id[row.event_id] = row
 
     def request(self, session: aiohttp.ClientSession) -> aiohttp.client._RequestContextManager:
         return session.get(
@@ -399,7 +423,24 @@ class CryptoNewsCollector:
                 )
                 if status != 200:
                     raise IntegrityError("CRYPTO_NEWS_HTTP_STATUS")
-            rows, rejected = parse_feed(bytes(body), received)
+            parsed_rows, rejected = parse_feed(bytes(body), received)
+            current_by_native_id: dict[str, MarketEvent] = {}
+            rows: list[MarketEvent] = []
+            new_rows: list[MarketEvent] = []
+            for row in parsed_rows:
+                payload = NewsPayload.model_validate_json(row.payload_json)
+                native_id = payload.publisher_item_id
+                prior_in_response = current_by_native_id.get(native_id)
+                if prior_in_response is not None and prior_in_response.event_id != row.event_id:
+                    raise IntegrityError("CRYPTO_NEWS_DUPLICATE_NATIVE_ID_CONFLICT")
+                retained = self._metadata_by_event_id.get(row.event_id)
+                selected = retained or row
+                current_by_native_id[native_id] = selected
+                rows.append(selected)
+                if retained is None:
+                    new_rows.append(row)
+            if len(self._metadata_by_event_id) + len(new_rows) > MAX_RETAINED_IDENTITIES:
+                raise IntegrityError("CRYPTO_NEWS_RETAINED_IDENTITY_BUDGET")
         except (
             aiohttp.ClientError,
             TimeoutError,
@@ -420,8 +461,9 @@ class CryptoNewsCollector:
             )
             return
         # Sink errors escape: never announce a successful poll after failed storage.
-        for row in rows:
+        for row in new_rows:
             await self.sink(row)
+            self._metadata_by_event_id[row.event_id] = row
         await self.sink(
             news_poll_health(
                 now_ms(),

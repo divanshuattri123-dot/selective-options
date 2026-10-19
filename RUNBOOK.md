@@ -2,6 +2,22 @@
 
 This build offers a one-shot readiness probe and a finite public-data recorder. It has no positions, execution loop, dashboard, kill command, or live deployment. Stopping it closes its WebSocket. It never places orders and cannot cancel orders opened by other software.
 
+## Explicit crypto-news checkpoint resume (0.3.55)
+
+`capture --resume-crypto-news-from CLOSED_CAPTURE/events.duckdb` is opt-in and requires `ingestion.crypto_news_enabled=true`. The source must be a closed capture with sibling `events.parquet` and `events.parquet.manifest.json` files. Before creating output, capture verifies the source archive checksum/manifest and exact whole-store DuckDB/Parquet/outbox identity, refuses a DuckDB WAL, and applies 10,000-row and 16,000,000-byte limits to the source row values and archive/database file sizes. The scoped CoinDesk checkpoint additionally requires the configured two-poll latest-health freshness bound, both-clock visibility, canonical rows and every headline bound to successful poll health.
+
+```powershell
+$env:SELECTIVE_INGESTION__CRYPTO_NEWS_ENABLED = "true"
+selective-options capture --output NEW_FINITE_CAPTURE --duration 60 `
+  --resume-crypto-news-from CLOSED_CAPTURE/events.duckdb
+```
+
+The loader retains all eligible headline rows, including items absent from the latest poll, and computes the minimum bounded set of successful native health receipts that still binds every retained headline while pinning the unique latest healthy receipt. A fresh destination receives those exact rows with deliveries pending. Capture closes and reloads that database, rechecks the outbox, and verifies source database/archive/manifest hashes before constructing the collector. Invalid source preflight creates no output. If destination copying or closed revalidation fails, `crypto-news-resume-failure.json` records a sanitized failure code, requested IDs and destination hash when available; the producer has not started. A filesystem failure may prevent this evidence file.
+
+The resumed collector retains native event identities and their original `observed_at_ms` receipts. An unchanged story, including one that disappears and later reappears, is not emitted again; each successful poll health row can reference the retained event. A changed payload under the same publisher item ID appends a new observation without rewriting earlier metadata. In-memory identity retention is capped at 100,000 rows. This is a finite handoff, not complete feed history or transport/acknowledgement recovery. Publication timestamps remain publisher claims; sentiment, classification, broad crypto/financial news coverage, signals, trading readiness and order execution remain unavailable/disabled.
+
+The saved-native proof replays the original XML through a mocked transport. It makes zero network requests and verifies the original DuckDB, Parquet, manifest and XML hashes remain unchanged. It is not a current feed-health test.
+
 ## Explicit SOL network checkpoint resume
 
 `capture --resume-solana-from CLOSED_DATABASE` is opt-in. SOL must be configured and `ingestion.solana_network_enabled` must be true. The loader uses the configured two-poll receipt age and sample-age-plus-two-polls source-age limits, at most 10,000 eligible events and 16,000,000 stored event-value bytes. Those budgets cover Python event materialization, not total database size, scan work or engine memory.
@@ -540,6 +556,8 @@ The disabled default is `ingestion.bar_checkpoint_on_stop: false`. Opt in with `
 Start a new capture directory with `capture --resume-bars-from <prior-capture>/bar-checkpoint`. This is exclusive with `--resume-trades-from`/`--recovery-marker`. Config/assets/timeframes/lateness and fixed seals are checked before new output; exact native rows are copied pending, closed/revalidated and installed before producers. All retained buckets are partial across the actual restart, and an actual recovery snapshot is required before updates. First receipts/watermark are preserved. An explicit stopped checkpoint does not recover arbitrary active history or provide periodic crash recovery. The .46 saved-data proof uses reconstructed message containers and synthetic lifecycle clocks; it does not certify a deployed interruption or sustained feed run.
 
 Use `research-features --include-trend` for ADX/directional indices and prior-only width/RV ranks, with `--percentile-window` and `--percentile-min-history` when needed. Explicit annualization is still required for realized volatility. Default research output stays unchanged without the flag. See RESEARCH.md for formulas/quality and VALIDATION_REPORT.md for the final suite/proof/audit.
+
+Use `research-stochastic-rsi` for offline closed-bar Stochastic RSI with explicit RSI/stochastic/K/D periods and mandatory cutoff/freshness. Defaults are 14/14/3/3. It writes a report only into a new output directory and cannot trade. A flat RSI window stays unavailable; no placeholder value or trading signal is inferred. See RESEARCH.md for warmup, formula, saved-data scope and fixture separation.
 
 ## Optional daily valuation capture (0.3.47)
 

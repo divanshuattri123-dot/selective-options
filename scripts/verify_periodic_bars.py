@@ -36,7 +36,7 @@ else:
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "evidence/live-gap-02"
 SOURCE_SHA256 = "08b81a0c2ced7cc288b253a6b5f6a9ec8690cfad3a7bc5583c9dde2552ce1ce7"
-EXPECTED_VERSION = "0.3.53"
+EXPECTED_VERSION = "0.3.55"
 SAFETY_TIMEOUT_S = 60.0
 
 

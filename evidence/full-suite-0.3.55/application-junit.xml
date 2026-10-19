@@ -1,0 +1,1191 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="141" failures="0" skipped="0" tests="141" time="9.191" timestamp="2026-10-19T12:28:44.230347+05:30" hostname="DESKTOP-SPF8V4C"><testcase classname="" name="tests.test_active_rotation" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_active_rotation.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_active_rotation.py:9: in &lt;module&gt;
+    from selective_options import active_rotation as module
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_active_rotation_cli" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_active_rotation_cli.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_active_rotation_cli.py:9: in &lt;module&gt;
+    from selective_options.cli import main
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_active_rotation_verifier" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_active_rotation_verifier.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_active_rotation_verifier.py:12: in &lt;module&gt;
+    from selective_options.archive import file_digest
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_archive" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_archive.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_archive.py:7: in &lt;module&gt;
+    from selective_options.archive import manifest_path, restore_archive, seal_archive
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_archive_rotation" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_archive_rotation.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_archive_rotation.py:9: in &lt;module&gt;
+    from selective_options import archive_rotation as rotation
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_backtest" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_backtest.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_backtest.py:8: in &lt;module&gt;
+    from selective_options.backtest import (
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_bar_capture_validation" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_bar_capture_validation.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_bar_capture_validation.py:13: in &lt;module&gt;
+    from selective_options import ingestion
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_bar_checkpoint" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_bar_checkpoint.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_bar_checkpoint.py:16: in &lt;module&gt;
+    from selective_options import bar_checkpoint as checkpoint
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_bar_checkpoint_audit" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_bar_checkpoint_audit.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_bar_checkpoint_audit.py:13: in &lt;module&gt;
+    from scripts import audit_bar_checkpoint as module
+scripts\audit_bar_checkpoint.py:37: in &lt;module&gt;
+    from .audit_parallel_foundations import (
+scripts\audit_parallel_foundations.py:22: in &lt;module&gt;
+    from selective_options.errors import IntegrityError
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_bar_checkpoint_cli" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_bar_checkpoint_cli.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_bar_checkpoint_cli.py:9: in &lt;module&gt;
+    from selective_options import cli
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_bar_checkpoint_read_binding" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_bar_checkpoint_read_binding.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_bar_checkpoint_read_binding.py:10: in &lt;module&gt;
+    from test_bar_checkpoint import CUTOFF, source
+tests\test_bar_checkpoint.py:16: in &lt;module&gt;
+    from selective_options import bar_checkpoint as checkpoint
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_bar_state" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_bar_state.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_bar_state.py:10: in &lt;module&gt;
+    from selective_options.bar_state import (
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_bea_calendar" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_bea_calendar.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_bea_calendar.py:9: in &lt;module&gt;
+    from selective_options.bea_calendar import (
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_binance" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_binance.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_binance.py:8: in &lt;module&gt;
+    from selective_options.binance import (
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_binance_accounts" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_binance_accounts.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_binance_accounts.py:8: in &lt;module&gt;
+    from selective_options.binance import Instrument
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_binance_accounts_verifier" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_binance_accounts_verifier.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_binance_accounts_verifier.py:5: in &lt;module&gt;
+    from scripts import verify_binance_accounts as verifier
+scripts\verify_binance_accounts.py:12: in &lt;module&gt;
+    from selective_options import __version__
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_binance_funding_history" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_binance_funding_history.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_binance_funding_history.py:8: in &lt;module&gt;
+    from scripts import verify_binance_funding_history as verifier
+scripts\verify_binance_funding_history.py:12: in &lt;module&gt;
+    from selective_options import __version__
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_binance_funding_view" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_binance_funding_view.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_binance_funding_view.py:7: in &lt;module&gt;
+    from selective_options.binance import Instrument
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_binance_taker" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_binance_taker.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_binance_taker.py:8: in &lt;module&gt;
+    from selective_options.binance import Instrument
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_binance_taker_verifier" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_binance_taker_verifier.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_binance_taker_verifier.py:5: in &lt;module&gt;
+    from scripts import verify_binance_taker as verifier
+scripts\verify_binance_taker.py:12: in &lt;module&gt;
+    from selective_options import __version__
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_bybit" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_bybit.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_bybit.py:9: in &lt;module&gt;
+    from selective_options.bybit import (
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_calendar_quality" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_calendar_quality.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_calendar_quality.py:6: in &lt;module&gt;
+    from selective_options.bea_calendar import parse_calendar
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_capture_cancelled_failures" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_capture_cancelled_failures.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_capture_cancelled_failures.py:8: in &lt;module&gt;
+    from test_capture_lifecycle import config, disable_transport, idle
+tests\test_capture_lifecycle.py:12: in &lt;module&gt;
+    from selective_options import active_rotation, capture_lifecycle, cli, ingestion
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_capture_lifecycle" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_capture_lifecycle.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_capture_lifecycle.py:12: in &lt;module&gt;
+    from selective_options import active_rotation, capture_lifecycle, cli, ingestion
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_capture_periodic_bars" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_capture_periodic_bars.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_capture_periodic_bars.py:9: in &lt;module&gt;
+    from test_capture_lifecycle import config, disable_transport, idle
+tests\test_capture_lifecycle.py:12: in &lt;module&gt;
+    from selective_options import active_rotation, capture_lifecycle, cli, ingestion
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_capture_rotation" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_capture_rotation.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_capture_rotation.py:8: in &lt;module&gt;
+    from selective_options import active_rotation, ingestion, rotation_runtime
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_coinmetrics" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_coinmetrics.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_coinmetrics.py:11: in &lt;module&gt;
+    from selective_options.bybit import FeedUnavailable
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_coinmetrics_audit" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_coinmetrics_audit.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_coinmetrics_audit.py:11: in &lt;module&gt;
+    from scripts import audit_coinmetrics as auditor
+scripts\audit_coinmetrics.py:23: in &lt;module&gt;
+    from selective_options.coinmetrics import DAY_MS, SOURCE, SYMBOL, URL
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_coinmetrics_capture_resume" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_coinmetrics_capture_resume.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_coinmetrics_capture_resume.py:12: in &lt;module&gt;
+    from selective_options.cli import main, parser
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_coinmetrics_checkpoint" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_coinmetrics_checkpoint.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_coinmetrics_checkpoint.py:8: in &lt;module&gt;
+    from selective_options.coinmetrics import (
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_coinmetrics_quality" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_coinmetrics_quality.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_coinmetrics_quality.py:8: in &lt;module&gt;
+    from selective_options.coinmetrics import (
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_coinmetrics_validation" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_coinmetrics_validation.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_coinmetrics_validation.py:11: in &lt;module&gt;
+    from selective_options import ingestion
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_coinmetrics_verifier" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_coinmetrics_verifier.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_coinmetrics_verifier.py:12: in &lt;module&gt;
+    from scripts import verify_coinmetrics as proof
+scripts\verify_coinmetrics.py:17: in &lt;module&gt;
+    from selective_options.archive import file_digest, restore_archive, seal_archive
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_config" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_config.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_config.py:6: in &lt;module&gt;
+    from selective_options.config import AppConfig, BucketConfig, load_config
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_crypto_news" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_crypto_news.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_crypto_news.py:10: in &lt;module&gt;
+    from selective_options.config import AppConfig
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_crypto_news_capture_resume" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_crypto_news_capture_resume.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_crypto_news_capture_resume.py:13: in &lt;module&gt;
+    from selective_options.cli import main, parser
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_crypto_news_checkpoint" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_crypto_news_checkpoint.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_crypto_news_checkpoint.py:14: in &lt;module&gt;
+    from selective_options.crypto_news import news_poll_health, parse_feed
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_crypto_news_store" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_crypto_news_store.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_crypto_news_store.py:11: in &lt;module&gt;
+    from selective_options.archive import seal_archive
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_crypto_news_verifier" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_crypto_news_verifier.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_crypto_news_verifier.py:12: in &lt;module&gt;
+    from selective_options.crypto_news import parse_feed
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_derivatives" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_derivatives.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_derivatives.py:7: in &lt;module&gt;
+    from selective_options.config import AppConfig
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_eth_checkpoint" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_eth_checkpoint.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_eth_checkpoint.py:9: in &lt;module&gt;
+    from selective_options.cli import parser
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_eth_gas" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_eth_gas.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_eth_gas.py:8: in &lt;module&gt;
+    from selective_options.bybit import FeedUnavailable
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_eth_gas_quality" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_eth_gas_quality.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_eth_gas_quality.py:5: in &lt;module&gt;
+    from selective_options.errors import IntegrityError
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_eth_gas_verifier" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_eth_gas_verifier.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_eth_gas_verifier.py:10: in &lt;module&gt;
+    from selective_options.eth_gas import EthereumGasCollector
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_eth_provider_integration" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_eth_provider_integration.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_eth_provider_integration.py:10: in &lt;module&gt;
+    from selective_options.config import AppConfig
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_eth_runtime_restart_verifier" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_eth_runtime_restart_verifier.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_eth_runtime_restart_verifier.py:7: in &lt;module&gt;
+    from scripts import verify_eth_runtime_restart as proof
+scripts\verify_eth_runtime_restart.py:14: in &lt;module&gt;
+    from selective_options import __version__
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_eth_store_quality" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_eth_store_quality.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_eth_store_quality.py:8: in &lt;module&gt;
+    from selective_options.collectors import now_ms
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_features" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_features.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_features.py:10: in &lt;module&gt;
+    from selective_options.errors import IntegrityError
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_flow_quality" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_flow_quality.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_flow_quality.py:7: in &lt;module&gt;
+    from selective_options.binance import Instrument
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_flow_view" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_flow_view.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_flow_view.py:7: in &lt;module&gt;
+    from selective_options.binance import Instrument
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_fomc_calendar" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_fomc_calendar.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_fomc_calendar.py:8: in &lt;module&gt;
+    from selective_options.bybit import FeedUnavailable
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_freshness_pit" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_freshness_pit.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_freshness_pit.py:5: in &lt;module&gt;
+    from selective_options.events import make_event
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_funding_checkpoint" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_funding_checkpoint.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_funding_checkpoint.py:11: in &lt;module&gt;
+    from scripts import verify_binance_funding_history as verifier
+scripts\verify_binance_funding_history.py:12: in &lt;module&gt;
+    from selective_options import __version__
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_funding_history" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_funding_history.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_funding_history.py:7: in &lt;module&gt;
+    from selective_options.bybit import BybitCollector, Envelope, FeedUnavailable, Instrument
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_funding_poll" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_funding_poll.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_funding_poll.py:8: in &lt;module&gt;
+    from selective_options import funding_poll
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_gap_recovery" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_gap_recovery.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_gap_recovery.py:6: in &lt;module&gt;
+    from test_recovery_journal import plan
+tests\test_recovery_journal.py:11: in &lt;module&gt;
+    from selective_options.archive import restore_archive, seal_archive
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_history_verifier" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_history_verifier.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_history_verifier.py:9: in &lt;module&gt;
+    from selective_options.bybit import Envelope
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_ingestion" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_ingestion.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_ingestion.py:10: in &lt;module&gt;
+    from selective_options.bus import EventBus, HotBuffer, RedisMirror
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_json_id_lookup" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_json_id_lookup.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_json_id_lookup.py:8: in &lt;module&gt;
+    from selective_options.errors import IntegrityError
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_keltner_features" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_keltner_features.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_keltner_features.py:10: in &lt;module&gt;
+    from selective_options.errors import IntegrityError
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_keltner_research" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_keltner_research.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_keltner_research.py:7: in &lt;module&gt;
+    from test_keltner_features import bar
+tests\test_keltner_features.py:10: in &lt;module&gt;
+    from selective_options.errors import IntegrityError
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_keltner_verifier" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_keltner_verifier.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_keltner_verifier.py:11: in &lt;module&gt;
+    from selective_options.errors import IntegrityError
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_liquidations" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_liquidations.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_liquidations.py:9: in &lt;module&gt;
+    from selective_options import liquidations as mod
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_multiasset_coverage_verifier" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_multiasset_coverage_verifier.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_multiasset_coverage_verifier.py:11: in &lt;module&gt;
+    from selective_options.collectors import ChannelRegistry, Notification
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_new_feed_store" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_new_feed_store.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_new_feed_store.py:11: in &lt;module&gt;
+    from selective_options.collectors import now_ms
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_new_feed_store_replay" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_new_feed_store_replay.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_new_feed_store_replay.py:11: in &lt;module&gt;
+    from selective_options.archive import seal_archive
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_news" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_news.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_news.py:9: in &lt;module&gt;
+    from selective_options.config import AppConfig
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_news_quality" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_news_quality.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_news_quality.py:6: in &lt;module&gt;
+    from selective_options.events import make_event
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_news_restart_verifier" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_news_restart_verifier.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_news_restart_verifier.py:14: in &lt;module&gt;
+    from selective_options import news
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_news_store_integration" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_news_store_integration.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_news_store_integration.py:8: in &lt;module&gt;
+    from selective_options.collectors import now_ms
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_oi_history" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_oi_history.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_oi_history.py:7: in &lt;module&gt;
+    from selective_options.bybit import BybitCollector, Envelope, FeedUnavailable, Instrument
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_option_coverage" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_option_coverage.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_option_coverage.py:8: in &lt;module&gt;
+    from selective_options.collectors import ChannelRegistry, Notification, discover_and_record
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_option_coverage_verifier" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_option_coverage_verifier.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_option_coverage_verifier.py:10: in &lt;module&gt;
+    from selective_options.option_coverage import coverage_at
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_option_flow_research" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_option_flow_research.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_option_flow_research.py:7: in &lt;module&gt;
+    from test_options_skew import fixture
+tests\test_options_skew.py:8: in &lt;module&gt;
+    from selective_options.cli import main
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_option_freshness_audit" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_option_freshness_audit.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_option_freshness_audit.py:8: in &lt;module&gt;
+    from scripts.audit_option_freshness import (
+scripts\audit_option_freshness.py:16: in &lt;module&gt;
+    from selective_options.events import MarketEvent
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_option_metadata_projection" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_option_metadata_projection.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_option_metadata_projection.py:6: in &lt;module&gt;
+    from selective_options.option_coverage import coverage_at
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_option_native_fields_audit" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_option_native_fields_audit.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_option_native_fields_audit.py:7: in &lt;module&gt;
+    from scripts.audit_option_native_fields import (
+scripts\audit_option_native_fields.py:14: in &lt;module&gt;
+    from selective_options.events import MarketEvent
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_option_projection" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_option_projection.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_option_projection.py:9: in &lt;module&gt;
+    from selective_options.collectors import ChannelRegistry, Notification
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_options_features" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_options_features.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_options_features.py:6: in &lt;module&gt;
+    from selective_options.errors import IntegrityError
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_options_features_verifier" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_options_features_verifier.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_options_features_verifier.py:11: in &lt;module&gt;
+    from scripts import verify_options_features as proof
+scripts\verify_options_features.py:16: in &lt;module&gt;
+    from selective_options.archive import file_digest
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_options_flow_features" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_options_flow_features.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_options_flow_features.py:10: in &lt;module&gt;
+    from selective_options.errors import IntegrityError
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_options_flow_verifier" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_options_flow_verifier.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_options_flow_verifier.py:5: in &lt;module&gt;
+    from scripts import verify_options_flow as proof
+scripts\verify_options_flow.py:10: in &lt;module&gt;
+    from selective_options.archive import file_digest
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_options_research_validation" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_options_research_validation.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_options_research_validation.py:10: in &lt;module&gt;
+    from selective_options.cli import main
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_options_skew" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_options_skew.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_options_skew.py:8: in &lt;module&gt;
+    from selective_options.cli import main
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_parallel_foundations_audit" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_parallel_foundations_audit.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_parallel_foundations_audit.py:9: in &lt;module&gt;
+    from scripts.audit_parallel_foundations import ROOT, AuditError, audit, digest, tree
+scripts\audit_parallel_foundations.py:22: in &lt;module&gt;
+    from selective_options.errors import IntegrityError
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_periodic_bar_config" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_periodic_bar_config.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_periodic_bar_config.py:6: in &lt;module&gt;
+    from selective_options.config import AppConfig
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_periodic_bar_runtime" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_periodic_bar_runtime.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_periodic_bar_runtime.py:19: in &lt;module&gt;
+    from test_recovery_journal import plan as recovery_plan
+tests\test_recovery_journal.py:11: in &lt;module&gt;
+    from selective_options.archive import restore_archive, seal_archive
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_range_volatility" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_range_volatility.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_range_volatility.py:11: in &lt;module&gt;
+    from selective_options import range_volatility
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_range_volatility_research" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_range_volatility_research.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_range_volatility_research.py:7: in &lt;module&gt;
+    from test_features import bar
+tests\test_features.py:10: in &lt;module&gt;
+    from selective_options.errors import IntegrityError
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_receive_timing" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_receive_timing.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_receive_timing.py:9: in &lt;module&gt;
+    from selective_options.collectors import ChannelRegistry, DeribitCollector
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_recovery_handoff" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_recovery_handoff.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_recovery_handoff.py:5: in &lt;module&gt;
+    from test_recovery_journal import anchor, plan
+tests\test_recovery_journal.py:11: in &lt;module&gt;
+    from selective_options.archive import restore_archive, seal_archive
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_recovery_journal" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_recovery_journal.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_recovery_journal.py:11: in &lt;module&gt;
+    from selective_options.archive import restore_archive, seal_archive
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_recovery_quality" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_recovery_quality.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_recovery_quality.py:9: in &lt;module&gt;
+    from selective_options.config import AppConfig
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_recovery_runtime" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_recovery_runtime.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_recovery_runtime.py:6: in &lt;module&gt;
+    from test_gap_recovery import idle
+tests\test_gap_recovery.py:6: in &lt;module&gt;
+    from test_recovery_journal import plan
+tests\test_recovery_journal.py:11: in &lt;module&gt;
+    from selective_options.archive import restore_archive, seal_archive
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_research" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_research.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_research.py:8: in &lt;module&gt;
+    from selective_options.cli import main
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_research_validation" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_research_validation.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_research_validation.py:10: in &lt;module&gt;
+    from selective_options import research, trials
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_reused_json_validation" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_reused_json_validation.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_reused_json_validation.py:10: in &lt;module&gt;
+    from selective_options.collectors import ChannelRegistry, DeribitCollector, Notification
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_rotation_cli" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_rotation_cli.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_rotation_cli.py:12: in &lt;module&gt;
+    from selective_options.cli import main, parser
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_rotation_restore" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_rotation_restore.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_rotation_restore.py:11: in &lt;module&gt;
+    from selective_options import rotation_restore as module
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_rotation_runtime" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_rotation_runtime.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_rotation_runtime.py:7: in &lt;module&gt;
+    from selective_options import rotation_runtime as module
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_rotation_verifier" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_rotation_verifier.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_rotation_verifier.py:12: in &lt;module&gt;
+    from selective_options.archive import file_digest
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_rpc" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_rpc.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_rpc.py:10: in &lt;module&gt;
+    from selective_options.config import AppConfig, BucketConfig, RateConfig, VenueConfig
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_saved_option_backtest" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_saved_option_backtest.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_saved_option_backtest.py:11: in &lt;module&gt;
+    from selective_options.backtest import (
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_security_auth" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_security_auth.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_security_auth.py:7: in &lt;module&gt;
+    from selective_options.auth import AuthSession
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_socket_recovery" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_socket_recovery.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_socket_recovery.py:6: in &lt;module&gt;
+    from test_recovery_runtime import running
+tests\test_recovery_runtime.py:6: in &lt;module&gt;
+    from test_gap_recovery import idle
+tests\test_gap_recovery.py:6: in &lt;module&gt;
+    from test_recovery_journal import plan
+tests\test_recovery_journal.py:11: in &lt;module&gt;
+    from selective_options.archive import restore_archive, seal_archive
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_solana_capture_resume" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_solana_capture_resume.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_solana_capture_resume.py:11: in &lt;module&gt;
+    from selective_options.cli import main, parser
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_solana_checkpoint" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_solana_checkpoint.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_solana_checkpoint.py:11: in &lt;module&gt;
+    from selective_options.config import AppConfig
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_solana_network" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_solana_network.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_solana_network.py:9: in &lt;module&gt;
+    from selective_options.bybit import FeedUnavailable
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_solana_resume_verifier" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_solana_resume_verifier.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_solana_resume_verifier.py:10: in &lt;module&gt;
+    from selective_options.store import DuckStore
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_solana_store_quality" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_solana_store_quality.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_solana_store_quality.py:8: in &lt;module&gt;
+    from selective_options.events import make_event
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_solana_verifier" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_solana_verifier.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_solana_verifier.py:11: in &lt;module&gt;
+    from selective_options.config import AppConfig
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_spot_batch_verifier" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_spot_batch_verifier.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_spot_batch_verifier.py:13: in &lt;module&gt;
+    from selective_options.archive import file_digest
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_spot_sink_failstop" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_spot_sink_failstop.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_spot_sink_failstop.py:10: in &lt;module&gt;
+    from selective_options import ingestion
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_spot_trade_batch_atomicity" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_spot_trade_batch_atomicity.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_spot_trade_batch_atomicity.py:10: in &lt;module&gt;
+    from selective_options import spot_trades as module
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_spot_trade_batch_validation" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_spot_trade_batch_validation.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_spot_trade_batch_validation.py:10: in &lt;module&gt;
+    from selective_options.config import AppConfig
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_spot_trades_bars" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_spot_trades_bars.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_spot_trades_bars.py:8: in &lt;module&gt;
+    from selective_options.bars import TradeBars
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_stablecoin_capture_resume" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_stablecoin_capture_resume.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_stablecoin_capture_resume.py:10: in &lt;module&gt;
+    from selective_options.cli import main, parser
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_stablecoin_checkpoint" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_stablecoin_checkpoint.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_stablecoin_checkpoint.py:11: in &lt;module&gt;
+    from selective_options.errors import IntegrityError
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_stablecoin_restart_verifier" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_stablecoin_restart_verifier.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_stablecoin_restart_verifier.py:12: in &lt;module&gt;
+    from selective_options.archive import file_digest
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_stablecoin_seed" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_stablecoin_seed.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_stablecoin_seed.py:7: in &lt;module&gt;
+    from selective_options.config import AppConfig
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_stablecoin_supply" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_stablecoin_supply.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_stablecoin_supply.py:10: in &lt;module&gt;
+    from selective_options.bybit import FeedUnavailable
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_stablecoin_supply_verifier" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_stablecoin_supply_verifier.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_stablecoin_supply_verifier.py:9: in &lt;module&gt;
+    from scripts import verify_stablecoin_supply as proof
+scripts\verify_stablecoin_supply.py:14: in &lt;module&gt;
+    from selective_options.archive import file_digest, seal_archive
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_startup_cli" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_startup_cli.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_startup_cli.py:8: in &lt;module&gt;
+    from selective_options.cli import main
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_stochastic_rsi_features" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_stochastic_rsi_features.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_stochastic_rsi_features.py:8: in &lt;module&gt;
+    from selective_options.errors import IntegrityError
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_stochastic_rsi_research" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_stochastic_rsi_research.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_stochastic_rsi_research.py:7: in &lt;module&gt;
+    from test_stochastic_rsi_features import bar
+tests\test_stochastic_rsi_features.py:8: in &lt;module&gt;
+    from selective_options.errors import IntegrityError
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_storage_cancellation" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_storage_cancellation.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_storage_cancellation.py:9: in &lt;module&gt;
+    import selective_options.archive as archive_module
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_subscription_progress" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_subscription_progress.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_subscription_progress.py:10: in &lt;module&gt;
+    from selective_options.collectors import ChannelRegistry, DeribitCollector
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_tips_yield" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_tips_yield.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_tips_yield.py:13: in &lt;module&gt;
+    from selective_options.config import AppConfig
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_tips_yield_verifier" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_tips_yield_verifier.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_tips_yield_verifier.py:12: in &lt;module&gt;
+    from selective_options.errors import IntegrityError
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_trade_backfill" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_trade_backfill.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_trade_backfill.py:10: in &lt;module&gt;
+    from selective_options.config import AppConfig
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_trade_checkpoints" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_trade_checkpoints.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_trade_checkpoints.py:11: in &lt;module&gt;
+    from selective_options.checkpoints import load_trade_checkpoints
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_trade_reconciliation" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_trade_reconciliation.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_trade_reconciliation.py:7: in &lt;module&gt;
+    from selective_options.errors import IntegrityError
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_trend_features" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_trend_features.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_trend_features.py:9: in &lt;module&gt;
+    from selective_options.errors import IntegrityError
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_trend_research_validation" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_trend_research_validation.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_trend_research_validation.py:9: in &lt;module&gt;
+    from selective_options import research
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_trials" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_trials.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_trials.py:10: in &lt;module&gt;
+    from selective_options.errors import IntegrityError
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_universe_refresh" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_universe_refresh.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_universe_refresh.py:11: in &lt;module&gt;
+    from selective_options.collectors import ChannelRegistry, DeribitCollector
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_universe_refresh_verifier" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_universe_refresh_verifier.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_universe_refresh_verifier.py:9: in &lt;module&gt;
+    from selective_options.store import DuckStore
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_venue" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_venue.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_venue.py:4: in &lt;module&gt;
+    from selective_options.errors import IntegrityError, RpcError
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_verify_liquidations" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_verify_liquidations.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_verify_liquidations.py:10: in &lt;module&gt;
+    from selective_options import liquidations as mod
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_verify_periodic_bars" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_verify_periodic_bars.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_verify_periodic_bars.py:9: in &lt;module&gt;
+    from scripts import verify_periodic_bars as proof
+scripts\verify_periodic_bars.py:19: in &lt;module&gt;
+    from selective_options import __version__, bar_runtime, collectors, ingestion, spot_trades
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase><testcase classname="" name="tests.test_verify_range_volatility" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\Divan\Documents\Codex\2026-09-20\files-pasted-by-the-user-build\outputs\selective-options\tests\test_verify_range_volatility.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\Divan\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_verify_range_volatility.py:12: in &lt;module&gt;
+    from selective_options.errors import IntegrityError
+E   ModuleNotFoundError: No module named 'selective_options'</error></testcase></testsuite></testsuites>

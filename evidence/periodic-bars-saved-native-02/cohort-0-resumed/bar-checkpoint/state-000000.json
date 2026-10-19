@@ -1,0 +1,1 @@
+{"as_of_ms":1790508605000,"buckets":[],"coverage_start_ms":1790508369825,"format_version":1,"lateness_ms":5000,"scope":{"asset":"BTC","environment":"public_reference","source":"kraken","symbol":"BTC/USD"},"timeframes_ms":[300000,900000],"watermark_ms":1790508600000}

@@ -1,0 +1,518 @@
+{
+  "code_sha256": {
+    "scripts/verify_stochastic_rsi.py": "19cdb91616a0da53c69747419b04997411c1cca5661f968cef2ba44a7fd3a8b0",
+    "src/selective_options/cli.py": "d895efc1983d1adc8c98c03e139277295f301df87e45a052c08925e8bd9fa1b0",
+    "src/selective_options/events.py": "6a45866c1e1b70f45d4f9335deab679ba7fa3d1f7369c544ffd9d7ac4e57de08",
+    "src/selective_options/features.py": "6ecaa2501ea2c25dafe7e43519c5832ee1f82b403721bc26d5b66ffaa04b6b4a",
+    "src/selective_options/research.py": "a13caa495110868f3dd735227760cd26d8e15fdaabc75396f1602f0513cd3d93",
+    "src/selective_options/stochastic_rsi_features.py": "e48fdf6ba3143fd376b7b5dacde820454a4d045c357dd1f5454341e4c9646eba",
+    "src/selective_options/stochastic_rsi_research.py": "2a7ed7f9460527458daa261f95d0eca7532d80af8c7b97c7d775559bdf11c729"
+  },
+  "current_feed_health_verified": false,
+  "native_numeric_feature_values_claimed": false,
+  "native_report": {
+    "ready_for_signals": false,
+    "source_database_sha256": "691fd0d9e9b36544b4844d3743fe5941c144d7b7e365ee695872d5660891393b",
+    "source_mutated": false,
+    "source_scope_and_cutoff": {
+      "as_of_ms": 1790002505185,
+      "asset": "BTC",
+      "environment": "public_reference",
+      "explicit_history_start_ms": 1790002200000,
+      "full_history_or_source_authenticity_verified": false,
+      "materialized_rows": 2,
+      "source": "kraken",
+      "symbol": "BTC/USD",
+      "timeframe_s": 300
+    },
+    "stochastic_rsi_report": {
+      "base": {
+        "annualization_periods_per_year": null,
+        "as_of_ms": 1790002505185,
+        "asset": "BTC",
+        "bars_available": 2,
+        "bars_used": 2,
+        "blockers": [],
+        "environment": "public_reference",
+        "features": [
+          {
+            "bars_required": 8,
+            "name": "ema_8",
+            "reason": "INSUFFICIENT_CLOSED_BARS",
+            "state": "WARMUP",
+            "unit": "price",
+            "value": null
+          },
+          {
+            "bars_required": 9,
+            "name": "ema_8_slope",
+            "reason": "INSUFFICIENT_CLOSED_BARS",
+            "state": "WARMUP",
+            "unit": "price_per_bar",
+            "value": null
+          },
+          {
+            "bars_required": 21,
+            "name": "ema_21",
+            "reason": "INSUFFICIENT_CLOSED_BARS",
+            "state": "WARMUP",
+            "unit": "price",
+            "value": null
+          },
+          {
+            "bars_required": 22,
+            "name": "ema_21_slope",
+            "reason": "INSUFFICIENT_CLOSED_BARS",
+            "state": "WARMUP",
+            "unit": "price_per_bar",
+            "value": null
+          },
+          {
+            "bars_required": 50,
+            "name": "ema_50",
+            "reason": "INSUFFICIENT_CLOSED_BARS",
+            "state": "WARMUP",
+            "unit": "price",
+            "value": null
+          },
+          {
+            "bars_required": 51,
+            "name": "ema_50_slope",
+            "reason": "INSUFFICIENT_CLOSED_BARS",
+            "state": "WARMUP",
+            "unit": "price_per_bar",
+            "value": null
+          },
+          {
+            "bars_required": 200,
+            "name": "ema_200",
+            "reason": "INSUFFICIENT_CLOSED_BARS",
+            "state": "WARMUP",
+            "unit": "price",
+            "value": null
+          },
+          {
+            "bars_required": 201,
+            "name": "ema_200_slope",
+            "reason": "INSUFFICIENT_CLOSED_BARS",
+            "state": "WARMUP",
+            "unit": "price_per_bar",
+            "value": null
+          },
+          {
+            "bars_required": 15,
+            "name": "rsi_14",
+            "reason": "INSUFFICIENT_CLOSED_BARS",
+            "state": "WARMUP",
+            "unit": "index_0_to_100",
+            "value": null
+          },
+          {
+            "bars_required": 15,
+            "name": "atr_14",
+            "reason": "INSUFFICIENT_CLOSED_BARS",
+            "state": "WARMUP",
+            "unit": "price",
+            "value": null
+          },
+          {
+            "bars_required": 26,
+            "name": "macd_12_26",
+            "reason": "INSUFFICIENT_CLOSED_BARS",
+            "state": "WARMUP",
+            "unit": "price",
+            "value": null
+          },
+          {
+            "bars_required": 34,
+            "name": "macd_signal_9",
+            "reason": "INSUFFICIENT_CLOSED_BARS",
+            "state": "WARMUP",
+            "unit": "price",
+            "value": null
+          },
+          {
+            "bars_required": 34,
+            "name": "macd_histogram",
+            "reason": "INSUFFICIENT_CLOSED_BARS",
+            "state": "WARMUP",
+            "unit": "price",
+            "value": null
+          },
+          {
+            "bars_required": 20,
+            "name": "bollinger_width_20",
+            "reason": "INSUFFICIENT_CLOSED_BARS",
+            "state": "WARMUP",
+            "unit": "fraction",
+            "value": null
+          },
+          {
+            "bars_required": 6,
+            "name": "roc_5",
+            "reason": "INSUFFICIENT_CLOSED_BARS",
+            "state": "WARMUP",
+            "unit": "fraction",
+            "value": null
+          },
+          {
+            "bars_required": 21,
+            "name": "roc_20",
+            "reason": "INSUFFICIENT_CLOSED_BARS",
+            "state": "WARMUP",
+            "unit": "fraction",
+            "value": null
+          },
+          {
+            "bars_required": 21,
+            "name": "realized_vol_20",
+            "reason": "INSUFFICIENT_CLOSED_BARS",
+            "state": "WARMUP",
+            "unit": "annualized_log_return_std",
+            "value": null
+          },
+          {
+            "bars_required": 61,
+            "name": "realized_vol_60",
+            "reason": "INSUFFICIENT_CLOSED_BARS",
+            "state": "WARMUP",
+            "unit": "annualized_log_return_std",
+            "value": null
+          }
+        ],
+        "first_close_ms": 1790002200000,
+        "formula_version": "closed-bars-v1",
+        "history_budget": 2000,
+        "history_sha256": "fd11882e69e15631301778f4a30511a08e8e796d4f273beff26176ac3d1a32c5",
+        "history_truncated": false,
+        "latest_bar_age_ms": 5185,
+        "latest_close_ms": 1790002500000,
+        "max_latest_age_ms": 600000,
+        "ready_for_signals": false,
+        "source": "kraken",
+        "source_frontier_complete": false,
+        "state": "FEATURES_COMPUTED",
+        "symbol": "BTC/USD",
+        "timeframe_s": 300,
+        "trading_enabled": false
+      },
+      "current_feed_health_verified": false,
+      "features": [
+        {
+          "bars_required": 28,
+          "name": "stoch_rsi",
+          "reason": "INSUFFICIENT_CLOSED_BARS",
+          "state": "WARMUP",
+          "unit": "index_0_to_100",
+          "value": null
+        },
+        {
+          "bars_required": 30,
+          "name": "stoch_rsi_k",
+          "reason": "INSUFFICIENT_CLOSED_BARS",
+          "state": "WARMUP",
+          "unit": "index_0_to_100",
+          "value": null
+        },
+        {
+          "bars_required": 32,
+          "name": "stoch_rsi_d",
+          "reason": "INSUFFICIENT_CLOSED_BARS",
+          "state": "WARMUP",
+          "unit": "index_0_to_100",
+          "value": null
+        }
+      ],
+      "formula_version": "stoch-rsi-bars-v1",
+      "input_event_ids": [
+        "207b61d89e707b293e1879864e0fd5c87778fc4d653b37d59c607104679aaf70",
+        "5fa3a97a0ffcfcfeda78728a1443ddfb5ac81ce103444f1b12aba54419512817"
+      ],
+      "ready_for_signals": false,
+      "regime_classification_complete": false,
+      "rsi_period": 14,
+      "rsi_seed": "first_period_arithmetic_mean",
+      "rsi_smoothing": "wilder_alpha_1_over_period",
+      "smooth_d": 3,
+      "smooth_k": 3,
+      "source_frontier_complete": false,
+      "state": "STOCH_RSI_COMPUTED",
+      "stochastic_period": 14,
+      "stochastic_scale": "0_to_100",
+      "trading_enabled": false
+    },
+    "trading_enabled": false
+  },
+  "source_database_sha256": "691fd0d9e9b36544b4844d3743fe5941c144d7b7e365ee695872d5660891393b",
+  "source_mutated": false,
+  "source_scope": "two original native Kraken BTC five-minute closed bars; explicit cutoff and history start",
+  "status": "VERIFIED_OFFLINE_RESEARCH_ONLY",
+  "synthetic_fixture": {
+    "bars": 48,
+    "features": {
+      "base": {
+        "annualization_periods_per_year": null,
+        "as_of_ms": 14700005,
+        "asset": "BTC",
+        "bars_available": 48,
+        "bars_used": 48,
+        "blockers": [],
+        "environment": "public_reference",
+        "features": [
+          {
+            "bars_required": 8,
+            "name": "ema_8",
+            "reason": null,
+            "state": "AVAILABLE",
+            "unit": "price",
+            "value": 112.42526457627501
+          },
+          {
+            "bars_required": 9,
+            "name": "ema_8_slope",
+            "reason": null,
+            "state": "AVAILABLE",
+            "unit": "price_per_bar",
+            "value": -0.40721845036428306
+          },
+          {
+            "bars_required": 21,
+            "name": "ema_21",
+            "reason": null,
+            "state": "AVAILABLE",
+            "unit": "price",
+            "value": 111.46914561193387
+          },
+          {
+            "bars_required": 22,
+            "name": "ema_21_slope",
+            "reason": null,
+            "state": "AVAILABLE",
+            "unit": "price_per_bar",
+            "value": -0.04691456119338966
+          },
+          {
+            "bars_required": 50,
+            "name": "ema_50",
+            "reason": "INSUFFICIENT_CLOSED_BARS",
+            "state": "WARMUP",
+            "unit": "price",
+            "value": null
+          },
+          {
+            "bars_required": 51,
+            "name": "ema_50_slope",
+            "reason": "INSUFFICIENT_CLOSED_BARS",
+            "state": "WARMUP",
+            "unit": "price_per_bar",
+            "value": null
+          },
+          {
+            "bars_required": 200,
+            "name": "ema_200",
+            "reason": "INSUFFICIENT_CLOSED_BARS",
+            "state": "WARMUP",
+            "unit": "price",
+            "value": null
+          },
+          {
+            "bars_required": 201,
+            "name": "ema_200_slope",
+            "reason": "INSUFFICIENT_CLOSED_BARS",
+            "state": "WARMUP",
+            "unit": "price_per_bar",
+            "value": null
+          },
+          {
+            "bars_required": 15,
+            "name": "rsi_14",
+            "reason": null,
+            "state": "AVAILABLE",
+            "unit": "index_0_to_100",
+            "value": 50.24654471849839
+          },
+          {
+            "bars_required": 15,
+            "name": "atr_14",
+            "reason": null,
+            "state": "AVAILABLE",
+            "unit": "price",
+            "value": 8.459984319387496
+          },
+          {
+            "bars_required": 26,
+            "name": "macd_12_26",
+            "reason": null,
+            "state": "AVAILABLE",
+            "unit": "price",
+            "value": 1.117950729432195
+          },
+          {
+            "bars_required": 34,
+            "name": "macd_signal_9",
+            "reason": null,
+            "state": "AVAILABLE",
+            "unit": "price",
+            "value": 1.1785105393312971
+          },
+          {
+            "bars_required": 34,
+            "name": "macd_histogram",
+            "reason": null,
+            "state": "AVAILABLE",
+            "unit": "price",
+            "value": -0.060559809899102035
+          },
+          {
+            "bars_required": 20,
+            "name": "bollinger_width_20",
+            "reason": null,
+            "state": "AVAILABLE",
+            "unit": "fraction",
+            "value": 0.13582463086700974
+          },
+          {
+            "bars_required": 6,
+            "name": "roc_5",
+            "reason": null,
+            "state": "AVAILABLE",
+            "unit": "fraction",
+            "value": -0.034782608695652195
+          },
+          {
+            "bars_required": 21,
+            "name": "roc_20",
+            "reason": null,
+            "state": "AVAILABLE",
+            "unit": "fraction",
+            "value": 0.0
+          },
+          {
+            "bars_required": 21,
+            "name": "realized_vol_20",
+            "reason": "ANNUALIZATION_NOT_SPECIFIED",
+            "state": "UNAVAILABLE",
+            "unit": "annualized_log_return_std",
+            "value": null
+          },
+          {
+            "bars_required": 61,
+            "name": "realized_vol_60",
+            "reason": "INSUFFICIENT_CLOSED_BARS",
+            "state": "WARMUP",
+            "unit": "annualized_log_return_std",
+            "value": null
+          }
+        ],
+        "first_close_ms": 600000,
+        "formula_version": "closed-bars-v1",
+        "history_budget": 2000,
+        "history_sha256": "b69714c94bf6fffd5de754ec86c079a29d86f3397d991469b04c2ac38b5cb178",
+        "history_truncated": false,
+        "latest_bar_age_ms": 5,
+        "latest_close_ms": 14700000,
+        "max_latest_age_ms": 600000,
+        "ready_for_signals": false,
+        "source": "synthetic_fixture",
+        "source_frontier_complete": false,
+        "state": "FEATURES_COMPUTED",
+        "symbol": "FIXTURE-BTC/USD",
+        "timeframe_s": 300,
+        "trading_enabled": false
+      },
+      "current_feed_health_verified": false,
+      "features": [
+        {
+          "bars_required": 28,
+          "name": "stoch_rsi",
+          "reason": null,
+          "state": "AVAILABLE",
+          "unit": "index_0_to_100",
+          "value": 29.834006826235417
+        },
+        {
+          "bars_required": 30,
+          "name": "stoch_rsi_k",
+          "reason": null,
+          "state": "AVAILABLE",
+          "unit": "index_0_to_100",
+          "value": 45.07553116919594
+        },
+        {
+          "bars_required": 32,
+          "name": "stoch_rsi_d",
+          "reason": null,
+          "state": "AVAILABLE",
+          "unit": "index_0_to_100",
+          "value": 48.72743277762395
+        }
+      ],
+      "formula_version": "stoch-rsi-bars-v1",
+      "input_event_ids": [
+        "c81608418cf57be07e516c31bca8f1202ca7118531773c1e7a0bac6e52c0b38c",
+        "6af93362f5027341b6ea72aa180adadde0d2dde195f37feb92ea06841eaab469",
+        "404d9783e9e7cadf24d2be28c38b882e1a2c1b63996ab7535bbf2edaa1a29b93",
+        "6c411f14400d313d2d846ae8d9540b8c4bfe223edadb6d9d1db6e684fecd1738",
+        "c8531446a28b987796e68de0870852783e4201c2a65ac43c258e027f40bd9f0f",
+        "1ec363ba8291068bc5013120ad641d181e495f87a0cf44fdc61aaca8d46ba50a",
+        "5a161bd777179f0aaf26ca0076e150c02704978677077c98bdc1da8d5f139b41",
+        "4ec62143cacd4edcda40462d3b9717470af7bd9ec37819182d803efa8e39c437",
+        "7ae033190139a54da13368185117eb3338f67cf79d7ec8f5038f103c6c0c37d8",
+        "65a51a40f5c3b428bc28fecda881805b7463df26d98a55fb561b3b907340c974",
+        "ac3bf732036dfcb43055ba04f0ef04460049dec3c5bc3f083d2889a03e4bed6f",
+        "26b934f1351a088d8633e83930d99497d2fffbb0e54a7a28a5aa870489a01a22",
+        "edbaa953cfad98b17e86d20b16b5f4f0a5aada5a0e852029c1b429a5df6e70d6",
+        "a16bec08ebeb455e40ffaeb496f2d02c4753a81d01277e3f32e59cfda0a46a40",
+        "6ce0d25807c57caa9fe32a39e5d4075c7a8246e2a0a8fb6196cb8986234dc9c3",
+        "fb2e703ce3884b39d5c869011382099e549034334aefdd52ad340e104bdd1ea1",
+        "40d32e64a7634b33b3e7fd24dbb4abd6ac630b70ac6f815016a5425034e48bd2",
+        "8828775744817fcede84df265744b989fa12b90871beab59512b9345aa4f736b",
+        "80dda06bf7cf329a19608dc0f99abe5b5cef98654a0c0831a8ebd6a4340ffd70",
+        "d1d8b1874c4b0a6d7026021bab7f699446fceed40215cca692131117364cf165",
+        "55fdbc82e9c6b952d7404943cfb1a362ff72e54c835777957c496e311a9bee30",
+        "30629e1a198f6739c8450d41b7535b6606ae59506a564db9735d0b248796457d",
+        "624e55d4ea3000884019fa2b2680eb0bffe8ed8dd4f4d4d639c80f77b108f15d",
+        "b283f9a0cfa820200715611abc88ce4740527461916508a2213bbc840b6c217f",
+        "eba61f631065dbbba82ef133bd88a929ea028ae06736d6114812cb0549862579",
+        "30a3d925dfb10e7d54bf4ccdc54556c8e820cee2a6aaae8ed07367c3a1f384cb",
+        "628db7f6b1c46a4f317dd02de217a4d33cf9efb19b3a35ab289db18c5ed6d98b",
+        "7d3224254f885c07a001c7291978a29bb3280e817c5d5835065040e768e91363",
+        "19f966d38ae1deb77c0de94d66538501ce7d2540815e1d3c061fe532e37fc45c",
+        "30aea95f1545b7efffd7ecab6bf7eefe6a22ca799f02cbfe99e76a504ac88326",
+        "df145acc5da923a60f8e43e3150dc73bff6b98ead5b666724a97d17621c1d81f",
+        "34bf04bf9dced6f297dad792b18c68440998b110f7606b5d329a581ae61240bd",
+        "005f3fe7e7f179cfb73c7f285321727e8572fc2771d6a7ff4016029b36739420",
+        "850c87b2696ceb9e2341c3c6d4b5ae8912447f95d0e272c0e45908c9ff8273db",
+        "e57bd8fc05ba61ab20cdd16174eb84a6fd6a8f5f7fb5c271b7c813b1838b8eb5",
+        "b95beafea9da5dcf6e5897695314e7189194756f33b7bef554ae4d12d903c373",
+        "e546b34211824df2c9b3e86068a624c4572d5df8f57cbab75fd0e7c7a738b1f4",
+        "938e6fb6498c94beb04ddb1cbaa97d989928951b66f36f95f17b61e236364a84",
+        "3643af8670a751f38e33848bfdeb1c899047c3ef16c8fea77ddc3a2847d13f7b",
+        "16e348f6afa7c91e3bba730d6ace01d28f2fa9460572b541af2d4c91c6786699",
+        "4b98a0297820e72e044917c8745956244a31397224a0277ee9bbcdd5a2580e3d",
+        "820f2978d540b752d679b661a5d5012c5f88c02500cd424a3603c07d7f2b13df",
+        "7ffd3ac781840ac21e20745660c30c87f4cf0354bf19dde2c2278bf1ed9acda8",
+        "3491c725bc9659deb34c59ba2acb92e4f1224015087f365bf6f1372a79f8c26a",
+        "ce6dd10f1dde87e533a13f04b219dffc66e753811e724a4a39bf3328102115ad",
+        "bb77d02a6abfc86218f48608bd52d60c1196673bb5ab0cd1be86a9ca08e581cc",
+        "be444b1dea40ce0c48df219673fdfb1ce86b5c22a6353765ef18b1989696aaed",
+        "ecaeed27a97b16cd1aa25206ee8a4eec1b0aeb34ea61cf3203cdbd8dca180319"
+      ],
+      "ready_for_signals": false,
+      "regime_classification_complete": false,
+      "rsi_period": 14,
+      "rsi_seed": "first_period_arithmetic_mean",
+      "rsi_smoothing": "wilder_alpha_1_over_period",
+      "smooth_d": 3,
+      "smooth_k": 3,
+      "source_frontier_complete": false,
+      "state": "STOCH_RSI_COMPUTED",
+      "stochastic_period": 14,
+      "stochastic_scale": "0_to_100",
+      "trading_enabled": false
+    },
+    "formula_reference": "independent exact Fraction expansion",
+    "provenance": "synthetic_fixture"
+  },
+  "trading_enabled": false
+}

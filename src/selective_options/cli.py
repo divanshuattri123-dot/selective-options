@@ -23,14 +23,16 @@ from .recovery import replay_store
 from .research import research_backtest, research_features
 from .rotation_restore import restore_rotation
 from .startup import probe
+from .stochastic_rsi_research import research_stochastic_rsi
 from .trade_backfill import backfill_trades
 
 
-class BarCaptureOptions(TypedDict, total=False):
+class CaptureOptions(TypedDict, total=False):
     resume_bars_from: Path
     save_bars_on_stop: bool
     stop_request: CaptureStopRequest
     resume_solana_from: Path
+    resume_crypto_news_from: Path
 
 
 def parser() -> argparse.ArgumentParser:
@@ -97,6 +99,12 @@ def parser() -> argparse.ArgumentParser:
         type=Path,
         default=None,
         help="Validate all eligible SOL network poll bindings and copy the latest exact healthy three-row seed before producers",
+    )
+    capture_parser.add_argument(
+        "--resume-crypto-news-from",
+        type=Path,
+        default=None,
+        help="Validate a closed CoinDesk DuckDB/Parquet/archive/outbox checkpoint and preserve first receipts before crypto-news capture",
     )
     capture_parser.add_argument(
         "--recovery-marker",
@@ -206,6 +214,27 @@ def parser() -> argparse.ArgumentParser:
     keltner_parser.add_argument("--max-latest-age-ms", type=int, required=True)
     keltner_parser.add_argument("--max-bars", type=int, default=2000)
     keltner_parser.add_argument("--history-start-ms", type=int, default=None)
+    stoch_parser = commands.add_parser(
+        "research-stochastic-rsi",
+        help="Offline causal Stochastic RSI from complete closed bars; cannot trade",
+    )
+    stoch_parser.add_argument("--database", type=Path, required=True)
+    stoch_parser.add_argument("--output", type=Path, required=True)
+    stoch_parser.add_argument("--asset", required=True)
+    stoch_parser.add_argument(
+        "--environment", choices=("testnet", "public_reference"), required=True
+    )
+    stoch_parser.add_argument("--source", required=True)
+    stoch_parser.add_argument("--symbol", required=True)
+    stoch_parser.add_argument("--timeframe-s", type=int, required=True)
+    stoch_parser.add_argument("--as-of-ms", type=int, required=True)
+    stoch_parser.add_argument("--max-latest-age-ms", type=int, required=True)
+    stoch_parser.add_argument("--rsi-period", type=int, default=14)
+    stoch_parser.add_argument("--stochastic-period", type=int, default=14)
+    stoch_parser.add_argument("--smooth-k", type=int, default=3)
+    stoch_parser.add_argument("--smooth-d", type=int, default=3)
+    stoch_parser.add_argument("--max-bars", type=int, default=2000)
+    stoch_parser.add_argument("--history-start-ms", type=int, default=None)
     options_parser = commands.add_parser(
         "research-options",
         help="Offline native ATM-IV term structure with explicit policies; cannot trade",
@@ -291,13 +320,15 @@ def main() -> int:
         elif args.command == "arm":
             LiveEngine().arm()
         elif args.command == "capture":
-            capture_options: BarCaptureOptions = {}
+            capture_options: CaptureOptions = {}
             if args.resume_bars_from is not None:
                 capture_options["resume_bars_from"] = args.resume_bars_from
             if args.save_bars_on_stop is not None:
                 capture_options["save_bars_on_stop"] = args.save_bars_on_stop
             if args.resume_solana_from is not None:
                 capture_options["resume_solana_from"] = args.resume_solana_from
+            if args.resume_crypto_news_from is not None:
+                capture_options["resume_crypto_news_from"] = args.resume_crypto_news_from
 
             async def run_capture() -> dict[str, object]:
                 async def collect() -> dict[str, object]:
@@ -428,6 +459,29 @@ def main() -> int:
                         atr_period=args.atr_period,
                         atr_multiplier=args.atr_multiplier,
                         max_latest_age_ms=args.max_latest_age_ms,
+                        max_bars=args.max_bars,
+                        history_start_ms=args.history_start_ms,
+                    ),
+                    indent=2,
+                )
+            )
+        elif args.command == "research-stochastic-rsi":
+            print(
+                json.dumps(
+                    research_stochastic_rsi(
+                        args.database,
+                        args.output,
+                        asset=args.asset,
+                        environment=args.environment,
+                        source=args.source,
+                        symbol=args.symbol,
+                        timeframe_s=args.timeframe_s,
+                        as_of_ms=args.as_of_ms,
+                        max_latest_age_ms=args.max_latest_age_ms,
+                        rsi_period=args.rsi_period,
+                        stochastic_period=args.stochastic_period,
+                        smooth_k=args.smooth_k,
+                        smooth_d=args.smooth_d,
                         max_bars=args.max_bars,
                         history_start_ms=args.history_start_ms,
                     ),

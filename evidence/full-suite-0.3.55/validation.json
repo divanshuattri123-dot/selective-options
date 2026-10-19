@@ -1,0 +1,67 @@
+{
+  "application_version": "0.3.55",
+  "status": "LOCAL_VALIDATION_PASSED_HOSTED_PENDING",
+  "application_suite": {
+    "tests": 3893,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "duration_seconds": 781.09,
+    "coverage_percent": 94.70,
+    "junit": "retry-02/application-junit.xml",
+    "log": "retry-02/application.log"
+  },
+  "migration_suite": {
+    "tests": 65,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "junit": "migration-junit.xml",
+    "log": "migration.log"
+  },
+  "combined_junit_gate": {
+    "tests": 3958,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "tool": "tools/check_ci_junit.py"
+  },
+  "static_checks": {
+    "ruff_check_scope": "src scripts tests tools",
+    "ruff_check": "passed",
+    "ruff_format": "passed",
+    "ruff_formatted_python_files": 292,
+    "mypy": "passed",
+    "mypy_source_files": 145
+  },
+  "runtime_and_package_checks": {
+    "config": "VALID",
+    "profile": "testnet",
+    "milestone": 2,
+    "milestone_status": "PARTIAL",
+    "trading_enabled": false,
+    "rendered_readme_idempotent": true,
+    "isolated_wheel": "work/dist-0.3.55-isolated/selective_options-0.3.55-py3-none-any.whl",
+    "wheel_runtime_modules": 92,
+    "wheel_runtime_modules_byte_identical": true
+  },
+  "saved_native_proofs": {
+    "crypto_news_resume": "evidence/crypto-news-resume-saved-native-02/verification.json",
+    "crypto_news_network_requests": 0,
+    "crypto_news_source_hashes_preserved": true,
+    "periodic_bars": "evidence/periodic-bars-saved-native-02/verification.json",
+    "periodic_bars_source_mutated": false,
+    "stochastic_rsi": "evidence/stochastic-rsi-saved-native-01/verification.json",
+    "orders_submitted": 0
+  },
+  "initial_attempts_and_resolution": [
+    "The first full pytest command omitted PYTHONPATH=src and failed during collection because the local package was not installed; its report is retained in application.log and application-junit.xml.",
+    "The first correctly configured full run passed 3888 tests and failed 5 saved-bars verifier assertions because the verifier was still pinned to 0.3.53. Its exact JUnit and console output are preserved in retry-01/raw-retry-01.zip (round-trip hashes verified). The pin and its test now target 0.3.55; 10 affected tests and the current-version saved-native proof pass.",
+    "A JUnit-gate call used system Python without defusedxml; the project virtual environment rerun passed. A non-isolated wheel build lacked local setuptools; the isolated wheel build passed."
+  ],
+  "hosted_validation": "PENDING",
+  "milestone_2_complete": false,
+  "paper_days_credited": 0,
+  "paper_trades_credited": 0,
+  "live_execution_enabled": false
+}

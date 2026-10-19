@@ -1,5 +1,9 @@
 # Offline research foundations
 
+Version 0.3.55 also adds an explicit, opt-in CoinDesk checkpoint handoff to finite capture. It is ingestion/recovery plumbing, not a model feature: the loader preserves native event and first-receipt identities, verifies source and destination storage evidence, and the collector treats exact replays as references to existing observations while appending changed revisions. See the checkpoint command and limits in `RUNBOOK.md`. No sentiment, model classification, first-publication truth or strategy signal is added.
+
+Version 0.3.54 adds closed-bar Stochastic RSI and an offline saved-database report. Its conventional 14 RSI / 14 RSI-range / 3 SMA %K / 3 SMA %D defaults are explicit and configurable. Values use a 0–100 scale; common input defaults are not a validated signal or evidence of edge. M2 and later strategy acceptance remain incomplete.
+
 Version 0.3.52 adds Parkinson and practical Garman–Klass OHLC range-volatility estimates through `research-range-volatility`. These read-only estimators use complete contiguous bars and explicit bar-count windows; missing data, warmup, numerical collapse and unavailable annualization remain visible. M2 and later strategy acceptance remain incomplete.
 
 ## Keltner-channel research
@@ -20,6 +24,24 @@ The same complete contiguous closed-bar audit and both source/receipt clocks app
 Flat zero ATR produces coincident bands. A negative mathematical lower band is retained as a mathematical output, not a tradable price. Overflow and nonzero envelope distances that collapse to the center are unavailable. Period-one averages assign the latest observation directly, and seed arithmetic preserves representable subnormal mass; independent regression cases cover both numerical boundaries. Each value separately reports AVAILABLE, WARMUP or UNAVAILABLE.
 
 The saved native BTC segment contains only two complete five-minute bars, so standard 20/10/2 settings remain WARMUP. The included partial prefix remains UNAVAILABLE. Separate exact rational analytical fixtures are labelled synthetic. See `evidence/keltner-saved-native-01/`. These channels are not a probability interval, regime classification, signal, validated edge or trading approval. M2 and later model acceptance remain incomplete.
+
+## Stochastic RSI research
+
+`research-stochastic-rsi` reads one closed database under an explicit asset, source, symbol, timeframe, two-clock cutoff, latest-bar age bound and optional inclusive history start. It refuses a live WAL, linked source/output paths and over-budget history. It hashes the source before and after its read, creates only a new output directory, and writes `stochastic-rsi.json`. Incomplete, gappy or stale selected bars withhold all three values; a narrower history must be explicitly selected and is never silently reseeded.
+
+```powershell
+selective-options research-stochastic-rsi `
+  --database CLOSED_CAPTURE/events.duckdb --output NEW_STOCHASTIC_RSI_RESULT `
+  --asset BTC --environment public_reference --source kraken `
+  --symbol BTC/USD --timeframe-s 300 --as-of-ms EXPLICIT_CUTOFF_MS `
+  --max-latest-age-ms 300000 --max-bars 2000
+```
+
+The defined `stoch-rsi-bars-v1` uses the existing `closed-bars-v1` close-based RSI convention: arithmetic mean seed of the first RSI-period changes, then Wilder alpha `1/period`. Raw StochRSI is `100 × (RSI − rolling_min_RSI) / (rolling_max_RSI − rolling_min_RSI)`; `%K` is an SMA of raw StochRSI and `%D` is an SMA of `%K`. These are the conventional lines and 14/14/3/3 defaults described by [TradingView's Stochastic RSI reference](https://www.tradingview.com/support/solutions/43000502333-stochastic-rsi-stoch-rsi/), scaled here to 0–100 instead of 0–1. The RSI recurrence is independently documented in [TA-Lib's RSI implementation](https://github.com/TA-Lib/ta-lib/blob/v0.6.4/src/ta_func/ta_RSI.c). This records the project's precise convention; exact output parity with every charting library is not claimed.
+
+With default inputs, raw StochRSI needs 28 bars, smoothed `%K` needs 30, and `%D` needs 32. Each value has its own WARMUP/UNAVAILABLE state. A zero RSI gain/loss denominator and a flat rolling RSI range are explicitly unavailable rather than forced to zero or 50. A rising market with RSI fixed at 100 therefore has an undefined stochastic range. Bar counts are not calendar days. This oscillator can turn faster and create more noise than RSI alone; the reference cautions that it should be used with trend context. This implementation supplies no trend interpretation, regime classification, divergence, signal, performance, or trade permission.
+
+The preserved native Kraken BTC sample has only two complete bars, so all default values remain WARMUP. The independent exact-rational 48-bar analytical sample is explicitly synthetic and verifies arithmetic only. `scripts/verify_stochastic_rsi.py` keeps those two records separate in `evidence/stochastic-rsi-saved-native-01/`; neither sample establishes source-frontier completeness, sustained feed health, or strategy edge.
 
 ## OHLC range-volatility research
 

@@ -4,10 +4,11 @@ import asyncio
 import hashlib
 import json
 import math
+import re
 from pathlib import Path
 
 from . import __version__
-from .archive import seal_archive
+from .archive import file_digest, manifest_path, seal_archive
 from .bar_checkpoint import load_bar_checkpoint, verify_bar_checkpoint_seed
 from .bar_runtime import install_bar_resume, save_collector_bar_checkpoint
 from .bea_calendar import BEACalendarCollector
@@ -23,6 +24,7 @@ from .checkpoints import load_trade_checkpoints
 from .coinmetrics_checkpoint import load_coinmetrics_resume
 from .collectors import DeribitCollector, SpotCollector, now_ms, poll_chains
 from .config import AppConfig
+from .crypto_news_checkpoint import CryptoNewsCheckpoint, load_crypto_news_checkpoint
 from .derivatives import DerivativesCollector
 from .errors import IntegrityError, TradingUnavailable
 from .eth_checkpoint import load_eth_checkpoint
@@ -62,6 +64,42 @@ MISSING_FEEDS = (
     "gap recovery outside bounded Kraken REST coverage; periodic crash checkpoints and other stream/full-source recovery",
     "deployed Redis consumer bus",
 )
+
+
+def _write_crypto_news_resume_failure(
+    output: Path,
+    error: BaseException,
+    checkpoint: CryptoNewsCheckpoint,
+    source_hashes: tuple[str, str, str],
+) -> None:
+    message = str(error)
+    reason = message if re.fullmatch(r"[A-Z0-9_]{1,128}", message) else type(error).__name__
+    details = {
+        "status": "FAILED",
+        "stage": "CLOSED_DESTINATION_REVALIDATION_OR_COPY",
+        "reason_code": reason,
+        "scope": "coindesk_rss/public_reference/GLOBAL/CRYPTO_NEWS",
+        "source_hashes": {
+            "database": source_hashes[0],
+            "parquet": source_hashes[1],
+            "manifest": source_hashes[2],
+        },
+        "requested_copy_event_ids": [row.event_id for row in checkpoint.events],
+        "requested_copy_events": len(checkpoint.events),
+        "destination_database_exists": (output / "events.duckdb").is_file(),
+        "destination_database_sha256": (
+            file_digest(output / "events.duckdb") if (output / "events.duckdb").is_file() else None
+        ),
+        "closed_destination_validation_passed": False,
+        "news_producer_started": False,
+        "history_complete": False,
+        "ready_for_signals": False,
+        "trading_enabled": False,
+        "orders_submitted": 0,
+    }
+    with (output / "crypto-news-resume-failure.json").open("x", encoding="utf-8") as stream:
+        json.dump(details, stream, indent=2)
+        stream.write("\n")
 
 
 async def consume(
@@ -134,6 +172,7 @@ async def capture(
     resume_coinmetrics_from: Path | None = None,
     stop_request: CaptureStopRequest | None = None,
     resume_solana_from: Path | None = None,
+    resume_crypto_news_from: Path | None = None,
 ) -> dict[str, object]:
     duration = config.ingestion.duration_s if duration_s is None else duration_s
     if not math.isfinite(duration) or duration <= 0:
@@ -212,6 +251,8 @@ async def capture(
         not config.ingestion.solana_network_enabled or "SOL" not in config.system.assets
     ):
         raise ValueError("SOL checkpoint recovery requires enabled SOL network capture")
+    if resume_crypto_news_from is not None and not config.ingestion.crypto_news_enabled:
+        raise ValueError("crypto-news checkpoint recovery requires crypto-news capture enabled")
     solana_policy = {
         "max_receipt_age_ms": int(config.ingestion.solana_network_poll_interval_s * 2000),
         "max_sample_age_ms": int(
@@ -228,6 +269,35 @@ async def capture(
         solana_seed = await load_solana_resume(
             resume_solana_from, solana_resume_at, **solana_policy
         )
+    crypto_news_policy = {
+        "max_poll_age_ms": int(config.ingestion.crypto_news_poll_interval_s * 2000),
+        "max_rows": 10_000,
+        "max_bytes": 16_000_000,
+    }
+    crypto_news_resume_at: int | None = None
+    crypto_news_seed: CryptoNewsCheckpoint | None = None
+    crypto_news_source_hashes: tuple[str, str, str] | None = None
+    if resume_crypto_news_from is not None:
+        crypto_news_resume_at = now_ms()
+        source_parquet = resume_crypto_news_from.with_suffix(".parquet")
+        source_manifest = manifest_path(source_parquet)
+        crypto_news_source_hashes = (
+            await complete_thread(file_digest, resume_crypto_news_from),
+            await complete_thread(file_digest, source_parquet),
+            await complete_thread(file_digest, source_manifest),
+        )
+        crypto_news_seed = await load_crypto_news_checkpoint(
+            resume_crypto_news_from,
+            crypto_news_resume_at,
+            parquet_archive=source_parquet,
+            **crypto_news_policy,
+        )
+        if crypto_news_source_hashes != (
+            await complete_thread(file_digest, resume_crypto_news_from),
+            await complete_thread(file_digest, source_parquet),
+            await complete_thread(file_digest, source_manifest),
+        ):
+            raise IntegrityError("CRYPTO_NEWS_SOURCE_CHANGED_DURING_PREFLIGHT")
     eth_seed = (
         await load_eth_checkpoint(
             resume_eth_gas_from, now_ms(), provider=config.ingestion.eth_gas_provider
@@ -391,6 +461,87 @@ async def capture(
         except BaseException:
             await drain_shutdown(store.close())
             raise
+    crypto_news_resume_report: dict[str, object] | None = None
+    if crypto_news_seed is not None:
+        assert resume_crypto_news_from is not None
+        assert crypto_news_resume_at is not None
+        assert crypto_news_source_hashes is not None
+        try:
+            pending_before_news = await store.pending_delivery_count()
+            await store.append(list(crypto_news_seed.events), exact=True)
+            await store.close()
+            copied_news = await load_crypto_news_checkpoint(
+                output / "events.duckdb",
+                now_ms(),
+                max_poll_age_ms=crypto_news_policy["max_poll_age_ms"],
+                max_rows=crypto_news_policy["max_rows"],
+                max_bytes=crypto_news_policy["max_bytes"],
+            )
+            if copied_news.events != crypto_news_seed.events:
+                raise IntegrityError("CRYPTO_NEWS_CHECKPOINT_CHANGED_DURING_COPY")
+            store = await DuckStore.open(
+                output / "events.duckdb", int(config.data.max_clock_skew_s * 1000)
+            )
+            pending_after_news = await store.pending_delivery_count()
+            if pending_after_news != pending_before_news + len(crypto_news_seed.events):
+                raise IntegrityError("CRYPTO_NEWS_CHECKPOINT_OUTBOX_MISMATCH")
+            if crypto_news_source_hashes != (
+                await complete_thread(file_digest, resume_crypto_news_from),
+                await complete_thread(file_digest, resume_crypto_news_from.with_suffix(".parquet")),
+                await complete_thread(
+                    file_digest, manifest_path(resume_crypto_news_from.with_suffix(".parquet"))
+                ),
+            ):
+                raise IntegrityError("CRYPTO_NEWS_SOURCE_CHANGED_DURING_COPY")
+            crypto_news_resume_report = {
+                "status": "COMMITTED_AND_RELOADED",
+                "scope": "coindesk_rss/public_reference/GLOBAL/CRYPTO_NEWS",
+                "selection_as_of_ms": crypto_news_resume_at,
+                "latest_health_event_id": crypto_news_seed.latest_health_event_id,
+                "latest_health_received_at_ms": crypto_news_seed.latest_health_received_at_ms,
+                "retained_metadata_rows": len(crypto_news_seed.metadata),
+                "retained_first_receipt_min_ms": min(
+                    (row.observed_at_ms for row in crypto_news_seed.metadata), default=None
+                ),
+                "retained_first_receipt_max_ms": max(
+                    (row.observed_at_ms for row in crypto_news_seed.metadata), default=None
+                ),
+                "minimal_bound_health_rows": len(crypto_news_seed.health),
+                "copied_event_ids": [row.event_id for row in crypto_news_seed.events],
+                "copied_events": len(crypto_news_seed.events),
+                "copied_outbox_pending": True,
+                "source_delivered_rows": sum(
+                    value for _, value in crypto_news_seed.source_delivery
+                ),
+                "source_database_sha256": crypto_news_source_hashes[0],
+                "source_parquet_sha256": crypto_news_source_hashes[1],
+                "source_manifest_sha256": crypto_news_source_hashes[2],
+                "closed_destination_revalidated_before_news_collector": True,
+                "destination_pending_outbox_rows": pending_after_news,
+                "max_poll_age_ms": crypto_news_policy["max_poll_age_ms"],
+                "max_rows": crypto_news_policy["max_rows"],
+                "max_stored_value_bytes": crypto_news_policy["max_bytes"],
+                "history_complete": False,
+                "publication_time_independently_verified": False,
+                "transport_resumed_by_copy": False,
+                "ready_for_signals": False,
+                "trading_enabled": False,
+            }
+        except BaseException as exc:
+            await drain_shutdown(store.close())
+            try:
+                await complete_thread(
+                    _write_crypto_news_resume_failure,
+                    output,
+                    exc,
+                    crypto_news_seed,
+                    crypto_news_source_hashes,
+                )
+            except BaseException:
+                # Preserve the original copy/revalidation error even if the
+                # filesystem cannot retain the best-effort failure artifact.
+                pass
+            raise
     stablecoin = None
     if config.ingestion.stablecoin_supply_enabled:
         from .stablecoin_supply import StablecoinSupplyCollector
@@ -419,6 +570,19 @@ async def capture(
                 max_rows=config.ingestion.coinmetrics_max_rows,
                 max_response_bytes=config.ingestion.coinmetrics_max_response_bytes,
                 timeout_s=config.ingestion.coinmetrics_timeout_s,
+            )
+        except BaseException:
+            await drain_shutdown(store.close())
+            raise
+    crypto_news_collector = None
+    if config.ingestion.crypto_news_enabled:
+        from .crypto_news import CryptoNewsCollector
+
+        try:
+            crypto_news_collector = CryptoNewsCollector(
+                config,
+                bus.publish,
+                initial_metadata=crypto_news_seed.metadata if crypto_news_seed else (),
             )
         except BaseException:
             await drain_shutdown(store.close())
@@ -502,12 +666,8 @@ async def capture(
                 producers.append(
                     asyncio.create_task(LiquidationCollector(config, bus.publish).run())
                 )
-            if config.ingestion.crypto_news_enabled:
-                from .crypto_news import CryptoNewsCollector
-
-                producers.append(
-                    asyncio.create_task(CryptoNewsCollector(config, bus.publish).run())
-                )
+            if crypto_news_collector is not None:
+                producers.append(asyncio.create_task(crypto_news_collector.run()))
             if spot_trades is not None:
                 producers.append(asyncio.create_task(spot_trades.run()))
             for news_source in config.ingestion.policy_news_sources:
@@ -1027,6 +1187,7 @@ async def capture(
             "eth_gas_provider": config.ingestion.eth_gas_provider,
             "eth_gas_source": PUBLIC_PROVIDERS[config.ingestion.eth_gas_provider][1],
             "eth_gas_checkpoint_handoff": "COMMITTED_AND_RELOADED" if eth_seed else "NOT_REQUESTED",
+            "crypto_news_resume": crypto_news_resume_report,
             "recovery_marker": recovery_marker,
             "automatic_kraken_recovery_enabled": config.ingestion.kraken_auto_recovery_enabled,
             "recovery_handoff": "COMMITTED_AND_RELOADED"

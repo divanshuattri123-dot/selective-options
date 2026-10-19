@@ -1,0 +1,46 @@
+{
+  "version": "0.3.55",
+  "status": "SAVED_NATIVE_CHECKPOINT_RESUME_VERIFIED",
+  "transport_provenance": "saved_public_xml_replayed_with_mocked_transport",
+  "real_network_requests": 0,
+  "source": "coindesk_rss/public_reference/GLOBAL/CRYPTO_NEWS",
+  "selection_as_of_ms": 1791113910327,
+  "source_sha256": {
+    "events.duckdb": "76bf7ecb50cf560bff24338ee5b4c41345fcc11fcf3d05eea14a4031b187915f",
+    "events.parquet": "df73462160a9bce48b0c6fe5c20fa11adaa170a46564cad6185536e71bea5a62",
+    "events.parquet.manifest.json": "4a18f6569ccb84278233e869214fa1188d69b5b86a2d61f3a61f413c04ad4e9e",
+    "response.xml": "cddc74945dcbe5aec3218cd2b5e339c2cb3e8c9ce888e51b4208e4f5194cfc86"
+  },
+  "source_unchanged": {
+    "events.duckdb": true,
+    "events.parquet": true,
+    "events.parquet.manifest.json": true,
+    "response.xml": true
+  },
+  "source_metadata_rows": 25,
+  "source_minimal_health_rows": 1,
+  "source_first_receipt_min_ms": 1791113907590,
+  "source_first_receipt_max_ms": 1791113907590,
+  "replayed_items": 25,
+  "duplicate_headline_rows_republished": 0,
+  "destination_health_rows": 2,
+  "destination_rows": 27,
+  "duckdb_parquet_exact_match": true,
+  "all_outbox_rows_pending": true,
+  "closed_destination_revalidated_before_collector": true,
+  "startup_order": [
+    "source_archive_verified",
+    "closed_destination_revalidated",
+    "collector_constructed",
+    "producer_started"
+  ],
+  "first_receipts_preserved_exactly": true,
+  "new_health_retained": true,
+  "history_complete": false,
+  "publication_time_independently_verified": false,
+  "sentiment_or_classification_available": false,
+  "milestone_2_complete": false,
+  "ready_for_signals": false,
+  "trading_enabled": false,
+  "orders_submitted": 0
+}
