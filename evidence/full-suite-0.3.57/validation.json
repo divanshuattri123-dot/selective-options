@@ -1,24 +1,25 @@
 {
   "application_version": "0.3.57",
-  "status": "LOCAL_VALIDATION_PASSED_HOSTED_PENDING",
+  "status": "CURRENT_REPAIRED_SOURCE_LOCAL_VALIDATION_PASSED_HOSTED_RERUN_PENDING",
+  "application_suite_source_scope": "Current source after the test-only pre-worker seal synchronization repair.",
   "application_suite": {
     "tests": 3921,
     "failures": 0,
     "errors": 0,
     "skipped": 0,
-    "duration_seconds": 798.72,
+    "duration_seconds": 790.99,
     "coverage_percent": 94.59,
-    "junit": "retry-01/application-junit.xml",
-    "log": "retry-01/application.log"
+    "junit": "repair-01/application-junit.xml",
+    "log": "repair-01/application.log"
   },
   "migration_suite": {
     "tests": 65,
     "failures": 0,
     "errors": 0,
     "skipped": 0,
-    "duration_seconds": 4.91,
-    "junit": "migration-junit.xml",
-    "log": "migration.log"
+    "duration_seconds": 2.17,
+    "junit": "repair-01/migration-junit.xml",
+    "log": "repair-01/migration.log"
   },
   "combined_junit_gate": {
     "tests": 3986,
@@ -52,7 +53,66 @@
     "network_requests": 0,
     "orders_submitted": 0
   },
-  "hosted_validation": "PENDING",
+  "repair_validation": {
+    "status": "PASSED_LOCALLY_HOSTED_RERUN_PENDING",
+    "changed_file": "tests/test_periodic_bar_runtime.py",
+    "scope": "The cancellation test now signals when the real seal worker starts through a loop-owned event; runtime behavior and trading controls are unchanged.",
+    "focused_periodic_and_cancellation_tests": {
+      "tests": 72,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "junit": "repair-01/periodic-cancellation-junit.xml",
+      "log": "repair-01/periodic-cancellation.log"
+    }
+  },
+  "hosted_validation": {
+    "prior_cloud_build": {
+      "status": "PASSED",
+      "run_id": 39225418568,
+      "url": "https://github.com/divanshuattri123-dot/selective-options/actions/runs/39225418568"
+    },
+    "prior_windows": {
+      "status": "FAILED_PRE_WORKER_TWO_SECOND_SYNC_WAIT",
+      "run_id": 39225418600,
+      "url": "https://github.com/divanshuattri123-dot/selective-options/actions/runs/39225418600",
+      "artifact_sha256": "0514126c935e40441decd1624b4347f56c8581fe8e07e05612b60f2a314ff4f3",
+      "failed_test": "tests/test_periodic_bar_runtime.py::test_cancelled_real_seal_worker_failure_overrides_requested_stop[False]",
+      "validation_pass": false
+    },
+    "current_repaired_source": {
+      "status": "PENDING_AFTER_COMMIT",
+      "cloud_build_required": true,
+      "windows_required": true
+    },
+    "complete": false
+  },
+  "public_ingestion_evidence": {
+    "bybit_btc_open_interest_30d": {
+      "report": "evidence/bybit-oi-history-30d-btc-001/report.json",
+      "provenance": "evidence/bybit-oi-history-30d-btc-001/provenance.json",
+      "status": "ARCHIVE_VERIFIED",
+      "rows": 720,
+      "pages": 4,
+      "public_responses": 5,
+      "termination": "CURSOR_EXHAUSTED",
+      "point_in_time_checks": 720,
+      "archive_exact_match": true,
+      "historical_schedule_completeness": "NOT_PROVEN"
+    },
+    "bybit_btc_funding_30d": {
+      "report": "evidence/bybit-funding-history-30d-btc-001/report.json",
+      "provenance": "evidence/bybit-funding-history-30d-btc-001/provenance.json",
+      "status": "ARCHIVE_VERIFIED",
+      "rows": 90,
+      "history_requests": 2,
+      "public_responses": 3,
+      "termination": "EMPTY_PAGE",
+      "point_in_time_checks": 90,
+      "archive_exact_match": true,
+      "historical_schedule_completeness": "NOT_PROVEN"
+    }
+  },
   "milestone_2_complete": false,
   "paper_days_credited": 0,
   "paper_trades_credited": 0,

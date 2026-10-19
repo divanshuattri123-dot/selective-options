@@ -1,0 +1,23 @@
+{
+  "version": "0.3.57",
+  "asset": "BTC",
+  "kind": "funding",
+  "sampling_interval": null,
+  "start_ms": 1789808291470,
+  "end_ms": 1792400291470,
+  "page_size": 200,
+  "max_pages": 10,
+  "orders_submitted": 0,
+  "trading_enabled": false,
+  "paper_trading_started": false,
+  "historical_schedule_completeness": "NOT_PROVEN",
+  "pit_checks": 90,
+  "status": "ARCHIVE_VERIFIED",
+  "pages": 2,
+  "termination": "EMPTY_PAGE",
+  "rows": 90,
+  "archive_exact_match": true,
+  "parquet_sha256": "d0d1b9342f74e3aa24b95bc3267eaf88b2fd6bffadc41ba93408280844a4613f",
+  "public_responses": 3,
+  "ended_at_ms": 1792400294777
+}

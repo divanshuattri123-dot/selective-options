@@ -1,6 +1,6 @@
 # Selective High-Conviction Options Trading System
 
-Version 0.3.57 adds offline, causally confirmed swing highs/lows over audited closed bars. A pivot is emitted only after its configured right-side bars close; equal local extrema select the rightmost bar. The short native BTC sample remains WARMUP, while separate fixtures test confirmation timing, plateau ties, gaps, freshness and clock refusal. This adds no direction, signal, threshold, entry, backtest policy, or order behavior. The complete local suite passes 3,921 application tests in 798.72 seconds at 94.59% coverage; its 65-case migration companion and the strict combined JUnit gate pass 3,986 cases with zero failures, errors, or skips. M2 remains PARTIAL and trading remains disabled; hosted 0.3.57 validation follows the committed source.
+Version 0.3.57 adds offline, causally confirmed swing highs/lows over audited closed bars. A pivot is emitted only after its configured right-side bars close; equal local extrema select the rightmost bar. The short native BTC sample remains WARMUP, while separate fixtures test confirmation timing, plateau ties, gaps, freshness and clock refusal. This adds no direction, signal, threshold, entry, backtest policy, or order behavior. The current repaired source passes 3,921 application tests in 790.99 seconds at 94.59% coverage; its 65-case migration companion and strict combined JUnit gate pass 3,986 cases with zero failures, errors, or skips. A prior [cloud-build](https://github.com/divanshuattri123-dot/selective-options/actions/runs/39225418568) passed, while its [Windows run](https://github.com/divanshuattri123-dot/selective-options/actions/runs/39225418600) exposed a test-only pre-worker synchronization timeout; fresh hosted cloud and Windows runs are pending from this repaired commit. M2 remains PARTIAL and trading remains disabled.
 
 Version 0.3.56 adds a descriptive, offline prior-only Wilder ATR percentile over strictly audited closed bars. The current ATR is ranked against a bounded history that excludes the current observation; ties use an explicit midrank rule, and incomplete, gappy, stale or short history remains unavailable or in warmup. An independent exact-rational fixture checks the calculation, while the short native BTC sample remains WARMUP. This adds no signal, regime, conviction, or order behavior. Its first full run exposed a stale periodic-bars version pin, which was corrected before a clean 3,909-test local retry and successful hosted Windows/cloud validation. M2 remains PARTIAL and trading remains disabled.
 
@@ -13,8 +13,10 @@ Version 0.3.53 adds explicit Solana network checkpoint resume and offline Keltne
 hosted builds and inspect results. [CLOUD_MIGRATION.md](CLOUD_MIGRATION.md) contains
 the exact mobile controls, portable setup and Codex Cloud instructions. Development
 currently continues in this local chat. Hosted cloud-build and Windows validation
-of 0.3.55 and 0.3.56 passed. Hosted 0.3.57 validation will run from the next
-committed source. The recorded 0.3.53 hosted full Windows, portable Linux and
+of 0.3.55 and 0.3.56 passed. The prior 0.3.57 cloud-build passed, but its prior
+Windows run failed only at a pre-worker test synchronization wait; the repaired
+source requires fresh hosted cloud and Windows results before it can be called
+hosted-validated. The recorded 0.3.53 hosted full Windows, portable Linux and
 container checks pass; continuous collector hosting remains unprovisioned.
 
 The system exists to place **very few trades with a large positive expected value**, not many trades with a good-looking win rate. It stays flat by default. It only fires when technical, volatility/flow, and fundamental/news evidence independently point the same direction at the same time, and when the options market is pricing that direction cheaply enough to pay for being right.

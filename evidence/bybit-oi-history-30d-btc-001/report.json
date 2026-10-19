@@ -1,0 +1,23 @@
+{
+  "version": "0.3.57",
+  "asset": "BTC",
+  "kind": "open_interest",
+  "sampling_interval": "1h",
+  "start_ms": 1789807976125,
+  "end_ms": 1792399976125,
+  "page_size": 200,
+  "max_pages": 20,
+  "orders_submitted": 0,
+  "trading_enabled": false,
+  "paper_trading_started": false,
+  "historical_schedule_completeness": "NOT_PROVEN",
+  "pit_checks": 720,
+  "status": "ARCHIVE_VERIFIED",
+  "pages": 4,
+  "termination": "CURSOR_EXHAUSTED",
+  "rows": 720,
+  "archive_exact_match": true,
+  "parquet_sha256": "3bf9b4af50d22604e18534fca62d573e050e18553ad1fdd057f4731950a2886d",
+  "public_responses": 5,
+  "ended_at_ms": 1792400003329
+}

@@ -1,0 +1,22 @@
+{
+  "status": "LOCAL_RAW_CAPTURE_RETAINED",
+  "capture_directory": "state/oi-history-30d-btc-001",
+  "raw_artifacts_git_policy": "DuckDB, Parquet and response bodies remain outside Git; their SHA-256 values bind this report to the local capture.",
+  "raw_artifact_sha256": {
+    "events.duckdb": "9fafa82d01552bcbaffe6b7413186b1ee71ffed53cbf444b01421846ff61195b",
+    "events.parquet": "3bf9b4af50d22604e18534fca62d573e050e18553ad1fdd057f4731950a2886d",
+    "events.parquet.manifest.json": "dbb536d63cbe2f18ca00e948af3be590d68480a00d05d35c898eab14a8500cce",
+    "responses.json": "cdef0b68184d8bf05c39d0f841507cbc24dfb18f6b296b236d5cb98bcebe8bab",
+    "report.json": "6817c7bd83e154eba30f5c3b7a3b6e5752ca87d8492d3292ddd9a5efd4039738"
+  },
+  "verification": {
+    "rows": 720,
+    "point_in_time_checks": 720,
+    "archive_exact_match": true,
+    "termination": "CURSOR_EXHAUSTED",
+    "historical_schedule_completeness": "NOT_PROVEN",
+    "orders_submitted": 0,
+    "trading_enabled": false,
+    "paper_trading_started": false
+  }
+}

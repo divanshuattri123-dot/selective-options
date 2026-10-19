@@ -1,0 +1,22 @@
+{
+  "status": "LOCAL_RAW_CAPTURE_RETAINED",
+  "capture_directory": "state/funding-history-30d-btc-001",
+  "raw_artifacts_git_policy": "DuckDB, Parquet and response bodies remain outside Git; their SHA-256 values bind this report to the local capture.",
+  "raw_artifact_sha256": {
+    "events.duckdb": "897854d01ad1e92e79f657cb1b01cbb5fdef4095d78e2c96aad5419299018ea6",
+    "events.parquet": "d0d1b9342f74e3aa24b95bc3267eaf88b2fd6bffadc41ba93408280844a4613f",
+    "events.parquet.manifest.json": "fa704e727b52983a2aef70a033584152623c91cea3962b14d88affa9144071c9",
+    "responses.json": "920e68881a0f4e05840addcbca6fd1311a8139420327ebcf81b44e25fcc6b832",
+    "report.json": "00a09480335a87ca186ee505581463838025eeb1ba9cc8a4c2572e773a71f840"
+  },
+  "verification": {
+    "rows": 90,
+    "point_in_time_checks": 90,
+    "archive_exact_match": true,
+    "termination": "EMPTY_PAGE",
+    "historical_schedule_completeness": "NOT_PROVEN",
+    "orders_submitted": 0,
+    "trading_enabled": false,
+    "paper_trading_started": false
+  }
+}

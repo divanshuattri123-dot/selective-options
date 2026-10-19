@@ -818,23 +818,27 @@ async def test_cancelled_real_seal_worker_failure_overrides_requested_stop(
     tmp_path, monkeypatch, requested
 ):
     async with running(tmp_path, monkeypatch) as (collector, bus, store, stopped):
-        entered, release = threading.Event(), threading.Event()
+        entered, release = asyncio.Event(), threading.Event()
         seal = module._seal
+        loop = asyncio.get_running_loop()
 
         async def due(self):
             return True
 
         def failing_seal(*args):
+            # The worker itself has started, before the real seal's filesystem
+            # work.  This avoids treating a slower Windows checkpoint pipeline
+            # or the shared default executor as a cancellation-test failure.
+            loop.call_soon_threadsafe(entered.set)
             seal(*args)
-            entered.set()
-            assert release.wait(3)
+            assert release.wait(5)
             raise OSError("EXPLICIT_WORKER_FAILURE_AFTER_STOP")
 
         monkeypatch.setattr(PeriodicBarRuntime, "_wait_due", due)
         monkeypatch.setattr(module, "_seal", failing_seal)
         runtime = PeriodicBarRuntime(collector.config, bus, store, collector, tmp_path, stopped)
         task = asyncio.create_task(runtime.run())
-        assert await asyncio.to_thread(entered.wait, 2)
+        await asyncio.wait_for(entered.wait(), 5)
         if requested:
             stopped.set()
         task.cancel()
