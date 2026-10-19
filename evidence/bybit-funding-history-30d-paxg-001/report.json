@@ -1,0 +1,23 @@
+{
+  "version": "0.3.57",
+  "asset": "PAXG",
+  "kind": "funding",
+  "sampling_interval": null,
+  "start_ms": 1789810771449,
+  "end_ms": 1792402771449,
+  "page_size": 200,
+  "max_pages": 10,
+  "orders_submitted": 0,
+  "trading_enabled": false,
+  "paper_trading_started": false,
+  "historical_schedule_completeness": "NOT_PROVEN",
+  "pit_checks": 180,
+  "status": "ARCHIVE_VERIFIED",
+  "pages": 2,
+  "termination": "EMPTY_PAGE",
+  "rows": 180,
+  "archive_exact_match": true,
+  "parquet_sha256": "bdb912fcdf52837fd1bbae1450cda84d91f1d369f3521d69443da29e2add5459",
+  "public_responses": 3,
+  "ended_at_ms": 1792402780903
+}

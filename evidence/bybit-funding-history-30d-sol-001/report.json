@@ -1,0 +1,23 @@
+{
+  "version": "0.3.57",
+  "asset": "SOL",
+  "kind": "funding",
+  "sampling_interval": null,
+  "start_ms": 1789810771361,
+  "end_ms": 1792402771361,
+  "page_size": 200,
+  "max_pages": 10,
+  "orders_submitted": 0,
+  "trading_enabled": false,
+  "paper_trading_started": false,
+  "historical_schedule_completeness": "NOT_PROVEN",
+  "pit_checks": 90,
+  "status": "ARCHIVE_VERIFIED",
+  "pages": 2,
+  "termination": "EMPTY_PAGE",
+  "rows": 90,
+  "archive_exact_match": true,
+  "parquet_sha256": "36acebb7f0047f2075302bd6d82020335bc442828697730f1e7feeba1a07e5a1",
+  "public_responses": 3,
+  "ended_at_ms": 1792402775426
+}

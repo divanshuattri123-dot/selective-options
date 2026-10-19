@@ -309,7 +309,7 @@ python scripts/verify_oi_history.py --asset BTC --hours 1 --interval 5min --page
 
 Use a new directory. Supported intervals are `5min`, `15min`, `30min`, `1h`, `4h`, `1d`. Hours: 1..720; page size: 1..200; pages: 1..20. Asset choices are BTC/ETH/SOL/PAXG, subject to discovered active USDT perpetual availability. The overall deadline is 90 seconds. Results include response envelopes, original receipts, exact database/Parquet storage and a report. `NO_OI_SAMPLES_RETURNED` is not availability success; page exhaustion fails without publishing partial events. Do not bypass access denials or assume broader coverage from one probe.
 
-BTC has public historical OI evidence in `bybit-oi-history-01` and a later 720-hour hourly archive with 720 retained rows in `bybit-oi-history-30d-btc-001`; other assets/intervals have not been live-tested for history. The script shares archive checks with the funding verifier; both entry paths have offline saved-response regression tests. Pagination termination and exact archive equality do not prove an uninterrupted historical schedule. No orders or paper run are triggered.
+BTC has public historical OI evidence in `bybit-oi-history-01`. Bounded 720-hour hourly public archives later retained 720 rows each for BTC, ETH, SOL and PAXG in `bybit-oi-history-30d-*-001`; each has report and SHA-256-bound local raw provenance. The script shares archive checks with the funding verifier; both entry paths have offline saved-response regression tests. Pagination termination, returned spacing and exact archive equality do not prove an uninterrupted historical schedule. No orders or paper run are triggered.
 
 ## Bounded settled-funding history (0.3.11)
 
@@ -319,7 +319,7 @@ python scripts/verify_funding_history.py --asset BTC --hours 48 --page-size 200 
 
 Use a new directory. Asset choices: BTC/ETH/SOL/PAXG, subject to discovered availability. Hours: 1..720; page size: 1..200; max pages: 1..20. The script enforces a 90-second overall deadline. It saves public response envelopes, receipts, a database, sealed Parquet and report. Invalid data or page exhaustion fails before partial history is published. API/access failures retain explicit reason/code; transport errors retain their type. `NO_SETTLEMENTS_RETURNED` is not availability success.
 
-BTC history has live public evidence, including a later requested 720-hour archive with 90 retained settlements in `bybit-funding-history-30d-btc-001`; other assets have snapshot evidence but no live historical probe yet. Pagination completion does not prove an uninterrupted schedule, and downloaded history stays invisible to decisions before receipt. No orders or paper run are triggered. OKX discovery/funding/OI probes timed out on 27 September, with unknown cause; no alternate-host or authentication workaround was attempted.
+BTC history has public evidence, including a requested 720-hour archive with 90 retained settlements in `bybit-funding-history-30d-btc-001`. Matching bounded public archives retained 90 settled funding rows each for ETH and SOL and 180 for PAXG in `bybit-funding-history-30d-*-001`; all reports bind the ignored raw capture by SHA-256. Pagination completion, returned spacing and exact archive equality do not prove an uninterrupted schedule, and downloaded history stays invisible to decisions before receipt. No orders or paper run are triggered. OKX discovery/funding/OI probes timed out on 27 September, with unknown cause; no alternate-host or authentication workaround was attempted.
 
 ## Public Bybit data verification (0.3.10)
 

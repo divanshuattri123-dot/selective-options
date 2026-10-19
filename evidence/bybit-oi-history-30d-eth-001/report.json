@@ -1,0 +1,23 @@
+{
+  "version": "0.3.57",
+  "asset": "ETH",
+  "kind": "open_interest",
+  "sampling_interval": "1h",
+  "start_ms": 1789810402548,
+  "end_ms": 1792402402548,
+  "page_size": 200,
+  "max_pages": 20,
+  "orders_submitted": 0,
+  "trading_enabled": false,
+  "paper_trading_started": false,
+  "historical_schedule_completeness": "NOT_PROVEN",
+  "pit_checks": 720,
+  "status": "ARCHIVE_VERIFIED",
+  "pages": 4,
+  "termination": "CURSOR_EXHAUSTED",
+  "rows": 720,
+  "archive_exact_match": true,
+  "parquet_sha256": "2136ca499ad334fd75aad93a5e23799bb38f732887c5dfa7fc4abe9a398d285b",
+  "public_responses": 5,
+  "ended_at_ms": 1792402429665
+}

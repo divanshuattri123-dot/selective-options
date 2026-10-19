@@ -1,0 +1,23 @@
+{
+  "version": "0.3.57",
+  "asset": "ETH",
+  "kind": "funding",
+  "sampling_interval": null,
+  "start_ms": 1789810402549,
+  "end_ms": 1792402402549,
+  "page_size": 200,
+  "max_pages": 10,
+  "orders_submitted": 0,
+  "trading_enabled": false,
+  "paper_trading_started": false,
+  "historical_schedule_completeness": "NOT_PROVEN",
+  "pit_checks": 90,
+  "status": "ARCHIVE_VERIFIED",
+  "pages": 2,
+  "termination": "EMPTY_PAGE",
+  "rows": 90,
+  "archive_exact_match": true,
+  "parquet_sha256": "f11f9acdd4bcc49f83301dbf9c348e1d87f5ec579342861ccfb9806eaf3dd796",
+  "public_responses": 3,
+  "ended_at_ms": 1792402406052
+}

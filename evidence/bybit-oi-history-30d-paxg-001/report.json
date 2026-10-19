@@ -1,0 +1,23 @@
+{
+  "version": "0.3.57",
+  "asset": "PAXG",
+  "kind": "open_interest",
+  "sampling_interval": "1h",
+  "start_ms": 1789810771363,
+  "end_ms": 1792402771363,
+  "page_size": 200,
+  "max_pages": 20,
+  "orders_submitted": 0,
+  "trading_enabled": false,
+  "paper_trading_started": false,
+  "historical_schedule_completeness": "NOT_PROVEN",
+  "pit_checks": 720,
+  "status": "ARCHIVE_VERIFIED",
+  "pages": 4,
+  "termination": "CURSOR_EXHAUSTED",
+  "rows": 720,
+  "archive_exact_match": true,
+  "parquet_sha256": "3c5a146b9d901e2c76ac86e6e5d1ca2ffc35a9e2bb21e4ba2f5374a912cd4e04",
+  "public_responses": 5,
+  "ended_at_ms": 1792402806966
+}

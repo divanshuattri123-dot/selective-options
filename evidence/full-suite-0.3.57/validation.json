@@ -1,6 +1,6 @@
 {
   "application_version": "0.3.57",
-  "status": "CURRENT_REPAIRED_SOURCE_LOCAL_VALIDATION_PASSED_HOSTED_RERUN_PENDING",
+  "status": "CURRENT_REPAIRED_SOURCE_LOCAL_AND_HOSTED_VALIDATION_PASSED",
   "application_suite_source_scope": "Current source after the test-only pre-worker seal synchronization repair.",
   "application_suite": {
     "tests": 3921,
@@ -54,7 +54,7 @@
     "orders_submitted": 0
   },
   "repair_validation": {
-    "status": "PASSED_LOCALLY_HOSTED_RERUN_PENDING",
+    "status": "PASSED_LOCALLY_AND_HOSTED",
     "changed_file": "tests/test_periodic_bar_runtime.py",
     "scope": "The cancellation test now signals when the real seal worker starts through a loop-owned event; runtime behavior and trading controls are unchanged.",
     "focused_periodic_and_cancellation_tests": {
@@ -81,11 +81,20 @@
       "validation_pass": false
     },
     "current_repaired_source": {
-      "status": "PENDING_AFTER_COMMIT",
-      "cloud_build_required": true,
-      "windows_required": true
+      "status": "PASSED",
+      "commit": "4ad4696a0b0a6771026495a8ce725463e3c87837",
+      "cloud_build": {
+        "status": "PASSED",
+        "run_id": 39230847234,
+        "url": "https://github.com/divanshuattri123-dot/selective-options/actions/runs/39230847234"
+      },
+      "windows_verified_checkpoint": {
+        "status": "PASSED",
+        "run_id": 39230847222,
+        "url": "https://github.com/divanshuattri123-dot/selective-options/actions/runs/39230847222"
+      }
     },
-    "complete": false
+    "complete": true
   },
   "public_ingestion_evidence": {
     "bybit_btc_open_interest_30d": {
@@ -109,6 +118,78 @@
       "public_responses": 3,
       "termination": "EMPTY_PAGE",
       "point_in_time_checks": 90,
+      "archive_exact_match": true,
+      "historical_schedule_completeness": "NOT_PROVEN"
+    },
+    "bybit_eth_open_interest_30d": {
+      "report": "evidence/bybit-oi-history-30d-eth-001/report.json",
+      "provenance": "evidence/bybit-oi-history-30d-eth-001/provenance.json",
+      "status": "ARCHIVE_VERIFIED",
+      "rows": 720,
+      "pages": 4,
+      "public_responses": 5,
+      "termination": "CURSOR_EXHAUSTED",
+      "point_in_time_checks": 720,
+      "archive_exact_match": true,
+      "historical_schedule_completeness": "NOT_PROVEN"
+    },
+    "bybit_eth_funding_30d": {
+      "report": "evidence/bybit-funding-history-30d-eth-001/report.json",
+      "provenance": "evidence/bybit-funding-history-30d-eth-001/provenance.json",
+      "status": "ARCHIVE_VERIFIED",
+      "rows": 90,
+      "history_requests": 2,
+      "public_responses": 3,
+      "termination": "EMPTY_PAGE",
+      "point_in_time_checks": 90,
+      "archive_exact_match": true,
+      "historical_schedule_completeness": "NOT_PROVEN"
+    },
+    "bybit_sol_open_interest_30d": {
+      "report": "evidence/bybit-oi-history-30d-sol-001/report.json",
+      "provenance": "evidence/bybit-oi-history-30d-sol-001/provenance.json",
+      "status": "ARCHIVE_VERIFIED",
+      "rows": 720,
+      "pages": 4,
+      "public_responses": 5,
+      "termination": "CURSOR_EXHAUSTED",
+      "point_in_time_checks": 720,
+      "archive_exact_match": true,
+      "historical_schedule_completeness": "NOT_PROVEN"
+    },
+    "bybit_sol_funding_30d": {
+      "report": "evidence/bybit-funding-history-30d-sol-001/report.json",
+      "provenance": "evidence/bybit-funding-history-30d-sol-001/provenance.json",
+      "status": "ARCHIVE_VERIFIED",
+      "rows": 90,
+      "history_requests": 2,
+      "public_responses": 3,
+      "termination": "EMPTY_PAGE",
+      "point_in_time_checks": 90,
+      "archive_exact_match": true,
+      "historical_schedule_completeness": "NOT_PROVEN"
+    },
+    "bybit_paxg_open_interest_30d": {
+      "report": "evidence/bybit-oi-history-30d-paxg-001/report.json",
+      "provenance": "evidence/bybit-oi-history-30d-paxg-001/provenance.json",
+      "status": "ARCHIVE_VERIFIED",
+      "rows": 720,
+      "pages": 4,
+      "public_responses": 5,
+      "termination": "CURSOR_EXHAUSTED",
+      "point_in_time_checks": 720,
+      "archive_exact_match": true,
+      "historical_schedule_completeness": "NOT_PROVEN"
+    },
+    "bybit_paxg_funding_30d": {
+      "report": "evidence/bybit-funding-history-30d-paxg-001/report.json",
+      "provenance": "evidence/bybit-funding-history-30d-paxg-001/provenance.json",
+      "status": "ARCHIVE_VERIFIED",
+      "rows": 180,
+      "history_requests": 2,
+      "public_responses": 3,
+      "termination": "EMPTY_PAGE",
+      "point_in_time_checks": 180,
       "archive_exact_match": true,
       "historical_schedule_completeness": "NOT_PROVEN"
     }
