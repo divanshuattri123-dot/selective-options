@@ -1,5 +1,7 @@
 # Selective High-Conviction Options Trading System
 
+Version 0.3.56 adds a descriptive, offline prior-only Wilder ATR percentile over strictly audited closed bars. The current ATR is ranked against a bounded history that excludes the current observation; ties use an explicit midrank rule, and incomplete, gappy, stale or short history remains unavailable or in warmup. An independent exact-rational fixture checks the calculation, while the short native BTC sample remains WARMUP. This adds no signal, regime, conviction, or order behavior. The local full suite passes; hosted validation awaits the checkpoint push. M2 remains PARTIAL and trading remains disabled.
+
 Version 0.3.55 adds opt-in CoinDesk checkpoint resume: a closed SQL/Parquet/archive/outbox source is bounded and verified, exact first receipts and a minimal binding-health set are copied pending, then the closed destination is revalidated before the news collector is constructed. Replays do not republish unchanged headlines; revisions append. The 0.3.54 closed-bar Stochastic RSI research remains signal-free and fixture arithmetic remains separate from short native warmup. M2 remains PARTIAL and trading remains disabled. See [RUNBOOK.md](RUNBOOK.md), [RESEARCH.md](RESEARCH.md), and [VALIDATION_REPORT.md](VALIDATION_REPORT.md) for the exact scope and remaining gates.
 
 Version 0.3.53 adds explicit Solana network checkpoint resume and offline Keltner-channel research. The SOL handoff audits every eligible historical poll binding, copies the latest exact native three-row seed, and revalidates the closed destination before producers start. Keltner channels use an explicitly documented close-EMA/Wilder-ATR convention with complete-history and both-clock checks. Saved-native evidence, synthetic analytical fixtures and current source availability stay separate. M2 remains PARTIAL and trading remains disabled. See [RUNBOOK.md](RUNBOOK.md), [RESEARCH.md](RESEARCH.md), and [VALIDATION_REPORT.md](VALIDATION_REPORT.md) for commands, scope and validation.
@@ -8,9 +10,9 @@ Version 0.3.53 adds explicit Solana network checkpoint resume and offline Keltne
 [Actions](https://github.com/divanshuattri123-dot/selective-options/actions) to run
 hosted builds and inspect results. [CLOUD_MIGRATION.md](CLOUD_MIGRATION.md) contains
 the exact mobile controls, portable setup and Codex Cloud instructions. Development
-currently continues in this local chat. Hosted validation of 0.3.55 is pending;
-the recorded 0.3.53 hosted full Windows, portable
-Linux and container checks pass; continuous collector hosting remains unprovisioned.
+currently continues in this local chat. Both 0.3.55 cloud-build and Windows-hosted
+verification have passed. The recorded 0.3.53 hosted full Windows, portable Linux
+and container checks pass; continuous collector hosting remains unprovisioned.
 
 The system exists to place **very few trades with a large positive expected value**, not many trades with a good-looking win rate. It stays flat by default. It only fires when technical, volatility/flow, and fundamental/news evidence independently point the same direction at the same time, and when the options market is pricing that direction cheaply enough to pay for being right.
 

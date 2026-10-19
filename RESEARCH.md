@@ -1,5 +1,7 @@
 # Offline research foundations
 
+Version 0.3.56 adds `research-atr-percentile`, a descriptive ATR regime input only. It is based on the existing complete, contiguous, two-clock checked closed-bar snapshot and uses the same previous-close True Range, arithmetic-mean seed and Wilder alpha convention as `atr_14` in `closed-bars-v1`. The current ATR is ranked against a strictly earlier bounded history; current is never included in its own reference set. Its output cannot create a threshold, regime classification, signal, position or order.
+
 Version 0.3.55 also adds an explicit, opt-in CoinDesk checkpoint handoff to finite capture. It is ingestion/recovery plumbing, not a model feature: the loader preserves native event and first-receipt identities, verifies source and destination storage evidence, and the collector treats exact replays as references to existing observations while appending changed revisions. See the checkpoint command and limits in `RUNBOOK.md`. No sentiment, model classification, first-publication truth or strategy signal is added.
 
 Version 0.3.54 adds closed-bar Stochastic RSI and an offline saved-database report. Its conventional 14 RSI / 14 RSI-range / 3 SMA %K / 3 SMA %D defaults are explicit and configurable. Values use a 0–100 scale; common input defaults are not a validated signal or evidence of edge. M2 and later strategy acceptance remain incomplete.
@@ -42,6 +44,23 @@ The defined `stoch-rsi-bars-v1` uses the existing `closed-bars-v1` close-based R
 With default inputs, raw StochRSI needs 28 bars, smoothed `%K` needs 30, and `%D` needs 32. Each value has its own WARMUP/UNAVAILABLE state. A zero RSI gain/loss denominator and a flat rolling RSI range are explicitly unavailable rather than forced to zero or 50. A rising market with RSI fixed at 100 therefore has an undefined stochastic range. Bar counts are not calendar days. This oscillator can turn faster and create more noise than RSI alone; the reference cautions that it should be used with trend context. This implementation supplies no trend interpretation, regime classification, divergence, signal, performance, or trade permission.
 
 The preserved native Kraken BTC sample has only two complete bars, so all default values remain WARMUP. The independent exact-rational 48-bar analytical sample is explicitly synthetic and verifies arithmetic only. `scripts/verify_stochastic_rsi.py` keeps those two records separate in `evidence/stochastic-rsi-saved-native-01/`; neither sample establishes source-frontier completeness, sustained feed health, or strategy edge.
+
+## Prior-only ATR percentile
+
+`research-atr-percentile` accepts a closed DuckDB path, new output directory, exact asset/environment/source/symbol/timeframe, explicit both-clock cutoff, maximum latest-bar age and an optional inclusive history start. It uses the shared read-only loader: active WAL, linked paths, oversized source or row-budget overflow refuse; future event/receipt clocks are excluded by the database query; source SHA-256 is checked before and after. Outputs go into a new directory and include exact input event IDs, bounded reference boundaries and the separate base quality report.
+
+```powershell
+selective-options research-atr-percentile `
+  --database CLOSED_CAPTURE/events.duckdb --output NEW_ATR_PERCENTILE_RESULT `
+  --asset BTC --environment public_reference --source kraken `
+  --symbol BTC/USD --timeframe-s 300 --as-of-ms EXPLICIT_CUTOFF_MS `
+  --max-latest-age-ms 300000 --atr-period 14 `
+  --percentile-window 100 --percentile-min-history 20 --max-bars 2000
+```
+
+Formula `atr-percentile-bars-v1` uses True Range `max(high-low, abs(high-previous close), abs(low-previous close))`. ATR seeds from the arithmetic mean of its first `p` ranges, then applies Wilder alpha `1/p`; it first exists after `p+1` bars. The latest ATR is ranked using `100 × (less + 0.5 × equal) / N` against up to the configured number of **prior** ATRs. Exact float ties use midrank and a valid constant history ranks 50. With defaults, the minimum is 14+1+20 = 35 bars; fewer valid prior samples return WARMUP. Quality blockers, gaps, incomplete bars and stale history withhold the value. Bar counts are not elapsed days, and the percentile is not a decision threshold.
+
+The saved native BTC segment has two complete bars and remains WARMUP. `scripts/verify_atr_percentile.py` keeps it separate from a labelled eight-bar synthetic fixture whose seed, recurrence and midrank are checked with exact rational arithmetic in `evidence/atr-percentile-saved-native-01/`. The synthetic result is not market data and supplies no evidence of feed health, predictive value or trading edge. This feature is not a signal or trading permission; M2 and strategy acceptance remain incomplete.
 
 ## OHLC range-volatility research
 

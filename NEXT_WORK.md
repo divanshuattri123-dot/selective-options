@@ -1,12 +1,12 @@
-# Next independent build steps after 0.3.55
+# Next independent build steps after 0.3.56
 
-The saved-native CoinDesk resume proof and Stochastic RSI research proof are complete in their documented bounds. Do not repeat them. The complete status of milestone 2 is in `INGESTION_STATUS.md`; all remaining milestones remain gated, and no paper days or trades are credited.
+The saved-native CoinDesk resume proof, Stochastic RSI, and prior-only ATR percentile research are complete within their documented bounds. Do not repeat them. The complete status of milestone 2 is in `INGESTION_STATUS.md`; all remaining milestones remain gated, and no paper days or trades are credited.
 
-## Next model increment: prior-only ATR percentile
+## Next model increment: causally confirmed swing structure
 
-Implement one offline feature over verified, complete, closed bars: rank the current ATR against a strictly prior ATR window, excluding the current bar from the reference distribution. Preserve exact source/scope and both-clock visibility from the existing point-in-time snapshot path, use an explicit minimum history/window size, and return WARMUP or UNAVAILABLE when contiguous history, quality, or freshness requirements fail. The percentile is a descriptive feature only; add no threshold, signal, conviction, position, or execution behavior.
+Implement one offline description over verified, complete, closed bars: report confirmed swing highs/lows only after the configured right-side confirmation bars have themselves closed. A pivot may not be visible before that confirmation close; ties, equal plateaus, missing bars, the open right edge, stale input and future clocks need explicit deterministic handling. Preserve source/scope, both clocks, row budgets and exact event IDs in the report.
 
-Add an API and CLI research report only if it follows the established saved-database feature/report pattern. Cover constant ranges, ties, current-outlier exclusion, window boundaries, insufficient history, gaps, stale/future clocks, row budgets, and source immutability. Verify one saved-native short-history case stays WARMUP plus a separately labelled independent exact/synthetic fixture. Keep proof artifacts exclusive and preserve existing evidence. Full test, static, config, wheel, and hosted checks must pass before claiming the increment.
+Do not turn pivot structure into signal thresholds, direction labels, entries, or positions. Add an API/CLI report only through the existing immutable saved-database path and use a separate exact analytical fixture from the saved-native evidence. Unit, full local/hosted tests, static, config and wheel checks must pass before recording completion.
 
 ## M2 work continues independently
 

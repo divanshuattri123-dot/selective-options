@@ -1,0 +1,42 @@
+{
+  "version": "0.3.56",
+  "status": "SAVED_NATIVE_WARMUP_AND_EXACT_FIXTURE_VERIFIED",
+  "native_source": "evidence/ingestion-pilot-04/events.duckdb",
+  "native_source_sha256": "691fd0d9e9b36544b4844d3743fe5941c144d7b7e365ee695872d5660891393b",
+  "native_source_unchanged": true,
+  "native_rows": 2,
+  "native_state": "WARMUP",
+  "native_value": null,
+  "native_required_bars": 35,
+  "synthetic_provenance": "independent_exact_fraction_fixture_not_market_data",
+  "synthetic_true_ranges": [
+    99,
+    1,
+    2,
+    4,
+    1,
+    3,
+    2,
+    8
+  ],
+  "synthetic_atr_period": 3,
+  "synthetic_prior_observations": 4,
+  "synthetic_current_excluded": true,
+  "synthetic_exact_percentile": "100",
+  "synthetic_computed_percentile": 100.0,
+  "synthetic_matches_exact_reference": true,
+  "source_code_sha256": {
+    "src/selective_options/atr_percentile_features.py": "9a5a59dbdf76fba9ebff34e0bec87134d08247298209a5e827781facf75d0519",
+    "src/selective_options/atr_percentile_research.py": "1c018faf8435ba30c9ebb161ba1f47fd5d33a92965f3f257d342c626196b81c1",
+    "src/selective_options/features.py": "6ecaa2501ea2c25dafe7e43519c5832ee1f82b403721bc26d5b66ffaa04b6b4a",
+    "src/selective_options/research.py": "a13caa495110868f3dd735227760cd26d8e15fdaabc75396f1602f0513cd3d93",
+    "src/selective_options/events.py": "6a45866c1e1b70f45d4f9335deab679ba7fa3d1f7369c544ffd9d7ac4e57de08",
+    "src/selective_options/cli.py": "69e1f1b19b854727ff0510aa572f08c0a15ace358dad782c22a2cc0ca91d7c3a",
+    "scripts/verify_atr_percentile.py": "409bb1610bbd67a357c45256e9601006c0d593c37a2ee2a1d51a5ee17c38fed2"
+  },
+  "real_network_requests": 0,
+  "ready_for_signals": false,
+  "trading_enabled": false,
+  "orders_submitted": 0,
+  "milestone_2_complete": false
+}

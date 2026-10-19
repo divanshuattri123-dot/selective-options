@@ -9,6 +9,7 @@ from pydantic import ValidationError
 
 from .archive import restore_archive
 from .archive_rotation import rotate_archive
+from .atr_percentile_research import research_atr_percentile
 from .capture_lifecycle import CaptureStopRequest, scoped_sigterm_stop
 from .config import load_config
 from .ingestion import capture
@@ -235,6 +236,26 @@ def parser() -> argparse.ArgumentParser:
     stoch_parser.add_argument("--smooth-d", type=int, default=3)
     stoch_parser.add_argument("--max-bars", type=int, default=2000)
     stoch_parser.add_argument("--history-start-ms", type=int, default=None)
+    atr_pct_parser = commands.add_parser(
+        "research-atr-percentile",
+        help="Offline prior-only Wilder ATR percentile from complete closed bars; cannot trade",
+    )
+    atr_pct_parser.add_argument("--database", type=Path, required=True)
+    atr_pct_parser.add_argument("--output", type=Path, required=True)
+    atr_pct_parser.add_argument("--asset", required=True)
+    atr_pct_parser.add_argument(
+        "--environment", choices=("testnet", "public_reference"), required=True
+    )
+    atr_pct_parser.add_argument("--source", required=True)
+    atr_pct_parser.add_argument("--symbol", required=True)
+    atr_pct_parser.add_argument("--timeframe-s", type=int, required=True)
+    atr_pct_parser.add_argument("--as-of-ms", type=int, required=True)
+    atr_pct_parser.add_argument("--max-latest-age-ms", type=int, required=True)
+    atr_pct_parser.add_argument("--atr-period", type=int, default=14)
+    atr_pct_parser.add_argument("--percentile-window", type=int, default=100)
+    atr_pct_parser.add_argument("--percentile-min-history", type=int, default=20)
+    atr_pct_parser.add_argument("--max-bars", type=int, default=2000)
+    atr_pct_parser.add_argument("--history-start-ms", type=int, default=None)
     options_parser = commands.add_parser(
         "research-options",
         help="Offline native ATM-IV term structure with explicit policies; cannot trade",
@@ -482,6 +503,28 @@ def main() -> int:
                         stochastic_period=args.stochastic_period,
                         smooth_k=args.smooth_k,
                         smooth_d=args.smooth_d,
+                        max_bars=args.max_bars,
+                        history_start_ms=args.history_start_ms,
+                    ),
+                    indent=2,
+                )
+            )
+        elif args.command == "research-atr-percentile":
+            print(
+                json.dumps(
+                    research_atr_percentile(
+                        args.database,
+                        args.output,
+                        asset=args.asset,
+                        environment=args.environment,
+                        source=args.source,
+                        symbol=args.symbol,
+                        timeframe_s=args.timeframe_s,
+                        as_of_ms=args.as_of_ms,
+                        max_latest_age_ms=args.max_latest_age_ms,
+                        atr_period=args.atr_period,
+                        percentile_window=args.percentile_window,
+                        percentile_min_history=args.percentile_min_history,
                         max_bars=args.max_bars,
                         history_start_ms=args.history_start_ms,
                     ),

@@ -1,0 +1,69 @@
+{
+  "application_version": "0.3.56",
+  "status": "LOCAL_VALIDATION_PASSED_HOSTED_PENDING",
+  "application_suite": {
+    "tests": 3909,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "duration_seconds": 654.89,
+    "coverage_percent": null,
+    "junit": "retry-01/application-junit.xml",
+    "log": "retry-01/application.log",
+    "coverage_note": "Coverage was not collected by this retry."
+  },
+  "migration_suite": {
+    "tests": 65,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "junit": "migration-junit.xml",
+    "log": "migration.log"
+  },
+  "combined_junit_gate": {
+    "tests": 3974,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "tool": "tools/check_ci_junit.py"
+  },
+  "static_checks": {
+    "ruff_check_scope": "src scripts tests tools",
+    "ruff_check": "passed",
+    "ruff_format": "passed",
+    "ruff_formatted_python_files": 297,
+    "mypy": "passed",
+    "mypy_source_files": 148,
+    "secret_scan": "passed"
+  },
+  "runtime_and_package_checks": {
+    "config": "VALID",
+    "profile": "testnet",
+    "milestone": 2,
+    "milestone_status": "PARTIAL",
+    "trading_enabled": false,
+    "isolated_wheel": "work/dist-0.3.56-isolated/selective_options-0.3.56-py3-none-any.whl",
+    "wheel_runtime_modules": 94,
+    "wheel_runtime_modules_byte_identical": true
+  },
+  "saved_native_proofs": {
+    "atr_percentile": "evidence/atr-percentile-saved-native-01/verification.json",
+    "atr_native_status": "WARMUP",
+    "orders_submitted": 0
+  },
+  "initial_attempts_and_resolution": [
+    "The first full application run passed 3904 tests and failed 5 because the existing periodic-bars saved-native verifier and its test still expected application version 0.3.55. Both expectations were updated to 0.3.56, all 10 affected focused tests passed, and the clean full retry passed all 3909 application tests. Readable first-run copies are application.log and application-junit.xml; the exact original captures are in initial-full-run-raw.zip because the readable copies trim only terminal whitespace on one embedded source excerpt.",
+    "The full retry report passed tools/check_ci_junit.py in the project virtual environment together with the 65-test migration report; both contain zero failures, errors, or skips."
+  ],
+  "initial_full_run_raw_artifact": {
+    "archive": "initial-full-run-raw.zip",
+    "archive_sha256": "0bf3ca76bd892a6aaf6871fcc0ef3580e9f42c4815386a1bc8141aefdbf1a03a",
+    "application_log_sha256": "15a0cd40e99b259f230b999e62fe00afb500663f33de2f581a0e411d6b1a81c6",
+    "application_junit_sha256": "302b7170400f3476ae2409fc62e1b50315dbc6630f2e86f0076d2d9b21726299"
+  },
+  "hosted_validation": "PENDING",
+  "milestone_2_complete": false,
+  "paper_days_credited": 0,
+  "paper_trades_credited": 0,
+  "live_execution_enabled": false
+}
