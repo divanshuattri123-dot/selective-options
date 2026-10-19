@@ -1,0 +1,20 @@
+{
+  "status": "PASSED",
+  "source_commit": "4abc0432666e55c027aa953b4ad2948554de3942",
+  "scope": "Exact prepared native-proof ZIP restored with the production restore_entries helper into a fresh isolated work directory; every path/byte/hash verified before and after the second idempotent restore",
+  "native_files": 5,
+  "second_restore_files": 0,
+  "native_bytes": 13165077,
+  "archive_name": "selective-options-0.3.53-evidence.zip",
+  "archive_bytes": 2738554,
+  "archive_sha256": "2b3c1c061769255e3f3871595f77a48bd27dce303a1ade562a4e1fc991a56c6b",
+  "restore_helper_sha256": "896ee30f29b438b525dd3b1092ded384d616aee59543cbb9d8ac37c46a2d33df",
+  "prepared_inventory_sha256": "dc5db58f81c8863ad6ea442358db695db2b3f8fc544ba9f3dbe769169b1382a1",
+  "verification_helper_sha256": "f4cf270c0a381262b2b2c0852cdece8470b77d17888844f9d0ee288c253a5afc",
+  "native_paths_and_original_bytes_unchanged": true,
+  "restored_inventory_exact": true,
+  "fresh_isolated_destination": "C:/Users/Divan/Documents/Codex/2026-09-20/files-pasted-by-the-user-build/work/restore-0353-nk67vb3k",
+  "network_requests": 0,
+  "github_mutations": 0,
+  "trading_enabled": false
+}

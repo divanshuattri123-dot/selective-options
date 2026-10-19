@@ -1,0 +1,407 @@
+{
+  "run_id": 39204499761,
+  "commit": "4abc0432666e55c027aa953b4ad2948554de3942",
+  "status": "completed",
+  "conclusion": "success",
+  "url": "https://github.com/divanshuattri123-dot/selective-options/actions/runs/39204499761",
+  "artifacts": [
+    {
+      "id": 12164789795,
+      "name": "cloud-build-4abc0432666e55c027aa953b4ad2948554de3942",
+      "sha256": "fe215a55e9aba0c63346bf76197a55210a4b4154047f3ccc164eda6d07d749f6",
+      "bytes": 470631,
+      "expires_at": "2026-11-02T05:31:46Z",
+      "head_sha": "4abc0432666e55c027aa953b4ad2948554de3942",
+      "files": [
+        {
+          "name": "capture-sigterm-process/749ee409862d4d8ba53655445096714b/child/capture/config.sanitized.json",
+          "bytes": 7365,
+          "sha256": "c5134f9115aa61f012bdc75fa825e8b5ee4d65d3e5948cd15bf64663c206c4e7"
+        },
+        {
+          "name": "capture-sigterm-process/749ee409862d4d8ba53655445096714b/child/capture/events.duckdb",
+          "bytes": 1585152,
+          "sha256": "ffbcd4d7dfef940740b99ac54c099c5c64095e802f586e58dde881352797eaf1"
+        },
+        {
+          "name": "capture-sigterm-process/749ee409862d4d8ba53655445096714b/child/capture/events.parquet",
+          "bytes": 2241,
+          "sha256": "15a1d2a977b4268fc47106cd6d10c457b934cc20894a0e2668a17184a44d322d"
+        },
+        {
+          "name": "capture-sigterm-process/749ee409862d4d8ba53655445096714b/child/capture/events.parquet.manifest.json",
+          "bytes": 136,
+          "sha256": "df24d65d6d825e6a4ddef6174996a2ce2665c096acc6bf43a745c7e58750c8c4"
+        },
+        {
+          "name": "capture-sigterm-process/749ee409862d4d8ba53655445096714b/child/capture/report.json",
+          "bytes": 7060,
+          "sha256": "bd99e2e00f9898f2600e92a071df9d69847241c2d119297cfcba702582fb72d6"
+        },
+        {
+          "name": "capture-sigterm-process/749ee409862d4d8ba53655445096714b/child/producer-stopped.json",
+          "bytes": 90,
+          "sha256": "34dec908b576d05b0cbe7f383a9783135aec3910a40cf203841ed797bfb9eae3"
+        },
+        {
+          "name": "capture-sigterm-process/749ee409862d4d8ba53655445096714b/child/ready.json",
+          "bytes": 116,
+          "sha256": "ed7ea99f7965b28cebf7a31f0eccb44142e356dfbb359f71bcf80e23ef7cfd00"
+        },
+        {
+          "name": "capture-sigterm-process/749ee409862d4d8ba53655445096714b/child/verification.json",
+          "bytes": 944,
+          "sha256": "8f2ff129c4cdcf33e9846853a4c149f0c1dc2db9bd73588871665ba9f8209602"
+        },
+        {
+          "name": "capture-sigterm-process/749ee409862d4d8ba53655445096714b/parent-verification.json",
+          "bytes": 1598,
+          "sha256": "140bdbbfac346f710e5096a948c590e71cba183736460738684c559bfc030440"
+        },
+        {
+          "name": "capture-sigterm-process/749ee409862d4d8ba53655445096714b/stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "capture-sigterm-process/749ee409862d4d8ba53655445096714b/stdout.log",
+          "bytes": 7149,
+          "sha256": "8cd0db768a069cdf282cb6756fc75bd179b8cb490077d1935840ac4d4a4703ae"
+        },
+        {
+          "name": "dist/selective_options-0.3.53-py3-none-any.whl",
+          "bytes": 285270,
+          "sha256": "c45640965e412497a928d7c6165fe17eb7d066762455e8a1aeb4a286995e5fc8"
+        },
+        {
+          "name": "format.log",
+          "bytes": 28,
+          "sha256": "5e5be5ed9d976df1a0c34d112dd2fe9eb3f57d7572c69dece4527ff72c9eaf23"
+        },
+        {
+          "name": "generated-documents.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "lint.log",
+          "bytes": 19,
+          "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+        },
+        {
+          "name": "offline-tests.log",
+          "bytes": 14653,
+          "sha256": "f444403650acaa59e67da7ee723a04668698381f1e95f3c7efa7d830d5f750e6"
+        },
+        {
+          "name": "summary.json",
+          "bytes": 424212,
+          "sha256": "dd2498a19f678c08c631fb07b0f60202b98b106df326a3c97282071e6f9eb16c"
+        },
+        {
+          "name": "test-selection.json",
+          "bytes": 409570,
+          "sha256": "0025c1bb00dba1c03305518bb4cb7d4ac7627841e0dc503439e0f9c3fd8b9107"
+        },
+        {
+          "name": "tests.xml",
+          "bytes": 537779,
+          "sha256": "cd103d8370806930020173c42fc71490b560d1389450be60efd5cfd0154ad6e2"
+        },
+        {
+          "name": "types.log",
+          "bytes": 45,
+          "sha256": "8e2ff38e3c6365c390415c88c72993e8630ddb7114f4015bf7083b0fce9b2c99"
+        },
+        {
+          "name": "wheel-build.log",
+          "bytes": 22483,
+          "sha256": "31d2bd0997310927d516e9b5284e27455443a8fb98867d9cac655ad1170b0bc0"
+        },
+        {
+          "name": "wheel-config-smoke.log",
+          "bytes": 134,
+          "sha256": "47932ca6b75b681a6e1e82c962fb317018e3c62c31671cc44b94a8fa37f2cc38"
+        },
+        {
+          "name": "wheel-environment.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "wheel-import-smoke.log",
+          "bytes": 159,
+          "sha256": "6d2137b50c8d2c2137c7c5b1aa716cfdf09c00f85ed33b81d599c2e20d13fe1d"
+        },
+        {
+          "name": "wheel-install.log",
+          "bytes": 180,
+          "sha256": "cc62f9966418d3cca33fa965b76a8e79434cc85ef7ae0e0d63bb382e73863467"
+        },
+        {
+          "name": "wheel-runtime-install.log",
+          "bytes": 6892,
+          "sha256": "7c71e682a7c857b5286ff9cb320b310bf44003fcee1fb4859daa8a1360903086"
+        }
+      ],
+      "log_tails": {
+        "capture-sigterm-process/749ee409862d4d8ba53655445096714b/stderr.log": [],
+        "capture-sigterm-process/749ee409862d4d8ba53655445096714b/stdout.log": [
+          "    \"deployed Redis consumer bus\"",
+          "  ],",
+          "  \"milestone_2_complete\": false,",
+          "  \"ready_for_signals\": false,",
+          "  \"trading_enabled\": false,",
+          "  \"orders_submitted\": 0,",
+          "  \"redis_mirror\": \"NOT_CONFIGURED\",",
+          "  \"failure_type\": null,",
+          "  \"freshness_scope\": \"asset/feed aggregates and selected option instruments; not trading approval\",",
+          "  \"reference_caveat\": \"Coinbase last-trade vs Kraken midpoint; Kraken has receipt time only. Public references are separate from testnet prices.\"",
+          "}",
+          "{\"sigterm_process_status\": \"ACTUAL_POSIX_SIGTERM_CAPTURE_VERIFIED\", \"platform\": \"linux\"}"
+        ],
+        "format.log": [
+          "285 files already formatted"
+        ],
+        "generated-documents.log": [],
+        "lint.log": [
+          "All checks passed!"
+        ],
+        "offline-tests.log": [
+          "tests/test_universe_refresh_verifier.py ......                           [ 96%]",
+          "tests/test_venue.py ..........                                           [ 96%]",
+          "tests/test_verify_liquidations.py ...........                            [ 96%]",
+          "tests/test_verify_periodic_bars.py ..........                            [ 97%]",
+          "tests/test_verify_range_volatility.py .................................. [ 98%]",
+          ".........                                                                [ 98%]",
+          "migration-tests/test_ci_junit.py .....................                   [ 98%]",
+          "migration-tests/test_cloud_validate.py ....................              [ 99%]",
+          "migration-tests/test_restore_github_evidence.py ........................ [100%]",
+          "",
+          "- generated xml file: /home/runner/work/selective-options/selective-options/state/cloud-validation/tests.xml -",
+          "================ 3899 passed, 7 deselected in 224.91s (0:03:44) ================"
+        ],
+        "types.log": [
+          "Success: no issues found in 140 source files"
+        ],
+        "wheel-build.log": [
+          "adding 'selective_options/trade_backfill.py'",
+          "adding 'selective_options/trade_reconciliation.py'",
+          "adding 'selective_options/trend_features.py'",
+          "adding 'selective_options/trials.py'",
+          "adding 'selective_options/venue.py'",
+          "adding 'selective_options-0.3.53.dist-info/METADATA'",
+          "adding 'selective_options-0.3.53.dist-info/WHEEL'",
+          "adding 'selective_options-0.3.53.dist-info/entry_points.txt'",
+          "adding 'selective_options-0.3.53.dist-info/top_level.txt'",
+          "adding 'selective_options-0.3.53.dist-info/RECORD'",
+          "removing build/bdist.linux-x86_64/wheel",
+          "Successfully built selective_options-0.3.53-py3-none-any.whl"
+        ],
+        "wheel-config-smoke.log": [
+          "{\"config\": \"VALID\", \"mode\": \"testnet\", \"profile\": \"testnet\", \"trading_enabled\": false, \"milestone\": 2, \"milestone_status\": \"PARTIAL\"}"
+        ],
+        "wheel-environment.log": [],
+        "wheel-import-smoke.log": [
+          "{\"module_path\": \"/tmp/cloud-wheel-7xoeavji/lib/python3.12/site-packages/selective_options/__init__.py\", \"version\": \"0.3.53\", \"inside_wheel_environment\": true}"
+        ],
+        "wheel-install.log": [
+          "Processing ./state/cloud-validation/dist/selective_options-0.3.53-py3-none-any.whl",
+          "Installing collected packages: selective-options",
+          "Successfully installed selective-options-0.3.53"
+        ],
+        "wheel-runtime-install.log": [
+          "Using cached redis-6.4.0-py3-none-any.whl (279 kB)",
+          "Using cached aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)",
+          "Using cached aiosignal-1.4.0-py3-none-any.whl (7.5 kB)",
+          "Using cached attrs-26.1.0-py3-none-any.whl (67 kB)",
+          "Using cached frozenlist-1.8.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (242 kB)",
+          "Using cached multidict-6.9.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (317 kB)",
+          "Using cached propcache-0.5.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (250 kB)",
+          "Using cached yarl-1.25.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (117 kB)",
+          "Using cached idna-3.20-py3-none-any.whl (69 kB)",
+          "Using cached defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)",
+          "Installing collected packages: websockets, typing_extensions, redis, PyYAML, python-dotenv, propcache, multidict, idna, frozenlist, duckdb, defusedxml, attrs, annotated-types, aiohappyeyeballs, yarl, typing-inspection, pydantic-core, aiosignal, pydantic, aiohttp, pydantic-settings",
+          "Successfully installed PyYAML-6.0.3 aiohappyeyeballs-2.7.1 aiohttp-3.14.3 aiosignal-1.4.0 annotated-types-0.8.0 attrs-26.1.0 defusedxml-0.7.1 duckdb-1.5.5 frozenlist-1.8.0 idna-3.20 multidict-6.9.0 propcache-0.5.4 pydantic-2.13.5 pydantic-core-2.46.5 pydantic-settings-2.15.0 python-dotenv-1.2.3 redis-6.4.0 typing-inspection-0.4.4 typing_extensions-4.16.0 websockets-15.0.1 yarl-1.25.1"
+        ]
+      },
+      "summary": {
+        "schema_version": 1,
+        "status": "PASSED",
+        "started_at_utc": "2026-10-19T05:27:36.386162+00:00",
+        "git_commit": "4abc0432666e55c027aa953b4ad2948554de3942",
+        "working_tree_dirty": false,
+        "git_provenance": {
+          "commit_exit_code": 0,
+          "status_exit_code": 0
+        },
+        "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "sys_platform": "linux",
+        "python_version": "3.12.10",
+        "scope": "portable offline engineering checks; full historical Windows validation is separate",
+        "trading_enabled": false,
+        "network_guard_scope": "external TCP connects and DNS in the pytest worker process; child processes and build/install traffic are outside this guard",
+        "scope_manifest_sha256": "63347e97802002bd42de3fe01878c6b9163e88bac945ea96ff9c43102e74a3e6",
+        "historical_authority": ".github/workflows/ci.yaml",
+        "dependency_locks": {
+          "requirements.lock": "abfee99ab1dfa8e6875042fdb9a4f762d004c66f6ea7f1397cbb8fd5381e467d",
+          "ci/requirements-dev.lock": "0943117e9f4f7c361f6dbc7918bd6191dbd39b2f216ff13aa5380c5455e8eaff"
+        },
+        "prerequisites": {
+          "manifest_sha256": "1516fe1ec336622856080ae938e5f94389827bb9b9a9970f4b53b43e326e5555",
+          "required_files": 223,
+          "verified_files": 223,
+          "issues": [],
+          "restore_command": "python tools/restore_github_evidence.py"
+        },
+        "test_counts": {
+          "tests": 3899,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "wheel": {
+          "name": "selective_options-0.3.53-py3-none-any.whl",
+          "sha256": "c45640965e412497a928d7c6165fe17eb7d066762455e8a1aeb4a286995e5fc8",
+          "module_count": 89,
+          "module_inventory_sha256": "e5ed160a1627b54ad057bd80345aee2d42d821ba047371c07133ddd1400ddff3",
+          "source_version": "0.3.53",
+          "modules_match_current_source": true,
+          "import_smoke": {
+            "module_path": "/tmp/cloud-wheel-7xoeavji/lib/python3.12/site-packages/selective_options/__init__.py",
+            "version": "0.3.53",
+            "inside_wheel_environment": true
+          },
+          "config_smoke": {
+            "config": "VALID",
+            "mode": "testnet",
+            "profile": "testnet",
+            "trading_enabled": false,
+            "milestone": 2,
+            "milestone_status": "PARTIAL"
+          }
+        },
+        "exit_code": 0,
+        "finished_at_utc": "2026-10-19T05:31:45.973581+00:00"
+      },
+      "test_selection": {
+        "collected_count": 3906,
+        "excluded": [
+          {
+            "nodeid": "tests/test_coinmetrics_audit.py::test_actual_module_cli_refuses_mock_and_does_not_create_output",
+            "reason": "This historical CLI regression launches the original work/.venv/Scripts/python.exe executable at tests/test_coinmetrics_audit.py:160, which is unavailable on Linux/macOS."
+          },
+          {
+            "nodeid": "tests/test_parallel_foundations_audit.py::test_intact_saved_proof_independent_audit_is_read_only",
+            "reason": "Immutable parallel-foundations report binds source_evidence to the original absolute Windows path; scripts/audit_parallel_foundations.py:681-684 refuses relocated source."
+          },
+          {
+            "nodeid": "tests/test_parallel_foundations_audit.py::test_semantic_bucket_corruption_refused_even_when_report_hash_updated",
+            "reason": "The preserved report's absolute Windows source_evidence check runs before the expected semantic corruption check; scripts/audit_parallel_foundations.py:681-684."
+          },
+          {
+            "nodeid": "tests/test_parallel_foundations_audit.py::test_changed_native_receipt_refused_before_success_report",
+            "reason": "The preserved report's absolute Windows source_evidence check runs before the expected native receipt check; scripts/audit_parallel_foundations.py:681-684."
+          },
+          {
+            "nodeid": "tests/test_parallel_foundations_audit.py::test_analytical_feature_corruption_refused",
+            "reason": "The preserved report's absolute Windows source_evidence check runs before the expected analytical feature check; scripts/audit_parallel_foundations.py:681-684."
+          },
+          {
+            "nodeid": "tests/test_parallel_foundations_audit.py::test_torn_trial_chain_refused",
+            "reason": "The preserved report's absolute Windows source_evidence check runs before the expected trial chain check; scripts/audit_parallel_foundations.py:681-684."
+          },
+          {
+            "nodeid": "tests/test_parallel_foundations_audit.py::test_overclaim_missing_piece_and_code_mismatch_refuse",
+            "reason": "The preserved report's absolute Windows source_evidence check runs before the expected frozen code check; scripts/audit_parallel_foundations.py:681-684."
+          }
+        ],
+        "unapproved_skips": [],
+        "blocked_network_attempts": [],
+        "pytest_exit_code": 0
+      }
+    },
+    {
+      "id": 12164194610,
+      "name": "cloud-container-4abc0432666e55c027aa953b4ad2948554de3942",
+      "sha256": "3350401ef999cbcc6f15fdaea11dc149a5b99b30639859e2f86bedaa14829556",
+      "bytes": 4597,
+      "expires_at": "2026-11-02T05:26:23Z",
+      "head_sha": "4abc0432666e55c027aa953b4ad2948554de3942",
+      "files": [
+        {
+          "name": "arming-refusal.log",
+          "bytes": 291,
+          "sha256": "293896a0da27ffa9fbf5a18ca652c2c5a390f532fd5db1fd7ce1717f4b5127ca"
+        },
+        {
+          "name": "build.log",
+          "bytes": 12213,
+          "sha256": "fe597e7711315cfdb5507904ca49caa44df8dbdaa0e58d5bad1181b4d31fd1cf"
+        },
+        {
+          "name": "config.json",
+          "bytes": 134,
+          "sha256": "47932ca6b75b681a6e1e82c962fb317018e3c62c31671cc44b94a8fa37f2cc38"
+        },
+        {
+          "name": "image-id.txt",
+          "bytes": 72,
+          "sha256": "2bec932d2212af791c4b3001fbc77360e59f88e7427725549c1a33e2ab1b5639"
+        },
+        {
+          "name": "storage.json",
+          "bytes": 42,
+          "sha256": "34bb5330c6322bc2b198844553d7e9a942adbb3fe3c153ede88d4da230e58760"
+        },
+        {
+          "name": "summary.json",
+          "bytes": 705,
+          "sha256": "5321c012cc70ac98e59fa75ba5d5d13a289ba0e9453fe9dfa711a4ca8047c1b2"
+        }
+      ],
+      "log_tails": {
+        "arming-refusal.log": [
+          "{\"timestamp\": \"2026-10-19T05:26:23.065376+00:00\", \"level\": \"ERROR\", \"event\": \"STARTUP_HALTED type=TradingUnavailable detail=MILESTONE_INCOMPLETE: execution, risk, validation and paper evidence unavailable; live trading disabled trading_enabled=false\", \"signal_id\": null, \"error_type\": null}"
+        ],
+        "build.log": [
+          "#11 5.336 [notice] To update, run: pip install --upgrade pip",
+          "#11 DONE 5.5s",
+          "",
+          "#12 [7/7] COPY config ./config",
+          "#12 DONE 0.0s",
+          "",
+          "#13 exporting to image",
+          "#13 exporting layers",
+          "#13 exporting layers 1.2s done",
+          "#13 writing image sha256:b7c35707ed43b50f1c731d2d8e8488826023379057739bae43baf5ef883e9785 done",
+          "#13 naming to docker.io/library/selective-options-cloud:4abc0432666e55c027aa953b4ad2948554de3942 done",
+          "#13 DONE 1.2s"
+        ]
+      },
+      "summary": {
+        "status": "PASSED",
+        "git_commit": "4abc0432666e55c027aa953b4ad2948554de3942",
+        "image_id": "sha256:b7c35707ed43b50f1c731d2d8e8488826023379057739bae43baf5ef883e9785",
+        "dockerfile_sha256": "6cb043ccbb0f95482f7d31e42bf32e946107aaeb80cff9ee1b8dc613250c567f",
+        "config": {
+          "config": "VALID",
+          "mode": "testnet",
+          "profile": "testnet",
+          "trading_enabled": false,
+          "milestone": 2,
+          "milestone_status": "PARTIAL"
+        },
+        "storage": {
+          "uid": 10001,
+          "storage_persisted": true
+        },
+        "arm_exit_code": 2,
+        "trading_enabled": false,
+        "container_runtime_network": "none",
+        "scope": "finite non-root container smoke and two-container named-volume persistence; no collector soak"
+      },
+      "test_selection": {}
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "status": "PASSED",
+  "source_commit": "4abc0432666e55c027aa953b4ad2948554de3942",
+  "frozen_python_files": 286,
+  "source_and_test_bytes_match_commit": true,
+  "original_hosted_archives": 3,
+  "junit_counts": {
+    "hosted-linux/tests.xml": {
+      "tests": 3899,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "elapsed_s": 224.838
+    },
+    "hosted-windows/github-ci.xml": {
+      "tests": 3841,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "elapsed_s": 694.837
+    },
+    "hosted-windows/github-migration-ci.xml": {
+      "tests": 65,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "elapsed_s": 2.322
+    }
+  },
+  "signal_checks": {
+    "hosted-linux": {
+      "status": "ACTUAL_POSIX_SIGTERM_CAPTURE_VERIFIED",
+      "capture_exit_code": 0,
+      "blocked_external_network_attempts": 0
+    },
+    "hosted-windows": {
+      "status": "UNSUPPORTED_PLATFORM_REFUSED",
+      "capture_exit_code": 2,
+      "blocked_external_network_attempts": 0
+    }
+  },
+  "linux_selected_tests": 3899,
+  "declared_historical_windows_exclusions": [
+    {
+      "nodeid": "tests/test_coinmetrics_audit.py::test_actual_module_cli_refuses_mock_and_does_not_create_output",
+      "reason": "This historical CLI regression launches the original work/.venv/Scripts/python.exe executable at tests/test_coinmetrics_audit.py:160, which is unavailable on Linux/macOS."
+    },
+    {
+      "nodeid": "tests/test_parallel_foundations_audit.py::test_intact_saved_proof_independent_audit_is_read_only",
+      "reason": "Immutable parallel-foundations report binds source_evidence to the original absolute Windows path; scripts/audit_parallel_foundations.py:681-684 refuses relocated source."
+    },
+    {
+      "nodeid": "tests/test_parallel_foundations_audit.py::test_semantic_bucket_corruption_refused_even_when_report_hash_updated",
+      "reason": "The preserved report's absolute Windows source_evidence check runs before the expected semantic corruption check; scripts/audit_parallel_foundations.py:681-684."
+    },
+    {
+      "nodeid": "tests/test_parallel_foundations_audit.py::test_changed_native_receipt_refused_before_success_report",
+      "reason": "The preserved report's absolute Windows source_evidence check runs before the expected native receipt check; scripts/audit_parallel_foundations.py:681-684."
+    },
+    {
+      "nodeid": "tests/test_parallel_foundations_audit.py::test_analytical_feature_corruption_refused",
+      "reason": "The preserved report's absolute Windows source_evidence check runs before the expected analytical feature check; scripts/audit_parallel_foundations.py:681-684."
+    },
+    {
+      "nodeid": "tests/test_parallel_foundations_audit.py::test_torn_trial_chain_refused",
+      "reason": "The preserved report's absolute Windows source_evidence check runs before the expected trial chain check; scripts/audit_parallel_foundations.py:681-684."
+    },
+    {
+      "nodeid": "tests/test_parallel_foundations_audit.py::test_overclaim_missing_piece_and_code_mismatch_refuse",
+      "reason": "The preserved report's absolute Windows source_evidence check runs before the expected frozen code check; scripts/audit_parallel_foundations.py:681-684."
+    }
+  ],
+  "linux_blocked_network_attempts": 0,
+  "wheel_source_modules": 89,
+  "wheel_version": "0.3.53",
+  "container_uid": 10001,
+  "container_named_volume_persistence": true,
+  "container_arming_refused": true,
+  "scope": "Complete Windows historical suite; separately declared Linux subset and finite non-root container smoke",
+  "trading_enabled": false,
+  "milestone_status": "PARTIAL"
+}

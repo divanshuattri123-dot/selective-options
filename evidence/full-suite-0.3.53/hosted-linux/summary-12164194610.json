@@ -1,0 +1,22 @@
+{
+  "status": "PASSED",
+  "git_commit": "4abc0432666e55c027aa953b4ad2948554de3942",
+  "image_id": "sha256:b7c35707ed43b50f1c731d2d8e8488826023379057739bae43baf5ef883e9785",
+  "dockerfile_sha256": "6cb043ccbb0f95482f7d31e42bf32e946107aaeb80cff9ee1b8dc613250c567f",
+  "config": {
+    "config": "VALID",
+    "mode": "testnet",
+    "profile": "testnet",
+    "trading_enabled": false,
+    "milestone": 2,
+    "milestone_status": "PARTIAL"
+  },
+  "storage": {
+    "uid": 10001,
+    "storage_persisted": true
+  },
+  "arm_exit_code": 2,
+  "trading_enabled": false,
+  "container_runtime_network": "none",
+  "scope": "finite non-root container smoke and two-container named-volume persistence; no collector soak"
+}

@@ -651,6 +651,12 @@
       "bytes": 153732,
       "sha256": "a776ce0e2feb07796219d8a535dafaec7cec545b8065af9f77ed7b5d39e3de58",
       "release_tag": "v0.3.52"
+    },
+    {
+      "name": "selective-options-0.3.53-evidence.zip",
+      "bytes": 2738554,
+      "sha256": "2b3c1c061769255e3f3871595f77a48bd27dce303a1ade562a4e1fc991a56c6b",
+      "release_tag": "v0.3.53"
     }
   ],
   "evidence_files": [
@@ -1761,6 +1767,36 @@
       "bytes": 1585152,
       "sha256": "a7ea4ac2fb49af721c7ca4497b5d926c31ebcb2b2a774c248dbba35bb1e2b1cc",
       "archive_asset": "selective-options-0.3.52-evidence.zip"
+    },
+    {
+      "path": "evidence/solana-resume-saved-native-01/capture/events.duckdb",
+      "bytes": 3158016,
+      "sha256": "b8d06710dddd61388d683f301041980c386e230cd87f860cf8d4e37a2629ac31",
+      "archive_asset": "selective-options-0.3.53-evidence.zip"
+    },
+    {
+      "path": "evidence/solana-resume-saved-native-01/capture/events.parquet",
+      "bytes": 533013,
+      "sha256": "b3304a862fd902512acdb2bb44505f638c725a95d212a809ab11185f18beb942",
+      "archive_asset": "selective-options-0.3.53-evidence.zip"
+    },
+    {
+      "path": "evidence/solana-resume-saved-native-01/restored/events.duckdb",
+      "bytes": 3158016,
+      "sha256": "077ff5f276b8b654bd904b7ba537beabd70c5fcd9f98c26a30e8ac3605bc5dfd",
+      "archive_asset": "selective-options-0.3.53-evidence.zip"
+    },
+    {
+      "path": "evidence/solana-resume-saved-native-01/synthetic-later-outage.duckdb",
+      "bytes": 3158016,
+      "sha256": "e80063853a52db8a1303506eac7dfd60105e460d2c9c2db797a0169f62c630c9",
+      "archive_asset": "selective-options-0.3.53-evidence.zip"
+    },
+    {
+      "path": "evidence/solana-resume-saved-native-01/synthetic-unbound-prefix.duckdb",
+      "bytes": 3158016,
+      "sha256": "fbcae219c6c3d8c6388583ed19f4db2a61a4645eb24a2476867d25074ee72067",
+      "archive_asset": "selective-options-0.3.53-evidence.zip"
     }
   ],
   "validation_assets": [
@@ -1771,7 +1807,8 @@
     "selective-options-0.3.46.zip",
     "selective-options-0.3.49-fomc-evidence.zip",
     "selective-options-0.3.51-evidence.zip",
-    "selective-options-0.3.52-evidence.zip"
+    "selective-options-0.3.52-evidence.zip",
+    "selective-options-0.3.53-evidence.zip"
   ],
   "historical_proof_workspace": "C:\\Users\\Divan\\Documents\\Codex\\2026-09-20\\files-pasted-by-the-user-build",
   "historical_proof_requires_physical_windows_path": true,
@@ -1780,5 +1817,17 @@
   "original_local_coverage_percent": 96.16,
   "milestone": 2,
   "milestone_status": "PARTIAL",
-  "trading_enabled": false
+  "trading_enabled": false,
+  "current_checkpoint": {
+    "version": "0.3.53",
+    "source_commit": "4abc0432666e55c027aa953b4ad2948554de3942",
+    "release_url": "https://github.com/divanshuattri123-dot/selective-options/releases/tag/v0.3.53",
+    "local_application_tests": 3841,
+    "migration_tests": 65,
+    "coverage_percent": 95.28054535920293,
+    "linux_selected_cases": 3899,
+    "historical_windows_exclusions_on_linux": 7,
+    "trading_enabled": false,
+    "milestone_status": "PARTIAL"
+  }
 }

@@ -6,7 +6,7 @@ Version 0.3.53 adds explicit Solana network checkpoint resume and offline Keltne
 [Actions](https://github.com/divanshuattri123-dot/selective-options/actions) to run
 hosted builds and inspect results. [CLOUD_MIGRATION.md](CLOUD_MIGRATION.md) contains
 the exact mobile controls, portable setup and Codex Cloud instructions. Development
-currently continues in this local chat. The 0.3.52 hosted full Windows, portable
+currently continues in this local chat. The 0.3.53 hosted full Windows, portable
 Linux and container checks pass; continuous collector hosting remains unprovisioned.
 
 The system exists to place **very few trades with a large positive expected value**, not many trades with a good-looking win rate. It stays flat by default. It only fires when technical, volatility/flow, and fundamental/news evidence independently point the same direction at the same time, and when the options market is pricing that direction cheaply enough to pay for being right.

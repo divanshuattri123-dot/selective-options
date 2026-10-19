@@ -1,0 +1,15 @@
+{
+  "version": "0.3.53",
+  "source_commit": "4abc0432666e55c027aa953b4ad2948554de3942",
+  "status": "PASSED",
+  "local_application_tests": 3841,
+  "migration_tests": 65,
+  "coverage_percent": 95.28054535920293,
+  "linux_selected_cases": 3899,
+  "native_evidence_files": 220,
+  "validation_archives": 9,
+  "milestone_2_complete": false,
+  "paper_days": 0,
+  "paper_trades": 0,
+  "trading_enabled": false
+}

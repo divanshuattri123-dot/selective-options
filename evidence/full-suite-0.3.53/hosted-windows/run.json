@@ -1,0 +1,124 @@
+{
+  "repository": "divanshuattri123-dot/selective-options",
+  "private": true,
+  "run": {
+    "id": 39204499791,
+    "head_sha": "4abc0432666e55c027aa953b4ad2948554de3942",
+    "status": "completed",
+    "conclusion": "success",
+    "html_url": "https://github.com/divanshuattri123-dot/selective-options/actions/runs/39204499791",
+    "event": "push",
+    "created_at": "2026-10-19T05:25:40Z",
+    "updated_at": "2026-10-19T05:40:52Z"
+  },
+  "jobs": [
+    {
+      "id": 117904280464,
+      "name": "verify",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-10-19T05:25:44Z",
+      "completed_at": "2026-10-19T05:40:51Z",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-19T05:25:45Z",
+          "completed_at": "2026-10-19T05:25:46Z"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-19T05:25:46Z",
+          "completed_at": "2026-10-19T05:25:57Z"
+        },
+        {
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-19T05:25:57Z",
+          "completed_at": "2026-10-19T05:25:57Z"
+        },
+        {
+          "name": "Preserve physical historical-proof layout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-19T05:25:57Z",
+          "completed_at": "2026-10-19T05:26:14Z"
+        },
+        {
+          "name": "Restore verified private native evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-19T05:26:14Z",
+          "completed_at": "2026-10-19T05:27:42Z"
+        },
+        {
+          "name": "Install exercised runtime and validation tools",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-19T05:27:42Z",
+          "completed_at": "2026-10-19T05:28:25Z"
+        },
+        {
+          "name": "Static analysis and generated-document consistency",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-19T05:28:25Z",
+          "completed_at": "2026-10-19T05:28:40Z"
+        },
+        {
+          "name": "Full offline validation suite",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-19T05:28:40Z",
+          "completed_at": "2026-10-19T05:40:31Z"
+        },
+        {
+          "name": "Retain CI diagnostics",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-19T05:40:32Z",
+          "completed_at": "2026-10-19T05:40:41Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-10-19T05:40:41Z",
+          "completed_at": "2026-10-19T05:40:41Z"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18,
+          "started_at": "2026-10-19T05:40:41Z",
+          "completed_at": "2026-10-19T05:40:48Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-10-19T05:40:48Z",
+          "completed_at": "2026-10-19T05:40:48Z"
+        }
+      ]
+    }
+  ],
+  "trading_enabled": false,
+  "milestone": "M2_PARTIAL"
+}
